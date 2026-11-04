@@ -28,7 +28,7 @@ REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
 DEFAULT_BLEND = os.path.join(REPO, "blender", f"{C.BLEND_BASENAME}_v04.blend")
 DEFAULT_OUT = os.path.join(REPO, "docs", "captures")
 TAG = "stage04"
-ALL = ("gate", "tower", "mirador", "top", "iso", "kit")
+ALL = ("gate", "mirador", "top", "iso", "kit", "morada", "door", "mirador_eye", "tower", "iso_dusk", "mirador_eye_dusk")
 
 
 def parse_args():
@@ -126,6 +126,49 @@ def main():
         d = cam.rotation_euler.to_matrix() @ Vector((0, 0, -1))
         cam.location = Vector((25.0, -330.0, 10.0)) - d * 900
         K.render(scene, cam, P("kit"))
+    if "morada" in only:
+        a = 135.0 + 10.0
+        cam = K.iso_at(cam_iso, pol(a, 178.0, C.DATUM + 3.5), 45.0)
+        K.render(scene, cam, P("iso45_morada_NW_muralla"))
+        K.annotate(scene, cam, P("iso45_morada_NW_muralla"),
+                   "Morada NO junto a la muralla - CAM_Iso ortho 45 (el muro interior mira a la camara)",
+                   [("runas a +4.5 (1 m sobre la Morada)", pol(a + 1.0, 196.9, C.DATUM + 4.5)),
+                    ("plataforma +9.5", pol(a - 2.0, 192.0, 9.5)),
+                    ("camino de ronda +12.4", pol(a + 3.0, 198.5, C.DATUM + 12.4))])
+    if "door" in only:
+        a = 20 * 7.5
+        cam = K.iso_at(cam_iso, pol(a, 199.0, C.DATUM + 13.0), 30.0)
+        K.render(scene, cam, P("iso30_torre_puerta_camino"))
+        K.annotate(scene, cam, P("iso30_torre_puerta_camino"),
+                   "TOWER_Guard (k=20, 150 grados): puerta 1.2 x 2.2 m al camino de ronda (+12.4) - ortho 30",
+                   [("MARKER_TowerDoor_20 (+Y hacia el camino)", tuple(bpy.data.objects["MARKER_TowerDoor_20"].location))])
+    if "mirador_eye" in only or "mirador_eye_dusk" in only:
+        import stage04_wall as W
+        from mathutils import Matrix
+        k = 18
+        m = W.slot_matrix(k * 7.5, C.WALL_RADIUS)
+        eye = m @ Vector((0.0, W.Y_OUT + W.BASTION_D / 2 - 0.2 + 1.6, W.BASTION_PLAT + K.EYE))
+        tgt = m @ Vector((-34.0, 2.0, 7.0))           # a lo largo de la muralla, hacia k=17/16
+        for tag, is_dusk in (("mirador_eye", False), ("mirador_eye_dusk", True)):
+            if tag not in only:
+                continue
+            if is_dusk:
+                dusk(scene)
+            cam = K.new_cam("TMP_eye_mir", lens=20)
+            K.look_at(cam, eye, tgt)
+            name = "eye_desde_mirador_k18" + ("_anochecer" if is_dusk else "")
+            K.render(scene, cam, P(name))
+            K.annotate(scene, cam, P(name),
+                       "Desde el balcon del mirador k=18 (135 grados, +19.6) mirando la muralla hacia el exterior"
+                       + (" - anochecer" if is_dusk else ""),
+                       [("runas exteriores a +4.5", tuple(m @ Vector((-14.0, W.Y_OUT, W.RUNE_Z)))),
+                        ("TOWER_Guard k=16", tuple(W.slot_matrix(16 * 7.5, C.WALL_RADIUS) @ Vector((0, W.TOWER_CY, 26))))])
+    if "iso_dusk" in only:
+        dusk(scene)
+        cam = K.iso_at(cam_iso, C.CAM_ISO_TARGET, 460.0)
+        K.render(scene, cam, P("iso_overview_anochecer"))
+        K.annotate(scene, cam, P("iso_overview_anochecer"),
+                   "Muralla al anochecer - anillo de runas a +4.5 (MAT_Wall_Runes, emision 0.8), linternas 2.5", [])
     if "tower" in only:
         dusk(scene)
         a = 44 * 7.5

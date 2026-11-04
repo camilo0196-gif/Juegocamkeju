@@ -53,7 +53,8 @@ TALUD_H = 4.0                                   # altura del talud (no fijada en
 SLIT_W, SLIT_H = 0.2, 1.2
 SLIT_EVERY = 4.0
 RUNE_W, RUNE_D = 0.08, 0.03
-RUNE_Z = 0.30                                   # centro de la linea de runas (hilada inferior)
+RUNE_Z = 4.50                                   # v4: anillo continuo a +4.5 m (1 m sobre las Moradas), ambas caras
+TILE_M = 1.0                                    # 1 m = 1 tile
 RUNE_EMISSION = 0.8
 BEVEL = 0.03
 SEED = 21
@@ -76,6 +77,7 @@ GATE_RUNE_D, GATE_RUNE_E = 1.5, 2.5
 GATE_BLOCK_Y = 4.0                              # cuerpo central entre torres: Y -4..+4
 GATE_WALK = WALL_H + 0.05                       # el adarve de la puerta tapa las almenas de los modulos
 STAIR_W = 3.0
+DOOR_W, DOOR_H = 1.2, 2.2                       # puerta de la torre de guardia al camino de ronda
 STAIR_RISER, STAIR_TREAD, STAIR_N = WALK_Z / 62, 0.26, 31
 STAIR_LANDING_END = (STAIR_N - 1) * STAIR_TREAD / 2 - 1.6 + 3.4     # extremo del rellano en X local (5.7)
 DRAIN_W, DRAIN_H = 1.8, 1.2
@@ -154,11 +156,23 @@ def emissive_material(name, strength, tex=None, base="#8FD0FF"):
     return m
 
 
+LIB_MAP = {"MAT_Wall_Granite": "WallGranite", "MAT_Wall_Patch": "WallPatch", "MAT_Stone_Band": "StoneBand",
+           "MAT_Roof_Slate": "RoofSlate", "MAT_Roof_TileOchre": "RoofTileOchre", "MAT_Wood_Dark": "WoodDark",
+           "MAT_Iron_Black": "IronBlack"}
+TERRAIN_LIB = ("CobblestoneFloor001", "SandstoneCracks", "RockBoulderCracked", "RocksGround02", "StoneWall02")
+
+
 def build_materials():
-    out = {k: textured_material(k, *v) for k, v in MATS.items()}
+    import material_library as ML
+    out = {k: ML.make_material(k, v) for k, v in LIB_MAP.items()}
+    out["MAT_Void"] = textured_material("MAT_Void", *MATS["MAT_Void"])
     out["MAT_Wall_Runes"] = emissive_material("MAT_Wall_Runes", RUNE_EMISSION, tex="T_Runes_emission",
                                               base="#4F4B45")
+    out["MAT_Wall_Runes"]["note"] = "Emission Strength = emission_base (0.8). En Godot: emission_energy; animar al anochecer"
     out["MAT_Magic_Glow25"] = emissive_material("MAT_Magic_Glow25", LANTERN_E)
+    for name in TERRAIN_LIB:                      # preparados para el terreno, aun SIN aplicar
+        m = ML.make_material(f"MAT_{name}", name)
+        m.use_fake_user = True
     return out
 
 
@@ -297,14 +311,14 @@ class Kit:
                     rr = max(sqrt((c.x - cx) ** 2 + (c.y - cy) ** 2), 1e-6)
                     r_ref = max(p[0] for p in part[3])
                     if part[0] == "cone":
-                        uv = (ang * r_ref / 2.0, -rr / cos(radians(ROOF_PITCH)) / 2.0)
+                        uv = (ang * r_ref / TILE_M, -rr / cos(radians(ROOF_PITCH)) / TILE_M)
                     else:
-                        uv = (ang * r_ref / 2.0, c.z / 2.0)
+                        uv = (ang * r_ref / TILE_M, c.z / TILE_M)
                 elif abs(n.z) > 0.7:
-                    uv = (c.x / 2.0, c.y / 2.0)
+                    uv = (c.x / TILE_M, c.y / TILE_M)
                 else:
                     t = Vector((-n.y, n.x, 0.0)).normalized()
-                    uv = ((c.x * t.x + c.y * t.y) / 2.0, c.z / 2.0)
+                    uv = ((c.x * t.x + c.y * t.y) / TILE_M, c.z / TILE_M)
                 lp[uvl].uv = uv
         if name in bpy.data.objects:
             bpy.data.objects.remove(bpy.data.objects[name])
@@ -350,9 +364,12 @@ def wall_module(variant, materials, col, rng):
     ta = tan(HALF)
     g0, g1 = RUNE_Z - RUNE_W / 2, RUNE_Z + RUNE_W / 2
     yr = Y_IN + RUNE_D
-    prof = [(Y_IN, -0.5), (Y_OUT_BASE, -0.5), (Y_OUT_BASE, 0.0), (Y_OUT, TALUD_H), (Y_OUT, WALK_Z + PARAPET_H),
+    yo = Y_OUT - RUNE_D
+    prof = [(Y_IN, -0.5), (Y_OUT_BASE, -0.5), (Y_OUT_BASE, 0.0), (Y_OUT, TALUD_H),
+            (Y_OUT, g0), (yo, g0), (yo, g1), (Y_OUT, g1),                       # surco exterior (4..6)
+            (Y_OUT, WALK_Z + PARAPET_H),
             (Y_OUT - PARAPET_T, WALK_Z + PARAPET_H), (Y_OUT - PARAPET_T, WALK_Z), (Y_IN, WALK_Z),
-            (Y_IN, g1), (yr, g1), (yr, g0), (Y_IN, g0)]
+            (Y_IN, g1), (yr, g1), (yr, g0), (Y_IN, g0)]                         # surco interior (12..14)
     n = len(prof)
     pts = []
     for sgn in (-1, 1):
@@ -362,9 +379,9 @@ def wall_module(variant, materials, col, rng):
     side = [(i, (i + 1) % n, n + (i + 1) % n, n + i) for i in range(n)]
     faces += side
     fm = ["MAT_Wall_Granite"] * len(faces)
-    rune_face = 2 + 9                                  # lado (yr,g1)-(yr,g0): fondo del surco
-    fm[rune_face] = "MAT_Wall_Runes"
-    groove = {2 + 8, 2 + 9, 2 + 10}
+    for rune_face in (2 + 5, 2 + 13):                  # fondo de los dos surcos
+        fm[rune_face] = "MAT_Wall_Runes"
+    groove = {2 + 4, 2 + 5, 2 + 6, 2 + 12, 2 + 13, 2 + 14}
     kit.add(pts, faces, None, face_mats=fm, no_bevel_faces=groove)
     xs = merlon_positions(L)
     slit_idx = set()
@@ -382,7 +399,7 @@ def wall_module(variant, materials, col, rng):
             for _try in range(20):
                 w, h = rng.uniform(2.0, 4.0), rng.uniform(1.8, 3.2)
                 x = rng.uniform(-L / 2 + END_CLEAR + w / 2, L / 2 - END_CLEAR - w / 2)
-                z = rng.uniform(TALUD_H + 0.6, WALK_Z - h - 0.6)
+                z = rng.uniform(RUNE_Z + 0.35, WALK_Z - h - 0.6)        # por encima del anillo de runas
                 if all(abs(x - ux) > (w + uw) / 2 + 0.5 for ux, uw in used):
                     break
             used.append((x, w))
@@ -391,7 +408,7 @@ def wall_module(variant, materials, col, rng):
                 kit.box(x - w / 2 - 0.4, x + w / 2 + 0.4, Y_OUT - 0.15, Y_OUT + 0.18, z + h, z + h + 0.3,
                         "MAT_Wood_Dark")
         inner = rng.uniform(-L / 2 + 5, L / 2 - 5)
-        kit.box(inner - 1.5, inner + 1.5, Y_IN - 0.04, Y_IN, 2.0, 4.6, "MAT_Wall_Patch")
+        kit.box(inner - 1.5, inner + 1.5, Y_IN - 0.04, Y_IN, RUNE_Z + 0.7, RUNE_Z + 3.3, "MAT_Wall_Patch")
         info["patches"] = npatch + 1
     if variant == "C":
         z0 = WALK_Z - 0.25
@@ -500,7 +517,18 @@ def guard_tower(materials, col, patched=False):
             c = Vector((c.x, c.y, 0)) + Vector((cos(t), sin(t), 0)) * 0.01
             kit.obox((c.x, c.y, z), Vector((-sin(t), cos(t), 0)) * (SLIT_W / 2), Vector((cos(t), sin(t), 0)) * 0.01,
                      SLIT_H, "MAT_Void", bevel=False)
-    info = {"apex_z": round(apex, 2), "lantern_z": [round(lz0, 2), round(lz1, 2)], "top_z": round(lz1 + 1.3, 2)}
+    # puerta de acceso a nivel del camino de ronda (cara que mira al camino, -Y local)
+    yd = cy - R
+    kit.box(-DOOR_W / 2, DOOR_W / 2, yd - 0.05, yd + 0.35, WALK_Z, WALK_Z + DOOR_H, "MAT_Wood_Dark", bevel=False)
+    for sx in (-1, 1):
+        x0, x1 = sorted((sx * DOOR_W / 2, sx * (DOOR_W / 2 + 0.25)))
+        kit.box(x0, x1, yd - 0.12, yd + 0.45, WALK_Z, WALK_Z + DOOR_H, "MAT_Stone_Band")
+    kit.box(-DOOR_W / 2 - 0.25, DOOR_W / 2 + 0.25, yd - 0.12, yd + 0.45, WALK_Z + DOOR_H, WALK_Z + DOOR_H + 0.3,
+            "MAT_Stone_Band")
+    kit.box(-DOOR_W / 2 - 0.25, DOOR_W / 2 + 0.25, yd - 0.35, yd + 0.3, WALK_Z - 0.1, WALK_Z + 0.02,
+            "MAT_Stone_Band", bevel=False)
+    info = {"apex_z": round(apex, 2), "lantern_z": [round(lz0, 2), round(lz1, 2)], "top_z": round(lz1 + 1.3, 2),
+            "door": {"w": DOOR_W, "h": DOOR_H, "sill_z": WALK_Z, "local_pos": [0.0, round(yd - 0.05, 3), WALK_Z]}}
     if patched:
         rng = random.Random(SEED + 7)
         for k, mat in enumerate(["MAT_Roof_TileOchre"] * 3 + ["MAT_Wood_Dark"] * 2):
@@ -796,6 +824,7 @@ def build(scene, stats):
     pieces["TOWER_Guard_Roof"], info["TOWER_Guard_Roof"] = guard_tower(mats, kit_col)
     pieces["TOWER_Guard_Patched"], info["TOWER_Guard_Patched"] = guard_tower(mats, kit_col, patched=True)
     pieces["GATE_Sealed_Twin"], info["GATE_Sealed_Twin"] = gate(mats, kit_col)
+    pieces["GATE_Sealed_Twin"]["nav_exclude"] = "adarve (+15.05) decorativo: no conectar a la navegacion"
     pieces["STAIR_Gate_L"], info["STAIR_Gate_L"] = stair(mats, kit_col)
     pieces["STAIR_Gate_R"], info["STAIR_Gate_R"] = stair(mats, kit_col, mirror=True)
     pieces["WALL_Drain_Grate"], info["WALL_Drain_Grate"] = drain(mats, kit_col)
@@ -824,6 +853,18 @@ def build(scene, stats):
             c.parent = obj
             c.display_type = "WIRE"
             c.hide_render = True
+        if name.startswith("TOWER_Guard"):
+            dn = f"{name}_MARKER_Door"
+            if dn in bpy.data.objects:
+                bpy.data.objects.remove(bpy.data.objects[dn])
+            de = bpy.data.objects.new(dn, None)
+            de.empty_display_type = "ARROWS"
+            kit_col.objects.link(de)
+            de.parent = obj
+            de.matrix_parent_inverse = Matrix.Identity(4)
+            de.location = (0.0, TOWER_CY - TOWER_D / 2 - 0.05, WALK_Z)
+            de.rotation_euler = (0.0, 0.0, pi)
+            de["door_direction"] = "+Y"
         lods = {}
         for lod, ratio in (("LOD1", 0.5), ("LOD2", 0.15)):
             lo = bpy.data.objects.new(f"{name}_{lod}", obj.data.copy())
@@ -854,6 +895,9 @@ def build(scene, stats):
     random.Random(SEED).shuffle(tows)
     layout = {"slots": [], "modules": [], "counts": {}}
     ti = 0
+    cam = bpy.data.objects[C.CAM_ISO_NAME]
+    dview = cam.rotation_euler.to_matrix() @ Vector((0, 0, -1))
+    to_cam = Vector((-dview.x, -dview.y, 0.0)).normalized()
     for k in range(N_SLOTS):
         ang = k * STEP_DEG
         typ = slot_type(k)
@@ -877,12 +921,31 @@ def build(scene, stats):
         e["k"], e["angle_deg"], e["type"], e["piece"] = k, ang, typ, piece
         inst = instance(f"{piece.split('_')[0]}_Slot{k:02d}_{piece.split('_', 1)[1]}", pieces[piece],
                         e.matrix_world.copy(), lay_col, col_meshes.get(piece))
+        if typ == "gate":
+            inst["nav_exclude"] = "adarve de la puerta (+15.05): terraza decorativa, fuera de la navegacion"
+        if typ == "tower":
+            dn = f"MARKER_TowerDoor_{k:02d}"
+            if dn in bpy.data.objects:
+                bpy.data.objects.remove(bpy.data.objects[dn])
+            de = bpy.data.objects.new(dn, None)
+            de.empty_display_type = "ARROWS"
+            de.empty_display_size = 1.0
+            de.matrix_world = e.matrix_world @ Matrix.Translation((0.0, TOWER_CY - TOWER_D / 2 - 0.05, WALK_Z)) \
+                @ Matrix.Rotation(pi, 4, "Z")
+            de["door_direction"] = "+Y"
+            de["use"] = "acceso de NPC guardias desde el camino de ronda"
+            de["tower_slot"] = k
+            lay_col.objects.link(de)
         layout["slots"].append({"k": k, "angle": ang, "type": typ, "piece": piece})
         # modulo entre k y k+1
         v = mods[k]
         mm = slot_matrix(ang + STEP_DEG / 2, C.WALL_RADIUS * cos(HALF))
-        instance(f"WALL_Seg{k:02d}_{v}", pieces[f"WALL_Mod_{v}"], mm, lay_col, col_meshes[f"WALL_Mod_{v}"])
-        layout["modules"].append({"from_k": k, "to_k": (k + 1) % N_SLOTS, "variant": v})
+        mo = instance(f"WALL_Seg{k:02d}_{v}", pieces[f"WALL_Mod_{v}"], mm, lay_col, col_meshes[f"WALL_Mod_{v}"])
+        am = radians(ang + STEP_DEG / 2)
+        occl = (cos(am) * to_cam.x + sin(am) * to_cam.y) > 0.0
+        mo["occludes_iso"] = bool(occl)
+        layout["modules"].append({"from_k": k, "to_k": (k + 1) % N_SLOTS, "variant": v, "occludes_iso": bool(occl),
+                                  "name": mo.name})
         if typ == "gate":
             # la torre de la puerta (r=6, centro a 10 m) llega en la cara interior (Y=-3) hasta:
             R6 = GATE_TOWER_D / 2
@@ -902,6 +965,7 @@ def build(scene, stats):
                         "by_piece": dict(Counter(s["piece"] for s in layout["slots"])),
                         "modules": dict(Counter(m["variant"] for m in layout["modules"])),
                         "module_quota_70_20_10": mod_q, "tower_quota_70_30": tow_q}
+    layout["occludes_iso_modules"] = [m["name"] for m in layout["modules"] if m["occludes_iso"]]
     stats["wall_kit"] = report
     stats["wall_layout"] = layout
     stats["wall_dims"] = {"chord_m": round(CHORD, 4), "wall_top_z": WALL_H, "walkway_z": WALK_Z,

@@ -532,7 +532,7 @@ def parcels(col, mat, zfun, markers, stats):
         mb_to_object(mb, name, col, mat, origin=(cx, cy))
         fx, fy = from_uv(r0, 0.0, ang)
         markers.append((f"MARKER_PlazaBuilding_{i + 1:02d}", (fx, fy, top), ang,
-                        {"parcel": name, "facade_w": W, "depth": D}))
+                        {"parcel": name, "facade_w": W, "depth": D, "door_direction": "+Y"}))
         out.append({"name": name, "angle": ang, "r": [r0, r0 + D], "top": round(top, 3),
                     "rear_exposed_m": round(top - min(zs), 3)})
     stats["parcels"] = out
@@ -557,7 +557,7 @@ def landmark_pads(col, mat, zfun, markers, stats):
         mb_to_object(mb, f"TRN_Pad_{key}", col, mat, origin=(cx, cy))
         mname = {"Faro": "MARKER_Faro", "Santuario": "MARKER_Santuario", "SalonHazanas": "MARKER_SalonHazanas",
                  "Obelisco": "MARKER_Obelisco"}[key]
-        props = {"pad": f"TRN_Pad_{key}", "shape": shape, "dims_m": list(dims)}
+        props = {"pad": f"TRN_Pad_{key}", "shape": shape, "dims_m": list(dims), "door_direction": "+Y"}
         if h:
             props["height_m"] = h
         markers.append((mname, (cx, cy, top), ang, props))

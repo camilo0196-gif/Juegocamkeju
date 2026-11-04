@@ -150,6 +150,7 @@ ESC_BALUSTRADE_H = 0.9
 ESC_BALUSTRADE_THICK = 0.45
 
 TALUD_R = (204.0, TERRAIN_RADIUS)     # 204..212 baja 6.0 -> 0
+DIAG_WALL_STEP_R = 199.0              # v4 (aprobado): salto 9.5 -> 6.0 de las diagonales bajo el muro
 
 TERRAIN_NOISE_PP = 0.05               # 5 cm de irregularidad (pico a pico)
 WALK_SLOPE_MAX = 5.0                  # grados, calles y plazas

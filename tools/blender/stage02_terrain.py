@@ -417,7 +417,7 @@ def wall_distance(x, y):
         d = max(0.0, abs(s) - T.face_run(dz)) if low_side else abs(s)
         if s > -2.0:
             d = min([d] + [max(0.0, abs(r - R) - T.STEP_RUN / 2) for R in T.terrace_jumps()]
-                    + [max(0.0, abs(r - C.WALL_BASE_R[1]) - T.WALL_STEP_RUN)])
+                    + [max(0.0, abs(r - T.wall_step_rings()[1]) - T.WALL_STEP_RUN)])
     u, v = T.axis_frame(x, y, T.CARDINAL_ANGLE[T.nearest_cardinal(th)])
     if C.AXIS_DESCENT[0] - 2 <= u <= C.AXIS_PLAZOLETA[1] + 2:
         zb = T.prof_axis(u)

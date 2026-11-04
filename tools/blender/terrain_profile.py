@@ -105,8 +105,10 @@ def terrace_level(k):
 
 
 def wall_step_rings():
-    """Salto 9.5 -> 6.0 bajo la cara exterior de la muralla (solo diagonales)."""
-    r_out = C.WALL_BASE_R[1]
+    """Salto 9.5 -> 6.0 de las diagonales, OCULTO dentro del cuerpo de la muralla (v4).
+    A Z=+9.5 el muro ocupa r ~196.6..200.8 (centro de modulo) / 197..201.25 (slot); el salto
+    va en r 198.38..199.0, asi que por fuera el suelo queda a +6.0 hasta el talud (r=204)."""
+    r_out = C.DIAG_WALL_STEP_R
     return (r_out - WALL_STEP_RUN, r_out)
 
 

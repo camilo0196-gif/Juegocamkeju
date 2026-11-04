@@ -86,8 +86,8 @@ def make_gate_markers(cols):
         e.empty_display_type = GATE_EMPTY_TYPE
         e.empty_display_size = GATE_EMPTY_SIZE
         e.location = C.polar(angle, C.GATE_RADIUS, C.GATE_Z)
-        # Eje local +X apunta hacia fuera de la ciudad (radial)
-        e.rotation_euler = (0.0, 0.0, radians(angle))
+        # Convencion de marcadores (README_markers.txt): +Y local = hacia fuera / al frente
+        e.rotation_euler = (0.0, 0.0, radians(angle - 90.0))
         e["gate_name"] = label
         e["angle_deg"] = angle
         cols[GATE_COLLECTION].objects.link(e)

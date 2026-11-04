@@ -1,9 +1,9 @@
 {
  "timings_s": {
-  "terrain": 42.2,
+  "terrain": 36.0,
   "structures": 0.3,
-  "shading": 7.9,
-  "chunks": 39.9
+  "shading": 7.5,
+  "chunks": 34.0
  },
  "grid_verts": 180625,
  "grid_faces": 179776,
@@ -79,15 +79,15 @@
    "missed": 0
   },
   {
-   "R": 203.3829,
-   "verts": 580,
-   "new_edges": 576,
+   "R": 198.3829,
+   "verts": 584,
+   "new_edges": 580,
    "missed": 0
   },
   {
-   "R": 204.0,
-   "verts": 592,
-   "new_edges": 588,
+   "R": 199.0,
+   "verts": 568,
+   "new_edges": 564,
    "missed": 0
   },
   {
@@ -123,7 +123,7 @@
  ],
  "knives": {
   "count": 144,
-  "verts": 6976,
+  "verts": 6968,
   "missed": 0,
   "worst": [
    {
@@ -159,7 +159,7 @@
   ]
  },
  "faces_flipped_to_up": 0,
- "retaining_faces": 9676,
+ "retaining_faces": 9528,
  "vgroup_counts": {
   "plaza": 11289,
   "landmarks": 7708,
@@ -169,12 +169,12 @@
   "sector_razas": 16172,
   "sector_moradas": 49732,
   "terraza_id": 42568,
-  "talud": 10756,
-  "base_muralla": 10816
+  "talud": 10476,
+  "base_muralla": 11088
  },
  "geometry": {
-  "verts": 154993,
-  "tris": 308296,
+  "verts": 154985,
+  "tris": 308280,
   "all_tris": true,
   "min_normal_z": 0.1171,
   "faces_normal_down_or_vertical": 0,
@@ -192,71 +192,71 @@
  },
  "slope_by_zone": {
   "Borde_Clases_Morada_NW/muro_lateral": {
-   "faces": 482,
+   "faces": 458,
    "max": 83.27,
    "p99": 82.89,
-   "mean": 62.4,
-   "gt5": 407,
-   "gt8": 404
+   "mean": 62.88,
+   "gt5": 392,
+   "gt8": 389
   },
   "Borde_Clases_Morada_SW/muro_lateral": {
-   "faces": 482,
+   "faces": 458,
    "max": 83.27,
    "p99": 82.89,
-   "mean": 62.4,
-   "gt5": 407,
-   "gt8": 404
+   "mean": 62.88,
+   "gt5": 392,
+   "gt8": 389
   },
   "Borde_Mercado_Morada_NE/muro_lateral": {
-   "faces": 482,
+   "faces": 458,
    "max": 83.27,
    "p99": 82.89,
-   "mean": 62.4,
-   "gt5": 407,
-   "gt8": 404
+   "mean": 62.88,
+   "gt5": 392,
+   "gt8": 389
   },
   "Borde_Mercado_Morada_NW/muro_lateral": {
-   "faces": 482,
+   "faces": 458,
    "max": 83.27,
    "p99": 82.89,
-   "mean": 62.4,
-   "gt5": 407,
-   "gt8": 404
+   "mean": 62.88,
+   "gt5": 392,
+   "gt8": 389
   },
   "Borde_Oficios_Morada_NE/muro_lateral": {
-   "faces": 482,
+   "faces": 458,
    "max": 83.27,
    "p99": 82.89,
-   "mean": 62.4,
-   "gt5": 407,
-   "gt8": 404
+   "mean": 62.88,
+   "gt5": 392,
+   "gt8": 389
   },
   "Borde_Oficios_Morada_SE/muro_lateral": {
-   "faces": 482,
+   "faces": 458,
    "max": 83.27,
    "p99": 82.89,
-   "mean": 62.4,
-   "gt5": 407,
-   "gt8": 404
+   "mean": 62.88,
+   "gt5": 392,
+   "gt8": 389
   },
   "Borde_Razas_Morada_SE/muro_lateral": {
-   "faces": 482,
+   "faces": 458,
    "max": 83.27,
    "p99": 82.89,
-   "mean": 62.4,
-   "gt5": 407,
-   "gt8": 404
+   "mean": 62.88,
+   "gt5": 392,
+   "gt8": 389
   },
   "Borde_Razas_Morada_SW/muro_lateral": {
-   "faces": 482,
+   "faces": 458,
    "max": 83.27,
    "p99": 82.89,
-   "mean": 62.4,
-   "gt5": 407,
-   "gt8": 404
+   "mean": 62.88,
+   "gt5": 392,
+   "gt8": 389
   },
   "Clases/base_muralla_196_204": {
-   "faces": 2841,
+   "faces": 2885,
    "max": 6.35,
    "p99": 2.81,
    "mean": 0.08,
@@ -344,7 +344,7 @@
    "gt8": 0
   },
   "Mercado/base_muralla_196_204": {
-   "faces": 2842,
+   "faces": 2886,
    "max": 6.35,
    "p99": 2.81,
    "mean": 0.08,
@@ -440,10 +440,10 @@
    "gt8": 294
   },
   "Morada_NE/base_muralla_196_204": {
-   "faces": 2181,
-   "max": 0.05,
-   "p99": 0.0,
-   "mean": 0.0,
+   "faces": 2299,
+   "max": 3.74,
+   "p99": 2.37,
+   "mean": 0.05,
    "gt5": 0,
    "gt8": 0
   },
@@ -464,12 +464,12 @@
    "gt8": 0
   },
   "Morada_NE/muro_pie_muralla": {
-   "faces": 307,
+   "faces": 320,
    "max": 80.02,
    "p99": 80.02,
-   "mean": 75.83,
-   "gt5": 291,
-   "gt8": 291
+   "mean": 71.5,
+   "gt5": 286,
+   "gt8": 286
   },
   "Morada_NE/muro_terraza": {
    "faces": 1410,
@@ -512,10 +512,10 @@
    "gt8": 294
   },
   "Morada_NW/base_muralla_196_204": {
-   "faces": 2188,
-   "max": 0.06,
-   "p99": 0.03,
-   "mean": 0.0,
+   "faces": 2306,
+   "max": 3.74,
+   "p99": 2.24,
+   "mean": 0.05,
    "gt5": 0,
    "gt8": 0
   },
@@ -536,12 +536,12 @@
    "gt8": 0
   },
   "Morada_NW/muro_pie_muralla": {
-   "faces": 307,
+   "faces": 320,
    "max": 80.02,
    "p99": 80.02,
-   "mean": 75.83,
-   "gt5": 291,
-   "gt8": 291
+   "mean": 71.5,
+   "gt5": 286,
+   "gt8": 286
   },
   "Morada_NW/muro_terraza": {
    "faces": 1410,
@@ -584,10 +584,10 @@
    "gt8": 294
   },
   "Morada_SE/base_muralla_196_204": {
-   "faces": 2181,
-   "max": 0.05,
-   "p99": 0.0,
-   "mean": 0.0,
+   "faces": 2299,
+   "max": 3.74,
+   "p99": 2.37,
+   "mean": 0.05,
    "gt5": 0,
    "gt8": 0
   },
@@ -608,12 +608,12 @@
    "gt8": 0
   },
   "Morada_SE/muro_pie_muralla": {
-   "faces": 307,
+   "faces": 320,
    "max": 80.02,
    "p99": 80.02,
-   "mean": 75.83,
-   "gt5": 291,
-   "gt8": 291
+   "mean": 71.5,
+   "gt5": 286,
+   "gt8": 286
   },
   "Morada_SE/muro_terraza": {
    "faces": 1410,
@@ -656,10 +656,10 @@
    "gt8": 294
   },
   "Morada_SW/base_muralla_196_204": {
-   "faces": 2172,
-   "max": 0.04,
-   "p99": 0.0,
-   "mean": 0.0,
+   "faces": 2290,
+   "max": 3.74,
+   "p99": 2.37,
+   "mean": 0.05,
    "gt5": 0,
    "gt8": 0
   },
@@ -680,12 +680,12 @@
    "gt8": 0
   },
   "Morada_SW/muro_pie_muralla": {
-   "faces": 307,
+   "faces": 320,
    "max": 80.02,
    "p99": 80.02,
-   "mean": 75.83,
-   "gt5": 291,
-   "gt8": 291
+   "mean": 71.5,
+   "gt5": 286,
+   "gt8": 286
   },
   "Morada_SW/muro_terraza": {
    "faces": 1410,
@@ -720,7 +720,7 @@
    "gt8": 0
   },
   "Oficios/base_muralla_196_204": {
-   "faces": 2839,
+   "faces": 2883,
    "max": 6.35,
    "p99": 2.81,
    "mean": 0.08,
@@ -816,7 +816,7 @@
    "gt8": 0
   },
   "Razas/base_muralla_196_204": {
-   "faces": 2838,
+   "faces": 2882,
    "max": 6.35,
    "p99": 2.81,
    "mean": 0.08,
@@ -904,12 +904,12 @@
    "gt8": 0
   },
   "Talud/talud_204_212": {
-   "faces": 19684,
+   "faces": 19160,
    "max": 41.47,
    "p99": 41.47,
-   "mean": 36.04,
-   "gt5": 19364,
-   "gt8": 19140
+   "mean": 36.66,
+   "gt5": 18876,
+   "gt8": 18684
   }
  },
  "slope_walkable_max_by_sector": {
@@ -2755,8 +2755,8 @@
  },
  "shading": {
   "material": "MAT_Terrain_City",
-  "edge_top_verts": 14428,
-  "wall_foot_verts": 14600,
+  "edge_top_verts": 13948,
+  "wall_foot_verts": 14036,
   "edge_width_m": 0.8,
   "edge_dark": 0.3,
   "base_width_m": 0.6,
@@ -2764,7 +2764,7 @@
   "ao_distance_m": 1.5,
   "ao_samples": 32,
   "ao_bake_objects": "solo TRN_City (piezas ocultas durante el horneado)",
-  "ao_min": 0.33,
+  "ao_min": 0.322,
   "ao_p05": 0.815,
   "ao_median": 1.0,
   "colors_srgb": {
@@ -2780,10 +2780,10 @@
   "count": 69,
   "budget_city_per_chunk": 35000,
   "lod0_before": {
-   "avg": 4477,
+   "avg": 4476,
    "max": 6262,
-   "min": 1230,
-   "total": 308888,
+   "min": 1210,
+   "total": 308872,
    "heaviest": [
     [
      "TRN_CityChunk_x2_y2_LOD0",
@@ -2823,19 +2823,19 @@
   "optimized": "ninguno (ningun chunk supera 35.000)",
   "lod_tris": {
    "LOD0": {
-    "avg": 4477,
+    "avg": 4476,
     "max": 6262,
-    "total": 308888
+    "total": 308872
    },
    "LOD1": {
     "avg": 2238,
     "max": 3130,
-    "total": 154412
+    "total": 154396
    },
    "LOD2": {
     "avg": 671,
     "max": 938,
-    "total": 46286
+    "total": 46270
    }
   },
   "lod_ratio_real": {
@@ -2846,9 +2846,9 @@
   "seams_locked_chunks": "138 / 138 (LOD1+LOD2 conservan todos los vertices del borde)",
   "per_chunk": {
    "TRN_CityChunk_x0_y2": {
-    "LOD0": 1230,
-    "LOD1": 614,
-    "LOD2": 184
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
    },
    "TRN_CityChunk_x0_y3": {
     "LOD0": 2992,
@@ -2866,19 +2866,19 @@
     "LOD2": 448
    },
    "TRN_CityChunk_x0_y6": {
-    "LOD0": 1230,
-    "LOD1": 614,
-    "LOD2": 184
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
    },
    "TRN_CityChunk_x1_y1": {
-    "LOD0": 2414,
-    "LOD1": 1206,
-    "LOD2": 362
+    "LOD0": 2398,
+    "LOD1": 1198,
+    "LOD2": 358
    },
    "TRN_CityChunk_x1_y2": {
-    "LOD0": 5783,
-    "LOD1": 2891,
-    "LOD2": 867
+    "LOD0": 5809,
+    "LOD1": 2903,
+    "LOD2": 871
    },
    "TRN_CityChunk_x1_y3": {
     "LOD0": 5514,
@@ -2896,24 +2896,24 @@
     "LOD2": 826
    },
    "TRN_CityChunk_x1_y6": {
-    "LOD0": 5783,
-    "LOD1": 2891,
-    "LOD2": 867
+    "LOD0": 5809,
+    "LOD1": 2903,
+    "LOD2": 871
    },
    "TRN_CityChunk_x1_y7": {
-    "LOD0": 2414,
-    "LOD1": 1206,
-    "LOD2": 362
+    "LOD0": 2398,
+    "LOD1": 1198,
+    "LOD2": 358
    },
    "TRN_CityChunk_x2_y0": {
-    "LOD0": 1230,
-    "LOD1": 614,
-    "LOD2": 184
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
    },
    "TRN_CityChunk_x2_y1": {
-    "LOD0": 5783,
-    "LOD1": 2891,
-    "LOD2": 867
+    "LOD0": 5809,
+    "LOD1": 2903,
+    "LOD2": 871
    },
    "TRN_CityChunk_x2_y2": {
     "LOD0": 6262,
@@ -2941,14 +2941,14 @@
     "LOD2": 938
    },
    "TRN_CityChunk_x2_y7": {
-    "LOD0": 5783,
-    "LOD1": 2891,
-    "LOD2": 867
+    "LOD0": 5809,
+    "LOD1": 2903,
+    "LOD2": 871
    },
    "TRN_CityChunk_x2_y8": {
-    "LOD0": 1230,
-    "LOD1": 614,
-    "LOD2": 184
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
    },
    "TRN_CityChunk_x3_y0": {
     "LOD0": 2992,
@@ -3086,14 +3086,14 @@
     "LOD2": 448
    },
    "TRN_CityChunk_x6_y0": {
-    "LOD0": 1230,
-    "LOD1": 614,
-    "LOD2": 184
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
    },
    "TRN_CityChunk_x6_y1": {
-    "LOD0": 5783,
-    "LOD1": 2891,
-    "LOD2": 867
+    "LOD0": 5809,
+    "LOD1": 2903,
+    "LOD2": 871
    },
    "TRN_CityChunk_x6_y2": {
     "LOD0": 6262,
@@ -3121,24 +3121,24 @@
     "LOD2": 938
    },
    "TRN_CityChunk_x6_y7": {
-    "LOD0": 5783,
-    "LOD1": 2891,
-    "LOD2": 867
+    "LOD0": 5809,
+    "LOD1": 2903,
+    "LOD2": 871
    },
    "TRN_CityChunk_x6_y8": {
-    "LOD0": 1230,
-    "LOD1": 614,
-    "LOD2": 184
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
    },
    "TRN_CityChunk_x7_y1": {
-    "LOD0": 2414,
-    "LOD1": 1206,
-    "LOD2": 362
+    "LOD0": 2398,
+    "LOD1": 1198,
+    "LOD2": 358
    },
    "TRN_CityChunk_x7_y2": {
-    "LOD0": 5783,
-    "LOD1": 2891,
-    "LOD2": 867
+    "LOD0": 5809,
+    "LOD1": 2903,
+    "LOD2": 871
    },
    "TRN_CityChunk_x7_y3": {
     "LOD0": 5514,
@@ -3156,19 +3156,19 @@
     "LOD2": 826
    },
    "TRN_CityChunk_x7_y6": {
-    "LOD0": 5783,
-    "LOD1": 2891,
-    "LOD2": 867
+    "LOD0": 5809,
+    "LOD1": 2903,
+    "LOD2": 871
    },
    "TRN_CityChunk_x7_y7": {
-    "LOD0": 2414,
-    "LOD1": 1206,
-    "LOD2": 362
+    "LOD0": 2398,
+    "LOD1": 1198,
+    "LOD2": 358
    },
    "TRN_CityChunk_x8_y2": {
-    "LOD0": 1230,
-    "LOD1": 614,
-    "LOD2": 184
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
    },
    "TRN_CityChunk_x8_y3": {
     "LOD0": 2992,
@@ -3186,26 +3186,29 @@
     "LOD2": 448
    },
    "TRN_CityChunk_x8_y6": {
-    "LOD0": 1230,
-    "LOD1": 614,
-    "LOD2": 184
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
    }
   },
   "export": {
    "terrain_glb": "export/godot/concordia_terrain.glb",
-   "terrain_bytes": 15102708,
+   "terrain_bytes": 15082748,
    "structures_glb": "export/godot/concordia_terrain_structures.glb",
    "structures_bytes": 1315284,
    "verify_terrain": {
     "objects": 207,
-    "tris": 509586,
+    "empties": 0,
+    "tris": 509538,
     "meshes_with_color0": 207
    },
    "verify_structures": {
     "objects": 16,
+    "empties": 0,
     "tris": 20432,
     "meshes_with_color0": 0
-   }
+   },
+   "extra": {}
   }
  }
 }

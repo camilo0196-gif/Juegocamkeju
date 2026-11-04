@@ -1,15 +1,15 @@
 {
  "timings_s": {
-  "wall": 0.4
+  "wall": 0.5
  },
  "wall_kit": {
   "WALL_Mod_A": {
-   "tris": 1020,
+   "tris": 1044,
    "budget": 3000,
    "ok": true,
    "lods": {
-    "LOD1": 510,
-    "LOD2": 152
+    "LOD1": 522,
+    "LOD2": 156
    },
    "z_max": 15.0,
    "z_min": -0.5,
@@ -17,12 +17,12 @@
    "slits": 5
   },
   "WALL_Mod_B": {
-   "tris": 1192,
+   "tris": 1216,
    "budget": 3000,
    "ok": true,
    "lods": {
-    "LOD1": 596,
-    "LOD2": 178
+    "LOD1": 608,
+    "LOD2": 182
    },
    "z_max": 15.0,
    "z_min": -0.5,
@@ -31,12 +31,12 @@
    "patches": 3
   },
   "WALL_Mod_C": {
-   "tris": 2004,
+   "tris": 2028,
    "budget": 3000,
    "ok": true,
    "lods": {
-    "LOD1": 1002,
-    "LOD2": 300
+    "LOD1": 1014,
+    "LOD2": 304
    },
    "z_max": 15.37,
    "z_min": -0.5,
@@ -74,29 +74,12 @@
    ]
   },
   "TOWER_Guard_Roof": {
-   "tris": 924,
+   "tris": 1080,
    "budget": 5000,
    "ok": true,
    "lods": {
-    "LOD1": 462,
-    "LOD2": 138
-   },
-   "z_max": 31.077,
-   "z_min": -3.0,
-   "apex_z": 29.14,
-   "lantern_z": [
-    28.58,
-    29.78
-   ],
-   "top_z": 31.08
-  },
-  "TOWER_Guard_Patched": {
-   "tris": 944,
-   "budget": 5000,
-   "ok": true,
-   "lods": {
-    "LOD1": 472,
-    "LOD2": 140
+    "LOD1": 540,
+    "LOD2": 162
    },
    "z_max": 31.077,
    "z_min": -3.0,
@@ -106,6 +89,43 @@
     29.78
    ],
    "top_z": 31.08,
+   "door": {
+    "w": 1.2,
+    "h": 2.2,
+    "sill_z": 12.4,
+    "local_pos": [
+     0.0,
+     -0.55,
+     12.4
+    ]
+   }
+  },
+  "TOWER_Guard_Patched": {
+   "tris": 1100,
+   "budget": 5000,
+   "ok": true,
+   "lods": {
+    "LOD1": 550,
+    "LOD2": 165
+   },
+   "z_max": 31.077,
+   "z_min": -3.0,
+   "apex_z": 29.14,
+   "lantern_z": [
+    28.58,
+    29.78
+   ],
+   "top_z": 31.08,
+   "door": {
+    "w": 1.2,
+    "h": 2.2,
+    "sill_z": 12.4,
+    "local_pos": [
+     0.0,
+     -0.55,
+     12.4
+    ]
+   },
    "roof_patches": 5
   },
   "GATE_Sealed_Twin": {
@@ -474,242 +494,338 @@
    {
     "from_k": 0,
     "to_k": 1,
-    "variant": "B"
+    "variant": "B",
+    "occludes_iso": true,
+    "name": "WALL_Seg00_B"
    },
    {
     "from_k": 1,
     "to_k": 2,
-    "variant": "C"
+    "variant": "C",
+    "occludes_iso": true,
+    "name": "WALL_Seg01_C"
    },
    {
     "from_k": 2,
     "to_k": 3,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": true,
+    "name": "WALL_Seg02_A"
    },
    {
     "from_k": 3,
     "to_k": 4,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": true,
+    "name": "WALL_Seg03_A"
    },
    {
     "from_k": 4,
     "to_k": 5,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": true,
+    "name": "WALL_Seg04_A"
    },
    {
     "from_k": 5,
     "to_k": 6,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": true,
+    "name": "WALL_Seg05_A"
    },
    {
     "from_k": 6,
     "to_k": 7,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": false,
+    "name": "WALL_Seg06_A"
    },
    {
     "from_k": 7,
     "to_k": 8,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": false,
+    "name": "WALL_Seg07_A"
    },
    {
     "from_k": 8,
     "to_k": 9,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": false,
+    "name": "WALL_Seg08_A"
    },
    {
     "from_k": 9,
     "to_k": 10,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": false,
+    "name": "WALL_Seg09_A"
    },
    {
     "from_k": 10,
     "to_k": 11,
-    "variant": "B"
+    "variant": "B",
+    "occludes_iso": false,
+    "name": "WALL_Seg10_B"
    },
    {
     "from_k": 11,
     "to_k": 12,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": false,
+    "name": "WALL_Seg11_A"
    },
    {
     "from_k": 12,
     "to_k": 13,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": false,
+    "name": "WALL_Seg12_A"
    },
    {
     "from_k": 13,
     "to_k": 14,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": false,
+    "name": "WALL_Seg13_A"
    },
    {
     "from_k": 14,
     "to_k": 15,
-    "variant": "B"
+    "variant": "B",
+    "occludes_iso": false,
+    "name": "WALL_Seg14_B"
    },
    {
     "from_k": 15,
     "to_k": 16,
-    "variant": "B"
+    "variant": "B",
+    "occludes_iso": false,
+    "name": "WALL_Seg15_B"
    },
    {
     "from_k": 16,
     "to_k": 17,
-    "variant": "C"
+    "variant": "C",
+    "occludes_iso": false,
+    "name": "WALL_Seg16_C"
    },
    {
     "from_k": 17,
     "to_k": 18,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": false,
+    "name": "WALL_Seg17_A"
    },
    {
     "from_k": 18,
     "to_k": 19,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": false,
+    "name": "WALL_Seg18_A"
    },
    {
     "from_k": 19,
     "to_k": 20,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": false,
+    "name": "WALL_Seg19_A"
    },
    {
     "from_k": 20,
     "to_k": 21,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": false,
+    "name": "WALL_Seg20_A"
    },
    {
     "from_k": 21,
     "to_k": 22,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": false,
+    "name": "WALL_Seg21_A"
    },
    {
     "from_k": 22,
     "to_k": 23,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": false,
+    "name": "WALL_Seg22_A"
    },
    {
     "from_k": 23,
     "to_k": 24,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": false,
+    "name": "WALL_Seg23_A"
    },
    {
     "from_k": 24,
     "to_k": 25,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": false,
+    "name": "WALL_Seg24_A"
    },
    {
     "from_k": 25,
     "to_k": 26,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": false,
+    "name": "WALL_Seg25_A"
    },
    {
     "from_k": 26,
     "to_k": 27,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": false,
+    "name": "WALL_Seg26_A"
    },
    {
     "from_k": 27,
     "to_k": 28,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": false,
+    "name": "WALL_Seg27_A"
    },
    {
     "from_k": 28,
     "to_k": 29,
-    "variant": "C"
+    "variant": "C",
+    "occludes_iso": false,
+    "name": "WALL_Seg28_C"
    },
    {
     "from_k": 29,
     "to_k": 30,
-    "variant": "B"
+    "variant": "B",
+    "occludes_iso": false,
+    "name": "WALL_Seg29_B"
    },
    {
     "from_k": 30,
     "to_k": 31,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": true,
+    "name": "WALL_Seg30_A"
    },
    {
     "from_k": 31,
     "to_k": 32,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": true,
+    "name": "WALL_Seg31_A"
    },
    {
     "from_k": 32,
     "to_k": 33,
-    "variant": "B"
+    "variant": "B",
+    "occludes_iso": true,
+    "name": "WALL_Seg32_B"
    },
    {
     "from_k": 33,
     "to_k": 34,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": true,
+    "name": "WALL_Seg33_A"
    },
    {
     "from_k": 34,
     "to_k": 35,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": true,
+    "name": "WALL_Seg34_A"
    },
    {
     "from_k": 35,
     "to_k": 36,
-    "variant": "B"
+    "variant": "B",
+    "occludes_iso": true,
+    "name": "WALL_Seg35_B"
    },
    {
     "from_k": 36,
     "to_k": 37,
-    "variant": "B"
+    "variant": "B",
+    "occludes_iso": true,
+    "name": "WALL_Seg36_B"
    },
    {
     "from_k": 37,
     "to_k": 38,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": true,
+    "name": "WALL_Seg37_A"
    },
    {
     "from_k": 38,
     "to_k": 39,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": true,
+    "name": "WALL_Seg38_A"
    },
    {
     "from_k": 39,
     "to_k": 40,
-    "variant": "B"
+    "variant": "B",
+    "occludes_iso": true,
+    "name": "WALL_Seg39_B"
    },
    {
     "from_k": 40,
     "to_k": 41,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": true,
+    "name": "WALL_Seg40_A"
    },
    {
     "from_k": 41,
     "to_k": 42,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": true,
+    "name": "WALL_Seg41_A"
    },
    {
     "from_k": 42,
     "to_k": 43,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": true,
+    "name": "WALL_Seg42_A"
    },
    {
     "from_k": 43,
     "to_k": 44,
-    "variant": "B"
+    "variant": "B",
+    "occludes_iso": true,
+    "name": "WALL_Seg43_B"
    },
    {
     "from_k": 44,
     "to_k": 45,
-    "variant": "C"
+    "variant": "C",
+    "occludes_iso": true,
+    "name": "WALL_Seg44_C"
    },
    {
     "from_k": 45,
     "to_k": 46,
-    "variant": "C"
+    "variant": "C",
+    "occludes_iso": true,
+    "name": "WALL_Seg45_C"
    },
    {
     "from_k": 46,
     "to_k": 47,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": true,
+    "name": "WALL_Seg46_A"
    },
    {
     "from_k": 47,
     "to_k": 0,
-    "variant": "A"
+    "variant": "A",
+    "occludes_iso": true,
+    "name": "WALL_Seg47_A"
    }
   ],
   "counts": {
@@ -741,7 +857,33 @@
     6,
     2
    ]
-  }
+  },
+  "occludes_iso_modules": [
+   "WALL_Seg00_B",
+   "WALL_Seg01_C",
+   "WALL_Seg02_A",
+   "WALL_Seg03_A",
+   "WALL_Seg04_A",
+   "WALL_Seg05_A",
+   "WALL_Seg30_A",
+   "WALL_Seg31_A",
+   "WALL_Seg32_B",
+   "WALL_Seg33_A",
+   "WALL_Seg34_A",
+   "WALL_Seg35_B",
+   "WALL_Seg36_B",
+   "WALL_Seg37_A",
+   "WALL_Seg38_A",
+   "WALL_Seg39_B",
+   "WALL_Seg40_A",
+   "WALL_Seg41_A",
+   "WALL_Seg42_A",
+   "WALL_Seg43_B",
+   "WALL_Seg44_C",
+   "WALL_Seg45_C",
+   "WALL_Seg46_A",
+   "WALL_Seg47_A"
+  ]
  },
  "wall_dims": {
   "chord_m": 26.1613,
@@ -762,7 +904,7 @@
    4.0
   ],
   "rune_line": {
-   "z_center": 0.3,
+   "z_center": 4.5,
    "w": 0.08,
    "d": 0.03,
    "emission": 0.8
@@ -799,106 +941,92 @@
     "city_pieces_beyond_r200": []
    }
   },
-  "rune_line_buried_modules": {
-   "count": 24,
-   "list": [
-    {
-     "module_from_k": 3,
-     "ground_above_runes_m": 3.2
-    },
-    {
-     "module_from_k": 4,
-     "ground_above_runes_m": 3.2
-    },
-    {
-     "module_from_k": 5,
-     "ground_above_runes_m": 3.2
-    },
-    {
-     "module_from_k": 6,
-     "ground_above_runes_m": 3.2
-    },
-    {
-     "module_from_k": 7,
-     "ground_above_runes_m": 3.2
-    },
-    {
-     "module_from_k": 8,
-     "ground_above_runes_m": 3.2
-    },
-    {
-     "module_from_k": 15,
-     "ground_above_runes_m": 3.2
-    },
-    {
-     "module_from_k": 16,
-     "ground_above_runes_m": 3.2
-    },
-    {
-     "module_from_k": 17,
-     "ground_above_runes_m": 3.2
-    },
-    {
-     "module_from_k": 18,
-     "ground_above_runes_m": 3.2
-    },
-    {
-     "module_from_k": 19,
-     "ground_above_runes_m": 3.2
-    },
-    {
-     "module_from_k": 20,
-     "ground_above_runes_m": 3.2
-    },
-    {
-     "module_from_k": 27,
-     "ground_above_runes_m": 3.2
-    },
-    {
-     "module_from_k": 28,
-     "ground_above_runes_m": 3.2
-    },
-    {
-     "module_from_k": 29,
-     "ground_above_runes_m": 3.2
-    },
-    {
-     "module_from_k": 30,
-     "ground_above_runes_m": 3.2
-    },
-    {
-     "module_from_k": 31,
-     "ground_above_runes_m": 3.2
-    },
-    {
-     "module_from_k": 32,
-     "ground_above_runes_m": 3.2
-    },
-    {
-     "module_from_k": 39,
-     "ground_above_runes_m": 3.2
-    },
-    {
-     "module_from_k": 40,
-     "ground_above_runes_m": 3.2
-    },
-    {
-     "module_from_k": 41,
-     "ground_above_runes_m": 3.2
-    },
-    {
-     "module_from_k": 42,
-     "ground_above_runes_m": 3.2
-    },
-    {
-     "module_from_k": 43,
-     "ground_above_runes_m": 3.2
-    },
-    {
-     "module_from_k": 44,
-     "ground_above_runes_m": 3.2
-    }
-   ]
+  "rune_ring": {
+   "z_rel_base": 4.5,
+   "z_abs": 10.5,
+   "faces": "interior y exterior de los 48 modulos",
+   "min_clearance_over_inner_ground_m": 0.96,
+   "visible_from_inside": "192/240",
+   "visible_from_outside": "200/240",
+   "hidden_inside_by_module": {
+    "0": 5,
+    "3": 1,
+    "8": 1,
+    "11": 5,
+    "12": 5,
+    "15": 1,
+    "20": 1,
+    "23": 5,
+    "24": 5,
+    "27": 1,
+    "32": 1,
+    "35": 5,
+    "36": 5,
+    "39": 1,
+    "44": 1,
+    "47": 5
+   },
+   "hidden_outside_by_module": {
+    "0": 3,
+    "3": 1,
+    "4": 1,
+    "7": 1,
+    "8": 1,
+    "11": 3,
+    "12": 3,
+    "15": 1,
+    "16": 1,
+    "19": 1,
+    "20": 1,
+    "23": 3,
+    "24": 3,
+    "27": 1,
+    "28": 1,
+    "31": 1,
+    "32": 1,
+    "35": 3,
+    "36": 3,
+    "39": 1,
+    "40": 1,
+    "43": 1,
+    "44": 1,
+    "47": 3
+   },
+   "viewers": "dentro: ojo a 1.7 m en r=182; fuera: ojo a 1.7 m sobre el yermo en r=240"
+  },
+  "walkway_collision": {
+   "k00-k12": {
+    "samples": 624,
+    "flat_at_walkway": 564,
+    "blocked_by_gate_structures": 60,
+    "gaps": 0,
+    "joint_checks_2cm": 22,
+    "joint_gaps": 0
+   },
+   "k12-k24": {
+    "samples": 624,
+    "flat_at_walkway": 564,
+    "blocked_by_gate_structures": 60,
+    "gaps": 0,
+    "joint_checks_2cm": 22,
+    "joint_gaps": 0
+   },
+   "k24-k36": {
+    "samples": 624,
+    "flat_at_walkway": 564,
+    "blocked_by_gate_structures": 60,
+    "gaps": 0,
+    "joint_checks_2cm": 22,
+    "joint_gaps": 0
+   },
+   "k36-k00": {
+    "samples": 624,
+    "flat_at_walkway": 564,
+    "blocked_by_gate_structures": 60,
+    "gaps": 0,
+    "joint_checks_2cm": 22,
+    "joint_gaps": 0
+   }
   },
   "iso_occlusion": {
    "camera_elevation_deg": 35.26,
@@ -909,16 +1037,16 @@
  },
  "wall_export": {
   "concordia_wall_kit.glb": {
-   "objects": 21,
-   "bytes": 3658816
+   "objects": 23,
+   "bytes": 13560344
   },
   "concordia_wall_kit_lods.glb": {
    "objects": 22,
-   "bytes": 3392768
+   "bytes": 13282100
   },
   "concordia_wall_layout.glb": {
-   "objects": 261,
-   "bytes": 3693516
+   "objects": 269,
+   "bytes": 13598696
   }
  }
 }

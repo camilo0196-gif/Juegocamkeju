@@ -1,16 +1,16 @@
 {
  "timings_s": {
-  "plaza": 17.2,
-  "shading": 13.3,
-  "chunks": 42.2,
-  "checks": 1.3
+  "plaza": 17.3,
+  "shading": 15.9,
+  "chunks": 46.0,
+  "checks": 1.4
  },
  "plaza_terrain": {
   "knives": 56,
   "knife_verts": 7397,
   "knife_missed": 0,
   "verts_offset": 5358,
-  "tris_after": 322702
+  "tris_after": 322686
  },
  "plaza_masks": {
   "slab_ring_id": "valor = anillo / 10 (anillo 1..10 = r 0-6 ... 54-60; 0 fuera)",
@@ -191,8 +191,8 @@
  "plaza_markers": 41,
  "shading": {
   "material": "MAT_Terrain_City",
-  "edge_top_verts": 14140,
-  "wall_foot_verts": 14288,
+  "edge_top_verts": 13948,
+  "wall_foot_verts": 14036,
   "edge_width_m": 0.8,
   "edge_dark": 0.3,
   "base_width_m": 0.6,
@@ -200,7 +200,7 @@
   "ao_distance_m": 1.5,
   "ao_samples": 32,
   "ao_bake_objects": "solo TRN_City (piezas ocultas durante el horneado)",
-  "ao_min": 0.323,
+  "ao_min": 0.309,
   "ao_p05": 0.784,
   "ao_median": 1.0,
   "colors_srgb": {
@@ -218,8 +218,8 @@
   "lod0_before": {
    "avg": 4686,
    "max": 8856,
-   "min": 1230,
-   "total": 323342,
+   "min": 1210,
+   "total": 323326,
    "heaviest": [
     [
      "TRN_CityChunk_x4_y4_LOD0",
@@ -261,17 +261,17 @@
    "LOD0": {
     "avg": 4686,
     "max": 8856,
-    "total": 323342
+    "total": 323326
    },
    "LOD1": {
     "avg": 2342,
     "max": 4428,
-    "total": 161632
+    "total": 161616
    },
    "LOD2": {
     "avg": 702,
     "max": 1328,
-    "total": 48452
+    "total": 48436
    }
   },
   "lod_ratio_real": {
@@ -282,9 +282,9 @@
   "seams_locked_chunks": "138 / 138 (LOD1+LOD2 conservan todos los vertices del borde)",
   "per_chunk": {
    "TRN_CityChunk_x0_y2": {
-    "LOD0": 1230,
-    "LOD1": 614,
-    "LOD2": 184
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
    },
    "TRN_CityChunk_x0_y3": {
     "LOD0": 2992,
@@ -302,19 +302,19 @@
     "LOD2": 448
    },
    "TRN_CityChunk_x0_y6": {
-    "LOD0": 1230,
-    "LOD1": 614,
-    "LOD2": 184
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
    },
    "TRN_CityChunk_x1_y1": {
-    "LOD0": 2414,
-    "LOD1": 1206,
-    "LOD2": 362
+    "LOD0": 2398,
+    "LOD1": 1198,
+    "LOD2": 358
    },
    "TRN_CityChunk_x1_y2": {
-    "LOD0": 5783,
-    "LOD1": 2891,
-    "LOD2": 867
+    "LOD0": 5809,
+    "LOD1": 2903,
+    "LOD2": 871
    },
    "TRN_CityChunk_x1_y3": {
     "LOD0": 5514,
@@ -332,24 +332,24 @@
     "LOD2": 826
    },
    "TRN_CityChunk_x1_y6": {
-    "LOD0": 5783,
-    "LOD1": 2891,
-    "LOD2": 867
+    "LOD0": 5809,
+    "LOD1": 2903,
+    "LOD2": 871
    },
    "TRN_CityChunk_x1_y7": {
-    "LOD0": 2414,
-    "LOD1": 1206,
-    "LOD2": 362
+    "LOD0": 2398,
+    "LOD1": 1198,
+    "LOD2": 358
    },
    "TRN_CityChunk_x2_y0": {
-    "LOD0": 1230,
-    "LOD1": 614,
-    "LOD2": 184
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
    },
    "TRN_CityChunk_x2_y1": {
-    "LOD0": 5783,
-    "LOD1": 2891,
-    "LOD2": 867
+    "LOD0": 5809,
+    "LOD1": 2903,
+    "LOD2": 871
    },
    "TRN_CityChunk_x2_y2": {
     "LOD0": 6262,
@@ -377,14 +377,14 @@
     "LOD2": 938
    },
    "TRN_CityChunk_x2_y7": {
-    "LOD0": 5783,
-    "LOD1": 2891,
-    "LOD2": 867
+    "LOD0": 5809,
+    "LOD1": 2903,
+    "LOD2": 871
    },
    "TRN_CityChunk_x2_y8": {
-    "LOD0": 1230,
-    "LOD1": 614,
-    "LOD2": 184
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
    },
    "TRN_CityChunk_x3_y0": {
     "LOD0": 2992,
@@ -522,14 +522,14 @@
     "LOD2": 448
    },
    "TRN_CityChunk_x6_y0": {
-    "LOD0": 1230,
-    "LOD1": 614,
-    "LOD2": 184
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
    },
    "TRN_CityChunk_x6_y1": {
-    "LOD0": 5783,
-    "LOD1": 2891,
-    "LOD2": 867
+    "LOD0": 5809,
+    "LOD1": 2903,
+    "LOD2": 871
    },
    "TRN_CityChunk_x6_y2": {
     "LOD0": 6262,
@@ -557,24 +557,24 @@
     "LOD2": 938
    },
    "TRN_CityChunk_x6_y7": {
-    "LOD0": 5783,
-    "LOD1": 2891,
-    "LOD2": 867
+    "LOD0": 5809,
+    "LOD1": 2903,
+    "LOD2": 871
    },
    "TRN_CityChunk_x6_y8": {
-    "LOD0": 1230,
-    "LOD1": 614,
-    "LOD2": 184
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
    },
    "TRN_CityChunk_x7_y1": {
-    "LOD0": 2414,
-    "LOD1": 1206,
-    "LOD2": 362
+    "LOD0": 2398,
+    "LOD1": 1198,
+    "LOD2": 358
    },
    "TRN_CityChunk_x7_y2": {
-    "LOD0": 5783,
-    "LOD1": 2891,
-    "LOD2": 867
+    "LOD0": 5809,
+    "LOD1": 2903,
+    "LOD2": 871
    },
    "TRN_CityChunk_x7_y3": {
     "LOD0": 5514,
@@ -592,19 +592,19 @@
     "LOD2": 826
    },
    "TRN_CityChunk_x7_y6": {
-    "LOD0": 5783,
-    "LOD1": 2891,
-    "LOD2": 867
+    "LOD0": 5809,
+    "LOD1": 2903,
+    "LOD2": 871
    },
    "TRN_CityChunk_x7_y7": {
-    "LOD0": 2414,
-    "LOD1": 1206,
-    "LOD2": 362
+    "LOD0": 2398,
+    "LOD1": 1198,
+    "LOD2": 358
    },
    "TRN_CityChunk_x8_y2": {
-    "LOD0": 1230,
-    "LOD1": 614,
-    "LOD2": 184
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
    },
    "TRN_CityChunk_x8_y3": {
     "LOD0": 2992,
@@ -622,20 +622,20 @@
     "LOD2": 448
    },
    "TRN_CityChunk_x8_y6": {
-    "LOD0": 1230,
-    "LOD1": 614,
-    "LOD2": 184
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
    }
   },
   "export": {
    "terrain_glb": "export/godot/concordia_terrain.glb",
-   "terrain_bytes": 19165088,
+   "terrain_bytes": 19141200,
    "structures_glb": "export/godot/concordia_terrain_structures.glb",
    "structures_bytes": 1315284,
    "verify_terrain": {
     "objects": 207,
     "empties": 0,
-    "tris": 533426,
+    "tris": 533378,
     "meshes_with_color0": 207
    },
    "verify_structures": {
@@ -646,7 +646,7 @@
    },
    "extra": {
     "concordia_plaza.glb": {
-     "bytes": 426588,
+     "bytes": 426852,
      "objects_in": 58,
      "verify": {
       "objects": 17,
