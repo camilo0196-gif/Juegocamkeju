@@ -1,0 +1,759 @@
+{
+ "grid_verts": 180625,
+ "grid_faces": 179776,
+ "deleted_verts_r_gt_212": 39460,
+ "cleanup": {
+  "bowtie_faces_removed": 0,
+  "wire_edges": 4,
+  "loose_verts": 0,
+  "non_manifold_verts_left": 0
+ },
+ "outer_boundary_snap": {
+  "verts": 1688,
+  "max_move_m": 1.3985
+ },
+ "rings": [
+  {
+   "R": 118.9118,
+   "ring_verts": 456,
+   "new_edges": 452,
+   "missed": 0
+  },
+  {
+   "R": 119.0882,
+   "ring_verts": 440,
+   "new_edges": 436,
+   "missed": 0
+  },
+  {
+   "R": 132.9118,
+   "ring_verts": 492,
+   "new_edges": 488,
+   "missed": 0
+  },
+  {
+   "R": 133.0882,
+   "ring_verts": 496,
+   "new_edges": 492,
+   "missed": 0
+  },
+  {
+   "R": 146.9118,
+   "ring_verts": 584,
+   "new_edges": 580,
+   "missed": 0
+  },
+  {
+   "R": 147.0882,
+   "ring_verts": 556,
+   "new_edges": 552,
+   "missed": 0
+  },
+  {
+   "R": 160.9118,
+   "ring_verts": 616,
+   "new_edges": 612,
+   "missed": 0
+  },
+  {
+   "R": 161.0882,
+   "ring_verts": 592,
+   "new_edges": 588,
+   "missed": 0
+  },
+  {
+   "R": 174.9118,
+   "ring_verts": 640,
+   "new_edges": 636,
+   "missed": 0
+  },
+  {
+   "R": 175.0882,
+   "ring_verts": 656,
+   "new_edges": 652,
+   "missed": 0
+  },
+  {
+   "R": 203.3829,
+   "ring_verts": 604,
+   "new_edges": 600,
+   "missed": 0
+  },
+  {
+   "R": 204.0,
+   "ring_verts": 624,
+   "new_edges": 620,
+   "missed": 0
+  }
+ ],
+ "noise": {
+  "seed": 1977,
+  "pp_target_m": 0.05,
+  "scales_m": [
+   12.0,
+   4.0
+  ]
+ },
+ "faces_flipped_to_up": 0,
+ "retaining_faces": 6268,
+ "vgroup_counts": {
+  "plaza": 11289,
+  "landmarks": 8428,
+  "sector_mercado": 16147,
+  "sector_oficios": 16147,
+  "sector_clases": 16147,
+  "sector_razas": 16147,
+  "sector_moradas": 48228,
+  "terraza_id": 39012,
+  "talud": 10756,
+  "base_muralla": 10544
+ },
+ "geometry": {
+  "verts": 146833,
+  "tris": 291976,
+  "all_tris": true,
+  "min_normal_z": 0.1707,
+  "faces_normal_down_or_vertical": 0,
+  "degenerate_faces_area_lt_1e-6": 0,
+  "min_face_area_m2": 0.00263,
+  "duplicate_verts_1e-4": 0,
+  "non_manifold_edges": 0,
+  "boundary_edges": 1688,
+  "wire_edges": 0,
+  "z_min": 0.0,
+  "z_max": 9.5214,
+  "r_max": 212.0,
+  "noise_dev_min_m": -0.025,
+  "noise_dev_max_m": 0.025
+ },
+ "stretched_step_faces": 0,
+ "slope_by_zone": {
+  "Clases/base_muralla_196_204": {
+   "faces": 2685,
+   "max": 6.35,
+   "p99": 2.07,
+   "mean": 0.08,
+   "gt5": 2,
+   "gt8": 0
+  },
+  "Clases/descenso_60_90": {
+   "faces": 4374,
+   "max": 4.06,
+   "p99": 3.99,
+   "mean": 3.25,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Clases/distrito_90_185": {
+   "faces": 21412,
+   "max": 1.62,
+   "p99": 1.49,
+   "mean": 0.88,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Clases/terraplen_185_196": {
+   "faces": 3490,
+   "max": 9.54,
+   "p99": 9.37,
+   "mean": 7.75,
+   "gt5": 2929,
+   "gt8": 2624
+  },
+  "Mercado/base_muralla_196_204": {
+   "faces": 2686,
+   "max": 6.35,
+   "p99": 2.07,
+   "mean": 0.08,
+   "gt5": 2,
+   "gt8": 0
+  },
+  "Mercado/descenso_60_90": {
+   "faces": 4374,
+   "max": 4.1,
+   "p99": 4.04,
+   "mean": 3.26,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Mercado/distrito_90_185": {
+   "faces": 21410,
+   "max": 1.65,
+   "p99": 1.5,
+   "mean": 0.88,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Mercado/terraplen_185_196": {
+   "faces": 3489,
+   "max": 9.52,
+   "p99": 9.4,
+   "mean": 7.76,
+   "gt5": 2929,
+   "gt8": 2614
+  },
+  "Mezcla_Clases_Morada_NW/borde_lateral": {
+   "faces": 1811,
+   "max": 69.87,
+   "p99": 51.11,
+   "mean": 16.47,
+   "gt5": 1145,
+   "gt8": 1050
+  },
+  "Mezcla_Clases_Morada_NW/muro_contencion": {
+   "faces": 50,
+   "max": 80.17,
+   "p99": 80.14,
+   "mean": 77.75,
+   "gt5": 50,
+   "gt8": 50
+  },
+  "Mezcla_Clases_Morada_SW/borde_lateral": {
+   "faces": 1814,
+   "max": 69.87,
+   "p99": 51.15,
+   "mean": 16.43,
+   "gt5": 1145,
+   "gt8": 1048
+  },
+  "Mezcla_Clases_Morada_SW/muro_contencion": {
+   "faces": 50,
+   "max": 80.16,
+   "p99": 80.14,
+   "mean": 77.75,
+   "gt5": 50,
+   "gt8": 50
+  },
+  "Mezcla_Mercado_Morada_NE/borde_lateral": {
+   "faces": 1810,
+   "max": 69.87,
+   "p99": 51.12,
+   "mean": 16.48,
+   "gt5": 1149,
+   "gt8": 1045
+  },
+  "Mezcla_Mercado_Morada_NE/muro_contencion": {
+   "faces": 50,
+   "max": 80.17,
+   "p99": 80.15,
+   "mean": 77.75,
+   "gt5": 50,
+   "gt8": 50
+  },
+  "Mezcla_Mercado_Morada_NW/borde_lateral": {
+   "faces": 1819,
+   "max": 69.87,
+   "p99": 51.14,
+   "mean": 16.39,
+   "gt5": 1146,
+   "gt8": 1051
+  },
+  "Mezcla_Mercado_Morada_NW/muro_contencion": {
+   "faces": 50,
+   "max": 80.17,
+   "p99": 80.15,
+   "mean": 77.75,
+   "gt5": 50,
+   "gt8": 50
+  },
+  "Mezcla_Oficios_Morada_NE/borde_lateral": {
+   "faces": 1812,
+   "max": 69.85,
+   "p99": 51.14,
+   "mean": 16.44,
+   "gt5": 1143,
+   "gt8": 1049
+  },
+  "Mezcla_Oficios_Morada_NE/muro_contencion": {
+   "faces": 50,
+   "max": 80.17,
+   "p99": 80.15,
+   "mean": 77.75,
+   "gt5": 50,
+   "gt8": 50
+  },
+  "Mezcla_Oficios_Morada_SE/borde_lateral": {
+   "faces": 1814,
+   "max": 69.89,
+   "p99": 51.08,
+   "mean": 16.44,
+   "gt5": 1150,
+   "gt8": 1049
+  },
+  "Mezcla_Oficios_Morada_SE/muro_contencion": {
+   "faces": 50,
+   "max": 80.17,
+   "p99": 80.15,
+   "mean": 77.75,
+   "gt5": 50,
+   "gt8": 50
+  },
+  "Mezcla_Razas_Morada_SE/borde_lateral": {
+   "faces": 1819,
+   "max": 69.87,
+   "p99": 51.18,
+   "mean": 16.39,
+   "gt5": 1148,
+   "gt8": 1048
+  },
+  "Mezcla_Razas_Morada_SE/muro_contencion": {
+   "faces": 50,
+   "max": 80.17,
+   "p99": 80.15,
+   "mean": 77.75,
+   "gt5": 50,
+   "gt8": 50
+  },
+  "Mezcla_Razas_Morada_SW/borde_lateral": {
+   "faces": 1813,
+   "max": 69.91,
+   "p99": 51.12,
+   "mean": 16.45,
+   "gt5": 1145,
+   "gt8": 1045
+  },
+  "Mezcla_Razas_Morada_SW/muro_contencion": {
+   "faces": 50,
+   "max": 80.17,
+   "p99": 80.15,
+   "mean": 77.75,
+   "gt5": 50,
+   "gt8": 50
+  },
+  "Morada_NE/descenso_60_90": {
+   "faces": 2692,
+   "max": 4.13,
+   "p99": 4.04,
+   "mean": 3.25,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_NE/escalinata_95_105": {
+   "faces": 1246,
+   "max": 10.3,
+   "p99": 10.23,
+   "mean": 8.51,
+   "gt5": 1066,
+   "gt8": 975
+  },
+  "Morada_NE/hitos_90_95": {
+   "faces": 572,
+   "max": 0.68,
+   "p99": 0.45,
+   "mean": 0.17,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_NE/muro_contencion": {
+   "faces": 1467,
+   "max": 80.06,
+   "p99": 80.05,
+   "mean": 80.0,
+   "gt5": 1467,
+   "gt8": 1467
+  },
+  "Morada_NE/plataforma_189_203": {
+   "faces": 3851,
+   "max": 0.49,
+   "p99": 0.33,
+   "mean": 0.06,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_NE/terrazas_105_189": {
+   "faces": 16911,
+   "max": 0.57,
+   "p99": 0.36,
+   "mean": 0.16,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_NW/descenso_60_90": {
+   "faces": 2693,
+   "max": 4.13,
+   "p99": 4.03,
+   "mean": 3.25,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_NW/escalinata_95_105": {
+   "faces": 1246,
+   "max": 10.27,
+   "p99": 10.22,
+   "mean": 8.52,
+   "gt5": 1067,
+   "gt8": 976
+  },
+  "Morada_NW/hitos_90_95": {
+   "faces": 574,
+   "max": 0.71,
+   "p99": 0.38,
+   "mean": 0.16,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_NW/muro_contencion": {
+   "faces": 1467,
+   "max": 80.06,
+   "p99": 80.05,
+   "mean": 80.0,
+   "gt5": 1467,
+   "gt8": 1467
+  },
+  "Morada_NW/plataforma_189_203": {
+   "faces": 3841,
+   "max": 0.45,
+   "p99": 0.36,
+   "mean": 0.07,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_NW/terrazas_105_189": {
+   "faces": 16914,
+   "max": 0.62,
+   "p99": 0.37,
+   "mean": 0.16,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_SE/descenso_60_90": {
+   "faces": 2697,
+   "max": 4.14,
+   "p99": 4.04,
+   "mean": 3.25,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_SE/escalinata_95_105": {
+   "faces": 1246,
+   "max": 10.4,
+   "p99": 10.31,
+   "mean": 8.53,
+   "gt5": 1066,
+   "gt8": 973
+  },
+  "Morada_SE/hitos_90_95": {
+   "faces": 568,
+   "max": 0.63,
+   "p99": 0.48,
+   "mean": 0.19,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_SE/muro_contencion": {
+   "faces": 1467,
+   "max": 80.06,
+   "p99": 80.05,
+   "mean": 80.0,
+   "gt5": 1467,
+   "gt8": 1467
+  },
+  "Morada_SE/plataforma_189_203": {
+   "faces": 3841,
+   "max": 0.49,
+   "p99": 0.36,
+   "mean": 0.07,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_SE/terrazas_105_189": {
+   "faces": 16912,
+   "max": 0.59,
+   "p99": 0.36,
+   "mean": 0.16,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_SW/descenso_60_90": {
+   "faces": 2692,
+   "max": 4.13,
+   "p99": 4.0,
+   "mean": 3.25,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_SW/escalinata_95_105": {
+   "faces": 1246,
+   "max": 10.39,
+   "p99": 10.3,
+   "mean": 8.53,
+   "gt5": 1067,
+   "gt8": 972
+  },
+  "Morada_SW/hitos_90_95": {
+   "faces": 570,
+   "max": 0.59,
+   "p99": 0.38,
+   "mean": 0.18,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_SW/muro_contencion": {
+   "faces": 1467,
+   "max": 80.07,
+   "p99": 80.05,
+   "mean": 80.0,
+   "gt5": 1467,
+   "gt8": 1467
+  },
+  "Morada_SW/plataforma_189_203": {
+   "faces": 3851,
+   "max": 0.44,
+   "p99": 0.33,
+   "mean": 0.07,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_SW/terrazas_105_189": {
+   "faces": 16909,
+   "max": 0.62,
+   "p99": 0.36,
+   "mean": 0.16,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Oficios/base_muralla_196_204": {
+   "faces": 2686,
+   "max": 6.35,
+   "p99": 2.07,
+   "mean": 0.08,
+   "gt5": 2,
+   "gt8": 0
+  },
+  "Oficios/descenso_60_90": {
+   "faces": 4379,
+   "max": 4.1,
+   "p99": 4.02,
+   "mean": 3.24,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Oficios/distrito_90_185": {
+   "faces": 21410,
+   "max": 1.58,
+   "p99": 1.47,
+   "mean": 0.89,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Oficios/terraplen_185_196": {
+   "faces": 3488,
+   "max": 9.44,
+   "p99": 9.36,
+   "mean": 7.76,
+   "gt5": 2931,
+   "gt8": 2627
+  },
+  "Plaza/plaza": {
+   "faces": 22631,
+   "max": 0.4,
+   "p99": 0.29,
+   "mean": 0.29,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Razas/base_muralla_196_204": {
+   "faces": 2689,
+   "max": 6.35,
+   "p99": 2.07,
+   "mean": 0.08,
+   "gt5": 2,
+   "gt8": 0
+  },
+  "Razas/descenso_60_90": {
+   "faces": 4373,
+   "max": 4.16,
+   "p99": 4.07,
+   "mean": 3.25,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Razas/distrito_90_185": {
+   "faces": 21410,
+   "max": 1.65,
+   "p99": 1.49,
+   "mean": 0.88,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Razas/terraplen_185_196": {
+   "faces": 3486,
+   "max": 9.53,
+   "p99": 9.38,
+   "mean": 7.76,
+   "gt5": 2929,
+   "gt8": 2623
+  },
+  "Talud/talud_204_212": {
+   "faces": 19652,
+   "max": 41.47,
+   "p99": 41.47,
+   "mean": 36.07,
+   "gt5": 19348,
+   "gt8": 19132
+  }
+ },
+ "slope_walkable_max_by_sector": {
+  "Clases": {
+   "walk_max": 4.06,
+   "walk_gt5": 0,
+   "zone_of_max": "descenso_60_90"
+  },
+  "Mercado": {
+   "walk_max": 4.1,
+   "walk_gt5": 0,
+   "zone_of_max": "descenso_60_90"
+  },
+  "Morada_NE": {
+   "walk_max": 4.13,
+   "walk_gt5": 0,
+   "zone_of_max": "descenso_60_90"
+  },
+  "Morada_NW": {
+   "walk_max": 4.13,
+   "walk_gt5": 0,
+   "zone_of_max": "descenso_60_90"
+  },
+  "Morada_SE": {
+   "walk_max": 4.14,
+   "walk_gt5": 0,
+   "zone_of_max": "descenso_60_90"
+  },
+  "Morada_SW": {
+   "walk_max": 4.13,
+   "walk_gt5": 0,
+   "zone_of_max": "descenso_60_90"
+  },
+  "Oficios": {
+   "walk_max": 4.1,
+   "walk_gt5": 0,
+   "zone_of_max": "descenso_60_90"
+  },
+  "Plaza": {
+   "walk_max": 0.4,
+   "walk_gt5": 0,
+   "zone_of_max": "plaza"
+  },
+  "Razas": {
+   "walk_max": 4.16,
+   "walk_gt5": 0,
+   "zone_of_max": "descenso_60_90"
+  }
+ },
+ "level_checks": [
+  {
+   "point": "plaza centro",
+   "z_mesh": 8.0,
+   "z_expected": 8.0,
+   "diff": 0.0
+  },
+  {
+   "point": "plaza borde r59.5 E",
+   "z_mesh": 7.7025,
+   "z_expected": 7.7025,
+   "diff": -0.0
+  },
+  {
+   "point": "r90 Mercado",
+   "z_mesh": 5.9996,
+   "z_expected": 6.0,
+   "diff": -0.0004
+  },
+  {
+   "point": "Mercado r165",
+   "z_mesh": 4.5042,
+   "z_expected": 4.5,
+   "diff": 0.0042
+  },
+  {
+   "point": "Mercado r175",
+   "z_mesh": 4.4951,
+   "z_expected": 4.5,
+   "diff": -0.0049
+  },
+  {
+   "point": "Mercado r185",
+   "z_mesh": 4.4928,
+   "z_expected": 4.5,
+   "diff": -0.0072
+  },
+  {
+   "point": "Mercado r196",
+   "z_mesh": 6.0,
+   "z_expected": 6.0,
+   "diff": 0.0
+  },
+  {
+   "point": "Mercado r200 (puerta)",
+   "z_mesh": 6.0,
+   "z_expected": 6.0,
+   "diff": 0.0
+  },
+  {
+   "point": "hitos NE r92",
+   "z_mesh": 6.0056,
+   "z_expected": 6.0,
+   "diff": 0.0056
+  },
+  {
+   "point": "Morada NE r105",
+   "z_mesh": 4.5003,
+   "z_expected": 4.5,
+   "diff": 0.0003
+  },
+  {
+   "point": "terraza 1 NE (centro)",
+   "z_mesh": 4.5001,
+   "z_expected": 4.5,
+   "diff": 0.0001
+  },
+  {
+   "point": "terraza 2 NE (centro)",
+   "z_mesh": 5.4952,
+   "z_expected": 5.5,
+   "diff": -0.0048
+  },
+  {
+   "point": "terraza 3 NE (centro)",
+   "z_mesh": 6.5026,
+   "z_expected": 6.5,
+   "diff": 0.0026
+  },
+  {
+   "point": "terraza 4 NE (centro)",
+   "z_mesh": 7.4996,
+   "z_expected": 7.5,
+   "diff": -0.0004
+  },
+  {
+   "point": "terraza 5 NE (centro)",
+   "z_mesh": 8.4992,
+   "z_expected": 8.5,
+   "diff": -0.0008
+  },
+  {
+   "point": "terraza 6 NE (centro)",
+   "z_mesh": 9.5113,
+   "z_expected": 9.5,
+   "diff": 0.0113
+  },
+  {
+   "point": "Morada NE r200",
+   "z_mesh": 9.5,
+   "z_expected": 9.5,
+   "diff": 0.0
+  },
+  {
+   "point": "talud r208 E",
+   "z_mesh": 3.0,
+   "z_expected": 3.0,
+   "diff": 0.0
+  },
+  {
+   "point": "borde r211.9 E",
+   "z_mesh": 0.0618,
+   "z_expected": 0.0006,
+   "diff": 0.0612
+  }
+ ]
+}

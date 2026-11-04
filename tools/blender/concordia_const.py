@@ -96,6 +96,39 @@ GATES = {
 }
 
 # ---------------------------------------------------------------------------
+# Terreno de la colina (etapa 02) - cifras del pedido
+# ---------------------------------------------------------------------------
+TERRAIN_RADIUS = 212.0                # incluye talud exterior
+TERRAIN_CELL = 1.0                    # celdas de 1 m
+TERRAIN_GRID_SIZE = 424.0             # grid 424 x 424 m centrado en el origen
+
+PLAZA_DRAIN = 0.005                   # 0.5 % hacia fuera desde el centro
+RING_DESCENT = (60.0, 90.0)           # plaza -> +6.0, comun a todos los sectores
+
+# Sectores cardinales (radios de cambio de perfil)
+CARD_SLOPE_END = 165.0                # 90..165 baja 6.0 -> 4.5
+CARD_FLAT_END = 185.0                 # 165..185 plano 4.5
+CARD_EMBANK_END = 196.0               # 185..196 sube 4.5 -> 6.0 (terraplen)
+WALL_BASE_R = (196.0, 204.0)          # base de la muralla, plano a DATUM
+
+# Sectores diagonales (Moradas + hitos)
+DIAG_LANDMARK_END = 95.0              # 60..95 zona de hitos a +6.0
+DIAG_RAMP_END = 105.0                 # 95..105 rampa 6.0 -> 4.5
+TERRACE_COUNT = 6
+TERRACE_DEPTH = 14.0                  # 105..189
+TERRACE_RISE = 1.0                    # 4.5, 5.5 ... 9.5
+TERRACE_START_R = DIAG_RAMP_END
+TERRACE_END_R = TERRACE_START_R + TERRACE_COUNT * TERRACE_DEPTH   # 189
+TERRACE_FACE_ANGLE = 80.0             # cara del muro de contencion (grados)
+
+SECTOR_BLEND_WIDTH = 6.0              # mezcla entre sectores (arco, metros)
+TALUD_R = (204.0, TERRAIN_RADIUS)     # 204..212 baja 6.0 -> 0
+
+TERRAIN_NOISE_PP = 0.05               # 5 cm de irregularidad (pico a pico)
+WALK_SLOPE_MAX = 5.0                  # grados, calles y plazas
+STAIR_SLOPE = 8.0                     # grados, a partir de aqui escalinata
+
+# ---------------------------------------------------------------------------
 # Paleta
 # El azul de esquirlas es el UNICO color magico permitido (siempre emisivo).
 # Resto de la paleta (descriptiva, sin hex fijados aun): caliza clara gastada,
