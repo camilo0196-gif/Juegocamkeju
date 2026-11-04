@@ -239,7 +239,7 @@ def _seg_intersect(p, p2, a, b):
     return None
 
 
-def knife_polyline(bm, pts, locked, name=""):
+def knife_polyline(bm, pts, locked, name="", snap_eps=KNIFE_SNAP_EPS):
     pts = [Vector(p) for p in pts]
     if len(pts) < 2:
         return {"name": name, "verts": 0}
@@ -267,7 +267,7 @@ def knife_polyline(bm, pts, locked, name=""):
             dist, q, t = _seg_closest(p, pts[i], pts[i + 1])
             if best is None or dist < best[0]:
                 best = (dist, q, i + t)
-        if best and best[0] < KNIFE_SNAP_EPS:
+        if best and best[0] < snap_eps:
             if v not in locked:
                 v.co.x, v.co.y = best[1].x, best[1].y
             on_line[v] = best[2]

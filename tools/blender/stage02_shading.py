@@ -38,9 +38,16 @@ BASE_WIDTH = 0.6          # m: banda oscura al pie de cada muro (coincide con la
 BASE_DARK = 0.45
 AO_DISTANCE = 1.5         # m (solo terreno: las piezas tendran SSAO en Godot)
 AO_SAMPLES = 32
+MIN_WALL_H = 0.2          # caras de muro mas bajas (canales de 5 cm, bordillos) se ignoran
+# Plaza del Portal (si existen sus mascaras)
+COL_TRAVERTINE = "#D9D0BC"
+COL_REPAIR = "#8E8676"
+REPAIR_TINT = 0.5         # opacidad del color de remiendo
+RING_TINT = 0.06          # alternancia de tono entre anillos de losas
+GLOW_STRENGTH = 0.8       # emision de vista previa con magic_glow_mask (azul de esquirlas)
 
 
-def terrain_material():
+def terrain_material(plaza=False):
     if MAT_TERRAIN in bpy.data.materials:
         bpy.data.materials.remove(bpy.data.materials[MAT_TERRAIN])
     m = bpy.data.materials.new(MAT_TERRAIN)
@@ -76,6 +83,24 @@ def terrain_material():
 
     c = mix(bw(attr("dirt_mask")), COL_GROUND, COL_DIRT)
     c = mix(bw(attr("stone_mask")), c, COL_STONE)
+    if plaza:
+        def mathn(op, a, b):
+            n = N.new("ShaderNodeMath")
+            n.operation = op
+            for i, v in enumerate((a, b)):
+                if isinstance(v, float):
+                    n.inputs[i].default_value = v
+                else:
+                    L.new(v, n.inputs[i])
+            return n.outputs[0]
+        ring = mathn("ROUND", mathn("MULTIPLY", bw(attr("slab_ring_id")), 10.0), 0.0)
+        parity = mathn("MULTIPLY", mathn("MODULO", ring, 2.0), RING_TINT)
+        c = mix(parity, c, "#5E574A")
+        c = mix(mathn("MULTIPLY", bw(attr("repair_mask")), REPAIR_TINT), c, COL_REPAIR)
+        c = mix(bw(attr("travertine_band")), c, COL_TRAVERTINE)
+        glow = mathn("MULTIPLY", mathn("POWER", bw(attr("magic_glow_mask")), 2.0), GLOW_STRENGTH)
+        bsdf.inputs["Emission Color"].default_value = C.hex_to_linear_rgba(C.MAGIC_BLUE_HEX)
+        L.new(glow, bsdf.inputs["Emission Strength"])
     c = mix(bw(attr("retaining_mask")), c, COL_WALL)
     c = mix(1.0, c, attr("ao_edge"), "MULTIPLY")
     L.new(c, bsdf.inputs["Base Color"])
@@ -96,6 +121,9 @@ def edge_and_base(me):
     tops, feet, wall_v = [], [], set()
     for p in me.polygons:
         if p.normal.z <= 0.342:                      # >= 70 grados
+            zs = [co[vi].z for vi in p.vertices]
+            if max(zs) - min(zs) < MIN_WALL_H:       # canales y bordillos: no son muros
+                continue
             zc = p.center.z
             for vi in p.vertices:
                 wall_v.add(vi)
@@ -188,7 +216,7 @@ def build(scene, stats):
     pk.data.foreach_set("color", flat)
     me.color_attributes.active_color_name = "mask_pack"
     me.color_attributes.render_color_index = me.color_attributes.find("mask_pack")
-    mat = terrain_material()
+    mat = terrain_material(plaza="travertine_band" in me.color_attributes)
     me.materials.clear()
     me.materials.append(mat)
     ao_sorted = sorted(ao)

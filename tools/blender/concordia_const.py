@@ -162,6 +162,51 @@ CHUNK_TRI_BUDGET_EXTERIOR = 8000
 ISO_CHECK_ORTHO = 45.0                # escala aproximada de juego para verificar legibilidad
 
 # ---------------------------------------------------------------------------
+# Plaza del Portal (etapa 03)
+# ---------------------------------------------------------------------------
+PLAZA_SLAB_RING = 6.0                 # losas en anillos concentricos cada 6 m
+PLAZA_BAND_WIDTH = 0.4                # 8 bandas radiales de travertino
+PLAZA_BAND_ANGLES = (0.0, 45.0, 90.0, 135.0, 180.0, 225.0, 270.0, 315.0)
+PLAZA_BUMP_CELL = 2.0                 # celdas de 2 m
+PLAZA_BUMP_AMP = 0.03                 # +-3 cm
+PLAZA_BUMP_FRACTION = 0.20            # en el 20 % de las losas
+PLAZA_REPAIR_FRACTION = 0.12          # remiendos (provisional)
+PLAZA_REPAIR_AMP = 0.01               # +-1 cm (provisional)
+PLAZA_CLEAR_R = (15.0, 48.0)          # zona de reunion sin obstaculos
+
+PORTAL_PEDESTAL_R = 6.0
+PORTAL_PEDESTAL_RISE = 0.9            # sobre el suelo de la plaza (+8.0) -> +8.9
+PORTAL_ARCH_H = 12.0                  # el arco se modela despues
+
+RUNESTONE_COUNT = 7
+RUNESTONE_R = 9.0
+RUNESTONE_H = 0.8
+RUNESTONE_D = 0.6
+
+ATRIO_R = 15.0
+ATRIO_RISE = 0.6                      # sobre el suelo de la plaza -> +8.6
+DESCENT_FLOORS = (1,) + tuple(range(5, 101, 5))   # 21 pedestales
+DESCENT_PEDESTAL_R = 13.5
+DESCENT_PEDESTAL_D = 1.2
+DESCENT_PEDESTAL_H = 0.5
+
+PLAZA_BUILDING_BAND = (48.0, 60.0)
+PLAZA_BUILDING_COUNT = 8
+PLAZA_BUILDING_SIZE = (22.0, 16.0)    # fachada (tangencial) x fondo (radial)
+
+LANDMARK_PADS = {
+    # nombre: (angulo, radio, forma, dimensiones, altura_futura)
+    "Faro": (45.0, 72.0, "circle", (14.0,), 40.0),
+    "Santuario": (135.0, 70.0, "rect", (16.0, 12.0), None),
+    "SalonHazanas": (315.0, 72.0, "rect", (42.0, 16.0), None),
+    "Obelisco": (225.0, 66.0, "rect", (5.0, 5.0), 25.0),
+}
+
+LIGHT_CANAL_COUNT = 4
+LIGHT_CANAL_WIDTH = 0.20
+LIGHT_CANAL_DEPTH = 0.05
+
+# ---------------------------------------------------------------------------
 # Paleta
 # El azul de esquirlas es el UNICO color magico permitido (siempre emisivo).
 # Resto de la paleta (descriptiva, sin hex fijados aun): caliza clara gastada,

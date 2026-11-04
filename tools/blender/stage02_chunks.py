@@ -135,6 +135,7 @@ def verify_glb(path):
     bpy.ops.import_scene.gltf(filepath=path)
     new = [o for o in bpy.data.objects if o not in before]
     meshes = [o for o in new if o.type == "MESH"]
+    empties = sum(1 for o in new if o.type == "EMPTY")
     tris = sum(sum(len(p.vertices) - 2 for p in o.data.polygons) for o in meshes)
     with_color = sum(1 for o in meshes if len(o.data.color_attributes) > 0)
     for o in new:
@@ -145,10 +146,10 @@ def verify_glb(path):
     if bpy.context.window and win_scene:
         bpy.context.window.scene = win_scene
     bpy.data.scenes.remove(tmp)
-    return {"objects": len(meshes), "tris": tris, "meshes_with_color0": with_color}
+    return {"objects": len(meshes), "empties": empties, "tris": tris, "meshes_with_color0": with_color}
 
 
-def build(scene, stats, export_dir):
+def build(scene, stats, export_dir, extra_exports=None):
     master = bpy.data.objects["TRN_City"]
     terrain = bpy.data.collections["TERRAIN"]
     cols = {lod: ensure_collection(f"TERRAIN_CHUNKS_{lod}", terrain) for lod in LODS}
@@ -240,6 +241,11 @@ def build(scene, stats, export_dir):
     s1 = export_glb(chunk_objs, p1)
     s2 = export_glb(struct_objs, p2)
     v1, v2 = verify_glb(p1), verify_glb(p2)
+    extra = {}
+    for fname, cnames in (extra_exports or {}).items():
+        objs = [o for cn in cnames for o in bpy.data.collections[cn].all_objects if o.type in ("MESH", "EMPTY")]
+        pth = os.path.join(export_dir, fname)
+        extra[fname] = {"bytes": export_glb(objs, pth), "objects_in": len(objs), "verify": verify_glb(pth)}
     for col in cols.values():                         # fuera del render de verificacion
         col.hide_render = True
         col.hide_viewport = True
@@ -258,6 +264,6 @@ def build(scene, stats, export_dir):
         "per_chunk": lods,
         "export": {"terrain_glb": os.path.relpath(p1, os.path.join(HERE, "..", "..")), "terrain_bytes": s1,
                    "structures_glb": os.path.relpath(p2, os.path.join(HERE, "..", "..")), "structures_bytes": s2,
-                   "verify_terrain": v1, "verify_structures": v2},
+                   "verify_terrain": v1, "verify_structures": v2, "extra": extra},
     }
     return stats["chunks"]
