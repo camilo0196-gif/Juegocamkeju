@@ -1,0 +1,924 @@
+{
+ "timings_s": {
+  "wall": 0.4
+ },
+ "wall_kit": {
+  "WALL_Mod_A": {
+   "tris": 1020,
+   "budget": 3000,
+   "ok": true,
+   "lods": {
+    "LOD1": 510,
+    "LOD2": 152
+   },
+   "z_max": 15.0,
+   "z_min": -0.5,
+   "merlons": 13,
+   "slits": 5
+  },
+  "WALL_Mod_B": {
+   "tris": 1192,
+   "budget": 3000,
+   "ok": true,
+   "lods": {
+    "LOD1": 596,
+    "LOD2": 178
+   },
+   "z_max": 15.0,
+   "z_min": -0.5,
+   "merlons": 13,
+   "slits": 5,
+   "patches": 3
+  },
+  "WALL_Mod_C": {
+   "tris": 2004,
+   "budget": 3000,
+   "ok": true,
+   "lods": {
+    "LOD1": 1002,
+    "LOD2": 300
+   },
+   "z_max": 15.37,
+   "z_min": -0.5,
+   "merlons": 13,
+   "slits": 5,
+   "patches": 3,
+   "hourde_built_fraction": 0.6
+  },
+  "BASTION_Open": {
+   "tris": 466,
+   "budget": 1200,
+   "ok": true,
+   "lods": {
+    "LOD1": 232,
+    "LOD2": 122
+   },
+   "z_max": 16.5,
+   "z_min": -1.0,
+   "merlons": 5
+  },
+  "BASTION_Mirador": {
+   "tris": 676,
+   "budget": 1200,
+   "ok": true,
+   "lods": {
+    "LOD1": 338,
+    "LOD2": 124
+   },
+   "z_max": 16.5,
+   "z_min": -1.0,
+   "merlons": 4,
+   "balcony_m": [
+    4.0,
+    2.5
+   ]
+  },
+  "TOWER_Guard_Roof": {
+   "tris": 924,
+   "budget": 5000,
+   "ok": true,
+   "lods": {
+    "LOD1": 462,
+    "LOD2": 138
+   },
+   "z_max": 31.077,
+   "z_min": -3.0,
+   "apex_z": 29.14,
+   "lantern_z": [
+    28.58,
+    29.78
+   ],
+   "top_z": 31.08
+  },
+  "TOWER_Guard_Patched": {
+   "tris": 944,
+   "budget": 5000,
+   "ok": true,
+   "lods": {
+    "LOD1": 472,
+    "LOD2": 140
+   },
+   "z_max": 31.077,
+   "z_min": -3.0,
+   "apex_z": 29.14,
+   "lantern_z": [
+    28.58,
+    29.78
+   ],
+   "top_z": 31.08,
+   "roof_patches": 5
+  },
+  "GATE_Sealed_Twin": {
+   "tris": 5348,
+   "budget": 12000,
+   "ok": true,
+   "lods": {
+    "LOD1": 2674,
+    "LOD2": 1536
+   },
+   "z_max": 24.0,
+   "z_min": -3.0,
+   "tower_top": 24.0,
+   "arch_w": 8.0,
+   "arch_h": 10.0,
+   "arch_spring_z": 3.07,
+   "gate_walk_z": 15.05,
+   "rune_d": 1.5
+  },
+  "STAIR_Gate_L": {
+   "tris": 516,
+   "budget": 1500,
+   "ok": true,
+   "lods": {
+    "LOD1": 258,
+    "LOD2": 196
+   },
+   "z_max": 12.4,
+   "z_min": -0.6,
+   "risers": 62,
+   "riser_m": 0.2,
+   "tread_m": 0.26,
+   "width_m": 3.0,
+   "footprint_x": [
+    -6.1,
+    5.7
+   ],
+   "top_z": 12.4
+  },
+  "STAIR_Gate_R": {
+   "tris": 516,
+   "budget": 1500,
+   "ok": true,
+   "lods": {
+    "LOD1": 258,
+    "LOD2": 230
+   },
+   "z_max": 12.4,
+   "z_min": -0.6,
+   "risers": 62,
+   "riser_m": 0.2,
+   "tread_m": 0.26,
+   "width_m": 3.0,
+   "footprint_x": [
+    -6.1,
+    5.7
+   ],
+   "top_z": 12.4
+  },
+  "WALL_Drain_Grate": {
+   "tris": 204,
+   "budget": 1500,
+   "ok": true,
+   "lods": {
+    "LOD1": 102,
+    "LOD2": 60
+   },
+   "z_max": 1.3,
+   "z_min": 0.0,
+   "w": 1.8,
+   "h": 1.2
+  }
+ },
+ "wall_layout": {
+  "slots": [
+   {
+    "k": 0,
+    "angle": 0.0,
+    "type": "gate",
+    "piece": "GATE_Sealed_Twin"
+   },
+   {
+    "k": 1,
+    "angle": 7.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 2,
+    "angle": 15.0,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 3,
+    "angle": 22.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 4,
+    "angle": 30.0,
+    "type": "tower",
+    "piece": "TOWER_Guard_Roof"
+   },
+   {
+    "k": 5,
+    "angle": 37.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 6,
+    "angle": 45.0,
+    "type": "mirador",
+    "piece": "BASTION_Mirador"
+   },
+   {
+    "k": 7,
+    "angle": 52.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 8,
+    "angle": 60.0,
+    "type": "tower",
+    "piece": "TOWER_Guard_Roof"
+   },
+   {
+    "k": 9,
+    "angle": 67.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 10,
+    "angle": 75.0,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 11,
+    "angle": 82.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 12,
+    "angle": 90.0,
+    "type": "gate",
+    "piece": "GATE_Sealed_Twin"
+   },
+   {
+    "k": 13,
+    "angle": 97.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 14,
+    "angle": 105.0,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 15,
+    "angle": 112.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 16,
+    "angle": 120.0,
+    "type": "tower",
+    "piece": "TOWER_Guard_Roof"
+   },
+   {
+    "k": 17,
+    "angle": 127.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 18,
+    "angle": 135.0,
+    "type": "mirador",
+    "piece": "BASTION_Mirador"
+   },
+   {
+    "k": 19,
+    "angle": 142.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 20,
+    "angle": 150.0,
+    "type": "tower",
+    "piece": "TOWER_Guard_Patched"
+   },
+   {
+    "k": 21,
+    "angle": 157.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 22,
+    "angle": 165.0,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 23,
+    "angle": 172.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 24,
+    "angle": 180.0,
+    "type": "gate",
+    "piece": "GATE_Sealed_Twin"
+   },
+   {
+    "k": 25,
+    "angle": 187.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 26,
+    "angle": 195.0,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 27,
+    "angle": 202.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 28,
+    "angle": 210.0,
+    "type": "tower",
+    "piece": "TOWER_Guard_Patched"
+   },
+   {
+    "k": 29,
+    "angle": 217.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 30,
+    "angle": 225.0,
+    "type": "mirador",
+    "piece": "BASTION_Mirador"
+   },
+   {
+    "k": 31,
+    "angle": 232.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 32,
+    "angle": 240.0,
+    "type": "tower",
+    "piece": "TOWER_Guard_Roof"
+   },
+   {
+    "k": 33,
+    "angle": 247.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 34,
+    "angle": 255.0,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 35,
+    "angle": 262.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 36,
+    "angle": 270.0,
+    "type": "gate",
+    "piece": "GATE_Sealed_Twin"
+   },
+   {
+    "k": 37,
+    "angle": 277.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 38,
+    "angle": 285.0,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 39,
+    "angle": 292.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 40,
+    "angle": 300.0,
+    "type": "tower",
+    "piece": "TOWER_Guard_Roof"
+   },
+   {
+    "k": 41,
+    "angle": 307.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 42,
+    "angle": 315.0,
+    "type": "mirador",
+    "piece": "BASTION_Mirador"
+   },
+   {
+    "k": 43,
+    "angle": 322.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 44,
+    "angle": 330.0,
+    "type": "tower",
+    "piece": "TOWER_Guard_Roof"
+   },
+   {
+    "k": 45,
+    "angle": 337.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 46,
+    "angle": 345.0,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   },
+   {
+    "k": 47,
+    "angle": 352.5,
+    "type": "bastion",
+    "piece": "BASTION_Open"
+   }
+  ],
+  "modules": [
+   {
+    "from_k": 0,
+    "to_k": 1,
+    "variant": "B"
+   },
+   {
+    "from_k": 1,
+    "to_k": 2,
+    "variant": "C"
+   },
+   {
+    "from_k": 2,
+    "to_k": 3,
+    "variant": "A"
+   },
+   {
+    "from_k": 3,
+    "to_k": 4,
+    "variant": "A"
+   },
+   {
+    "from_k": 4,
+    "to_k": 5,
+    "variant": "A"
+   },
+   {
+    "from_k": 5,
+    "to_k": 6,
+    "variant": "A"
+   },
+   {
+    "from_k": 6,
+    "to_k": 7,
+    "variant": "A"
+   },
+   {
+    "from_k": 7,
+    "to_k": 8,
+    "variant": "A"
+   },
+   {
+    "from_k": 8,
+    "to_k": 9,
+    "variant": "A"
+   },
+   {
+    "from_k": 9,
+    "to_k": 10,
+    "variant": "A"
+   },
+   {
+    "from_k": 10,
+    "to_k": 11,
+    "variant": "B"
+   },
+   {
+    "from_k": 11,
+    "to_k": 12,
+    "variant": "A"
+   },
+   {
+    "from_k": 12,
+    "to_k": 13,
+    "variant": "A"
+   },
+   {
+    "from_k": 13,
+    "to_k": 14,
+    "variant": "A"
+   },
+   {
+    "from_k": 14,
+    "to_k": 15,
+    "variant": "B"
+   },
+   {
+    "from_k": 15,
+    "to_k": 16,
+    "variant": "B"
+   },
+   {
+    "from_k": 16,
+    "to_k": 17,
+    "variant": "C"
+   },
+   {
+    "from_k": 17,
+    "to_k": 18,
+    "variant": "A"
+   },
+   {
+    "from_k": 18,
+    "to_k": 19,
+    "variant": "A"
+   },
+   {
+    "from_k": 19,
+    "to_k": 20,
+    "variant": "A"
+   },
+   {
+    "from_k": 20,
+    "to_k": 21,
+    "variant": "A"
+   },
+   {
+    "from_k": 21,
+    "to_k": 22,
+    "variant": "A"
+   },
+   {
+    "from_k": 22,
+    "to_k": 23,
+    "variant": "A"
+   },
+   {
+    "from_k": 23,
+    "to_k": 24,
+    "variant": "A"
+   },
+   {
+    "from_k": 24,
+    "to_k": 25,
+    "variant": "A"
+   },
+   {
+    "from_k": 25,
+    "to_k": 26,
+    "variant": "A"
+   },
+   {
+    "from_k": 26,
+    "to_k": 27,
+    "variant": "A"
+   },
+   {
+    "from_k": 27,
+    "to_k": 28,
+    "variant": "A"
+   },
+   {
+    "from_k": 28,
+    "to_k": 29,
+    "variant": "C"
+   },
+   {
+    "from_k": 29,
+    "to_k": 30,
+    "variant": "B"
+   },
+   {
+    "from_k": 30,
+    "to_k": 31,
+    "variant": "A"
+   },
+   {
+    "from_k": 31,
+    "to_k": 32,
+    "variant": "A"
+   },
+   {
+    "from_k": 32,
+    "to_k": 33,
+    "variant": "B"
+   },
+   {
+    "from_k": 33,
+    "to_k": 34,
+    "variant": "A"
+   },
+   {
+    "from_k": 34,
+    "to_k": 35,
+    "variant": "A"
+   },
+   {
+    "from_k": 35,
+    "to_k": 36,
+    "variant": "B"
+   },
+   {
+    "from_k": 36,
+    "to_k": 37,
+    "variant": "B"
+   },
+   {
+    "from_k": 37,
+    "to_k": 38,
+    "variant": "A"
+   },
+   {
+    "from_k": 38,
+    "to_k": 39,
+    "variant": "A"
+   },
+   {
+    "from_k": 39,
+    "to_k": 40,
+    "variant": "B"
+   },
+   {
+    "from_k": 40,
+    "to_k": 41,
+    "variant": "A"
+   },
+   {
+    "from_k": 41,
+    "to_k": 42,
+    "variant": "A"
+   },
+   {
+    "from_k": 42,
+    "to_k": 43,
+    "variant": "A"
+   },
+   {
+    "from_k": 43,
+    "to_k": 44,
+    "variant": "B"
+   },
+   {
+    "from_k": 44,
+    "to_k": 45,
+    "variant": "C"
+   },
+   {
+    "from_k": 45,
+    "to_k": 46,
+    "variant": "C"
+   },
+   {
+    "from_k": 46,
+    "to_k": 47,
+    "variant": "A"
+   },
+   {
+    "from_k": 47,
+    "to_k": 0,
+    "variant": "A"
+   }
+  ],
+  "counts": {
+   "slots": 48,
+   "by_type": {
+    "gate": 4,
+    "bastion": 32,
+    "tower": 8,
+    "mirador": 4
+   },
+   "by_piece": {
+    "GATE_Sealed_Twin": 4,
+    "BASTION_Open": 32,
+    "TOWER_Guard_Roof": 6,
+    "BASTION_Mirador": 4,
+    "TOWER_Guard_Patched": 2
+   },
+   "modules": {
+    "B": 10,
+    "C": 5,
+    "A": 33
+   },
+   "module_quota_70_20_10": [
+    33,
+    10,
+    5
+   ],
+   "tower_quota_70_30": [
+    6,
+    2
+   ]
+  }
+ },
+ "wall_dims": {
+  "chord_m": 26.1613,
+  "wall_top_z": 15.0,
+  "walkway_z": 12.4,
+  "parapet_z": [
+   12.4,
+   13.6
+  ],
+  "merlon_z": [
+   13.6,
+   15.0
+  ],
+  "base_t": 6.0,
+  "crown_t": 4.0,
+  "talud": [
+   2.0,
+   4.0
+  ],
+  "rune_line": {
+   "z_center": 0.3,
+   "w": 0.08,
+   "d": 0.03,
+   "emission": 0.8
+  }
+ },
+ "wall_checks": {
+  "wall_top_abs_z": 21.0,
+  "wall_height_m": 15.0,
+  "walkway_abs_z": 18.4,
+  "hourde_top_m": 15.37,
+  "main_structures": 12,
+  "slots": 48,
+  "modules": 48,
+  "markers": 48,
+  "gates_no_exit_path": {
+   "k00": {
+    "walkable_ground_ends_r": 0.0,
+    "min_slope_beyond_r206": 26.6,
+    "city_pieces_beyond_r200": []
+   },
+   "k12": {
+    "walkable_ground_ends_r": 0.0,
+    "min_slope_beyond_r206": 26.6,
+    "city_pieces_beyond_r200": []
+   },
+   "k24": {
+    "walkable_ground_ends_r": 0.0,
+    "min_slope_beyond_r206": 26.6,
+    "city_pieces_beyond_r200": []
+   },
+   "k36": {
+    "walkable_ground_ends_r": 0.0,
+    "min_slope_beyond_r206": 26.6,
+    "city_pieces_beyond_r200": []
+   }
+  },
+  "rune_line_buried_modules": {
+   "count": 24,
+   "list": [
+    {
+     "module_from_k": 3,
+     "ground_above_runes_m": 3.2
+    },
+    {
+     "module_from_k": 4,
+     "ground_above_runes_m": 3.2
+    },
+    {
+     "module_from_k": 5,
+     "ground_above_runes_m": 3.2
+    },
+    {
+     "module_from_k": 6,
+     "ground_above_runes_m": 3.2
+    },
+    {
+     "module_from_k": 7,
+     "ground_above_runes_m": 3.2
+    },
+    {
+     "module_from_k": 8,
+     "ground_above_runes_m": 3.2
+    },
+    {
+     "module_from_k": 15,
+     "ground_above_runes_m": 3.2
+    },
+    {
+     "module_from_k": 16,
+     "ground_above_runes_m": 3.2
+    },
+    {
+     "module_from_k": 17,
+     "ground_above_runes_m": 3.2
+    },
+    {
+     "module_from_k": 18,
+     "ground_above_runes_m": 3.2
+    },
+    {
+     "module_from_k": 19,
+     "ground_above_runes_m": 3.2
+    },
+    {
+     "module_from_k": 20,
+     "ground_above_runes_m": 3.2
+    },
+    {
+     "module_from_k": 27,
+     "ground_above_runes_m": 3.2
+    },
+    {
+     "module_from_k": 28,
+     "ground_above_runes_m": 3.2
+    },
+    {
+     "module_from_k": 29,
+     "ground_above_runes_m": 3.2
+    },
+    {
+     "module_from_k": 30,
+     "ground_above_runes_m": 3.2
+    },
+    {
+     "module_from_k": 31,
+     "ground_above_runes_m": 3.2
+    },
+    {
+     "module_from_k": 32,
+     "ground_above_runes_m": 3.2
+    },
+    {
+     "module_from_k": 39,
+     "ground_above_runes_m": 3.2
+    },
+    {
+     "module_from_k": 40,
+     "ground_above_runes_m": 3.2
+    },
+    {
+     "module_from_k": 41,
+     "ground_above_runes_m": 3.2
+    },
+    {
+     "module_from_k": 42,
+     "ground_above_runes_m": 3.2
+    },
+    {
+     "module_from_k": 43,
+     "ground_above_runes_m": 3.2
+    },
+    {
+     "module_from_k": 44,
+     "ground_above_runes_m": 3.2
+    }
+   ]
+  },
+  "iso_occlusion": {
+   "camera_elevation_deg": 35.26,
+   "ground_hidden_behind_15m_wall_m": 21.2,
+   "modules_between_camera_and_city": 24,
+   "note": "en esos tramos el muro tapa una franja interior; en Godot conviene recortarlo o difuminarlo cuando el jugador esta detras"
+  }
+ },
+ "wall_export": {
+  "concordia_wall_kit.glb": {
+   "objects": 21,
+   "bytes": 3658816
+  },
+  "concordia_wall_kit_lods.glb": {
+   "objects": 22,
+   "bytes": 3392768
+  },
+  "concordia_wall_layout.glb": {
+   "objects": 261,
+   "bytes": 3693516
+  }
+ }
+}
