@@ -1,12 +1,17 @@
 {
+ "timings_s": {
+  "terrain": 42.2,
+  "structures": 0.3,
+  "shading": 7.9,
+  "chunks": 39.9
+ },
  "grid_verts": 180625,
  "grid_faces": 179776,
  "deleted_verts_r_gt_212": 39460,
  "cleanup": {
   "bowtie_faces_removed": 0,
   "wire_edges": 4,
-  "loose_verts": 0,
-  "non_manifold_verts_left": 0
+  "loose_verts": 0
  },
  "outer_boundary_snap": {
   "verts": 1688,
@@ -15,537 +20,795 @@
  "rings": [
   {
    "R": 118.9118,
-   "ring_verts": 456,
-   "new_edges": 452,
+   "verts": 424,
+   "new_edges": 420,
    "missed": 0
   },
   {
    "R": 119.0882,
-   "ring_verts": 440,
-   "new_edges": 436,
+   "verts": 416,
+   "new_edges": 412,
    "missed": 0
   },
   {
    "R": 132.9118,
-   "ring_verts": 492,
-   "new_edges": 488,
+   "verts": 460,
+   "new_edges": 456,
    "missed": 0
   },
   {
    "R": 133.0882,
-   "ring_verts": 496,
-   "new_edges": 492,
+   "verts": 472,
+   "new_edges": 468,
    "missed": 0
   },
   {
    "R": 146.9118,
-   "ring_verts": 584,
-   "new_edges": 580,
+   "verts": 544,
+   "new_edges": 540,
    "missed": 0
   },
   {
    "R": 147.0882,
-   "ring_verts": 556,
-   "new_edges": 552,
+   "verts": 516,
+   "new_edges": 512,
    "missed": 0
   },
   {
    "R": 160.9118,
-   "ring_verts": 616,
-   "new_edges": 612,
+   "verts": 584,
+   "new_edges": 580,
    "missed": 0
   },
   {
    "R": 161.0882,
-   "ring_verts": 592,
-   "new_edges": 588,
+   "verts": 560,
+   "new_edges": 556,
    "missed": 0
   },
   {
    "R": 174.9118,
-   "ring_verts": 640,
-   "new_edges": 636,
+   "verts": 608,
+   "new_edges": 604,
    "missed": 0
   },
   {
    "R": 175.0882,
-   "ring_verts": 656,
-   "new_edges": 652,
+   "verts": 632,
+   "new_edges": 628,
    "missed": 0
   },
   {
    "R": 203.3829,
-   "ring_verts": 604,
-   "new_edges": 600,
+   "verts": 580,
+   "new_edges": 576,
    "missed": 0
   },
   {
    "R": 204.0,
-   "ring_verts": 624,
-   "new_edges": 620,
+   "verts": 592,
+   "new_edges": 588,
+   "missed": 0
+  },
+  {
+   "R": 118.3118,
+   "verts": 456,
+   "new_edges": 452,
+   "missed": 0
+  },
+  {
+   "R": 132.3118,
+   "verts": 488,
+   "new_edges": 484,
+   "missed": 0
+  },
+  {
+   "R": 146.3118,
+   "verts": 544,
+   "new_edges": 540,
+   "missed": 0
+  },
+  {
+   "R": 160.3118,
+   "verts": 600,
+   "new_edges": 596,
+   "missed": 0
+  },
+  {
+   "R": 174.3118,
+   "verts": 656,
+   "new_edges": 652,
    "missed": 0
   }
  ],
+ "knives": {
+  "count": 144,
+  "verts": 6976,
+  "missed": 0,
+  "worst": [
+   {
+    "name": "lat_top_Morada_NE_-1",
+    "verts": 161,
+    "new_edges": 160,
+    "missed": 0
+   },
+   {
+    "name": "lat_bot_Morada_NE_-1",
+    "verts": 9,
+    "new_edges": 8,
+    "missed": 0
+   },
+   {
+    "name": "lat_row_Morada_NE_-1",
+    "verts": 10,
+    "new_edges": 9,
+    "missed": 0
+   }
+  ]
+ },
  "noise": {
   "seed": 1977,
   "pp_target_m": 0.05,
   "scales_m": [
    12.0,
    4.0
+  ],
+  "wall_fade_m": [
+   0.3,
+   2.5
   ]
  },
  "faces_flipped_to_up": 0,
- "retaining_faces": 6268,
+ "retaining_faces": 9676,
  "vgroup_counts": {
   "plaza": 11289,
-  "landmarks": 8428,
-  "sector_mercado": 16147,
-  "sector_oficios": 16147,
-  "sector_clases": 16147,
-  "sector_razas": 16147,
-  "sector_moradas": 48228,
-  "terraza_id": 39012,
+  "landmarks": 7708,
+  "sector_mercado": 16174,
+  "sector_oficios": 16172,
+  "sector_clases": 16174,
+  "sector_razas": 16172,
+  "sector_moradas": 49732,
+  "terraza_id": 42568,
   "talud": 10756,
-  "base_muralla": 10544
+  "base_muralla": 10816
  },
  "geometry": {
-  "verts": 146833,
-  "tris": 291976,
+  "verts": 154993,
+  "tris": 308296,
   "all_tris": true,
-  "min_normal_z": 0.1707,
+  "min_normal_z": 0.1171,
   "faces_normal_down_or_vertical": 0,
   "degenerate_faces_area_lt_1e-6": 0,
-  "min_face_area_m2": 0.00263,
+  "min_face_area_m2": 0.000252,
   "duplicate_verts_1e-4": 0,
   "non_manifold_edges": 0,
   "boundary_edges": 1688,
   "wire_edges": 0,
   "z_min": 0.0,
-  "z_max": 9.5214,
+  "z_max": 9.5217,
   "r_max": 212.0,
   "noise_dev_min_m": -0.025,
   "noise_dev_max_m": 0.025
  },
- "stretched_step_faces": 0,
  "slope_by_zone": {
+  "Borde_Clases_Morada_NW/muro_lateral": {
+   "faces": 482,
+   "max": 83.27,
+   "p99": 82.89,
+   "mean": 62.4,
+   "gt5": 407,
+   "gt8": 404
+  },
+  "Borde_Clases_Morada_SW/muro_lateral": {
+   "faces": 482,
+   "max": 83.27,
+   "p99": 82.89,
+   "mean": 62.4,
+   "gt5": 407,
+   "gt8": 404
+  },
+  "Borde_Mercado_Morada_NE/muro_lateral": {
+   "faces": 482,
+   "max": 83.27,
+   "p99": 82.89,
+   "mean": 62.4,
+   "gt5": 407,
+   "gt8": 404
+  },
+  "Borde_Mercado_Morada_NW/muro_lateral": {
+   "faces": 482,
+   "max": 83.27,
+   "p99": 82.89,
+   "mean": 62.4,
+   "gt5": 407,
+   "gt8": 404
+  },
+  "Borde_Oficios_Morada_NE/muro_lateral": {
+   "faces": 482,
+   "max": 83.27,
+   "p99": 82.89,
+   "mean": 62.4,
+   "gt5": 407,
+   "gt8": 404
+  },
+  "Borde_Oficios_Morada_SE/muro_lateral": {
+   "faces": 482,
+   "max": 83.27,
+   "p99": 82.89,
+   "mean": 62.4,
+   "gt5": 407,
+   "gt8": 404
+  },
+  "Borde_Razas_Morada_SE/muro_lateral": {
+   "faces": 482,
+   "max": 83.27,
+   "p99": 82.89,
+   "mean": 62.4,
+   "gt5": 407,
+   "gt8": 404
+  },
+  "Borde_Razas_Morada_SW/muro_lateral": {
+   "faces": 482,
+   "max": 83.27,
+   "p99": 82.89,
+   "mean": 62.4,
+   "gt5": 407,
+   "gt8": 404
+  },
   "Clases/base_muralla_196_204": {
-   "faces": 2685,
+   "faces": 2841,
    "max": 6.35,
-   "p99": 2.07,
+   "p99": 2.81,
    "mean": 0.08,
    "gt5": 2,
    "gt8": 0
+  },
+  "Clases/borde_eje": {
+   "faces": 412,
+   "max": 80.0,
+   "p99": 80.0,
+   "mean": 48.73,
+   "gt5": 392,
+   "gt8": 376
   },
   "Clases/descenso_60_90": {
-   "faces": 4374,
-   "max": 4.06,
-   "p99": 3.99,
-   "mean": 3.25,
+   "faces": 3949,
+   "max": 3.76,
+   "p99": 3.75,
+   "mean": 3.24,
    "gt5": 0,
    "gt8": 0
   },
-  "Clases/distrito_90_185": {
-   "faces": 21412,
-   "max": 1.62,
-   "p99": 1.49,
-   "mean": 0.88,
+  "Clases/distrito_90_165": {
+   "faces": 12630,
+   "max": 3.15,
+   "p99": 1.5,
+   "mean": 1.16,
    "gt5": 0,
    "gt8": 0
   },
-  "Clases/terraplen_185_196": {
-   "faces": 3490,
-   "max": 9.54,
-   "p99": 9.37,
-   "mean": 7.75,
-   "gt5": 2929,
-   "gt8": 2624
+  "Clases/eje_90_150": {
+   "faces": 3838,
+   "max": 1.9,
+   "p99": 1.81,
+   "mean": 1.43,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Clases/eje_rampa_150_176": {
+   "faces": 1578,
+   "max": 3.88,
+   "p99": 3.88,
+   "mean": 3.29,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Clases/microbordillo_lt10cm": {
+   "faces": 2,
+   "max": 12.07,
+   "p99": 12.06,
+   "mean": 12.06,
+   "gt5": 2,
+   "gt8": 2
+  },
+  "Clases/microirregularidad_le5cm": {
+   "faces": 10,
+   "max": 9.42,
+   "p99": 9.41,
+   "mean": 7.49,
+   "gt5": 10,
+   "gt8": 4
+  },
+  "Clases/plano_165_175": {
+   "faces": 2445,
+   "max": 0.69,
+   "p99": 0.41,
+   "mean": 0.15,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Clases/plazoleta_176_196": {
+   "faces": 1200,
+   "max": 0.61,
+   "p99": 0.49,
+   "mean": 0.16,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Clases/rampa_175_196": {
+   "faces": 5701,
+   "max": 4.85,
+   "p99": 4.31,
+   "mean": 4.09,
+   "gt5": 0,
+   "gt8": 0
   },
   "Mercado/base_muralla_196_204": {
-   "faces": 2686,
+   "faces": 2842,
    "max": 6.35,
-   "p99": 2.07,
+   "p99": 2.81,
    "mean": 0.08,
    "gt5": 2,
    "gt8": 0
   },
+  "Mercado/borde_eje": {
+   "faces": 412,
+   "max": 80.0,
+   "p99": 80.0,
+   "mean": 48.73,
+   "gt5": 392,
+   "gt8": 376
+  },
   "Mercado/descenso_60_90": {
-   "faces": 4374,
-   "max": 4.1,
-   "p99": 4.04,
-   "mean": 3.26,
+   "faces": 3944,
+   "max": 3.76,
+   "p99": 3.75,
+   "mean": 3.24,
    "gt5": 0,
    "gt8": 0
   },
-  "Mercado/distrito_90_185": {
-   "faces": 21410,
-   "max": 1.65,
-   "p99": 1.5,
-   "mean": 0.88,
+  "Mercado/distrito_90_165": {
+   "faces": 12631,
+   "max": 3.11,
+   "p99": 1.52,
+   "mean": 1.15,
    "gt5": 0,
    "gt8": 0
   },
-  "Mercado/terraplen_185_196": {
-   "faces": 3489,
-   "max": 9.52,
-   "p99": 9.4,
-   "mean": 7.76,
-   "gt5": 2929,
-   "gt8": 2614
+  "Mercado/eje_90_150": {
+   "faces": 3838,
+   "max": 1.94,
+   "p99": 1.82,
+   "mean": 1.43,
+   "gt5": 0,
+   "gt8": 0
   },
-  "Mezcla_Clases_Morada_NW/borde_lateral": {
-   "faces": 1811,
-   "max": 69.87,
-   "p99": 51.11,
-   "mean": 16.47,
-   "gt5": 1145,
-   "gt8": 1050
+  "Mercado/eje_rampa_150_176": {
+   "faces": 1578,
+   "max": 3.88,
+   "p99": 3.88,
+   "mean": 3.28,
+   "gt5": 0,
+   "gt8": 0
   },
-  "Mezcla_Clases_Morada_NW/muro_contencion": {
-   "faces": 50,
-   "max": 80.17,
-   "p99": 80.14,
-   "mean": 77.75,
-   "gt5": 50,
-   "gt8": 50
+  "Mercado/microbordillo_lt10cm": {
+   "faces": 2,
+   "max": 12.07,
+   "p99": 12.06,
+   "mean": 12.06,
+   "gt5": 2,
+   "gt8": 2
   },
-  "Mezcla_Clases_Morada_SW/borde_lateral": {
-   "faces": 1814,
-   "max": 69.87,
-   "p99": 51.15,
-   "mean": 16.43,
-   "gt5": 1145,
-   "gt8": 1048
+  "Mercado/microirregularidad_le5cm": {
+   "faces": 10,
+   "max": 9.45,
+   "p99": 9.45,
+   "mean": 7.5,
+   "gt5": 10,
+   "gt8": 4
   },
-  "Mezcla_Clases_Morada_SW/muro_contencion": {
-   "faces": 50,
-   "max": 80.16,
-   "p99": 80.14,
-   "mean": 77.75,
-   "gt5": 50,
-   "gt8": 50
+  "Mercado/plano_165_175": {
+   "faces": 2448,
+   "max": 0.8,
+   "p99": 0.41,
+   "mean": 0.16,
+   "gt5": 0,
+   "gt8": 0
   },
-  "Mezcla_Mercado_Morada_NE/borde_lateral": {
-   "faces": 1810,
-   "max": 69.87,
-   "p99": 51.12,
-   "mean": 16.48,
-   "gt5": 1149,
-   "gt8": 1045
+  "Mercado/plazoleta_176_196": {
+   "faces": 1200,
+   "max": 0.47,
+   "p99": 0.39,
+   "mean": 0.15,
+   "gt5": 0,
+   "gt8": 0
   },
-  "Mezcla_Mercado_Morada_NE/muro_contencion": {
-   "faces": 50,
-   "max": 80.17,
-   "p99": 80.15,
-   "mean": 77.75,
-   "gt5": 50,
-   "gt8": 50
+  "Mercado/rampa_175_196": {
+   "faces": 5700,
+   "max": 4.78,
+   "p99": 4.31,
+   "mean": 4.09,
+   "gt5": 0,
+   "gt8": 0
   },
-  "Mezcla_Mercado_Morada_NW/borde_lateral": {
-   "faces": 1819,
-   "max": 69.87,
-   "p99": 51.14,
-   "mean": 16.39,
-   "gt5": 1146,
-   "gt8": 1051
+  "Morada_NE/bajo_escalinata": {
+   "faces": 323,
+   "max": 76.05,
+   "p99": 75.96,
+   "mean": 20.51,
+   "gt5": 296,
+   "gt8": 294
   },
-  "Mezcla_Mercado_Morada_NW/muro_contencion": {
-   "faces": 50,
-   "max": 80.17,
-   "p99": 80.15,
-   "mean": 77.75,
-   "gt5": 50,
-   "gt8": 50
-  },
-  "Mezcla_Oficios_Morada_NE/borde_lateral": {
-   "faces": 1812,
-   "max": 69.85,
-   "p99": 51.14,
-   "mean": 16.44,
-   "gt5": 1143,
-   "gt8": 1049
-  },
-  "Mezcla_Oficios_Morada_NE/muro_contencion": {
-   "faces": 50,
-   "max": 80.17,
-   "p99": 80.15,
-   "mean": 77.75,
-   "gt5": 50,
-   "gt8": 50
-  },
-  "Mezcla_Oficios_Morada_SE/borde_lateral": {
-   "faces": 1814,
-   "max": 69.89,
-   "p99": 51.08,
-   "mean": 16.44,
-   "gt5": 1150,
-   "gt8": 1049
-  },
-  "Mezcla_Oficios_Morada_SE/muro_contencion": {
-   "faces": 50,
-   "max": 80.17,
-   "p99": 80.15,
-   "mean": 77.75,
-   "gt5": 50,
-   "gt8": 50
-  },
-  "Mezcla_Razas_Morada_SE/borde_lateral": {
-   "faces": 1819,
-   "max": 69.87,
-   "p99": 51.18,
-   "mean": 16.39,
-   "gt5": 1148,
-   "gt8": 1048
-  },
-  "Mezcla_Razas_Morada_SE/muro_contencion": {
-   "faces": 50,
-   "max": 80.17,
-   "p99": 80.15,
-   "mean": 77.75,
-   "gt5": 50,
-   "gt8": 50
-  },
-  "Mezcla_Razas_Morada_SW/borde_lateral": {
-   "faces": 1813,
-   "max": 69.91,
-   "p99": 51.12,
-   "mean": 16.45,
-   "gt5": 1145,
-   "gt8": 1045
-  },
-  "Mezcla_Razas_Morada_SW/muro_contencion": {
-   "faces": 50,
-   "max": 80.17,
-   "p99": 80.15,
-   "mean": 77.75,
-   "gt5": 50,
-   "gt8": 50
+  "Morada_NE/base_muralla_196_204": {
+   "faces": 2181,
+   "max": 0.05,
+   "p99": 0.0,
+   "mean": 0.0,
+   "gt5": 0,
+   "gt8": 0
   },
   "Morada_NE/descenso_60_90": {
-   "faces": 2692,
-   "max": 4.13,
-   "p99": 4.04,
-   "mean": 3.25,
+   "faces": 3146,
+   "max": 3.79,
+   "p99": 3.76,
+   "mean": 3.24,
    "gt5": 0,
    "gt8": 0
-  },
-  "Morada_NE/escalinata_95_105": {
-   "faces": 1246,
-   "max": 10.3,
-   "p99": 10.23,
-   "mean": 8.51,
-   "gt5": 1066,
-   "gt8": 975
   },
   "Morada_NE/hitos_90_95": {
-   "faces": 572,
-   "max": 0.68,
-   "p99": 0.45,
-   "mean": 0.17,
-   "gt5": 0,
-   "gt8": 0
-  },
-  "Morada_NE/muro_contencion": {
-   "faces": 1467,
-   "max": 80.06,
-   "p99": 80.05,
-   "mean": 80.0,
-   "gt5": 1467,
-   "gt8": 1467
-  },
-  "Morada_NE/plataforma_189_203": {
-   "faces": 3851,
-   "max": 0.49,
-   "p99": 0.33,
-   "mean": 0.06,
-   "gt5": 0,
-   "gt8": 0
-  },
-  "Morada_NE/terrazas_105_189": {
-   "faces": 16911,
-   "max": 0.57,
-   "p99": 0.36,
-   "mean": 0.16,
-   "gt5": 0,
-   "gt8": 0
-  },
-  "Morada_NW/descenso_60_90": {
-   "faces": 2693,
-   "max": 4.13,
-   "p99": 4.03,
-   "mean": 3.25,
-   "gt5": 0,
-   "gt8": 0
-  },
-  "Morada_NW/escalinata_95_105": {
-   "faces": 1246,
-   "max": 10.27,
-   "p99": 10.22,
-   "mean": 8.52,
-   "gt5": 1067,
-   "gt8": 976
-  },
-  "Morada_NW/hitos_90_95": {
-   "faces": 574,
-   "max": 0.71,
-   "p99": 0.38,
-   "mean": 0.16,
-   "gt5": 0,
-   "gt8": 0
-  },
-  "Morada_NW/muro_contencion": {
-   "faces": 1467,
-   "max": 80.06,
-   "p99": 80.05,
-   "mean": 80.0,
-   "gt5": 1467,
-   "gt8": 1467
-  },
-  "Morada_NW/plataforma_189_203": {
-   "faces": 3841,
-   "max": 0.45,
-   "p99": 0.36,
-   "mean": 0.07,
-   "gt5": 0,
-   "gt8": 0
-  },
-  "Morada_NW/terrazas_105_189": {
-   "faces": 16914,
-   "max": 0.62,
-   "p99": 0.37,
-   "mean": 0.16,
-   "gt5": 0,
-   "gt8": 0
-  },
-  "Morada_SE/descenso_60_90": {
-   "faces": 2697,
-   "max": 4.14,
-   "p99": 4.04,
-   "mean": 3.25,
-   "gt5": 0,
-   "gt8": 0
-  },
-  "Morada_SE/escalinata_95_105": {
-   "faces": 1246,
-   "max": 10.4,
-   "p99": 10.31,
-   "mean": 8.53,
-   "gt5": 1066,
-   "gt8": 973
-  },
-  "Morada_SE/hitos_90_95": {
-   "faces": 568,
-   "max": 0.63,
-   "p99": 0.48,
-   "mean": 0.19,
-   "gt5": 0,
-   "gt8": 0
-  },
-  "Morada_SE/muro_contencion": {
-   "faces": 1467,
-   "max": 80.06,
-   "p99": 80.05,
-   "mean": 80.0,
-   "gt5": 1467,
-   "gt8": 1467
-  },
-  "Morada_SE/plataforma_189_203": {
-   "faces": 3841,
-   "max": 0.49,
-   "p99": 0.36,
-   "mean": 0.07,
-   "gt5": 0,
-   "gt8": 0
-  },
-  "Morada_SE/terrazas_105_189": {
-   "faces": 16912,
-   "max": 0.59,
-   "p99": 0.36,
-   "mean": 0.16,
-   "gt5": 0,
-   "gt8": 0
-  },
-  "Morada_SW/descenso_60_90": {
-   "faces": 2692,
-   "max": 4.13,
-   "p99": 4.0,
-   "mean": 3.25,
-   "gt5": 0,
-   "gt8": 0
-  },
-  "Morada_SW/escalinata_95_105": {
-   "faces": 1246,
-   "max": 10.39,
-   "p99": 10.3,
-   "mean": 8.53,
-   "gt5": 1067,
-   "gt8": 972
-  },
-  "Morada_SW/hitos_90_95": {
-   "faces": 570,
-   "max": 0.59,
-   "p99": 0.38,
+   "faces": 674,
+   "max": 1.34,
+   "p99": 0.52,
    "mean": 0.18,
    "gt5": 0,
    "gt8": 0
   },
-  "Morada_SW/muro_contencion": {
-   "faces": 1467,
-   "max": 80.07,
-   "p99": 80.05,
-   "mean": 80.0,
-   "gt5": 1467,
-   "gt8": 1467
+  "Morada_NE/muro_pie_muralla": {
+   "faces": 307,
+   "max": 80.02,
+   "p99": 80.02,
+   "mean": 75.83,
+   "gt5": 291,
+   "gt8": 291
   },
-  "Morada_SW/plataforma_189_203": {
-   "faces": 3851,
-   "max": 0.44,
-   "p99": 0.33,
-   "mean": 0.07,
+  "Morada_NE/muro_terraza": {
+   "faces": 1410,
+   "max": 80.06,
+   "p99": 80.05,
+   "mean": 72.96,
+   "gt5": 1286,
+   "gt8": 1286
+  },
+  "Morada_NE/plataforma_189_196": {
+   "faces": 1895,
+   "max": 0.5,
+   "p99": 0.36,
+   "mean": 0.13,
    "gt5": 0,
    "gt8": 0
   },
-  "Morada_SW/terrazas_105_189": {
-   "faces": 16909,
-   "max": 0.62,
+  "Morada_NE/rampa_95_105": {
+   "faces": 1349,
+   "max": 10.04,
+   "p99": 10.04,
+   "mean": 8.48,
+   "gt5": 1141,
+   "gt8": 1052
+  },
+  "Morada_NE/terrazas_105_189": {
+   "faces": 19639,
+   "max": 2.82,
+   "p99": 0.45,
+   "mean": 0.15,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_NW/bajo_escalinata": {
+   "faces": 323,
+   "max": 76.05,
+   "p99": 75.96,
+   "mean": 20.51,
+   "gt5": 296,
+   "gt8": 294
+  },
+  "Morada_NW/base_muralla_196_204": {
+   "faces": 2188,
+   "max": 0.06,
+   "p99": 0.03,
+   "mean": 0.0,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_NW/descenso_60_90": {
+   "faces": 3146,
+   "max": 3.76,
+   "p99": 3.76,
+   "mean": 3.25,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_NW/hitos_90_95": {
+   "faces": 674,
+   "max": 1.09,
+   "p99": 0.69,
+   "mean": 0.16,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_NW/muro_pie_muralla": {
+   "faces": 307,
+   "max": 80.02,
+   "p99": 80.02,
+   "mean": 75.83,
+   "gt5": 291,
+   "gt8": 291
+  },
+  "Morada_NW/muro_terraza": {
+   "faces": 1410,
+   "max": 80.06,
+   "p99": 80.05,
+   "mean": 72.96,
+   "gt5": 1286,
+   "gt8": 1286
+  },
+  "Morada_NW/plataforma_189_196": {
+   "faces": 1892,
+   "max": 0.45,
+   "p99": 0.39,
+   "mean": 0.14,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_NW/rampa_95_105": {
+   "faces": 1349,
+   "max": 10.04,
+   "p99": 10.04,
+   "mean": 8.5,
+   "gt5": 1145,
+   "gt8": 1052
+  },
+  "Morada_NW/terrazas_105_189": {
+   "faces": 19636,
+   "max": 2.82,
+   "p99": 0.5,
+   "mean": 0.15,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_SE/bajo_escalinata": {
+   "faces": 323,
+   "max": 76.05,
+   "p99": 75.96,
+   "mean": 20.51,
+   "gt5": 296,
+   "gt8": 294
+  },
+  "Morada_SE/base_muralla_196_204": {
+   "faces": 2181,
+   "max": 0.05,
+   "p99": 0.0,
+   "mean": 0.0,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_SE/descenso_60_90": {
+   "faces": 3147,
+   "max": 3.84,
+   "p99": 3.76,
+   "mean": 3.25,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_SE/hitos_90_95": {
+   "faces": 672,
+   "max": 1.54,
+   "p99": 1.13,
+   "mean": 0.21,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_SE/muro_pie_muralla": {
+   "faces": 307,
+   "max": 80.02,
+   "p99": 80.02,
+   "mean": 75.83,
+   "gt5": 291,
+   "gt8": 291
+  },
+  "Morada_SE/muro_terraza": {
+   "faces": 1410,
+   "max": 80.06,
+   "p99": 80.05,
+   "mean": 72.96,
+   "gt5": 1286,
+   "gt8": 1286
+  },
+  "Morada_SE/plataforma_189_196": {
+   "faces": 1896,
+   "max": 0.65,
+   "p99": 0.41,
+   "mean": 0.14,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_SE/rampa_95_105": {
+   "faces": 1350,
+   "max": 10.04,
+   "p99": 10.04,
+   "mean": 8.5,
+   "gt5": 1146,
+   "gt8": 1052
+  },
+  "Morada_SE/terrazas_105_189": {
+   "faces": 19638,
+   "max": 2.82,
+   "p99": 0.5,
+   "mean": 0.16,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_SW/bajo_escalinata": {
+   "faces": 323,
+   "max": 76.05,
+   "p99": 75.96,
+   "mean": 20.51,
+   "gt5": 296,
+   "gt8": 294
+  },
+  "Morada_SW/base_muralla_196_204": {
+   "faces": 2172,
+   "max": 0.04,
+   "p99": 0.0,
+   "mean": 0.0,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_SW/descenso_60_90": {
+   "faces": 3148,
+   "max": 4.01,
+   "p99": 3.76,
+   "mean": 3.24,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_SW/hitos_90_95": {
+   "faces": 672,
+   "max": 1.19,
+   "p99": 0.84,
+   "mean": 0.19,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_SW/muro_pie_muralla": {
+   "faces": 307,
+   "max": 80.02,
+   "p99": 80.02,
+   "mean": 75.83,
+   "gt5": 291,
+   "gt8": 291
+  },
+  "Morada_SW/muro_terraza": {
+   "faces": 1410,
+   "max": 80.06,
+   "p99": 80.05,
+   "mean": 72.96,
+   "gt5": 1286,
+   "gt8": 1286
+  },
+  "Morada_SW/plataforma_189_196": {
+   "faces": 1909,
+   "max": 0.45,
    "p99": 0.36,
+   "mean": 0.14,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Morada_SW/rampa_95_105": {
+   "faces": 1348,
+   "max": 10.04,
+   "p99": 10.04,
+   "mean": 8.48,
+   "gt5": 1138,
+   "gt8": 1052
+  },
+  "Morada_SW/terrazas_105_189": {
+   "faces": 19635,
+   "max": 2.82,
+   "p99": 0.54,
    "mean": 0.16,
    "gt5": 0,
    "gt8": 0
   },
   "Oficios/base_muralla_196_204": {
-   "faces": 2686,
+   "faces": 2839,
    "max": 6.35,
-   "p99": 2.07,
+   "p99": 2.81,
    "mean": 0.08,
    "gt5": 2,
    "gt8": 0
   },
+  "Oficios/borde_eje": {
+   "faces": 412,
+   "max": 80.0,
+   "p99": 80.0,
+   "mean": 48.73,
+   "gt5": 392,
+   "gt8": 376
+  },
   "Oficios/descenso_60_90": {
-   "faces": 4379,
-   "max": 4.1,
-   "p99": 4.02,
+   "faces": 3943,
+   "max": 3.76,
+   "p99": 3.75,
    "mean": 3.24,
    "gt5": 0,
    "gt8": 0
   },
-  "Oficios/distrito_90_185": {
-   "faces": 21410,
-   "max": 1.58,
-   "p99": 1.47,
-   "mean": 0.89,
+  "Oficios/distrito_90_165": {
+   "faces": 12635,
+   "max": 3.16,
+   "p99": 1.48,
+   "mean": 1.16,
    "gt5": 0,
    "gt8": 0
   },
-  "Oficios/terraplen_185_196": {
-   "faces": 3488,
-   "max": 9.44,
-   "p99": 9.36,
-   "mean": 7.76,
-   "gt5": 2931,
-   "gt8": 2627
+  "Oficios/eje_90_150": {
+   "faces": 3838,
+   "max": 1.87,
+   "p99": 1.8,
+   "mean": 1.45,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Oficios/eje_rampa_150_176": {
+   "faces": 1578,
+   "max": 3.88,
+   "p99": 3.88,
+   "mean": 3.31,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Oficios/microbordillo_lt10cm": {
+   "faces": 2,
+   "max": 12.07,
+   "p99": 12.06,
+   "mean": 12.06,
+   "gt5": 2,
+   "gt8": 2
+  },
+  "Oficios/microirregularidad_le5cm": {
+   "faces": 10,
+   "max": 9.4,
+   "p99": 9.4,
+   "mean": 7.49,
+   "gt5": 10,
+   "gt8": 4
+  },
+  "Oficios/plano_165_175": {
+   "faces": 2446,
+   "max": 0.64,
+   "p99": 0.44,
+   "mean": 0.15,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Oficios/plazoleta_176_196": {
+   "faces": 1200,
+   "max": 0.57,
+   "p99": 0.34,
+   "mean": 0.13,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Oficios/rampa_175_196": {
+   "faces": 5702,
+   "max": 4.88,
+   "p99": 4.31,
+   "mean": 4.08,
+   "gt5": 0,
+   "gt8": 0
   },
   "Plaza/plaza": {
-   "faces": 22631,
+   "faces": 22636,
    "max": 0.4,
    "p99": 0.29,
    "mean": 0.29,
@@ -553,81 +816,137 @@
    "gt8": 0
   },
   "Razas/base_muralla_196_204": {
-   "faces": 2689,
+   "faces": 2838,
    "max": 6.35,
-   "p99": 2.07,
+   "p99": 2.81,
    "mean": 0.08,
    "gt5": 2,
    "gt8": 0
   },
+  "Razas/borde_eje": {
+   "faces": 412,
+   "max": 80.0,
+   "p99": 80.0,
+   "mean": 48.73,
+   "gt5": 392,
+   "gt8": 376
+  },
   "Razas/descenso_60_90": {
-   "faces": 4373,
-   "max": 4.16,
-   "p99": 4.07,
-   "mean": 3.25,
+   "faces": 3945,
+   "max": 3.76,
+   "p99": 3.75,
+   "mean": 3.24,
    "gt5": 0,
    "gt8": 0
   },
-  "Razas/distrito_90_185": {
-   "faces": 21410,
-   "max": 1.65,
-   "p99": 1.49,
-   "mean": 0.88,
+  "Razas/distrito_90_165": {
+   "faces": 12630,
+   "max": 3.2,
+   "p99": 1.5,
+   "mean": 1.15,
    "gt5": 0,
    "gt8": 0
   },
-  "Razas/terraplen_185_196": {
-   "faces": 3486,
-   "max": 9.53,
-   "p99": 9.38,
-   "mean": 7.76,
-   "gt5": 2929,
-   "gt8": 2623
+  "Razas/eje_90_150": {
+   "faces": 3838,
+   "max": 1.9,
+   "p99": 1.8,
+   "mean": 1.44,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Razas/eje_rampa_150_176": {
+   "faces": 1578,
+   "max": 3.88,
+   "p99": 3.88,
+   "mean": 3.27,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Razas/microbordillo_lt10cm": {
+   "faces": 3,
+   "max": 12.07,
+   "p99": 12.06,
+   "mean": 11.17,
+   "gt5": 3,
+   "gt8": 3
+  },
+  "Razas/microirregularidad_le5cm": {
+   "faces": 9,
+   "max": 9.45,
+   "p99": 9.25,
+   "mean": 7.28,
+   "gt5": 9,
+   "gt8": 3
+  },
+  "Razas/plano_165_175": {
+   "faces": 2448,
+   "max": 0.89,
+   "p99": 0.45,
+   "mean": 0.17,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Razas/plazoleta_176_196": {
+   "faces": 1200,
+   "max": 0.44,
+   "p99": 0.37,
+   "mean": 0.15,
+   "gt5": 0,
+   "gt8": 0
+  },
+  "Razas/rampa_175_196": {
+   "faces": 5706,
+   "max": 4.56,
+   "p99": 4.31,
+   "mean": 4.09,
+   "gt5": 0,
+   "gt8": 0
   },
   "Talud/talud_204_212": {
-   "faces": 19652,
+   "faces": 19684,
    "max": 41.47,
    "p99": 41.47,
-   "mean": 36.07,
-   "gt5": 19348,
-   "gt8": 19132
+   "mean": 36.04,
+   "gt5": 19364,
+   "gt8": 19140
   }
  },
  "slope_walkable_max_by_sector": {
   "Clases": {
-   "walk_max": 4.06,
+   "walk_max": 4.85,
    "walk_gt5": 0,
-   "zone_of_max": "descenso_60_90"
+   "zone_of_max": "rampa_175_196"
   },
   "Mercado": {
-   "walk_max": 4.1,
+   "walk_max": 4.78,
    "walk_gt5": 0,
-   "zone_of_max": "descenso_60_90"
+   "zone_of_max": "rampa_175_196"
   },
   "Morada_NE": {
-   "walk_max": 4.13,
+   "walk_max": 3.79,
    "walk_gt5": 0,
    "zone_of_max": "descenso_60_90"
   },
   "Morada_NW": {
-   "walk_max": 4.13,
+   "walk_max": 3.76,
    "walk_gt5": 0,
    "zone_of_max": "descenso_60_90"
   },
   "Morada_SE": {
-   "walk_max": 4.14,
+   "walk_max": 3.84,
    "walk_gt5": 0,
    "zone_of_max": "descenso_60_90"
   },
   "Morada_SW": {
-   "walk_max": 4.13,
+   "walk_max": 4.01,
    "walk_gt5": 0,
    "zone_of_max": "descenso_60_90"
   },
   "Oficios": {
-   "walk_max": 4.1,
+   "walk_max": 4.88,
    "walk_gt5": 0,
-   "zone_of_max": "descenso_60_90"
+   "zone_of_max": "rampa_175_196"
   },
   "Plaza": {
    "walk_max": 0.4,
@@ -635,10 +954,120 @@
    "zone_of_max": "plaza"
   },
   "Razas": {
-   "walk_max": 4.16,
+   "walk_max": 4.56,
    "walk_gt5": 0,
-   "zone_of_max": "descenso_60_90"
+   "zone_of_max": "rampa_175_196"
   }
+ },
+ "walkable_faces_gt8": {
+  "count": 0,
+  "sample": []
+ },
+ "micro_steps_lt10cm": {
+  "count": 48,
+  "max_span_m": 0.067,
+  "sample": [
+   [
+    [
+     "Oficios",
+     "distrito_90_165"
+    ],
+    87.33,
+    40.31,
+    9.4,
+    0.049
+   ],
+   [
+    [
+     "Oficios",
+     "rampa_175_196"
+    ],
+    158.99,
+    -73.14,
+    7.8,
+    0.021
+   ],
+   [
+    [
+     "Oficios",
+     "plano_165_175"
+    ],
+    158.92,
+    -73.16,
+    5.5,
+    0.011
+   ],
+   [
+    [
+     "Oficios",
+     "distrito_90_165"
+    ],
+    107.3,
+    -49.63,
+    9.3,
+    0.04
+   ],
+   [
+    [
+     "Razas",
+     "rampa_175_196"
+    ],
+    -73.14,
+    -158.99,
+    7.8,
+    0.021
+   ],
+   [
+    [
+     "Razas",
+     "plano_165_175"
+    ],
+    -73.16,
+    -158.92,
+    5.5,
+    0.011
+   ],
+   [
+    [
+     "Razas",
+     "distrito_90_165"
+    ],
+    -50.13,
+    -107.96,
+    12.1,
+    0.067
+   ],
+   [
+    [
+     "Razas",
+     "distrito_90_165"
+    ],
+    -49.63,
+    -107.3,
+    9.2,
+    0.04
+   ],
+   [
+    [
+     "Clases",
+     "rampa_175_196"
+    ],
+    -159.05,
+    73.05,
+    5.5,
+    0.021
+   ],
+   [
+    [
+     "Clases",
+     "plano_165_175"
+    ],
+    -158.92,
+    73.16,
+    5.5,
+    0.011
+   ]
+  ]
  },
  "level_checks": [
   {
@@ -648,112 +1077,2135 @@
    "diff": 0.0
   },
   {
-   "point": "plaza borde r59.5 E",
-   "z_mesh": 7.7025,
-   "z_expected": 7.7025,
-   "diff": -0.0
-  },
-  {
-   "point": "r90 Mercado",
-   "z_mesh": 5.9996,
+   "point": "r90 Mercado (fuera eje)",
+   "z_mesh": 6.0001,
    "z_expected": 6.0,
-   "diff": -0.0004
+   "diff": 0.0001
   },
   {
-   "point": "Mercado r165",
-   "z_mesh": 4.5042,
+   "point": "Mercado r170 fuera eje (plano 165-175)",
+   "z_mesh": 4.4924,
    "z_expected": 4.5,
-   "diff": 0.0042
+   "diff": -0.0076
   },
   {
-   "point": "Mercado r175",
-   "z_mesh": 4.4951,
-   "z_expected": 4.5,
-   "diff": -0.0049
-  },
-  {
-   "point": "Mercado r185",
-   "z_mesh": 4.4928,
-   "z_expected": 4.5,
-   "diff": -0.0072
-  },
-  {
-   "point": "Mercado r196",
+   "point": "Mercado r196 fuera eje",
    "z_mesh": 6.0,
    "z_expected": 6.0,
    "diff": 0.0
   },
   {
-   "point": "Mercado r200 (puerta)",
+   "point": "Mercado eje u150",
+   "z_mesh": 4.5068,
+   "z_expected": 4.5,
+   "diff": 0.0068
+  },
+  {
+   "point": "Mercado eje u176",
+   "z_mesh": 5.9942,
+   "z_expected": 6.0,
+   "diff": -0.0058
+  },
+  {
+   "point": "plazoleta Mercado u186",
+   "z_mesh": 5.9905,
+   "z_expected": 6.0,
+   "diff": -0.0095
+  },
+  {
+   "point": "plazoleta Mercado u186 v=+14",
+   "z_mesh": 6.001,
+   "z_expected": 6.0,
+   "diff": 0.001
+  },
+  {
+   "point": "Puerta N (marcador) r200",
    "z_mesh": 6.0,
    "z_expected": 6.0,
    "diff": 0.0
   },
   {
    "point": "hitos NE r92",
-   "z_mesh": 6.0056,
+   "z_mesh": 5.9954,
    "z_expected": 6.0,
-   "diff": 0.0056
+   "diff": -0.0046
   },
   {
-   "point": "Morada NE r105",
-   "z_mesh": 4.5003,
+   "point": "Morada NE r105 fuera escalinata",
+   "z_mesh": 4.5111,
    "z_expected": 4.5,
-   "diff": 0.0003
+   "diff": 0.0111
   },
   {
-   "point": "terraza 1 NE (centro)",
-   "z_mesh": 4.5001,
+   "point": "terraza 1 NE (centro, fuera calle)",
+   "z_mesh": 4.5005,
    "z_expected": 4.5,
-   "diff": 0.0001
+   "diff": 0.0005
   },
   {
-   "point": "terraza 2 NE (centro)",
-   "z_mesh": 5.4952,
+   "point": "terraza 2 NE (centro, fuera calle)",
+   "z_mesh": 5.4944,
    "z_expected": 5.5,
-   "diff": -0.0048
+   "diff": -0.0056
   },
   {
-   "point": "terraza 3 NE (centro)",
-   "z_mesh": 6.5026,
+   "point": "terraza 3 NE (centro, fuera calle)",
+   "z_mesh": 6.5015,
    "z_expected": 6.5,
-   "diff": 0.0026
+   "diff": 0.0015
   },
   {
-   "point": "terraza 4 NE (centro)",
-   "z_mesh": 7.4996,
+   "point": "terraza 4 NE (centro, fuera calle)",
+   "z_mesh": 7.5051,
    "z_expected": 7.5,
-   "diff": -0.0004
+   "diff": 0.0051
   },
   {
-   "point": "terraza 5 NE (centro)",
-   "z_mesh": 8.4992,
+   "point": "terraza 5 NE (centro, fuera calle)",
+   "z_mesh": 8.4954,
    "z_expected": 8.5,
-   "diff": -0.0008
+   "diff": -0.0046
   },
   {
-   "point": "terraza 6 NE (centro)",
-   "z_mesh": 9.5113,
+   "point": "terraza 6 NE (centro, fuera calle)",
+   "z_mesh": 9.5152,
    "z_expected": 9.5,
-   "diff": 0.0113
+   "diff": 0.0152
   },
   {
-   "point": "Morada NE r200",
-   "z_mesh": 9.5,
+   "point": "Morada NE r193",
+   "z_mesh": 9.4953,
    "z_expected": 9.5,
-   "diff": 0.0
+   "diff": -0.0047
   },
   {
    "point": "talud r208 E",
    "z_mesh": 3.0,
    "z_expected": 3.0,
    "diff": 0.0
-  },
-  {
-   "point": "borde r211.9 E",
-   "z_mesh": 0.0618,
-   "z_expected": 0.0006,
-   "diff": 0.0612
   }
- ]
+ ],
+ "structures": {
+  "objects": {
+   "TRN_Parapets_Morada_NE": {
+    "tris": 2984,
+    "collection": "MORADAS"
+   },
+   "TRN_Buttresses_Morada_NE": {
+    "tris": 96,
+    "collection": "MORADAS"
+   },
+   "TRN_LateralStairs_Morada_NE": {
+    "tris": 1776,
+    "collection": "MORADAS"
+   },
+   "TRN_Escalinata_Morada_NE": {
+    "tris": 252,
+    "collection": "STREETS"
+   },
+   "TRN_Parapets_Morada_NW": {
+    "tris": 2984,
+    "collection": "MORADAS"
+   },
+   "TRN_Buttresses_Morada_NW": {
+    "tris": 96,
+    "collection": "MORADAS"
+   },
+   "TRN_LateralStairs_Morada_NW": {
+    "tris": 1776,
+    "collection": "MORADAS"
+   },
+   "TRN_Escalinata_Morada_NW": {
+    "tris": 252,
+    "collection": "STREETS"
+   },
+   "TRN_Parapets_Morada_SW": {
+    "tris": 2984,
+    "collection": "MORADAS"
+   },
+   "TRN_Buttresses_Morada_SW": {
+    "tris": 96,
+    "collection": "MORADAS"
+   },
+   "TRN_LateralStairs_Morada_SW": {
+    "tris": 1776,
+    "collection": "MORADAS"
+   },
+   "TRN_Escalinata_Morada_SW": {
+    "tris": 252,
+    "collection": "STREETS"
+   },
+   "TRN_Parapets_Morada_SE": {
+    "tris": 2984,
+    "collection": "MORADAS"
+   },
+   "TRN_Buttresses_Morada_SE": {
+    "tris": 96,
+    "collection": "MORADAS"
+   },
+   "TRN_LateralStairs_Morada_SE": {
+    "tris": 1776,
+    "collection": "MORADAS"
+   },
+   "TRN_Escalinata_Morada_SE": {
+    "tris": 252,
+    "collection": "STREETS"
+   }
+  },
+  "stairs": [
+   {
+    "edge": "Morada_NE-1",
+    "r_station": 116.5,
+    "rise_m": 0.98,
+    "risers": 7,
+    "riser_m": 0.14,
+    "tread_m": 0.33,
+    "run_m": 1.98,
+    "side_low": "morada",
+    "top_level": 5.48
+   },
+   {
+    "edge": "Morada_NE-1",
+    "r_station": 141.5,
+    "rise_m": 1.46,
+    "risers": 10,
+    "riser_m": 0.146,
+    "tread_m": 0.33,
+    "run_m": 2.97,
+    "side_low": "cardinal",
+    "top_level": 6.5
+   },
+   {
+    "edge": "Morada_NE-1",
+    "r_station": 166.5,
+    "rise_m": 3.87,
+    "risers": 26,
+    "riser_m": 0.149,
+    "tread_m": 0.33,
+    "run_m": 8.25,
+    "side_low": "cardinal",
+    "top_level": 8.5
+   },
+   {
+    "edge": "Morada_NE-1",
+    "r_station": 191.5,
+    "rise_m": 4.64,
+    "risers": 31,
+    "riser_m": 0.15,
+    "tread_m": 0.33,
+    "run_m": 9.9,
+    "side_low": "cardinal",
+    "top_level": 9.5
+   },
+   {
+    "edge": "Morada_NE+1",
+    "r_station": 116.5,
+    "rise_m": 0.98,
+    "risers": 7,
+    "riser_m": 0.14,
+    "tread_m": 0.33,
+    "run_m": 1.98,
+    "side_low": "morada",
+    "top_level": 5.48
+   },
+   {
+    "edge": "Morada_NE+1",
+    "r_station": 141.5,
+    "rise_m": 1.46,
+    "risers": 10,
+    "riser_m": 0.146,
+    "tread_m": 0.33,
+    "run_m": 2.97,
+    "side_low": "cardinal",
+    "top_level": 6.5
+   },
+   {
+    "edge": "Morada_NE+1",
+    "r_station": 166.5,
+    "rise_m": 3.87,
+    "risers": 26,
+    "riser_m": 0.149,
+    "tread_m": 0.33,
+    "run_m": 8.25,
+    "side_low": "cardinal",
+    "top_level": 8.5
+   },
+   {
+    "edge": "Morada_NE+1",
+    "r_station": 191.5,
+    "rise_m": 4.64,
+    "risers": 31,
+    "riser_m": 0.15,
+    "tread_m": 0.33,
+    "run_m": 9.9,
+    "side_low": "cardinal",
+    "top_level": 9.5
+   },
+   {
+    "edge": "Morada_NW-1",
+    "r_station": 116.5,
+    "rise_m": 0.98,
+    "risers": 7,
+    "riser_m": 0.14,
+    "tread_m": 0.33,
+    "run_m": 1.98,
+    "side_low": "morada",
+    "top_level": 5.48
+   },
+   {
+    "edge": "Morada_NW-1",
+    "r_station": 141.5,
+    "rise_m": 1.46,
+    "risers": 10,
+    "riser_m": 0.146,
+    "tread_m": 0.33,
+    "run_m": 2.97,
+    "side_low": "cardinal",
+    "top_level": 6.5
+   },
+   {
+    "edge": "Morada_NW-1",
+    "r_station": 166.5,
+    "rise_m": 3.87,
+    "risers": 26,
+    "riser_m": 0.149,
+    "tread_m": 0.33,
+    "run_m": 8.25,
+    "side_low": "cardinal",
+    "top_level": 8.5
+   },
+   {
+    "edge": "Morada_NW-1",
+    "r_station": 191.5,
+    "rise_m": 4.64,
+    "risers": 31,
+    "riser_m": 0.15,
+    "tread_m": 0.33,
+    "run_m": 9.9,
+    "side_low": "cardinal",
+    "top_level": 9.5
+   },
+   {
+    "edge": "Morada_NW+1",
+    "r_station": 116.5,
+    "rise_m": 0.98,
+    "risers": 7,
+    "riser_m": 0.14,
+    "tread_m": 0.33,
+    "run_m": 1.98,
+    "side_low": "morada",
+    "top_level": 5.48
+   },
+   {
+    "edge": "Morada_NW+1",
+    "r_station": 141.5,
+    "rise_m": 1.46,
+    "risers": 10,
+    "riser_m": 0.146,
+    "tread_m": 0.33,
+    "run_m": 2.97,
+    "side_low": "cardinal",
+    "top_level": 6.5
+   },
+   {
+    "edge": "Morada_NW+1",
+    "r_station": 166.5,
+    "rise_m": 3.87,
+    "risers": 26,
+    "riser_m": 0.149,
+    "tread_m": 0.33,
+    "run_m": 8.25,
+    "side_low": "cardinal",
+    "top_level": 8.5
+   },
+   {
+    "edge": "Morada_NW+1",
+    "r_station": 191.5,
+    "rise_m": 4.64,
+    "risers": 31,
+    "riser_m": 0.15,
+    "tread_m": 0.33,
+    "run_m": 9.9,
+    "side_low": "cardinal",
+    "top_level": 9.5
+   },
+   {
+    "edge": "Morada_SW-1",
+    "r_station": 116.5,
+    "rise_m": 0.98,
+    "risers": 7,
+    "riser_m": 0.14,
+    "tread_m": 0.33,
+    "run_m": 1.98,
+    "side_low": "morada",
+    "top_level": 5.48
+   },
+   {
+    "edge": "Morada_SW-1",
+    "r_station": 141.5,
+    "rise_m": 1.46,
+    "risers": 10,
+    "riser_m": 0.146,
+    "tread_m": 0.33,
+    "run_m": 2.97,
+    "side_low": "cardinal",
+    "top_level": 6.5
+   },
+   {
+    "edge": "Morada_SW-1",
+    "r_station": 166.5,
+    "rise_m": 3.87,
+    "risers": 26,
+    "riser_m": 0.149,
+    "tread_m": 0.33,
+    "run_m": 8.25,
+    "side_low": "cardinal",
+    "top_level": 8.5
+   },
+   {
+    "edge": "Morada_SW-1",
+    "r_station": 191.5,
+    "rise_m": 4.64,
+    "risers": 31,
+    "riser_m": 0.15,
+    "tread_m": 0.33,
+    "run_m": 9.9,
+    "side_low": "cardinal",
+    "top_level": 9.5
+   },
+   {
+    "edge": "Morada_SW+1",
+    "r_station": 116.5,
+    "rise_m": 0.98,
+    "risers": 7,
+    "riser_m": 0.14,
+    "tread_m": 0.33,
+    "run_m": 1.98,
+    "side_low": "morada",
+    "top_level": 5.48
+   },
+   {
+    "edge": "Morada_SW+1",
+    "r_station": 141.5,
+    "rise_m": 1.46,
+    "risers": 10,
+    "riser_m": 0.146,
+    "tread_m": 0.33,
+    "run_m": 2.97,
+    "side_low": "cardinal",
+    "top_level": 6.5
+   },
+   {
+    "edge": "Morada_SW+1",
+    "r_station": 166.5,
+    "rise_m": 3.87,
+    "risers": 26,
+    "riser_m": 0.149,
+    "tread_m": 0.33,
+    "run_m": 8.25,
+    "side_low": "cardinal",
+    "top_level": 8.5
+   },
+   {
+    "edge": "Morada_SW+1",
+    "r_station": 191.5,
+    "rise_m": 4.64,
+    "risers": 31,
+    "riser_m": 0.15,
+    "tread_m": 0.33,
+    "run_m": 9.9,
+    "side_low": "cardinal",
+    "top_level": 9.5
+   },
+   {
+    "edge": "Morada_SE-1",
+    "r_station": 116.5,
+    "rise_m": 0.98,
+    "risers": 7,
+    "riser_m": 0.14,
+    "tread_m": 0.33,
+    "run_m": 1.98,
+    "side_low": "morada",
+    "top_level": 5.48
+   },
+   {
+    "edge": "Morada_SE-1",
+    "r_station": 141.5,
+    "rise_m": 1.46,
+    "risers": 10,
+    "riser_m": 0.146,
+    "tread_m": 0.33,
+    "run_m": 2.97,
+    "side_low": "cardinal",
+    "top_level": 6.5
+   },
+   {
+    "edge": "Morada_SE-1",
+    "r_station": 166.5,
+    "rise_m": 3.87,
+    "risers": 26,
+    "riser_m": 0.149,
+    "tread_m": 0.33,
+    "run_m": 8.25,
+    "side_low": "cardinal",
+    "top_level": 8.5
+   },
+   {
+    "edge": "Morada_SE-1",
+    "r_station": 191.5,
+    "rise_m": 4.64,
+    "risers": 31,
+    "riser_m": 0.15,
+    "tread_m": 0.33,
+    "run_m": 9.9,
+    "side_low": "cardinal",
+    "top_level": 9.5
+   },
+   {
+    "edge": "Morada_SE+1",
+    "r_station": 116.5,
+    "rise_m": 0.98,
+    "risers": 7,
+    "riser_m": 0.14,
+    "tread_m": 0.33,
+    "run_m": 1.98,
+    "side_low": "morada",
+    "top_level": 5.48
+   },
+   {
+    "edge": "Morada_SE+1",
+    "r_station": 141.5,
+    "rise_m": 1.46,
+    "risers": 10,
+    "riser_m": 0.146,
+    "tread_m": 0.33,
+    "run_m": 2.97,
+    "side_low": "cardinal",
+    "top_level": 6.5
+   },
+   {
+    "edge": "Morada_SE+1",
+    "r_station": 166.5,
+    "rise_m": 3.87,
+    "risers": 26,
+    "riser_m": 0.149,
+    "tread_m": 0.33,
+    "run_m": 8.25,
+    "side_low": "cardinal",
+    "top_level": 8.5
+   },
+   {
+    "edge": "Morada_SE+1",
+    "r_station": 191.5,
+    "rise_m": 4.64,
+    "risers": 31,
+    "riser_m": 0.15,
+    "tread_m": 0.33,
+    "run_m": 9.9,
+    "side_low": "cardinal",
+    "top_level": 9.5
+   }
+  ],
+  "buttresses": {
+   "Morada_NE-1": [
+    {
+     "r": 170.05,
+     "wall_h": 4.0
+    },
+    {
+     "r": 178.05,
+     "wall_h": 4.81
+    },
+    {
+     "r": 194.53,
+     "wall_h": 3.57
+    },
+    {
+     "free_spans_r": [
+      [
+       169.05,
+       179.05
+      ],
+      [
+       194.05,
+       195.0
+      ]
+     ]
+    }
+   ],
+   "Morada_NE+1": [
+    {
+     "r": 170.05,
+     "wall_h": 4.0
+    },
+    {
+     "r": 178.05,
+     "wall_h": 4.81
+    },
+    {
+     "r": 194.53,
+     "wall_h": 3.57
+    },
+    {
+     "free_spans_r": [
+      [
+       169.05,
+       179.05
+      ],
+      [
+       194.05,
+       195.0
+      ]
+     ]
+    }
+   ],
+   "Morada_NW-1": [
+    {
+     "r": 170.05,
+     "wall_h": 4.0
+    },
+    {
+     "r": 178.05,
+     "wall_h": 4.81
+    },
+    {
+     "r": 194.53,
+     "wall_h": 3.57
+    },
+    {
+     "free_spans_r": [
+      [
+       169.05,
+       179.05
+      ],
+      [
+       194.05,
+       195.0
+      ]
+     ]
+    }
+   ],
+   "Morada_NW+1": [
+    {
+     "r": 170.05,
+     "wall_h": 4.0
+    },
+    {
+     "r": 178.05,
+     "wall_h": 4.81
+    },
+    {
+     "r": 194.53,
+     "wall_h": 3.57
+    },
+    {
+     "free_spans_r": [
+      [
+       169.05,
+       179.05
+      ],
+      [
+       194.05,
+       195.0
+      ]
+     ]
+    }
+   ],
+   "Morada_SW-1": [
+    {
+     "r": 170.05,
+     "wall_h": 4.0
+    },
+    {
+     "r": 178.05,
+     "wall_h": 4.81
+    },
+    {
+     "r": 194.53,
+     "wall_h": 3.57
+    },
+    {
+     "free_spans_r": [
+      [
+       169.05,
+       179.05
+      ],
+      [
+       194.05,
+       195.0
+      ]
+     ]
+    }
+   ],
+   "Morada_SW+1": [
+    {
+     "r": 170.05,
+     "wall_h": 4.0
+    },
+    {
+     "r": 178.05,
+     "wall_h": 4.81
+    },
+    {
+     "r": 194.53,
+     "wall_h": 3.57
+    },
+    {
+     "free_spans_r": [
+      [
+       169.05,
+       179.05
+      ],
+      [
+       194.05,
+       195.0
+      ]
+     ]
+    }
+   ],
+   "Morada_SE-1": [
+    {
+     "r": 170.05,
+     "wall_h": 4.0
+    },
+    {
+     "r": 178.05,
+     "wall_h": 4.81
+    },
+    {
+     "r": 194.53,
+     "wall_h": 3.57
+    },
+    {
+     "free_spans_r": [
+      [
+       169.05,
+       179.05
+      ],
+      [
+       194.05,
+       195.0
+      ]
+     ]
+    }
+   ],
+   "Morada_SE+1": [
+    {
+     "r": 170.05,
+     "wall_h": 4.0
+    },
+    {
+     "r": 178.05,
+     "wall_h": 4.81
+    },
+    {
+     "r": 194.53,
+     "wall_h": 3.57
+    },
+    {
+     "free_spans_r": [
+      [
+       169.05,
+       179.05
+      ],
+      [
+       194.05,
+       195.0
+      ]
+     ]
+    }
+   ]
+  },
+  "lateral_parapets": {
+   "Morada_NE-1": [
+    {
+     "from_r": 99.5,
+     "to_r": 115.2,
+     "h": 0.6,
+     "high_side": "card"
+    },
+    {
+     "from_r": 117.8,
+     "to_r": 118.95,
+     "h": 0.6,
+     "high_side": "card"
+    },
+    {
+     "from_r": 133.1,
+     "to_r": 140.2,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 142.8,
+     "to_r": 146.9,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 147.1,
+     "to_r": 160.9,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 161.1,
+     "to_r": 165.2,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 167.8,
+     "to_r": 174.9,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 175.1,
+     "to_r": 190.2,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 192.8,
+     "to_r": 196.0,
+     "h": 0.9,
+     "high_side": "diag"
+    }
+   ],
+   "Morada_NE+1": [
+    {
+     "from_r": 99.5,
+     "to_r": 115.2,
+     "h": 0.6,
+     "high_side": "card"
+    },
+    {
+     "from_r": 117.8,
+     "to_r": 118.95,
+     "h": 0.6,
+     "high_side": "card"
+    },
+    {
+     "from_r": 133.1,
+     "to_r": 140.2,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 142.8,
+     "to_r": 146.9,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 147.1,
+     "to_r": 160.9,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 161.1,
+     "to_r": 165.2,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 167.8,
+     "to_r": 174.9,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 175.1,
+     "to_r": 190.2,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 192.8,
+     "to_r": 196.0,
+     "h": 0.9,
+     "high_side": "diag"
+    }
+   ],
+   "Morada_NW-1": [
+    {
+     "from_r": 99.5,
+     "to_r": 115.2,
+     "h": 0.6,
+     "high_side": "card"
+    },
+    {
+     "from_r": 117.8,
+     "to_r": 118.95,
+     "h": 0.6,
+     "high_side": "card"
+    },
+    {
+     "from_r": 133.1,
+     "to_r": 140.2,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 142.8,
+     "to_r": 146.9,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 147.1,
+     "to_r": 160.9,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 161.1,
+     "to_r": 165.2,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 167.8,
+     "to_r": 174.9,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 175.1,
+     "to_r": 190.2,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 192.8,
+     "to_r": 196.0,
+     "h": 0.9,
+     "high_side": "diag"
+    }
+   ],
+   "Morada_NW+1": [
+    {
+     "from_r": 99.5,
+     "to_r": 115.2,
+     "h": 0.6,
+     "high_side": "card"
+    },
+    {
+     "from_r": 117.8,
+     "to_r": 118.95,
+     "h": 0.6,
+     "high_side": "card"
+    },
+    {
+     "from_r": 133.1,
+     "to_r": 140.2,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 142.8,
+     "to_r": 146.9,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 147.1,
+     "to_r": 160.9,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 161.1,
+     "to_r": 165.2,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 167.8,
+     "to_r": 174.9,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 175.1,
+     "to_r": 190.2,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 192.8,
+     "to_r": 196.0,
+     "h": 0.9,
+     "high_side": "diag"
+    }
+   ],
+   "Morada_SW-1": [
+    {
+     "from_r": 99.5,
+     "to_r": 115.2,
+     "h": 0.6,
+     "high_side": "card"
+    },
+    {
+     "from_r": 117.8,
+     "to_r": 118.95,
+     "h": 0.6,
+     "high_side": "card"
+    },
+    {
+     "from_r": 133.1,
+     "to_r": 140.2,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 142.8,
+     "to_r": 146.9,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 147.1,
+     "to_r": 160.9,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 161.1,
+     "to_r": 165.2,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 167.8,
+     "to_r": 174.9,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 175.1,
+     "to_r": 190.2,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 192.8,
+     "to_r": 196.0,
+     "h": 0.9,
+     "high_side": "diag"
+    }
+   ],
+   "Morada_SW+1": [
+    {
+     "from_r": 99.5,
+     "to_r": 115.2,
+     "h": 0.6,
+     "high_side": "card"
+    },
+    {
+     "from_r": 117.8,
+     "to_r": 118.95,
+     "h": 0.6,
+     "high_side": "card"
+    },
+    {
+     "from_r": 133.1,
+     "to_r": 140.2,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 142.8,
+     "to_r": 146.9,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 147.1,
+     "to_r": 160.9,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 161.1,
+     "to_r": 165.2,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 167.8,
+     "to_r": 174.9,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 175.1,
+     "to_r": 190.2,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 192.8,
+     "to_r": 196.0,
+     "h": 0.9,
+     "high_side": "diag"
+    }
+   ],
+   "Morada_SE-1": [
+    {
+     "from_r": 99.5,
+     "to_r": 115.2,
+     "h": 0.6,
+     "high_side": "card"
+    },
+    {
+     "from_r": 117.8,
+     "to_r": 118.95,
+     "h": 0.6,
+     "high_side": "card"
+    },
+    {
+     "from_r": 133.1,
+     "to_r": 140.2,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 142.8,
+     "to_r": 146.9,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 147.1,
+     "to_r": 160.9,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 161.1,
+     "to_r": 165.2,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 167.8,
+     "to_r": 174.9,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 175.1,
+     "to_r": 190.2,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 192.8,
+     "to_r": 196.0,
+     "h": 0.9,
+     "high_side": "diag"
+    }
+   ],
+   "Morada_SE+1": [
+    {
+     "from_r": 99.5,
+     "to_r": 115.2,
+     "h": 0.6,
+     "high_side": "card"
+    },
+    {
+     "from_r": 117.8,
+     "to_r": 118.95,
+     "h": 0.6,
+     "high_side": "card"
+    },
+    {
+     "from_r": 133.1,
+     "to_r": 140.2,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 142.8,
+     "to_r": 146.9,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 147.1,
+     "to_r": 160.9,
+     "h": 0.6,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 161.1,
+     "to_r": 165.2,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 167.8,
+     "to_r": 174.9,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 175.1,
+     "to_r": 190.2,
+     "h": 0.9,
+     "high_side": "diag"
+    },
+    {
+     "from_r": 192.8,
+     "to_r": 196.0,
+     "h": 0.9,
+     "high_side": "diag"
+    }
+   ]
+  },
+  "ring_parapets": {
+   "Morada_NE": [
+    {
+     "r": 119.088,
+     "level": 5.5,
+     "h": 0.6,
+     "street_gap_m": 6.0
+    },
+    {
+     "r": 133.088,
+     "level": 6.5,
+     "h": 0.6,
+     "street_gap_m": 6.0
+    },
+    {
+     "r": 147.088,
+     "level": 7.5,
+     "h": 0.6,
+     "street_gap_m": 6.0
+    },
+    {
+     "r": 161.088,
+     "level": 8.5,
+     "h": 0.6,
+     "street_gap_m": 6.0
+    },
+    {
+     "r": 175.088,
+     "level": 9.5,
+     "h": 0.6,
+     "street_gap_m": 6.0
+    }
+   ],
+   "Morada_NW": [
+    {
+     "r": 119.088,
+     "level": 5.5,
+     "h": 0.6,
+     "street_gap_m": 6.0
+    },
+    {
+     "r": 133.088,
+     "level": 6.5,
+     "h": 0.6,
+     "street_gap_m": 6.0
+    },
+    {
+     "r": 147.088,
+     "level": 7.5,
+     "h": 0.6,
+     "street_gap_m": 6.0
+    },
+    {
+     "r": 161.088,
+     "level": 8.5,
+     "h": 0.6,
+     "street_gap_m": 6.0
+    },
+    {
+     "r": 175.088,
+     "level": 9.5,
+     "h": 0.6,
+     "street_gap_m": 6.0
+    }
+   ],
+   "Morada_SW": [
+    {
+     "r": 119.088,
+     "level": 5.5,
+     "h": 0.6,
+     "street_gap_m": 6.0
+    },
+    {
+     "r": 133.088,
+     "level": 6.5,
+     "h": 0.6,
+     "street_gap_m": 6.0
+    },
+    {
+     "r": 147.088,
+     "level": 7.5,
+     "h": 0.6,
+     "street_gap_m": 6.0
+    },
+    {
+     "r": 161.088,
+     "level": 8.5,
+     "h": 0.6,
+     "street_gap_m": 6.0
+    },
+    {
+     "r": 175.088,
+     "level": 9.5,
+     "h": 0.6,
+     "street_gap_m": 6.0
+    }
+   ],
+   "Morada_SE": [
+    {
+     "r": 119.088,
+     "level": 5.5,
+     "h": 0.6,
+     "street_gap_m": 6.0
+    },
+    {
+     "r": 133.088,
+     "level": 6.5,
+     "h": 0.6,
+     "street_gap_m": 6.0
+    },
+    {
+     "r": 147.088,
+     "level": 7.5,
+     "h": 0.6,
+     "street_gap_m": 6.0
+    },
+    {
+     "r": 161.088,
+     "level": 8.5,
+     "h": 0.6,
+     "street_gap_m": 6.0
+    },
+    {
+     "r": 175.088,
+     "level": 9.5,
+     "h": 0.6,
+     "street_gap_m": 6.0
+    }
+   ]
+  },
+  "escalinata": {
+   "Morada_NE": {
+    "width_m": 6.0,
+    "risers": 10,
+    "riser_m": 0.15,
+    "tread_m": 1.0,
+    "landing_m": 2.0,
+    "riser_positions_r": [
+     95.0,
+     96.0,
+     97.0,
+     98.0,
+     99.0,
+     101.0,
+     102.0,
+     103.0,
+     104.0,
+     105.0
+    ],
+    "balustrade_h_m": 0.9
+   },
+   "Morada_NW": {
+    "width_m": 6.0,
+    "risers": 10,
+    "riser_m": 0.15,
+    "tread_m": 1.0,
+    "landing_m": 2.0,
+    "riser_positions_r": [
+     95.0,
+     96.0,
+     97.0,
+     98.0,
+     99.0,
+     101.0,
+     102.0,
+     103.0,
+     104.0,
+     105.0
+    ],
+    "balustrade_h_m": 0.9
+   },
+   "Morada_SW": {
+    "width_m": 6.0,
+    "risers": 10,
+    "riser_m": 0.15,
+    "tread_m": 1.0,
+    "landing_m": 2.0,
+    "riser_positions_r": [
+     95.0,
+     96.0,
+     97.0,
+     98.0,
+     99.0,
+     101.0,
+     102.0,
+     103.0,
+     104.0,
+     105.0
+    ],
+    "balustrade_h_m": 0.9
+   },
+   "Morada_SE": {
+    "width_m": 6.0,
+    "risers": 10,
+    "riser_m": 0.15,
+    "tread_m": 1.0,
+    "landing_m": 2.0,
+    "riser_positions_r": [
+     95.0,
+     96.0,
+     97.0,
+     98.0,
+     99.0,
+     101.0,
+     102.0,
+     103.0,
+     104.0,
+     105.0
+    ],
+    "balustrade_h_m": 0.9
+   }
+  },
+  "lateral_wall_heights": {
+   "Morada_NE-1": {
+    "0": [
+     -1.23,
+     0.07
+    ],
+    "1": [
+     -1.23,
+     -0.93
+    ],
+    "2": [
+     -0.43,
+     0.36
+    ],
+    "3": [
+     0.87,
+     1.66
+    ],
+    "4": [
+     2.16,
+     2.95
+    ],
+    "5": [
+     3.46,
+     4.0
+    ],
+    "6": [
+     4.01,
+     5.0
+    ],
+    "7": [
+     3.5,
+     3.99
+    ]
+   },
+   "Morada_NE+1": {
+    "0": [
+     -1.23,
+     0.07
+    ],
+    "1": [
+     -1.23,
+     -0.93
+    ],
+    "2": [
+     -0.43,
+     0.36
+    ],
+    "3": [
+     0.87,
+     1.66
+    ],
+    "4": [
+     2.16,
+     2.95
+    ],
+    "5": [
+     3.46,
+     4.0
+    ],
+    "6": [
+     4.01,
+     5.0
+    ],
+    "7": [
+     3.5,
+     3.99
+    ]
+   },
+   "Morada_NW-1": {
+    "0": [
+     -1.23,
+     0.07
+    ],
+    "1": [
+     -1.23,
+     -0.93
+    ],
+    "2": [
+     -0.43,
+     0.36
+    ],
+    "3": [
+     0.87,
+     1.66
+    ],
+    "4": [
+     2.16,
+     2.95
+    ],
+    "5": [
+     3.46,
+     4.0
+    ],
+    "6": [
+     4.01,
+     5.0
+    ],
+    "7": [
+     3.5,
+     3.99
+    ]
+   },
+   "Morada_NW+1": {
+    "0": [
+     -1.23,
+     0.07
+    ],
+    "1": [
+     -1.23,
+     -0.93
+    ],
+    "2": [
+     -0.43,
+     0.36
+    ],
+    "3": [
+     0.87,
+     1.66
+    ],
+    "4": [
+     2.16,
+     2.95
+    ],
+    "5": [
+     3.46,
+     4.0
+    ],
+    "6": [
+     4.01,
+     5.0
+    ],
+    "7": [
+     3.5,
+     3.99
+    ]
+   },
+   "Morada_SW-1": {
+    "0": [
+     -1.23,
+     0.07
+    ],
+    "1": [
+     -1.23,
+     -0.93
+    ],
+    "2": [
+     -0.43,
+     0.36
+    ],
+    "3": [
+     0.87,
+     1.66
+    ],
+    "4": [
+     2.16,
+     2.95
+    ],
+    "5": [
+     3.46,
+     4.0
+    ],
+    "6": [
+     4.01,
+     5.0
+    ],
+    "7": [
+     3.5,
+     3.99
+    ]
+   },
+   "Morada_SW+1": {
+    "0": [
+     -1.23,
+     0.07
+    ],
+    "1": [
+     -1.23,
+     -0.93
+    ],
+    "2": [
+     -0.43,
+     0.36
+    ],
+    "3": [
+     0.87,
+     1.66
+    ],
+    "4": [
+     2.16,
+     2.95
+    ],
+    "5": [
+     3.46,
+     4.0
+    ],
+    "6": [
+     4.01,
+     5.0
+    ],
+    "7": [
+     3.5,
+     3.99
+    ]
+   },
+   "Morada_SE-1": {
+    "0": [
+     -1.23,
+     0.07
+    ],
+    "1": [
+     -1.23,
+     -0.93
+    ],
+    "2": [
+     -0.43,
+     0.36
+    ],
+    "3": [
+     0.87,
+     1.66
+    ],
+    "4": [
+     2.16,
+     2.95
+    ],
+    "5": [
+     3.46,
+     4.0
+    ],
+    "6": [
+     4.01,
+     5.0
+    ],
+    "7": [
+     3.5,
+     3.99
+    ]
+   },
+   "Morada_SE+1": {
+    "0": [
+     -1.23,
+     0.07
+    ],
+    "1": [
+     -1.23,
+     -0.93
+    ],
+    "2": [
+     -0.43,
+     0.36
+    ],
+    "3": [
+     0.87,
+     1.66
+    ],
+    "4": [
+     2.16,
+     2.95
+    ],
+    "5": [
+     3.46,
+     4.0
+    ],
+    "6": [
+     4.01,
+     5.0
+    ],
+    "7": [
+     3.5,
+     3.99
+    ]
+   }
+  }
+ },
+ "shading": {
+  "material": "MAT_Terrain_City",
+  "edge_top_verts": 14428,
+  "wall_foot_verts": 14600,
+  "edge_width_m": 0.8,
+  "edge_dark": 0.3,
+  "base_width_m": 0.6,
+  "base_dark": 0.45,
+  "ao_distance_m": 1.5,
+  "ao_samples": 32,
+  "ao_bake_objects": "solo TRN_City (piezas ocultas durante el horneado)",
+  "ao_min": 0.33,
+  "ao_p05": 0.815,
+  "ao_median": 1.0,
+  "colors_srgb": {
+   "ground": "#9A8D76",
+   "dirt": "#6F604C",
+   "stone": "#A39A87",
+   "wall": "#B3A994"
+  },
+  "export_color_attribute": "mask_pack (R retaining, G dirt, B stone, A ao_edge)"
+ },
+ "chunks": {
+  "grid": "50 x 50 m centrada en el origen (indices x0..x8 / y0..y8, x4_y4 = Portal)",
+  "count": 69,
+  "budget_city_per_chunk": 35000,
+  "lod0_before": {
+   "avg": 4477,
+   "max": 6262,
+   "min": 1230,
+   "total": 308888,
+   "heaviest": [
+    [
+     "TRN_CityChunk_x2_y2_LOD0",
+     6262
+    ],
+    [
+     "TRN_CityChunk_x2_y6_LOD0",
+     6262
+    ],
+    [
+     "TRN_CityChunk_x6_y2_LOD0",
+     6262
+    ],
+    [
+     "TRN_CityChunk_x6_y6_LOD0",
+     6262
+    ],
+    [
+     "TRN_CityChunk_x2_y3_LOD0",
+     5811
+    ],
+    [
+     "TRN_CityChunk_x2_y5_LOD0",
+     5811
+    ],
+    [
+     "TRN_CityChunk_x3_y2_LOD0",
+     5811
+    ],
+    [
+     "TRN_CityChunk_x3_y6_LOD0",
+     5811
+    ]
+   ],
+   "over_budget": []
+  },
+  "optimized": "ninguno (ningun chunk supera 35.000)",
+  "lod_tris": {
+   "LOD0": {
+    "avg": 4477,
+    "max": 6262,
+    "total": 308888
+   },
+   "LOD1": {
+    "avg": 2238,
+    "max": 3130,
+    "total": 154412
+   },
+   "LOD2": {
+    "avg": 671,
+    "max": 938,
+    "total": 46286
+   }
+  },
+  "lod_ratio_real": {
+   "LOD0": 1.0,
+   "LOD1": 0.5,
+   "LOD2": 0.15
+  },
+  "seams_locked_chunks": "138 / 138 (LOD1+LOD2 conservan todos los vertices del borde)",
+  "per_chunk": {
+   "TRN_CityChunk_x0_y2": {
+    "LOD0": 1230,
+    "LOD1": 614,
+    "LOD2": 184
+   },
+   "TRN_CityChunk_x0_y3": {
+    "LOD0": 2992,
+    "LOD1": 1496,
+    "LOD2": 448
+   },
+   "TRN_CityChunk_x0_y4": {
+    "LOD0": 3760,
+    "LOD1": 1880,
+    "LOD2": 564
+   },
+   "TRN_CityChunk_x0_y5": {
+    "LOD0": 2992,
+    "LOD1": 1496,
+    "LOD2": 448
+   },
+   "TRN_CityChunk_x0_y6": {
+    "LOD0": 1230,
+    "LOD1": 614,
+    "LOD2": 184
+   },
+   "TRN_CityChunk_x1_y1": {
+    "LOD0": 2414,
+    "LOD1": 1206,
+    "LOD2": 362
+   },
+   "TRN_CityChunk_x1_y2": {
+    "LOD0": 5783,
+    "LOD1": 2891,
+    "LOD2": 867
+   },
+   "TRN_CityChunk_x1_y3": {
+    "LOD0": 5514,
+    "LOD1": 2756,
+    "LOD2": 826
+   },
+   "TRN_CityChunk_x1_y4": {
+    "LOD0": 5400,
+    "LOD1": 2700,
+    "LOD2": 810
+   },
+   "TRN_CityChunk_x1_y5": {
+    "LOD0": 5514,
+    "LOD1": 2756,
+    "LOD2": 826
+   },
+   "TRN_CityChunk_x1_y6": {
+    "LOD0": 5783,
+    "LOD1": 2891,
+    "LOD2": 867
+   },
+   "TRN_CityChunk_x1_y7": {
+    "LOD0": 2414,
+    "LOD1": 1206,
+    "LOD2": 362
+   },
+   "TRN_CityChunk_x2_y0": {
+    "LOD0": 1230,
+    "LOD1": 614,
+    "LOD2": 184
+   },
+   "TRN_CityChunk_x2_y1": {
+    "LOD0": 5783,
+    "LOD1": 2891,
+    "LOD2": 867
+   },
+   "TRN_CityChunk_x2_y2": {
+    "LOD0": 6262,
+    "LOD1": 3130,
+    "LOD2": 938
+   },
+   "TRN_CityChunk_x2_y3": {
+    "LOD0": 5811,
+    "LOD1": 2905,
+    "LOD2": 871
+   },
+   "TRN_CityChunk_x2_y4": {
+    "LOD0": 5292,
+    "LOD1": 2646,
+    "LOD2": 792
+   },
+   "TRN_CityChunk_x2_y5": {
+    "LOD0": 5811,
+    "LOD1": 2905,
+    "LOD2": 871
+   },
+   "TRN_CityChunk_x2_y6": {
+    "LOD0": 6262,
+    "LOD1": 3130,
+    "LOD2": 938
+   },
+   "TRN_CityChunk_x2_y7": {
+    "LOD0": 5783,
+    "LOD1": 2891,
+    "LOD2": 867
+   },
+   "TRN_CityChunk_x2_y8": {
+    "LOD0": 1230,
+    "LOD1": 614,
+    "LOD2": 184
+   },
+   "TRN_CityChunk_x3_y0": {
+    "LOD0": 2992,
+    "LOD1": 1496,
+    "LOD2": 448
+   },
+   "TRN_CityChunk_x3_y1": {
+    "LOD0": 5514,
+    "LOD1": 2756,
+    "LOD2": 826
+   },
+   "TRN_CityChunk_x3_y2": {
+    "LOD0": 5811,
+    "LOD1": 2905,
+    "LOD2": 871
+   },
+   "TRN_CityChunk_x3_y3": {
+    "LOD0": 5184,
+    "LOD1": 2592,
+    "LOD2": 776
+   },
+   "TRN_CityChunk_x3_y4": {
+    "LOD0": 5000,
+    "LOD1": 2500,
+    "LOD2": 750
+   },
+   "TRN_CityChunk_x3_y5": {
+    "LOD0": 5184,
+    "LOD1": 2592,
+    "LOD2": 776
+   },
+   "TRN_CityChunk_x3_y6": {
+    "LOD0": 5811,
+    "LOD1": 2905,
+    "LOD2": 871
+   },
+   "TRN_CityChunk_x3_y7": {
+    "LOD0": 5514,
+    "LOD1": 2756,
+    "LOD2": 826
+   },
+   "TRN_CityChunk_x3_y8": {
+    "LOD0": 2992,
+    "LOD1": 1496,
+    "LOD2": 448
+   },
+   "TRN_CityChunk_x4_y0": {
+    "LOD0": 3760,
+    "LOD1": 1880,
+    "LOD2": 564
+   },
+   "TRN_CityChunk_x4_y1": {
+    "LOD0": 5400,
+    "LOD1": 2700,
+    "LOD2": 810
+   },
+   "TRN_CityChunk_x4_y2": {
+    "LOD0": 5292,
+    "LOD1": 2646,
+    "LOD2": 792
+   },
+   "TRN_CityChunk_x4_y3": {
+    "LOD0": 5000,
+    "LOD1": 2500,
+    "LOD2": 750
+   },
+   "TRN_CityChunk_x4_y4": {
+    "LOD0": 5000,
+    "LOD1": 2500,
+    "LOD2": 750
+   },
+   "TRN_CityChunk_x4_y5": {
+    "LOD0": 5000,
+    "LOD1": 2500,
+    "LOD2": 750
+   },
+   "TRN_CityChunk_x4_y6": {
+    "LOD0": 5292,
+    "LOD1": 2646,
+    "LOD2": 792
+   },
+   "TRN_CityChunk_x4_y7": {
+    "LOD0": 5400,
+    "LOD1": 2700,
+    "LOD2": 810
+   },
+   "TRN_CityChunk_x4_y8": {
+    "LOD0": 3760,
+    "LOD1": 1880,
+    "LOD2": 564
+   },
+   "TRN_CityChunk_x5_y0": {
+    "LOD0": 2992,
+    "LOD1": 1496,
+    "LOD2": 448
+   },
+   "TRN_CityChunk_x5_y1": {
+    "LOD0": 5514,
+    "LOD1": 2756,
+    "LOD2": 826
+   },
+   "TRN_CityChunk_x5_y2": {
+    "LOD0": 5811,
+    "LOD1": 2905,
+    "LOD2": 871
+   },
+   "TRN_CityChunk_x5_y3": {
+    "LOD0": 5184,
+    "LOD1": 2592,
+    "LOD2": 776
+   },
+   "TRN_CityChunk_x5_y4": {
+    "LOD0": 5000,
+    "LOD1": 2500,
+    "LOD2": 750
+   },
+   "TRN_CityChunk_x5_y5": {
+    "LOD0": 5184,
+    "LOD1": 2592,
+    "LOD2": 776
+   },
+   "TRN_CityChunk_x5_y6": {
+    "LOD0": 5811,
+    "LOD1": 2905,
+    "LOD2": 871
+   },
+   "TRN_CityChunk_x5_y7": {
+    "LOD0": 5514,
+    "LOD1": 2756,
+    "LOD2": 826
+   },
+   "TRN_CityChunk_x5_y8": {
+    "LOD0": 2992,
+    "LOD1": 1496,
+    "LOD2": 448
+   },
+   "TRN_CityChunk_x6_y0": {
+    "LOD0": 1230,
+    "LOD1": 614,
+    "LOD2": 184
+   },
+   "TRN_CityChunk_x6_y1": {
+    "LOD0": 5783,
+    "LOD1": 2891,
+    "LOD2": 867
+   },
+   "TRN_CityChunk_x6_y2": {
+    "LOD0": 6262,
+    "LOD1": 3130,
+    "LOD2": 938
+   },
+   "TRN_CityChunk_x6_y3": {
+    "LOD0": 5811,
+    "LOD1": 2905,
+    "LOD2": 871
+   },
+   "TRN_CityChunk_x6_y4": {
+    "LOD0": 5292,
+    "LOD1": 2646,
+    "LOD2": 792
+   },
+   "TRN_CityChunk_x6_y5": {
+    "LOD0": 5811,
+    "LOD1": 2905,
+    "LOD2": 871
+   },
+   "TRN_CityChunk_x6_y6": {
+    "LOD0": 6262,
+    "LOD1": 3130,
+    "LOD2": 938
+   },
+   "TRN_CityChunk_x6_y7": {
+    "LOD0": 5783,
+    "LOD1": 2891,
+    "LOD2": 867
+   },
+   "TRN_CityChunk_x6_y8": {
+    "LOD0": 1230,
+    "LOD1": 614,
+    "LOD2": 184
+   },
+   "TRN_CityChunk_x7_y1": {
+    "LOD0": 2414,
+    "LOD1": 1206,
+    "LOD2": 362
+   },
+   "TRN_CityChunk_x7_y2": {
+    "LOD0": 5783,
+    "LOD1": 2891,
+    "LOD2": 867
+   },
+   "TRN_CityChunk_x7_y3": {
+    "LOD0": 5514,
+    "LOD1": 2756,
+    "LOD2": 826
+   },
+   "TRN_CityChunk_x7_y4": {
+    "LOD0": 5400,
+    "LOD1": 2700,
+    "LOD2": 810
+   },
+   "TRN_CityChunk_x7_y5": {
+    "LOD0": 5514,
+    "LOD1": 2756,
+    "LOD2": 826
+   },
+   "TRN_CityChunk_x7_y6": {
+    "LOD0": 5783,
+    "LOD1": 2891,
+    "LOD2": 867
+   },
+   "TRN_CityChunk_x7_y7": {
+    "LOD0": 2414,
+    "LOD1": 1206,
+    "LOD2": 362
+   },
+   "TRN_CityChunk_x8_y2": {
+    "LOD0": 1230,
+    "LOD1": 614,
+    "LOD2": 184
+   },
+   "TRN_CityChunk_x8_y3": {
+    "LOD0": 2992,
+    "LOD1": 1496,
+    "LOD2": 448
+   },
+   "TRN_CityChunk_x8_y4": {
+    "LOD0": 3760,
+    "LOD1": 1880,
+    "LOD2": 564
+   },
+   "TRN_CityChunk_x8_y5": {
+    "LOD0": 2992,
+    "LOD1": 1496,
+    "LOD2": 448
+   },
+   "TRN_CityChunk_x8_y6": {
+    "LOD0": 1230,
+    "LOD1": 614,
+    "LOD2": 184
+   }
+  },
+  "export": {
+   "terrain_glb": "export/godot/concordia_terrain.glb",
+   "terrain_bytes": 15102708,
+   "structures_glb": "export/godot/concordia_terrain_structures.glb",
+   "structures_bytes": 1315284,
+   "verify_terrain": {
+    "objects": 207,
+    "tris": 509586,
+    "meshes_with_color0": 207
+   },
+   "verify_structures": {
+    "objects": 16,
+    "tris": 20432,
+    "meshes_with_color0": 0
+   }
+  }
+ }
 }

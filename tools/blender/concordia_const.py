@@ -106,27 +106,60 @@ PLAZA_DRAIN = 0.005                   # 0.5 % hacia fuera desde el centro
 RING_DESCENT = (60.0, 90.0)           # plaza -> +6.0, comun a todos los sectores
 
 # Sectores cardinales (radios de cambio de perfil)
+# v2 (decision 2a): plano +4.5 en 165..175 y terraplen 175..196 (4.1 grados)
 CARD_SLOPE_END = 165.0                # 90..165 baja 6.0 -> 4.5
-CARD_FLAT_END = 185.0                 # 165..185 plano 4.5
-CARD_EMBANK_END = 196.0               # 185..196 sube 4.5 -> 6.0 (terraplen)
+CARD_FLAT_END = 175.0                 # 165..175 plano 4.5
+CARD_EMBANK_END = 196.0               # 175..196 sube 4.5 -> 6.0 (terraplen)
 WALL_BASE_R = (196.0, 204.0)          # base de la muralla, plano a DATUM
+
+# Eje de cada avenida cardinal (decision 2, excepcion): banda recta centrada en el eje
+AXIS_BAND_WIDTH = 30.0                # ancho de la plazoleta (contiene la avenida de 8-10 m)
+AXIS_DESCENT = (90.0, 150.0)          # en el eje: 6.0 -> 4.5
+AXIS_RAMP = (150.0, 176.0)            # en el eje: 4.5 -> 6.0 (3.3 grados)
+AXIS_PLAZOLETA = (176.0, 196.0)       # plazoleta frente a la puerta, plana a +6.0 (30 x 20 m)
 
 # Sectores diagonales (Moradas + hitos)
 DIAG_LANDMARK_END = 95.0              # 60..95 zona de hitos a +6.0
-DIAG_RAMP_END = 105.0                 # 95..105 rampa 6.0 -> 4.5
+DIAG_RAMP_END = 105.0                 # 95..105 rampa 6.0 -> 4.5 (escalinata en el eje)
 TERRACE_COUNT = 6
 TERRACE_DEPTH = 14.0                  # 105..189
 TERRACE_RISE = 1.0                    # 4.5, 5.5 ... 9.5
 TERRACE_START_R = DIAG_RAMP_END
 TERRACE_END_R = TERRACE_START_R + TERRACE_COUNT * TERRACE_DEPTH   # 189
-TERRACE_FACE_ANGLE = 80.0             # cara del muro de contencion (grados)
+TERRACE_FACE_ANGLE = 80.0             # cara de todos los muros de contencion (grados)
+DIAG_STREET_WIDTH = 6.0               # calle diagonal por el eje de cada Morada
 
-SECTOR_BLEND_WIDTH = 6.0              # mezcla entre sectores (arco, metros)
+# Bordes laterales Moradas / cardinales (decision 1a): sin mezcla, muro de contencion
+SECTOR_BLEND_WIDTH = 0.0              # v1 usaba 6 m; eliminada
+LATERAL_TALL_WALL = 3.0               # tramos > 3 m: contrafuertes + pretil 0.9
+LATERAL_MIN_WALL = 0.5                # por debajo no hay muro (solo bordillo)
+BUTTRESS_SPACING = 8.0
+PARAPET_TALL_H = 0.9                  # pretil en tramos > 3 m
+PARAPET_LOW_H = 0.6                   # pretil bajo en bordes superiores de terraza (decision 3)
+PARAPET_THICK = 0.4
+LATERAL_STAIR_WIDTH = 2.5
+LATERAL_STAIR_SPACING = 25.0
+
+# Escalinata diagonal r 95..105 (decision 4, ref. Mala Strana)
+ESC_WIDTH = 6.0
+ESC_RISERS = 10
+ESC_RISER = 0.15
+ESC_TREAD = 1.0
+ESC_LANDING = 2.0                     # descanso en el medio (tras 5 contrahuellas)
+ESC_BALUSTRADE_H = 0.9
+ESC_BALUSTRADE_THICK = 0.45
+
 TALUD_R = (204.0, TERRAIN_RADIUS)     # 204..212 baja 6.0 -> 0
 
 TERRAIN_NOISE_PP = 0.05               # 5 cm de irregularidad (pico a pico)
 WALK_SLOPE_MAX = 5.0                  # grados, calles y plazas
 STAIR_SLOPE = 8.0                     # grados, a partir de aqui escalinata
+
+# Presupuesto del terreno por chunk (aclaracion del pedido)
+CHUNK_SIZE = 50.0
+CHUNK_TRI_BUDGET_CITY = 35000
+CHUNK_TRI_BUDGET_EXTERIOR = 8000
+ISO_CHECK_ORTHO = 45.0                # escala aproximada de juego para verificar legibilidad
 
 # ---------------------------------------------------------------------------
 # Paleta
@@ -180,7 +213,7 @@ COLLECTIONS = (
 # ---------------------------------------------------------------------------
 # Presupuestos de triangulos por defecto (si el pedido no fija otros)
 # ---------------------------------------------------------------------------
-TRI_BUDGET = {"small": 1500, "medium": 5000, "large": 12000}
+TRI_BUDGET = {"small": 1500, "medium": 5000, "large": 12000}   # props y edificios
 LOD_RATIOS = {"LOD1": 0.50, "LOD2": 0.15}
 
 
