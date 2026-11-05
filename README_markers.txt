@@ -26,8 +26,23 @@ Aplicacion por familia
                                    Propiedad door_direction = "+Y".
 - MARKER_Faro / _Santuario / _SalonHazanas / _Obelisco ... centro del basamento; +Y hacia la
                                    plaza (fachada principal). Propiedad door_direction = "+Y".
-- MARKER_Bld_* (edificios futuros) ... misma regla: +Y = fachada de la puerta principal y
-                                   door_direction = "+Y". (Aun no existen en la v04.)
+- MARKER_Bld_* (v05, MARKERS_DISTRICTS/MARKERS_<Distrito>) ... origen = CENTRO de la huella a la
+                                   cota de su plataforma (pad_z); +Y = fachada de la puerta principal (mira a
+                                   la calle o plaza de 'front_street'). Propiedades:
+                                     footprint "AxF" (A = ancho de fachada, eje X local; F = fondo, eje Y local),
+                                     footprint_w, footprint_d (m), door_direction = "+Y", interior (bool:
+                                     true = edificio con servicio y interior jugable; false = decoracion),
+                                     type, label, district, pad_z, front_street, shape (rect | circle) y, segun
+                                     el caso, service, barrio, race_slot, class_slot, open_foundry, ...
+                                   Los puestos de la Plaza de Provisiones (MARKER_Bld_PuestoProvisiones_NN,
+                                   3x3) llevan interior = false y has_service = true (se atienden desde fuera).
+- MARKER_Prop_* .................. atrezo con funcion: FuenteMercado, Plazuela_NN (type fountain | tree),
+                                   TablonGrupos (entrada de la Posada, interactive = true). +Y = frente.
+- MARKER_Awning_NN ............... toldo de la fachada de cada parcela del Mercado a calle de 10 m;
+                                   en la puerta, +Y hacia la calle; width_m = ancho de fachada.
+- MARKER_TrainingZone_01..06 ..... zonas de maniquies de la Plaza de las Armas (footprint, dummies = 4).
+- MARKER_ArcheryRange_Targets .... dianas del campo de tiro del Gremio de Cazadores (+Y hacia el gremio).
+- MARKER_CauceReserve_Outlet ..... fin del corredor reservado para el Cauce (desague del bastion k=46).
 - MARKER_Portal_Center ........... centro del pedestal (+8.9); +Y = Norte (avenida Mercado).
 - MARKER_Runestone_01..07, MARKER_Descent_Pedestal_01..21 ... su frente mira al Portal:
                                    +Y hacia el centro de la plaza.

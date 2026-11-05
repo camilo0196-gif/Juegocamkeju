@@ -1,0 +1,1582 @@
+{
+ "timings_s": {
+  "obstacles": 1.4,
+  "streets": 82.0,
+  "shading": 25.6,
+  "chunks": 58.5
+ },
+ "obstacles": {
+  "cell_m": 0.5,
+  "extent_m": 212.0,
+  "n": 848,
+  "struct_cells": 63658,
+  "steep_cells": 39464,
+  "struct_polys": 137360,
+  "steep_polys": 28918
+ },
+ "layout_report": {
+  "unplaced": [],
+  "door_dz": [],
+  "clases_placed": 8,
+  "razas_barrios": [
+   {
+    "barrio": 1,
+    "slot": "B",
+    "side": 1,
+    "houses": 5,
+    "target": 8,
+    "placed": true,
+    "casa_raza": "MARKER_Bld_CasaRaza_01",
+    "plazuela_feature": "fountain",
+    "alleys": 0,
+    "houses_topup": 0,
+    "houses_in_block": 5
+   },
+   {
+    "barrio": 2,
+    "slot": "B",
+    "side": -1,
+    "houses": 5,
+    "target": 8,
+    "placed": true,
+    "casa_raza": "MARKER_Bld_CasaRaza_02",
+    "plazuela_feature": "fountain",
+    "alleys": 0,
+    "houses_topup": 0,
+    "houses_in_block": 5
+   },
+   {
+    "barrio": 3,
+    "slot": "C",
+    "side": 1,
+    "houses": 6,
+    "target": 6,
+    "placed": true,
+    "casa_raza": "MARKER_Bld_CasaRaza_03",
+    "plazuela_feature": "tree",
+    "alleys": 0,
+    "houses_in_block": 6
+   },
+   {
+    "barrio": 4,
+    "slot": "C",
+    "side": -1,
+    "houses": 5,
+    "target": 6,
+    "placed": true,
+    "casa_raza": "MARKER_Bld_CasaRaza_04",
+    "plazuela_feature": "tree",
+    "alleys": 0,
+    "houses_topup": 0,
+    "houses_in_block": 5
+   },
+   {
+    "barrio": 5,
+    "slot": "A",
+    "side": 1,
+    "houses": 0,
+    "target": 8,
+    "placed": true,
+    "casa_raza": "MARKER_Bld_CasaRaza_05",
+    "plazuela_feature": "fountain",
+    "alleys": 0,
+    "houses_topup": 0,
+    "houses_in_block": 0
+   },
+   {
+    "barrio": 6,
+    "slot": "A",
+    "side": -1,
+    "houses": 1,
+    "target": 6,
+    "placed": true,
+    "casa_raza": "MARKER_Bld_CasaRaza_06",
+    "plazuela_feature": "tree",
+    "alleys": 0,
+    "houses_topup": 0,
+    "houses_in_block": 1
+   }
+  ],
+  "alleys": {
+   "Mercado": {
+    "count": 14,
+    "blind": 2
+   },
+   "Oficios": {
+    "count": 13,
+    "blind": 1
+   },
+   "Clases": {
+    "count": 14,
+    "blind": 1
+   },
+   "Razas": {
+    "count": 7,
+    "blind": 3
+   }
+  },
+  "alleys_total": {
+   "count": 48,
+   "blind": 7,
+   "width_m": [
+    4.0,
+    4.96
+   ]
+  },
+  "stair_links": {
+   "count": 32,
+   "connected": 35
+  },
+  "decor_houses_frontage": {
+   "Mercado": 13,
+   "Oficios": 3,
+   "Clases": 12,
+   "Razas": 0
+  },
+  "awnings": 5,
+  "parcels_by_district": {
+   "Mercado": {
+    "total": 32,
+    "interior": 5,
+    "decor": 27
+   },
+   "Oficios": {
+    "total": 16,
+    "interior": 13,
+    "decor": 3
+   },
+   "Clases": {
+    "total": 21,
+    "interior": 9,
+    "decor": 12
+   },
+   "Razas": {
+    "total": 28,
+    "interior": 6,
+    "decor": 22
+   }
+  },
+  "door_dz_max": 0.317,
+  "no_front": []
+ },
+ "streets_terrain": {
+  "knife_lines": {
+   "road": 426,
+   "plaza": 45,
+   "plaza_s": 8,
+   "parcel": 83,
+   "parcel_s": 193,
+   "zone": 11,
+   "zone_s": 2,
+   "patch": 8,
+   "rut_c": 8,
+   "rut": 16
+  },
+  "lines_total": 800,
+  "verts_moved": 50806,
+  "tris_after": 392454,
+  "rut_center_verts": 991
+ },
+ "vertex_data_rewritten": {
+  "retaining_faces": 13021,
+  "vgroup_counts": {
+   "plaza": 18256,
+   "landmarks": 8816,
+   "sector_mercado": 23128,
+   "sector_oficios": 26491,
+   "sector_clases": 24388,
+   "sector_razas": 24446,
+   "sector_moradas": 49857,
+   "terraza_id": 42605,
+   "talud": 10476,
+   "base_muralla": 11214
+  }
+ },
+ "street_masks": {
+  "road_mask": "1 en calles, callejones y plazas empedradas (por cara)",
+  "wear_mask": "0..1 desgaste (centro de calle, tipo de via)",
+  "cobble_type": "valor = tipo / 8: 0 terreno, 1 adoquin, 2 parche, 3 tierra apisonada, 4 losas, 5 plataforma de parcela",
+  "uv3_UVRoads": "x = road_mask; y = cobble_type + 0.99 * wear_mask",
+  "faces_by_cobble_type": {
+   "none": 283457,
+   "cobble": 63064,
+   "patch": 260,
+   "tamped_earth": 4668,
+   "flagstone": 6227,
+   "pad": 34778
+  }
+ },
+ "streets_qa": {
+  "walk_surface_slope_by_district": {
+   "Razas": {
+    "faces": 13381,
+    "max_deg": 13.1,
+    "gt5": 21
+   },
+   "Clases": {
+    "faces": 16410,
+    "max_deg": 16.88,
+    "gt5": 20
+   },
+   "Oficios": {
+    "faces": 15066,
+    "max_deg": 11.56,
+    "gt5": 6
+   },
+   "Diagonal": {
+    "faces": 1773,
+    "max_deg": 4.11,
+    "gt5": 0
+   },
+   "Mercado": {
+    "faces": 15767,
+    "max_deg": 11.56,
+    "gt5": 1
+   }
+  },
+  "walk_faces_gt5_sample": [
+   [
+    "STR_CLA_CallejonRonda_L",
+    16.88,
+    -170.7,
+    -69.2,
+    0.053
+   ],
+   [
+    "STR_RAZ_Ring100",
+    13.1,
+    -29.0,
+    -93.9,
+    0.006
+   ],
+   [
+    "PLZ_RAZ_AxisFrontage",
+    11.56,
+    14.9,
+    -154.3,
+    0.09
+   ],
+   [
+    "PLZ_RAZ_AxisFrontage",
+    11.56,
+    -14.9,
+    -154.3,
+    0.09
+   ],
+   [
+    "PLZ_OFI_AxisFrontage",
+    11.56,
+    154.3,
+    -14.9,
+    0.09
+   ],
+   [
+    "PLZ_CLA_AxisFrontage",
+    11.56,
+    -154.3,
+    14.9,
+    0.09
+   ],
+   [
+    "PLZ_OFI_AxisFrontage",
+    11.56,
+    154.3,
+    14.9,
+    0.09
+   ],
+   [
+    "PLZ_MER_AxisFrontage",
+    11.56,
+    14.9,
+    154.3,
+    0.09
+   ],
+   [
+    "STR_RAZ_Ring100",
+    11.56,
+    -29.0,
+    -94.3,
+    0.02
+   ],
+   [
+    "PLZ_RAZ_AxisFrontage",
+    11.48,
+    -14.9,
+    -153.7,
+    0.09
+   ],
+   [
+    "PLZ_OFI_AxisFrontage",
+    11.48,
+    153.7,
+    -14.9,
+    0.09
+   ],
+   [
+    "PLZ_RAZ_AxisFrontage",
+    11.48,
+    14.9,
+    -153.7,
+    0.09
+   ],
+   [
+    "PLZ_OFI_AxisFrontage",
+    11.48,
+    153.7,
+    14.9,
+    0.09
+   ],
+   [
+    "PLZ_OFI_AxisFrontage",
+    10.79,
+    102.3,
+    14.9,
+    0.09
+   ],
+   [
+    "STR_CLA_CallejonRonda_L",
+    9.95,
+    -170.8,
+    -69.3,
+    0.074
+   ],
+   [
+    "STR_CLA_CallejonRonda_L",
+    9.57,
+    -170.8,
+    -69.6,
+    0.181
+   ],
+   [
+    "STR_RAZ_Ring150",
+    8.89,
+    -30.2,
+    -147.2,
+    0.031
+   ],
+   [
+    "STR_RAZ_Ring150",
+    8.81,
+    -31.8,
+    -145.8,
+    0.03
+   ],
+   [
+    "STR_RAZ_Ring150",
+    8.55,
+    21.7,
+    -147.3,
+    0.051
+   ],
+   [
+    "STR_RAZ_Ring150",
+    7.99,
+    -30.1,
+    -147.0,
+    0.005
+   ],
+   [
+    "STR_RAZ_Ring150",
+    7.98,
+    -30.0,
+    -146.6,
+    0.053
+   ],
+   [
+    "STR_CLA_CallejonEscalera_17",
+    7.48,
+    -122.7,
+    -52.0,
+    0.029
+   ],
+   [
+    "STR_CLA_Callejon_02",
+    7.37,
+    -177.8,
+    20.7,
+    0.13
+   ],
+   [
+    "STR_CLA_Ring150",
+    7.08,
+    -148.7,
+    -7.0,
+    0.037
+   ],
+   [
+    "STR_RAZ_Ring150",
+    7.07,
+    -31.9,
+    -146.0,
+    0.007
+   ]
+  ],
+  "walk_faces_gt5_count": 48,
+  "marked_edge_steps_by_district": {
+   "Razas": {
+    "faces": 802,
+    "max_step_m": 1.047,
+    "steps_gt_0_15": 44
+   },
+   "Clases": {
+    "faces": 1445,
+    "max_step_m": 3.307,
+    "steps_gt_0_15": 97
+   },
+   "Oficios": {
+    "faces": 1095,
+    "max_step_m": 2.429,
+    "steps_gt_0_15": 95
+   },
+   "Diagonal": {
+    "faces": 190,
+    "max_step_m": 0.315,
+    "steps_gt_0_15": 104
+   },
+   "Mercado": {
+    "faces": 1225,
+    "max_step_m": 2.461,
+    "steps_gt_0_15": 46
+   }
+  },
+  "edge_steps_gt_0_3_sample": [
+   [
+    3.31,
+    "STR_CLA_CallejonEscalera_19",
+    -161.0,
+    -74.4,
+    [
+     "STR_CLA_CallejonEscalera_19",
+     "terreno"
+    ]
+   ],
+   [
+    3.21,
+    "STR_CLA_CallejonEscalera_19",
+    -160.7,
+    -74.3,
+    [
+     "STR_CLA_CallejonEscalera_19",
+     "terreno"
+    ]
+   ],
+   [
+    3.2,
+    "STR_CLA_CallejonEscalera_19",
+    -160.8,
+    -74.3,
+    [
+     "STR_CLA_CallejonEscalera_19",
+     "terreno"
+    ]
+   ],
+   [
+    3.16,
+    "STR_CLA_CallejonEscalera_19",
+    -162.1,
+    -75.2,
+    [
+     "STR_CLA_CallejonEscalera_19",
+     "terreno"
+    ]
+   ],
+   [
+    2.46,
+    "STR_MER_CallejonEscalera_08",
+    74.4,
+    161.0,
+    [
+     "STR_MER_CallejonEscalera_08",
+     "terreno"
+    ]
+   ],
+   [
+    2.46,
+    "STR_MER_CallejonEscalera_08",
+    74.4,
+    160.9,
+    [
+     "STR_MER_CallejonEscalera_08",
+     "terreno"
+    ]
+   ],
+   [
+    2.43,
+    "STR_OFI_CallejonEscalera_27",
+    160.9,
+    -74.4,
+    [
+     "STR_OFI_CallejonEscalera_27",
+     "terreno"
+    ]
+   ],
+   [
+    2.42,
+    "STR_OFI_CallejonEscalera_27",
+    161.0,
+    -74.4,
+    [
+     "STR_OFI_CallejonEscalera_27",
+     "terreno"
+    ]
+   ],
+   [
+    2.3,
+    "STR_CLA_CallejonEscalera_15",
+    -161.0,
+    74.5,
+    [
+     "STR_CLA_CallejonEscalera_15",
+     "terreno"
+    ]
+   ],
+   [
+    2.2,
+    "STR_CLA_CallejonEscalera_15",
+    -161.0,
+    74.4,
+    [
+     "STR_CLA_CallejonEscalera_15",
+     "terreno"
+    ]
+   ],
+   [
+    2.2,
+    "STR_CLA_CallejonEscalera_15",
+    -160.9,
+    74.4,
+    [
+     "STR_CLA_CallejonEscalera_15",
+     "terreno"
+    ]
+   ],
+   [
+    2.18,
+    "STR_CLA_CallejonEscalera_15",
+    -162.2,
+    75.0,
+    [
+     "STR_CLA_CallejonEscalera_15",
+     "terreno"
+    ]
+   ],
+   [
+    1.89,
+    "STR_CLA_CallejonEscalera_19",
+    -162.3,
+    -74.9,
+    [
+     "STR_CLA_CallejonEscalera_19",
+     "terreno"
+    ]
+   ],
+   [
+    1.89,
+    "STR_CLA_CallejonEscalera_19",
+    -162.4,
+    -75.1,
+    [
+     "STR_CLA_CallejonEscalera_19",
+     "terreno"
+    ]
+   ],
+   [
+    1.87,
+    "STR_CLA_CallejonEscalera_15",
+    -162.3,
+    74.9,
+    [
+     "STR_CLA_CallejonEscalera_15",
+     "terreno"
+    ]
+   ],
+   [
+    1.87,
+    "STR_CLA_CallejonEscalera_15",
+    -162.5,
+    75.0,
+    [
+     "STR_CLA_CallejonEscalera_15",
+     "terreno"
+    ]
+   ],
+   [
+    1.3,
+    "STR_OFI_CallejonEscalera_03",
+    140.0,
+    65.0,
+    [
+     "STR_OFI_CallejonEscalera_03",
+     "terreno"
+    ]
+   ],
+   [
+    1.29,
+    "STR_OFI_CallejonEscalera_03",
+    139.9,
+    64.9,
+    [
+     "STR_OFI_CallejonEscalera_03",
+     "terreno"
+    ]
+   ],
+   [
+    1.28,
+    "STR_OFI_CallejonEscalera_03",
+    140.1,
+    65.0,
+    [
+     "STR_OFI_CallejonEscalera_03",
+     "terreno"
+    ]
+   ],
+   [
+    1.22,
+    "STR_MER_CallejonEscalera_12",
+    -74.4,
+    161.2,
+    [
+     "STR_MER_CallejonEscalera_12",
+     "terreno"
+    ]
+   ],
+   [
+    1.21,
+    "STR_CLA_CallejonEscalera_19",
+    -161.2,
+    -74.4,
+    [
+     "STR_CLA_CallejonEscalera_19",
+     "terreno"
+    ]
+   ],
+   [
+    1.19,
+    "STR_CLA_CallejonEscalera_15",
+    -161.2,
+    74.4,
+    [
+     "STR_CLA_CallejonEscalera_15",
+     "terreno"
+    ]
+   ],
+   [
+    1.19,
+    "STR_OFI_CallejonEscalera_27",
+    161.2,
+    -74.4,
+    [
+     "STR_OFI_CallejonEscalera_27",
+     "terreno"
+    ]
+   ],
+   [
+    1.14,
+    "STR_MER_CallejonEscalera_12",
+    -74.4,
+    161.2,
+    [
+     "STR_MER_CallejonEscalera_12",
+     "terreno"
+    ]
+   ],
+   [
+    1.13,
+    "STR_MER_CallejonEscalera_08",
+    74.4,
+    161.2,
+    [
+     "STR_MER_CallejonEscalera_08",
+     "terreno"
+    ]
+   ],
+   [
+    1.05,
+    "MARKER_Bld_CasaRaza_05",
+    7.4,
+    -69.4,
+    [
+     "MARKER_Bld_CasaRaza_05",
+     "terreno"
+    ]
+   ],
+   [
+    1.04,
+    "MARKER_Bld_CasaRaza_06",
+    -7.8,
+    -68.5,
+    [
+     "MARKER_Bld_CasaRaza_06",
+     "terreno"
+    ]
+   ],
+   [
+    0.98,
+    "MARKER_Bld_CasaRaza_05",
+    7.3,
+    -69.7,
+    [
+     "MARKER_Bld_CasaRaza_05",
+     "terreno"
+    ]
+   ],
+   [
+    0.94,
+    "STR_CLA_CallejonEscalera_15",
+    -162.2,
+    74.7,
+    [
+     "STR_CLA_CallejonEscalera_15",
+     "terreno"
+    ]
+   ],
+   [
+    0.94,
+    "STR_CLA_CallejonEscalera_19",
+    -162.2,
+    -74.7,
+    [
+     "STR_CLA_CallejonEscalera_19",
+     "terreno"
+    ]
+   ]
+  ],
+  "edge_steps_gt_0_3_count": 120,
+  "rut_faces_excluded": 3943,
+  "existing_retaining_faces_excluded": 491,
+  "road_profile_slope_max_deg": 4.5,
+  "road_profiles": {
+   "STR_OFI_Avenue": {
+    "slope_max_deg": 3.88,
+    "pinned_samples": 123
+   },
+   "STR_MER_Avenue": {
+    "slope_max_deg": 3.88,
+    "pinned_samples": 120
+   },
+   "STR_CLA_Avenue": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 113
+   },
+   "STR_RAZ_Avenue": {
+    "slope_max_deg": 3.94,
+    "pinned_samples": 123
+   },
+   "STR_OFI_GateApproach": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 50
+   },
+   "STR_MER_GateApproach": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 50
+   },
+   "STR_CLA_GateApproach": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 50
+   },
+   "STR_RAZ_GateApproach": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 50
+   },
+   "STR_OFI_Ring100": {
+    "slope_max_deg": 0.27,
+    "pinned_samples": 0
+   },
+   "STR_OFI_Ring150": {
+    "slope_max_deg": 1.78,
+    "pinned_samples": 0
+   },
+   "STR_MER_Ring100": {
+    "slope_max_deg": 0.35,
+    "pinned_samples": 26
+   },
+   "STR_MER_Ring150": {
+    "slope_max_deg": 1.94,
+    "pinned_samples": 0
+   },
+   "STR_CLA_Ring100": {
+    "slope_max_deg": 0.29,
+    "pinned_samples": 0
+   },
+   "STR_CLA_Ring150": {
+    "slope_max_deg": 1.88,
+    "pinned_samples": 0
+   },
+   "STR_RAZ_Ring100": {
+    "slope_max_deg": 0.61,
+    "pinned_samples": 0
+   },
+   "STR_RAZ_Ring150": {
+    "slope_max_deg": 1.88,
+    "pinned_samples": 0
+   },
+   "STR_DIAG_045_Faro_In": {
+    "slope_max_deg": 0.0,
+    "pinned_samples": 0
+   },
+   "STR_DIAG_045_Faro_Out": {
+    "slope_max_deg": 2.5,
+    "pinned_samples": 0
+   },
+   "STR_DIAG_135_Santuario_In": {
+    "slope_max_deg": 0.0,
+    "pinned_samples": 0
+   },
+   "STR_DIAG_135_Santuario_Out": {
+    "slope_max_deg": 3.29,
+    "pinned_samples": 0
+   },
+   "STR_DIAG_225_Obelisco_In": {
+    "slope_max_deg": 0.0,
+    "pinned_samples": 0
+   },
+   "STR_DIAG_225_Obelisco_Out": {
+    "slope_max_deg": 3.74,
+    "pinned_samples": 0
+   },
+   "STR_DIAG_315_SalonHazanas_In": {
+    "slope_max_deg": 0.0,
+    "pinned_samples": 0
+   },
+   "STR_DIAG_315_SalonHazanas_Out": {
+    "slope_max_deg": 2.15,
+    "pinned_samples": 0
+   },
+   "STR_OFI_CallejonRonda_L": {
+    "slope_max_deg": 4.04,
+    "pinned_samples": 0
+   },
+   "STR_OFI_CallejonRonda_R": {
+    "slope_max_deg": 3.61,
+    "pinned_samples": 0
+   },
+   "STR_MER_CallejonRonda_L": {
+    "slope_max_deg": 3.8,
+    "pinned_samples": 0
+   },
+   "STR_MER_CallejonRonda_R": {
+    "slope_max_deg": 3.82,
+    "pinned_samples": 0
+   },
+   "STR_CLA_CallejonRonda_L": {
+    "slope_max_deg": 3.46,
+    "pinned_samples": 0
+   },
+   "STR_CLA_CallejonRonda_R": {
+    "slope_max_deg": 3.56,
+    "pinned_samples": 0
+   },
+   "STR_RAZ_CallejonRonda_L": {
+    "slope_max_deg": 3.57,
+    "pinned_samples": 0
+   },
+   "STR_RAZ_CallejonRonda_R": {
+    "slope_max_deg": 4.13,
+    "pinned_samples": 0
+   },
+   "STR_OFI_CallejonEscalera_01": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 5
+   },
+   "STR_OFI_CallejonEscalera_02": {
+    "slope_max_deg": 0.48,
+    "pinned_samples": 0
+   },
+   "STR_OFI_CallejonEscalera_03": {
+    "slope_max_deg": 4.38,
+    "pinned_samples": 3
+   },
+   "STR_OFI_CallejonEscalera_04": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 3
+   },
+   "STR_MER_CallejonEscalera_05": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 3
+   },
+   "STR_MER_CallejonEscalera_06": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 2
+   },
+   "STR_MER_CallejonEscalera_07": {
+    "slope_max_deg": 0.89,
+    "pinned_samples": 9
+   },
+   "STR_MER_CallejonEscalera_08": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 4
+   },
+   "STR_MER_CallejonEscalera_09": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 3
+   },
+   "STR_MER_CallejonEscalera_10": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 2
+   },
+   "STR_MER_CallejonEscalera_11": {
+    "slope_max_deg": 1.5,
+    "pinned_samples": 6
+   },
+   "STR_MER_CallejonEscalera_12": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 2
+   },
+   "STR_CLA_CallejonEscalera_13": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 2
+   },
+   "STR_CLA_CallejonEscalera_14": {
+    "slope_max_deg": 1.92,
+    "pinned_samples": 7
+   },
+   "STR_CLA_CallejonEscalera_15": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 3
+   },
+   "STR_CLA_CallejonEscalera_16": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 4
+   },
+   "STR_CLA_CallejonEscalera_17": {
+    "slope_max_deg": 1.05,
+    "pinned_samples": 0
+   },
+   "STR_CLA_CallejonEscalera_18": {
+    "slope_max_deg": 2.0,
+    "pinned_samples": 7
+   },
+   "STR_CLA_CallejonEscalera_19": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 4
+   },
+   "STR_RAZ_CallejonEscalera_20": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 4
+   },
+   "STR_RAZ_CallejonEscalera_21": {
+    "slope_max_deg": 1.13,
+    "pinned_samples": 0
+   },
+   "STR_RAZ_CallejonEscalera_22": {
+    "slope_max_deg": 2.02,
+    "pinned_samples": 7
+   },
+   "STR_RAZ_CallejonEscalera_23": {
+    "slope_max_deg": 1.67,
+    "pinned_samples": 4
+   },
+   "STR_OFI_CallejonEscalera_24": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 4
+   },
+   "STR_OFI_CallejonEscalera_25": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 3
+   },
+   "STR_OFI_CallejonEscalera_26": {
+    "slope_max_deg": 4.25,
+    "pinned_samples": 2
+   },
+   "STR_OFI_CallejonEscalera_27": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 4
+   },
+   "STR_MER_Callejon_01": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 2
+   },
+   "STR_MER_Callejon_02": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 6
+   },
+   "STR_MER_Callejon_03": {
+    "slope_max_deg": 0.35,
+    "pinned_samples": 0
+   },
+   "STR_MER_Callejon_04": {
+    "slope_max_deg": 0.31,
+    "pinned_samples": 0
+   },
+   "STR_OFI_Callejon_01": {
+    "slope_max_deg": 0.23,
+    "pinned_samples": 0
+   },
+   "STR_OFI_Callejon_02": {
+    "slope_max_deg": 0.36,
+    "pinned_samples": 0
+   },
+   "STR_OFI_Callejon_03": {
+    "slope_max_deg": 3.9,
+    "pinned_samples": 3
+   },
+   "STR_CLA_Callejon_01": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 2
+   },
+   "STR_CLA_Callejon_02": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 6
+   },
+   "STR_CLA_Callejon_03": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 5
+   },
+   "STR_CLA_Callejon_04": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 2
+   },
+   "STR_CLA_Callejon_05": {
+    "slope_max_deg": 3.68,
+    "pinned_samples": 7
+   },
+   "STR_RAZ_Callejon_01": {
+    "slope_max_deg": 4.5,
+    "pinned_samples": 2
+   }
+  },
+  "parcel_pad_face_slope_max_deg": 0.0,
+  "parcel_plinth_max_m": [
+   [
+    "MARKER_Bld_CasaRaza_06",
+    1.146
+   ],
+   [
+    "MARKER_Bld_CasaRaza_05",
+    1.112
+   ],
+   [
+    "MARKER_Bld_RAZ_B03_Casa_04",
+    0.867
+   ],
+   [
+    "MARKER_Bld_RAZ_B03_Casa_05",
+    0.847
+   ],
+   [
+    "MARKER_Bld_CLA_Casa_05",
+    0.846
+   ],
+   [
+    "MARKER_Bld_CLA_Casa_08",
+    0.842
+   ],
+   [
+    "MARKER_Bld_CLA_Casa_06",
+    0.83
+   ],
+   [
+    "MARKER_Bld_CLA_Casa_09",
+    0.819
+   ],
+   [
+    "MARKER_Bld_CLA_Casa_10",
+    0.814
+   ],
+   [
+    "MARKER_Bld_CLA_Casa_07",
+    0.813
+   ],
+   [
+    "MARKER_Bld_MER_Casa_03",
+    0.808
+   ],
+   [
+    "MARKER_Bld_MER_Casa_05",
+    0.808
+   ]
+  ],
+  "parcel_plinth_over_0_5m": 29,
+  "note": "caras interiores = sus 3 vertices en el mismo elemento; caras mixtas = borde marcado (escalon)"
+ },
+ "district_markers": {
+  "MARKER_Bld": 97,
+  "aux": 21,
+  "convention": "+Y local = fachada de la puerta (Godot -Z); origen = centro de la huella a la cota de la plataforma"
+ },
+ "street_mask_texture": {
+  "path": "textures/streets/T_StreetMasks.png",
+  "px": 1696,
+  "m_per_px": 0.25,
+  "mapping": "u = (x + 212) / 424, v = (212 - y) / 424 (x = Este, y = Norte en Blender)"
+ },
+ "shading": {
+  "material": "MAT_Terrain_City",
+  "edge_top_verts": 15853,
+  "wall_foot_verts": 15863,
+  "edge_width_m": 0.8,
+  "edge_dark": 0.3,
+  "base_width_m": 0.6,
+  "base_dark": 0.45,
+  "ao_distance_m": 1.5,
+  "ao_samples": 32,
+  "ao_bake_objects": "solo TRN_City (piezas ocultas durante el horneado)",
+  "ao_min": 0.0,
+  "ao_p05": 0.755,
+  "ao_median": 1.0,
+  "colors_srgb": {
+   "ground": "#9A8D76",
+   "dirt": "#6F604C",
+   "stone": "#A39A87",
+   "wall": "#B3A994"
+  },
+  "export_color_attribute": "mask_pack (R retaining, G dirt, B stone, A ao_edge)"
+ },
+ "chunks": {
+  "grid": "50 x 50 m centrada en el origen (indices x0..x8 / y0..y8, x4_y4 = Portal)",
+  "count": 69,
+  "budget_city_per_chunk": 35000,
+  "lod0_before": {
+   "avg": 5704,
+   "max": 9458,
+   "min": 1210,
+   "total": 393546,
+   "heaviest": [
+    [
+     "TRN_CityChunk_x7_y5_LOD0",
+     9458
+    ],
+    [
+     "TRN_CityChunk_x7_y3_LOD0",
+     9290
+    ],
+    [
+     "TRN_CityChunk_x1_y3_LOD0",
+     9019
+    ],
+    [
+     "TRN_CityChunk_x5_y1_LOD0",
+     9007
+    ],
+    [
+     "TRN_CityChunk_x5_y5_LOD0",
+     8942
+    ],
+    [
+     "TRN_CityChunk_x3_y1_LOD0",
+     8921
+    ],
+    [
+     "TRN_CityChunk_x4_y4_LOD0",
+     8856
+    ],
+    [
+     "TRN_CityChunk_x1_y5_LOD0",
+     8842
+    ]
+   ],
+   "over_budget": []
+  },
+  "optimized": "ninguno (ningun chunk supera 35.000)",
+  "lod_tris": {
+   "LOD0": {
+    "avg": 5704,
+    "max": 9458,
+    "total": 393546
+   },
+   "LOD1": {
+    "avg": 2851,
+    "max": 4728,
+    "total": 196714
+   },
+   "LOD2": {
+    "avg": 855,
+    "max": 1418,
+    "total": 58964
+   }
+  },
+  "lod_ratio_real": {
+   "LOD0": 1.0,
+   "LOD1": 0.5,
+   "LOD2": 0.15
+  },
+  "seams_locked_chunks": "138 / 138 (LOD1+LOD2 conservan todos los vertices del borde)",
+  "per_chunk": {
+   "TRN_CityChunk_x0_y2": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   },
+   "TRN_CityChunk_x0_y3": {
+    "LOD0": 3797,
+    "LOD1": 1897,
+    "LOD2": 569
+   },
+   "TRN_CityChunk_x0_y4": {
+    "LOD0": 4601,
+    "LOD1": 2299,
+    "LOD2": 689
+   },
+   "TRN_CityChunk_x0_y5": {
+    "LOD0": 3839,
+    "LOD1": 1919,
+    "LOD2": 575
+   },
+   "TRN_CityChunk_x0_y6": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   },
+   "TRN_CityChunk_x1_y1": {
+    "LOD0": 2398,
+    "LOD1": 1198,
+    "LOD2": 358
+   },
+   "TRN_CityChunk_x1_y2": {
+    "LOD0": 5828,
+    "LOD1": 2914,
+    "LOD2": 874
+   },
+   "TRN_CityChunk_x1_y3": {
+    "LOD0": 9019,
+    "LOD1": 4509,
+    "LOD2": 1351
+   },
+   "TRN_CityChunk_x1_y4": {
+    "LOD0": 7312,
+    "LOD1": 3656,
+    "LOD2": 1096
+   },
+   "TRN_CityChunk_x1_y5": {
+    "LOD0": 8842,
+    "LOD1": 4420,
+    "LOD2": 1326
+   },
+   "TRN_CityChunk_x1_y6": {
+    "LOD0": 5819,
+    "LOD1": 2909,
+    "LOD2": 871
+   },
+   "TRN_CityChunk_x1_y7": {
+    "LOD0": 2398,
+    "LOD1": 1198,
+    "LOD2": 358
+   },
+   "TRN_CityChunk_x2_y0": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   },
+   "TRN_CityChunk_x2_y1": {
+    "LOD0": 5809,
+    "LOD1": 2903,
+    "LOD2": 871
+   },
+   "TRN_CityChunk_x2_y2": {
+    "LOD0": 6262,
+    "LOD1": 3130,
+    "LOD2": 938
+   },
+   "TRN_CityChunk_x2_y3": {
+    "LOD0": 7586,
+    "LOD1": 3792,
+    "LOD2": 1136
+   },
+   "TRN_CityChunk_x2_y4": {
+    "LOD0": 6997,
+    "LOD1": 3497,
+    "LOD2": 1049
+   },
+   "TRN_CityChunk_x2_y5": {
+    "LOD0": 7156,
+    "LOD1": 3578,
+    "LOD2": 1072
+   },
+   "TRN_CityChunk_x2_y6": {
+    "LOD0": 6262,
+    "LOD1": 3130,
+    "LOD2": 938
+   },
+   "TRN_CityChunk_x2_y7": {
+    "LOD0": 5809,
+    "LOD1": 2903,
+    "LOD2": 871
+   },
+   "TRN_CityChunk_x2_y8": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   },
+   "TRN_CityChunk_x3_y0": {
+    "LOD0": 3704,
+    "LOD1": 1852,
+    "LOD2": 554
+   },
+   "TRN_CityChunk_x3_y1": {
+    "LOD0": 8921,
+    "LOD1": 4459,
+    "LOD2": 1337
+   },
+   "TRN_CityChunk_x3_y2": {
+    "LOD0": 7777,
+    "LOD1": 3887,
+    "LOD2": 1165
+   },
+   "TRN_CityChunk_x3_y3": {
+    "LOD0": 6588,
+    "LOD1": 3294,
+    "LOD2": 988
+   },
+   "TRN_CityChunk_x3_y4": {
+    "LOD0": 6868,
+    "LOD1": 3434,
+    "LOD2": 1030
+   },
+   "TRN_CityChunk_x3_y5": {
+    "LOD0": 6270,
+    "LOD1": 3134,
+    "LOD2": 940
+   },
+   "TRN_CityChunk_x3_y6": {
+    "LOD0": 7162,
+    "LOD1": 3580,
+    "LOD2": 1074
+   },
+   "TRN_CityChunk_x3_y7": {
+    "LOD0": 8436,
+    "LOD1": 4218,
+    "LOD2": 1264
+   },
+   "TRN_CityChunk_x3_y8": {
+    "LOD0": 3839,
+    "LOD1": 1919,
+    "LOD2": 575
+   },
+   "TRN_CityChunk_x4_y0": {
+    "LOD0": 4542,
+    "LOD1": 2270,
+    "LOD2": 680
+   },
+   "TRN_CityChunk_x4_y1": {
+    "LOD0": 7047,
+    "LOD1": 3523,
+    "LOD2": 1057
+   },
+   "TRN_CityChunk_x4_y2": {
+    "LOD0": 7272,
+    "LOD1": 3636,
+    "LOD2": 1090
+   },
+   "TRN_CityChunk_x4_y3": {
+    "LOD0": 6814,
+    "LOD1": 3406,
+    "LOD2": 1022
+   },
+   "TRN_CityChunk_x4_y4": {
+    "LOD0": 8856,
+    "LOD1": 4428,
+    "LOD2": 1328
+   },
+   "TRN_CityChunk_x4_y5": {
+    "LOD0": 6818,
+    "LOD1": 3408,
+    "LOD2": 1022
+   },
+   "TRN_CityChunk_x4_y6": {
+    "LOD0": 6837,
+    "LOD1": 3417,
+    "LOD2": 1025
+   },
+   "TRN_CityChunk_x4_y7": {
+    "LOD0": 6613,
+    "LOD1": 3305,
+    "LOD2": 991
+   },
+   "TRN_CityChunk_x4_y8": {
+    "LOD0": 4549,
+    "LOD1": 2273,
+    "LOD2": 681
+   },
+   "TRN_CityChunk_x5_y0": {
+    "LOD0": 3814,
+    "LOD1": 1906,
+    "LOD2": 572
+   },
+   "TRN_CityChunk_x5_y1": {
+    "LOD0": 9007,
+    "LOD1": 4503,
+    "LOD2": 1351
+   },
+   "TRN_CityChunk_x5_y2": {
+    "LOD0": 6912,
+    "LOD1": 3456,
+    "LOD2": 1036
+   },
+   "TRN_CityChunk_x5_y3": {
+    "LOD0": 6290,
+    "LOD1": 3144,
+    "LOD2": 942
+   },
+   "TRN_CityChunk_x5_y4": {
+    "LOD0": 7574,
+    "LOD1": 3786,
+    "LOD2": 1136
+   },
+   "TRN_CityChunk_x5_y5": {
+    "LOD0": 8942,
+    "LOD1": 4470,
+    "LOD2": 1340
+   },
+   "TRN_CityChunk_x5_y6": {
+    "LOD0": 7208,
+    "LOD1": 3604,
+    "LOD2": 1080
+   },
+   "TRN_CityChunk_x5_y7": {
+    "LOD0": 8314,
+    "LOD1": 4156,
+    "LOD2": 1246
+   },
+   "TRN_CityChunk_x5_y8": {
+    "LOD0": 3781,
+    "LOD1": 1889,
+    "LOD2": 567
+   },
+   "TRN_CityChunk_x6_y0": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   },
+   "TRN_CityChunk_x6_y1": {
+    "LOD0": 5809,
+    "LOD1": 2903,
+    "LOD2": 871
+   },
+   "TRN_CityChunk_x6_y2": {
+    "LOD0": 6262,
+    "LOD1": 3130,
+    "LOD2": 938
+   },
+   "TRN_CityChunk_x6_y3": {
+    "LOD0": 7957,
+    "LOD1": 3977,
+    "LOD2": 1193
+   },
+   "TRN_CityChunk_x6_y4": {
+    "LOD0": 8607,
+    "LOD1": 4303,
+    "LOD2": 1291
+   },
+   "TRN_CityChunk_x6_y5": {
+    "LOD0": 7476,
+    "LOD1": 3738,
+    "LOD2": 1120
+   },
+   "TRN_CityChunk_x6_y6": {
+    "LOD0": 6262,
+    "LOD1": 3130,
+    "LOD2": 938
+   },
+   "TRN_CityChunk_x6_y7": {
+    "LOD0": 5824,
+    "LOD1": 2912,
+    "LOD2": 872
+   },
+   "TRN_CityChunk_x6_y8": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   },
+   "TRN_CityChunk_x7_y1": {
+    "LOD0": 2398,
+    "LOD1": 1198,
+    "LOD2": 358
+   },
+   "TRN_CityChunk_x7_y2": {
+    "LOD0": 5824,
+    "LOD1": 2912,
+    "LOD2": 872
+   },
+   "TRN_CityChunk_x7_y3": {
+    "LOD0": 9290,
+    "LOD1": 4644,
+    "LOD2": 1392
+   },
+   "TRN_CityChunk_x7_y4": {
+    "LOD0": 7990,
+    "LOD1": 3994,
+    "LOD2": 1198
+   },
+   "TRN_CityChunk_x7_y5": {
+    "LOD0": 9458,
+    "LOD1": 4728,
+    "LOD2": 1418
+   },
+   "TRN_CityChunk_x7_y6": {
+    "LOD0": 5809,
+    "LOD1": 2903,
+    "LOD2": 871
+   },
+   "TRN_CityChunk_x7_y7": {
+    "LOD0": 2398,
+    "LOD1": 1198,
+    "LOD2": 358
+   },
+   "TRN_CityChunk_x8_y2": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   },
+   "TRN_CityChunk_x8_y3": {
+    "LOD0": 3803,
+    "LOD1": 1901,
+    "LOD2": 569
+   },
+   "TRN_CityChunk_x8_y4": {
+    "LOD0": 4533,
+    "LOD1": 2265,
+    "LOD2": 679
+   },
+   "TRN_CityChunk_x8_y5": {
+    "LOD0": 3677,
+    "LOD1": 1837,
+    "LOD2": 551
+   },
+   "TRN_CityChunk_x8_y6": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   }
+  },
+  "export": {
+   "terrain_glb": "export/godot/concordia_terrain.glb",
+   "terrain_bytes": 28552952,
+   "structures_glb": "export/godot/concordia_terrain_structures.glb",
+   "structures_bytes": 1315284,
+   "verify_terrain": {
+    "objects": 207,
+    "empties": 0,
+    "tris": 649224,
+    "meshes_with_color0": 207
+   },
+   "verify_structures": {
+    "objects": 16,
+    "empties": 0,
+    "tris": 20432,
+    "meshes_with_color0": 0
+   },
+   "extra": {
+    "concordia_plaza.glb": {
+     "bytes": 426852,
+     "objects_in": 58,
+     "verify": {
+      "objects": 17,
+      "empties": 41,
+      "tris": 8160,
+      "meshes_with_color0": 0
+     }
+    },
+    "concordia_districts_markers.glb": {
+     "bytes": 45576,
+     "objects_in": 118,
+     "verify": {
+      "objects": 0,
+      "empties": 118,
+      "tris": 0,
+      "meshes_with_color0": 0
+     }
+    }
+   }
+  }
+ }
+}

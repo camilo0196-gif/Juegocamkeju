@@ -1375,10 +1375,10 @@ def stair_links(P, stairs):
         a_s = st["r_station"]
         a_top = a_s - W / 2
         if st["side_low"] == "cardinal":
-            a, t = a_top - st["run_m"] - 2.4, 0.25 + W / 2
+            a, t = a_top - st["run_m"] - 2.4, 2.6
             nn = n_card
         else:
-            a, t = a_s, 1.8
+            a, t = a_s, 2.6
             nn = n_card
         p = (e[0] * a + nn[0] * t, e[1] * a + nn[1] * t)
         th = T.angle_deg(*p)
