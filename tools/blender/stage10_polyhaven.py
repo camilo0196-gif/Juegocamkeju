@@ -51,7 +51,7 @@ ASSETS = {
     "MAT_Cloth": ("hessian_380", "1k", "#B8B8B8", 0.0, (0.84, 0.95)),     # textura unica de A/B/C
 }
 # variantes de tela: color base (glTF baseColorFactor) sobre la textura desaturada
-CLOTH_VARIANTS = {"MAT_Cloth_Patch_A": "#8A6A4A", "MAT_Cloth_Patch_B": "#6E6A4E", "MAT_Cloth_Patch_C": "#A49884"}
+CLOTH_VARIANTS = {"MAT_Cloth_Patch_A": "#8A7462", "MAT_Cloth_Patch_B": "#6E6B58", "MAT_Cloth_Patch_C": "#A49884"}   # sat <= 0.30
 ROCK_CANDIDATES = ("rock_boulder_dry", "rock_boulder_cracked")      # preferido, respaldo
 ROCK_WIDTH_OK = (1.5, 4.0)
 
