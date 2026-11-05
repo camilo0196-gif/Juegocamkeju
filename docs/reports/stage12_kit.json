@@ -1,0 +1,597 @@
+{
+ "saved_before": "blender/concordia_v12.blend",
+ "collections": [
+  "BLD_KIT",
+  "BLD_PORTAL",
+  "BLD_MERCADO",
+  "BLD_OFICIOS",
+  "BLD_CLASES",
+  "BLD_RAZAS",
+  "BLD_MORADAS",
+  "BLD_PROPS"
+ ],
+ "materials_added": {
+  "MAT_Roof_Tile_Ocher_B": "creado",
+  "MAT_Window_Warm": "creado"
+ },
+ "kit": {
+  "WALL_Solid_3m_Clean": {
+   "tris": 12,
+   "budget": 250,
+   "ok": true,
+   "sheet": "walls",
+   "location": [
+    3000.0,
+    1000.0,
+    0.0
+   ]
+  },
+  "WALL_Solid_3m_StonePatch": {
+   "tris": 32,
+   "budget": 250,
+   "ok": true,
+   "sheet": "walls",
+   "location": [
+    3006.0,
+    1000.0,
+    0.0
+   ]
+  },
+  "WALL_Solid_3m_TimberPatch": {
+   "tris": 32,
+   "budget": 250,
+   "ok": true,
+   "sheet": "walls",
+   "location": [
+    3012.0,
+    1000.0,
+    0.0
+   ]
+  },
+  "WALL_Window_3m_Clean": {
+   "tris": 106,
+   "budget": 250,
+   "ok": true,
+   "sheet": "walls",
+   "location": [
+    3018.0,
+    1000.0,
+    0.0
+   ]
+  },
+  "WALL_Window_3m_StonePatch": {
+   "tris": 126,
+   "budget": 250,
+   "ok": true,
+   "sheet": "walls",
+   "location": [
+    3024.0,
+    1000.0,
+    0.0
+   ]
+  },
+  "WALL_Window_3m_TimberPatch": {
+   "tris": 126,
+   "budget": 250,
+   "ok": true,
+   "sheet": "walls",
+   "location": [
+    3030.0,
+    1000.0,
+    0.0
+   ]
+  },
+  "WALL_Door_3m_Clean": {
+   "tris": 84,
+   "budget": 250,
+   "ok": true,
+   "sheet": "walls",
+   "location": [
+    3000.0,
+    994.0,
+    0.0
+   ]
+  },
+  "WALL_Door_3m_StonePatch": {
+   "tris": 104,
+   "budget": 250,
+   "ok": true,
+   "sheet": "walls",
+   "location": [
+    3006.0,
+    994.0,
+    0.0
+   ]
+  },
+  "WALL_Door_3m_TimberPatch": {
+   "tris": 104,
+   "budget": 250,
+   "ok": true,
+   "sheet": "walls",
+   "location": [
+    3012.0,
+    994.0,
+    0.0
+   ]
+  },
+  "WALL_Arch_3m_Clean": {
+   "tris": 134,
+   "budget": 250,
+   "ok": true,
+   "sheet": "walls",
+   "location": [
+    3018.0,
+    994.0,
+    0.0
+   ]
+  },
+  "WALL_Arch_3m_StonePatch": {
+   "tris": 134,
+   "budget": 250,
+   "ok": true,
+   "sheet": "walls",
+   "location": [
+    3024.0,
+    994.0,
+    0.0
+   ]
+  },
+  "WALL_Arch_3m_TimberPatch": {
+   "tris": 154,
+   "budget": 250,
+   "ok": true,
+   "sheet": "walls",
+   "location": [
+    3030.0,
+    994.0,
+    0.0
+   ]
+  },
+  "WALL_Barred_3m_Clean": {
+   "tris": 146,
+   "budget": 250,
+   "ok": true,
+   "sheet": "walls",
+   "location": [
+    3000.0,
+    988.0,
+    0.0
+   ]
+  },
+  "WALL_Barred_3m_StonePatch": {
+   "tris": 166,
+   "budget": 250,
+   "ok": true,
+   "sheet": "walls",
+   "location": [
+    3006.0,
+    988.0,
+    0.0
+   ]
+  },
+  "WALL_Barred_3m_TimberPatch": {
+   "tris": 166,
+   "budget": 250,
+   "ok": true,
+   "sheet": "walls",
+   "location": [
+    3012.0,
+    988.0,
+    0.0
+   ]
+  },
+  "WALL_Shutter_3m_Clean": {
+   "tris": 126,
+   "budget": 250,
+   "ok": true,
+   "sheet": "walls",
+   "location": [
+    3018.0,
+    988.0,
+    0.0
+   ]
+  },
+  "WALL_Shutter_3m_StonePatch": {
+   "tris": 146,
+   "budget": 250,
+   "ok": true,
+   "sheet": "walls",
+   "location": [
+    3024.0,
+    988.0,
+    0.0
+   ]
+  },
+  "WALL_Shutter_3m_TimberPatch": {
+   "tris": 146,
+   "budget": 250,
+   "ok": true,
+   "sheet": "walls",
+   "location": [
+    3030.0,
+    988.0,
+    0.0
+   ]
+  },
+  "CORNER_Post": {
+   "tris": 12,
+   "budget": 1500,
+   "ok": true,
+   "sheet": "other",
+   "location": [
+    3000.0,
+    900.0,
+    0.0
+   ]
+  },
+  "CORNER_Quoin": {
+   "tris": 192,
+   "budget": 1500,
+   "ok": true,
+   "sheet": "other",
+   "location": [
+    3009.0,
+    900.0,
+    0.0
+   ]
+  },
+  "TIMBER_Overlay": {
+   "tris": 58,
+   "budget": 1500,
+   "ok": true,
+   "sheet": "other",
+   "location": [
+    3018.0,
+    900.0,
+    0.0
+   ]
+  },
+  "BUTTRESS_Stone": {
+   "tris": 20,
+   "budget": 1500,
+   "ok": true,
+   "sheet": "other",
+   "location": [
+    3027.0,
+    900.0,
+    0.0
+   ]
+  },
+  "FLOOR_Edge": {
+   "tris": 20,
+   "budget": 1500,
+   "ok": true,
+   "sheet": "other",
+   "location": [
+    3036.0,
+    900.0,
+    1.0
+   ]
+  },
+  "ARCH_Span_3m": {
+   "tris": 158,
+   "budget": 1500,
+   "ok": true,
+   "sheet": "other",
+   "location": [
+    3045.0,
+    900.0,
+    0.0
+   ]
+  },
+  "ARCH_Span_6m": {
+   "tris": 158,
+   "budget": 1500,
+   "ok": true,
+   "sheet": "other",
+   "location": [
+    3054.0,
+    900.0,
+    0.0
+   ]
+  },
+  "STAIRS_Ext": {
+   "tris": 204,
+   "budget": 1500,
+   "ok": true,
+   "sheet": "other",
+   "location": [
+    3000.0,
+    891.0,
+    0.0
+   ]
+  },
+  "BALCONY_Wood": {
+   "tris": 226,
+   "budget": 1500,
+   "ok": true,
+   "sheet": "other",
+   "location": [
+    3009.0,
+    891.0,
+    1.2
+   ]
+  },
+  "BALCONY_Stone": {
+   "tris": 58,
+   "budget": 1500,
+   "ok": true,
+   "sheet": "other",
+   "location": [
+    3018.0,
+    891.0,
+    1.2
+   ]
+  },
+  "ROOF_Gable_Tile": {
+   "tris": 172,
+   "tris_per_3m": 172.0,
+   "ok": true,
+   "sheet": "other",
+   "location": [
+    3027.0,
+    891.0,
+    0.0
+   ]
+  },
+  "ROOF_Hip": {
+   "tris": 38,
+   "tris_per_3m": 19.0,
+   "ok": true,
+   "sheet": "other",
+   "location": [
+    3036.0,
+    891.0,
+    0.0
+   ]
+  },
+  "ROOF_Conical": {
+   "tris": 178,
+   "tris_per_3m": 89.0,
+   "ok": true,
+   "sheet": "other",
+   "location": [
+    3045.0,
+    891.0,
+    0.0
+   ]
+  },
+  "ROOF_Flat_Parapet": {
+   "tris": 70,
+   "tris_per_3m": 35.0,
+   "ok": true,
+   "sheet": "other",
+   "location": [
+    3054.0,
+    891.0,
+    0.0
+   ]
+  },
+  "ROOF_Lean_To": {
+   "tris": 46,
+   "tris_per_3m": 46.0,
+   "ok": true,
+   "sheet": "other",
+   "location": [
+    3000.0,
+    882.0,
+    0.0
+   ]
+  },
+  "CHIMNEY_A": {
+   "tris": 68,
+   "budget": 1500,
+   "ok": true,
+   "sheet": "other",
+   "location": [
+    3009.0,
+    882.0,
+    0.0
+   ]
+  },
+  "CHIMNEY_B": {
+   "tris": 34,
+   "budget": 1500,
+   "ok": true,
+   "sheet": "other",
+   "location": [
+    3018.0,
+    882.0,
+    0.0
+   ]
+  },
+  "DORMER_Window": {
+   "tris": 48,
+   "budget": 1500,
+   "ok": true,
+   "sheet": "other",
+   "location": [
+    3027.0,
+    882.0,
+    0.0
+   ]
+  },
+  "AWNING_Patch_A": {
+   "tris": 24,
+   "budget": 1500,
+   "ok": true,
+   "sheet": "props",
+   "location": [
+    3000.0,
+    800.0,
+    2.4
+   ]
+  },
+  "AWNING_Patch_B": {
+   "tris": 24,
+   "budget": 1500,
+   "ok": true,
+   "sheet": "props",
+   "location": [
+    3003.0,
+    800.0,
+    2.4
+   ]
+  },
+  "AWNING_Patch_C": {
+   "tris": 24,
+   "budget": 1500,
+   "ok": true,
+   "sheet": "props",
+   "location": [
+    3006.0,
+    800.0,
+    2.4
+   ]
+  },
+  "SIGN_Hanging": {
+   "tris": 68,
+   "budget": 1500,
+   "ok": true,
+   "sheet": "props",
+   "location": [
+    3009.0,
+    800.0,
+    1.6
+   ]
+  },
+  "LANTERN_Shard": {
+   "tris": 88,
+   "budget": 1500,
+   "ok": true,
+   "sheet": "props",
+   "location": [
+    3012.0,
+    800.0,
+    1.4
+   ]
+  },
+  "CRATE_Small": {
+   "tris": 26,
+   "budget": 1500,
+   "ok": true,
+   "sheet": "props",
+   "location": [
+    3000.0,
+    797.0,
+    0.0
+   ]
+  },
+  "CRATE_Fruit": {
+   "tris": 102,
+   "budget": 1500,
+   "ok": true,
+   "sheet": "props",
+   "location": [
+    3003.0,
+    797.0,
+    0.0
+   ]
+  },
+  "BARREL": {
+   "tris": 106,
+   "budget": 1500,
+   "ok": true,
+   "sheet": "props",
+   "location": [
+    3006.0,
+    797.0,
+    0.0
+   ]
+  },
+  "TOOL_Rack": {
+   "tris": 136,
+   "budget": 1500,
+   "ok": true,
+   "sheet": "props",
+   "location": [
+    3009.0,
+    797.0,
+    0.0
+   ]
+  }
+ },
+ "kit_count": 45,
+ "kit_over_budget": [],
+ "test_house": {
+  "name": "TEST_Casa_12x9",
+  "footprint": [
+   12.0,
+   9.0
+  ],
+  "floors": 2,
+  "roof": "gable",
+  "style": "timber",
+  "camera_side": false,
+  "max_floors_rule": 3,
+  "tris": {
+   "Body": 3916,
+   "Roof": 690,
+   "Body_LOD1": 2040,
+   "Roof_LOD1": 230,
+   "Body_LOD2": 270,
+   "Roof_LOD2": 128,
+   "Props": 702
+  },
+  "tris_body_roof": 4606,
+  "lod1_ratio": 0.493,
+  "lod2_ratio": 0.086,
+  "eave_height_m": 6.4,
+  "ridge_height_m": 10.18,
+  "modules": {
+   "Solid": 7,
+   "Window": 12,
+   "Door": 1,
+   "Arch": 2,
+   "Barred": 1,
+   "Shutter": 5
+  },
+  "variants": {
+   "Clean": 23,
+   "StonePatch": 3,
+   "TimberPatch": 2
+  },
+  "door_local": [
+   1.5,
+   4.5,
+   0.0
+  ],
+  "budget_class": "media"
+ },
+ "iso_rule": {
+  "view_dir_xy": [
+   -0.707,
+   0.707
+  ],
+  "lado_mas_cercano_a_la_camara": "caras que miran al SE (+X y -Y del mundo)",
+  "regla": "puerta (+Y) mirando en la direccion de la vista (dot > 0.35) -> 2 plantas; si no, 3",
+  "ejemplos": {
+   "MARKER_Bld_Banco": {
+    "rot_z_deg": 90.0,
+    "camera_side": true,
+    "max_floors": 2
+   },
+   "MARKER_Bld_Posada": {
+    "rot_z_deg": -90.0,
+    "camera_side": false,
+    "max_floors": 3
+   },
+   "MARKER_Bld_MER_Casa_01": {
+    "rot_z_deg": 27.1,
+    "camera_side": true,
+    "max_floors": 2
+   },
+   "MARKER_Morada_NE_001": {
+    "rot_z_deg": 120.6,
+    "camera_side": false,
+    "max_floors": 3
+   },
+   "MARKER_Morada_SE_001": {
+    "rot_z_deg": -144.9,
+    "camera_side": false,
+    "max_floors": 3
+   }
+  }
+ },
+ "saved": "blender/concordia_v12.blend"
+}
