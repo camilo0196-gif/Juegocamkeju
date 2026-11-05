@@ -61,6 +61,11 @@ KEYS = {"Morada_NE": "NE", "Morada_NW": "NO", "Morada_SW": "SO", "Morada_SE": "S
 # (al pie del muro de la terraza superior), puerta hacia la muralla. La Morada SE se invierte para que sus
 # puertas miren a CAM_Iso (con "in" las 72 daban la espalda a la camara).
 FACING = {"Morada_NE": "in", "Morada_NW": "in", "Morada_SW": "in", "Morada_SE": "out"}
+# escalinatas de la rampa hitos -> terraza 1 (etapa 07): arco en m a r = 100 desde el eje de cada Morada.
+# En las Moradas "out" la fila de la terraza 1 deja hueco en esas posiciones.
+ESC_ARCS = {"Morada_NE": (25.0, -25.0), "Morada_NW": (25.0, -25.0, 12.0), "Morada_SW": (25.0, -25.0),
+            "Morada_SE": (25.0, -25.0, -12.0)}
+ESC_GAP_HALF = 3.0 / 2 + 0.45 + 0.6
 
 
 # ---------------------------------------------------------------------------
@@ -171,6 +176,13 @@ def layout_morada(key, phi, codes):
                              "width": SERVICE_STAIR_W + 2 * PASSAGE_MARGIN})
         ax = degrees((AXIS_STREET_W / 2 + PASSAGE_MARGIN) / rp)
         forbid.append((phi - ax, phi + ax))
+        if k == 1 and facing == "out":
+            for arc in ESC_ARCS[key]:
+                a_e = phi + degrees(arc / 100.0)
+                h = degrees(ESC_GAP_HALF / rp)
+                forbid.append((a_e - h, a_e + h))
+                passages.append({"terrace": 1, "angle": a_e, "r0": rf, "r1": rp + PARCEL_D, "z": z,
+                                 "width": 2 * ESC_GAP_HALF, "kind": "escalinata"})
         dth = degrees(2 * asin((PARCEL_W / 2) / rp)) + degrees(PARCEL_GAP / rp)
         row = []
         for sg in (1, -1):

@@ -52,6 +52,7 @@ N_ESC = 10
 ESC_W = 3.0
 REPAIR_FRAC = 0.20
 COBBLE_CAUCE = 7
+OPEN_R = 94.0
 WATER_HEX = "#1A201F"                # oscuro y apagado (refleja el cielo solo por especular)
 REPAIR_HEX = "#A39A88"
 
@@ -59,7 +60,12 @@ REPAIR_HEX = "#A39A88"
 # ---------------------------------------------------------------------------
 class Canal:
     def __init__(self):
-        self.pts = CR.centerline(1.0)
+        pts = CR.centerline(1.0)
+        # tramo abierto desde el borde interior del anillo 100 del Mercado (r < 94): la vertiente llega
+        # desde la Fuente por una mina enterrada bajo el anillo
+        i0 = next(i for i, p in enumerate(pts) if hypot(*p) < OPEN_R)
+        self.mine = pts[:i0 + 1]
+        self.pts = pts[i0:]
         self.cum = CR.cumlen(self.pts)
         self.E, self.W = CR.edge_profile(self.pts)
         self.L = self.cum[-1]
@@ -369,6 +375,25 @@ def build_weirs(canal, col, mat, stats):
     return ws
 
 
+def build_spring_head(canal, col, mat, void, stats):
+    """Inicio del tramo abierto: muro de cabecera con boca (la mina viene de la Fuente del Mercado)."""
+    p, t, n, e, w = canal.at(0.0)
+    tv, nv = -Vector((t[0], t[1], 0)), Vector((n[0], n[1], 0))
+    O = Vector((p[0], p[1], 0))
+    mb = ST2.MeshBuilder()
+    hw = CR.WIDTH / 2
+    bed = e - CR.DEPTH
+    mb.prism([(0.0, bed - 0.2), (0.6, bed - 0.2), (0.6, e + 0.6), (0.0, e + 0.6)], tuple(O), tuple(tv), tuple(nv),
+             -(hw + 1.0), hw + 1.0)
+    obj = mb_object(mb, "CAU_SpringHead", col, mat)
+    mv = ST2.MeshBuilder()
+    mv.prism([(-0.02, w - 0.05), (0.02, w - 0.05), (0.02, w + 0.55), (-0.02, w + 0.55)], tuple(O), tuple(tv),
+             tuple(nv), -0.6, 0.6)
+    mb_object(mv, "CAU_SpringHead_Mouth", col, void)
+    stats["cauce_spring_head"] = {"open_from_r": OPEN_R, "buried_mine_m": round(CR.cumlen(canal.mine)[-1], 1),
+                                  "tris": len(obj.data.polygons)}
+
+
 def build_culvert(canal, col, mat, void, stats):
     """Boca de alcantarilla con reja en la cara interior de la muralla (fin del canal)."""
     p, t, n, e, w = canal.at(canal.L - 0.01)
@@ -501,6 +526,12 @@ def build_bridges(canal, cross, col, stone, repair, stats):
     return out, gaps, cnt
 
 
+def barrio_of(name):
+    import re
+    m = re.search(r"_B(\d\d)_|CasaRaza_(\d\d)", name)
+    return int(m.group(1) or m.group(2)) if m else None
+
+
 def arch_candidates(lay, n):
     """Puntos de calles de Razas (4-6 m) con parcelas a ambos lados: arcos entre barrios."""
     import stage05_layout as L
@@ -522,14 +553,14 @@ def arch_candidates(lay, n):
                 hit = next((p for p in parcels if L.point_in_poly(q[0], q[1], p["poly"])), None)
                 sides.append(hit)
             if sides[0] and sides[1]:
-                b0, b1 = sides[0].get("barrio"), sides[1].get("barrio")
+                b0, b1 = barrio_of(sides[0]["name"]), barrio_of(sides[1]["name"])
                 cands.append({"road": rd["name"], "pt": pts[i], "dir": (tx / Lt, ty / Lt), "w": rd["width"],
                               "between": [sides[0]["name"], sides[1]["name"]], "cross_barrio": b0 != b1,
                               "z": T.height(*pts[i])})
     cands.sort(key=lambda c: (not c["cross_barrio"], c["road"]))
     chosen = []
     for c in cands:
-        if all(hypot(c["pt"][0] - o["pt"][0], c["pt"][1] - o["pt"][1]) > 18.0 for o in chosen):
+        if all(hypot(c["pt"][0] - o["pt"][0], c["pt"][1] - o["pt"][1]) > 12.0 for o in chosen):
             chosen.append(c)
         if len(chosen) >= n:
             break
@@ -576,34 +607,13 @@ def build_arches(lay, col, stone, repair, stats):
 # Escalinatas (rampa de los hitos a las Moradas)
 # ---------------------------------------------------------------------------
 def esc_sites(morada_lay):
-    """10 escalinatas: +-25 m de arco del eje en cada Morada (8) y +-45 m en las dos con hueco libre (2)."""
+    """10 escalinatas en la rampa r 95-105 (8.5-10 grados): posiciones de stage06_moradas.ESC_ARCS
+    (en las Moradas con la puerta hacia la muralla la etapa 06 deja hueco en la fila de la terraza 1)."""
+    import stage06_moradas as SM
     out = []
-    want = []
     for key, phi in T.DIAGONAL_ANGLE.items():
-        for arc in (25.0, -25.0):
-            want.append((key, phi, arc))
-    for key, phi in (("Morada_NW", 135.0), ("Morada_SE", 315.0)):
-        want.append((key, phi, 45.0))
-    lays = {l["key"]: l for l in morada_lay["moradas"]}
-    for key, phi, arc in want:
-        lay = lays[key]
-        # en Moradas "out" la fila 1 empieza en r=105: buscar un hueco entre parcelas
-        best = None
-        for da in [0.0] + [d * sgn for d in np.arange(1.0, 12.0, 1.0) for sgn in (1, -1)]:
-            a = phi + degrees((arc + da) / 100.0)
-            ok = True
-            for p in lay["parcels"]:
-                if p["terrace"] != 1:
-                    continue
-                hw_ang = degrees((ESC_W / 2 + 0.8 + 3.0) / p["rp"])
-                if abs(((p["angle"] - a + 180) % 360) - 180) < hw_ang:
-                    ok = False
-                    break
-            if ok:
-                best = a
-                break
-        if best is not None:
-            out.append((key, best))
+        for arc in SM.ESC_ARCS[key]:
+            out.append((key, phi + degrees(arc / 100.0)))
     return out
 
 
@@ -813,6 +823,7 @@ def build(scene, stats):
     avoid = [(g0, g1) for g0, g1, _sd in gaps] + [(w["s"] - 3, w["s"] + 3) for w in weirs] + [(canal.L - 6, canal.L)]
     steps = build_access_steps(canal, col, stone, avoid, stats)
     build_culvert(canal, col, stone, void, stats)
+    build_spring_head(canal, col, stone, void, stats)
     arches, cnt_a = build_arches(lay, col_s, stone, repair, stats)
     repair_existing_parapets(repair, stats)
     stats["repairs_new"] = {"parapet_segments": cnt_b[0] + cnt_a[0] + cnt_e[0],

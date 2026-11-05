@@ -1,17 +1,17 @@
 {
  "timings_s": {
-  "moradas": 14.0,
-  "shading": 36.6,
-  "chunks": 75.7
+  "moradas": 13.7,
+  "shading": 39.1,
+  "chunks": 70.4
  },
  "obstacles": {
   "cell_m": 0.5,
   "extent_m": 212.0,
   "n": 848,
   "struct_cells": 63658,
-  "steep_cells": 43740,
+  "steep_cells": 43660,
   "struct_polys": 137360,
-  "steep_polys": 42977
+  "steep_polys": 42703
  },
  "moradas_layout": {
   "Morada_NE": {
@@ -93,14 +93,14 @@
    ]
   },
   "Morada_SE": {
-   "parcels": 72,
+   "parcels": 67,
    "tipos": {
-    "habitacion": 36,
-    "casa_pequena": 25,
-    "casa_grande": 11
+    "habitacion": 34,
+    "casa_pequena": 23,
+    "casa_grande": 10
    },
    "per_terrace": {
-    "1": 10,
+    "1": 5,
     "2": 10,
     "3": 12,
     "4": 14,
@@ -121,20 +121,20 @@
  },
  "moradas_terrain": {
   "knife_lines": 476,
-  "verts_moved": 57971,
-  "tris_after": 439038
+  "verts_moved": 57670,
+  "tris_after": 440866
  },
  "moradas_masks": {
   "terraza_id": "valor = id / 6 (1..6; 0 = fuera de las terrazas), por cara",
   "garden_mask": "1 en el jardin de las parcelas casa_grande (fondo 6 x 3 m)",
   "cobble_type_6": "jardin (nuevo en la etapa 06)",
-  "retaining_loops_morada": 17646,
+  "retaining_loops_morada": 17625,
   "faces_by_kind": {
-   "lane": 26070,
+   "lane": 26061,
    "axis": 6956,
-   "passage": 6783,
-   "parcel": 52855,
-   "garden": 3506
+   "passage": 7244,
+   "parcel": 51964,
+   "garden": 3448
   }
  },
  "moradas_stairs": {
@@ -319,12 +319,12 @@
     "facing": "in"
    },
    "Morada_SE": {
-    "parcels": 72,
-    "doors_facing_camera": 72,
+    "parcels": 67,
+    "doors_facing_camera": 67,
     "doors_away_from_camera": 0,
-    "visible": 20,
-    "visible_but_partly_covered": 2,
-    "hidden_by_roofs": 52,
+    "visible": 17,
+    "visible_but_partly_covered": 1,
+    "hidden_by_roofs": 50,
     "facing": "out"
    }
   },
@@ -357,35 +357,35 @@
     "facing": "in"
    },
    "Morada_SE": {
-    "parcels": 72,
-    "doors_facing_camera": 72,
+    "parcels": 67,
+    "doors_facing_camera": 67,
     "doors_away_from_camera": 0,
-    "visible": 53,
-    "visible_but_partly_covered": 6,
+    "visible": 48,
+    "visible_but_partly_covered": 4,
     "hidden_by_roofs": 19,
     "facing": "out"
    }
   },
   "still_hidden_sample": [
-   "MARKER_Morada_SE_013",
-   "MARKER_Morada_SE_017",
+   "MARKER_Morada_SE_007",
+   "MARKER_Morada_SE_008",
+   "MARKER_Morada_SE_018",
+   "MARKER_Morada_SE_020",
    "MARKER_Morada_SE_021",
-   "MARKER_Morada_SE_023",
+   "MARKER_Morada_SE_022",
    "MARKER_Morada_SE_025",
-   "MARKER_Morada_SE_028",
+   "MARKER_Morada_SE_027",
    "MARKER_Morada_SE_030",
+   "MARKER_Morada_SE_031",
+   "MARKER_Morada_SE_033",
    "MARKER_Morada_SE_034",
-   "MARKER_Morada_SE_035",
+   "MARKER_Morada_SE_036",
+   "MARKER_Morada_SE_037",
    "MARKER_Morada_SE_038",
-   "MARKER_Morada_SE_039",
-   "MARKER_Morada_SE_041",
-   "MARKER_Morada_SE_043",
+   "MARKER_Morada_SE_042",
    "MARKER_Morada_SE_048",
-   "MARKER_Morada_SE_049",
-   "MARKER_Morada_SE_053",
-   "MARKER_Morada_SE_054",
-   "MARKER_Morada_SE_055",
-   "MARKER_Morada_SE_057"
+   "MARKER_Morada_SE_050",
+   "MARKER_Morada_SE_052"
   ],
   "setback_4m_info_no_aplicado": {
    "Morada_NE": {
@@ -416,11 +416,11 @@
     "facing": "in"
    },
    "Morada_SE": {
-    "parcels": 72,
-    "doors_facing_camera": 72,
+    "parcels": 67,
+    "doors_facing_camera": 67,
     "doors_away_from_camera": 0,
-    "visible": 72,
-    "visible_but_partly_covered": 7,
+    "visible": 67,
+    "visible_but_partly_covered": 10,
     "hidden_by_roofs": 0,
     "facing": "out"
    }
@@ -456,19 +456,19 @@
    }
   },
   "Morada_SE": {
-   "markers": 72,
+   "markers": 67,
    "collection": "MARKERS_Morada_SE",
    "tipos": {
-    "habitacion": 36,
-    "casa_pequena": 25,
-    "casa_grande": 11
+    "habitacion": 34,
+    "casa_pequena": 23,
+    "casa_grande": 10
    }
   }
  },
  "shading": {
   "material": "MAT_Terrain_City",
-  "edge_top_verts": 16172,
-  "wall_foot_verts": 16474,
+  "edge_top_verts": 16130,
+  "wall_foot_verts": 16438,
   "edge_width_m": 0.8,
   "edge_dark": 0.3,
   "base_width_m": 0.6,
@@ -476,8 +476,8 @@
   "ao_distance_m": 1.5,
   "ao_samples": 32,
   "ao_bake_objects": "solo TRN_City (piezas ocultas durante el horneado)",
-  "ao_min": 0.0,
-  "ao_p05": 0.779,
+  "ao_min": 0.031,
+  "ao_p05": 0.782,
   "ao_median": 1.0,
   "colors_srgb": {
    "ground": "#9A8D76",
@@ -492,42 +492,42 @@
   "count": 69,
   "budget_city_per_chunk": 35000,
   "lod0_before": {
-   "avg": 6385,
-   "max": 10372,
+   "avg": 6412,
+   "max": 10373,
    "min": 1210,
-   "total": 440594,
+   "total": 442408,
    "heaviest": [
     [
      "TRN_CityChunk_x6_y2_LOD0",
-     10372
+     10373
+    ],
+    [
+     "TRN_CityChunk_x7_y3_LOD0",
+     9847
     ],
     [
      "TRN_CityChunk_x2_y2_LOD0",
      9845
     ],
     [
-     "TRN_CityChunk_x6_y6_LOD0",
-     9800
+     "TRN_CityChunk_x7_y5_LOD0",
+     9834
     ],
     [
-     "TRN_CityChunk_x7_y5_LOD0",
-     9759
+     "TRN_CityChunk_x6_y6_LOD0",
+     9800
     ],
     [
      "TRN_CityChunk_x2_y6_LOD0",
      9695
     ],
     [
-     "TRN_CityChunk_x7_y3_LOD0",
-     9664
+     "TRN_CityChunk_x5_y1_LOD0",
+     9375
     ],
     [
      "TRN_CityChunk_x6_y3_LOD0",
-     9465
-    ],
-    [
-     "TRN_CityChunk_x5_y1_LOD0",
-     9375
+     9336
     ]
    ],
    "over_budget": []
@@ -535,19 +535,19 @@
   "optimized": "ninguno (ningun chunk supera 35.000)",
   "lod_tris": {
    "LOD0": {
-    "avg": 6385,
-    "max": 10372,
-    "total": 440594
+    "avg": 6412,
+    "max": 10373,
+    "total": 442408
    },
    "LOD1": {
-    "avg": 3192,
-    "max": 5186,
-    "total": 220244
+    "avg": 3205,
+    "max": 5185,
+    "total": 221152
    },
    "LOD2": {
-    "avg": 957,
-    "max": 1554,
-    "total": 66028
+    "avg": 961,
+    "max": 1555,
+    "total": 66306
    }
   },
   "lod_ratio_real": {
@@ -693,19 +693,19 @@
     "LOD2": 940
    },
    "TRN_CityChunk_x3_y6": {
-    "LOD0": 8283,
-    "LOD1": 4141,
-    "LOD2": 1241
+    "LOD0": 8605,
+    "LOD1": 4301,
+    "LOD2": 1289
    },
    "TRN_CityChunk_x3_y7": {
-    "LOD0": 8728,
-    "LOD1": 4364,
-    "LOD2": 1308
+    "LOD0": 8711,
+    "LOD1": 4355,
+    "LOD2": 1305
    },
    "TRN_CityChunk_x3_y8": {
-    "LOD0": 3839,
-    "LOD1": 1919,
-    "LOD2": 575
+    "LOD0": 3809,
+    "LOD1": 1903,
+    "LOD2": 571
    },
    "TRN_CityChunk_x4_y0": {
     "LOD0": 4542,
@@ -733,24 +733,24 @@
     "LOD2": 1328
    },
    "TRN_CityChunk_x4_y5": {
-    "LOD0": 6818,
-    "LOD1": 3408,
-    "LOD2": 1022
+    "LOD0": 6952,
+    "LOD1": 3476,
+    "LOD2": 1042
    },
    "TRN_CityChunk_x4_y6": {
-    "LOD0": 6837,
-    "LOD1": 3417,
-    "LOD2": 1025
+    "LOD0": 7053,
+    "LOD1": 3525,
+    "LOD2": 1057
    },
    "TRN_CityChunk_x4_y7": {
-    "LOD0": 6613,
-    "LOD1": 3305,
-    "LOD2": 991
+    "LOD0": 6747,
+    "LOD1": 3373,
+    "LOD2": 1011
    },
    "TRN_CityChunk_x4_y8": {
-    "LOD0": 4549,
-    "LOD1": 2273,
-    "LOD2": 681
+    "LOD0": 4522,
+    "LOD1": 2260,
+    "LOD2": 678
    },
    "TRN_CityChunk_x5_y0": {
     "LOD0": 3814,
@@ -763,9 +763,9 @@
     "LOD2": 1405
    },
    "TRN_CityChunk_x5_y2": {
-    "LOD0": 8402,
-    "LOD1": 4200,
-    "LOD2": 1260
+    "LOD0": 8254,
+    "LOD1": 4126,
+    "LOD2": 1238
    },
    "TRN_CityChunk_x5_y3": {
     "LOD0": 6290,
@@ -773,29 +773,29 @@
     "LOD2": 942
    },
    "TRN_CityChunk_x5_y4": {
-    "LOD0": 7574,
-    "LOD1": 3786,
-    "LOD2": 1136
+    "LOD0": 7670,
+    "LOD1": 3834,
+    "LOD2": 1150
    },
    "TRN_CityChunk_x5_y5": {
-    "LOD0": 8942,
-    "LOD1": 4470,
-    "LOD2": 1340
+    "LOD0": 9224,
+    "LOD1": 4612,
+    "LOD2": 1382
    },
    "TRN_CityChunk_x5_y6": {
-    "LOD0": 8338,
-    "LOD1": 4168,
-    "LOD2": 1250
+    "LOD0": 8503,
+    "LOD1": 4251,
+    "LOD2": 1275
    },
    "TRN_CityChunk_x5_y7": {
-    "LOD0": 8608,
-    "LOD1": 4304,
-    "LOD2": 1290
+    "LOD0": 8522,
+    "LOD1": 4260,
+    "LOD2": 1278
    },
    "TRN_CityChunk_x5_y8": {
-    "LOD0": 3781,
-    "LOD1": 1889,
-    "LOD2": 567
+    "LOD0": 3764,
+    "LOD1": 1882,
+    "LOD2": 564
    },
    "TRN_CityChunk_x6_y0": {
     "LOD0": 1210,
@@ -803,29 +803,29 @@
     "LOD2": 180
    },
    "TRN_CityChunk_x6_y1": {
-    "LOD0": 8284,
-    "LOD1": 4142,
-    "LOD2": 1242
+    "LOD0": 8289,
+    "LOD1": 4143,
+    "LOD2": 1243
    },
    "TRN_CityChunk_x6_y2": {
-    "LOD0": 10372,
-    "LOD1": 5186,
-    "LOD2": 1554
+    "LOD0": 10373,
+    "LOD1": 5185,
+    "LOD2": 1555
    },
    "TRN_CityChunk_x6_y3": {
-    "LOD0": 9465,
-    "LOD1": 4731,
-    "LOD2": 1419
+    "LOD0": 9336,
+    "LOD1": 4668,
+    "LOD2": 1400
    },
    "TRN_CityChunk_x6_y4": {
-    "LOD0": 8607,
-    "LOD1": 4303,
-    "LOD2": 1291
+    "LOD0": 8903,
+    "LOD1": 4451,
+    "LOD2": 1335
    },
    "TRN_CityChunk_x6_y5": {
-    "LOD0": 8571,
-    "LOD1": 4285,
-    "LOD2": 1285
+    "LOD0": 8981,
+    "LOD1": 4489,
+    "LOD2": 1347
    },
    "TRN_CityChunk_x6_y6": {
     "LOD0": 9800,
@@ -848,24 +848,24 @@
     "LOD2": 384
    },
    "TRN_CityChunk_x7_y2": {
-    "LOD0": 8265,
-    "LOD1": 4131,
-    "LOD2": 1239
+    "LOD0": 8277,
+    "LOD1": 4137,
+    "LOD2": 1241
    },
    "TRN_CityChunk_x7_y3": {
-    "LOD0": 9664,
-    "LOD1": 4832,
-    "LOD2": 1448
+    "LOD0": 9847,
+    "LOD1": 4923,
+    "LOD2": 1477
    },
    "TRN_CityChunk_x7_y4": {
-    "LOD0": 7990,
-    "LOD1": 3994,
-    "LOD2": 1198
+    "LOD0": 8021,
+    "LOD1": 4009,
+    "LOD2": 1203
    },
    "TRN_CityChunk_x7_y5": {
-    "LOD0": 9759,
-    "LOD1": 4879,
-    "LOD2": 1463
+    "LOD0": 9834,
+    "LOD1": 4916,
+    "LOD2": 1474
    },
    "TRN_CityChunk_x7_y6": {
     "LOD0": 8183,
@@ -883,19 +883,19 @@
     "LOD2": 180
    },
    "TRN_CityChunk_x8_y3": {
-    "LOD0": 3803,
-    "LOD1": 1901,
-    "LOD2": 569
+    "LOD0": 3776,
+    "LOD1": 1888,
+    "LOD2": 566
    },
    "TRN_CityChunk_x8_y4": {
-    "LOD0": 4533,
-    "LOD1": 2265,
-    "LOD2": 679
+    "LOD0": 4487,
+    "LOD1": 2243,
+    "LOD2": 673
    },
    "TRN_CityChunk_x8_y5": {
-    "LOD0": 3677,
-    "LOD1": 1837,
-    "LOD2": 551
+    "LOD0": 3656,
+    "LOD1": 1828,
+    "LOD2": 548
    },
    "TRN_CityChunk_x8_y6": {
     "LOD0": 1210,
@@ -905,13 +905,13 @@
   },
   "export": {
    "terrain_glb": "export/godot/concordia_terrain.glb",
-   "terrain_bytes": 33814612,
+   "terrain_bytes": 33956624,
    "structures_glb": "export/godot/concordia_terrain_structures.glb",
    "structures_bytes": 1709668,
    "verify_terrain": {
     "objects": 207,
     "empties": 0,
-    "tris": 726866,
+    "tris": 729866,
     "meshes_with_color0": 207
    },
    "verify_structures": {
@@ -932,21 +932,21 @@
      }
     },
     "concordia_districts_markers.glb": {
-     "bytes": 45576,
-     "objects_in": 118,
+     "bytes": 42736,
+     "objects_in": 110,
      "verify": {
       "objects": 0,
-      "empties": 118,
+      "empties": 110,
       "tris": 0,
       "meshes_with_color0": 0
      }
     },
     "concordia_moradas_markers.glb": {
-     "bytes": 135256,
-     "objects_in": 288,
+     "bytes": 132924,
+     "objects_in": 283,
      "verify": {
       "objects": 0,
-      "empties": 288,
+      "empties": 283,
       "tris": 0,
       "meshes_with_color0": 0
      }
