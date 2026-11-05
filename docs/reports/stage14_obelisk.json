@@ -1,0 +1,63 @@
+{
+ "saved_before": "blender/concordia_v14.blend",
+ "materials": {
+  "MAT_Obelisk_Black": "creado",
+  "MAT_Obelisk_Mark": "creado",
+  "MAT_Obelisk_Mark_Lit": "creado"
+ },
+ "body_tris": 1670,
+ "lanterns_tris": 448,
+ "total_without_marks": 2118,
+ "budget_total": 6000,
+ "ok_total": true,
+ "lods": {
+  "LOD1": 834,
+  "LOD2": 52
+ },
+ "marks": {
+  "count": 100,
+  "names_001_100": true,
+  "missing": [],
+  "floor_props_match": true,
+  "unique_slots": 100,
+  "tris_min_max": [
+   4,
+   14
+  ],
+  "over_20": [],
+  "order": "fila 0: 1-5 frente, 6-10 izquierda, 11-15 trasera, 16-20 derecha; fila 1: 21-40; ...; fila 4: 81-100 (de abajo arriba)",
+  "rows_z_local": [
+   3.6,
+   7.6,
+   11.6,
+   15.6,
+   19.6
+  ]
+ },
+ "dims": {
+  "pedestal": "5 x 5 x 1.5, 4 escalones",
+  "shaft": "3.0 -> 1.8, z 1.5-22.5",
+  "pyramidion_m": 2.5,
+  "total_m": 25.0
+ },
+ "collision": "OBELISK-colonly",
+ "location": [
+  -46.669,
+  -46.669,
+  7.648
+ ],
+ "export": {
+  "file": "export/godot/concordia_obelisk.glb",
+  "mb": 0.33,
+  "nodes": 110,
+  "meshes": 109,
+  "tris": 3792,
+  "materials": 7,
+  "images": 12,
+  "images_external": 12,
+  "colliders": 1,
+  "navmesh": 0,
+  "occluders": 0,
+  "empties": 1
+ }
+}
