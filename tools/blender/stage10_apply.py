@@ -45,6 +45,8 @@ RETAIN_REPAIR_FRAC, RETAIN_REPAIR_M = 0.18, 2.2     # parches de MAT_Stone_Repai
 DITHER = {"city": 2.5, "exterior": 7.0}             # escala del ruido de la banda (m)
 DITHER_P = (0.5, 0.22)                              # prob. de cambio en la celda 1 y 2 de la banda
 MOAT_R = (204.0, 224.0)
+WALL_OUTER_R = C.WALL_RADIUS + 1.3                # cara exterior de la muralla (r 201) + margen: fuera = ceniza
+TERRAIN_UV_TOP_NZ = 0.45                         # terrenos: proyeccion cenital hasta ~63 grados (sin damero en taludes)
 
 
 # ---------------------------------------------------------------------------
@@ -404,7 +406,7 @@ def city(obj, mats, stats):
     # rock_mask: pendiente >= 35 +- 7 grados (ruido), solo caras naturales sin contacto con lo protegido
     thr = ROCK_SLOPE_DEG + ROCK_SLOPE_NOISE * (2 * value_noise(cen[:, 0], cen[:, 1], ROCK_NOISE_M, SEED + 1) - 1)
     rock = (~near_prot) & (slope >= thr)
-    ash = (~protected) & (talf | (r >= C.WALL_BASE_R[1])) & ~rock
+    ash = (~protected) & (talf | (r >= WALL_OUTER_R)) & ~rock
     write_corner_mask(me, A, "rock_mask", rock, protected)
     write_corner_mask(me, A, "ash_mask", ash, protected)
     # asignacion por umbral
@@ -588,6 +590,29 @@ def texture_memory(mat_names):
                           "normal BC5 1 B/px, mipmaps x4/3; vram_bc7_mb = peor caso con calidad alta (BC7) en todo"}
 
 
+def terrain_uv(obj, nz_top=TERRAIN_UV_TOP_NZ):
+    """UV de mundo para terreno: cenital si |n.z| >= nz_top, si no lateral por eje dominante. 1 m = 1 tile.
+    Evita el damero de la caja pura en taludes de 40-50 grados (el eje dominante cambiaba cara a cara)."""
+    me = obj.data
+    A = mesh_arrays(me)
+    mw = obj.matrix_world
+    co = np.array([tuple(mw @ v.co) for v in me.vertices])
+    n = A["nor"] @ np.array(mw.to_3x3()).T
+    fn = n[A["lf"]]
+    c = co[A["lv"]]
+    u, v = c[:, 0].copy(), c[:, 1].copy()
+    side = np.abs(fn[:, 2]) < nz_top
+    ax_x = side & (np.abs(fn[:, 0]) >= np.abs(fn[:, 1]))
+    ax_y = side & ~ax_x
+    u[ax_x] = np.where(fn[ax_x, 0] > 0, c[ax_x, 1], -c[ax_x, 1])
+    v[ax_x] = c[ax_x, 2]
+    u[ax_y] = np.where(fn[ax_y, 1] > 0, -c[ax_y, 0], c[ax_y, 0])
+    v[ax_y] = c[ax_y, 2]
+    uv = me.uv_layers.get(UV_NAME) or me.uv_layers.new(name=UV_NAME)
+    uv.data.foreach_set("uv", np.stack([u, v], 1).astype(np.float32).ravel())
+    return int(side[A["ls"]].sum())
+
+
 def build(stats):
     with open(PH.SIDECAR) as fh:
         ph = json.load(fh)
@@ -604,6 +629,7 @@ def build(stats):
         if im.name in old_images and im.users == 0:
             bpy.data.images.remove(im)
     rename_kit_uv(stats)
+    stats["terrain_uv_side_faces"] = {n: terrain_uv(bpy.data.objects[n]) for n in ("TRN_City", "TRN_Exterior")}
     c = city(bpy.data.objects["TRN_City"], mats, stats)
     e = exterior(bpy.data.objects["TRN_Exterior"], mats, stats)
     stats["materials"] = {n: {k: v for k, v in material_spec(n, ph, proc).items() if k != "hsv"} for n in MATERIALS}
