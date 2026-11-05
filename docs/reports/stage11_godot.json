@@ -1,16 +1,16 @@
 {
  "timings_s": {
-  "cleanup": 8.8,
-  "chunks_lods": 299.7,
-  "collision_nav_occ": 27.8,
-  "export": 14.0
+  "cleanup": 4.8,
+  "chunks_lods": 234.1,
+  "collision_nav_occ": 27.5,
+  "export": 12.5
  },
  "cleanup": {
   "meshes": 115,
   "merged_verts": 3008,
   "interior_faces": 1,
   "hidden_bottom_faces": 604,
-  "flipped_normals": 1500,
+  "flipped_normals": 0,
   "transforms_applied": 0,
   "instanced_kept": 116,
   "changed": {
@@ -20,7 +20,7 @@
     "faces_after": 663,
     "interior_faces": 0,
     "hidden_bottom_faces": 13,
-    "flipped_normals": 8
+    "flipped_normals": 0
    },
    "BASTION_Open": {
     "merged_verts": 0,
@@ -28,7 +28,7 @@
     "faces_after": 453,
     "interior_faces": 0,
     "hidden_bottom_faces": 13,
-    "flipped_normals": 10
+    "flipped_normals": 0
    },
    "CAU_AccessSteps": {
     "merged_verts": 20,
@@ -44,7 +44,7 @@
     "faces_after": 2124,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 344
+    "flipped_normals": 0
    },
    "CAU_Culvert": {
     "merged_verts": 4,
@@ -60,7 +60,7 @@
     "faces_after": 520,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 2
+    "flipped_normals": 0
    },
    "GATE_Sealed_Twin": {
     "merged_verts": 0,
@@ -68,7 +68,7 @@
     "faces_after": 5324,
     "interior_faces": 0,
     "hidden_bottom_faces": 24,
-    "flipped_normals": 170
+    "flipped_normals": 0
    },
    "STAIR_Gate00_R": {
     "merged_verts": 0,
@@ -100,7 +100,7 @@
     "faces_after": 164,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 10
+    "flipped_normals": 0
    },
    "TRN_ArchBridge_01_Repair": {
     "merged_verts": 4,
@@ -108,7 +108,7 @@
     "faces_after": 36,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 2
+    "flipped_normals": 0
    },
    "TRN_ArchBridge_02-col": {
     "merged_verts": 28,
@@ -116,7 +116,7 @@
     "faces_after": 188,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 14
+    "flipped_normals": 0
    },
    "TRN_ArchBridge_03-col": {
     "merged_verts": 16,
@@ -124,7 +124,7 @@
     "faces_after": 176,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 8
+    "flipped_normals": 0
    },
    "TRN_ArchBridge_04-col": {
     "merged_verts": 20,
@@ -132,7 +132,7 @@
     "faces_after": 164,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 10
+    "flipped_normals": 0
    },
    "TRN_ArchBridge_04_Repair": {
     "merged_verts": 4,
@@ -140,7 +140,7 @@
     "faces_after": 36,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 2
+    "flipped_normals": 0
    },
    "TRN_Bridge_01-col": {
     "merged_verts": 56,
@@ -148,7 +148,7 @@
     "faces_after": 308,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 28
+    "flipped_normals": 0
    },
    "TRN_Bridge_02-col": {
     "merged_verts": 32,
@@ -156,7 +156,7 @@
     "faces_after": 248,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 16
+    "flipped_normals": 0
    },
    "TRN_Bridge_02_Repair": {
     "merged_verts": 4,
@@ -164,7 +164,7 @@
     "faces_after": 84,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 2
+    "flipped_normals": 0
    },
    "TRN_Bridge_03-col": {
     "merged_verts": 60,
@@ -172,7 +172,7 @@
     "faces_after": 332,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 30
+    "flipped_normals": 0
    },
    "TRN_Bridge_03_Repair": {
     "merged_verts": 4,
@@ -180,7 +180,7 @@
     "faces_after": 48,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 2
+    "flipped_normals": 0
    },
    "TRN_Bridge_04-col": {
     "merged_verts": 48,
@@ -188,7 +188,7 @@
     "faces_after": 296,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 24
+    "flipped_normals": 0
    },
    "TRN_Bridge_05-col": {
     "merged_verts": 36,
@@ -196,7 +196,7 @@
     "faces_after": 272,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 18
+    "flipped_normals": 0
    },
    "TRN_Buttresses_Morada_NE": {
     "merged_verts": 0,
@@ -270,14 +270,6 @@
     "hidden_bottom_faces": 0,
     "flipped_normals": 0
    },
-   "TRN_LightCanals": {
-    "merged_verts": 0,
-    "faces_before": 860,
-    "faces_after": 860,
-    "interior_faces": 0,
-    "hidden_bottom_faces": 0,
-    "flipped_normals": 396
-   },
    "TRN_Pad_Faro": {
     "merged_verts": 0,
     "faces_before": 124,
@@ -316,7 +308,7 @@
     "faces_after": 2940,
     "interior_faces": 0,
     "hidden_bottom_faces": 4,
-    "flipped_normals": 96
+    "flipped_normals": 0
    },
    "TRN_Parapets_Morada_NW": {
     "merged_verts": 192,
@@ -324,7 +316,7 @@
     "faces_after": 2940,
     "interior_faces": 0,
     "hidden_bottom_faces": 4,
-    "flipped_normals": 96
+    "flipped_normals": 0
    },
    "TRN_Parapets_Morada_SE": {
     "merged_verts": 192,
@@ -332,7 +324,7 @@
     "faces_after": 2940,
     "interior_faces": 0,
     "hidden_bottom_faces": 4,
-    "flipped_normals": 96
+    "flipped_normals": 0
    },
    "TRN_Parapets_Morada_SW": {
     "merged_verts": 192,
@@ -340,7 +332,7 @@
     "faces_after": 2940,
     "interior_faces": 0,
     "hidden_bottom_faces": 4,
-    "flipped_normals": 96
+    "flipped_normals": 0
    },
    "TRN_PlazaParcel_01": {
     "merged_verts": 0,
@@ -436,7 +428,7 @@
     "faces_after": 158,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 4
+    "flipped_normals": 0
    },
    "TRN_StairPass_03-col": {
     "merged_verts": 4,
@@ -444,7 +436,7 @@
     "faces_after": 122,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 2
+    "flipped_normals": 0
    },
    "TRN_StairPass_03_Repair": {
     "merged_verts": 4,
@@ -452,7 +444,7 @@
     "faces_after": 36,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 2
+    "flipped_normals": 0
    },
    "TRN_StairPass_04-col": {
     "merged_verts": 6,
@@ -460,7 +452,7 @@
     "faces_after": 146,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 2
+    "flipped_normals": 0
    },
    "TRN_StairPass_05-col": {
     "merged_verts": 4,
@@ -468,7 +460,7 @@
     "faces_after": 132,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 2
+    "flipped_normals": 0
    },
    "TRN_StairPass_06-col": {
     "merged_verts": 6,
@@ -476,7 +468,7 @@
     "faces_after": 146,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 2
+    "flipped_normals": 0
    },
    "TRN_StairPass_07-col": {
     "merged_verts": 6,
@@ -484,7 +476,7 @@
     "faces_after": 146,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 2
+    "flipped_normals": 0
    },
    "TRN_StairPass_08-col": {
     "merged_verts": 6,
@@ -492,7 +484,7 @@
     "faces_after": 134,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 2
+    "flipped_normals": 0
    },
    "TRN_StairPass_08_Repair": {
     "merged_verts": 2,
@@ -508,7 +500,7 @@
     "faces_after": 146,
     "interior_faces": 0,
     "hidden_bottom_faces": 0,
-    "flipped_normals": 2
+    "flipped_normals": 0
    },
    "TRN_StairPass_10-col": {
     "merged_verts": 2,
@@ -1215,8 +1207,8 @@
     },
     "cliffs": {
      "LOD0": 210,
-     "LOD1": 204,
-     "LOD2": 204
+     "LOD1": 104,
+     "LOD2": 96
     },
     "rocks": [],
     "total_LOD0": 383
@@ -1229,8 +1221,8 @@
     },
     "cliffs": {
      "LOD0": 614,
-     "LOD1": 610,
-     "LOD2": 610
+     "LOD1": 306,
+     "LOD2": 114
     },
     "rocks": [],
     "total_LOD0": 907
@@ -1243,8 +1235,8 @@
     },
     "cliffs": {
      "LOD0": 646,
-     "LOD1": 646,
-     "LOD2": 646
+     "LOD1": 322,
+     "LOD2": 108
     },
     "rocks": [],
     "total_LOD0": 958
@@ -1257,8 +1249,8 @@
     },
     "cliffs": {
      "LOD0": 612,
-     "LOD1": 602,
-     "LOD2": 602
+     "LOD1": 306,
+     "LOD2": 106
     },
     "rocks": [],
     "total_LOD0": 905
@@ -1271,8 +1263,8 @@
     },
     "cliffs": {
      "LOD0": 150,
-     "LOD1": 148,
-     "LOD2": 148
+     "LOD1": 92,
+     "LOD2": 92
     },
     "rocks": [],
     "total_LOD0": 323
@@ -1313,8 +1305,8 @@
     },
     "cliffs": {
      "LOD0": 493,
-     "LOD1": 481,
-     "LOD2": 481
+     "LOD1": 245,
+     "LOD2": 121
     },
     "rocks": [],
     "total_LOD0": 773
@@ -1327,8 +1319,8 @@
     },
     "cliffs": {
      "LOD0": 696,
-     "LOD1": 688,
-     "LOD2": 688
+     "LOD1": 348,
+     "LOD2": 124
     },
     "rocks": [],
     "total_LOD0": 1289
@@ -1341,8 +1333,8 @@
     },
     "cliffs": {
      "LOD0": 554,
-     "LOD1": 550,
-     "LOD2": 550
+     "LOD1": 276,
+     "LOD2": 124
     },
     "rocks": [],
     "total_LOD0": 1250
@@ -1355,8 +1347,8 @@
     },
     "cliffs": {
      "LOD0": 75,
-     "LOD1": 75,
-     "LOD2": 75
+     "LOD1": 45,
+     "LOD2": 45
     },
     "rocks": [],
     "total_LOD0": 777
@@ -1378,8 +1370,8 @@
     },
     "cliffs": {
      "LOD0": 67,
-     "LOD1": 67,
-     "LOD2": 67
+     "LOD1": 41,
+     "LOD2": 41
     },
     "rocks": [],
     "total_LOD0": 769
@@ -1392,8 +1384,8 @@
     },
     "cliffs": {
      "LOD0": 609,
-     "LOD1": 609,
-     "LOD2": 609
+     "LOD1": 303,
+     "LOD2": 123
     },
     "rocks": [
      "EXT_Rock_02"
@@ -1408,8 +1400,8 @@
     },
     "cliffs": {
      "LOD0": 707,
-     "LOD1": 705,
-     "LOD2": 705
+     "LOD1": 353,
+     "LOD2": 121
     },
     "rocks": [],
     "total_LOD0": 1300
@@ -1422,8 +1414,8 @@
     },
     "cliffs": {
      "LOD0": 492,
-     "LOD1": 492,
-     "LOD2": 492
+     "LOD1": 246,
+     "LOD2": 126
     },
     "rocks": [],
     "total_LOD0": 773
@@ -1464,8 +1456,8 @@
     },
     "cliffs": {
      "LOD0": 733,
-     "LOD1": 731,
-     "LOD2": 731
+     "LOD1": 365,
+     "LOD2": 127
     },
     "rocks": [],
     "total_LOD0": 1213
@@ -1478,8 +1470,8 @@
     },
     "cliffs": {
      "LOD0": 354,
-     "LOD1": 350,
-     "LOD2": 350
+     "LOD1": 176,
+     "LOD2": 108
     },
     "rocks": [],
     "total_LOD0": 1060
@@ -1557,8 +1549,8 @@
     },
     "cliffs": {
      "LOD0": 360,
-     "LOD1": 360,
-     "LOD2": 360
+     "LOD1": 180,
+     "LOD2": 112
     },
     "rocks": [],
     "total_LOD0": 1065
@@ -1571,8 +1563,8 @@
     },
     "cliffs": {
      "LOD0": 741,
-     "LOD1": 735,
-     "LOD2": 735
+     "LOD1": 369,
+     "LOD2": 127
     },
     "rocks": [],
     "total_LOD0": 1221
@@ -1613,8 +1605,8 @@
     },
     "cliffs": {
      "LOD0": 726,
-     "LOD1": 718,
-     "LOD2": 718
+     "LOD1": 362,
+     "LOD2": 130
     },
     "rocks": [],
     "total_LOD0": 1200
@@ -1627,8 +1619,8 @@
     },
     "cliffs": {
      "LOD0": 193,
-     "LOD1": 193,
-     "LOD2": 193
+     "LOD1": 99,
+     "LOD2": 99
     },
     "rocks": [],
     "total_LOD0": 883
@@ -1724,8 +1716,8 @@
     },
     "cliffs": {
      "LOD0": 176,
-     "LOD1": 176,
-     "LOD2": 176
+     "LOD1": 88,
+     "LOD2": 86
     },
     "rocks": [],
     "total_LOD0": 866
@@ -1738,8 +1730,8 @@
     },
     "cliffs": {
      "LOD0": 735,
-     "LOD1": 727,
-     "LOD2": 727
+     "LOD1": 367,
+     "LOD2": 125
     },
     "rocks": [],
     "total_LOD0": 1209
@@ -1766,8 +1758,8 @@
     },
     "cliffs": {
      "LOD0": 473,
-     "LOD1": 469,
-     "LOD2": 469
+     "LOD1": 235,
+     "LOD2": 117
     },
     "rocks": [],
     "total_LOD0": 758
@@ -1780,8 +1772,8 @@
     },
     "cliffs": {
      "LOD0": 368,
-     "LOD1": 366,
-     "LOD2": 366
+     "LOD1": 184,
+     "LOD2": 102
     },
     "rocks": [],
     "total_LOD0": 1068
@@ -1895,8 +1887,8 @@
     },
     "cliffs": {
      "LOD0": 363,
-     "LOD1": 363,
-     "LOD2": 363
+     "LOD1": 181,
+     "LOD2": 105
     },
     "rocks": [],
     "total_LOD0": 1063
@@ -1909,8 +1901,8 @@
     },
     "cliffs": {
      "LOD0": 483,
-     "LOD1": 477,
-     "LOD2": 477
+     "LOD1": 241,
+     "LOD2": 129
     },
     "rocks": [],
     "total_LOD0": 768
@@ -1937,8 +1929,8 @@
     },
     "cliffs": {
      "LOD0": 700,
-     "LOD1": 692,
-     "LOD2": 692
+     "LOD1": 350,
+     "LOD2": 118
     },
     "rocks": [],
     "total_LOD0": 1293
@@ -2045,8 +2037,8 @@
     },
     "cliffs": {
      "LOD0": 705,
-     "LOD1": 697,
-     "LOD2": 697
+     "LOD1": 351,
+     "LOD2": 123
     },
     "rocks": [],
     "total_LOD0": 1298
@@ -2073,8 +2065,8 @@
     },
     "cliffs": {
      "LOD0": 199,
-     "LOD1": 199,
-     "LOD2": 199
+     "LOD1": 99,
+     "LOD2": 97
     },
     "rocks": [],
     "total_LOD0": 371
@@ -2087,8 +2079,8 @@
     },
     "cliffs": {
      "LOD0": 560,
-     "LOD1": 560,
-     "LOD2": 560
+     "LOD1": 280,
+     "LOD2": 116
     },
     "rocks": [],
     "total_LOD0": 1248
@@ -2173,8 +2165,8 @@
     },
     "cliffs": {
      "LOD0": 592,
-     "LOD1": 592,
-     "LOD2": 592
+     "LOD1": 296,
+     "LOD2": 122
     },
     "rocks": [],
     "total_LOD0": 1281
@@ -2187,8 +2179,8 @@
     },
     "cliffs": {
      "LOD0": 173,
-     "LOD1": 171,
-     "LOD2": 171
+     "LOD1": 95,
+     "LOD2": 95
     },
     "rocks": [],
     "total_LOD0": 345
@@ -2201,8 +2193,8 @@
     },
     "cliffs": {
      "LOD0": 639,
-     "LOD1": 637,
-     "LOD2": 637
+     "LOD1": 319,
+     "LOD2": 113
     },
     "rocks": [],
     "total_LOD0": 934
@@ -2215,8 +2207,8 @@
     },
     "cliffs": {
      "LOD0": 34,
-     "LOD1": 34,
-     "LOD2": 34
+     "LOD1": 28,
+     "LOD2": 28
     },
     "rocks": [],
     "total_LOD0": 716
@@ -2283,8 +2275,8 @@
     },
     "cliffs": {
      "LOD0": 63,
-     "LOD1": 63,
-     "LOD2": 63
+     "LOD1": 39,
+     "LOD2": 39
     },
     "rocks": [],
     "total_LOD0": 745
@@ -2297,8 +2289,8 @@
     },
     "cliffs": {
      "LOD0": 618,
-     "LOD1": 616,
-     "LOD2": 616
+     "LOD1": 308,
+     "LOD2": 108
     },
     "rocks": [],
     "total_LOD0": 913
@@ -2311,8 +2303,8 @@
     },
     "cliffs": {
      "LOD0": 646,
-     "LOD1": 642,
-     "LOD2": 642
+     "LOD1": 322,
+     "LOD2": 108
     },
     "rocks": [],
     "total_LOD0": 961
@@ -2402,8 +2394,8 @@
     },
     "cliffs": {
      "LOD0": 646,
-     "LOD1": 646,
-     "LOD2": 646
+     "LOD1": 322,
+     "LOD2": 108
     },
     "rocks": [],
     "total_LOD0": 961
@@ -2416,8 +2408,8 @@
     },
     "cliffs": {
      "LOD0": 634,
-     "LOD1": 630,
-     "LOD2": 630
+     "LOD1": 316,
+     "LOD2": 114
     },
     "rocks": [],
     "total_LOD0": 921
@@ -2430,8 +2422,8 @@
     },
     "cliffs": {
      "LOD0": 49,
-     "LOD1": 49,
-     "LOD2": 49
+     "LOD1": 37,
+     "LOD2": 37
     },
     "rocks": [],
     "total_LOD0": 737
@@ -2500,8 +2492,8 @@
     },
     "cliffs": {
      "LOD0": 55,
-     "LOD1": 55,
-     "LOD2": 55
+     "LOD1": 37,
+     "LOD2": 37
     },
     "rocks": [],
     "total_LOD0": 743
@@ -2514,8 +2506,8 @@
     },
     "cliffs": {
      "LOD0": 624,
-     "LOD1": 618,
-     "LOD2": 618
+     "LOD1": 312,
+     "LOD2": 110
     },
     "rocks": [],
     "total_LOD0": 911
@@ -2528,8 +2520,8 @@
     },
     "cliffs": {
      "LOD0": 212,
-     "LOD1": 212,
-     "LOD2": 212
+     "LOD1": 106,
+     "LOD2": 98
     },
     "rocks": [],
     "total_LOD0": 387
@@ -2542,8 +2534,8 @@
     },
     "cliffs": {
      "LOD0": 557,
-     "LOD1": 553,
-     "LOD2": 553
+     "LOD1": 277,
+     "LOD2": 121
     },
     "rocks": [],
     "total_LOD0": 1253
@@ -2630,8 +2622,8 @@
     },
     "cliffs": {
      "LOD0": 577,
-     "LOD1": 575,
-     "LOD2": 575
+     "LOD1": 287,
+     "LOD2": 119
     },
     "rocks": [],
     "total_LOD0": 1273
@@ -2644,8 +2636,8 @@
     },
     "cliffs": {
      "LOD0": 186,
-     "LOD1": 180,
-     "LOD2": 180
+     "LOD1": 102,
+     "LOD2": 102
     },
     "rocks": [],
     "total_LOD0": 361
@@ -2672,8 +2664,8 @@
     },
     "cliffs": {
      "LOD0": 695,
-     "LOD1": 687,
-     "LOD2": 687
+     "LOD1": 347,
+     "LOD2": 121
     },
     "rocks": [],
     "total_LOD0": 1286
@@ -2780,8 +2772,8 @@
     },
     "cliffs": {
      "LOD0": 703,
-     "LOD1": 693,
-     "LOD2": 693
+     "LOD1": 351,
+     "LOD2": 121
     },
     "rocks": [],
     "total_LOD0": 1294
@@ -2808,8 +2800,8 @@
     },
     "cliffs": {
      "LOD0": 488,
-     "LOD1": 488,
-     "LOD2": 488
+     "LOD1": 244,
+     "LOD2": 112
     },
     "rocks": [],
     "total_LOD0": 767
@@ -2822,8 +2814,8 @@
     },
     "cliffs": {
      "LOD0": 351,
-     "LOD1": 351,
-     "LOD2": 351
+     "LOD1": 175,
+     "LOD2": 101
     },
     "rocks": [
      "EXT_Rock_16"
@@ -2937,8 +2929,8 @@
     },
     "cliffs": {
      "LOD0": 377,
-     "LOD1": 377,
-     "LOD2": 377
+     "LOD1": 187,
+     "LOD2": 103
     },
     "rocks": [],
     "total_LOD0": 1083
@@ -2951,8 +2943,8 @@
     },
     "cliffs": {
      "LOD0": 462,
-     "LOD1": 462,
-     "LOD2": 462
+     "LOD1": 230,
+     "LOD2": 116
     },
     "rocks": [],
     "total_LOD0": 741
@@ -2979,8 +2971,8 @@
     },
     "cliffs": {
      "LOD0": 733,
-     "LOD1": 729,
-     "LOD2": 729
+     "LOD1": 365,
+     "LOD2": 127
     },
     "rocks": [],
     "total_LOD0": 1213
@@ -2993,8 +2985,8 @@
     },
     "cliffs": {
      "LOD0": 191,
-     "LOD1": 191,
-     "LOD2": 191
+     "LOD1": 99,
+     "LOD2": 99
     },
     "rocks": [],
     "total_LOD0": 885
@@ -3092,8 +3084,8 @@
     },
     "cliffs": {
      "LOD0": 206,
-     "LOD1": 206,
-     "LOD2": 206
+     "LOD1": 102,
+     "LOD2": 92
     },
     "rocks": [],
     "total_LOD0": 900
@@ -3106,8 +3098,8 @@
     },
     "cliffs": {
      "LOD0": 717,
-     "LOD1": 709,
-     "LOD2": 709
+     "LOD1": 357,
+     "LOD2": 123
     },
     "rocks": [],
     "total_LOD0": 1197
@@ -3148,8 +3140,8 @@
     },
     "cliffs": {
      "LOD0": 721,
-     "LOD1": 715,
-     "LOD2": 715
+     "LOD1": 359,
+     "LOD2": 127
     },
     "rocks": [],
     "total_LOD0": 1205
@@ -3162,8 +3154,8 @@
     },
     "cliffs": {
      "LOD0": 371,
-     "LOD1": 369,
-     "LOD2": 369
+     "LOD1": 185,
+     "LOD2": 97
     },
     "rocks": [],
     "total_LOD0": 1072
@@ -3241,8 +3233,8 @@
     },
     "cliffs": {
      "LOD0": 368,
-     "LOD1": 368,
-     "LOD2": 368
+     "LOD1": 184,
+     "LOD2": 94
     },
     "rocks": [],
     "total_LOD0": 1070
@@ -3255,8 +3247,8 @@
     },
     "cliffs": {
      "LOD0": 717,
-     "LOD1": 707,
-     "LOD2": 707
+     "LOD1": 357,
+     "LOD2": 127
     },
     "rocks": [],
     "total_LOD0": 1201
@@ -3297,8 +3289,8 @@
     },
     "cliffs": {
      "LOD0": 468,
-     "LOD1": 466,
-     "LOD2": 466
+     "LOD1": 234,
+     "LOD2": 120
     },
     "rocks": [],
     "total_LOD0": 743
@@ -3311,8 +3303,8 @@
     },
     "cliffs": {
      "LOD0": 699,
-     "LOD1": 691,
-     "LOD2": 691
+     "LOD1": 349,
+     "LOD2": 117
     },
     "rocks": [],
     "total_LOD0": 1292
@@ -3325,8 +3317,8 @@
     },
     "cliffs": {
      "LOD0": 581,
-     "LOD1": 581,
-     "LOD2": 581
+     "LOD1": 289,
+     "LOD2": 121
     },
     "rocks": [],
     "total_LOD0": 1273
@@ -3339,8 +3331,8 @@
     },
     "cliffs": {
      "LOD0": 44,
-     "LOD1": 44,
-     "LOD2": 44
+     "LOD1": 34,
+     "LOD2": 34
     },
     "rocks": [],
     "total_LOD0": 746
@@ -3362,8 +3354,8 @@
     },
     "cliffs": {
      "LOD0": 56,
-     "LOD1": 56,
-     "LOD2": 56
+     "LOD1": 42,
+     "LOD2": 42
     },
     "rocks": [],
     "total_LOD0": 758
@@ -3376,8 +3368,8 @@
     },
     "cliffs": {
      "LOD0": 599,
-     "LOD1": 593,
-     "LOD2": 593
+     "LOD1": 299,
+     "LOD2": 119
     },
     "rocks": [],
     "total_LOD0": 1291
@@ -3390,8 +3382,8 @@
     },
     "cliffs": {
      "LOD0": 703,
-     "LOD1": 697,
-     "LOD2": 697
+     "LOD1": 351,
+     "LOD2": 125
     },
     "rocks": [],
     "total_LOD0": 1296
@@ -3404,8 +3396,8 @@
     },
     "cliffs": {
      "LOD0": 471,
-     "LOD1": 469,
-     "LOD2": 469
+     "LOD1": 235,
+     "LOD2": 117
     },
     "rocks": [],
     "total_LOD0": 745
@@ -3446,8 +3438,8 @@
     },
     "cliffs": {
      "LOD0": 189,
-     "LOD1": 189,
-     "LOD2": 189
+     "LOD1": 105,
+     "LOD2": 105
     },
     "rocks": [],
     "total_LOD0": 364
@@ -3460,8 +3452,8 @@
     },
     "cliffs": {
      "LOD0": 626,
-     "LOD1": 626,
-     "LOD2": 626
+     "LOD1": 312,
+     "LOD2": 106
     },
     "rocks": [],
     "total_LOD0": 919
@@ -3474,8 +3466,8 @@
     },
     "cliffs": {
      "LOD0": 646,
-     "LOD1": 638,
-     "LOD2": 638
+     "LOD1": 322,
+     "LOD2": 108
     },
     "rocks": [],
     "total_LOD0": 958
@@ -3488,8 +3480,8 @@
     },
     "cliffs": {
      "LOD0": 627,
-     "LOD1": 619,
-     "LOD2": 619
+     "LOD1": 313,
+     "LOD2": 111
     },
     "rocks": [],
     "total_LOD0": 920
@@ -3502,8 +3494,8 @@
     },
     "cliffs": {
      "LOD0": 156,
-     "LOD1": 154,
-     "LOD2": 154
+     "LOD1": 92,
+     "LOD2": 92
     },
     "rocks": [],
     "total_LOD0": 331
@@ -4343,7 +4335,7 @@
  "master_blend": "blender/concordia_master_v11.blend",
  "files": {
   "concordia_terrain_plaza.glb": {
-   "bytes": 7972576,
+   "bytes": 7973920,
    "mb": 7.6,
    "objects": 81,
    "nodes": 81,
@@ -4373,8 +4365,8 @@
    "empties": 0
   },
   "concordia_terrain_oficios.glb": {
-   "bytes": 8463792,
-   "mb": 8.07,
+   "bytes": 8482936,
+   "mb": 8.09,
    "objects": 76,
    "nodes": 76,
    "meshes": 76,
@@ -4403,7 +4395,7 @@
    "empties": 0
   },
   "concordia_terrain_razas.glb": {
-   "bytes": 4768844,
+   "bytes": 4770860,
    "mb": 4.55,
    "objects": 49,
    "nodes": 49,
@@ -4418,8 +4410,8 @@
    "empties": 0
   },
   "concordia_terrain_moradas.glb": {
-   "bytes": 20498960,
-   "mb": 19.55,
+   "bytes": 20517968,
+   "mb": 19.57,
    "objects": 145,
    "nodes": 145,
    "meshes": 145,
@@ -4433,12 +4425,12 @@
    "empties": 0
   },
   "concordia_terrain_exterior.glb": {
-   "bytes": 19881540,
-   "mb": 18.96,
+   "bytes": 16391692,
+   "mb": 15.63,
    "objects": 905,
    "nodes": 905,
    "meshes": 905,
-   "tris": 325104,
+   "tris": 283562,
    "materials": 3,
    "images": 9,
    "images_external": 9,
@@ -4493,7 +4485,7 @@
    "empties": 531
   }
  },
- "tris_total_all_files": 1463299,
+ "tris_total_all_files": 1421757,
  "superseded_removed": [
   "concordia_terrain.glb",
   "concordia_terrain_structures.glb",
@@ -4504,5 +4496,5 @@
   "concordia_exterior.glb",
   "concordia_wall_kit_lods.glb"
  ],
- "master_blend_mb": 63.1
+ "master_blend_mb": 63.4
 }
