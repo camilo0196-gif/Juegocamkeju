@@ -1,12 +1,114 @@
 {
+ "_rock_test": {
+  "chosen": "rock_boulder_dry",
+  "candidates": {
+   "rock_boulder_dry": {
+    "width_m": 1.8,
+    "seam_ratio_x_y": [
+     0.76,
+     0.98
+    ],
+    "sat_original_p95_mean": [
+     0.245,
+     0.165
+    ],
+    "luminance_std_desaturated": 0.092,
+    "criteria": {
+     "desatura_a_gris": true,
+     "tileable_3x3": true,
+     "ancho_1_5_a_4_m": true
+    },
+    "pass": true
+   },
+   "rock_boulder_cracked": {
+    "width_m": 1.39,
+    "seam_ratio_x_y": [
+     1.04,
+     0.92
+    ],
+    "sat_original_p95_mean": [
+     0.479,
+     0.399
+    ],
+    "luminance_std_desaturated": 0.099,
+    "criteria": {
+     "desatura_a_gris": true,
+     "tileable_3x3": true,
+     "ancho_1_5_a_4_m": false
+    },
+    "pass": false
+   }
+  }
+ },
+ "MAT_Limestone_Worn": {
+  "asset": "stone_wall_02",
+  "id": "stone_wall_02",
+  "name": "Stone Wall 02",
+  "url": "https://polyhaven.com/a/stone_wall_02",
+  "authors": [
+   "Dario Barresi",
+   "Charlotte Baglioni"
+  ],
+  "license": "CC0 (https://polyhaven.com/license)",
+  "resolution": "2k",
+  "pixels": [
+   2048,
+   2048
+  ],
+  "dimensions_m": [
+   2.0,
+   2.0
+  ],
+  "uv_scale": [
+   0.5,
+   0.5
+  ],
+  "source_files": {
+   "Diffuse": "textures/concordia/polyhaven_src/stone_wall_02/stone_wall_02_Diffuse_2k.jpg",
+   "nor_gl": "textures/concordia/polyhaven_src/stone_wall_02/stone_wall_02_nor_gl_2k.jpg",
+   "Rough": "textures/concordia/polyhaven_src/stone_wall_02/stone_wall_02_Rough_2k.jpg",
+   "AO": "textures/concordia/polyhaven_src/stone_wall_02/stone_wall_02_AO_2k.jpg"
+  },
+  "source_urls": {
+   "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/stone_wall_02/stone_wall_02_diff_2k.jpg",
+   "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/stone_wall_02/stone_wall_02_nor_gl_2k.jpg",
+   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/stone_wall_02/stone_wall_02_rough_2k.jpg",
+   "AO": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/stone_wall_02/stone_wall_02_ao_2k.jpg"
+  },
+  "albedo": "textures/concordia/MAT_Limestone_Worn/concordia_limestone_worn_albedo.png",
+  "orm": "textures/concordia/MAT_Limestone_Worn/concordia_limestone_worn_orm.png",
+  "normal": "textures/concordia/polyhaven_src/stone_wall_02/stone_wall_02_nor_gl_2k.jpg",
+  "hue_saturation_value": {
+   "hue": 0.5331,
+   "saturation": 0.5293,
+   "value": 2.0767,
+   "fac": 1.0,
+   "note": "nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo"
+  },
+  "albedo_target_mean": "#C3B9A8",
+  "albedo_result_mean": "#C3B9A8",
+  "sat_p95_mean": [
+   0.172,
+   0.138
+  ],
+  "sat_cap_p95": 0.22,
+  "orm_channels": {
+   "R": "AO de Poly Haven",
+   "G": "roughness (0.75, 0.93)",
+   "B": "0.0"
+  }
+ },
  "MAT_Cobble_Concordia": {
   "asset": "cobblestone_floor_001",
+  "id": "cobblestone_floor_001",
   "name": "Cobblestone Floor 001",
-  "authors": {
-   "Rob Tuytel": "All"
-  },
-  "license": "CC0",
-  "resolution": [
+  "url": "https://polyhaven.com/a/cobblestone_floor_001",
+  "authors": [
+   "Rob Tuytel"
+  ],
+  "license": "CC0 (https://polyhaven.com/license)",
+  "resolution": "2k",
+  "pixels": [
    2048,
    2048
   ],
@@ -18,30 +120,221 @@
    0.41667,
    0.41667
   ],
-  "files": {
+  "source_files": {
+   "Diffuse": "textures/concordia/polyhaven_src/cobblestone_floor_001/cobblestone_floor_001_Diffuse_2k.jpg",
+   "nor_gl": "textures/concordia/polyhaven_src/cobblestone_floor_001/cobblestone_floor_001_nor_gl_2k.jpg",
+   "Rough": "textures/concordia/polyhaven_src/cobblestone_floor_001/cobblestone_floor_001_Rough_2k.jpg"
+  },
+  "source_urls": {
    "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/cobblestone_floor_001/cobblestone_floor_001_diff_2k.jpg",
    "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/cobblestone_floor_001/cobblestone_floor_001_nor_gl_2k.jpg",
    "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/cobblestone_floor_001/cobblestone_floor_001_rough_2k.jpg"
   },
-  "albedo_target": "#ADA393",
-  "gray_mix": 0.55,
-  "roughness": [
-   0.72,
-   0.94
-  ],
+  "albedo": "textures/concordia/MAT_Cobble_Concordia/concordia_cobble_concordia_albedo.png",
+  "orm": "textures/concordia/MAT_Cobble_Concordia/concordia_cobble_concordia_orm.png",
+  "normal": "textures/concordia/polyhaven_src/cobblestone_floor_001/cobblestone_floor_001_nor_gl_2k.jpg",
+  "hue_saturation_value": {
+   "hue": 0.4786,
+   "saturation": 0.816,
+   "value": 1.4214,
+   "fac": 1.0,
+   "note": "nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo"
+  },
+  "albedo_target_mean": "#ADA393",
+  "albedo_result_mean": "#ADA69A",
   "sat_p95_mean": [
-   0.219,
+   0.242,
+   0.114
+  ],
+  "sat_cap_p95": 0.24,
+  "orm_channels": {
+   "R": "1.0",
+   "G": "roughness (0.72, 0.94)",
+   "B": "0.0"
+  }
+ },
+ "MAT_Plaza_Slab": {
+  "asset": "floor_tiles_02",
+  "id": "floor_tiles_02",
+  "name": "Floor Tiles 02",
+  "url": "https://polyhaven.com/a/floor_tiles_02",
+  "authors": [
+   "Rob Tuytel"
+  ],
+  "license": "CC0 (https://polyhaven.com/license)",
+  "resolution": "2k",
+  "pixels": [
+   2048,
+   2048
+  ],
+  "dimensions_m": [
+   4.0,
+   4.0
+  ],
+  "uv_scale": [
+   0.25,
+   0.25
+  ],
+  "source_files": {
+   "Diffuse": "textures/concordia/polyhaven_src/floor_tiles_02/floor_tiles_02_Diffuse_2k.jpg",
+   "nor_gl": "textures/concordia/polyhaven_src/floor_tiles_02/floor_tiles_02_nor_gl_2k.jpg",
+   "Rough": "textures/concordia/polyhaven_src/floor_tiles_02/floor_tiles_02_Rough_2k.jpg",
+   "AO": "textures/concordia/polyhaven_src/floor_tiles_02/floor_tiles_02_AO_2k.jpg"
+  },
+  "source_urls": {
+   "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/floor_tiles_02/floor_tiles_02_diff_2k.jpg",
+   "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/floor_tiles_02/floor_tiles_02_nor_gl_2k.jpg",
+   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/floor_tiles_02/floor_tiles_02_rough_2k.jpg",
+   "AO": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/floor_tiles_02/floor_tiles_02_ao_2k.jpg"
+  },
+  "albedo": "textures/concordia/MAT_Plaza_Slab/concordia_plaza_slab_albedo.png",
+  "orm": "textures/concordia/MAT_Plaza_Slab/concordia_plaza_slab_orm.png",
+  "normal": "textures/concordia/polyhaven_src/floor_tiles_02/floor_tiles_02_nor_gl_2k.jpg",
+  "hue_saturation_value": {
+   "hue": 0.5074,
+   "saturation": 0.4912,
+   "value": 1.1366,
+   "fac": 1.0,
+   "note": "nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo"
+  },
+  "albedo_target_mean": "#B4ADA2",
+  "albedo_result_mean": "#B4ADA2",
+  "sat_p95_mean": [
+   0.137,
+   0.1
+  ],
+  "sat_cap_p95": 0.16,
+  "orm_channels": {
+   "R": "AO de Poly Haven",
+   "G": "roughness (0.76, 0.94)",
+   "B": "0.0"
+  }
+ },
+ "MAT_Plaza_Slab_Travertino": {
+  "asset": "marble_01",
+  "id": "marble_01",
+  "name": "Marble 01",
+  "url": "https://polyhaven.com/a/marble_01",
+  "authors": [
+   "Rob Tuytel"
+  ],
+  "license": "CC0 (https://polyhaven.com/license)",
+  "resolution": "2k",
+  "pixels": [
+   2048,
+   2048
+  ],
+  "dimensions_m": [
+   1.5,
+   1.5
+  ],
+  "uv_scale": [
+   0.66667,
+   0.66667
+  ],
+  "source_files": {
+   "Diffuse": "textures/concordia/polyhaven_src/marble_01/marble_01_Diffuse_2k.jpg",
+   "nor_gl": "textures/concordia/polyhaven_src/marble_01/marble_01_nor_gl_2k.jpg",
+   "Rough": "textures/concordia/polyhaven_src/marble_01/marble_01_Rough_2k.jpg",
+   "AO": "textures/concordia/polyhaven_src/marble_01/marble_01_AO_2k.jpg"
+  },
+  "source_urls": {
+   "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_01/marble_01_diff_2k.jpg",
+   "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_01/marble_01_nor_gl_2k.jpg",
+   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_01/marble_01_rough_2k.jpg",
+   "AO": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_01/marble_01_ao_2k.jpg"
+  },
+  "albedo": "textures/concordia/MAT_Plaza_Slab_Travertino/concordia_plaza_slab_travertino_albedo.png",
+  "orm": "textures/concordia/MAT_Plaza_Slab_Travertino/concordia_plaza_slab_travertino_orm.png",
+  "normal": "textures/concordia/polyhaven_src/marble_01/marble_01_nor_gl_2k.jpg",
+  "hue_saturation_value": {
+   "hue": 0.5076,
+   "saturation": 0.474,
+   "value": 1.1669,
+   "fac": 1.0,
+   "note": "nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo"
+  },
+  "albedo_target_mean": "#CFC5B0",
+  "albedo_result_mean": "#CFC5B0",
+  "sat_p95_mean": [
+   0.17,
    0.15
-  ]
+  ],
+  "sat_cap_p95": 0.22,
+  "orm_channels": {
+   "R": "AO de Poly Haven",
+   "G": "roughness (0.74, 0.94)",
+   "B": "0.0"
+  }
+ },
+ "MAT_Wall_Gray": {
+  "asset": "castle_wall_slates",
+  "id": "castle_wall_slates",
+  "name": "Castle Wall Slates",
+  "url": "https://polyhaven.com/a/castle_wall_slates",
+  "authors": [
+   "Rob Tuytel"
+  ],
+  "license": "CC0 (https://polyhaven.com/license)",
+  "resolution": "2k",
+  "pixels": [
+   2048,
+   2048
+  ],
+  "dimensions_m": [
+   2.5,
+   2.5
+  ],
+  "uv_scale": [
+   0.4,
+   0.4
+  ],
+  "source_files": {
+   "Diffuse": "textures/concordia/polyhaven_src/castle_wall_slates/castle_wall_slates_Diffuse_2k.jpg",
+   "nor_gl": "textures/concordia/polyhaven_src/castle_wall_slates/castle_wall_slates_nor_gl_2k.jpg",
+   "Rough": "textures/concordia/polyhaven_src/castle_wall_slates/castle_wall_slates_Rough_2k.jpg",
+   "AO": "textures/concordia/polyhaven_src/castle_wall_slates/castle_wall_slates_AO_2k.jpg"
+  },
+  "source_urls": {
+   "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/castle_wall_slates/castle_wall_slates_diff_2k.jpg",
+   "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/castle_wall_slates/castle_wall_slates_nor_gl_2k.jpg",
+   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/castle_wall_slates/castle_wall_slates_rough_2k.jpg",
+   "AO": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/castle_wall_slates/castle_wall_slates_ao_2k.jpg"
+  },
+  "albedo": "textures/concordia/MAT_Wall_Gray/concordia_wall_gray_albedo.png",
+  "orm": "textures/concordia/MAT_Wall_Gray/concordia_wall_gray_orm.png",
+  "normal": "textures/concordia/polyhaven_src/castle_wall_slates/castle_wall_slates_nor_gl_2k.jpg",
+  "hue_saturation_value": {
+   "hue": 0.5076,
+   "saturation": 0.1471,
+   "value": 1.0137,
+   "fac": 1.0,
+   "note": "nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo"
+  },
+  "albedo_target_mean": "#8C8A85",
+  "albedo_result_mean": "#8C8A87",
+  "sat_p95_mean": [
+   0.08,
+   0.042
+  ],
+  "sat_cap_p95": 0.08,
+  "orm_channels": {
+   "R": "AO de Poly Haven",
+   "G": "roughness (0.78, 0.95)",
+   "B": "0.0"
+  }
  },
  "MAT_Ground_Cracked": {
   "asset": "sandstone_cracks",
+  "id": "sandstone_cracks",
   "name": "Sandstone Cracks",
-  "authors": {
-   "Rob Tuytel": "All"
-  },
-  "license": "CC0",
-  "resolution": [
+  "url": "https://polyhaven.com/a/sandstone_cracks",
+  "authors": [
+   "Rob Tuytel"
+  ],
+  "license": "CC0 (https://polyhaven.com/license)",
+  "resolution": "2k",
+  "pixels": [
    2048,
    2048
   ],
@@ -53,66 +346,52 @@
    0.5,
    0.5
   ],
-  "files": {
+  "source_files": {
+   "Diffuse": "textures/concordia/polyhaven_src/sandstone_cracks/sandstone_cracks_Diffuse_2k.jpg",
+   "nor_gl": "textures/concordia/polyhaven_src/sandstone_cracks/sandstone_cracks_nor_gl_2k.jpg",
+   "Rough": "textures/concordia/polyhaven_src/sandstone_cracks/sandstone_cracks_Rough_2k.jpg",
+   "AO": "textures/concordia/polyhaven_src/sandstone_cracks/sandstone_cracks_AO_2k.jpg"
+  },
+  "source_urls": {
    "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/sandstone_cracks/sandstone_cracks_diff_2k.jpg",
    "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/sandstone_cracks/sandstone_cracks_nor_gl_2k.jpg",
-   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/sandstone_cracks/sandstone_cracks_rough_2k.jpg"
+   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/sandstone_cracks/sandstone_cracks_rough_2k.jpg",
+   "AO": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/sandstone_cracks/sandstone_cracks_ao_2k.jpg"
   },
-  "albedo_target": "#A49A88",
-  "gray_mix": 0.6,
-  "roughness": [
-   0.8,
-   0.95
-  ],
+  "albedo": "textures/concordia/MAT_Ground_Cracked/concordia_ground_cracked_albedo.png",
+  "orm": "textures/concordia/MAT_Ground_Cracked/concordia_ground_cracked_orm.png",
+  "normal": "textures/concordia/polyhaven_src/sandstone_cracks/sandstone_cracks_nor_gl_2k.jpg",
+  "hue_saturation_value": {
+   "hue": 0.5264,
+   "saturation": 0.3783,
+   "value": 0.7842,
+   "fac": 1.0,
+   "note": "nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo"
+  },
+  "albedo_target_mean": "#A49A88",
+  "albedo_result_mean": "#A49A88",
   "sat_p95_mean": [
-   0.233,
+   0.213,
    0.171
-  ]
- },
- "MAT_Rock_Gray": {
-  "asset": "rock_boulder_cracked",
-  "name": "Rock Boulder Cracked",
-  "authors": {
-   "Dario Barresi": "Processing",
-   "Dimitrios Savva": "Photography"
-  },
-  "license": "CC0",
-  "resolution": [
-   2048,
-   2048
   ],
-  "dimensions_m": [
-   1.39,
-   1.39
-  ],
-  "uv_scale": [
-   0.71942,
-   0.71942
-  ],
-  "files": {
-   "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rock_boulder_cracked/rock_boulder_cracked_diff_2k.jpg",
-   "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rock_boulder_cracked/rock_boulder_cracked_nor_gl_2k.jpg",
-   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rock_boulder_cracked/rock_boulder_cracked_rough_2k.jpg"
-  },
-  "albedo_target": "#6E6C69",
-  "gray_mix": 1.0,
-  "roughness": [
-   0.8,
-   0.95
-  ],
-  "sat_p95_mean": [
-   0.045,
-   0.045
-  ]
+  "sat_cap_p95": 0.24,
+  "orm_channels": {
+   "R": "AO de Poly Haven",
+   "G": "roughness (0.8, 0.95)",
+   "B": "0.0"
+  }
  },
  "MAT_Ash_Gray": {
   "asset": "rocks_ground_02",
+  "id": "rocks_ground_02",
   "name": "Rocks Ground 02",
-  "authors": {
-   "Rob Tuytel": "All"
-  },
-  "license": "CC0",
-  "resolution": [
+  "url": "https://polyhaven.com/a/rocks_ground_02",
+  "authors": [
+   "Rob Tuytel"
+  ],
+  "license": "CC0 (https://polyhaven.com/license)",
+  "resolution": "2k",
+  "pixels": [
    2048,
    2048
   ],
@@ -124,33 +403,227 @@
    0.5,
    0.5
   ],
-  "files": {
+  "source_files": {
+   "Diffuse": "textures/concordia/polyhaven_src/rocks_ground_02/rocks_ground_02_Diffuse_2k.jpg",
+   "nor_gl": "textures/concordia/polyhaven_src/rocks_ground_02/rocks_ground_02_nor_gl_2k.jpg",
+   "Rough": "textures/concordia/polyhaven_src/rocks_ground_02/rocks_ground_02_Rough_2k.jpg",
+   "AO": "textures/concordia/polyhaven_src/rocks_ground_02/rocks_ground_02_AO_2k.jpg"
+  },
+  "source_urls": {
    "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rocks_ground_02/rocks_ground_02_col_2k.jpg",
    "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rocks_ground_02/rocks_ground_02_nor_gl_2k.jpg",
-   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rocks_ground_02/rocks_ground_02_rough_2k.jpg"
+   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rocks_ground_02/rocks_ground_02_rough_2k.jpg",
+   "AO": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rocks_ground_02/rocks_ground_02_ao_2k.jpg"
   },
-  "albedo_target": "#6F6F6F",
-  "gray_mix": 1.0,
-  "roughness": [
-   0.82,
-   0.95
-  ],
+  "albedo": "textures/concordia/MAT_Ash_Gray/concordia_ash_gray_albedo.png",
+  "orm": "textures/concordia/MAT_Ash_Gray/concordia_ash_gray_orm.png",
+  "normal": "textures/concordia/polyhaven_src/rocks_ground_02/rocks_ground_02_nor_gl_2k.jpg",
+  "hue_saturation_value": {
+   "hue": 0.5,
+   "saturation": 0.0,
+   "value": 1.0196,
+   "fac": 1.0,
+   "note": "nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo"
+  },
+  "albedo_target_mean": "#6F6F6F",
+  "albedo_result_mean": "#6F6F6F",
   "sat_p95_mean": [
    0.0,
    0.0
-  ]
+  ],
+  "sat_cap_p95": 0.0,
+  "orm_channels": {
+   "R": "AO de Poly Haven",
+   "G": "roughness (0.82, 0.95)",
+   "B": "0.0"
+  }
  },
- "MAT_Limestone_Worn": {
-  "asset": "stone_wall_02",
-  "name": "Stone Wall 02",
-  "authors": {
-   "Dario Barresi": "Processing",
-   "Charlotte Baglioni": "Photography"
-  },
-  "license": "CC0",
-  "resolution": [
+ "MAT_Ash_Ground": {
+  "asset": "dry_ground_01",
+  "id": "dry_ground_01",
+  "name": "Dry Ground 01",
+  "url": "https://polyhaven.com/a/dry_ground_01",
+  "authors": [
+   "Rob Tuytel"
+  ],
+  "license": "CC0 (https://polyhaven.com/license)",
+  "resolution": "2k",
+  "pixels": [
    2048,
    2048
+  ],
+  "dimensions_m": [
+   4.0,
+   4.0
+  ],
+  "uv_scale": [
+   0.25,
+   0.25
+  ],
+  "source_files": {
+   "Diffuse": "textures/concordia/polyhaven_src/dry_ground_01/dry_ground_01_Diffuse_2k.jpg",
+   "nor_gl": "textures/concordia/polyhaven_src/dry_ground_01/dry_ground_01_nor_gl_2k.jpg",
+   "Rough": "textures/concordia/polyhaven_src/dry_ground_01/dry_ground_01_Rough_2k.jpg",
+   "AO": "textures/concordia/polyhaven_src/dry_ground_01/dry_ground_01_AO_2k.jpg"
+  },
+  "source_urls": {
+   "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/dry_ground_01/dry_ground_01_diff_2k.jpg",
+   "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/dry_ground_01/dry_ground_01_nor_gl_2k.jpg",
+   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/dry_ground_01/dry_ground_01_rough_2k.jpg",
+   "AO": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/dry_ground_01/dry_ground_01_ao_2k.jpg"
+  },
+  "albedo": "textures/concordia/MAT_Ash_Ground/concordia_ash_ground_albedo.png",
+  "orm": "textures/concordia/MAT_Ash_Ground/concordia_ash_ground_orm.png",
+  "normal": "textures/concordia/polyhaven_src/dry_ground_01/dry_ground_01_nor_gl_2k.jpg",
+  "hue_saturation_value": {
+   "hue": 0.5,
+   "saturation": 0.0,
+   "value": 0.8416,
+   "fac": 1.0,
+   "note": "nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo"
+  },
+  "albedo_target_mean": "#6F6F6F",
+  "albedo_result_mean": "#6F6F6F",
+  "sat_p95_mean": [
+   0.0,
+   0.0
+  ],
+  "sat_cap_p95": 0.0,
+  "orm_channels": {
+   "R": "AO de Poly Haven",
+   "G": "roughness (0.82, 0.95)",
+   "B": "0.0"
+  }
+ },
+ "MAT_Rock_Gray": {
+  "asset": "rock_boulder_dry",
+  "id": "rock_boulder_dry",
+  "name": "Rock Boulder Dry",
+  "url": "https://polyhaven.com/a/rock_boulder_dry",
+  "authors": [
+   "Dimitrios Savva",
+   "Rico Cilliers"
+  ],
+  "license": "CC0 (https://polyhaven.com/license)",
+  "resolution": "2k",
+  "pixels": [
+   2048,
+   2048
+  ],
+  "dimensions_m": [
+   1.8,
+   1.8
+  ],
+  "uv_scale": [
+   0.55556,
+   0.55556
+  ],
+  "source_files": {
+   "Diffuse": "textures/concordia/polyhaven_src/rock_boulder_dry/rock_boulder_dry_Diffuse_2k.jpg",
+   "nor_gl": "textures/concordia/polyhaven_src/rock_boulder_dry/rock_boulder_dry_nor_gl_2k.jpg",
+   "Rough": "textures/concordia/polyhaven_src/rock_boulder_dry/rock_boulder_dry_Rough_2k.jpg",
+   "AO": "textures/concordia/polyhaven_src/rock_boulder_dry/rock_boulder_dry_AO_2k.jpg"
+  },
+  "source_urls": {
+   "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rock_boulder_dry/rock_boulder_dry_diff_2k.jpg",
+   "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rock_boulder_dry/rock_boulder_dry_nor_gl_2k.jpg",
+   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rock_boulder_dry/rock_boulder_dry_rough_2k.jpg",
+   "AO": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rock_boulder_dry/rock_boulder_dry_ao_2k.jpg"
+  },
+  "albedo": "textures/concordia/MAT_Rock_Gray/concordia_rock_gray_albedo.png",
+  "orm": "textures/concordia/MAT_Rock_Gray/concordia_rock_gray_orm.png",
+  "normal": "textures/concordia/polyhaven_src/rock_boulder_dry/rock_boulder_dry_nor_gl_2k.jpg",
+  "hue_saturation_value": {
+   "hue": 0.5,
+   "saturation": 0.0,
+   "value": 0.6558,
+   "fac": 1.0,
+   "note": "nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo"
+  },
+  "albedo_target_mean": "#6E6C69",
+  "albedo_result_mean": "#6E6E6E",
+  "sat_p95_mean": [
+   0.0,
+   0.0
+  ],
+  "sat_cap_p95": 0.0,
+  "orm_channels": {
+   "R": "AO de Poly Haven",
+   "G": "roughness (0.8, 0.95)",
+   "B": "0.0"
+  }
+ },
+ "MAT_Stone_Repair": {
+  "asset": "rustic_stone_wall",
+  "id": "rustic_stone_wall",
+  "name": "Rustic Stone Wall",
+  "url": "https://polyhaven.com/a/rustic_stone_wall",
+  "authors": [
+   "Dimitrios Savva"
+  ],
+  "license": "CC0 (https://polyhaven.com/license)",
+  "resolution": "2k",
+  "pixels": [
+   2048,
+   2048
+  ],
+  "dimensions_m": [
+   1.52,
+   1.52
+  ],
+  "uv_scale": [
+   0.65789,
+   0.65789
+  ],
+  "source_files": {
+   "Diffuse": "textures/concordia/polyhaven_src/rustic_stone_wall/rustic_stone_wall_Diffuse_2k.jpg",
+   "nor_gl": "textures/concordia/polyhaven_src/rustic_stone_wall/rustic_stone_wall_nor_gl_2k.jpg",
+   "Rough": "textures/concordia/polyhaven_src/rustic_stone_wall/rustic_stone_wall_Rough_2k.jpg",
+   "AO": "textures/concordia/polyhaven_src/rustic_stone_wall/rustic_stone_wall_AO_2k.jpg"
+  },
+  "source_urls": {
+   "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rustic_stone_wall/rustic_stone_wall_diff_2k.jpg",
+   "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rustic_stone_wall/rustic_stone_wall_nor_gl_2k.jpg",
+   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rustic_stone_wall/rustic_stone_wall_rough_2k.jpg",
+   "AO": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rustic_stone_wall/rustic_stone_wall_ao_2k.jpg"
+  },
+  "albedo": "textures/concordia/MAT_Stone_Repair/concordia_stone_repair_albedo.png",
+  "orm": "textures/concordia/MAT_Stone_Repair/concordia_stone_repair_orm.png",
+  "normal": "textures/concordia/polyhaven_src/rustic_stone_wall/rustic_stone_wall_nor_gl_2k.jpg",
+  "hue_saturation_value": {
+   "hue": 0.498,
+   "saturation": 0.3979,
+   "value": 1.1781,
+   "fac": 1.0,
+   "note": "nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo"
+  },
+  "albedo_target_mean": "#8C8478",
+  "albedo_result_mean": "#8C8478",
+  "sat_p95_mean": [
+   0.191,
+   0.143
+  ],
+  "sat_cap_p95": 0.2,
+  "orm_channels": {
+   "R": "AO de Poly Haven",
+   "G": "roughness (0.8, 0.95)",
+   "B": "0.0"
+  }
+ },
+ "MAT_Wood_Dark": {
+  "asset": "weathered_planks",
+  "id": "weathered_planks",
+  "name": "Weathered Planks",
+  "url": "https://polyhaven.com/a/weathered_planks",
+  "authors": [
+   "Dario Barresi",
+   "Dimitrios Savva"
+  ],
+  "license": "CC0 (https://polyhaven.com/license)",
+  "resolution": "1k",
+  "pixels": [
+   1024,
+   1024
   ],
   "dimensions_m": [
    2.0,
@@ -160,20 +633,401 @@
    0.5,
    0.5
   ],
-  "files": {
-   "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/stone_wall_02/stone_wall_02_diff_2k.jpg",
-   "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/stone_wall_02/stone_wall_02_nor_gl_2k.jpg",
-   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/stone_wall_02/stone_wall_02_rough_2k.jpg"
+  "source_files": {
+   "Diffuse": "textures/concordia/polyhaven_src/weathered_planks/weathered_planks_Diffuse_1k.jpg",
+   "nor_gl": "textures/concordia/polyhaven_src/weathered_planks/weathered_planks_nor_gl_1k.jpg",
+   "Rough": "textures/concordia/polyhaven_src/weathered_planks/weathered_planks_Rough_1k.jpg",
+   "AO": "textures/concordia/polyhaven_src/weathered_planks/weathered_planks_AO_1k.jpg"
   },
-  "albedo_target": "#C3B9A8",
-  "gray_mix": 0.6,
-  "roughness": [
-   0.75,
-   0.93
-  ],
+  "source_urls": {
+   "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/weathered_planks/weathered_planks_diff_1k.jpg",
+   "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/weathered_planks/weathered_planks_nor_gl_1k.jpg",
+   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/weathered_planks/weathered_planks_rough_1k.jpg",
+   "AO": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/weathered_planks/weathered_planks_ao_1k.jpg"
+  },
+  "albedo": "textures/concordia/MAT_Wood_Dark/concordia_wood_dark_albedo.png",
+  "orm": "textures/concordia/MAT_Wood_Dark/concordia_wood_dark_orm.png",
+  "normal": "textures/concordia/polyhaven_src/weathered_planks/weathered_planks_nor_gl_1k.jpg",
+  "hue_saturation_value": {
+   "hue": 0.5115,
+   "saturation": 1.0027,
+   "value": 0.9265,
+   "fac": 1.0,
+   "note": "nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo"
+  },
+  "albedo_target_mean": "#4A3D31",
+  "albedo_result_mean": "#4A4036",
   "sat_p95_mean": [
-   0.169,
-   0.138
-  ]
+   0.343,
+   0.265
+  ],
+  "sat_cap_p95": 0.35,
+  "orm_channels": {
+   "R": "AO de Poly Haven",
+   "G": "roughness (0.72, 0.9)",
+   "B": "0.0"
+  }
+ },
+ "MAT_Roof_Tile_Ocher": {
+  "asset": "roof_09",
+  "id": "roof_09",
+  "name": "Roof 09",
+  "url": "https://polyhaven.com/a/roof_09",
+  "authors": [
+   "Rob Tuytel"
+  ],
+  "license": "CC0 (https://polyhaven.com/license)",
+  "resolution": "1k",
+  "pixels": [
+   1024,
+   1024
+  ],
+  "dimensions_m": [
+   4.0,
+   4.0
+  ],
+  "uv_scale": [
+   0.25,
+   0.25
+  ],
+  "source_files": {
+   "Diffuse": "textures/concordia/polyhaven_src/roof_09/roof_09_Diffuse_1k.jpg",
+   "nor_gl": "textures/concordia/polyhaven_src/roof_09/roof_09_nor_gl_1k.jpg",
+   "Rough": "textures/concordia/polyhaven_src/roof_09/roof_09_Rough_1k.jpg",
+   "AO": "textures/concordia/polyhaven_src/roof_09/roof_09_AO_1k.jpg"
+  },
+  "source_urls": {
+   "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/roof_09/roof_09_diff_1k.jpg",
+   "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/roof_09/roof_09_nor_gl_1k.jpg",
+   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/roof_09/roof_09_rough_1k.jpg",
+   "AO": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/roof_09/roof_09_ao_1k.jpg"
+  },
+  "albedo": "textures/concordia/MAT_Roof_Tile_Ocher/concordia_roof_tile_ocher_albedo.png",
+  "orm": "textures/concordia/MAT_Roof_Tile_Ocher/concordia_roof_tile_ocher_orm.png",
+  "normal": "textures/concordia/polyhaven_src/roof_09/roof_09_nor_gl_1k.jpg",
+  "hue_saturation_value": {
+   "hue": 0.4986,
+   "saturation": 0.9209,
+   "value": 1.1465,
+   "fac": 1.0,
+   "note": "nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo"
+  },
+  "albedo_target_mean": "#9A7E62",
+  "albedo_result_mean": "#9A8673",
+  "sat_p95_mean": [
+   0.403,
+   0.261
+  ],
+  "sat_cap_p95": 0.4,
+  "orm_channels": {
+   "R": "AO de Poly Haven",
+   "G": "roughness (0.7, 0.9)",
+   "B": "0.0"
+  }
+ },
+ "MAT_Iron_Black": {
+  "asset": "metal_plate_02",
+  "id": "metal_plate_02",
+  "name": "Metal Plate 02",
+  "url": "https://polyhaven.com/a/metal_plate_02",
+  "authors": [
+   "Rob Tuytel"
+  ],
+  "license": "CC0 (https://polyhaven.com/license)",
+  "resolution": "1k",
+  "pixels": [
+   1024,
+   1024
+  ],
+  "dimensions_m": [
+   2.0,
+   2.0
+  ],
+  "uv_scale": [
+   0.5,
+   0.5
+  ],
+  "source_files": {
+   "Diffuse": "textures/concordia/polyhaven_src/metal_plate_02/metal_plate_02_Diffuse_1k.jpg",
+   "nor_gl": "textures/concordia/polyhaven_src/metal_plate_02/metal_plate_02_nor_gl_1k.jpg",
+   "Rough": "textures/concordia/polyhaven_src/metal_plate_02/metal_plate_02_Rough_1k.jpg",
+   "AO": "textures/concordia/polyhaven_src/metal_plate_02/metal_plate_02_AO_1k.jpg",
+   "Metal": "textures/concordia/polyhaven_src/metal_plate_02/metal_plate_02_Metal_1k.jpg"
+  },
+  "source_urls": {
+   "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/metal_plate_02/metal_plate_02_diff_1k.jpg",
+   "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/metal_plate_02/metal_plate_02_nor_gl_1k.jpg",
+   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/metal_plate_02/metal_plate_02_rough_1k.jpg",
+   "AO": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/metal_plate_02/metal_plate_02_ao_1k.jpg",
+   "Metal": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/metal_plate_02/metal_plate_02_metal_1k.jpg"
+  },
+  "albedo": "textures/concordia/MAT_Iron_Black/concordia_iron_black_albedo.png",
+  "orm": "textures/concordia/MAT_Iron_Black/concordia_iron_black_orm.png",
+  "normal": "textures/concordia/polyhaven_src/metal_plate_02/metal_plate_02_nor_gl_1k.jpg",
+  "hue_saturation_value": {
+   "hue": 0.5285,
+   "saturation": 0.2234,
+   "value": 0.5469,
+   "fac": 1.0,
+   "note": "nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo"
+  },
+  "albedo_target_mean": "#2E2D2B",
+  "albedo_result_mean": "#2E2D2B",
+  "sat_p95_mean": [
+   0.08,
+   0.061
+  ],
+  "sat_cap_p95": 0.08,
+  "orm_channels": {
+   "R": "AO de Poly Haven",
+   "G": "roughness (0.33, 0.47)",
+   "B": "Metal de Poly Haven"
+  }
+ },
+ "MAT_Cloth": {
+  "asset": "hessian_380",
+  "id": "hessian_380",
+  "name": "Hessian 380",
+  "url": "https://polyhaven.com/a/hessian_380",
+  "authors": [
+   "colormass",
+   "Rico Cilliers"
+  ],
+  "license": "CC0 (https://polyhaven.com/license)",
+  "resolution": "1k",
+  "pixels": [
+   1024,
+   1024
+  ],
+  "dimensions_m": [
+   0.274,
+   0.274
+  ],
+  "uv_scale": [
+   3.65142,
+   3.6523
+  ],
+  "source_files": {
+   "Diffuse": "textures/concordia/polyhaven_src/hessian_380/hessian_380_Diffuse_1k.jpg",
+   "nor_gl": "textures/concordia/polyhaven_src/hessian_380/hessian_380_nor_gl_1k.jpg",
+   "Rough": "textures/concordia/polyhaven_src/hessian_380/hessian_380_Rough_1k.jpg",
+   "AO": "textures/concordia/polyhaven_src/hessian_380/hessian_380_AO_1k.jpg",
+   "Metal": "textures/concordia/polyhaven_src/hessian_380/hessian_380_Metal_1k.jpg"
+  },
+  "source_urls": {
+   "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_diff_1k.jpg",
+   "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_nor_gl_1k.jpg",
+   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_rough_1k.jpg",
+   "AO": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_ao_1k.jpg",
+   "Metal": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_metal_1k.jpg"
+  },
+  "albedo": "textures/concordia/MAT_Cloth/concordia_cloth_albedo.png",
+  "orm": "textures/concordia/MAT_Cloth/concordia_cloth_orm.png",
+  "normal": "textures/concordia/polyhaven_src/hessian_380/hessian_380_nor_gl_1k.jpg",
+  "hue_saturation_value": {
+   "hue": 0.5,
+   "saturation": 0.0,
+   "value": 1.0472,
+   "fac": 1.0,
+   "note": "nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo"
+  },
+  "albedo_target_mean": "#B8B8B8",
+  "albedo_result_mean": "#B8B8B8",
+  "sat_p95_mean": [
+   0.0,
+   0.0
+  ],
+  "sat_cap_p95": 0.0,
+  "orm_channels": {
+   "R": "AO de Poly Haven",
+   "G": "roughness (0.84, 0.95)",
+   "B": "Metal de Poly Haven"
+  }
+ },
+ "MAT_Cloth_Patch_A": {
+  "asset": "hessian_380",
+  "id": "hessian_380",
+  "name": "Hessian 380",
+  "url": "https://polyhaven.com/a/hessian_380",
+  "authors": [
+   "colormass",
+   "Rico Cilliers"
+  ],
+  "license": "CC0 (https://polyhaven.com/license)",
+  "resolution": "1k",
+  "pixels": [
+   1024,
+   1024
+  ],
+  "dimensions_m": [
+   0.274,
+   0.274
+  ],
+  "uv_scale": [
+   3.65142,
+   3.6523
+  ],
+  "source_files": {
+   "Diffuse": "textures/concordia/polyhaven_src/hessian_380/hessian_380_Diffuse_1k.jpg",
+   "nor_gl": "textures/concordia/polyhaven_src/hessian_380/hessian_380_nor_gl_1k.jpg",
+   "Rough": "textures/concordia/polyhaven_src/hessian_380/hessian_380_Rough_1k.jpg",
+   "AO": "textures/concordia/polyhaven_src/hessian_380/hessian_380_AO_1k.jpg",
+   "Metal": "textures/concordia/polyhaven_src/hessian_380/hessian_380_Metal_1k.jpg"
+  },
+  "source_urls": {
+   "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_diff_1k.jpg",
+   "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_nor_gl_1k.jpg",
+   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_rough_1k.jpg",
+   "AO": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_ao_1k.jpg",
+   "Metal": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_metal_1k.jpg"
+  },
+  "albedo": "textures/concordia/MAT_Cloth/concordia_cloth_albedo.png",
+  "orm": "textures/concordia/MAT_Cloth/concordia_cloth_orm.png",
+  "normal": "textures/concordia/polyhaven_src/hessian_380/hessian_380_nor_gl_1k.jpg",
+  "hue_saturation_value": {
+   "hue": 0.5,
+   "saturation": 0.0,
+   "value": 1.0472,
+   "fac": 1.0,
+   "note": "nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo"
+  },
+  "albedo_target_mean": "#B8B8B8",
+  "albedo_result_mean": "#B8B8B8",
+  "sat_p95_mean": [
+   0.0,
+   0.0
+  ],
+  "sat_cap_p95": 0.0,
+  "orm_channels": {
+   "R": "AO de Poly Haven",
+   "G": "roughness (0.84, 0.95)",
+   "B": "Metal de Poly Haven"
+  },
+  "base_color_factor_srgb": "#8A6A4A",
+  "shared_texture": "MAT_Cloth"
+ },
+ "MAT_Cloth_Patch_B": {
+  "asset": "hessian_380",
+  "id": "hessian_380",
+  "name": "Hessian 380",
+  "url": "https://polyhaven.com/a/hessian_380",
+  "authors": [
+   "colormass",
+   "Rico Cilliers"
+  ],
+  "license": "CC0 (https://polyhaven.com/license)",
+  "resolution": "1k",
+  "pixels": [
+   1024,
+   1024
+  ],
+  "dimensions_m": [
+   0.274,
+   0.274
+  ],
+  "uv_scale": [
+   3.65142,
+   3.6523
+  ],
+  "source_files": {
+   "Diffuse": "textures/concordia/polyhaven_src/hessian_380/hessian_380_Diffuse_1k.jpg",
+   "nor_gl": "textures/concordia/polyhaven_src/hessian_380/hessian_380_nor_gl_1k.jpg",
+   "Rough": "textures/concordia/polyhaven_src/hessian_380/hessian_380_Rough_1k.jpg",
+   "AO": "textures/concordia/polyhaven_src/hessian_380/hessian_380_AO_1k.jpg",
+   "Metal": "textures/concordia/polyhaven_src/hessian_380/hessian_380_Metal_1k.jpg"
+  },
+  "source_urls": {
+   "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_diff_1k.jpg",
+   "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_nor_gl_1k.jpg",
+   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_rough_1k.jpg",
+   "AO": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_ao_1k.jpg",
+   "Metal": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_metal_1k.jpg"
+  },
+  "albedo": "textures/concordia/MAT_Cloth/concordia_cloth_albedo.png",
+  "orm": "textures/concordia/MAT_Cloth/concordia_cloth_orm.png",
+  "normal": "textures/concordia/polyhaven_src/hessian_380/hessian_380_nor_gl_1k.jpg",
+  "hue_saturation_value": {
+   "hue": 0.5,
+   "saturation": 0.0,
+   "value": 1.0472,
+   "fac": 1.0,
+   "note": "nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo"
+  },
+  "albedo_target_mean": "#B8B8B8",
+  "albedo_result_mean": "#B8B8B8",
+  "sat_p95_mean": [
+   0.0,
+   0.0
+  ],
+  "sat_cap_p95": 0.0,
+  "orm_channels": {
+   "R": "AO de Poly Haven",
+   "G": "roughness (0.84, 0.95)",
+   "B": "Metal de Poly Haven"
+  },
+  "base_color_factor_srgb": "#6E6A4E",
+  "shared_texture": "MAT_Cloth"
+ },
+ "MAT_Cloth_Patch_C": {
+  "asset": "hessian_380",
+  "id": "hessian_380",
+  "name": "Hessian 380",
+  "url": "https://polyhaven.com/a/hessian_380",
+  "authors": [
+   "colormass",
+   "Rico Cilliers"
+  ],
+  "license": "CC0 (https://polyhaven.com/license)",
+  "resolution": "1k",
+  "pixels": [
+   1024,
+   1024
+  ],
+  "dimensions_m": [
+   0.274,
+   0.274
+  ],
+  "uv_scale": [
+   3.65142,
+   3.6523
+  ],
+  "source_files": {
+   "Diffuse": "textures/concordia/polyhaven_src/hessian_380/hessian_380_Diffuse_1k.jpg",
+   "nor_gl": "textures/concordia/polyhaven_src/hessian_380/hessian_380_nor_gl_1k.jpg",
+   "Rough": "textures/concordia/polyhaven_src/hessian_380/hessian_380_Rough_1k.jpg",
+   "AO": "textures/concordia/polyhaven_src/hessian_380/hessian_380_AO_1k.jpg",
+   "Metal": "textures/concordia/polyhaven_src/hessian_380/hessian_380_Metal_1k.jpg"
+  },
+  "source_urls": {
+   "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_diff_1k.jpg",
+   "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_nor_gl_1k.jpg",
+   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_rough_1k.jpg",
+   "AO": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_ao_1k.jpg",
+   "Metal": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/hessian_380/hessian_380_metal_1k.jpg"
+  },
+  "albedo": "textures/concordia/MAT_Cloth/concordia_cloth_albedo.png",
+  "orm": "textures/concordia/MAT_Cloth/concordia_cloth_orm.png",
+  "normal": "textures/concordia/polyhaven_src/hessian_380/hessian_380_nor_gl_1k.jpg",
+  "hue_saturation_value": {
+   "hue": 0.5,
+   "saturation": 0.0,
+   "value": 1.0472,
+   "fac": 1.0,
+   "note": "nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo"
+  },
+  "albedo_target_mean": "#B8B8B8",
+  "albedo_result_mean": "#B8B8B8",
+  "sat_p95_mean": [
+   0.0,
+   0.0
+  ],
+  "sat_cap_p95": 0.0,
+  "orm_channels": {
+   "R": "AO de Poly Haven",
+   "G": "roughness (0.84, 0.95)",
+   "B": "Metal de Poly Haven"
+  },
+  "base_color_factor_srgb": "#A49884",
+  "shared_texture": "MAT_Cloth"
  }
 }
