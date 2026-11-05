@@ -3,7 +3,7 @@
   "cleanup": 4.8,
   "chunks_lods": 234.1,
   "collision_nav_occ": 27.5,
-  "export": 12.5
+  "export": 17.6
  },
  "cleanup": {
   "meshes": 115,
@@ -4380,7 +4380,7 @@
    "empties": 0
   },
   "concordia_terrain_clases.glb": {
-   "bytes": 4833940,
+   "bytes": 4833968,
    "mb": 4.61,
    "objects": 37,
    "nodes": 37,
@@ -4425,7 +4425,7 @@
    "empties": 0
   },
   "concordia_terrain_exterior.glb": {
-   "bytes": 16391692,
+   "bytes": 16391716,
    "mb": 15.63,
    "objects": 905,
    "nodes": 905,
@@ -4496,5 +4496,34 @@
   "concordia_exterior.glb",
   "concordia_wall_kit_lods.glb"
  ],
- "master_blend_mb": 63.4
+ "master_blend_mb": 63.1,
+ "location_fixes": [
+  [
+   "TRN_City_Chunk_4_6_LOD1",
+   [
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    -200.0,
+    -100.0,
+    0.0
+   ]
+  ],
+  [
+   "TRN_Exterior_Chunk_0_5_LOD1",
+   [
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    -400.0,
+    -150.0,
+    0.0
+   ]
+  ]
+ ],
+ "location_check": "todos los LOD1/LOD2/-colonly en el origen de su LOD0"
 }

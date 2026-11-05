@@ -50,6 +50,7 @@ def build():
     G.wall_occluders(stats)
     stats["timings_s"]["collision_nav_occ"] = round(time.time() - t, 1)
     G.markers(stats, os.path.join(REPO, "docs", "reports", "stage11_markers.csv"))
+    stats["location_fixes"] = G.fix_and_check_locations()
     for cn in [c.name for c in bpy.data.collections if c.name.startswith("GODOT_")]:
         bpy.data.collections[cn].hide_render = True
     bpy.context.preferences.filepaths.save_version = 0
@@ -68,6 +69,11 @@ def export():
     bpy.ops.wm.open_mainfile(filepath=MASTER)
     with open(REPORT) as fh:
         stats = json.load(fh)
+    fx = G.fix_and_check_locations()
+    if fx:
+        stats["location_fixes"] = stats.get("location_fixes", []) + fx
+        bpy.ops.wm.save_as_mainfile(filepath=MASTER, compress=True)
+    stats["location_check"] = "todos los LOD1/LOD2/-colonly en el origen de su LOD0"
     t = time.time()
     city = col_objs("GODOT_CITY_")
     sobjs = [o for cn in G.STRUCT_COLS for o in bpy.data.collections[cn].objects

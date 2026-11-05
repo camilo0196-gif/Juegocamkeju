@@ -278,8 +278,10 @@ def make_lod(src, name, ratio, col, lock):
     me = src.data.copy()
     me.name = name
     obj = bpy.data.objects.new(name, me)
-    obj.matrix_world = src.matrix_world
     col.objects.link(obj)
+    obj.location = src.location.copy()           # explicito: matrix_world antes de enlazar no siempre se conserva
+    obj.rotation_euler = src.rotation_euler.copy()
+    obj.scale = src.scale.copy()
     g = obj.vertex_groups.new(name="lod_lock")
     g.add(lock, 1.0, "REPLACE")
     m = obj.modifiers.new("lod", "DECIMATE")
@@ -427,9 +429,9 @@ def city_chunks(stats):
         while cme.uv_layers:
             cme.uv_layers.remove(cme.uv_layers[0])
         co = bpy.data.objects.new(f"{base}-colonly", cme)
-        co.matrix_world = o.matrix_world
-        co["district"] = o["district"]
         cols["COL"].objects.link(co)
+        co.location = o.location.copy()
+        co["district"] = o["district"]
         row["colonly"] = tris(cme)
         rows[base] = row
         if key in ((8, 8), (10, 10), (7, 5), (12, 8)):
@@ -927,3 +929,20 @@ def glb_info(path):
             "navmesh": sum(1 for n in g.get("nodes", []) if n.get("name", "").endswith("-navmesh")),
             "occluders": sum(1 for n in g.get("nodes", []) if n.get("name", "").endswith("-occonly")),
             "empties": sum(1 for n in g.get("nodes", []) if "mesh" not in n)}
+
+
+def fix_and_check_locations():
+    """Todo LODn / -colonly de un chunk debe estar en el mismo origen que su LOD0. Corrige y devuelve los cambios."""
+    fixed = []
+    for o in bpy.data.objects:
+        n = o.name
+        if not n.startswith(("TRN_City_Chunk_", "TRN_Exterior_Chunk_", "EXT_Cliffs_Chunk_")) or n.endswith("_LOD0"):
+            continue
+        base = n[:-8] if n.endswith("-colonly") else n.rsplit("_", 1)[0]
+        ref = bpy.data.objects.get(base + "_LOD0")
+        if ref is None:
+            continue
+        if (o.location - ref.location).length > 1e-4:
+            fixed.append([n, list(o.location), list(ref.location)])
+            o.location = ref.location.copy()
+    return fixed
