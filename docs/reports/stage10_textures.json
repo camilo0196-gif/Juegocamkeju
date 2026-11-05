@@ -1,7 +1,7 @@
 {
  "timings_s": {
-  "apply": 46.2,
-  "export": 219.7
+  "apply": 46.5,
+  "export": 215.1
  },
  "procedural_png": {
   "MAT_Shard_Blue": {
@@ -78,19 +78,23 @@
   }
  },
  "uv_renamed_UVMap_to_UVWorld": 33,
+ "terrain_uv_side_faces": {
+  "TRN_City": 17878,
+  "TRN_Exterior": 0
+ },
  "city": {
   "faces": 450420,
   "rock_faces": 14405,
-  "ash_faces": 5191,
+  "ash_faces": 12293,
   "rock_inside_wall": 436,
   "rock_on_exterior_talud": 13969,
   "retaining_faces": 13487,
   "retaining_repair_faces": 2428,
   "retaining_repair_pct": 18.0,
   "dither": {
-   "band1_faces": 14961,
-   "band2_faces": 9594,
-   "faces_switched": 7534
+   "band1_faces": 18116,
+   "band2_faces": 13608,
+   "faces_switched": 9090
   },
   "qa": {
    "protected_faces": 297692,
@@ -105,26 +109,26 @@
    "note": "terrazas, jardines y parcelas son 'protegidas' pero llevan MAT_Ground_Cracked (suelo de ciudad)"
   },
   "assign_threshold": {
-   "MAT_Ground_Cracked": 259975,
+   "MAT_Ground_Cracked": 252873,
    "MAT_Limestone_Worn": 11059,
    "MAT_Cobble_Concordia": 106992,
    "MAT_Plaza_Slab": 41314,
    "MAT_Plaza_Slab_Travertino": 2508,
    "MAT_Wall_Gray": 6288,
-   "MAT_Ash_Gray": 5191,
+   "MAT_Ash_Gray": 12293,
    "MAT_Stone_Repair": 2688,
    "MAT_Rock_Gray": 14405
   },
   "assign_final": {
-   "MAT_Ground_Cracked": 258481,
+   "MAT_Ground_Cracked": 252311,
    "MAT_Limestone_Worn": 11059,
    "MAT_Cobble_Concordia": 106992,
    "MAT_Plaza_Slab": 41314,
    "MAT_Plaza_Slab_Travertino": 2508,
    "MAT_Wall_Gray": 6288,
-   "MAT_Ash_Gray": 6621,
+   "MAT_Ash_Gray": 12155,
    "MAT_Stone_Repair": 2688,
-   "MAT_Rock_Gray": 14469
+   "MAT_Rock_Gray": 15105
   }
  },
  "exterior": {
@@ -297,7 +301,7 @@
     0.274
    ],
    "res": "1k",
-   "base_factor": "#8A6A4A"
+   "base_factor": "#8A7462"
   },
   "MAT_Cloth_Patch_B": {
    "albedo": "textures/concordia/MAT_Cloth/concordia_cloth_albedo.png",
@@ -314,7 +318,7 @@
     0.274
    ],
    "res": "1k",
-   "base_factor": "#6E6A4E"
+   "base_factor": "#6E6B58"
   },
   "MAT_Cloth_Patch_C": {
    "albedo": "textures/concordia/MAT_Cloth/concordia_cloth_albedo.png",
@@ -1540,7 +1544,7 @@
   },
   "export": {
    "terrain_glb": "export/godot/concordia_terrain.glb",
-   "terrain_bytes": 37873928,
+   "terrain_bytes": 37588564,
    "structures_glb": "export/godot/concordia_terrain_structures.glb",
    "structures_bytes": 1971936,
    "verify_terrain": {
@@ -1611,7 +1615,7 @@
    "LOD2": 25218
   },
   "export": "export/godot/concordia_exterior.glb",
-  "bytes": 12572192,
+  "bytes": 12534612,
   "verify": {
    "objects": 630,
    "empties": 0,
@@ -1696,8 +1700,8 @@
    "normal": "../../../textures/concordia/polyhaven_src/hessian_380/hessian_380_nor_gl_1k.jpg",
    "baseColorFactor": [
     0.5302345156669617,
-    0.3006935119628906,
-    0.14286519587039948,
+    0.3643648028373718,
+    0.2548166811466217,
     1
    ],
    "texture_transform": true,
@@ -1709,8 +1713,8 @@
    "normal": "../../../textures/concordia/polyhaven_src/hessian_380/hessian_380_nor_gl_1k.jpg",
    "baseColorFactor": [
     0.3253075182437897,
-    0.3006935119628906,
-    0.15894465148448944,
+    0.30674123764038086,
+    0.2035953253507614,
     1
    ],
    "texture_transform": true,

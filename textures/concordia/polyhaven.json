@@ -903,7 +903,7 @@
    "G": "roughness (0.84, 0.95)",
    "B": "Metal de Poly Haven"
   },
-  "base_color_factor_srgb": "#8A6A4A",
+  "base_color_factor_srgb": "#8A7462",
   "shared_texture": "MAT_Cloth"
  },
  "MAT_Cloth_Patch_B": {
@@ -965,7 +965,7 @@
    "G": "roughness (0.84, 0.95)",
    "B": "Metal de Poly Haven"
   },
-  "base_color_factor_srgb": "#6E6A4E",
+  "base_color_factor_srgb": "#6E6B58",
   "shared_texture": "MAT_Cloth"
  },
  "MAT_Cloth_Patch_C": {
