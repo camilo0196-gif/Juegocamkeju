@@ -1,7 +1,7 @@
 {
  "timings_s": {
-  "apply": 14.5,
-  "export": 208.6
+  "apply": 16.1,
+  "export": 208.7
  },
  "uv_world": {
   "meshes": 180,
@@ -624,9 +624,9 @@
   },
   "export": {
    "terrain_glb": "export/godot/concordia_terrain.glb",
-   "terrain_bytes": 36444272,
+   "terrain_bytes": 36444676,
    "structures_glb": "export/godot/concordia_terrain_structures.glb",
-   "structures_bytes": 1971108,
+   "structures_bytes": 1971208,
    "verify_terrain": {
     "objects": 207,
     "empties": 0,
@@ -641,7 +641,7 @@
    },
    "extra": {
     "concordia_plaza.glb": {
-     "bytes": 427636,
+     "bytes": 427732,
      "objects_in": 58,
      "verify": {
       "objects": 17,
@@ -671,7 +671,7 @@
      }
     },
     "concordia_cauce.glb": {
-     "bytes": 367884,
+     "bytes": 367984,
      "objects_in": 57,
      "verify": {
       "objects": 20,
@@ -695,7 +695,7 @@
    "LOD2": 25218
   },
   "export": "export/godot/concordia_exterior.glb",
-  "bytes": 11887720,
+  "bytes": 11887928,
   "verify": {
    "objects": 630,
    "empties": 0,
@@ -704,9 +704,9 @@
   }
  },
  "wall_reexport": {
-  "concordia_wall_kit.glb": 1660288,
-  "concordia_wall_layout.glb": 1010012,
-  "concordia_wall_kit_lods.glb": 693260
+  "concordia_wall_kit.glb": 1660384,
+  "concordia_wall_layout.glb": 1010112,
+  "concordia_wall_kit_lods.glb": 693356
  },
  "material_library_gltf": "export/godot/materials/concordia_materials.gltf"
 }

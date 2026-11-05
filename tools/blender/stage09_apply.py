@@ -31,6 +31,21 @@ CITY_SLOTS = ["MAT_Ground_Cracked", "MAT_Limestone_Worn", "MAT_Cobble_Concordia"
 EXT_SLOTS = ["MAT_Ash_Gray", "MAT_Rock_Gray"]
 
 
+_PH = None
+
+
+def polyhaven_info():
+    global _PH
+    if _PH is None:
+        try:
+            import json
+            with open(os.path.join(SM.OUT, "polyhaven.json")) as fh:
+                _PH = json.load(fh)
+        except OSError:
+            _PH = {}
+    return _PH
+
+
 def make_material(name):
     fn, ns, (r0, r1), metallic, ref, use = SM.MATS[name]
     tmp = "NEW_" + name
@@ -43,6 +58,17 @@ def make_material(name):
     uv = N.new("ShaderNodeUVMap")
     uv.uv_map = UV_NAME
     p = SM.tex_paths(name)
+    vec = uv.outputs["UV"]
+    ph = polyhaven_info().get(name)
+    if ph:
+        mp = N.new("ShaderNodeMapping")
+        mp.vector_type = "POINT"
+        mp.inputs["Scale"].default_value = (ph["uv_scale"][0], ph["uv_scale"][1], 1.0)
+        L.new(uv.outputs["UV"], mp.inputs["Vector"])
+        vec = mp.outputs["Vector"]
+        m["poly_haven_asset"] = ph["asset"]
+        m["poly_haven_license"] = "CC0"
+        m["texture_dimensions_m"] = str(ph["dimensions_m"])
 
     def img(key, non_color):
         im = bpy.data.images.load(p[key], check_existing=True)
@@ -51,7 +77,7 @@ def make_material(name):
         t = N.new("ShaderNodeTexImage")
         t.name = t.label = key
         t.image = im
-        L.new(uv.outputs["UV"], t.inputs["Vector"])
+        L.new(vec, t.inputs["Vector"])
         return t
     L.new(img("Albedo", False).outputs["Color"], b.inputs["Base Color"])
     if metallic > 0.0:

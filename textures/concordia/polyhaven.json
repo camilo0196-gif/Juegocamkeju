@@ -1,0 +1,179 @@
+{
+ "MAT_Cobble_Concordia": {
+  "asset": "cobblestone_floor_001",
+  "name": "Cobblestone Floor 001",
+  "authors": {
+   "Rob Tuytel": "All"
+  },
+  "license": "CC0",
+  "resolution": [
+   2048,
+   2048
+  ],
+  "dimensions_m": [
+   2.4,
+   2.4
+  ],
+  "uv_scale": [
+   0.41667,
+   0.41667
+  ],
+  "files": {
+   "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/cobblestone_floor_001/cobblestone_floor_001_diff_2k.jpg",
+   "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/cobblestone_floor_001/cobblestone_floor_001_nor_gl_2k.jpg",
+   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/cobblestone_floor_001/cobblestone_floor_001_rough_2k.jpg"
+  },
+  "albedo_target": "#ADA393",
+  "gray_mix": 0.55,
+  "roughness": [
+   0.72,
+   0.94
+  ],
+  "sat_p95_mean": [
+   0.219,
+   0.15
+  ]
+ },
+ "MAT_Ground_Cracked": {
+  "asset": "sandstone_cracks",
+  "name": "Sandstone Cracks",
+  "authors": {
+   "Rob Tuytel": "All"
+  },
+  "license": "CC0",
+  "resolution": [
+   2048,
+   2048
+  ],
+  "dimensions_m": [
+   2.0,
+   2.0
+  ],
+  "uv_scale": [
+   0.5,
+   0.5
+  ],
+  "files": {
+   "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/sandstone_cracks/sandstone_cracks_diff_2k.jpg",
+   "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/sandstone_cracks/sandstone_cracks_nor_gl_2k.jpg",
+   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/sandstone_cracks/sandstone_cracks_rough_2k.jpg"
+  },
+  "albedo_target": "#A49A88",
+  "gray_mix": 0.6,
+  "roughness": [
+   0.8,
+   0.95
+  ],
+  "sat_p95_mean": [
+   0.233,
+   0.171
+  ]
+ },
+ "MAT_Rock_Gray": {
+  "asset": "rock_boulder_cracked",
+  "name": "Rock Boulder Cracked",
+  "authors": {
+   "Dario Barresi": "Processing",
+   "Dimitrios Savva": "Photography"
+  },
+  "license": "CC0",
+  "resolution": [
+   2048,
+   2048
+  ],
+  "dimensions_m": [
+   1.39,
+   1.39
+  ],
+  "uv_scale": [
+   0.71942,
+   0.71942
+  ],
+  "files": {
+   "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rock_boulder_cracked/rock_boulder_cracked_diff_2k.jpg",
+   "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rock_boulder_cracked/rock_boulder_cracked_nor_gl_2k.jpg",
+   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rock_boulder_cracked/rock_boulder_cracked_rough_2k.jpg"
+  },
+  "albedo_target": "#6E6C69",
+  "gray_mix": 1.0,
+  "roughness": [
+   0.8,
+   0.95
+  ],
+  "sat_p95_mean": [
+   0.045,
+   0.045
+  ]
+ },
+ "MAT_Ash_Gray": {
+  "asset": "rocks_ground_02",
+  "name": "Rocks Ground 02",
+  "authors": {
+   "Rob Tuytel": "All"
+  },
+  "license": "CC0",
+  "resolution": [
+   2048,
+   2048
+  ],
+  "dimensions_m": [
+   2.0,
+   2.0
+  ],
+  "uv_scale": [
+   0.5,
+   0.5
+  ],
+  "files": {
+   "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rocks_ground_02/rocks_ground_02_col_2k.jpg",
+   "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rocks_ground_02/rocks_ground_02_nor_gl_2k.jpg",
+   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rocks_ground_02/rocks_ground_02_rough_2k.jpg"
+  },
+  "albedo_target": "#6F6F6F",
+  "gray_mix": 1.0,
+  "roughness": [
+   0.82,
+   0.95
+  ],
+  "sat_p95_mean": [
+   0.0,
+   0.0
+  ]
+ },
+ "MAT_Limestone_Worn": {
+  "asset": "stone_wall_02",
+  "name": "Stone Wall 02",
+  "authors": {
+   "Dario Barresi": "Processing",
+   "Charlotte Baglioni": "Photography"
+  },
+  "license": "CC0",
+  "resolution": [
+   2048,
+   2048
+  ],
+  "dimensions_m": [
+   2.0,
+   2.0
+  ],
+  "uv_scale": [
+   0.5,
+   0.5
+  ],
+  "files": {
+   "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/stone_wall_02/stone_wall_02_diff_2k.jpg",
+   "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/stone_wall_02/stone_wall_02_nor_gl_2k.jpg",
+   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/stone_wall_02/stone_wall_02_rough_2k.jpg"
+  },
+  "albedo_target": "#C3B9A8",
+  "gray_mix": 0.6,
+  "roughness": [
+   0.75,
+   0.93
+  ],
+  "sat_p95_mean": [
+   0.169,
+   0.138
+  ]
+ }
+}
