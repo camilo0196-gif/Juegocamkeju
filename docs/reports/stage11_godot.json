@@ -1,0 +1,4508 @@
+{
+ "timings_s": {
+  "cleanup": 8.8,
+  "chunks_lods": 299.7,
+  "collision_nav_occ": 27.8,
+  "export": 14.0
+ },
+ "cleanup": {
+  "meshes": 115,
+  "merged_verts": 3008,
+  "interior_faces": 1,
+  "hidden_bottom_faces": 604,
+  "flipped_normals": 1500,
+  "transforms_applied": 0,
+  "instanced_kept": 116,
+  "changed": {
+   "BASTION_Mirador": {
+    "merged_verts": 0,
+    "faces_before": 676,
+    "faces_after": 663,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 13,
+    "flipped_normals": 8
+   },
+   "BASTION_Open": {
+    "merged_verts": 0,
+    "faces_before": 466,
+    "faces_after": 453,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 13,
+    "flipped_normals": 10
+   },
+   "CAU_AccessSteps": {
+    "merged_verts": 20,
+    "faces_before": 240,
+    "faces_after": 240,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 0
+   },
+   "CAU_Banks": {
+    "merged_verts": 656,
+    "faces_before": 2124,
+    "faces_after": 2124,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 344
+   },
+   "CAU_Culvert": {
+    "merged_verts": 4,
+    "faces_before": 36,
+    "faces_after": 36,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 0
+   },
+   "CAU_Water": {
+    "merged_verts": 526,
+    "faces_before": 520,
+    "faces_after": 520,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 2
+   },
+   "GATE_Sealed_Twin": {
+    "merged_verts": 0,
+    "faces_before": 5348,
+    "faces_after": 5324,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 24,
+    "flipped_normals": 170
+   },
+   "STAIR_Gate00_R": {
+    "merged_verts": 0,
+    "faces_before": 515,
+    "faces_after": 470,
+    "interior_faces": 1,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 0
+   },
+   "TOWER_Guard_Patched": {
+    "merged_verts": 0,
+    "faces_before": 1100,
+    "faces_after": 1076,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 24,
+    "flipped_normals": 0
+   },
+   "TOWER_Guard_Roof": {
+    "merged_verts": 0,
+    "faces_before": 1080,
+    "faces_after": 1056,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 24,
+    "flipped_normals": 0
+   },
+   "TRN_ArchBridge_01-col": {
+    "merged_verts": 20,
+    "faces_before": 164,
+    "faces_after": 164,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 10
+   },
+   "TRN_ArchBridge_01_Repair": {
+    "merged_verts": 4,
+    "faces_before": 36,
+    "faces_after": 36,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 2
+   },
+   "TRN_ArchBridge_02-col": {
+    "merged_verts": 28,
+    "faces_before": 188,
+    "faces_after": 188,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 14
+   },
+   "TRN_ArchBridge_03-col": {
+    "merged_verts": 16,
+    "faces_before": 176,
+    "faces_after": 176,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 8
+   },
+   "TRN_ArchBridge_04-col": {
+    "merged_verts": 20,
+    "faces_before": 164,
+    "faces_after": 164,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 10
+   },
+   "TRN_ArchBridge_04_Repair": {
+    "merged_verts": 4,
+    "faces_before": 36,
+    "faces_after": 36,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 2
+   },
+   "TRN_Bridge_01-col": {
+    "merged_verts": 56,
+    "faces_before": 308,
+    "faces_after": 308,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 28
+   },
+   "TRN_Bridge_02-col": {
+    "merged_verts": 32,
+    "faces_before": 248,
+    "faces_after": 248,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 16
+   },
+   "TRN_Bridge_02_Repair": {
+    "merged_verts": 4,
+    "faces_before": 84,
+    "faces_after": 84,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 2
+   },
+   "TRN_Bridge_03-col": {
+    "merged_verts": 60,
+    "faces_before": 332,
+    "faces_after": 332,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 30
+   },
+   "TRN_Bridge_03_Repair": {
+    "merged_verts": 4,
+    "faces_before": 48,
+    "faces_after": 48,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 2
+   },
+   "TRN_Bridge_04-col": {
+    "merged_verts": 48,
+    "faces_before": 296,
+    "faces_after": 296,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 24
+   },
+   "TRN_Bridge_05-col": {
+    "merged_verts": 36,
+    "faces_before": 272,
+    "faces_after": 272,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 18
+   },
+   "TRN_Buttresses_Morada_NE": {
+    "merged_verts": 0,
+    "faces_before": 96,
+    "faces_after": 92,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 4,
+    "flipped_normals": 0
+   },
+   "TRN_Buttresses_Morada_NW": {
+    "merged_verts": 0,
+    "faces_before": 96,
+    "faces_after": 92,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 4,
+    "flipped_normals": 0
+   },
+   "TRN_Buttresses_Morada_SE": {
+    "merged_verts": 0,
+    "faces_before": 96,
+    "faces_after": 92,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 4,
+    "flipped_normals": 0
+   },
+   "TRN_Buttresses_Morada_SW": {
+    "merged_verts": 0,
+    "faces_before": 96,
+    "faces_after": 92,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 4,
+    "flipped_normals": 0
+   },
+   "TRN_DescentPedestals": {
+    "merged_verts": 0,
+    "faces_before": 1512,
+    "faces_after": 1260,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 252,
+    "flipped_normals": 0
+   },
+   "TRN_Escalinata_Morada_NE": {
+    "merged_verts": 2,
+    "faces_before": 252,
+    "faces_after": 252,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 0
+   },
+   "TRN_Escalinata_Morada_NW": {
+    "merged_verts": 2,
+    "faces_before": 252,
+    "faces_after": 252,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 0
+   },
+   "TRN_Escalinata_Morada_SE": {
+    "merged_verts": 2,
+    "faces_before": 252,
+    "faces_after": 252,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 0
+   },
+   "TRN_Escalinata_Morada_SW": {
+    "merged_verts": 2,
+    "faces_before": 252,
+    "faces_after": 252,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 0
+   },
+   "TRN_LightCanals": {
+    "merged_verts": 0,
+    "faces_before": 860,
+    "faces_after": 860,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 396
+   },
+   "TRN_Pad_Faro": {
+    "merged_verts": 0,
+    "faces_before": 124,
+    "faces_after": 94,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 30,
+    "flipped_normals": 0
+   },
+   "TRN_Pad_Obelisco": {
+    "merged_verts": 0,
+    "faces_before": 12,
+    "faces_after": 10,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 2,
+    "flipped_normals": 0
+   },
+   "TRN_Pad_SalonHazanas": {
+    "merged_verts": 0,
+    "faces_before": 12,
+    "faces_after": 10,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 2,
+    "flipped_normals": 0
+   },
+   "TRN_Pad_Santuario": {
+    "merged_verts": 0,
+    "faces_before": 12,
+    "faces_after": 10,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 2,
+    "flipped_normals": 0
+   },
+   "TRN_Parapets_Morada_NE": {
+    "merged_verts": 192,
+    "faces_before": 2944,
+    "faces_after": 2940,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 4,
+    "flipped_normals": 96
+   },
+   "TRN_Parapets_Morada_NW": {
+    "merged_verts": 192,
+    "faces_before": 2944,
+    "faces_after": 2940,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 4,
+    "flipped_normals": 96
+   },
+   "TRN_Parapets_Morada_SE": {
+    "merged_verts": 192,
+    "faces_before": 2944,
+    "faces_after": 2940,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 4,
+    "flipped_normals": 96
+   },
+   "TRN_Parapets_Morada_SW": {
+    "merged_verts": 192,
+    "faces_before": 2944,
+    "faces_after": 2940,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 4,
+    "flipped_normals": 96
+   },
+   "TRN_PlazaParcel_01": {
+    "merged_verts": 0,
+    "faces_before": 12,
+    "faces_after": 10,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 2,
+    "flipped_normals": 0
+   },
+   "TRN_PlazaParcel_02": {
+    "merged_verts": 0,
+    "faces_before": 12,
+    "faces_after": 10,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 2,
+    "flipped_normals": 0
+   },
+   "TRN_PlazaParcel_03": {
+    "merged_verts": 0,
+    "faces_before": 12,
+    "faces_after": 10,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 2,
+    "flipped_normals": 0
+   },
+   "TRN_PlazaParcel_04": {
+    "merged_verts": 0,
+    "faces_before": 12,
+    "faces_after": 10,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 2,
+    "flipped_normals": 0
+   },
+   "TRN_PlazaParcel_05": {
+    "merged_verts": 0,
+    "faces_before": 12,
+    "faces_after": 10,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 2,
+    "flipped_normals": 0
+   },
+   "TRN_PlazaParcel_06": {
+    "merged_verts": 0,
+    "faces_before": 12,
+    "faces_after": 10,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 2,
+    "flipped_normals": 0
+   },
+   "TRN_PlazaParcel_07": {
+    "merged_verts": 0,
+    "faces_before": 12,
+    "faces_after": 10,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 2,
+    "flipped_normals": 0
+   },
+   "TRN_PlazaParcel_08": {
+    "merged_verts": 0,
+    "faces_before": 12,
+    "faces_after": 10,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 2,
+    "flipped_normals": 0
+   },
+   "TRN_PortalPedestal": {
+    "merged_verts": 0,
+    "faces_before": 768,
+    "faces_after": 672,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 96,
+    "flipped_normals": 0
+   },
+   "TRN_Runestones": {
+    "merged_verts": 0,
+    "faces_before": 336,
+    "faces_after": 280,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 56,
+    "flipped_normals": 0
+   },
+   "TRN_StairPass_01_Repair": {
+    "merged_verts": 4,
+    "faces_before": 48,
+    "faces_after": 48,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 0
+   },
+   "TRN_StairPass_02-col": {
+    "merged_verts": 12,
+    "faces_before": 164,
+    "faces_after": 158,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 4
+   },
+   "TRN_StairPass_03-col": {
+    "merged_verts": 4,
+    "faces_before": 128,
+    "faces_after": 122,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 2
+   },
+   "TRN_StairPass_03_Repair": {
+    "merged_verts": 4,
+    "faces_before": 36,
+    "faces_after": 36,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 2
+   },
+   "TRN_StairPass_04-col": {
+    "merged_verts": 6,
+    "faces_before": 152,
+    "faces_after": 146,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 2
+   },
+   "TRN_StairPass_05-col": {
+    "merged_verts": 4,
+    "faces_before": 140,
+    "faces_after": 132,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 2
+   },
+   "TRN_StairPass_06-col": {
+    "merged_verts": 6,
+    "faces_before": 152,
+    "faces_after": 146,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 2
+   },
+   "TRN_StairPass_07-col": {
+    "merged_verts": 6,
+    "faces_before": 152,
+    "faces_after": 146,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 2
+   },
+   "TRN_StairPass_08-col": {
+    "merged_verts": 6,
+    "faces_before": 140,
+    "faces_after": 134,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 2
+   },
+   "TRN_StairPass_08_Repair": {
+    "merged_verts": 2,
+    "faces_before": 24,
+    "faces_after": 24,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 0
+   },
+   "TRN_StairPass_09-col": {
+    "merged_verts": 6,
+    "faces_before": 152,
+    "faces_after": 146,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 2
+   },
+   "TRN_StairPass_10-col": {
+    "merged_verts": 2,
+    "faces_before": 140,
+    "faces_after": 132,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 0
+   },
+   "TRN_TerraceStairs_Morada_NE": {
+    "merged_verts": 152,
+    "faces_before": 1368,
+    "faces_after": 1368,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 0
+   },
+   "TRN_TerraceStairs_Morada_NW": {
+    "merged_verts": 152,
+    "faces_before": 1368,
+    "faces_after": 1368,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 0
+   },
+   "TRN_TerraceStairs_Morada_SE": {
+    "merged_verts": 152,
+    "faces_before": 1368,
+    "faces_after": 1368,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 0
+   },
+   "TRN_TerraceStairs_Morada_SW": {
+    "merged_verts": 152,
+    "faces_before": 1368,
+    "faces_after": 1368,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 0,
+    "flipped_normals": 0
+   },
+   "WALL_Drain_Grate": {
+    "merged_verts": 0,
+    "faces_before": 204,
+    "faces_after": 192,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 12,
+    "flipped_normals": 0
+   },
+   "WALL_Mod_A": {
+    "merged_verts": 8,
+    "faces_before": 1044,
+    "faces_after": 1026,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 2,
+    "flipped_normals": 0
+   },
+   "WALL_Mod_B": {
+    "merged_verts": 8,
+    "faces_before": 1216,
+    "faces_after": 1198,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 2,
+    "flipped_normals": 0
+   },
+   "WALL_Mod_C": {
+    "merged_verts": 8,
+    "faces_before": 2028,
+    "faces_after": 2010,
+    "interior_faces": 0,
+    "hidden_bottom_faces": 2,
+    "flipped_normals": 0
+   }
+  }
+ },
+ "city_chunks": {
+  "count": 69,
+  "budget": 35000,
+  "planar_optimized": "ninguno",
+  "lod0": {
+   "max": 11611,
+   "avg": 6552,
+   "total": 452076
+  },
+  "lod1_total": 225990,
+  "lod2_total": 80476,
+  "lod2_ratio_real": 0.178,
+  "colonly_total": 225990,
+  "seams_ok": "137 / 138 LODs conservan todos los vertices de borde del LOD0",
+  "silhouette_error_LOD2_m": {
+   "TRN_City_Chunk_7_5": {
+    "p50": 0.005,
+    "p99": 0.097,
+    "max": 0.165,
+    "samples": 2500
+   },
+   "TRN_City_Chunk_8_8": {
+    "p50": 0.006,
+    "p99": 0.039,
+    "max": 0.045,
+    "samples": 2500
+   },
+   "TRN_City_Chunk_10_10": {
+    "p50": 0.0,
+    "p99": 0.004,
+    "max": 0.012,
+    "samples": 2500
+   },
+   "TRN_City_Chunk_12_8": {
+    "p50": 0.002,
+    "p99": 0.031,
+    "max": 0.102,
+    "samples": 1830
+   }
+  },
+  "per_chunk": {
+   "TRN_City_Chunk_4_6": {
+    "LOD0": 1210,
+    "locked_verts": 185,
+    "boundary_verts": 144,
+    "LOD1": 604,
+    "LOD2": 234,
+    "colonly": 604
+   },
+   "TRN_City_Chunk_4_7": {
+    "LOD0": 3797,
+    "locked_verts": 398,
+    "boundary_verts": 195,
+    "LOD1": 1897,
+    "LOD2": 683,
+    "colonly": 1897
+   },
+   "TRN_City_Chunk_4_8": {
+    "LOD0": 4601,
+    "locked_verts": 372,
+    "boundary_verts": 211,
+    "LOD1": 2299,
+    "LOD2": 689,
+    "colonly": 2299
+   },
+   "TRN_City_Chunk_4_9": {
+    "LOD0": 3839,
+    "locked_verts": 408,
+    "boundary_verts": 205,
+    "LOD1": 1919,
+    "LOD2": 679,
+    "colonly": 1919
+   },
+   "TRN_City_Chunk_4_10": {
+    "LOD0": 1210,
+    "locked_verts": 185,
+    "boundary_verts": 144,
+    "LOD1": 604,
+    "LOD2": 236,
+    "colonly": 604
+   },
+   "TRN_City_Chunk_5_5": {
+    "LOD0": 2644,
+    "locked_verts": 302,
+    "boundary_verts": 212,
+    "LOD1": 1322,
+    "LOD2": 396,
+    "colonly": 1322
+   },
+   "TRN_City_Chunk_5_6": {
+    "LOD0": 8236,
+    "locked_verts": 631,
+    "boundary_verts": 272,
+    "LOD1": 4118,
+    "LOD2": 1234,
+    "colonly": 4118
+   },
+   "TRN_City_Chunk_5_7": {
+    "LOD0": 9294,
+    "locked_verts": 1258,
+    "boundary_verts": 272,
+    "LOD1": 4646,
+    "LOD2": 2458,
+    "colonly": 4646
+   },
+   "TRN_City_Chunk_5_8": {
+    "LOD0": 7312,
+    "locked_verts": 360,
+    "boundary_verts": 262,
+    "LOD1": 3656,
+    "LOD2": 1096,
+    "colonly": 3656
+   },
+   "TRN_City_Chunk_5_9": {
+    "LOD0": 9131,
+    "locked_verts": 1300,
+    "boundary_verts": 283,
+    "LOD1": 4565,
+    "LOD2": 2523,
+    "colonly": 4565
+   },
+   "TRN_City_Chunk_5_10": {
+    "LOD0": 8209,
+    "locked_verts": 628,
+    "boundary_verts": 269,
+    "LOD1": 4103,
+    "LOD2": 1231,
+    "colonly": 4103
+   },
+   "TRN_City_Chunk_5_11": {
+    "LOD0": 2639,
+    "locked_verts": 301,
+    "boundary_verts": 211,
+    "LOD1": 1319,
+    "LOD2": 397,
+    "colonly": 1319
+   },
+   "TRN_City_Chunk_6_4": {
+    "LOD0": 1210,
+    "locked_verts": 185,
+    "boundary_verts": 144,
+    "LOD1": 604,
+    "LOD2": 234,
+    "colonly": 604
+   },
+   "TRN_City_Chunk_6_5": {
+    "LOD0": 8308,
+    "locked_verts": 627,
+    "boundary_verts": 270,
+    "LOD1": 4154,
+    "LOD2": 1246,
+    "colonly": 4154
+   },
+   "TRN_City_Chunk_6_6": {
+    "LOD0": 9845,
+    "locked_verts": 783,
+    "boundary_verts": 305,
+    "LOD1": 4921,
+    "LOD2": 1475,
+    "colonly": 4921
+   },
+   "TRN_City_Chunk_6_7": {
+    "LOD0": 8816,
+    "locked_verts": 641,
+    "boundary_verts": 256,
+    "LOD1": 4408,
+    "LOD2": 1322,
+    "colonly": 4408
+   },
+   "TRN_City_Chunk_6_8": {
+    "LOD0": 6997,
+    "locked_verts": 394,
+    "boundary_verts": 221,
+    "LOD1": 3497,
+    "LOD2": 1049,
+    "colonly": 3497
+   },
+   "TRN_City_Chunk_6_9": {
+    "LOD0": 8536,
+    "locked_verts": 715,
+    "boundary_verts": 252,
+    "LOD1": 4268,
+    "LOD2": 1282,
+    "colonly": 4268
+   },
+   "TRN_City_Chunk_6_10": {
+    "LOD0": 9695,
+    "locked_verts": 779,
+    "boundary_verts": 301,
+    "LOD1": 4847,
+    "LOD2": 1453,
+    "colonly": 4847
+   },
+   "TRN_City_Chunk_6_11": {
+    "LOD0": 8159,
+    "locked_verts": 625,
+    "boundary_verts": 269,
+    "LOD1": 4079,
+    "LOD2": 1223,
+    "colonly": 4079
+   },
+   "TRN_City_Chunk_6_12": {
+    "LOD0": 1210,
+    "locked_verts": 185,
+    "boundary_verts": 144,
+    "LOD1": 604,
+    "LOD2": 234,
+    "colonly": 604
+   },
+   "TRN_City_Chunk_7_4": {
+    "LOD0": 3704,
+    "locked_verts": 323,
+    "boundary_verts": 190,
+    "LOD1": 1852,
+    "LOD2": 554,
+    "colonly": 1852
+   },
+   "TRN_City_Chunk_7_5": {
+    "LOD0": 9234,
+    "locked_verts": 875,
+    "boundary_verts": 264,
+    "LOD1": 4616,
+    "LOD2": 1636,
+    "colonly": 4616
+   },
+   "TRN_City_Chunk_7_6": {
+    "LOD0": 9029,
+    "locked_verts": 789,
+    "boundary_verts": 273,
+    "LOD1": 4513,
+    "LOD2": 1405,
+    "colonly": 4513
+   },
+   "TRN_City_Chunk_7_7": {
+    "LOD0": 6588,
+    "locked_verts": 326,
+    "boundary_verts": 230,
+    "LOD1": 3294,
+    "LOD2": 988,
+    "colonly": 3294
+   },
+   "TRN_City_Chunk_7_8": {
+    "LOD0": 6868,
+    "locked_verts": 341,
+    "boundary_verts": 222,
+    "LOD1": 3434,
+    "LOD2": 1030,
+    "colonly": 3434
+   },
+   "TRN_City_Chunk_7_9": {
+    "LOD0": 6294,
+    "locked_verts": 250,
+    "boundary_verts": 224,
+    "LOD1": 3146,
+    "LOD2": 944,
+    "colonly": 3146
+   },
+   "TRN_City_Chunk_7_10": {
+    "LOD0": 8749,
+    "locked_verts": 658,
+    "boundary_verts": 261,
+    "LOD1": 4373,
+    "LOD2": 1311,
+    "colonly": 4373
+   },
+   "TRN_City_Chunk_7_11": {
+    "LOD0": 8711,
+    "locked_verts": 803,
+    "boundary_verts": 273,
+    "LOD1": 4355,
+    "LOD2": 1481,
+    "colonly": 4355
+   },
+   "TRN_City_Chunk_7_12": {
+    "LOD0": 3809,
+    "locked_verts": 379,
+    "boundary_verts": 193,
+    "LOD1": 1903,
+    "LOD2": 641,
+    "colonly": 1903
+   },
+   "TRN_City_Chunk_8_4": {
+    "LOD0": 4542,
+    "locked_verts": 437,
+    "boundary_verts": 192,
+    "LOD1": 2270,
+    "LOD2": 716,
+    "colonly": 2270
+   },
+   "TRN_City_Chunk_8_5": {
+    "LOD0": 7047,
+    "locked_verts": 694,
+    "boundary_verts": 251,
+    "LOD1": 3523,
+    "LOD2": 1215,
+    "colonly": 3523
+   },
+   "TRN_City_Chunk_8_6": {
+    "LOD0": 7272,
+    "locked_verts": 566,
+    "boundary_verts": 266,
+    "LOD1": 3636,
+    "LOD2": 1090,
+    "colonly": 3636
+   },
+   "TRN_City_Chunk_8_7": {
+    "LOD0": 6814,
+    "locked_verts": 420,
+    "boundary_verts": 230,
+    "LOD1": 3406,
+    "LOD2": 1022,
+    "colonly": 3406
+   },
+   "TRN_City_Chunk_8_8": {
+    "LOD0": 8856,
+    "locked_verts": 1122,
+    "boundary_verts": 240,
+    "LOD1": 4428,
+    "LOD2": 2014,
+    "colonly": 4428
+   },
+   "TRN_City_Chunk_8_9": {
+    "LOD0": 6952,
+    "locked_verts": 454,
+    "boundary_verts": 244,
+    "LOD1": 3476,
+    "LOD2": 1042,
+    "colonly": 3476
+   },
+   "TRN_City_Chunk_8_10": {
+    "LOD0": 7455,
+    "locked_verts": 775,
+    "boundary_verts": 245,
+    "LOD1": 3727,
+    "LOD2": 1409,
+    "colonly": 3727
+   },
+   "TRN_City_Chunk_8_11": {
+    "LOD0": 6747,
+    "locked_verts": 516,
+    "boundary_verts": 241,
+    "LOD1": 3373,
+    "LOD2": 1011,
+    "colonly": 3373
+   },
+   "TRN_City_Chunk_8_12": {
+    "LOD0": 4522,
+    "locked_verts": 397,
+    "boundary_verts": 194,
+    "LOD1": 2260,
+    "LOD2": 678,
+    "colonly": 2260
+   },
+   "TRN_City_Chunk_9_4": {
+    "LOD0": 3814,
+    "locked_verts": 391,
+    "boundary_verts": 192,
+    "LOD1": 1906,
+    "LOD2": 652,
+    "colonly": 1906
+   },
+   "TRN_City_Chunk_9_5": {
+    "LOD0": 9375,
+    "locked_verts": 919,
+    "boundary_verts": 263,
+    "LOD1": 4687,
+    "LOD2": 1749,
+    "colonly": 4687
+   },
+   "TRN_City_Chunk_9_6": {
+    "LOD0": 8524,
+    "locked_verts": 816,
+    "boundary_verts": 260,
+    "LOD1": 4262,
+    "LOD2": 1488,
+    "colonly": 4262
+   },
+   "TRN_City_Chunk_9_7": {
+    "LOD0": 6316,
+    "locked_verts": 314,
+    "boundary_verts": 228,
+    "LOD1": 3158,
+    "LOD2": 946,
+    "colonly": 3158
+   },
+   "TRN_City_Chunk_9_8": {
+    "LOD0": 7670,
+    "locked_verts": 439,
+    "boundary_verts": 256,
+    "LOD1": 3834,
+    "LOD2": 1150,
+    "colonly": 3834
+   },
+   "TRN_City_Chunk_9_9": {
+    "LOD0": 10209,
+    "locked_verts": 1910,
+    "boundary_verts": 261,
+    "LOD1": 5103,
+    "LOD2": 3703,
+    "colonly": 5103
+   },
+   "TRN_City_Chunk_9_10": {
+    "LOD0": 9404,
+    "locked_verts": 886,
+    "boundary_verts": 286,
+    "LOD1": 4702,
+    "LOD2": 1618,
+    "colonly": 4702
+   },
+   "TRN_City_Chunk_9_11": {
+    "LOD0": 8522,
+    "locked_verts": 1117,
+    "boundary_verts": 280,
+    "LOD1": 4260,
+    "LOD2": 2140,
+    "colonly": 4260
+   },
+   "TRN_City_Chunk_9_12": {
+    "LOD0": 3764,
+    "locked_verts": 375,
+    "boundary_verts": 194,
+    "LOD1": 1882,
+    "LOD2": 626,
+    "colonly": 1882
+   },
+   "TRN_City_Chunk_10_4": {
+    "LOD0": 1210,
+    "locked_verts": 185,
+    "boundary_verts": 144,
+    "LOD1": 604,
+    "LOD2": 234,
+    "colonly": 604
+   },
+   "TRN_City_Chunk_10_5": {
+    "LOD0": 8289,
+    "locked_verts": 600,
+    "boundary_verts": 261,
+    "LOD1": 4143,
+    "LOD2": 1243,
+    "colonly": 4143
+   },
+   "TRN_City_Chunk_10_6": {
+    "LOD0": 10373,
+    "locked_verts": 739,
+    "boundary_verts": 289,
+    "LOD1": 5185,
+    "LOD2": 1555,
+    "colonly": 5185
+   },
+   "TRN_City_Chunk_10_7": {
+    "LOD0": 10532,
+    "locked_verts": 990,
+    "boundary_verts": 282,
+    "LOD1": 5266,
+    "LOD2": 1832,
+    "colonly": 5266
+   },
+   "TRN_City_Chunk_10_8": {
+    "LOD0": 10823,
+    "locked_verts": 1313,
+    "boundary_verts": 289,
+    "LOD1": 5411,
+    "LOD2": 2527,
+    "colonly": 5411
+   },
+   "TRN_City_Chunk_10_9": {
+    "LOD0": 9893,
+    "locked_verts": 970,
+    "boundary_verts": 301,
+    "LOD1": 4945,
+    "LOD2": 1775,
+    "colonly": 4945
+   },
+   "TRN_City_Chunk_10_10": {
+    "LOD0": 9800,
+    "locked_verts": 784,
+    "boundary_verts": 306,
+    "LOD1": 4900,
+    "LOD2": 1470,
+    "colonly": 4900
+   },
+   "TRN_City_Chunk_10_11": {
+    "LOD0": 8230,
+    "locked_verts": 632,
+    "boundary_verts": 272,
+    "LOD1": 4114,
+    "LOD2": 1234,
+    "colonly": 4114
+   },
+   "TRN_City_Chunk_10_12": {
+    "LOD0": 1210,
+    "locked_verts": 185,
+    "boundary_verts": 144,
+    "LOD1": 604,
+    "LOD2": 238,
+    "colonly": 604
+   },
+   "TRN_City_Chunk_11_5": {
+    "LOD0": 2572,
+    "locked_verts": 290,
+    "boundary_verts": 200,
+    "LOD1": 1286,
+    "LOD2": 384,
+    "colonly": 1286
+   },
+   "TRN_City_Chunk_11_6": {
+    "LOD0": 8277,
+    "locked_verts": 602,
+    "boundary_verts": 263,
+    "LOD1": 4137,
+    "LOD2": 1241,
+    "colonly": 4137
+   },
+   "TRN_City_Chunk_11_7": {
+    "LOD0": 11611,
+    "locked_verts": 1691,
+    "boundary_verts": 285,
+    "LOD1": 5805,
+    "LOD2": 3325,
+    "colonly": 5805
+   },
+   "TRN_City_Chunk_11_8": {
+    "LOD0": 8021,
+    "locked_verts": 694,
+    "boundary_verts": 249,
+    "LOD1": 4009,
+    "LOD2": 1225,
+    "colonly": 4009
+   },
+   "TRN_City_Chunk_11_9": {
+    "LOD0": 9834,
+    "locked_verts": 1075,
+    "boundary_verts": 282,
+    "LOD1": 4916,
+    "LOD2": 2056,
+    "colonly": 4916
+   },
+   "TRN_City_Chunk_11_10": {
+    "LOD0": 8183,
+    "locked_verts": 627,
+    "boundary_verts": 271,
+    "LOD1": 4091,
+    "LOD2": 1227,
+    "colonly": 4091
+   },
+   "TRN_City_Chunk_11_11": {
+    "LOD0": 2622,
+    "locked_verts": 300,
+    "boundary_verts": 210,
+    "LOD1": 1310,
+    "LOD2": 396,
+    "colonly": 1310
+   },
+   "TRN_City_Chunk_12_6": {
+    "LOD0": 1210,
+    "locked_verts": 185,
+    "boundary_verts": 144,
+    "LOD1": 604,
+    "LOD2": 234,
+    "colonly": 604
+   },
+   "TRN_City_Chunk_12_7": {
+    "LOD0": 4344,
+    "locked_verts": 653,
+    "boundary_verts": 196,
+    "LOD1": 2172,
+    "LOD2": 1188,
+    "colonly": 2172
+   },
+   "TRN_City_Chunk_12_8": {
+    "LOD0": 4487,
+    "locked_verts": 373,
+    "boundary_verts": 191,
+    "LOD1": 2243,
+    "LOD2": 673,
+    "colonly": 2243
+   },
+   "TRN_City_Chunk_12_9": {
+    "LOD0": 3656,
+    "locked_verts": 300,
+    "boundary_verts": 190,
+    "LOD1": 1828,
+    "LOD2": 548,
+    "colonly": 1828
+   },
+   "TRN_City_Chunk_12_10": {
+    "LOD0": 1210,
+    "locked_verts": 185,
+    "boundary_verts": 144,
+    "LOD1": 604,
+    "LOD2": 238,
+    "colonly": 604
+   }
+  },
+  "districts": {
+   "clases": 9,
+   "moradas": 22,
+   "razas": 9,
+   "mercado": 9,
+   "plaza": 9,
+   "oficios": 11
+  }
+ },
+ "exterior_chunks": {
+  "count": 204,
+  "budget": 8000,
+  "max_total_LOD0": 2095,
+  "over_budget": "ninguno",
+  "per_chunk": {
+   "0_5": {
+    "terrain": {
+     "LOD0": 19,
+     "LOD1": 19,
+     "LOD2": 19
+    },
+    "cliffs": {
+     "LOD0": 20,
+     "LOD1": 20,
+     "LOD2": 20
+    },
+    "rocks": [],
+    "total_LOD0": 39
+   },
+   "0_6": {
+    "terrain": {
+     "LOD0": 173,
+     "LOD1": 85,
+     "LOD2": 73
+    },
+    "cliffs": {
+     "LOD0": 210,
+     "LOD1": 204,
+     "LOD2": 204
+    },
+    "rocks": [],
+    "total_LOD0": 383
+   },
+   "0_7": {
+    "terrain": {
+     "LOD0": 293,
+     "LOD1": 145,
+     "LOD2": 81
+    },
+    "cliffs": {
+     "LOD0": 614,
+     "LOD1": 610,
+     "LOD2": 610
+    },
+    "rocks": [],
+    "total_LOD0": 907
+   },
+   "0_8": {
+    "terrain": {
+     "LOD0": 312,
+     "LOD1": 156,
+     "LOD2": 84
+    },
+    "cliffs": {
+     "LOD0": 646,
+     "LOD1": 646,
+     "LOD2": 646
+    },
+    "rocks": [],
+    "total_LOD0": 958
+   },
+   "0_9": {
+    "terrain": {
+     "LOD0": 293,
+     "LOD1": 145,
+     "LOD2": 81
+    },
+    "cliffs": {
+     "LOD0": 612,
+     "LOD1": 602,
+     "LOD2": 602
+    },
+    "rocks": [],
+    "total_LOD0": 905
+   },
+   "0_10": {
+    "terrain": {
+     "LOD0": 173,
+     "LOD1": 85,
+     "LOD2": 71
+    },
+    "cliffs": {
+     "LOD0": 150,
+     "LOD1": 148,
+     "LOD2": 148
+    },
+    "rocks": [],
+    "total_LOD0": 323
+   },
+   "0_11": {
+    "terrain": {
+     "LOD0": 19,
+     "LOD1": 19,
+     "LOD2": 19
+    },
+    "cliffs": {
+     "LOD0": 19,
+     "LOD1": 19,
+     "LOD2": 19
+    },
+    "rocks": [],
+    "total_LOD0": 38
+   },
+   "1_3": {
+    "terrain": {
+     "LOD0": 12,
+     "LOD1": 12,
+     "LOD2": 12
+    },
+    "cliffs": {
+     "LOD0": 12,
+     "LOD1": 12,
+     "LOD2": 12
+    },
+    "rocks": [],
+    "total_LOD0": 24
+   },
+   "1_4": {
+    "terrain": {
+     "LOD0": 280,
+     "LOD1": 140,
+     "LOD2": 80
+    },
+    "cliffs": {
+     "LOD0": 493,
+     "LOD1": 481,
+     "LOD2": 481
+    },
+    "rocks": [],
+    "total_LOD0": 773
+   },
+   "1_5": {
+    "terrain": {
+     "LOD0": 593,
+     "LOD1": 295,
+     "LOD2": 121
+    },
+    "cliffs": {
+     "LOD0": 696,
+     "LOD1": 688,
+     "LOD2": 688
+    },
+    "rocks": [],
+    "total_LOD0": 1289
+   },
+   "1_6": {
+    "terrain": {
+     "LOD0": 696,
+     "LOD1": 348,
+     "LOD2": 146
+    },
+    "cliffs": {
+     "LOD0": 554,
+     "LOD1": 550,
+     "LOD2": 550
+    },
+    "rocks": [],
+    "total_LOD0": 1250
+   },
+   "1_7": {
+    "terrain": {
+     "LOD0": 702,
+     "LOD1": 350,
+     "LOD2": 142
+    },
+    "cliffs": {
+     "LOD0": 75,
+     "LOD1": 75,
+     "LOD2": 75
+    },
+    "rocks": [],
+    "total_LOD0": 777
+   },
+   "1_8": {
+    "terrain": {
+     "LOD0": 695,
+     "LOD1": 347,
+     "LOD2": 139
+    },
+    "rocks": [],
+    "total_LOD0": 695
+   },
+   "1_9": {
+    "terrain": {
+     "LOD0": 702,
+     "LOD1": 350,
+     "LOD2": 142
+    },
+    "cliffs": {
+     "LOD0": 67,
+     "LOD1": 67,
+     "LOD2": 67
+    },
+    "rocks": [],
+    "total_LOD0": 769
+   },
+   "1_10": {
+    "terrain": {
+     "LOD0": 696,
+     "LOD1": 348,
+     "LOD2": 146
+    },
+    "cliffs": {
+     "LOD0": 609,
+     "LOD1": 609,
+     "LOD2": 609
+    },
+    "rocks": [
+     "EXT_Rock_02"
+    ],
+    "total_LOD0": 2095
+   },
+   "1_11": {
+    "terrain": {
+     "LOD0": 593,
+     "LOD1": 295,
+     "LOD2": 123
+    },
+    "cliffs": {
+     "LOD0": 707,
+     "LOD1": 705,
+     "LOD2": 705
+    },
+    "rocks": [],
+    "total_LOD0": 1300
+   },
+   "1_12": {
+    "terrain": {
+     "LOD0": 281,
+     "LOD1": 139,
+     "LOD2": 109
+    },
+    "cliffs": {
+     "LOD0": 492,
+     "LOD1": 492,
+     "LOD2": 492
+    },
+    "rocks": [],
+    "total_LOD0": 773
+   },
+   "1_13": {
+    "terrain": {
+     "LOD0": 12,
+     "LOD1": 12,
+     "LOD2": 12
+    },
+    "cliffs": {
+     "LOD0": 13,
+     "LOD1": 13,
+     "LOD2": 13
+    },
+    "rocks": [],
+    "total_LOD0": 25
+   },
+   "2_2": {
+    "terrain": {
+     "LOD0": 41,
+     "LOD1": 27,
+     "LOD2": 27
+    },
+    "cliffs": {
+     "LOD0": 20,
+     "LOD1": 20,
+     "LOD2": 20
+    },
+    "rocks": [],
+    "total_LOD0": 61
+   },
+   "2_3": {
+    "terrain": {
+     "LOD0": 480,
+     "LOD1": 240,
+     "LOD2": 110
+    },
+    "cliffs": {
+     "LOD0": 733,
+     "LOD1": 731,
+     "LOD2": 731
+    },
+    "rocks": [],
+    "total_LOD0": 1213
+   },
+   "2_4": {
+    "terrain": {
+     "LOD0": 706,
+     "LOD1": 352,
+     "LOD2": 150
+    },
+    "cliffs": {
+     "LOD0": 354,
+     "LOD1": 350,
+     "LOD2": 350
+    },
+    "rocks": [],
+    "total_LOD0": 1060
+   },
+   "2_5": {
+    "terrain": {
+     "LOD0": 706,
+     "LOD1": 352,
+     "LOD2": 154
+    },
+    "rocks": [],
+    "total_LOD0": 706
+   },
+   "2_6": {
+    "terrain": {
+     "LOD0": 700,
+     "LOD1": 350,
+     "LOD2": 148
+    },
+    "rocks": [
+     "EXT_Rock_10"
+    ],
+    "total_LOD0": 1490
+   },
+   "2_7": {
+    "terrain": {
+     "LOD0": 698,
+     "LOD1": 348,
+     "LOD2": 144
+    },
+    "rocks": [],
+    "total_LOD0": 698
+   },
+   "2_8": {
+    "terrain": {
+     "LOD0": 696,
+     "LOD1": 348,
+     "LOD2": 138
+    },
+    "rocks": [],
+    "total_LOD0": 696
+   },
+   "2_9": {
+    "terrain": {
+     "LOD0": 698,
+     "LOD1": 348,
+     "LOD2": 168
+    },
+    "rocks": [],
+    "total_LOD0": 698
+   },
+   "2_10": {
+    "terrain": {
+     "LOD0": 700,
+     "LOD1": 350,
+     "LOD2": 156
+    },
+    "rocks": [],
+    "total_LOD0": 700
+   },
+   "2_11": {
+    "terrain": {
+     "LOD0": 705,
+     "LOD1": 351,
+     "LOD2": 153
+    },
+    "rocks": [],
+    "total_LOD0": 705
+   },
+   "2_12": {
+    "terrain": {
+     "LOD0": 705,
+     "LOD1": 351,
+     "LOD2": 175
+    },
+    "cliffs": {
+     "LOD0": 360,
+     "LOD1": 360,
+     "LOD2": 360
+    },
+    "rocks": [],
+    "total_LOD0": 1065
+   },
+   "2_13": {
+    "terrain": {
+     "LOD0": 480,
+     "LOD1": 240,
+     "LOD2": 112
+    },
+    "cliffs": {
+     "LOD0": 741,
+     "LOD1": 735,
+     "LOD2": 735
+    },
+    "rocks": [],
+    "total_LOD0": 1221
+   },
+   "2_14": {
+    "terrain": {
+     "LOD0": 41,
+     "LOD1": 27,
+     "LOD2": 27
+    },
+    "cliffs": {
+     "LOD0": 22,
+     "LOD1": 22,
+     "LOD2": 22
+    },
+    "rocks": [],
+    "total_LOD0": 63
+   },
+   "3_1": {
+    "terrain": {
+     "LOD0": 14,
+     "LOD1": 14,
+     "LOD2": 14
+    },
+    "cliffs": {
+     "LOD0": 13,
+     "LOD1": 13,
+     "LOD2": 13
+    },
+    "rocks": [],
+    "total_LOD0": 27
+   },
+   "3_2": {
+    "terrain": {
+     "LOD0": 474,
+     "LOD1": 236,
+     "LOD2": 108
+    },
+    "cliffs": {
+     "LOD0": 726,
+     "LOD1": 718,
+     "LOD2": 718
+    },
+    "rocks": [],
+    "total_LOD0": 1200
+   },
+   "3_3": {
+    "terrain": {
+     "LOD0": 690,
+     "LOD1": 344,
+     "LOD2": 144
+    },
+    "cliffs": {
+     "LOD0": 193,
+     "LOD1": 193,
+     "LOD2": 193
+    },
+    "rocks": [],
+    "total_LOD0": 883
+   },
+   "3_4": {
+    "terrain": {
+     "LOD0": 702,
+     "LOD1": 350,
+     "LOD2": 150
+    },
+    "rocks": [
+     "EXT_Rock_06"
+    ],
+    "total_LOD0": 1684
+   },
+   "3_5": {
+    "terrain": {
+     "LOD0": 702,
+     "LOD1": 350,
+     "LOD2": 146
+    },
+    "rocks": [],
+    "total_LOD0": 702
+   },
+   "3_6": {
+    "terrain": {
+     "LOD0": 707,
+     "LOD1": 353,
+     "LOD2": 153
+    },
+    "rocks": [],
+    "total_LOD0": 707
+   },
+   "3_7": {
+    "terrain": {
+     "LOD0": 757,
+     "LOD1": 377,
+     "LOD2": 215
+    },
+    "rocks": [],
+    "total_LOD0": 757
+   },
+   "3_8": {
+    "terrain": {
+     "LOD0": 875,
+     "LOD1": 437,
+     "LOD2": 267
+    },
+    "rocks": [],
+    "total_LOD0": 875
+   },
+   "3_9": {
+    "terrain": {
+     "LOD0": 756,
+     "LOD1": 378,
+     "LOD2": 270
+    },
+    "rocks": [],
+    "total_LOD0": 756
+   },
+   "3_10": {
+    "terrain": {
+     "LOD0": 706,
+     "LOD1": 352,
+     "LOD2": 152
+    },
+    "rocks": [],
+    "total_LOD0": 706
+   },
+   "3_11": {
+    "terrain": {
+     "LOD0": 702,
+     "LOD1": 350,
+     "LOD2": 146
+    },
+    "rocks": [],
+    "total_LOD0": 702
+   },
+   "3_12": {
+    "terrain": {
+     "LOD0": 702,
+     "LOD1": 350,
+     "LOD2": 148
+    },
+    "rocks": [],
+    "total_LOD0": 702
+   },
+   "3_13": {
+    "terrain": {
+     "LOD0": 690,
+     "LOD1": 344,
+     "LOD2": 146
+    },
+    "cliffs": {
+     "LOD0": 176,
+     "LOD1": 176,
+     "LOD2": 176
+    },
+    "rocks": [],
+    "total_LOD0": 866
+   },
+   "3_14": {
+    "terrain": {
+     "LOD0": 474,
+     "LOD1": 236,
+     "LOD2": 106
+    },
+    "cliffs": {
+     "LOD0": 735,
+     "LOD1": 727,
+     "LOD2": 727
+    },
+    "rocks": [],
+    "total_LOD0": 1209
+   },
+   "3_15": {
+    "terrain": {
+     "LOD0": 14,
+     "LOD1": 14,
+     "LOD2": 14
+    },
+    "cliffs": {
+     "LOD0": 13,
+     "LOD1": 13,
+     "LOD2": 13
+    },
+    "rocks": [],
+    "total_LOD0": 27
+   },
+   "4_1": {
+    "terrain": {
+     "LOD0": 285,
+     "LOD1": 141,
+     "LOD2": 85
+    },
+    "cliffs": {
+     "LOD0": 473,
+     "LOD1": 469,
+     "LOD2": 469
+    },
+    "rocks": [],
+    "total_LOD0": 758
+   },
+   "4_2": {
+    "terrain": {
+     "LOD0": 700,
+     "LOD1": 350,
+     "LOD2": 142
+    },
+    "cliffs": {
+     "LOD0": 368,
+     "LOD1": 366,
+     "LOD2": 366
+    },
+    "rocks": [],
+    "total_LOD0": 1068
+   },
+   "4_3": {
+    "terrain": {
+     "LOD0": 698,
+     "LOD1": 348,
+     "LOD2": 144
+    },
+    "rocks": [],
+    "total_LOD0": 698
+   },
+   "4_4": {
+    "terrain": {
+     "LOD0": 696,
+     "LOD1": 348,
+     "LOD2": 148
+    },
+    "rocks": [],
+    "total_LOD0": 696
+   },
+   "4_5": {
+    "terrain": {
+     "LOD0": 899,
+     "LOD1": 449,
+     "LOD2": 263
+    },
+    "rocks": [],
+    "total_LOD0": 899
+   },
+   "4_6": {
+    "terrain": {
+     "LOD0": 1319,
+     "LOD1": 659,
+     "LOD2": 513
+    },
+    "rocks": [],
+    "total_LOD0": 1319
+   },
+   "4_7": {
+    "terrain": {
+     "LOD0": 974,
+     "LOD1": 486,
+     "LOD2": 472
+    },
+    "rocks": [],
+    "total_LOD0": 974
+   },
+   "4_8": {
+    "terrain": {
+     "LOD0": 758,
+     "LOD1": 378,
+     "LOD2": 328
+    },
+    "rocks": [],
+    "total_LOD0": 758
+   },
+   "4_9": {
+    "terrain": {
+     "LOD0": 972,
+     "LOD1": 486,
+     "LOD2": 428
+    },
+    "rocks": [],
+    "total_LOD0": 972
+   },
+   "4_10": {
+    "terrain": {
+     "LOD0": 1316,
+     "LOD1": 658,
+     "LOD2": 518
+    },
+    "rocks": [],
+    "total_LOD0": 1316
+   },
+   "4_11": {
+    "terrain": {
+     "LOD0": 898,
+     "LOD1": 448,
+     "LOD2": 260
+    },
+    "rocks": [
+     "EXT_Rock_01"
+    ],
+    "total_LOD0": 1688
+   },
+   "4_12": {
+    "terrain": {
+     "LOD0": 696,
+     "LOD1": 348,
+     "LOD2": 148
+    },
+    "rocks": [],
+    "total_LOD0": 696
+   },
+   "4_13": {
+    "terrain": {
+     "LOD0": 698,
+     "LOD1": 348,
+     "LOD2": 212
+    },
+    "rocks": [],
+    "total_LOD0": 698
+   },
+   "4_14": {
+    "terrain": {
+     "LOD0": 700,
+     "LOD1": 350,
+     "LOD2": 142
+    },
+    "cliffs": {
+     "LOD0": 363,
+     "LOD1": 363,
+     "LOD2": 363
+    },
+    "rocks": [],
+    "total_LOD0": 1063
+   },
+   "4_15": {
+    "terrain": {
+     "LOD0": 285,
+     "LOD1": 141,
+     "LOD2": 89
+    },
+    "cliffs": {
+     "LOD0": 483,
+     "LOD1": 477,
+     "LOD2": 477
+    },
+    "rocks": [],
+    "total_LOD0": 768
+   },
+   "5_0": {
+    "terrain": {
+     "LOD0": 17,
+     "LOD1": 17,
+     "LOD2": 17
+    },
+    "cliffs": {
+     "LOD0": 18,
+     "LOD1": 18,
+     "LOD2": 18
+    },
+    "rocks": [],
+    "total_LOD0": 35
+   },
+   "5_1": {
+    "terrain": {
+     "LOD0": 593,
+     "LOD1": 295,
+     "LOD2": 117
+    },
+    "cliffs": {
+     "LOD0": 700,
+     "LOD1": 692,
+     "LOD2": 692
+    },
+    "rocks": [],
+    "total_LOD0": 1293
+   },
+   "5_2": {
+    "terrain": {
+     "LOD0": 694,
+     "LOD1": 346,
+     "LOD2": 144
+    },
+    "rocks": [],
+    "total_LOD0": 694
+   },
+   "5_3": {
+    "terrain": {
+     "LOD0": 696,
+     "LOD1": 348,
+     "LOD2": 142
+    },
+    "rocks": [
+     "EXT_Rock_09"
+    ],
+    "total_LOD0": 1102
+   },
+   "5_4": {
+    "terrain": {
+     "LOD0": 892,
+     "LOD1": 446,
+     "LOD2": 266
+    },
+    "rocks": [],
+    "total_LOD0": 892
+   },
+   "5_5": {
+    "terrain": {
+     "LOD0": 1174,
+     "LOD1": 586,
+     "LOD2": 546
+    },
+    "rocks": [],
+    "total_LOD0": 1174
+   },
+   "5_6": {
+    "terrain": {
+     "LOD0": 34,
+     "LOD1": 30,
+     "LOD2": 30
+    },
+    "rocks": [],
+    "total_LOD0": 34
+   },
+   "5_10": {
+    "terrain": {
+     "LOD0": 33,
+     "LOD1": 29,
+     "LOD2": 29
+    },
+    "rocks": [],
+    "total_LOD0": 33
+   },
+   "5_11": {
+    "terrain": {
+     "LOD0": 1175,
+     "LOD1": 587,
+     "LOD2": 455
+    },
+    "rocks": [],
+    "total_LOD0": 1175
+   },
+   "5_12": {
+    "terrain": {
+     "LOD0": 893,
+     "LOD1": 445,
+     "LOD2": 273
+    },
+    "rocks": [
+     "EXT_Rock_08"
+    ],
+    "total_LOD0": 1395
+   },
+   "5_13": {
+    "terrain": {
+     "LOD0": 696,
+     "LOD1": 348,
+     "LOD2": 176
+    },
+    "rocks": [],
+    "total_LOD0": 696
+   },
+   "5_14": {
+    "terrain": {
+     "LOD0": 694,
+     "LOD1": 346,
+     "LOD2": 202
+    },
+    "rocks": [],
+    "total_LOD0": 694
+   },
+   "5_15": {
+    "terrain": {
+     "LOD0": 593,
+     "LOD1": 295,
+     "LOD2": 117
+    },
+    "cliffs": {
+     "LOD0": 705,
+     "LOD1": 697,
+     "LOD2": 697
+    },
+    "rocks": [],
+    "total_LOD0": 1298
+   },
+   "5_16": {
+    "terrain": {
+     "LOD0": 17,
+     "LOD1": 17,
+     "LOD2": 17
+    },
+    "cliffs": {
+     "LOD0": 19,
+     "LOD1": 19,
+     "LOD2": 19
+    },
+    "rocks": [],
+    "total_LOD0": 36
+   },
+   "6_0": {
+    "terrain": {
+     "LOD0": 172,
+     "LOD1": 86,
+     "LOD2": 68
+    },
+    "cliffs": {
+     "LOD0": 199,
+     "LOD1": 199,
+     "LOD2": 199
+    },
+    "rocks": [],
+    "total_LOD0": 371
+   },
+   "6_1": {
+    "terrain": {
+     "LOD0": 688,
+     "LOD1": 344,
+     "LOD2": 140
+    },
+    "cliffs": {
+     "LOD0": 560,
+     "LOD1": 560,
+     "LOD2": 560
+    },
+    "rocks": [],
+    "total_LOD0": 1248
+   },
+   "6_2": {
+    "terrain": {
+     "LOD0": 697,
+     "LOD1": 347,
+     "LOD2": 161
+    },
+    "rocks": [],
+    "total_LOD0": 697
+   },
+   "6_3": {
+    "terrain": {
+     "LOD0": 690,
+     "LOD1": 344,
+     "LOD2": 144
+    },
+    "rocks": [],
+    "total_LOD0": 690
+   },
+   "6_4": {
+    "terrain": {
+     "LOD0": 1297,
+     "LOD1": 647,
+     "LOD2": 559
+    },
+    "rocks": [],
+    "total_LOD0": 1297
+   },
+   "6_5": {
+    "terrain": {
+     "LOD0": 31,
+     "LOD1": 27,
+     "LOD2": 27
+    },
+    "rocks": [],
+    "total_LOD0": 31
+   },
+   "6_11": {
+    "terrain": {
+     "LOD0": 32,
+     "LOD1": 28,
+     "LOD2": 28
+    },
+    "rocks": [],
+    "total_LOD0": 32
+   },
+   "6_12": {
+    "terrain": {
+     "LOD0": 1298,
+     "LOD1": 648,
+     "LOD2": 458
+    },
+    "rocks": [],
+    "total_LOD0": 1298
+   },
+   "6_13": {
+    "terrain": {
+     "LOD0": 690,
+     "LOD1": 344,
+     "LOD2": 168
+    },
+    "rocks": [],
+    "total_LOD0": 690
+   },
+   "6_14": {
+    "terrain": {
+     "LOD0": 696,
+     "LOD1": 348,
+     "LOD2": 154
+    },
+    "rocks": [],
+    "total_LOD0": 696
+   },
+   "6_15": {
+    "terrain": {
+     "LOD0": 689,
+     "LOD1": 343,
+     "LOD2": 137
+    },
+    "cliffs": {
+     "LOD0": 592,
+     "LOD1": 592,
+     "LOD2": 592
+    },
+    "rocks": [],
+    "total_LOD0": 1281
+   },
+   "6_16": {
+    "terrain": {
+     "LOD0": 172,
+     "LOD1": 86,
+     "LOD2": 68
+    },
+    "cliffs": {
+     "LOD0": 173,
+     "LOD1": 171,
+     "LOD2": 171
+    },
+    "rocks": [],
+    "total_LOD0": 345
+   },
+   "7_0": {
+    "terrain": {
+     "LOD0": 295,
+     "LOD1": 147,
+     "LOD2": 81
+    },
+    "cliffs": {
+     "LOD0": 639,
+     "LOD1": 637,
+     "LOD2": 637
+    },
+    "rocks": [],
+    "total_LOD0": 934
+   },
+   "7_1": {
+    "terrain": {
+     "LOD0": 682,
+     "LOD1": 340,
+     "LOD2": 158
+    },
+    "cliffs": {
+     "LOD0": 34,
+     "LOD1": 34,
+     "LOD2": 34
+    },
+    "rocks": [],
+    "total_LOD0": 716
+   },
+   "7_2": {
+    "terrain": {
+     "LOD0": 690,
+     "LOD1": 344,
+     "LOD2": 176
+    },
+    "rocks": [],
+    "total_LOD0": 690
+   },
+   "7_3": {
+    "terrain": {
+     "LOD0": 760,
+     "LOD1": 380,
+     "LOD2": 214
+    },
+    "rocks": [],
+    "total_LOD0": 760
+   },
+   "7_4": {
+    "terrain": {
+     "LOD0": 973,
+     "LOD1": 499,
+     "LOD2": 499
+    },
+    "rocks": [],
+    "total_LOD0": 973
+   },
+   "7_12": {
+    "terrain": {
+     "LOD0": 973,
+     "LOD1": 485,
+     "LOD2": 475
+    },
+    "rocks": [],
+    "total_LOD0": 973
+   },
+   "7_13": {
+    "terrain": {
+     "LOD0": 760,
+     "LOD1": 380,
+     "LOD2": 226
+    },
+    "rocks": [],
+    "total_LOD0": 760
+   },
+   "7_14": {
+    "terrain": {
+     "LOD0": 687,
+     "LOD1": 343,
+     "LOD2": 153
+    },
+    "rocks": [],
+    "total_LOD0": 687
+   },
+   "7_15": {
+    "terrain": {
+     "LOD0": 682,
+     "LOD1": 340,
+     "LOD2": 154
+    },
+    "cliffs": {
+     "LOD0": 63,
+     "LOD1": 63,
+     "LOD2": 63
+    },
+    "rocks": [],
+    "total_LOD0": 745
+   },
+   "7_16": {
+    "terrain": {
+     "LOD0": 295,
+     "LOD1": 147,
+     "LOD2": 81
+    },
+    "cliffs": {
+     "LOD0": 618,
+     "LOD1": 616,
+     "LOD2": 616
+    },
+    "rocks": [],
+    "total_LOD0": 913
+   },
+   "8_0": {
+    "terrain": {
+     "LOD0": 315,
+     "LOD1": 157,
+     "LOD2": 85
+    },
+    "cliffs": {
+     "LOD0": 646,
+     "LOD1": 642,
+     "LOD2": 642
+    },
+    "rocks": [],
+    "total_LOD0": 961
+   },
+   "8_1": {
+    "terrain": {
+     "LOD0": 707,
+     "LOD1": 353,
+     "LOD2": 141
+    },
+    "rocks": [],
+    "total_LOD0": 707
+   },
+   "8_2": {
+    "terrain": {
+     "LOD0": 704,
+     "LOD1": 352,
+     "LOD2": 138
+    },
+    "rocks": [
+     "EXT_Rock_04"
+    ],
+    "total_LOD0": 1398
+   },
+   "8_3": {
+    "terrain": {
+     "LOD0": 881,
+     "LOD1": 439,
+     "LOD2": 287
+    },
+    "rocks": [
+     "EXT_Rock_11",
+     "EXT_Rock_17"
+    ],
+    "total_LOD0": 1885
+   },
+   "8_4": {
+    "terrain": {
+     "LOD0": 759,
+     "LOD1": 379,
+     "LOD2": 291
+    },
+    "rocks": [],
+    "total_LOD0": 759
+   },
+   "8_12": {
+    "terrain": {
+     "LOD0": 759,
+     "LOD1": 379,
+     "LOD2": 233
+    },
+    "rocks": [],
+    "total_LOD0": 759
+   },
+   "8_13": {
+    "terrain": {
+     "LOD0": 882,
+     "LOD1": 440,
+     "LOD2": 218
+    },
+    "rocks": [],
+    "total_LOD0": 882
+   },
+   "8_14": {
+    "terrain": {
+     "LOD0": 704,
+     "LOD1": 352,
+     "LOD2": 162
+    },
+    "rocks": [],
+    "total_LOD0": 704
+   },
+   "8_15": {
+    "terrain": {
+     "LOD0": 707,
+     "LOD1": 353,
+     "LOD2": 153
+    },
+    "rocks": [],
+    "total_LOD0": 707
+   },
+   "8_16": {
+    "terrain": {
+     "LOD0": 315,
+     "LOD1": 157,
+     "LOD2": 85
+    },
+    "cliffs": {
+     "LOD0": 646,
+     "LOD1": 646,
+     "LOD2": 646
+    },
+    "rocks": [],
+    "total_LOD0": 961
+   },
+   "9_0": {
+    "terrain": {
+     "LOD0": 287,
+     "LOD1": 143,
+     "LOD2": 81
+    },
+    "cliffs": {
+     "LOD0": 634,
+     "LOD1": 630,
+     "LOD2": 630
+    },
+    "rocks": [],
+    "total_LOD0": 921
+   },
+   "9_1": {
+    "terrain": {
+     "LOD0": 688,
+     "LOD1": 344,
+     "LOD2": 138
+    },
+    "cliffs": {
+     "LOD0": 49,
+     "LOD1": 49,
+     "LOD2": 49
+    },
+    "rocks": [],
+    "total_LOD0": 737
+   },
+   "9_2": {
+    "terrain": {
+     "LOD0": 690,
+     "LOD1": 344,
+     "LOD2": 140
+    },
+    "rocks": [],
+    "total_LOD0": 690
+   },
+   "9_3": {
+    "terrain": {
+     "LOD0": 752,
+     "LOD1": 376,
+     "LOD2": 190
+    },
+    "rocks": [],
+    "total_LOD0": 752
+   },
+   "9_4": {
+    "terrain": {
+     "LOD0": 971,
+     "LOD1": 485,
+     "LOD2": 427
+    },
+    "rocks": [],
+    "total_LOD0": 971
+   },
+   "9_12": {
+    "terrain": {
+     "LOD0": 968,
+     "LOD1": 484,
+     "LOD2": 424
+    },
+    "rocks": [],
+    "total_LOD0": 968
+   },
+   "9_13": {
+    "terrain": {
+     "LOD0": 750,
+     "LOD1": 374,
+     "LOD2": 158
+    },
+    "rocks": [
+     "EXT_Rock_03"
+    ],
+    "total_LOD0": 1156
+   },
+   "9_14": {
+    "terrain": {
+     "LOD0": 690,
+     "LOD1": 344,
+     "LOD2": 186
+    },
+    "rocks": [],
+    "total_LOD0": 690
+   },
+   "9_15": {
+    "terrain": {
+     "LOD0": 688,
+     "LOD1": 344,
+     "LOD2": 152
+    },
+    "cliffs": {
+     "LOD0": 55,
+     "LOD1": 55,
+     "LOD2": 55
+    },
+    "rocks": [],
+    "total_LOD0": 743
+   },
+   "9_16": {
+    "terrain": {
+     "LOD0": 287,
+     "LOD1": 143,
+     "LOD2": 81
+    },
+    "cliffs": {
+     "LOD0": 624,
+     "LOD1": 618,
+     "LOD2": 618
+    },
+    "rocks": [],
+    "total_LOD0": 911
+   },
+   "10_0": {
+    "terrain": {
+     "LOD0": 175,
+     "LOD1": 87,
+     "LOD2": 69
+    },
+    "cliffs": {
+     "LOD0": 212,
+     "LOD1": 212,
+     "LOD2": 212
+    },
+    "rocks": [],
+    "total_LOD0": 387
+   },
+   "10_1": {
+    "terrain": {
+     "LOD0": 696,
+     "LOD1": 348,
+     "LOD2": 140
+    },
+    "cliffs": {
+     "LOD0": 557,
+     "LOD1": 553,
+     "LOD2": 553
+    },
+    "rocks": [],
+    "total_LOD0": 1253
+   },
+   "10_2": {
+    "terrain": {
+     "LOD0": 690,
+     "LOD1": 344,
+     "LOD2": 142
+    },
+    "rocks": [],
+    "total_LOD0": 690
+   },
+   "10_3": {
+    "terrain": {
+     "LOD0": 698,
+     "LOD1": 348,
+     "LOD2": 138
+    },
+    "rocks": [
+     "EXT_Rock_12"
+    ],
+    "total_LOD0": 1200
+   },
+   "10_4": {
+    "terrain": {
+     "LOD0": 1307,
+     "LOD1": 653,
+     "LOD2": 541
+    },
+    "rocks": [],
+    "total_LOD0": 1307
+   },
+   "10_5": {
+    "terrain": {
+     "LOD0": 32,
+     "LOD1": 28,
+     "LOD2": 28
+    },
+    "rocks": [],
+    "total_LOD0": 32
+   },
+   "10_11": {
+    "terrain": {
+     "LOD0": 31,
+     "LOD1": 27,
+     "LOD2": 27
+    },
+    "rocks": [],
+    "total_LOD0": 31
+   },
+   "10_12": {
+    "terrain": {
+     "LOD0": 1304,
+     "LOD1": 652,
+     "LOD2": 474
+    },
+    "rocks": [],
+    "total_LOD0": 1304
+   },
+   "10_13": {
+    "terrain": {
+     "LOD0": 698,
+     "LOD1": 348,
+     "LOD2": 140
+    },
+    "rocks": [],
+    "total_LOD0": 698
+   },
+   "10_14": {
+    "terrain": {
+     "LOD0": 690,
+     "LOD1": 344,
+     "LOD2": 142
+    },
+    "rocks": [],
+    "total_LOD0": 690
+   },
+   "10_15": {
+    "terrain": {
+     "LOD0": 696,
+     "LOD1": 348,
+     "LOD2": 140
+    },
+    "cliffs": {
+     "LOD0": 577,
+     "LOD1": 575,
+     "LOD2": 575
+    },
+    "rocks": [],
+    "total_LOD0": 1273
+   },
+   "10_16": {
+    "terrain": {
+     "LOD0": 175,
+     "LOD1": 87,
+     "LOD2": 69
+    },
+    "cliffs": {
+     "LOD0": 186,
+     "LOD1": 180,
+     "LOD2": 180
+    },
+    "rocks": [],
+    "total_LOD0": 361
+   },
+   "11_0": {
+    "terrain": {
+     "LOD0": 15,
+     "LOD1": 15,
+     "LOD2": 15
+    },
+    "cliffs": {
+     "LOD0": 20,
+     "LOD1": 20,
+     "LOD2": 20
+    },
+    "rocks": [],
+    "total_LOD0": 35
+   },
+   "11_1": {
+    "terrain": {
+     "LOD0": 591,
+     "LOD1": 295,
+     "LOD2": 115
+    },
+    "cliffs": {
+     "LOD0": 695,
+     "LOD1": 687,
+     "LOD2": 687
+    },
+    "rocks": [],
+    "total_LOD0": 1286
+   },
+   "11_2": {
+    "terrain": {
+     "LOD0": 692,
+     "LOD1": 346,
+     "LOD2": 144
+    },
+    "rocks": [
+     "EXT_Rock_15"
+    ],
+    "total_LOD0": 1482
+   },
+   "11_3": {
+    "terrain": {
+     "LOD0": 692,
+     "LOD1": 346,
+     "LOD2": 146
+    },
+    "rocks": [],
+    "total_LOD0": 692
+   },
+   "11_4": {
+    "terrain": {
+     "LOD0": 905,
+     "LOD1": 451,
+     "LOD2": 359
+    },
+    "rocks": [],
+    "total_LOD0": 905
+   },
+   "11_5": {
+    "terrain": {
+     "LOD0": 1176,
+     "LOD1": 588,
+     "LOD2": 588
+    },
+    "rocks": [],
+    "total_LOD0": 1176
+   },
+   "11_6": {
+    "terrain": {
+     "LOD0": 33,
+     "LOD1": 29,
+     "LOD2": 29
+    },
+    "rocks": [],
+    "total_LOD0": 33
+   },
+   "11_10": {
+    "terrain": {
+     "LOD0": 34,
+     "LOD1": 30,
+     "LOD2": 30
+    },
+    "rocks": [],
+    "total_LOD0": 34
+   },
+   "11_11": {
+    "terrain": {
+     "LOD0": 1177,
+     "LOD1": 587,
+     "LOD2": 483
+    },
+    "rocks": [],
+    "total_LOD0": 1177
+   },
+   "11_12": {
+    "terrain": {
+     "LOD0": 903,
+     "LOD1": 451,
+     "LOD2": 231
+    },
+    "rocks": [],
+    "total_LOD0": 903
+   },
+   "11_13": {
+    "terrain": {
+     "LOD0": 692,
+     "LOD1": 346,
+     "LOD2": 148
+    },
+    "rocks": [],
+    "total_LOD0": 692
+   },
+   "11_14": {
+    "terrain": {
+     "LOD0": 692,
+     "LOD1": 346,
+     "LOD2": 144
+    },
+    "rocks": [
+     "EXT_Rock_05"
+    ],
+    "total_LOD0": 1194
+   },
+   "11_15": {
+    "terrain": {
+     "LOD0": 591,
+     "LOD1": 295,
+     "LOD2": 115
+    },
+    "cliffs": {
+     "LOD0": 703,
+     "LOD1": 693,
+     "LOD2": 693
+    },
+    "rocks": [],
+    "total_LOD0": 1294
+   },
+   "11_16": {
+    "terrain": {
+     "LOD0": 15,
+     "LOD1": 15,
+     "LOD2": 15
+    },
+    "cliffs": {
+     "LOD0": 18,
+     "LOD1": 18,
+     "LOD2": 18
+    },
+    "rocks": [],
+    "total_LOD0": 33
+   },
+   "12_1": {
+    "terrain": {
+     "LOD0": 279,
+     "LOD1": 139,
+     "LOD2": 83
+    },
+    "cliffs": {
+     "LOD0": 488,
+     "LOD1": 488,
+     "LOD2": 488
+    },
+    "rocks": [],
+    "total_LOD0": 767
+   },
+   "12_2": {
+    "terrain": {
+     "LOD0": 706,
+     "LOD1": 352,
+     "LOD2": 144
+    },
+    "cliffs": {
+     "LOD0": 351,
+     "LOD1": 351,
+     "LOD2": 351
+    },
+    "rocks": [
+     "EXT_Rock_16"
+    ],
+    "total_LOD0": 1559
+   },
+   "12_3": {
+    "terrain": {
+     "LOD0": 698,
+     "LOD1": 348,
+     "LOD2": 144
+    },
+    "rocks": [],
+    "total_LOD0": 698
+   },
+   "12_4": {
+    "terrain": {
+     "LOD0": 694,
+     "LOD1": 346,
+     "LOD2": 144
+    },
+    "rocks": [],
+    "total_LOD0": 694
+   },
+   "12_5": {
+    "terrain": {
+     "LOD0": 893,
+     "LOD1": 445,
+     "LOD2": 317
+    },
+    "rocks": [],
+    "total_LOD0": 893
+   },
+   "12_6": {
+    "terrain": {
+     "LOD0": 1312,
+     "LOD1": 656,
+     "LOD2": 532
+    },
+    "rocks": [],
+    "total_LOD0": 1312
+   },
+   "12_7": {
+    "terrain": {
+     "LOD0": 966,
+     "LOD1": 482,
+     "LOD2": 434
+    },
+    "rocks": [],
+    "total_LOD0": 966
+   },
+   "12_8": {
+    "terrain": {
+     "LOD0": 756,
+     "LOD1": 388,
+     "LOD2": 388
+    },
+    "rocks": [],
+    "total_LOD0": 756
+   },
+   "12_9": {
+    "terrain": {
+     "LOD0": 969,
+     "LOD1": 483,
+     "LOD2": 465
+    },
+    "rocks": [],
+    "total_LOD0": 969
+   },
+   "12_10": {
+    "terrain": {
+     "LOD0": 1315,
+     "LOD1": 657,
+     "LOD2": 419
+    },
+    "rocks": [],
+    "total_LOD0": 1315
+   },
+   "12_11": {
+    "terrain": {
+     "LOD0": 894,
+     "LOD1": 446,
+     "LOD2": 348
+    },
+    "rocks": [],
+    "total_LOD0": 894
+   },
+   "12_12": {
+    "terrain": {
+     "LOD0": 693,
+     "LOD1": 345,
+     "LOD2": 171
+    },
+    "rocks": [],
+    "total_LOD0": 693
+   },
+   "12_13": {
+    "terrain": {
+     "LOD0": 698,
+     "LOD1": 348,
+     "LOD2": 144
+    },
+    "rocks": [],
+    "total_LOD0": 698
+   },
+   "12_14": {
+    "terrain": {
+     "LOD0": 706,
+     "LOD1": 352,
+     "LOD2": 144
+    },
+    "cliffs": {
+     "LOD0": 377,
+     "LOD1": 377,
+     "LOD2": 377
+    },
+    "rocks": [],
+    "total_LOD0": 1083
+   },
+   "12_15": {
+    "terrain": {
+     "LOD0": 279,
+     "LOD1": 139,
+     "LOD2": 83
+    },
+    "cliffs": {
+     "LOD0": 462,
+     "LOD1": 462,
+     "LOD2": 462
+    },
+    "rocks": [],
+    "total_LOD0": 741
+   },
+   "13_1": {
+    "terrain": {
+     "LOD0": 12,
+     "LOD1": 12,
+     "LOD2": 12
+    },
+    "cliffs": {
+     "LOD0": 13,
+     "LOD1": 13,
+     "LOD2": 13
+    },
+    "rocks": [],
+    "total_LOD0": 25
+   },
+   "13_2": {
+    "terrain": {
+     "LOD0": 480,
+     "LOD1": 240,
+     "LOD2": 104
+    },
+    "cliffs": {
+     "LOD0": 733,
+     "LOD1": 729,
+     "LOD2": 729
+    },
+    "rocks": [],
+    "total_LOD0": 1213
+   },
+   "13_3": {
+    "terrain": {
+     "LOD0": 694,
+     "LOD1": 346,
+     "LOD2": 144
+    },
+    "cliffs": {
+     "LOD0": 191,
+     "LOD1": 191,
+     "LOD2": 191
+    },
+    "rocks": [],
+    "total_LOD0": 885
+   },
+   "13_4": {
+    "terrain": {
+     "LOD0": 698,
+     "LOD1": 348,
+     "LOD2": 150
+    },
+    "rocks": [
+     "EXT_Rock_14"
+    ],
+    "total_LOD0": 1392
+   },
+   "13_5": {
+    "terrain": {
+     "LOD0": 699,
+     "LOD1": 349,
+     "LOD2": 149
+    },
+    "rocks": [],
+    "total_LOD0": 699
+   },
+   "13_6": {
+    "terrain": {
+     "LOD0": 704,
+     "LOD1": 352,
+     "LOD2": 146
+    },
+    "rocks": [
+     "EXT_Rock_07"
+    ],
+    "total_LOD0": 1110
+   },
+   "13_7": {
+    "terrain": {
+     "LOD0": 758,
+     "LOD1": 378,
+     "LOD2": 226
+    },
+    "rocks": [],
+    "total_LOD0": 758
+   },
+   "13_8": {
+    "terrain": {
+     "LOD0": 871,
+     "LOD1": 435,
+     "LOD2": 287
+    },
+    "rocks": [],
+    "total_LOD0": 871
+   },
+   "13_9": {
+    "terrain": {
+     "LOD0": 760,
+     "LOD1": 380,
+     "LOD2": 238
+    },
+    "rocks": [],
+    "total_LOD0": 760
+   },
+   "13_10": {
+    "terrain": {
+     "LOD0": 704,
+     "LOD1": 352,
+     "LOD2": 148
+    },
+    "rocks": [],
+    "total_LOD0": 704
+   },
+   "13_11": {
+    "terrain": {
+     "LOD0": 697,
+     "LOD1": 347,
+     "LOD2": 211
+    },
+    "rocks": [],
+    "total_LOD0": 697
+   },
+   "13_12": {
+    "terrain": {
+     "LOD0": 698,
+     "LOD1": 348,
+     "LOD2": 164
+    },
+    "rocks": [],
+    "total_LOD0": 698
+   },
+   "13_13": {
+    "terrain": {
+     "LOD0": 694,
+     "LOD1": 346,
+     "LOD2": 144
+    },
+    "cliffs": {
+     "LOD0": 206,
+     "LOD1": 206,
+     "LOD2": 206
+    },
+    "rocks": [],
+    "total_LOD0": 900
+   },
+   "13_14": {
+    "terrain": {
+     "LOD0": 480,
+     "LOD1": 240,
+     "LOD2": 104
+    },
+    "cliffs": {
+     "LOD0": 717,
+     "LOD1": 709,
+     "LOD2": 709
+    },
+    "rocks": [],
+    "total_LOD0": 1197
+   },
+   "13_15": {
+    "terrain": {
+     "LOD0": 12,
+     "LOD1": 12,
+     "LOD2": 12
+    },
+    "cliffs": {
+     "LOD0": 13,
+     "LOD1": 13,
+     "LOD2": 13
+    },
+    "rocks": [],
+    "total_LOD0": 25
+   },
+   "14_2": {
+    "terrain": {
+     "LOD0": 39,
+     "LOD1": 27,
+     "LOD2": 27
+    },
+    "cliffs": {
+     "LOD0": 21,
+     "LOD1": 21,
+     "LOD2": 21
+    },
+    "rocks": [],
+    "total_LOD0": 60
+   },
+   "14_3": {
+    "terrain": {
+     "LOD0": 484,
+     "LOD1": 242,
+     "LOD2": 132
+    },
+    "cliffs": {
+     "LOD0": 721,
+     "LOD1": 715,
+     "LOD2": 715
+    },
+    "rocks": [],
+    "total_LOD0": 1205
+   },
+   "14_4": {
+    "terrain": {
+     "LOD0": 701,
+     "LOD1": 349,
+     "LOD2": 155
+    },
+    "cliffs": {
+     "LOD0": 371,
+     "LOD1": 369,
+     "LOD2": 369
+    },
+    "rocks": [],
+    "total_LOD0": 1072
+   },
+   "14_5": {
+    "terrain": {
+     "LOD0": 707,
+     "LOD1": 353,
+     "LOD2": 153
+    },
+    "rocks": [],
+    "total_LOD0": 707
+   },
+   "14_6": {
+    "terrain": {
+     "LOD0": 694,
+     "LOD1": 346,
+     "LOD2": 166
+    },
+    "rocks": [],
+    "total_LOD0": 694
+   },
+   "14_7": {
+    "terrain": {
+     "LOD0": 694,
+     "LOD1": 346,
+     "LOD2": 150
+    },
+    "rocks": [],
+    "total_LOD0": 694
+   },
+   "14_8": {
+    "terrain": {
+     "LOD0": 696,
+     "LOD1": 348,
+     "LOD2": 152
+    },
+    "rocks": [],
+    "total_LOD0": 696
+   },
+   "14_9": {
+    "terrain": {
+     "LOD0": 694,
+     "LOD1": 346,
+     "LOD2": 164
+    },
+    "rocks": [],
+    "total_LOD0": 694
+   },
+   "14_10": {
+    "terrain": {
+     "LOD0": 694,
+     "LOD1": 346,
+     "LOD2": 150
+    },
+    "rocks": [],
+    "total_LOD0": 694
+   },
+   "14_11": {
+    "terrain": {
+     "LOD0": 708,
+     "LOD1": 354,
+     "LOD2": 154
+    },
+    "rocks": [
+     "EXT_Rock_13"
+    ],
+    "total_LOD0": 1306
+   },
+   "14_12": {
+    "terrain": {
+     "LOD0": 702,
+     "LOD1": 350,
+     "LOD2": 168
+    },
+    "cliffs": {
+     "LOD0": 368,
+     "LOD1": 368,
+     "LOD2": 368
+    },
+    "rocks": [],
+    "total_LOD0": 1070
+   },
+   "14_13": {
+    "terrain": {
+     "LOD0": 484,
+     "LOD1": 242,
+     "LOD2": 112
+    },
+    "cliffs": {
+     "LOD0": 717,
+     "LOD1": 707,
+     "LOD2": 707
+    },
+    "rocks": [],
+    "total_LOD0": 1201
+   },
+   "14_14": {
+    "terrain": {
+     "LOD0": 39,
+     "LOD1": 27,
+     "LOD2": 27
+    },
+    "cliffs": {
+     "LOD0": 22,
+     "LOD1": 22,
+     "LOD2": 22
+    },
+    "rocks": [],
+    "total_LOD0": 61
+   },
+   "15_3": {
+    "terrain": {
+     "LOD0": 14,
+     "LOD1": 14,
+     "LOD2": 14
+    },
+    "cliffs": {
+     "LOD0": 13,
+     "LOD1": 13,
+     "LOD2": 13
+    },
+    "rocks": [],
+    "total_LOD0": 27
+   },
+   "15_4": {
+    "terrain": {
+     "LOD0": 275,
+     "LOD1": 137,
+     "LOD2": 79
+    },
+    "cliffs": {
+     "LOD0": 468,
+     "LOD1": 466,
+     "LOD2": 466
+    },
+    "rocks": [],
+    "total_LOD0": 743
+   },
+   "15_5": {
+    "terrain": {
+     "LOD0": 593,
+     "LOD1": 295,
+     "LOD2": 119
+    },
+    "cliffs": {
+     "LOD0": 699,
+     "LOD1": 691,
+     "LOD2": 691
+    },
+    "rocks": [],
+    "total_LOD0": 1292
+   },
+   "15_6": {
+    "terrain": {
+     "LOD0": 692,
+     "LOD1": 346,
+     "LOD2": 164
+    },
+    "cliffs": {
+     "LOD0": 581,
+     "LOD1": 581,
+     "LOD2": 581
+    },
+    "rocks": [],
+    "total_LOD0": 1273
+   },
+   "15_7": {
+    "terrain": {
+     "LOD0": 702,
+     "LOD1": 350,
+     "LOD2": 172
+    },
+    "cliffs": {
+     "LOD0": 44,
+     "LOD1": 44,
+     "LOD2": 44
+    },
+    "rocks": [],
+    "total_LOD0": 746
+   },
+   "15_8": {
+    "terrain": {
+     "LOD0": 697,
+     "LOD1": 347,
+     "LOD2": 145
+    },
+    "rocks": [],
+    "total_LOD0": 697
+   },
+   "15_9": {
+    "terrain": {
+     "LOD0": 702,
+     "LOD1": 350,
+     "LOD2": 142
+    },
+    "cliffs": {
+     "LOD0": 56,
+     "LOD1": 56,
+     "LOD2": 56
+    },
+    "rocks": [],
+    "total_LOD0": 758
+   },
+   "15_10": {
+    "terrain": {
+     "LOD0": 692,
+     "LOD1": 346,
+     "LOD2": 144
+    },
+    "cliffs": {
+     "LOD0": 599,
+     "LOD1": 593,
+     "LOD2": 593
+    },
+    "rocks": [],
+    "total_LOD0": 1291
+   },
+   "15_11": {
+    "terrain": {
+     "LOD0": 593,
+     "LOD1": 295,
+     "LOD2": 119
+    },
+    "cliffs": {
+     "LOD0": 703,
+     "LOD1": 697,
+     "LOD2": 697
+    },
+    "rocks": [],
+    "total_LOD0": 1296
+   },
+   "15_12": {
+    "terrain": {
+     "LOD0": 274,
+     "LOD1": 136,
+     "LOD2": 78
+    },
+    "cliffs": {
+     "LOD0": 471,
+     "LOD1": 469,
+     "LOD2": 469
+    },
+    "rocks": [],
+    "total_LOD0": 745
+   },
+   "15_13": {
+    "terrain": {
+     "LOD0": 14,
+     "LOD1": 14,
+     "LOD2": 14
+    },
+    "cliffs": {
+     "LOD0": 13,
+     "LOD1": 13,
+     "LOD2": 13
+    },
+    "rocks": [],
+    "total_LOD0": 27
+   },
+   "16_5": {
+    "terrain": {
+     "LOD0": 17,
+     "LOD1": 17,
+     "LOD2": 17
+    },
+    "cliffs": {
+     "LOD0": 18,
+     "LOD1": 18,
+     "LOD2": 18
+    },
+    "rocks": [],
+    "total_LOD0": 35
+   },
+   "16_6": {
+    "terrain": {
+     "LOD0": 175,
+     "LOD1": 87,
+     "LOD2": 71
+    },
+    "cliffs": {
+     "LOD0": 189,
+     "LOD1": 189,
+     "LOD2": 189
+    },
+    "rocks": [],
+    "total_LOD0": 364
+   },
+   "16_7": {
+    "terrain": {
+     "LOD0": 293,
+     "LOD1": 145,
+     "LOD2": 81
+    },
+    "cliffs": {
+     "LOD0": 626,
+     "LOD1": 626,
+     "LOD2": 626
+    },
+    "rocks": [],
+    "total_LOD0": 919
+   },
+   "16_8": {
+    "terrain": {
+     "LOD0": 312,
+     "LOD1": 156,
+     "LOD2": 84
+    },
+    "cliffs": {
+     "LOD0": 646,
+     "LOD1": 638,
+     "LOD2": 638
+    },
+    "rocks": [],
+    "total_LOD0": 958
+   },
+   "16_9": {
+    "terrain": {
+     "LOD0": 293,
+     "LOD1": 145,
+     "LOD2": 81
+    },
+    "cliffs": {
+     "LOD0": 627,
+     "LOD1": 619,
+     "LOD2": 619
+    },
+    "rocks": [],
+    "total_LOD0": 920
+   },
+   "16_10": {
+    "terrain": {
+     "LOD0": 175,
+     "LOD1": 87,
+     "LOD2": 73
+    },
+    "cliffs": {
+     "LOD0": 156,
+     "LOD1": 154,
+     "LOD2": 154
+    },
+    "rocks": [],
+    "total_LOD0": 331
+   },
+   "16_11": {
+    "terrain": {
+     "LOD0": 17,
+     "LOD1": 17,
+     "LOD2": 17
+    },
+    "cliffs": {
+     "LOD0": 18,
+     "LOD1": 18,
+     "LOD2": 18
+    },
+    "rocks": [],
+    "total_LOD0": 35
+   }
+  }
+ },
+ "structures": {
+  "count": 84,
+  "per_object": {
+   "TRN_Escalinata_Morada_NE": {
+    "district": "plaza",
+    "tris": 252,
+    "collision": {
+     "parts": 3,
+     "hull": 3,
+     "reduced": 0,
+     "tris": 72
+    }
+   },
+   "TRN_Escalinata_Morada_NW": {
+    "district": "plaza",
+    "tris": 252,
+    "collision": {
+     "parts": 3,
+     "hull": 3,
+     "reduced": 0,
+     "tris": 72
+    }
+   },
+   "TRN_Escalinata_Morada_SW": {
+    "district": "plaza",
+    "tris": 252,
+    "collision": {
+     "parts": 3,
+     "hull": 3,
+     "reduced": 0,
+     "tris": 72
+    }
+   },
+   "TRN_Escalinata_Morada_SE": {
+    "district": "plaza",
+    "tris": 252,
+    "collision": {
+     "parts": 3,
+     "hull": 3,
+     "reduced": 0,
+     "tris": 72
+    }
+   },
+   "TRN_StairPass_01": {
+    "district": "moradas",
+    "tris": 116,
+    "collision": {
+     "parts": 3,
+     "hull": 3,
+     "reduced": 0,
+     "tris": 42
+    }
+   },
+   "TRN_StairPass_01_Repair": {
+    "district": "moradas",
+    "tris": 48,
+    "collision": null
+   },
+   "TRN_StairPass_02": {
+    "district": "oficios",
+    "tris": 164,
+    "collision": {
+     "parts": 3,
+     "hull": 1,
+     "reduced": 2,
+     "tris": 90
+    }
+   },
+   "TRN_StairPass_03": {
+    "district": "moradas",
+    "tris": 128,
+    "collision": {
+     "parts": 3,
+     "hull": 2,
+     "reduced": 1,
+     "tris": 54
+    }
+   },
+   "TRN_StairPass_03_Repair": {
+    "district": "moradas",
+    "tris": 36,
+    "collision": null
+   },
+   "TRN_StairPass_04": {
+    "district": "moradas",
+    "tris": 152,
+    "collision": {
+     "parts": 4,
+     "hull": 3,
+     "reduced": 1,
+     "tris": 78
+    }
+   },
+   "TRN_StairPass_04_Repair": {
+    "district": "moradas",
+    "tris": 12,
+    "collision": null
+   },
+   "TRN_StairPass_05": {
+    "district": "moradas",
+    "tris": 140,
+    "collision": {
+     "parts": 4,
+     "hull": 3,
+     "reduced": 1,
+     "tris": 66
+    }
+   },
+   "TRN_StairPass_05_Repair": {
+    "district": "moradas",
+    "tris": 24,
+    "collision": null
+   },
+   "TRN_StairPass_06": {
+    "district": "moradas",
+    "tris": 152,
+    "collision": {
+     "parts": 4,
+     "hull": 3,
+     "reduced": 1,
+     "tris": 78
+    }
+   },
+   "TRN_StairPass_06_Repair": {
+    "district": "moradas",
+    "tris": 12,
+    "collision": null
+   },
+   "TRN_StairPass_07": {
+    "district": "moradas",
+    "tris": 152,
+    "collision": {
+     "parts": 4,
+     "hull": 3,
+     "reduced": 1,
+     "tris": 78
+    }
+   },
+   "TRN_StairPass_07_Repair": {
+    "district": "moradas",
+    "tris": 12,
+    "collision": null
+   },
+   "TRN_StairPass_08": {
+    "district": "oficios",
+    "tris": 140,
+    "collision": {
+     "parts": 3,
+     "hull": 2,
+     "reduced": 1,
+     "tris": 66
+    }
+   },
+   "TRN_StairPass_08_Repair": {
+    "district": "oficios",
+    "tris": 24,
+    "collision": null
+   },
+   "TRN_StairPass_09": {
+    "district": "moradas",
+    "tris": 152,
+    "collision": {
+     "parts": 4,
+     "hull": 3,
+     "reduced": 1,
+     "tris": 78
+    }
+   },
+   "TRN_StairPass_09_Repair": {
+    "district": "moradas",
+    "tris": 12,
+    "collision": null
+   },
+   "TRN_StairPass_10": {
+    "district": "moradas",
+    "tris": 140,
+    "collision": {
+     "parts": 4,
+     "hull": 3,
+     "reduced": 1,
+     "tris": 66
+    }
+   },
+   "TRN_StairPass_10_Repair": {
+    "district": "moradas",
+    "tris": 24,
+    "collision": null
+   },
+   "TRN_ArchBridge_01": {
+    "district": "razas",
+    "tris": 164,
+    "collision": {
+     "parts": 3,
+     "hull": 0,
+     "reduced": 3,
+     "tris": 164
+    }
+   },
+   "TRN_ArchBridge_01_Repair": {
+    "district": "razas",
+    "tris": 36,
+    "collision": null
+   },
+   "TRN_ArchBridge_02": {
+    "district": "razas",
+    "tris": 188,
+    "collision": {
+     "parts": 3,
+     "hull": 0,
+     "reduced": 3,
+     "tris": 188
+    }
+   },
+   "TRN_ArchBridge_02_Repair": {
+    "district": "razas",
+    "tris": 12,
+    "collision": null
+   },
+   "TRN_ArchBridge_03": {
+    "district": "razas",
+    "tris": 176,
+    "collision": {
+     "parts": 5,
+     "hull": 1,
+     "reduced": 4,
+     "tris": 176
+    }
+   },
+   "TRN_ArchBridge_03_Repair": {
+    "district": "razas",
+    "tris": 24,
+    "collision": null
+   },
+   "TRN_ArchBridge_04": {
+    "district": "razas",
+    "tris": 164,
+    "collision": {
+     "parts": 3,
+     "hull": 0,
+     "reduced": 3,
+     "tris": 164
+    }
+   },
+   "TRN_ArchBridge_04_Repair": {
+    "district": "razas",
+    "tris": 36,
+    "collision": null
+   },
+   "TRN_Atrio": {
+    "district": "plaza",
+    "tris": 4428,
+    "collision": {
+     "parts": 1,
+     "hull": 0,
+     "reduced": 1,
+     "tris": 4428
+    }
+   },
+   "TRN_PortalPedestal": {
+    "district": "plaza",
+    "tris": 672,
+    "collision": {
+     "parts": 1,
+     "hull": 0,
+     "reduced": 1,
+     "tris": 672
+    }
+   },
+   "TRN_Runestones": {
+    "district": "plaza",
+    "tris": 280,
+    "collision": {
+     "parts": 7,
+     "hull": 0,
+     "reduced": 7,
+     "tris": 280
+    }
+   },
+   "TRN_DescentPedestals": {
+    "district": "plaza",
+    "tris": 1260,
+    "collision": {
+     "parts": 21,
+     "hull": 0,
+     "reduced": 21,
+     "tris": 1260
+    }
+   },
+   "TRN_PlazaParcel_01": {
+    "district": "plaza",
+    "tris": 10,
+    "collision": {
+     "parts": 1,
+     "hull": 0,
+     "reduced": 1,
+     "tris": 10
+    }
+   },
+   "TRN_PlazaParcel_02": {
+    "district": "plaza",
+    "tris": 10,
+    "collision": {
+     "parts": 1,
+     "hull": 0,
+     "reduced": 1,
+     "tris": 10
+    }
+   },
+   "TRN_PlazaParcel_03": {
+    "district": "plaza",
+    "tris": 10,
+    "collision": {
+     "parts": 1,
+     "hull": 0,
+     "reduced": 1,
+     "tris": 10
+    }
+   },
+   "TRN_PlazaParcel_04": {
+    "district": "plaza",
+    "tris": 10,
+    "collision": {
+     "parts": 1,
+     "hull": 0,
+     "reduced": 1,
+     "tris": 10
+    }
+   },
+   "TRN_PlazaParcel_05": {
+    "district": "plaza",
+    "tris": 10,
+    "collision": {
+     "parts": 1,
+     "hull": 0,
+     "reduced": 1,
+     "tris": 10
+    }
+   },
+   "TRN_PlazaParcel_06": {
+    "district": "plaza",
+    "tris": 10,
+    "collision": {
+     "parts": 1,
+     "hull": 0,
+     "reduced": 1,
+     "tris": 10
+    }
+   },
+   "TRN_PlazaParcel_07": {
+    "district": "plaza",
+    "tris": 10,
+    "collision": {
+     "parts": 1,
+     "hull": 0,
+     "reduced": 1,
+     "tris": 10
+    }
+   },
+   "TRN_PlazaParcel_08": {
+    "district": "plaza",
+    "tris": 10,
+    "collision": {
+     "parts": 1,
+     "hull": 0,
+     "reduced": 1,
+     "tris": 10
+    }
+   },
+   "TRN_Pad_Faro": {
+    "district": "plaza",
+    "tris": 94,
+    "collision": {
+     "parts": 1,
+     "hull": 0,
+     "reduced": 1,
+     "tris": 94
+    }
+   },
+   "TRN_Pad_Santuario": {
+    "district": "plaza",
+    "tris": 10,
+    "collision": {
+     "parts": 1,
+     "hull": 0,
+     "reduced": 1,
+     "tris": 10
+    }
+   },
+   "TRN_Pad_SalonHazanas": {
+    "district": "plaza",
+    "tris": 10,
+    "collision": {
+     "parts": 1,
+     "hull": 0,
+     "reduced": 1,
+     "tris": 10
+    }
+   },
+   "TRN_Pad_Obelisco": {
+    "district": "plaza",
+    "tris": 10,
+    "collision": {
+     "parts": 1,
+     "hull": 0,
+     "reduced": 1,
+     "tris": 10
+    }
+   },
+   "TRN_LightCanals": {
+    "district": "plaza",
+    "tris": 860,
+    "collision": null
+   },
+   "TRN_Buttresses_Morada_NE": {
+    "district": "moradas",
+    "tris": 92,
+    "collision": {
+     "parts": 6,
+     "hull": 4,
+     "reduced": 2,
+     "tris": 92
+    }
+   },
+   "TRN_LateralStairs_Morada_NE": {
+    "district": "moradas",
+    "tris": 1776,
+    "collision": {
+     "parts": 148,
+     "hull": 148,
+     "reduced": 0,
+     "tris": 1776
+    }
+   },
+   "TRN_Buttresses_Morada_NW": {
+    "district": "moradas",
+    "tris": 92,
+    "collision": {
+     "parts": 6,
+     "hull": 4,
+     "reduced": 2,
+     "tris": 92
+    }
+   },
+   "TRN_LateralStairs_Morada_NW": {
+    "district": "moradas",
+    "tris": 1776,
+    "collision": {
+     "parts": 148,
+     "hull": 148,
+     "reduced": 0,
+     "tris": 1776
+    }
+   },
+   "TRN_Buttresses_Morada_SW": {
+    "district": "moradas",
+    "tris": 92,
+    "collision": {
+     "parts": 6,
+     "hull": 4,
+     "reduced": 2,
+     "tris": 92
+    }
+   },
+   "TRN_LateralStairs_Morada_SW": {
+    "district": "moradas",
+    "tris": 1776,
+    "collision": {
+     "parts": 148,
+     "hull": 148,
+     "reduced": 0,
+     "tris": 1776
+    }
+   },
+   "TRN_Buttresses_Morada_SE": {
+    "district": "moradas",
+    "tris": 92,
+    "collision": {
+     "parts": 6,
+     "hull": 4,
+     "reduced": 2,
+     "tris": 92
+    }
+   },
+   "TRN_LateralStairs_Morada_SE": {
+    "district": "moradas",
+    "tris": 1776,
+    "collision": {
+     "parts": 148,
+     "hull": 148,
+     "reduced": 0,
+     "tris": 1776
+    }
+   },
+   "TRN_TerraceStairs_Morada_NE": {
+    "district": "moradas",
+    "tris": 1368,
+    "collision": {
+     "parts": 38,
+     "hull": 19,
+     "reduced": 19,
+     "tris": 1368
+    }
+   },
+   "TRN_TerraceStairs_Morada_NW": {
+    "district": "moradas",
+    "tris": 1368,
+    "collision": {
+     "parts": 38,
+     "hull": 19,
+     "reduced": 19,
+     "tris": 1368
+    }
+   },
+   "TRN_TerraceStairs_Morada_SW": {
+    "district": "moradas",
+    "tris": 1368,
+    "collision": {
+     "parts": 38,
+     "hull": 19,
+     "reduced": 19,
+     "tris": 1368
+    }
+   },
+   "TRN_TerraceStairs_Morada_SE": {
+    "district": "moradas",
+    "tris": 1368,
+    "collision": {
+     "parts": 38,
+     "hull": 19,
+     "reduced": 19,
+     "tris": 1368
+    }
+   },
+   "TRN_Parapets_Morada_NE": {
+    "district": "moradas",
+    "tris": 2940,
+    "collision": {
+     "parts": 56,
+     "hull": 20,
+     "reduced": 36,
+     "tris": 2892
+    }
+   },
+   "TRN_Parapets_Morada_NW": {
+    "district": "moradas",
+    "tris": 2940,
+    "collision": {
+     "parts": 56,
+     "hull": 20,
+     "reduced": 36,
+     "tris": 2892
+    }
+   },
+   "TRN_Parapets_Morada_SW": {
+    "district": "moradas",
+    "tris": 2940,
+    "collision": {
+     "parts": 56,
+     "hull": 20,
+     "reduced": 36,
+     "tris": 2892
+    }
+   },
+   "TRN_Parapets_Morada_SE": {
+    "district": "moradas",
+    "tris": 2940,
+    "collision": {
+     "parts": 56,
+     "hull": 20,
+     "reduced": 36,
+     "tris": 2892
+    }
+   },
+   "CAU_Water": {
+    "district": "oficios",
+    "tris": 520,
+    "collision": null
+   },
+   "TRN_Bridge_01": {
+    "district": "plaza",
+    "tris": 308,
+    "collision": {
+     "parts": 6,
+     "hull": 2,
+     "reduced": 4,
+     "tris": 308
+    }
+   },
+   "TRN_Bridge_01_Repair": {
+    "district": "plaza",
+    "tris": 24,
+    "collision": null
+   },
+   "TRN_Bridge_02": {
+    "district": "oficios",
+    "tris": 248,
+    "collision": {
+     "parts": 7,
+     "hull": 3,
+     "reduced": 4,
+     "tris": 248
+    }
+   },
+   "TRN_Bridge_02_Repair": {
+    "district": "oficios",
+    "tris": 84,
+    "collision": null
+   },
+   "TRN_Bridge_03": {
+    "district": "oficios",
+    "tris": 332,
+    "collision": {
+     "parts": 7,
+     "hull": 1,
+     "reduced": 6,
+     "tris": 332
+    }
+   },
+   "TRN_Bridge_03_Repair": {
+    "district": "oficios",
+    "tris": 48,
+    "collision": null
+   },
+   "TRN_Bridge_04": {
+    "district": "oficios",
+    "tris": 296,
+    "collision": {
+     "parts": 7,
+     "hull": 4,
+     "reduced": 3,
+     "tris": 296
+    }
+   },
+   "TRN_Bridge_04_Repair": {
+    "district": "oficios",
+    "tris": 36,
+    "collision": null
+   },
+   "TRN_Bridge_05": {
+    "district": "oficios",
+    "tris": 272,
+    "collision": {
+     "parts": 8,
+     "hull": 3,
+     "reduced": 5,
+     "tris": 272
+    }
+   },
+   "TRN_Bridge_05_Repair": {
+    "district": "oficios",
+    "tris": 60,
+    "collision": null
+   },
+   "CAU_Muelle_Pescadores": {
+    "district": "oficios",
+    "tris": 12,
+    "collision": {
+     "parts": 1,
+     "hull": 1,
+     "reduced": 0,
+     "tris": 12
+    }
+   },
+   "CAU_Banks": {
+    "district": "oficios",
+    "tris": 2124,
+    "collision": {
+     "parts": 13,
+     "hull": 0,
+     "reduced": 13,
+     "tris": 2124
+    }
+   },
+   "CAU_Weirs": {
+    "district": "oficios",
+    "tris": 48,
+    "collision": {
+     "parts": 4,
+     "hull": 4,
+     "reduced": 0,
+     "tris": 48
+    }
+   },
+   "CAU_AccessSteps": {
+    "district": "oficios",
+    "tris": 240,
+    "collision": {
+     "parts": 10,
+     "hull": 0,
+     "reduced": 10,
+     "tris": 240
+    }
+   },
+   "CAU_Culvert": {
+    "district": "oficios",
+    "tris": 36,
+    "collision": {
+     "parts": 1,
+     "hull": 0,
+     "reduced": 1,
+     "tris": 36
+    }
+   },
+   "CAU_Culvert_Void": {
+    "district": "oficios",
+    "tris": 12,
+    "collision": null
+   },
+   "CAU_Culvert_Grate": {
+    "district": "oficios",
+    "tris": 108,
+    "collision": {
+     "parts": 9,
+     "hull": 9,
+     "reduced": 0,
+     "tris": 108
+    }
+   },
+   "CAU_SpringHead": {
+    "district": "mercado",
+    "tris": 12,
+    "collision": {
+     "parts": 1,
+     "hull": 1,
+     "reduced": 0,
+     "tris": 12
+    }
+   },
+   "CAU_SpringHead_Mouth": {
+    "district": "mercado",
+    "tris": 12,
+    "collision": null
+   }
+  },
+  "collision_tris": 37068
+ },
+ "navmesh": {
+  "grid_m": 0.75,
+  "cells": 80267,
+  "layer2_nodes": 496,
+  "area_m2": 45298.9,
+  "components": 30,
+  "largest_component_pct": 91.6,
+  "islands_dropped_lt_10m2": 17,
+  "components_kept": 13,
+  "islands_kept_10_to_200m2": 10,
+  "arch_bridges": "fuera de la navmesh: sus tableros (+10.4) no llegan a ninguna superficie transitable; la calle de debajo si esta (segunda capa)",
+  "per_district": {
+   "TRN_NavMesh_Plaza-navmesh": {
+    "tris": 8479,
+    "area_m2": 11579.1
+   },
+   "TRN_NavMesh_Mercado-navmesh": {
+    "tris": 2955,
+    "area_m2": 6160.0
+   },
+   "TRN_NavMesh_Oficios-navmesh": {
+    "tris": 5600,
+    "area_m2": 6358.1
+   },
+   "TRN_NavMesh_Clases-navmesh": {
+    "tris": 2321,
+    "area_m2": 5896.8
+   },
+   "TRN_NavMesh_Razas-navmesh": {
+    "tris": 1939,
+    "area_m2": 5065.0
+   },
+   "TRN_NavMesh_Moradas-navmesh": {
+    "tris": 14925,
+    "area_m2": 10173.5
+   }
+  }
+ },
+ "occluders": {
+  "wall_kit": {
+   "WALL_Mod_A-occonly": 22,
+   "WALL_Mod_B-occonly": 22,
+   "WALL_Mod_C-occonly": 22,
+   "BASTION_Open-occonly": 80,
+   "BASTION_Mirador-occonly": 80,
+   "TOWER_Guard_Roof-occonly": 120,
+   "TOWER_Guard_Patched-occonly": 120,
+   "GATE_Sealed_Twin-occonly": 76,
+   "STAIR_Gate_L-occonly": 22,
+   "STAIR_Gate_R-occonly": 22
+  },
+  "manzanas": "no generados: aun no hay edificios; un occluder de manzana taparia el suelo visible desde la camara isometrica (pendiente de los edificios)"
+ },
+ "markers": {
+  "count": 531,
+  "families": {
+   "Awning": 4,
+   "Bld": 92,
+   "Bridge": 9,
+   "Cauce": 13,
+   "Descent": 21,
+   "Escalinata": 10,
+   "Faro": 1,
+   "Gate": 4,
+   "Mooring": 4,
+   "Morada": 283,
+   "Muelle": 1,
+   "Obelisco": 1,
+   "PlazaBuilding": 8,
+   "Portal": 1,
+   "Prop": 8,
+   "Runestone": 7,
+   "SalonHazanas": 1,
+   "Santuario": 1,
+   "TowerDoor": 8,
+   "TrainingZone": 6,
+   "WallSlot": 48
+  },
+  "csv": "docs/reports/stage11_markers.csv"
+ },
+ "master_blend": "blender/concordia_master_v11.blend",
+ "files": {
+  "concordia_terrain_plaza.glb": {
+   "bytes": 7972576,
+   "mb": 7.6,
+   "objects": 81,
+   "nodes": 81,
+   "meshes": 81,
+   "tris": 170927,
+   "materials": 10,
+   "images": 31,
+   "images_external": 31,
+   "colliders": 30,
+   "navmesh": 1,
+   "occluders": 0,
+   "empties": 0
+  },
+  "concordia_terrain_mercado.glb": {
+   "bytes": 4716248,
+   "mb": 4.5,
+   "objects": 40,
+   "nodes": 40,
+   "meshes": 40,
+   "tris": 103335,
+   "materials": 9,
+   "images": 24,
+   "images_external": 24,
+   "colliders": 10,
+   "navmesh": 1,
+   "occluders": 0,
+   "empties": 0
+  },
+  "concordia_terrain_oficios.glb": {
+   "bytes": 8463792,
+   "mb": 8.07,
+   "objects": 76,
+   "nodes": 76,
+   "meshes": 76,
+   "tris": 181124,
+   "materials": 11,
+   "images": 30,
+   "images_external": 30,
+   "colliders": 23,
+   "navmesh": 1,
+   "occluders": 0,
+   "empties": 0
+  },
+  "concordia_terrain_clases.glb": {
+   "bytes": 4833940,
+   "mb": 4.61,
+   "objects": 37,
+   "nodes": 37,
+   "meshes": 37,
+   "tris": 106733,
+   "materials": 7,
+   "images": 21,
+   "images_external": 21,
+   "colliders": 9,
+   "navmesh": 1,
+   "occluders": 0,
+   "empties": 0
+  },
+  "concordia_terrain_razas.glb": {
+   "bytes": 4768844,
+   "mb": 4.55,
+   "objects": 49,
+   "nodes": 49,
+   "meshes": 49,
+   "tris": 106315,
+   "materials": 7,
+   "images": 21,
+   "images_external": 21,
+   "colliders": 13,
+   "navmesh": 1,
+   "occluders": 0,
+   "empties": 0
+  },
+  "concordia_terrain_moradas.glb": {
+   "bytes": 20498960,
+   "mb": 19.55,
+   "objects": 145,
+   "nodes": 145,
+   "meshes": 145,
+   "tris": 430073,
+   "materials": 8,
+   "images": 24,
+   "images_external": 24,
+   "colliders": 46,
+   "navmesh": 1,
+   "occluders": 0,
+   "empties": 0
+  },
+  "concordia_terrain_exterior.glb": {
+   "bytes": 19881540,
+   "mb": 18.96,
+   "objects": 905,
+   "nodes": 905,
+   "meshes": 905,
+   "tris": 325104,
+   "materials": 3,
+   "images": 9,
+   "images_external": 9,
+   "colliders": 0,
+   "navmesh": 0,
+   "occluders": 0,
+   "empties": 0
+  },
+  "concordia_wall_kit.glb": {
+   "bytes": 1690444,
+   "mb": 1.61,
+   "objects": 55,
+   "nodes": 55,
+   "meshes": 53,
+   "tris": 25216,
+   "materials": 9,
+   "images": 25,
+   "images_external": 25,
+   "colliders": 10,
+   "navmesh": 0,
+   "occluders": 10,
+   "empties": 2
+  },
+  "concordia_wall_layout.glb": {
+   "bytes": 1004568,
+   "mb": 0.96,
+   "objects": 209,
+   "nodes": 209,
+   "meshes": 21,
+   "tris": 14472,
+   "materials": 9,
+   "images": 25,
+   "images_external": 25,
+   "colliders": 104,
+   "navmesh": 0,
+   "occluders": 0,
+   "empties": 0
+  },
+  "concordia_markers.glb": {
+   "bytes": 207516,
+   "mb": 0.2,
+   "objects": 531,
+   "nodes": 531,
+   "meshes": 0,
+   "tris": 0,
+   "materials": 0,
+   "images": 0,
+   "images_external": 0,
+   "colliders": 0,
+   "navmesh": 0,
+   "occluders": 0,
+   "empties": 531
+  }
+ },
+ "tris_total_all_files": 1463299,
+ "superseded_removed": [
+  "concordia_terrain.glb",
+  "concordia_terrain_structures.glb",
+  "concordia_plaza.glb",
+  "concordia_districts_markers.glb",
+  "concordia_moradas_markers.glb",
+  "concordia_cauce.glb",
+  "concordia_exterior.glb",
+  "concordia_wall_kit_lods.glb"
+ ],
+ "master_blend_mb": 63.1
+}
