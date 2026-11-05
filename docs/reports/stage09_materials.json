@@ -1,0 +1,712 @@
+{
+ "timings_s": {
+  "apply": 14.5,
+  "export": 208.6
+ },
+ "uv_world": {
+  "meshes": 180,
+  "kept_local_uv (kit instanciado)": 252
+ },
+ "assign_TRN_City": {
+  "MAT_Ground_Cracked": 260411,
+  "MAT_Limestone_Worn": 13487,
+  "MAT_Cobble_Concordia": 106992,
+  "MAT_Plaza_Slab": 41314,
+  "MAT_Plaza_Slab_Travertino": 2508,
+  "MAT_Wall_Gray": 6288,
+  "MAT_Ash_Gray": 19160,
+  "MAT_Stone_Repair": 260
+ },
+ "assign_TRN_Exterior": {
+  "MAT_Ash_Gray (ash_mask)": 86756,
+  "MAT_Rock_Gray (rock_mask)": 11546
+ },
+ "materials": {
+  "MAT_Limestone_Worn": {
+   "metallic": 0.0,
+   "roughness": [
+    0.75,
+    0.93
+   ],
+   "ref": "Stone Wall 02 (caliza)",
+   "use": "calles, muros de contencion, edificios",
+   "emission": null
+  },
+  "MAT_Cobble_Concordia": {
+   "metallic": 0.0,
+   "roughness": [
+    0.72,
+    0.94
+   ],
+   "ref": "Cobblestone Floor 001",
+   "use": "road_mask",
+   "emission": null
+  },
+  "MAT_Plaza_Slab": {
+   "metallic": 0.0,
+   "roughness": [
+    0.76,
+    0.94
+   ],
+   "ref": "(losas)",
+   "use": "slab_ring_id",
+   "emission": null
+  },
+  "MAT_Plaza_Slab_Travertino": {
+   "metallic": 0.0,
+   "roughness": [
+    0.74,
+    0.94
+   ],
+   "ref": "(travertino)",
+   "use": "travertine_band",
+   "emission": null
+  },
+  "MAT_Wall_Gray": {
+   "metallic": 0.0,
+   "roughness": [
+    0.78,
+    0.95
+   ],
+   "ref": "Stone Wall 02 (gris)",
+   "use": "muralla",
+   "emission": null
+  },
+  "MAT_Wood_Dark": {
+   "metallic": 0.0,
+   "roughness": [
+    0.72,
+    0.9
+   ],
+   "ref": "(madera)",
+   "use": "vigas, puertas",
+   "emission": null
+  },
+  "MAT_Roof_Tile_Ocher": {
+   "metallic": 0.0,
+   "roughness": [
+    0.7,
+    0.9
+   ],
+   "ref": "(teja)",
+   "use": "tejados",
+   "emission": null
+  },
+  "MAT_Iron_Black": {
+   "metallic": 0.6,
+   "roughness": [
+    0.33,
+    0.47
+   ],
+   "ref": "(hierro)",
+   "use": "rejas, herrajes",
+   "emission": null
+  },
+  "MAT_Cloth_Patch_A": {
+   "metallic": 0.0,
+   "roughness": [
+    0.84,
+    0.95
+   ],
+   "ref": "(tela)",
+   "use": "toldos, puestos",
+   "emission": null
+  },
+  "MAT_Cloth_Patch_B": {
+   "metallic": 0.0,
+   "roughness": [
+    0.84,
+    0.95
+   ],
+   "ref": "(tela)",
+   "use": "toldos, puestos",
+   "emission": null
+  },
+  "MAT_Cloth_Patch_C": {
+   "metallic": 0.0,
+   "roughness": [
+    0.84,
+    0.95
+   ],
+   "ref": "(tela)",
+   "use": "toldos, puestos",
+   "emission": null
+  },
+  "MAT_Ash_Gray": {
+   "metallic": 0.0,
+   "roughness": [
+    0.82,
+    0.95
+   ],
+   "ref": "Rocks Ground 02 (ceniza)",
+   "use": "ash_mask",
+   "emission": null
+  },
+  "MAT_Shard_Blue": {
+   "metallic": 0.0,
+   "roughness": [
+    0.7,
+    0.75
+   ],
+   "ref": "(cristal de esquirla)",
+   "use": "emisivo 2.5",
+   "emission": 2.5
+  },
+  "MAT_Wall_Runes": {
+   "metallic": 0.0,
+   "roughness": [
+    0.78,
+    0.92
+   ],
+   "ref": "(runas)",
+   "use": "emisivo 0.8 parametrizable",
+   "emission": 0.8
+  },
+  "MAT_Water": {
+   "metallic": 0.0,
+   "roughness": [
+    0.1,
+    0.1
+   ],
+   "ref": "(agua)",
+   "use": "Cauce",
+   "emission": null
+  },
+  "MAT_Ground_Cracked": {
+   "metallic": 0.0,
+   "roughness": [
+    0.8,
+    0.95
+   ],
+   "ref": "Sandstone Cracks",
+   "use": "suelo sin mascara (patios, plataformas)",
+   "emission": null
+  },
+  "MAT_Rock_Gray": {
+   "metallic": 0.0,
+   "roughness": [
+    0.8,
+    0.95
+   ],
+   "ref": "Rock Boulder Cracked",
+   "use": "taludes exteriores, cabezos, acantilados",
+   "emission": null
+  },
+  "MAT_Stone_Repair": {
+   "metallic": 0.0,
+   "roughness": [
+    0.8,
+    0.95
+   ],
+   "ref": "Stone Wall 02 (remiendo)",
+   "use": "20 % de los pretiles",
+   "emission": null
+  }
+ },
+ "unmapped_old_materials": [
+  "MAT_Terrain_City"
+ ],
+ "chunks": {
+  "grid": "50 x 50 m centrada en el origen (indices x0..x8 / y0..y8, x4_y4 = Portal)",
+  "count": 69,
+  "budget_city_per_chunk": 35000,
+  "lod0_before": {
+   "avg": 6552,
+   "max": 11611,
+   "min": 1210,
+   "total": 452076,
+   "heaviest": [
+    [
+     "TRN_CityChunk_x7_y3_LOD0",
+     11611
+    ],
+    [
+     "TRN_CityChunk_x6_y4_LOD0",
+     10823
+    ],
+    [
+     "TRN_CityChunk_x6_y3_LOD0",
+     10532
+    ],
+    [
+     "TRN_CityChunk_x6_y2_LOD0",
+     10373
+    ],
+    [
+     "TRN_CityChunk_x5_y5_LOD0",
+     10209
+    ],
+    [
+     "TRN_CityChunk_x6_y5_LOD0",
+     9893
+    ],
+    [
+     "TRN_CityChunk_x2_y2_LOD0",
+     9845
+    ],
+    [
+     "TRN_CityChunk_x7_y5_LOD0",
+     9834
+    ]
+   ],
+   "over_budget": []
+  },
+  "optimized": "ninguno (ningun chunk supera 35.000)",
+  "lod_tris": {
+   "LOD0": {
+    "avg": 6552,
+    "max": 11611,
+    "total": 452076
+   },
+   "LOD1": {
+    "avg": 3275,
+    "max": 5805,
+    "total": 225990
+   },
+   "LOD2": {
+    "avg": 982,
+    "max": 1741,
+    "total": 67754
+   }
+  },
+  "lod_ratio_real": {
+   "LOD0": 1.0,
+   "LOD1": 0.5,
+   "LOD2": 0.15
+  },
+  "seams_locked_chunks": "138 / 138 (LOD1+LOD2 conservan todos los vertices del borde)",
+  "per_chunk": {
+   "TRN_CityChunk_x0_y2": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   },
+   "TRN_CityChunk_x0_y3": {
+    "LOD0": 3797,
+    "LOD1": 1897,
+    "LOD2": 569
+   },
+   "TRN_CityChunk_x0_y4": {
+    "LOD0": 4601,
+    "LOD1": 2299,
+    "LOD2": 689
+   },
+   "TRN_CityChunk_x0_y5": {
+    "LOD0": 3839,
+    "LOD1": 1919,
+    "LOD2": 575
+   },
+   "TRN_CityChunk_x0_y6": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   },
+   "TRN_CityChunk_x1_y1": {
+    "LOD0": 2644,
+    "LOD1": 1322,
+    "LOD2": 396
+   },
+   "TRN_CityChunk_x1_y2": {
+    "LOD0": 8236,
+    "LOD1": 4118,
+    "LOD2": 1234
+   },
+   "TRN_CityChunk_x1_y3": {
+    "LOD0": 9294,
+    "LOD1": 4646,
+    "LOD2": 1394
+   },
+   "TRN_CityChunk_x1_y4": {
+    "LOD0": 7312,
+    "LOD1": 3656,
+    "LOD2": 1096
+   },
+   "TRN_CityChunk_x1_y5": {
+    "LOD0": 9131,
+    "LOD1": 4565,
+    "LOD2": 1369
+   },
+   "TRN_CityChunk_x1_y6": {
+    "LOD0": 8209,
+    "LOD1": 4103,
+    "LOD2": 1231
+   },
+   "TRN_CityChunk_x1_y7": {
+    "LOD0": 2639,
+    "LOD1": 1319,
+    "LOD2": 395
+   },
+   "TRN_CityChunk_x2_y0": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   },
+   "TRN_CityChunk_x2_y1": {
+    "LOD0": 8308,
+    "LOD1": 4154,
+    "LOD2": 1246
+   },
+   "TRN_CityChunk_x2_y2": {
+    "LOD0": 9845,
+    "LOD1": 4921,
+    "LOD2": 1475
+   },
+   "TRN_CityChunk_x2_y3": {
+    "LOD0": 8816,
+    "LOD1": 4408,
+    "LOD2": 1322
+   },
+   "TRN_CityChunk_x2_y4": {
+    "LOD0": 6997,
+    "LOD1": 3497,
+    "LOD2": 1049
+   },
+   "TRN_CityChunk_x2_y5": {
+    "LOD0": 8536,
+    "LOD1": 4268,
+    "LOD2": 1280
+   },
+   "TRN_CityChunk_x2_y6": {
+    "LOD0": 9695,
+    "LOD1": 4847,
+    "LOD2": 1453
+   },
+   "TRN_CityChunk_x2_y7": {
+    "LOD0": 8159,
+    "LOD1": 4079,
+    "LOD2": 1223
+   },
+   "TRN_CityChunk_x2_y8": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   },
+   "TRN_CityChunk_x3_y0": {
+    "LOD0": 3704,
+    "LOD1": 1852,
+    "LOD2": 554
+   },
+   "TRN_CityChunk_x3_y1": {
+    "LOD0": 9234,
+    "LOD1": 4616,
+    "LOD2": 1384
+   },
+   "TRN_CityChunk_x3_y2": {
+    "LOD0": 9029,
+    "LOD1": 4513,
+    "LOD2": 1353
+   },
+   "TRN_CityChunk_x3_y3": {
+    "LOD0": 6588,
+    "LOD1": 3294,
+    "LOD2": 988
+   },
+   "TRN_CityChunk_x3_y4": {
+    "LOD0": 6868,
+    "LOD1": 3434,
+    "LOD2": 1030
+   },
+   "TRN_CityChunk_x3_y5": {
+    "LOD0": 6294,
+    "LOD1": 3146,
+    "LOD2": 944
+   },
+   "TRN_CityChunk_x3_y6": {
+    "LOD0": 8749,
+    "LOD1": 4373,
+    "LOD2": 1311
+   },
+   "TRN_CityChunk_x3_y7": {
+    "LOD0": 8711,
+    "LOD1": 4355,
+    "LOD2": 1305
+   },
+   "TRN_CityChunk_x3_y8": {
+    "LOD0": 3809,
+    "LOD1": 1903,
+    "LOD2": 571
+   },
+   "TRN_CityChunk_x4_y0": {
+    "LOD0": 4542,
+    "LOD1": 2270,
+    "LOD2": 680
+   },
+   "TRN_CityChunk_x4_y1": {
+    "LOD0": 7047,
+    "LOD1": 3523,
+    "LOD2": 1057
+   },
+   "TRN_CityChunk_x4_y2": {
+    "LOD0": 7272,
+    "LOD1": 3636,
+    "LOD2": 1090
+   },
+   "TRN_CityChunk_x4_y3": {
+    "LOD0": 6814,
+    "LOD1": 3406,
+    "LOD2": 1022
+   },
+   "TRN_CityChunk_x4_y4": {
+    "LOD0": 8856,
+    "LOD1": 4428,
+    "LOD2": 1328
+   },
+   "TRN_CityChunk_x4_y5": {
+    "LOD0": 6952,
+    "LOD1": 3476,
+    "LOD2": 1042
+   },
+   "TRN_CityChunk_x4_y6": {
+    "LOD0": 7455,
+    "LOD1": 3727,
+    "LOD2": 1117
+   },
+   "TRN_CityChunk_x4_y7": {
+    "LOD0": 6747,
+    "LOD1": 3373,
+    "LOD2": 1011
+   },
+   "TRN_CityChunk_x4_y8": {
+    "LOD0": 4522,
+    "LOD1": 2260,
+    "LOD2": 678
+   },
+   "TRN_CityChunk_x5_y0": {
+    "LOD0": 3814,
+    "LOD1": 1906,
+    "LOD2": 572
+   },
+   "TRN_CityChunk_x5_y1": {
+    "LOD0": 9375,
+    "LOD1": 4687,
+    "LOD2": 1405
+   },
+   "TRN_CityChunk_x5_y2": {
+    "LOD0": 8524,
+    "LOD1": 4262,
+    "LOD2": 1278
+   },
+   "TRN_CityChunk_x5_y3": {
+    "LOD0": 6316,
+    "LOD1": 3158,
+    "LOD2": 946
+   },
+   "TRN_CityChunk_x5_y4": {
+    "LOD0": 7670,
+    "LOD1": 3834,
+    "LOD2": 1150
+   },
+   "TRN_CityChunk_x5_y5": {
+    "LOD0": 10209,
+    "LOD1": 5103,
+    "LOD2": 1531
+   },
+   "TRN_CityChunk_x5_y6": {
+    "LOD0": 9404,
+    "LOD1": 4702,
+    "LOD2": 1410
+   },
+   "TRN_CityChunk_x5_y7": {
+    "LOD0": 8522,
+    "LOD1": 4260,
+    "LOD2": 1278
+   },
+   "TRN_CityChunk_x5_y8": {
+    "LOD0": 3764,
+    "LOD1": 1882,
+    "LOD2": 564
+   },
+   "TRN_CityChunk_x6_y0": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   },
+   "TRN_CityChunk_x6_y1": {
+    "LOD0": 8289,
+    "LOD1": 4143,
+    "LOD2": 1243
+   },
+   "TRN_CityChunk_x6_y2": {
+    "LOD0": 10373,
+    "LOD1": 5185,
+    "LOD2": 1555
+   },
+   "TRN_CityChunk_x6_y3": {
+    "LOD0": 10532,
+    "LOD1": 5266,
+    "LOD2": 1578
+   },
+   "TRN_CityChunk_x6_y4": {
+    "LOD0": 10823,
+    "LOD1": 5411,
+    "LOD2": 1623
+   },
+   "TRN_CityChunk_x6_y5": {
+    "LOD0": 9893,
+    "LOD1": 4945,
+    "LOD2": 1483
+   },
+   "TRN_CityChunk_x6_y6": {
+    "LOD0": 9800,
+    "LOD1": 4900,
+    "LOD2": 1470
+   },
+   "TRN_CityChunk_x6_y7": {
+    "LOD0": 8230,
+    "LOD1": 4114,
+    "LOD2": 1234
+   },
+   "TRN_CityChunk_x6_y8": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   },
+   "TRN_CityChunk_x7_y1": {
+    "LOD0": 2572,
+    "LOD1": 1286,
+    "LOD2": 384
+   },
+   "TRN_CityChunk_x7_y2": {
+    "LOD0": 8277,
+    "LOD1": 4137,
+    "LOD2": 1241
+   },
+   "TRN_CityChunk_x7_y3": {
+    "LOD0": 11611,
+    "LOD1": 5805,
+    "LOD2": 1741
+   },
+   "TRN_CityChunk_x7_y4": {
+    "LOD0": 8021,
+    "LOD1": 4009,
+    "LOD2": 1203
+   },
+   "TRN_CityChunk_x7_y5": {
+    "LOD0": 9834,
+    "LOD1": 4916,
+    "LOD2": 1474
+   },
+   "TRN_CityChunk_x7_y6": {
+    "LOD0": 8183,
+    "LOD1": 4091,
+    "LOD2": 1227
+   },
+   "TRN_CityChunk_x7_y7": {
+    "LOD0": 2622,
+    "LOD1": 1310,
+    "LOD2": 392
+   },
+   "TRN_CityChunk_x8_y2": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   },
+   "TRN_CityChunk_x8_y3": {
+    "LOD0": 4344,
+    "LOD1": 2172,
+    "LOD2": 650
+   },
+   "TRN_CityChunk_x8_y4": {
+    "LOD0": 4487,
+    "LOD1": 2243,
+    "LOD2": 673
+   },
+   "TRN_CityChunk_x8_y5": {
+    "LOD0": 3656,
+    "LOD1": 1828,
+    "LOD2": 548
+   },
+   "TRN_CityChunk_x8_y6": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   }
+  },
+  "export": {
+   "terrain_glb": "export/godot/concordia_terrain.glb",
+   "terrain_bytes": 36444272,
+   "structures_glb": "export/godot/concordia_terrain_structures.glb",
+   "structures_bytes": 1971108,
+   "verify_terrain": {
+    "objects": 207,
+    "empties": 0,
+    "tris": 745820,
+    "meshes_with_color0": 207
+   },
+   "verify_structures": {
+    "objects": 47,
+    "empties": 0,
+    "tris": 28184,
+    "meshes_with_color0": 0
+   },
+   "extra": {
+    "concordia_plaza.glb": {
+     "bytes": 427636,
+     "objects_in": 58,
+     "verify": {
+      "objects": 17,
+      "empties": 41,
+      "tris": 8160,
+      "meshes_with_color0": 0
+     }
+    },
+    "concordia_districts_markers.glb": {
+     "bytes": 42736,
+     "objects_in": 110,
+     "verify": {
+      "objects": 0,
+      "empties": 110,
+      "tris": 0,
+      "meshes_with_color0": 0
+     }
+    },
+    "concordia_moradas_markers.glb": {
+     "bytes": 132924,
+     "objects_in": 283,
+     "verify": {
+      "objects": 0,
+      "empties": 283,
+      "tris": 0,
+      "meshes_with_color0": 0
+     }
+    },
+    "concordia_cauce.glb": {
+     "bytes": 367884,
+     "objects_in": 57,
+     "verify": {
+      "objects": 20,
+      "empties": 37,
+      "tris": 4832,
+      "meshes_with_color0": 0
+     }
+    }
+   }
+  }
+ },
+ "exterior_chunks": {
+  "count": 204,
+  "budget_exterior_per_chunk": 8000,
+  "lod0_max": 1319,
+  "lod0_avg": 591,
+  "over_budget": [],
+  "lod_totals": {
+   "LOD0": 120498,
+   "LOD1": 60372,
+   "LOD2": 25218
+  },
+  "export": "export/godot/concordia_exterior.glb",
+  "bytes": 11887720,
+  "verify": {
+   "objects": 630,
+   "empties": 0,
+   "tris": 243806,
+   "meshes_with_color0": 630
+  }
+ },
+ "wall_reexport": {
+  "concordia_wall_kit.glb": 1660288,
+  "concordia_wall_layout.glb": 1010012,
+  "concordia_wall_kit_lods.glb": 693260
+ },
+ "material_library_gltf": "export/godot/materials/concordia_materials.gltf"
+}

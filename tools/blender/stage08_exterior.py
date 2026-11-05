@@ -615,7 +615,8 @@ def chunks(obj, col_parent, export_path, extra_objs, stats):
         bm.to_mesh(me)
         bm.free()
         if mat and not me.materials:
-            me.materials.append(mat)
+            for mm in obj.data.materials:
+                me.materials.append(mm)
         o0 = bpy.data.objects.new(name + "_LOD0", me)
         cols["LOD0"].objects.link(o0)
         row = {"LOD0": len(me.polygons)}

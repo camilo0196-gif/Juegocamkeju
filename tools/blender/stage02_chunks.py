@@ -229,7 +229,8 @@ def build(scene, stats, export_dir, extra_exports=None):
     for col in cols.values():
         for o in col.objects:
             if mat and not o.data.materials:
-                o.data.materials.append(mat)
+                for mm in master.data.materials:      # todas las ranuras (indices por cara)
+                    o.data.materials.append(mm)
             o.data.color_attributes.active_color_name = "mask_pack"
 
     # --- export
