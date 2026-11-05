@@ -1,0 +1,1799 @@
+{
+ "timings_s": {
+  "apply": 46.2,
+  "export": 219.7
+ },
+ "procedural_png": {
+  "MAT_Shard_Blue": {
+   "albedo": "textures/concordia/MAT_Shard_Blue/concordia_shard_blue_albedo.png",
+   "normal": "textures/concordia/MAT_Shard_Blue/concordia_shard_blue_normal.png",
+   "orm": "textures/concordia/MAT_Shard_Blue/concordia_shard_blue_orm.png",
+   "res": [
+    2048,
+    2048
+   ],
+   "kind": "procedural (PNG)"
+  },
+  "MAT_Wall_Runes": {
+   "albedo": "textures/concordia/MAT_Wall_Runes/concordia_wall_runes_albedo.png",
+   "normal": "textures/concordia/MAT_Wall_Runes/concordia_wall_runes_normal.png",
+   "orm": "textures/concordia/MAT_Wall_Runes/concordia_wall_runes_orm.png",
+   "res": [
+    2048,
+    2048
+   ],
+   "kind": "procedural (PNG)",
+   "emission": "textures/concordia/MAT_Wall_Runes/concordia_wall_runes_emission.png"
+  },
+  "MAT_Water": {
+   "albedo": "textures/concordia/MAT_Water/concordia_water_albedo.png",
+   "normal": "textures/concordia/MAT_Water/concordia_water_normal.png",
+   "orm": "textures/concordia/MAT_Water/concordia_water_orm.png",
+   "res": [
+    2048,
+    2048
+   ],
+   "kind": "procedural (PNG)"
+  }
+ },
+ "rock_test": {
+  "chosen": "rock_boulder_dry",
+  "candidates": {
+   "rock_boulder_dry": {
+    "width_m": 1.8,
+    "seam_ratio_x_y": [
+     0.76,
+     0.98
+    ],
+    "sat_original_p95_mean": [
+     0.245,
+     0.165
+    ],
+    "luminance_std_desaturated": 0.092,
+    "criteria": {
+     "desatura_a_gris": true,
+     "tileable_3x3": true,
+     "ancho_1_5_a_4_m": true
+    },
+    "pass": true
+   },
+   "rock_boulder_cracked": {
+    "width_m": 1.39,
+    "seam_ratio_x_y": [
+     1.04,
+     0.92
+    ],
+    "sat_original_p95_mean": [
+     0.479,
+     0.399
+    ],
+    "luminance_std_desaturated": 0.099,
+    "criteria": {
+     "desatura_a_gris": true,
+     "tileable_3x3": true,
+     "ancho_1_5_a_4_m": false
+    },
+    "pass": false
+   }
+  }
+ },
+ "uv_renamed_UVMap_to_UVWorld": 33,
+ "city": {
+  "faces": 450420,
+  "rock_faces": 14405,
+  "ash_faces": 5191,
+  "rock_inside_wall": 436,
+  "rock_on_exterior_talud": 13969,
+  "retaining_faces": 13487,
+  "retaining_repair_faces": 2428,
+  "retaining_repair_pct": 18.0,
+  "dither": {
+   "band1_faces": 14961,
+   "band2_faces": 9594,
+   "faces_switched": 7534
+  },
+  "qa": {
+   "protected_faces": 297692,
+   "protected_with_rock_mask": 0,
+   "protected_with_ash_mask": 0,
+   "protected_with_rock_or_ash_material": 0,
+   "protected_material_changed_by_transition": 0,
+   "road_faces_with_natural_material": 0,
+   "plaza_faces_with_natural_material": 0,
+   "retaining_faces_with_natural_material": 0,
+   "retaining_faces_not_limestone_or_repair": 0,
+   "note": "terrazas, jardines y parcelas son 'protegidas' pero llevan MAT_Ground_Cracked (suelo de ciudad)"
+  },
+  "assign_threshold": {
+   "MAT_Ground_Cracked": 259975,
+   "MAT_Limestone_Worn": 11059,
+   "MAT_Cobble_Concordia": 106992,
+   "MAT_Plaza_Slab": 41314,
+   "MAT_Plaza_Slab_Travertino": 2508,
+   "MAT_Wall_Gray": 6288,
+   "MAT_Ash_Gray": 5191,
+   "MAT_Stone_Repair": 2688,
+   "MAT_Rock_Gray": 14405
+  },
+  "assign_final": {
+   "MAT_Ground_Cracked": 258481,
+   "MAT_Limestone_Worn": 11059,
+   "MAT_Cobble_Concordia": 106992,
+   "MAT_Plaza_Slab": 41314,
+   "MAT_Plaza_Slab_Travertino": 2508,
+   "MAT_Wall_Gray": 6288,
+   "MAT_Ash_Gray": 6621,
+   "MAT_Stone_Repair": 2688,
+   "MAT_Rock_Gray": 14469
+  }
+ },
+ "exterior": {
+  "faces": 98302,
+  "moat_faces": 12900,
+  "moat_r_range": [
+   212.3,
+   224.0
+  ],
+  "moat_z_min": -1.54,
+  "dune_faces": 8383,
+  "rock_faces": 11546,
+  "dither": {
+   "band1_faces": 22433,
+   "band2_faces": 10539,
+   "faces_switched": 11321
+  },
+  "assign_threshold": {
+   "MAT_Ash_Ground": 68336,
+   "MAT_Ash_Gray": 18420,
+   "MAT_Rock_Gray": 11546
+  },
+  "assign_final": {
+   "MAT_Ash_Ground": 66755,
+   "MAT_Ash_Gray": 19393,
+   "MAT_Rock_Gray": 12154
+  }
+ },
+ "materials": {
+  "MAT_Limestone_Worn": {
+   "albedo": "textures/concordia/MAT_Limestone_Worn/concordia_limestone_worn_albedo.png",
+   "orm": "textures/concordia/MAT_Limestone_Worn/concordia_limestone_worn_orm.png",
+   "normal": "textures/concordia/polyhaven_src/stone_wall_02/stone_wall_02_nor_gl_2k.jpg",
+   "uv_scale": [
+    0.5,
+    0.5
+   ],
+   "kind": "polyhaven",
+   "asset": "stone_wall_02",
+   "dims": [
+    2.0,
+    2.0
+   ],
+   "res": "2k"
+  },
+  "MAT_Cobble_Concordia": {
+   "albedo": "textures/concordia/MAT_Cobble_Concordia/concordia_cobble_concordia_albedo.png",
+   "orm": "textures/concordia/MAT_Cobble_Concordia/concordia_cobble_concordia_orm.png",
+   "normal": "textures/concordia/polyhaven_src/cobblestone_floor_001/cobblestone_floor_001_nor_gl_2k.jpg",
+   "uv_scale": [
+    0.41667,
+    0.41667
+   ],
+   "kind": "polyhaven",
+   "asset": "cobblestone_floor_001",
+   "dims": [
+    2.4,
+    2.4
+   ],
+   "res": "2k"
+  },
+  "MAT_Plaza_Slab": {
+   "albedo": "textures/concordia/MAT_Plaza_Slab/concordia_plaza_slab_albedo.png",
+   "orm": "textures/concordia/MAT_Plaza_Slab/concordia_plaza_slab_orm.png",
+   "normal": "textures/concordia/polyhaven_src/floor_tiles_02/floor_tiles_02_nor_gl_2k.jpg",
+   "uv_scale": [
+    0.25,
+    0.25
+   ],
+   "kind": "polyhaven",
+   "asset": "floor_tiles_02",
+   "dims": [
+    4.0,
+    4.0
+   ],
+   "res": "2k"
+  },
+  "MAT_Plaza_Slab_Travertino": {
+   "albedo": "textures/concordia/MAT_Plaza_Slab_Travertino/concordia_plaza_slab_travertino_albedo.png",
+   "orm": "textures/concordia/MAT_Plaza_Slab_Travertino/concordia_plaza_slab_travertino_orm.png",
+   "normal": "textures/concordia/polyhaven_src/marble_01/marble_01_nor_gl_2k.jpg",
+   "uv_scale": [
+    0.66667,
+    0.66667
+   ],
+   "kind": "polyhaven",
+   "asset": "marble_01",
+   "dims": [
+    1.5,
+    1.5
+   ],
+   "res": "2k"
+  },
+  "MAT_Wall_Gray": {
+   "albedo": "textures/concordia/MAT_Wall_Gray/concordia_wall_gray_albedo.png",
+   "orm": "textures/concordia/MAT_Wall_Gray/concordia_wall_gray_orm.png",
+   "normal": "textures/concordia/polyhaven_src/castle_wall_slates/castle_wall_slates_nor_gl_2k.jpg",
+   "uv_scale": [
+    0.4,
+    0.4
+   ],
+   "kind": "polyhaven",
+   "asset": "castle_wall_slates",
+   "dims": [
+    2.5,
+    2.5
+   ],
+   "res": "2k"
+  },
+  "MAT_Wood_Dark": {
+   "albedo": "textures/concordia/MAT_Wood_Dark/concordia_wood_dark_albedo.png",
+   "orm": "textures/concordia/MAT_Wood_Dark/concordia_wood_dark_orm.png",
+   "normal": "textures/concordia/polyhaven_src/weathered_planks/weathered_planks_nor_gl_1k.jpg",
+   "uv_scale": [
+    0.5,
+    0.5
+   ],
+   "kind": "polyhaven",
+   "asset": "weathered_planks",
+   "dims": [
+    2.0,
+    2.0
+   ],
+   "res": "1k"
+  },
+  "MAT_Roof_Tile_Ocher": {
+   "albedo": "textures/concordia/MAT_Roof_Tile_Ocher/concordia_roof_tile_ocher_albedo.png",
+   "orm": "textures/concordia/MAT_Roof_Tile_Ocher/concordia_roof_tile_ocher_orm.png",
+   "normal": "textures/concordia/polyhaven_src/roof_09/roof_09_nor_gl_1k.jpg",
+   "uv_scale": [
+    0.25,
+    0.25
+   ],
+   "kind": "polyhaven",
+   "asset": "roof_09",
+   "dims": [
+    4.0,
+    4.0
+   ],
+   "res": "1k"
+  },
+  "MAT_Iron_Black": {
+   "albedo": "textures/concordia/MAT_Iron_Black/concordia_iron_black_albedo.png",
+   "orm": "textures/concordia/MAT_Iron_Black/concordia_iron_black_orm.png",
+   "normal": "textures/concordia/polyhaven_src/metal_plate_02/metal_plate_02_nor_gl_1k.jpg",
+   "uv_scale": [
+    0.5,
+    0.5
+   ],
+   "kind": "polyhaven",
+   "asset": "metal_plate_02",
+   "dims": [
+    2.0,
+    2.0
+   ],
+   "res": "1k"
+  },
+  "MAT_Cloth_Patch_A": {
+   "albedo": "textures/concordia/MAT_Cloth/concordia_cloth_albedo.png",
+   "orm": "textures/concordia/MAT_Cloth/concordia_cloth_orm.png",
+   "normal": "textures/concordia/polyhaven_src/hessian_380/hessian_380_nor_gl_1k.jpg",
+   "uv_scale": [
+    3.65142,
+    3.6523
+   ],
+   "kind": "polyhaven",
+   "asset": "hessian_380",
+   "dims": [
+    0.274,
+    0.274
+   ],
+   "res": "1k",
+   "base_factor": "#8A6A4A"
+  },
+  "MAT_Cloth_Patch_B": {
+   "albedo": "textures/concordia/MAT_Cloth/concordia_cloth_albedo.png",
+   "orm": "textures/concordia/MAT_Cloth/concordia_cloth_orm.png",
+   "normal": "textures/concordia/polyhaven_src/hessian_380/hessian_380_nor_gl_1k.jpg",
+   "uv_scale": [
+    3.65142,
+    3.6523
+   ],
+   "kind": "polyhaven",
+   "asset": "hessian_380",
+   "dims": [
+    0.274,
+    0.274
+   ],
+   "res": "1k",
+   "base_factor": "#6E6A4E"
+  },
+  "MAT_Cloth_Patch_C": {
+   "albedo": "textures/concordia/MAT_Cloth/concordia_cloth_albedo.png",
+   "orm": "textures/concordia/MAT_Cloth/concordia_cloth_orm.png",
+   "normal": "textures/concordia/polyhaven_src/hessian_380/hessian_380_nor_gl_1k.jpg",
+   "uv_scale": [
+    3.65142,
+    3.6523
+   ],
+   "kind": "polyhaven",
+   "asset": "hessian_380",
+   "dims": [
+    0.274,
+    0.274
+   ],
+   "res": "1k",
+   "base_factor": "#A49884"
+  },
+  "MAT_Ash_Gray": {
+   "albedo": "textures/concordia/MAT_Ash_Gray/concordia_ash_gray_albedo.png",
+   "orm": "textures/concordia/MAT_Ash_Gray/concordia_ash_gray_orm.png",
+   "normal": "textures/concordia/polyhaven_src/rocks_ground_02/rocks_ground_02_nor_gl_2k.jpg",
+   "uv_scale": [
+    0.5,
+    0.5
+   ],
+   "kind": "polyhaven",
+   "asset": "rocks_ground_02",
+   "dims": [
+    2.0,
+    2.0
+   ],
+   "res": "2k"
+  },
+  "MAT_Shard_Blue": {
+   "albedo": "textures/concordia/MAT_Shard_Blue/concordia_shard_blue_albedo.png",
+   "orm": "textures/concordia/MAT_Shard_Blue/concordia_shard_blue_orm.png",
+   "normal": "textures/concordia/MAT_Shard_Blue/concordia_shard_blue_normal.png",
+   "emission": null,
+   "uv_scale": [
+    1.0,
+    1.0
+   ],
+   "kind": "procedural",
+   "ref": "(cristal de esquirla)",
+   "use": "emisivo 2.5",
+   "rough": [
+    0.7,
+    0.75
+   ]
+  },
+  "MAT_Wall_Runes": {
+   "albedo": "textures/concordia/MAT_Wall_Runes/concordia_wall_runes_albedo.png",
+   "orm": "textures/concordia/MAT_Wall_Runes/concordia_wall_runes_orm.png",
+   "normal": "textures/concordia/MAT_Wall_Runes/concordia_wall_runes_normal.png",
+   "emission": "textures/concordia/MAT_Wall_Runes/concordia_wall_runes_emission.png",
+   "uv_scale": [
+    1.0,
+    1.0
+   ],
+   "kind": "procedural",
+   "ref": "(runas)",
+   "use": "emisivo 0.8 parametrizable",
+   "rough": [
+    0.78,
+    0.92
+   ]
+  },
+  "MAT_Water": {
+   "albedo": "textures/concordia/MAT_Water/concordia_water_albedo.png",
+   "orm": "textures/concordia/MAT_Water/concordia_water_orm.png",
+   "normal": "textures/concordia/MAT_Water/concordia_water_normal.png",
+   "emission": null,
+   "uv_scale": [
+    1.0,
+    1.0
+   ],
+   "kind": "procedural",
+   "ref": "(agua)",
+   "use": "Cauce",
+   "rough": [
+    0.1,
+    0.1
+   ]
+  },
+  "MAT_Ground_Cracked": {
+   "albedo": "textures/concordia/MAT_Ground_Cracked/concordia_ground_cracked_albedo.png",
+   "orm": "textures/concordia/MAT_Ground_Cracked/concordia_ground_cracked_orm.png",
+   "normal": "textures/concordia/polyhaven_src/sandstone_cracks/sandstone_cracks_nor_gl_2k.jpg",
+   "uv_scale": [
+    0.5,
+    0.5
+   ],
+   "kind": "polyhaven",
+   "asset": "sandstone_cracks",
+   "dims": [
+    2.0,
+    2.0
+   ],
+   "res": "2k"
+  },
+  "MAT_Rock_Gray": {
+   "albedo": "textures/concordia/MAT_Rock_Gray/concordia_rock_gray_albedo.png",
+   "orm": "textures/concordia/MAT_Rock_Gray/concordia_rock_gray_orm.png",
+   "normal": "textures/concordia/polyhaven_src/rock_boulder_dry/rock_boulder_dry_nor_gl_2k.jpg",
+   "uv_scale": [
+    0.55556,
+    0.55556
+   ],
+   "kind": "polyhaven",
+   "asset": "rock_boulder_dry",
+   "dims": [
+    1.8,
+    1.8
+   ],
+   "res": "2k"
+  },
+  "MAT_Stone_Repair": {
+   "albedo": "textures/concordia/MAT_Stone_Repair/concordia_stone_repair_albedo.png",
+   "orm": "textures/concordia/MAT_Stone_Repair/concordia_stone_repair_orm.png",
+   "normal": "textures/concordia/polyhaven_src/rustic_stone_wall/rustic_stone_wall_nor_gl_2k.jpg",
+   "uv_scale": [
+    0.65789,
+    0.65789
+   ],
+   "kind": "polyhaven",
+   "asset": "rustic_stone_wall",
+   "dims": [
+    1.52,
+    1.52
+   ],
+   "res": "2k"
+  },
+  "MAT_Ash_Ground": {
+   "albedo": "textures/concordia/MAT_Ash_Ground/concordia_ash_ground_albedo.png",
+   "orm": "textures/concordia/MAT_Ash_Ground/concordia_ash_ground_orm.png",
+   "normal": "textures/concordia/polyhaven_src/dry_ground_01/dry_ground_01_nor_gl_2k.jpg",
+   "uv_scale": [
+    0.25,
+    0.25
+   ],
+   "kind": "polyhaven",
+   "asset": "dry_ground_01",
+   "dims": [
+    4.0,
+    4.0
+   ],
+   "res": "2k"
+  }
+ },
+ "texture_memory": {
+  "images": [
+   {
+    "file": "textures/concordia/MAT_Limestone_Worn/concordia_limestone_worn_albedo.png",
+    "role": "Albedo",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 7.27
+   },
+   {
+    "file": "textures/concordia/MAT_Limestone_Worn/concordia_limestone_worn_orm.png",
+    "role": "ORM",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 5.54
+   },
+   {
+    "file": "textures/concordia/polyhaven_src/stone_wall_02/stone_wall_02_nor_gl_2k.jpg",
+    "role": "Normal",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 5.33,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 3.54
+   },
+   {
+    "file": "textures/concordia/MAT_Cobble_Concordia/concordia_cobble_concordia_albedo.png",
+    "role": "Albedo",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 8.43
+   },
+   {
+    "file": "textures/concordia/MAT_Cobble_Concordia/concordia_cobble_concordia_orm.png",
+    "role": "ORM",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 2.62
+   },
+   {
+    "file": "textures/concordia/polyhaven_src/cobblestone_floor_001/cobblestone_floor_001_nor_gl_2k.jpg",
+    "role": "Normal",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 5.33,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 3.51
+   },
+   {
+    "file": "textures/concordia/MAT_Plaza_Slab/concordia_plaza_slab_albedo.png",
+    "role": "Albedo",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 5.09
+   },
+   {
+    "file": "textures/concordia/MAT_Plaza_Slab/concordia_plaza_slab_orm.png",
+    "role": "ORM",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 5.15
+   },
+   {
+    "file": "textures/concordia/polyhaven_src/floor_tiles_02/floor_tiles_02_nor_gl_2k.jpg",
+    "role": "Normal",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 5.33,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 0.52
+   },
+   {
+    "file": "textures/concordia/MAT_Plaza_Slab_Travertino/concordia_plaza_slab_travertino_albedo.png",
+    "role": "Albedo",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 5.06
+   },
+   {
+    "file": "textures/concordia/MAT_Plaza_Slab_Travertino/concordia_plaza_slab_travertino_orm.png",
+    "role": "ORM",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 3.2
+   },
+   {
+    "file": "textures/concordia/polyhaven_src/marble_01/marble_01_nor_gl_2k.jpg",
+    "role": "Normal",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 5.33,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 0.39
+   },
+   {
+    "file": "textures/concordia/MAT_Wall_Gray/concordia_wall_gray_albedo.png",
+    "role": "Albedo",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 6.32
+   },
+   {
+    "file": "textures/concordia/MAT_Wall_Gray/concordia_wall_gray_orm.png",
+    "role": "ORM",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 5.27
+   },
+   {
+    "file": "textures/concordia/polyhaven_src/castle_wall_slates/castle_wall_slates_nor_gl_2k.jpg",
+    "role": "Normal",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 5.33,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 3.87
+   },
+   {
+    "file": "textures/concordia/MAT_Wood_Dark/concordia_wood_dark_albedo.png",
+    "role": "Albedo",
+    "px": [
+     1024,
+     1024
+    ],
+    "vram_mb": 0.67,
+    "vram_bc7_mb": 1.33,
+    "rgba8_mb": 5.33,
+    "disk_mb": 1.31
+   },
+   {
+    "file": "textures/concordia/MAT_Wood_Dark/concordia_wood_dark_orm.png",
+    "role": "ORM",
+    "px": [
+     1024,
+     1024
+    ],
+    "vram_mb": 0.67,
+    "vram_bc7_mb": 1.33,
+    "rgba8_mb": 5.33,
+    "disk_mb": 1.04
+   },
+   {
+    "file": "textures/concordia/polyhaven_src/weathered_planks/weathered_planks_nor_gl_1k.jpg",
+    "role": "Normal",
+    "px": [
+     1024,
+     1024
+    ],
+    "vram_mb": 1.33,
+    "vram_bc7_mb": 1.33,
+    "rgba8_mb": 5.33,
+    "disk_mb": 0.65
+   },
+   {
+    "file": "textures/concordia/MAT_Roof_Tile_Ocher/concordia_roof_tile_ocher_albedo.png",
+    "role": "Albedo",
+    "px": [
+     1024,
+     1024
+    ],
+    "vram_mb": 0.67,
+    "vram_bc7_mb": 1.33,
+    "rgba8_mb": 5.33,
+    "disk_mb": 1.8
+   },
+   {
+    "file": "textures/concordia/MAT_Roof_Tile_Ocher/concordia_roof_tile_ocher_orm.png",
+    "role": "ORM",
+    "px": [
+     1024,
+     1024
+    ],
+    "vram_mb": 0.67,
+    "vram_bc7_mb": 1.33,
+    "rgba8_mb": 5.33,
+    "disk_mb": 0.85
+   },
+   {
+    "file": "textures/concordia/polyhaven_src/roof_09/roof_09_nor_gl_1k.jpg",
+    "role": "Normal",
+    "px": [
+     1024,
+     1024
+    ],
+    "vram_mb": 1.33,
+    "vram_bc7_mb": 1.33,
+    "rgba8_mb": 5.33,
+    "disk_mb": 0.31
+   },
+   {
+    "file": "textures/concordia/MAT_Iron_Black/concordia_iron_black_albedo.png",
+    "role": "Albedo",
+    "px": [
+     1024,
+     1024
+    ],
+    "vram_mb": 0.67,
+    "vram_bc7_mb": 1.33,
+    "rgba8_mb": 5.33,
+    "disk_mb": 0.98
+   },
+   {
+    "file": "textures/concordia/MAT_Iron_Black/concordia_iron_black_orm.png",
+    "role": "ORM",
+    "px": [
+     1024,
+     1024
+    ],
+    "vram_mb": 0.67,
+    "vram_bc7_mb": 1.33,
+    "rgba8_mb": 5.33,
+    "disk_mb": 1.36
+   },
+   {
+    "file": "textures/concordia/polyhaven_src/metal_plate_02/metal_plate_02_nor_gl_1k.jpg",
+    "role": "Normal",
+    "px": [
+     1024,
+     1024
+    ],
+    "vram_mb": 1.33,
+    "vram_bc7_mb": 1.33,
+    "rgba8_mb": 5.33,
+    "disk_mb": 0.17
+   },
+   {
+    "file": "textures/concordia/MAT_Cloth/concordia_cloth_albedo.png",
+    "role": "Albedo",
+    "px": [
+     1024,
+     1024
+    ],
+    "vram_mb": 0.67,
+    "vram_bc7_mb": 1.33,
+    "rgba8_mb": 5.33,
+    "disk_mb": 1.0
+   },
+   {
+    "file": "textures/concordia/MAT_Cloth/concordia_cloth_orm.png",
+    "role": "ORM",
+    "px": [
+     1024,
+     1024
+    ],
+    "vram_mb": 0.67,
+    "vram_bc7_mb": 1.33,
+    "rgba8_mb": 5.33,
+    "disk_mb": 1.84
+   },
+   {
+    "file": "textures/concordia/polyhaven_src/hessian_380/hessian_380_nor_gl_1k.jpg",
+    "role": "Normal",
+    "px": [
+     1024,
+     1024
+    ],
+    "vram_mb": 1.33,
+    "vram_bc7_mb": 1.33,
+    "rgba8_mb": 5.33,
+    "disk_mb": 1.03
+   },
+   {
+    "file": "textures/concordia/MAT_Ash_Gray/concordia_ash_gray_albedo.png",
+    "role": "Albedo",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 4.78
+   },
+   {
+    "file": "textures/concordia/MAT_Ash_Gray/concordia_ash_gray_orm.png",
+    "role": "ORM",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 5.83
+   },
+   {
+    "file": "textures/concordia/polyhaven_src/rocks_ground_02/rocks_ground_02_nor_gl_2k.jpg",
+    "role": "Normal",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 5.33,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 5.14
+   },
+   {
+    "file": "textures/concordia/MAT_Shard_Blue/concordia_shard_blue_albedo.png",
+    "role": "Albedo",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 0.05
+   },
+   {
+    "file": "textures/concordia/MAT_Shard_Blue/concordia_shard_blue_orm.png",
+    "role": "ORM",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 0.04
+   },
+   {
+    "file": "textures/concordia/MAT_Shard_Blue/concordia_shard_blue_normal.png",
+    "role": "Normal",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 5.33,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 0.09
+   },
+   {
+    "file": "textures/concordia/MAT_Wall_Runes/concordia_wall_runes_albedo.png",
+    "role": "Albedo",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 0.9
+   },
+   {
+    "file": "textures/concordia/MAT_Wall_Runes/concordia_wall_runes_orm.png",
+    "role": "ORM",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 0.08
+   },
+   {
+    "file": "textures/concordia/MAT_Wall_Runes/concordia_wall_runes_normal.png",
+    "role": "Normal",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 5.33,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 0.98
+   },
+   {
+    "file": "textures/concordia/MAT_Wall_Runes/concordia_wall_runes_emission.png",
+    "role": "Emission",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 0.04
+   },
+   {
+    "file": "textures/concordia/MAT_Water/concordia_water_albedo.png",
+    "role": "Albedo",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 0.02
+   },
+   {
+    "file": "textures/concordia/MAT_Water/concordia_water_orm.png",
+    "role": "ORM",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 0.02
+   },
+   {
+    "file": "textures/concordia/MAT_Water/concordia_water_normal.png",
+    "role": "Normal",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 5.33,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 0.53
+   },
+   {
+    "file": "textures/concordia/MAT_Ground_Cracked/concordia_ground_cracked_albedo.png",
+    "role": "Albedo",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 7.37
+   },
+   {
+    "file": "textures/concordia/MAT_Ground_Cracked/concordia_ground_cracked_orm.png",
+    "role": "ORM",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 6.2
+   },
+   {
+    "file": "textures/concordia/polyhaven_src/sandstone_cracks/sandstone_cracks_nor_gl_2k.jpg",
+    "role": "Normal",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 5.33,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 4.33
+   },
+   {
+    "file": "textures/concordia/MAT_Rock_Gray/concordia_rock_gray_albedo.png",
+    "role": "Albedo",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 3.19
+   },
+   {
+    "file": "textures/concordia/MAT_Rock_Gray/concordia_rock_gray_orm.png",
+    "role": "ORM",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 4.92
+   },
+   {
+    "file": "textures/concordia/polyhaven_src/rock_boulder_dry/rock_boulder_dry_nor_gl_2k.jpg",
+    "role": "Normal",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 5.33,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 3.15
+   },
+   {
+    "file": "textures/concordia/MAT_Stone_Repair/concordia_stone_repair_albedo.png",
+    "role": "Albedo",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 7.37
+   },
+   {
+    "file": "textures/concordia/MAT_Stone_Repair/concordia_stone_repair_orm.png",
+    "role": "ORM",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 5.33
+   },
+   {
+    "file": "textures/concordia/polyhaven_src/rustic_stone_wall/rustic_stone_wall_nor_gl_2k.jpg",
+    "role": "Normal",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 5.33,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 4.52
+   },
+   {
+    "file": "textures/concordia/MAT_Ash_Ground/concordia_ash_ground_albedo.png",
+    "role": "Albedo",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 4.14
+   },
+   {
+    "file": "textures/concordia/MAT_Ash_Ground/concordia_ash_ground_orm.png",
+    "role": "ORM",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 2.67,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 5.8
+   },
+   {
+    "file": "textures/concordia/polyhaven_src/dry_ground_01/dry_ground_01_nor_gl_2k.jpg",
+    "role": "Normal",
+    "px": [
+     2048,
+     2048
+    ],
+    "vram_mb": 5.33,
+    "vram_bc7_mb": 5.33,
+    "rgba8_mb": 21.33,
+    "disk_mb": 1.03
+   }
+  ],
+  "count": 52,
+  "totals": {
+   "vram_mb": 152.1,
+   "vram_bc7_mb": 229.2,
+   "rgba8_mb": 917.2,
+   "disk_mb": 154.0
+  },
+  "assumption": "Godot 4 importacion 'VRAM Compressed' (escritorio): albedo/ORM/emision BC1 0.5 B/px, normal BC5 1 B/px, mipmaps x4/3; vram_bc7_mb = peor caso con calidad alta (BC7) en todo"
+ },
+ "material_library": [
+  "MAT_Limestone_Worn",
+  "MAT_Cobble_Concordia",
+  "MAT_Plaza_Slab",
+  "MAT_Plaza_Slab_Travertino",
+  "MAT_Wall_Gray",
+  "MAT_Wood_Dark",
+  "MAT_Roof_Tile_Ocher",
+  "MAT_Iron_Black",
+  "MAT_Cloth_Patch_A",
+  "MAT_Cloth_Patch_B",
+  "MAT_Cloth_Patch_C",
+  "MAT_Ash_Gray",
+  "MAT_Shard_Blue",
+  "MAT_Wall_Runes",
+  "MAT_Water",
+  "MAT_Ground_Cracked",
+  "MAT_Rock_Gray",
+  "MAT_Stone_Repair",
+  "MAT_Ash_Ground"
+ ],
+ "chunks": {
+  "grid": "50 x 50 m centrada en el origen (indices x0..x8 / y0..y8, x4_y4 = Portal)",
+  "count": 69,
+  "budget_city_per_chunk": 35000,
+  "lod0_before": {
+   "avg": 6552,
+   "max": 11611,
+   "min": 1210,
+   "total": 452076,
+   "heaviest": [
+    [
+     "TRN_CityChunk_x7_y3_LOD0",
+     11611
+    ],
+    [
+     "TRN_CityChunk_x6_y4_LOD0",
+     10823
+    ],
+    [
+     "TRN_CityChunk_x6_y3_LOD0",
+     10532
+    ],
+    [
+     "TRN_CityChunk_x6_y2_LOD0",
+     10373
+    ],
+    [
+     "TRN_CityChunk_x5_y5_LOD0",
+     10209
+    ],
+    [
+     "TRN_CityChunk_x6_y5_LOD0",
+     9893
+    ],
+    [
+     "TRN_CityChunk_x2_y2_LOD0",
+     9845
+    ],
+    [
+     "TRN_CityChunk_x7_y5_LOD0",
+     9834
+    ]
+   ],
+   "over_budget": []
+  },
+  "optimized": "ninguno (ningun chunk supera 35.000)",
+  "lod_tris": {
+   "LOD0": {
+    "avg": 6552,
+    "max": 11611,
+    "total": 452076
+   },
+   "LOD1": {
+    "avg": 3275,
+    "max": 5805,
+    "total": 225990
+   },
+   "LOD2": {
+    "avg": 982,
+    "max": 1741,
+    "total": 67754
+   }
+  },
+  "lod_ratio_real": {
+   "LOD0": 1.0,
+   "LOD1": 0.5,
+   "LOD2": 0.15
+  },
+  "seams_locked_chunks": "138 / 138 (LOD1+LOD2 conservan todos los vertices del borde)",
+  "per_chunk": {
+   "TRN_CityChunk_x0_y2": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   },
+   "TRN_CityChunk_x0_y3": {
+    "LOD0": 3797,
+    "LOD1": 1897,
+    "LOD2": 569
+   },
+   "TRN_CityChunk_x0_y4": {
+    "LOD0": 4601,
+    "LOD1": 2299,
+    "LOD2": 689
+   },
+   "TRN_CityChunk_x0_y5": {
+    "LOD0": 3839,
+    "LOD1": 1919,
+    "LOD2": 575
+   },
+   "TRN_CityChunk_x0_y6": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   },
+   "TRN_CityChunk_x1_y1": {
+    "LOD0": 2644,
+    "LOD1": 1322,
+    "LOD2": 396
+   },
+   "TRN_CityChunk_x1_y2": {
+    "LOD0": 8236,
+    "LOD1": 4118,
+    "LOD2": 1234
+   },
+   "TRN_CityChunk_x1_y3": {
+    "LOD0": 9294,
+    "LOD1": 4646,
+    "LOD2": 1394
+   },
+   "TRN_CityChunk_x1_y4": {
+    "LOD0": 7312,
+    "LOD1": 3656,
+    "LOD2": 1096
+   },
+   "TRN_CityChunk_x1_y5": {
+    "LOD0": 9131,
+    "LOD1": 4565,
+    "LOD2": 1369
+   },
+   "TRN_CityChunk_x1_y6": {
+    "LOD0": 8209,
+    "LOD1": 4103,
+    "LOD2": 1231
+   },
+   "TRN_CityChunk_x1_y7": {
+    "LOD0": 2639,
+    "LOD1": 1319,
+    "LOD2": 395
+   },
+   "TRN_CityChunk_x2_y0": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   },
+   "TRN_CityChunk_x2_y1": {
+    "LOD0": 8308,
+    "LOD1": 4154,
+    "LOD2": 1246
+   },
+   "TRN_CityChunk_x2_y2": {
+    "LOD0": 9845,
+    "LOD1": 4921,
+    "LOD2": 1475
+   },
+   "TRN_CityChunk_x2_y3": {
+    "LOD0": 8816,
+    "LOD1": 4408,
+    "LOD2": 1322
+   },
+   "TRN_CityChunk_x2_y4": {
+    "LOD0": 6997,
+    "LOD1": 3497,
+    "LOD2": 1049
+   },
+   "TRN_CityChunk_x2_y5": {
+    "LOD0": 8536,
+    "LOD1": 4268,
+    "LOD2": 1280
+   },
+   "TRN_CityChunk_x2_y6": {
+    "LOD0": 9695,
+    "LOD1": 4847,
+    "LOD2": 1453
+   },
+   "TRN_CityChunk_x2_y7": {
+    "LOD0": 8159,
+    "LOD1": 4079,
+    "LOD2": 1223
+   },
+   "TRN_CityChunk_x2_y8": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   },
+   "TRN_CityChunk_x3_y0": {
+    "LOD0": 3704,
+    "LOD1": 1852,
+    "LOD2": 554
+   },
+   "TRN_CityChunk_x3_y1": {
+    "LOD0": 9234,
+    "LOD1": 4616,
+    "LOD2": 1384
+   },
+   "TRN_CityChunk_x3_y2": {
+    "LOD0": 9029,
+    "LOD1": 4513,
+    "LOD2": 1353
+   },
+   "TRN_CityChunk_x3_y3": {
+    "LOD0": 6588,
+    "LOD1": 3294,
+    "LOD2": 988
+   },
+   "TRN_CityChunk_x3_y4": {
+    "LOD0": 6868,
+    "LOD1": 3434,
+    "LOD2": 1030
+   },
+   "TRN_CityChunk_x3_y5": {
+    "LOD0": 6294,
+    "LOD1": 3146,
+    "LOD2": 944
+   },
+   "TRN_CityChunk_x3_y6": {
+    "LOD0": 8749,
+    "LOD1": 4373,
+    "LOD2": 1311
+   },
+   "TRN_CityChunk_x3_y7": {
+    "LOD0": 8711,
+    "LOD1": 4355,
+    "LOD2": 1305
+   },
+   "TRN_CityChunk_x3_y8": {
+    "LOD0": 3809,
+    "LOD1": 1903,
+    "LOD2": 571
+   },
+   "TRN_CityChunk_x4_y0": {
+    "LOD0": 4542,
+    "LOD1": 2270,
+    "LOD2": 680
+   },
+   "TRN_CityChunk_x4_y1": {
+    "LOD0": 7047,
+    "LOD1": 3523,
+    "LOD2": 1057
+   },
+   "TRN_CityChunk_x4_y2": {
+    "LOD0": 7272,
+    "LOD1": 3636,
+    "LOD2": 1090
+   },
+   "TRN_CityChunk_x4_y3": {
+    "LOD0": 6814,
+    "LOD1": 3406,
+    "LOD2": 1022
+   },
+   "TRN_CityChunk_x4_y4": {
+    "LOD0": 8856,
+    "LOD1": 4428,
+    "LOD2": 1328
+   },
+   "TRN_CityChunk_x4_y5": {
+    "LOD0": 6952,
+    "LOD1": 3476,
+    "LOD2": 1042
+   },
+   "TRN_CityChunk_x4_y6": {
+    "LOD0": 7455,
+    "LOD1": 3727,
+    "LOD2": 1117
+   },
+   "TRN_CityChunk_x4_y7": {
+    "LOD0": 6747,
+    "LOD1": 3373,
+    "LOD2": 1011
+   },
+   "TRN_CityChunk_x4_y8": {
+    "LOD0": 4522,
+    "LOD1": 2260,
+    "LOD2": 678
+   },
+   "TRN_CityChunk_x5_y0": {
+    "LOD0": 3814,
+    "LOD1": 1906,
+    "LOD2": 572
+   },
+   "TRN_CityChunk_x5_y1": {
+    "LOD0": 9375,
+    "LOD1": 4687,
+    "LOD2": 1405
+   },
+   "TRN_CityChunk_x5_y2": {
+    "LOD0": 8524,
+    "LOD1": 4262,
+    "LOD2": 1278
+   },
+   "TRN_CityChunk_x5_y3": {
+    "LOD0": 6316,
+    "LOD1": 3158,
+    "LOD2": 946
+   },
+   "TRN_CityChunk_x5_y4": {
+    "LOD0": 7670,
+    "LOD1": 3834,
+    "LOD2": 1150
+   },
+   "TRN_CityChunk_x5_y5": {
+    "LOD0": 10209,
+    "LOD1": 5103,
+    "LOD2": 1531
+   },
+   "TRN_CityChunk_x5_y6": {
+    "LOD0": 9404,
+    "LOD1": 4702,
+    "LOD2": 1410
+   },
+   "TRN_CityChunk_x5_y7": {
+    "LOD0": 8522,
+    "LOD1": 4260,
+    "LOD2": 1278
+   },
+   "TRN_CityChunk_x5_y8": {
+    "LOD0": 3764,
+    "LOD1": 1882,
+    "LOD2": 564
+   },
+   "TRN_CityChunk_x6_y0": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   },
+   "TRN_CityChunk_x6_y1": {
+    "LOD0": 8289,
+    "LOD1": 4143,
+    "LOD2": 1243
+   },
+   "TRN_CityChunk_x6_y2": {
+    "LOD0": 10373,
+    "LOD1": 5185,
+    "LOD2": 1555
+   },
+   "TRN_CityChunk_x6_y3": {
+    "LOD0": 10532,
+    "LOD1": 5266,
+    "LOD2": 1578
+   },
+   "TRN_CityChunk_x6_y4": {
+    "LOD0": 10823,
+    "LOD1": 5411,
+    "LOD2": 1623
+   },
+   "TRN_CityChunk_x6_y5": {
+    "LOD0": 9893,
+    "LOD1": 4945,
+    "LOD2": 1483
+   },
+   "TRN_CityChunk_x6_y6": {
+    "LOD0": 9800,
+    "LOD1": 4900,
+    "LOD2": 1470
+   },
+   "TRN_CityChunk_x6_y7": {
+    "LOD0": 8230,
+    "LOD1": 4114,
+    "LOD2": 1234
+   },
+   "TRN_CityChunk_x6_y8": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   },
+   "TRN_CityChunk_x7_y1": {
+    "LOD0": 2572,
+    "LOD1": 1286,
+    "LOD2": 384
+   },
+   "TRN_CityChunk_x7_y2": {
+    "LOD0": 8277,
+    "LOD1": 4137,
+    "LOD2": 1241
+   },
+   "TRN_CityChunk_x7_y3": {
+    "LOD0": 11611,
+    "LOD1": 5805,
+    "LOD2": 1741
+   },
+   "TRN_CityChunk_x7_y4": {
+    "LOD0": 8021,
+    "LOD1": 4009,
+    "LOD2": 1203
+   },
+   "TRN_CityChunk_x7_y5": {
+    "LOD0": 9834,
+    "LOD1": 4916,
+    "LOD2": 1474
+   },
+   "TRN_CityChunk_x7_y6": {
+    "LOD0": 8183,
+    "LOD1": 4091,
+    "LOD2": 1227
+   },
+   "TRN_CityChunk_x7_y7": {
+    "LOD0": 2622,
+    "LOD1": 1310,
+    "LOD2": 392
+   },
+   "TRN_CityChunk_x8_y2": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   },
+   "TRN_CityChunk_x8_y3": {
+    "LOD0": 4344,
+    "LOD1": 2172,
+    "LOD2": 650
+   },
+   "TRN_CityChunk_x8_y4": {
+    "LOD0": 4487,
+    "LOD1": 2243,
+    "LOD2": 673
+   },
+   "TRN_CityChunk_x8_y5": {
+    "LOD0": 3656,
+    "LOD1": 1828,
+    "LOD2": 548
+   },
+   "TRN_CityChunk_x8_y6": {
+    "LOD0": 1210,
+    "LOD1": 604,
+    "LOD2": 180
+   }
+  },
+  "export": {
+   "terrain_glb": "export/godot/concordia_terrain.glb",
+   "terrain_bytes": 37873928,
+   "structures_glb": "export/godot/concordia_terrain_structures.glb",
+   "structures_bytes": 1971936,
+   "verify_terrain": {
+    "objects": 207,
+    "empties": 0,
+    "tris": 745820,
+    "meshes_with_color0": 207
+   },
+   "verify_structures": {
+    "objects": 47,
+    "empties": 0,
+    "tris": 28184,
+    "meshes_with_color0": 0
+   },
+   "extra": {
+    "concordia_plaza.glb": {
+     "bytes": 428184,
+     "objects_in": 58,
+     "verify": {
+      "objects": 17,
+      "empties": 41,
+      "tris": 8160,
+      "meshes_with_color0": 0
+     }
+    },
+    "concordia_districts_markers.glb": {
+     "bytes": 42736,
+     "objects_in": 110,
+     "verify": {
+      "objects": 0,
+      "empties": 110,
+      "tris": 0,
+      "meshes_with_color0": 0
+     }
+    },
+    "concordia_moradas_markers.glb": {
+     "bytes": 132924,
+     "objects_in": 283,
+     "verify": {
+      "objects": 0,
+      "empties": 283,
+      "tris": 0,
+      "meshes_with_color0": 0
+     }
+    },
+    "concordia_cauce.glb": {
+     "bytes": 369224,
+     "objects_in": 57,
+     "verify": {
+      "objects": 20,
+      "empties": 37,
+      "tris": 4832,
+      "meshes_with_color0": 0
+     }
+    }
+   }
+  }
+ },
+ "exterior_chunks": {
+  "count": 204,
+  "budget_exterior_per_chunk": 8000,
+  "lod0_max": 1319,
+  "lod0_avg": 591,
+  "over_budget": [],
+  "lod_totals": {
+   "LOD0": 120498,
+   "LOD1": 60372,
+   "LOD2": 25218
+  },
+  "export": "export/godot/concordia_exterior.glb",
+  "bytes": 12572192,
+  "verify": {
+   "objects": 630,
+   "empties": 0,
+   "tris": 243806,
+   "meshes_with_color0": 630
+  }
+ },
+ "wall_reexport": {
+  "concordia_wall_kit.glb": 1662940,
+  "concordia_wall_layout.glb": 1012664,
+  "concordia_wall_kit_lods.glb": 695908
+ },
+ "material_library_gltf": "export/godot/materials/concordia_materials.gltf",
+ "material_library_check": {
+  "MAT_Limestone_Worn": {
+   "baseColor": "../../../textures/concordia/MAT_Limestone_Worn/concordia_limestone_worn_albedo.png",
+   "orm_shared": true,
+   "normal": "../../../textures/concordia/polyhaven_src/stone_wall_02/stone_wall_02_nor_gl_2k.jpg",
+   "baseColorFactor": null,
+   "texture_transform": true,
+   "emissive_strength": null
+  },
+  "MAT_Cobble_Concordia": {
+   "baseColor": "../../../textures/concordia/MAT_Cobble_Concordia/concordia_cobble_concordia_albedo.png",
+   "orm_shared": true,
+   "normal": "../../../textures/concordia/polyhaven_src/cobblestone_floor_001/cobblestone_floor_001_nor_gl_2k.jpg",
+   "baseColorFactor": null,
+   "texture_transform": true,
+   "emissive_strength": null
+  },
+  "MAT_Plaza_Slab": {
+   "baseColor": "../../../textures/concordia/MAT_Plaza_Slab/concordia_plaza_slab_albedo.png",
+   "orm_shared": true,
+   "normal": "../../../textures/concordia/polyhaven_src/floor_tiles_02/floor_tiles_02_nor_gl_2k.jpg",
+   "baseColorFactor": null,
+   "texture_transform": true,
+   "emissive_strength": null
+  },
+  "MAT_Plaza_Slab_Travertino": {
+   "baseColor": "../../../textures/concordia/MAT_Plaza_Slab_Travertino/concordia_plaza_slab_travertino_albedo.png",
+   "orm_shared": true,
+   "normal": "../../../textures/concordia/polyhaven_src/marble_01/marble_01_nor_gl_2k.jpg",
+   "baseColorFactor": null,
+   "texture_transform": true,
+   "emissive_strength": null
+  },
+  "MAT_Wall_Gray": {
+   "baseColor": "../../../textures/concordia/MAT_Wall_Gray/concordia_wall_gray_albedo.png",
+   "orm_shared": true,
+   "normal": "../../../textures/concordia/polyhaven_src/castle_wall_slates/castle_wall_slates_nor_gl_2k.jpg",
+   "baseColorFactor": null,
+   "texture_transform": true,
+   "emissive_strength": null
+  },
+  "MAT_Wood_Dark": {
+   "baseColor": "../../../textures/concordia/MAT_Wood_Dark/concordia_wood_dark_albedo.png",
+   "orm_shared": true,
+   "normal": "../../../textures/concordia/polyhaven_src/weathered_planks/weathered_planks_nor_gl_1k.jpg",
+   "baseColorFactor": null,
+   "texture_transform": true,
+   "emissive_strength": null
+  },
+  "MAT_Roof_Tile_Ocher": {
+   "baseColor": "../../../textures/concordia/MAT_Roof_Tile_Ocher/concordia_roof_tile_ocher_albedo.png",
+   "orm_shared": true,
+   "normal": "../../../textures/concordia/polyhaven_src/roof_09/roof_09_nor_gl_1k.jpg",
+   "baseColorFactor": null,
+   "texture_transform": true,
+   "emissive_strength": null
+  },
+  "MAT_Iron_Black": {
+   "baseColor": "../../../textures/concordia/MAT_Iron_Black/concordia_iron_black_albedo.png",
+   "orm_shared": true,
+   "normal": "../../../textures/concordia/polyhaven_src/metal_plate_02/metal_plate_02_nor_gl_1k.jpg",
+   "baseColorFactor": null,
+   "texture_transform": true,
+   "emissive_strength": null
+  },
+  "MAT_Cloth_Patch_A": {
+   "baseColor": "../../../textures/concordia/MAT_Cloth/concordia_cloth_albedo.png",
+   "orm_shared": true,
+   "normal": "../../../textures/concordia/polyhaven_src/hessian_380/hessian_380_nor_gl_1k.jpg",
+   "baseColorFactor": [
+    0.5302345156669617,
+    0.3006935119628906,
+    0.14286519587039948,
+    1
+   ],
+   "texture_transform": true,
+   "emissive_strength": null
+  },
+  "MAT_Cloth_Patch_B": {
+   "baseColor": "../../../textures/concordia/MAT_Cloth/concordia_cloth_albedo.png",
+   "orm_shared": true,
+   "normal": "../../../textures/concordia/polyhaven_src/hessian_380/hessian_380_nor_gl_1k.jpg",
+   "baseColorFactor": [
+    0.3253075182437897,
+    0.3006935119628906,
+    0.15894465148448944,
+    1
+   ],
+   "texture_transform": true,
+   "emissive_strength": null
+  },
+  "MAT_Cloth_Patch_C": {
+   "baseColor": "../../../textures/concordia/MAT_Cloth/concordia_cloth_albedo.png",
+   "orm_shared": true,
+   "normal": "../../../textures/concordia/polyhaven_src/hessian_380/hessian_380_nor_gl_1k.jpg",
+   "baseColorFactor": [
+    0.7745087742805481,
+    0.6550709009170532,
+    0.48139020800590515,
+    1
+   ],
+   "texture_transform": true,
+   "emissive_strength": null
+  },
+  "MAT_Ash_Gray": {
+   "baseColor": "../../../textures/concordia/MAT_Ash_Gray/concordia_ash_gray_albedo.png",
+   "orm_shared": true,
+   "normal": "../../../textures/concordia/polyhaven_src/rocks_ground_02/rocks_ground_02_nor_gl_2k.jpg",
+   "baseColorFactor": null,
+   "texture_transform": true,
+   "emissive_strength": null
+  },
+  "MAT_Shard_Blue": {
+   "baseColor": "../../../textures/concordia/MAT_Shard_Blue/concordia_shard_blue_albedo.png",
+   "orm_shared": true,
+   "normal": "../../../textures/concordia/MAT_Shard_Blue/concordia_shard_blue_normal.png",
+   "baseColorFactor": null,
+   "texture_transform": false,
+   "emissive_strength": {
+    "emissiveStrength": 2.5
+   }
+  },
+  "MAT_Wall_Runes": {
+   "baseColor": "../../../textures/concordia/MAT_Wall_Runes/concordia_wall_runes_albedo.png",
+   "orm_shared": true,
+   "normal": "../../../textures/concordia/MAT_Wall_Runes/concordia_wall_runes_normal.png",
+   "baseColorFactor": null,
+   "texture_transform": false,
+   "emissive_strength": null
+  },
+  "MAT_Water": {
+   "baseColor": "../../../textures/concordia/MAT_Water/concordia_water_albedo.png",
+   "orm_shared": true,
+   "normal": "../../../textures/concordia/MAT_Water/concordia_water_normal.png",
+   "baseColorFactor": null,
+   "texture_transform": false,
+   "emissive_strength": null
+  },
+  "MAT_Ground_Cracked": {
+   "baseColor": "../../../textures/concordia/MAT_Ground_Cracked/concordia_ground_cracked_albedo.png",
+   "orm_shared": true,
+   "normal": "../../../textures/concordia/polyhaven_src/sandstone_cracks/sandstone_cracks_nor_gl_2k.jpg",
+   "baseColorFactor": null,
+   "texture_transform": true,
+   "emissive_strength": null
+  },
+  "MAT_Rock_Gray": {
+   "baseColor": "../../../textures/concordia/MAT_Rock_Gray/concordia_rock_gray_albedo.png",
+   "orm_shared": true,
+   "normal": "../../../textures/concordia/polyhaven_src/rock_boulder_dry/rock_boulder_dry_nor_gl_2k.jpg",
+   "baseColorFactor": null,
+   "texture_transform": true,
+   "emissive_strength": null
+  },
+  "MAT_Stone_Repair": {
+   "baseColor": "../../../textures/concordia/MAT_Stone_Repair/concordia_stone_repair_albedo.png",
+   "orm_shared": true,
+   "normal": "../../../textures/concordia/polyhaven_src/rustic_stone_wall/rustic_stone_wall_nor_gl_2k.jpg",
+   "baseColorFactor": null,
+   "texture_transform": true,
+   "emissive_strength": null
+  },
+  "MAT_Ash_Ground": {
+   "baseColor": "../../../textures/concordia/MAT_Ash_Ground/concordia_ash_ground_albedo.png",
+   "orm_shared": true,
+   "normal": "../../../textures/concordia/polyhaven_src/dry_ground_01/dry_ground_01_nor_gl_2k.jpg",
+   "baseColorFactor": null,
+   "texture_transform": true,
+   "emissive_strength": null
+  }
+ }
+}

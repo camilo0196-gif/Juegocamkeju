@@ -32,171 +32,371 @@
 				14,
 				15,
 				16,
-				17
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37
 			]
 		}
 	],
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"MATLIB_MAT_Limestone_Worn",
+			"name":"MATLIB_MAT_Limestone_Worn_Plane",
 			"translation":[
 				1000,
-				0.5,
+				0,
 				-1000
 			]
 		},
 		{
 			"mesh":1,
-			"name":"MATLIB_MAT_Cobble_Concordia",
+			"name":"MATLIB_MAT_Limestone_Worn_Sphere",
 			"translation":[
-				1001.5,
-				0.5,
-				-1000
+				1000.5999755859375,
+				0.800000011920929,
+				-1000.5999755859375
 			]
 		},
 		{
 			"mesh":2,
-			"name":"MATLIB_MAT_Plaza_Slab",
+			"name":"MATLIB_MAT_Cobble_Concordia_Plane",
 			"translation":[
-				1003,
-				0.5,
+				1007,
+				0,
 				-1000
 			]
 		},
 		{
 			"mesh":3,
-			"name":"MATLIB_MAT_Plaza_Slab_Travertino",
+			"name":"MATLIB_MAT_Cobble_Concordia_Sphere",
 			"translation":[
-				1004.5,
-				0.5,
-				-1000
+				1007.5999755859375,
+				0.800000011920929,
+				-1000.5999755859375
 			]
 		},
 		{
 			"mesh":4,
-			"name":"MATLIB_MAT_Wall_Gray",
+			"name":"MATLIB_MAT_Plaza_Slab_Plane",
 			"translation":[
-				1006,
-				0.5,
+				1014,
+				0,
 				-1000
 			]
 		},
 		{
 			"mesh":5,
-			"name":"MATLIB_MAT_Wood_Dark",
+			"name":"MATLIB_MAT_Plaza_Slab_Sphere",
 			"translation":[
-				1007.5,
-				0.5,
-				-1000
+				1014.5999755859375,
+				0.800000011920929,
+				-1000.5999755859375
 			]
 		},
 		{
 			"mesh":6,
-			"name":"MATLIB_MAT_Roof_Tile_Ocher",
+			"name":"MATLIB_MAT_Plaza_Slab_Travertino_Plane",
 			"translation":[
-				1000,
-				0.5,
-				-1001.5
+				1021,
+				0,
+				-1000
 			]
 		},
 		{
 			"mesh":7,
-			"name":"MATLIB_MAT_Iron_Black",
+			"name":"MATLIB_MAT_Plaza_Slab_Travertino_Sphere",
 			"translation":[
-				1001.5,
-				0.5,
-				-1001.5
+				1021.5999755859375,
+				0.800000011920929,
+				-1000.5999755859375
 			]
 		},
 		{
 			"mesh":8,
-			"name":"MATLIB_MAT_Cloth_Patch_A",
+			"name":"MATLIB_MAT_Wall_Gray_Plane",
 			"translation":[
-				1003,
-				0.5,
-				-1001.5
+				1028,
+				0,
+				-1000
 			]
 		},
 		{
 			"mesh":9,
-			"name":"MATLIB_MAT_Cloth_Patch_B",
+			"name":"MATLIB_MAT_Wall_Gray_Sphere",
 			"translation":[
-				1004.5,
-				0.5,
-				-1001.5
+				1028.5999755859375,
+				0.800000011920929,
+				-1000.5999755859375
 			]
 		},
 		{
 			"mesh":10,
-			"name":"MATLIB_MAT_Cloth_Patch_C",
+			"name":"MATLIB_MAT_Wood_Dark_Plane",
 			"translation":[
-				1006,
-				0.5,
-				-1001.5
+				1000,
+				0,
+				-993
 			]
 		},
 		{
 			"mesh":11,
-			"name":"MATLIB_MAT_Ash_Gray",
+			"name":"MATLIB_MAT_Wood_Dark_Sphere",
 			"translation":[
-				1007.5,
-				0.5,
-				-1001.5
+				1000.5999755859375,
+				0.800000011920929,
+				-993.5999755859375
 			]
 		},
 		{
 			"mesh":12,
-			"name":"MATLIB_MAT_Shard_Blue",
+			"name":"MATLIB_MAT_Roof_Tile_Ocher_Plane",
 			"translation":[
-				1000,
-				0.5,
-				-1003
+				1007,
+				0,
+				-993
 			]
 		},
 		{
 			"mesh":13,
-			"name":"MATLIB_MAT_Wall_Runes",
+			"name":"MATLIB_MAT_Roof_Tile_Ocher_Sphere",
 			"translation":[
-				1001.5,
-				0.5,
-				-1003
+				1007.5999755859375,
+				0.800000011920929,
+				-993.5999755859375
 			]
 		},
 		{
 			"mesh":14,
-			"name":"MATLIB_MAT_Water",
+			"name":"MATLIB_MAT_Iron_Black_Plane",
 			"translation":[
-				1003,
-				0.5,
-				-1003
+				1014,
+				0,
+				-993
 			]
 		},
 		{
 			"mesh":15,
-			"name":"MATLIB_MAT_Ground_Cracked",
+			"name":"MATLIB_MAT_Iron_Black_Sphere",
 			"translation":[
-				1004.5,
-				0.5,
-				-1003
+				1014.5999755859375,
+				0.800000011920929,
+				-993.5999755859375
 			]
 		},
 		{
 			"mesh":16,
-			"name":"MATLIB_MAT_Rock_Gray",
+			"name":"MATLIB_MAT_Cloth_Patch_A_Plane",
 			"translation":[
-				1006,
-				0.5,
-				-1003
+				1021,
+				0,
+				-993
 			]
 		},
 		{
 			"mesh":17,
-			"name":"MATLIB_MAT_Stone_Repair",
+			"name":"MATLIB_MAT_Cloth_Patch_A_Sphere",
 			"translation":[
-				1007.5,
-				0.5,
-				-1003
+				1021.5999755859375,
+				0.800000011920929,
+				-993.5999755859375
+			]
+		},
+		{
+			"mesh":18,
+			"name":"MATLIB_MAT_Cloth_Patch_B_Plane",
+			"translation":[
+				1028,
+				0,
+				-993
+			]
+		},
+		{
+			"mesh":19,
+			"name":"MATLIB_MAT_Cloth_Patch_B_Sphere",
+			"translation":[
+				1028.5999755859375,
+				0.800000011920929,
+				-993.5999755859375
+			]
+		},
+		{
+			"mesh":20,
+			"name":"MATLIB_MAT_Cloth_Patch_C_Plane",
+			"translation":[
+				1000,
+				0,
+				-986
+			]
+		},
+		{
+			"mesh":21,
+			"name":"MATLIB_MAT_Cloth_Patch_C_Sphere",
+			"translation":[
+				1000.5999755859375,
+				0.800000011920929,
+				-986.5999755859375
+			]
+		},
+		{
+			"mesh":22,
+			"name":"MATLIB_MAT_Ash_Gray_Plane",
+			"translation":[
+				1007,
+				0,
+				-986
+			]
+		},
+		{
+			"mesh":23,
+			"name":"MATLIB_MAT_Ash_Gray_Sphere",
+			"translation":[
+				1007.5999755859375,
+				0.800000011920929,
+				-986.5999755859375
+			]
+		},
+		{
+			"mesh":24,
+			"name":"MATLIB_MAT_Shard_Blue_Plane",
+			"translation":[
+				1014,
+				0,
+				-986
+			]
+		},
+		{
+			"mesh":25,
+			"name":"MATLIB_MAT_Shard_Blue_Sphere",
+			"translation":[
+				1014.5999755859375,
+				0.800000011920929,
+				-986.5999755859375
+			]
+		},
+		{
+			"mesh":26,
+			"name":"MATLIB_MAT_Wall_Runes_Plane",
+			"translation":[
+				1021,
+				0,
+				-986
+			]
+		},
+		{
+			"mesh":27,
+			"name":"MATLIB_MAT_Wall_Runes_Sphere",
+			"translation":[
+				1021.5999755859375,
+				0.800000011920929,
+				-986.5999755859375
+			]
+		},
+		{
+			"mesh":28,
+			"name":"MATLIB_MAT_Water_Plane",
+			"translation":[
+				1028,
+				0,
+				-986
+			]
+		},
+		{
+			"mesh":29,
+			"name":"MATLIB_MAT_Water_Sphere",
+			"translation":[
+				1028.5999755859375,
+				0.800000011920929,
+				-986.5999755859375
+			]
+		},
+		{
+			"mesh":30,
+			"name":"MATLIB_MAT_Ground_Cracked_Plane",
+			"translation":[
+				1000,
+				0,
+				-979
+			]
+		},
+		{
+			"mesh":31,
+			"name":"MATLIB_MAT_Ground_Cracked_Sphere",
+			"translation":[
+				1000.5999755859375,
+				0.800000011920929,
+				-979.5999755859375
+			]
+		},
+		{
+			"mesh":32,
+			"name":"MATLIB_MAT_Rock_Gray_Plane",
+			"translation":[
+				1007,
+				0,
+				-979
+			]
+		},
+		{
+			"mesh":33,
+			"name":"MATLIB_MAT_Rock_Gray_Sphere",
+			"translation":[
+				1007.5999755859375,
+				0.800000011920929,
+				-979.5999755859375
+			]
+		},
+		{
+			"mesh":34,
+			"name":"MATLIB_MAT_Stone_Repair_Plane",
+			"translation":[
+				1014,
+				0,
+				-979
+			]
+		},
+		{
+			"mesh":35,
+			"name":"MATLIB_MAT_Stone_Repair_Sphere",
+			"translation":[
+				1014.5999755859375,
+				0.800000011920929,
+				-979.5999755859375
+			]
+		},
+		{
+			"mesh":36,
+			"name":"MATLIB_MAT_Ash_Ground_Plane",
+			"translation":[
+				1021,
+				0,
+				-979
+			]
+		},
+		{
+			"mesh":37,
+			"name":"MATLIB_MAT_Ash_Ground_Sphere",
+			"translation":[
+				1021.5999755859375,
+				0.800000011920929,
+				-979.5999755859375
 			]
 		}
 	],
@@ -204,14 +404,16 @@
 		{
 			"doubleSided":true,
 			"extras":{
+				"textures":{
+					"albedo":"textures/concordia/MAT_Limestone_Worn/concordia_limestone_worn_albedo.png",
+					"orm":"textures/concordia/MAT_Limestone_Worn/concordia_limestone_worn_orm.png",
+					"normal":"textures/concordia/polyhaven_src/stone_wall_02/stone_wall_02_nor_gl_2k.jpg"
+				},
+				"uv":"UVWorld: proyeccion planar en mundo, escala (0.5, 0.5) (1 tile = ancho real del asset)",
 				"poly_haven_asset":"stone_wall_02",
 				"poly_haven_license":"CC0",
-				"texture_dimensions_m":"[2.0, 2.0]",
-				"textures":"textures/concordia/MAT_Limestone_Worn",
-				"uv":"UVWorld: proyeccion planar en mundo (caja), 1 m = 1 tile",
-				"poly_haven_ref":"Stone Wall 02 (caliza)",
-				"use":"calles, muros de contencion, edificios",
-				"roughness_range":"0.75-0.93"
+				"texture_width_m":2.0,
+				"hue_saturation_value":"{\"hue\": 0.5331, \"saturation\": 0.5293, \"value\": 2.0767, \"fac\": 1.0, \"note\": \"nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo\"}"
 			},
 			"name":"MAT_Limestone_Worn",
 			"normalTexture":{
@@ -229,6 +431,21 @@
 				},
 				"index":0
 			},
+			"occlusionTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							0.5
+						],
+						"scale":[
+							0.5,
+							0.5
+						]
+					}
+				},
+				"index":1
+			},
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
 					"extensions":{
@@ -243,9 +460,8 @@
 							]
 						}
 					},
-					"index":1
+					"index":2
 				},
-				"metallicFactor":0,
 				"metallicRoughnessTexture":{
 					"extensions":{
 						"KHR_texture_transform":{
@@ -259,21 +475,23 @@
 							]
 						}
 					},
-					"index":2
+					"index":1
 				}
 			}
 		},
 		{
 			"doubleSided":true,
 			"extras":{
+				"textures":{
+					"albedo":"textures/concordia/MAT_Cobble_Concordia/concordia_cobble_concordia_albedo.png",
+					"orm":"textures/concordia/MAT_Cobble_Concordia/concordia_cobble_concordia_orm.png",
+					"normal":"textures/concordia/polyhaven_src/cobblestone_floor_001/cobblestone_floor_001_nor_gl_2k.jpg"
+				},
+				"uv":"UVWorld: proyeccion planar en mundo, escala (0.41667, 0.41667) (1 tile = ancho real del asset)",
 				"poly_haven_asset":"cobblestone_floor_001",
 				"poly_haven_license":"CC0",
-				"texture_dimensions_m":"[2.4, 2.4]",
-				"textures":"textures/concordia/MAT_Cobble_Concordia",
-				"uv":"UVWorld: proyeccion planar en mundo (caja), 1 m = 1 tile",
-				"poly_haven_ref":"Cobblestone Floor 001",
-				"use":"road_mask",
-				"roughness_range":"0.72-0.94"
+				"texture_width_m":2.4,
+				"hue_saturation_value":"{\"hue\": 0.4786, \"saturation\": 0.816, \"value\": 1.4214, \"fac\": 1.0, \"note\": \"nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo\"}"
 			},
 			"name":"MAT_Cobble_Concordia",
 			"normalTexture":{
@@ -291,24 +509,23 @@
 				},
 				"index":3
 			},
+			"occlusionTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							0.5833300054073334
+						],
+						"scale":[
+							0.4166699945926666,
+							0.4166699945926666
+						]
+					}
+				},
+				"index":4
+			},
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"extensions":{
-						"KHR_texture_transform":{
-							"offset":[
-								0,
-								0.5833300054073334
-							],
-							"scale":[
-								0.4166699945926666,
-								0.4166699945926666
-							]
-						}
-					},
-					"index":4
-				},
-				"metallicFactor":0,
-				"metallicRoughnessTexture":{
 					"extensions":{
 						"KHR_texture_transform":{
 							"offset":[
@@ -322,227 +539,760 @@
 						}
 					},
 					"index":5
+				},
+				"metallicRoughnessTexture":{
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								0.5833300054073334
+							],
+							"scale":[
+								0.4166699945926666,
+								0.4166699945926666
+							]
+						}
+					},
+					"index":4
 				}
 			}
 		},
 		{
 			"doubleSided":true,
 			"extras":{
-				"textures":"textures/concordia/MAT_Plaza_Slab",
-				"uv":"UVWorld: proyeccion planar en mundo (caja), 1 m = 1 tile",
-				"poly_haven_ref":"(losas)",
-				"use":"slab_ring_id",
-				"roughness_range":"0.76-0.94"
+				"textures":{
+					"albedo":"textures/concordia/MAT_Plaza_Slab/concordia_plaza_slab_albedo.png",
+					"orm":"textures/concordia/MAT_Plaza_Slab/concordia_plaza_slab_orm.png",
+					"normal":"textures/concordia/polyhaven_src/floor_tiles_02/floor_tiles_02_nor_gl_2k.jpg"
+				},
+				"uv":"UVWorld: proyeccion planar en mundo, escala (0.25, 0.25) (1 tile = ancho real del asset)",
+				"poly_haven_asset":"floor_tiles_02",
+				"poly_haven_license":"CC0",
+				"texture_width_m":4.0,
+				"hue_saturation_value":"{\"hue\": 0.5074, \"saturation\": 0.4912, \"value\": 1.1366, \"fac\": 1.0, \"note\": \"nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo\"}"
 			},
 			"name":"MAT_Plaza_Slab",
 			"normalTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							0.75
+						],
+						"scale":[
+							0.25,
+							0.25
+						]
+					}
+				},
 				"index":6
+			},
+			"occlusionTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							0.75
+						],
+						"scale":[
+							0.25,
+							0.25
+						]
+					}
+				},
+				"index":7
 			},
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":7
-				},
-				"metallicFactor":0,
-				"metallicRoughnessTexture":{
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								0.75
+							],
+							"scale":[
+								0.25,
+								0.25
+							]
+						}
+					},
 					"index":8
+				},
+				"metallicRoughnessTexture":{
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								0.75
+							],
+							"scale":[
+								0.25,
+								0.25
+							]
+						}
+					},
+					"index":7
 				}
 			}
 		},
 		{
 			"doubleSided":true,
 			"extras":{
-				"textures":"textures/concordia/MAT_Plaza_Slab_Travertino",
-				"uv":"UVWorld: proyeccion planar en mundo (caja), 1 m = 1 tile",
-				"poly_haven_ref":"(travertino)",
-				"use":"travertine_band",
-				"roughness_range":"0.74-0.94"
+				"textures":{
+					"albedo":"textures/concordia/MAT_Plaza_Slab_Travertino/concordia_plaza_slab_travertino_albedo.png",
+					"orm":"textures/concordia/MAT_Plaza_Slab_Travertino/concordia_plaza_slab_travertino_orm.png",
+					"normal":"textures/concordia/polyhaven_src/marble_01/marble_01_nor_gl_2k.jpg"
+				},
+				"uv":"UVWorld: proyeccion planar en mundo, escala (0.66667, 0.66667) (1 tile = ancho real del asset)",
+				"poly_haven_asset":"marble_01",
+				"poly_haven_license":"CC0",
+				"texture_width_m":1.5,
+				"hue_saturation_value":"{\"hue\": 0.5076, \"saturation\": 0.474, \"value\": 1.1669, \"fac\": 1.0, \"note\": \"nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo\"}"
 			},
 			"name":"MAT_Plaza_Slab_Travertino",
 			"normalTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							0.333329975605011
+						],
+						"scale":[
+							0.666670024394989,
+							0.666670024394989
+						]
+					}
+				},
 				"index":9
+			},
+			"occlusionTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							0.333329975605011
+						],
+						"scale":[
+							0.666670024394989,
+							0.666670024394989
+						]
+					}
+				},
+				"index":10
 			},
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":10
-				},
-				"metallicFactor":0,
-				"metallicRoughnessTexture":{
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								0.333329975605011
+							],
+							"scale":[
+								0.666670024394989,
+								0.666670024394989
+							]
+						}
+					},
 					"index":11
+				},
+				"metallicRoughnessTexture":{
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								0.333329975605011
+							],
+							"scale":[
+								0.666670024394989,
+								0.666670024394989
+							]
+						}
+					},
+					"index":10
 				}
 			}
 		},
 		{
 			"doubleSided":true,
 			"extras":{
-				"textures":"textures/concordia/MAT_Wall_Gray",
-				"uv":"UVWorld: proyeccion planar en mundo (caja), 1 m = 1 tile",
-				"poly_haven_ref":"Stone Wall 02 (gris)",
-				"use":"muralla",
-				"roughness_range":"0.78-0.95"
+				"textures":{
+					"albedo":"textures/concordia/MAT_Wall_Gray/concordia_wall_gray_albedo.png",
+					"orm":"textures/concordia/MAT_Wall_Gray/concordia_wall_gray_orm.png",
+					"normal":"textures/concordia/polyhaven_src/castle_wall_slates/castle_wall_slates_nor_gl_2k.jpg"
+				},
+				"uv":"UVWorld: proyeccion planar en mundo, escala (0.4, 0.4) (1 tile = ancho real del asset)",
+				"poly_haven_asset":"castle_wall_slates",
+				"poly_haven_license":"CC0",
+				"texture_width_m":2.5,
+				"hue_saturation_value":"{\"hue\": 0.5076, \"saturation\": 0.1471, \"value\": 1.0137, \"fac\": 1.0, \"note\": \"nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo\"}"
 			},
 			"name":"MAT_Wall_Gray",
 			"normalTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							0.5999999940395355
+						],
+						"scale":[
+							0.4000000059604645,
+							0.4000000059604645
+						]
+					}
+				},
 				"index":12
+			},
+			"occlusionTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							0.5999999940395355
+						],
+						"scale":[
+							0.4000000059604645,
+							0.4000000059604645
+						]
+					}
+				},
+				"index":13
 			},
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":13
-				},
-				"metallicFactor":0,
-				"metallicRoughnessTexture":{
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								0.5999999940395355
+							],
+							"scale":[
+								0.4000000059604645,
+								0.4000000059604645
+							]
+						}
+					},
 					"index":14
+				},
+				"metallicRoughnessTexture":{
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								0.5999999940395355
+							],
+							"scale":[
+								0.4000000059604645,
+								0.4000000059604645
+							]
+						}
+					},
+					"index":13
 				}
 			}
 		},
 		{
 			"doubleSided":true,
 			"extras":{
-				"textures":"textures/concordia/MAT_Wood_Dark",
-				"uv":"UVWorld: proyeccion planar en mundo (caja), 1 m = 1 tile",
-				"poly_haven_ref":"(madera)",
-				"use":"vigas, puertas",
-				"roughness_range":"0.72-0.9"
+				"textures":{
+					"albedo":"textures/concordia/MAT_Wood_Dark/concordia_wood_dark_albedo.png",
+					"orm":"textures/concordia/MAT_Wood_Dark/concordia_wood_dark_orm.png",
+					"normal":"textures/concordia/polyhaven_src/weathered_planks/weathered_planks_nor_gl_1k.jpg"
+				},
+				"uv":"UVWorld: proyeccion planar en mundo, escala (0.5, 0.5) (1 tile = ancho real del asset)",
+				"poly_haven_asset":"weathered_planks",
+				"poly_haven_license":"CC0",
+				"texture_width_m":2.0,
+				"hue_saturation_value":"{\"hue\": 0.5115, \"saturation\": 1.0027, \"value\": 0.9265, \"fac\": 1.0, \"note\": \"nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo\"}"
 			},
 			"name":"MAT_Wood_Dark",
 			"normalTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							0.5
+						],
+						"scale":[
+							0.5,
+							0.5
+						]
+					}
+				},
 				"index":15
+			},
+			"occlusionTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							0.5
+						],
+						"scale":[
+							0.5,
+							0.5
+						]
+					}
+				},
+				"index":16
 			},
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":16
-				},
-				"metallicFactor":0,
-				"metallicRoughnessTexture":{
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								0.5
+							],
+							"scale":[
+								0.5,
+								0.5
+							]
+						}
+					},
 					"index":17
+				},
+				"metallicRoughnessTexture":{
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								0.5
+							],
+							"scale":[
+								0.5,
+								0.5
+							]
+						}
+					},
+					"index":16
 				}
 			}
 		},
 		{
 			"doubleSided":true,
 			"extras":{
-				"textures":"textures/concordia/MAT_Roof_Tile_Ocher",
-				"uv":"UVWorld: proyeccion planar en mundo (caja), 1 m = 1 tile",
-				"poly_haven_ref":"(teja)",
-				"use":"tejados",
-				"roughness_range":"0.7-0.9"
+				"textures":{
+					"albedo":"textures/concordia/MAT_Roof_Tile_Ocher/concordia_roof_tile_ocher_albedo.png",
+					"orm":"textures/concordia/MAT_Roof_Tile_Ocher/concordia_roof_tile_ocher_orm.png",
+					"normal":"textures/concordia/polyhaven_src/roof_09/roof_09_nor_gl_1k.jpg"
+				},
+				"uv":"UVWorld: proyeccion planar en mundo, escala (0.25, 0.25) (1 tile = ancho real del asset)",
+				"poly_haven_asset":"roof_09",
+				"poly_haven_license":"CC0",
+				"texture_width_m":4.0,
+				"hue_saturation_value":"{\"hue\": 0.4986, \"saturation\": 0.9209, \"value\": 1.1465, \"fac\": 1.0, \"note\": \"nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo\"}"
 			},
 			"name":"MAT_Roof_Tile_Ocher",
 			"normalTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							0.75
+						],
+						"scale":[
+							0.25,
+							0.25
+						]
+					}
+				},
 				"index":18
+			},
+			"occlusionTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							0.75
+						],
+						"scale":[
+							0.25,
+							0.25
+						]
+					}
+				},
+				"index":19
 			},
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":19
-				},
-				"metallicFactor":0,
-				"metallicRoughnessTexture":{
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								0.75
+							],
+							"scale":[
+								0.25,
+								0.25
+							]
+						}
+					},
 					"index":20
+				},
+				"metallicRoughnessTexture":{
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								0.75
+							],
+							"scale":[
+								0.25,
+								0.25
+							]
+						}
+					},
+					"index":19
 				}
 			}
 		},
 		{
 			"doubleSided":true,
 			"extras":{
-				"orm":"textures/concordia/MAT_Iron_Black/T_Iron_Black_ORM.png",
-				"textures":"textures/concordia/MAT_Iron_Black",
-				"uv":"UVWorld: proyeccion planar en mundo (caja), 1 m = 1 tile",
-				"poly_haven_ref":"(hierro)",
-				"use":"rejas, herrajes",
-				"roughness_range":"0.33-0.47"
+				"textures":{
+					"albedo":"textures/concordia/MAT_Iron_Black/concordia_iron_black_albedo.png",
+					"orm":"textures/concordia/MAT_Iron_Black/concordia_iron_black_orm.png",
+					"normal":"textures/concordia/polyhaven_src/metal_plate_02/metal_plate_02_nor_gl_1k.jpg"
+				},
+				"uv":"UVWorld: proyeccion planar en mundo, escala (0.5, 0.5) (1 tile = ancho real del asset)",
+				"poly_haven_asset":"metal_plate_02",
+				"poly_haven_license":"CC0",
+				"texture_width_m":2.0,
+				"hue_saturation_value":"{\"hue\": 0.5285, \"saturation\": 0.2234, \"value\": 0.5469, \"fac\": 1.0, \"note\": \"nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo\"}"
 			},
 			"name":"MAT_Iron_Black",
 			"normalTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							0.5
+						],
+						"scale":[
+							0.5,
+							0.5
+						]
+					}
+				},
 				"index":21
+			},
+			"occlusionTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							0.5
+						],
+						"scale":[
+							0.5,
+							0.5
+						]
+					}
+				},
+				"index":22
 			},
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":22
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								0.5
+							],
+							"scale":[
+								0.5,
+								0.5
+							]
+						}
+					},
+					"index":23
 				},
 				"metallicRoughnessTexture":{
-					"index":23
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								0.5
+							],
+							"scale":[
+								0.5,
+								0.5
+							]
+						}
+					},
+					"index":22
 				}
 			}
 		},
 		{
 			"doubleSided":true,
 			"extras":{
-				"textures":"textures/concordia/MAT_Cloth_Patch_A",
-				"uv":"UVWorld: proyeccion planar en mundo (caja), 1 m = 1 tile",
-				"poly_haven_ref":"(tela)",
-				"use":"toldos, puestos",
-				"roughness_range":"0.84-0.95"
+				"base_color_factor_srgb":"#8A6A4A",
+				"textures":{
+					"albedo":"textures/concordia/MAT_Cloth/concordia_cloth_albedo.png",
+					"orm":"textures/concordia/MAT_Cloth/concordia_cloth_orm.png",
+					"normal":"textures/concordia/polyhaven_src/hessian_380/hessian_380_nor_gl_1k.jpg"
+				},
+				"uv":"UVWorld: proyeccion planar en mundo, escala (3.65142, 3.6523) (1 tile = ancho real del asset)",
+				"poly_haven_asset":"hessian_380",
+				"poly_haven_license":"CC0",
+				"texture_width_m":0.274,
+				"hue_saturation_value":"{\"hue\": 0.5, \"saturation\": 0.0, \"value\": 1.0472, \"fac\": 1.0, \"note\": \"nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo\"}"
 			},
 			"name":"MAT_Cloth_Patch_A",
 			"normalTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							-2.6522998809814453
+						],
+						"scale":[
+							3.6514201164245605,
+							3.6522998809814453
+						]
+					}
+				},
 				"index":24
 			},
-			"pbrMetallicRoughness":{
-				"baseColorTexture":{
-					"index":25
+			"occlusionTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							-2.6522998809814453
+						],
+						"scale":[
+							3.6514201164245605,
+							3.6522998809814453
+						]
+					}
 				},
-				"metallicFactor":0,
-				"metallicRoughnessTexture":{
+				"index":25
+			},
+			"pbrMetallicRoughness":{
+				"baseColorFactor":[
+					0.5302345156669617,
+					0.3006935119628906,
+					0.14286519587039948,
+					1
+				],
+				"baseColorTexture":{
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								-2.6522998809814453
+							],
+							"scale":[
+								3.6514201164245605,
+								3.6522998809814453
+							]
+						}
+					},
 					"index":26
+				},
+				"metallicRoughnessTexture":{
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								-2.6522998809814453
+							],
+							"scale":[
+								3.6514201164245605,
+								3.6522998809814453
+							]
+						}
+					},
+					"index":25
 				}
 			}
 		},
 		{
 			"doubleSided":true,
 			"extras":{
-				"textures":"textures/concordia/MAT_Cloth_Patch_B",
-				"uv":"UVWorld: proyeccion planar en mundo (caja), 1 m = 1 tile",
-				"poly_haven_ref":"(tela)",
-				"use":"toldos, puestos",
-				"roughness_range":"0.84-0.95"
+				"base_color_factor_srgb":"#6E6A4E",
+				"textures":{
+					"albedo":"textures/concordia/MAT_Cloth/concordia_cloth_albedo.png",
+					"orm":"textures/concordia/MAT_Cloth/concordia_cloth_orm.png",
+					"normal":"textures/concordia/polyhaven_src/hessian_380/hessian_380_nor_gl_1k.jpg"
+				},
+				"uv":"UVWorld: proyeccion planar en mundo, escala (3.65142, 3.6523) (1 tile = ancho real del asset)",
+				"poly_haven_asset":"hessian_380",
+				"poly_haven_license":"CC0",
+				"texture_width_m":0.274,
+				"hue_saturation_value":"{\"hue\": 0.5, \"saturation\": 0.0, \"value\": 1.0472, \"fac\": 1.0, \"note\": \"nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo\"}"
 			},
 			"name":"MAT_Cloth_Patch_B",
 			"normalTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							-2.6522998809814453
+						],
+						"scale":[
+							3.6514201164245605,
+							3.6522998809814453
+						]
+					}
+				},
 				"index":27
 			},
-			"pbrMetallicRoughness":{
-				"baseColorTexture":{
-					"index":28
+			"occlusionTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							-2.6522998809814453
+						],
+						"scale":[
+							3.6514201164245605,
+							3.6522998809814453
+						]
+					}
 				},
-				"metallicFactor":0,
-				"metallicRoughnessTexture":{
+				"index":28
+			},
+			"pbrMetallicRoughness":{
+				"baseColorFactor":[
+					0.3253075182437897,
+					0.3006935119628906,
+					0.15894465148448944,
+					1
+				],
+				"baseColorTexture":{
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								-2.6522998809814453
+							],
+							"scale":[
+								3.6514201164245605,
+								3.6522998809814453
+							]
+						}
+					},
 					"index":29
+				},
+				"metallicRoughnessTexture":{
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								-2.6522998809814453
+							],
+							"scale":[
+								3.6514201164245605,
+								3.6522998809814453
+							]
+						}
+					},
+					"index":28
 				}
 			}
 		},
 		{
 			"doubleSided":true,
 			"extras":{
-				"textures":"textures/concordia/MAT_Cloth_Patch_C",
-				"uv":"UVWorld: proyeccion planar en mundo (caja), 1 m = 1 tile",
-				"poly_haven_ref":"(tela)",
-				"use":"toldos, puestos",
-				"roughness_range":"0.84-0.95"
+				"base_color_factor_srgb":"#A49884",
+				"textures":{
+					"albedo":"textures/concordia/MAT_Cloth/concordia_cloth_albedo.png",
+					"orm":"textures/concordia/MAT_Cloth/concordia_cloth_orm.png",
+					"normal":"textures/concordia/polyhaven_src/hessian_380/hessian_380_nor_gl_1k.jpg"
+				},
+				"uv":"UVWorld: proyeccion planar en mundo, escala (3.65142, 3.6523) (1 tile = ancho real del asset)",
+				"poly_haven_asset":"hessian_380",
+				"poly_haven_license":"CC0",
+				"texture_width_m":0.274,
+				"hue_saturation_value":"{\"hue\": 0.5, \"saturation\": 0.0, \"value\": 1.0472, \"fac\": 1.0, \"note\": \"nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo\"}"
 			},
 			"name":"MAT_Cloth_Patch_C",
 			"normalTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							-2.6522998809814453
+						],
+						"scale":[
+							3.6514201164245605,
+							3.6522998809814453
+						]
+					}
+				},
 				"index":30
 			},
-			"pbrMetallicRoughness":{
-				"baseColorTexture":{
-					"index":31
+			"occlusionTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							-2.6522998809814453
+						],
+						"scale":[
+							3.6514201164245605,
+							3.6522998809814453
+						]
+					}
 				},
-				"metallicFactor":0,
-				"metallicRoughnessTexture":{
+				"index":31
+			},
+			"pbrMetallicRoughness":{
+				"baseColorFactor":[
+					0.7745087742805481,
+					0.6550709009170532,
+					0.48139020800590515,
+					1
+				],
+				"baseColorTexture":{
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								-2.6522998809814453
+							],
+							"scale":[
+								3.6514201164245605,
+								3.6522998809814453
+							]
+						}
+					},
 					"index":32
+				},
+				"metallicRoughnessTexture":{
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								-2.6522998809814453
+							],
+							"scale":[
+								3.6514201164245605,
+								3.6522998809814453
+							]
+						}
+					},
+					"index":31
 				}
 			}
 		},
 		{
 			"doubleSided":true,
 			"extras":{
+				"textures":{
+					"albedo":"textures/concordia/MAT_Ash_Gray/concordia_ash_gray_albedo.png",
+					"orm":"textures/concordia/MAT_Ash_Gray/concordia_ash_gray_orm.png",
+					"normal":"textures/concordia/polyhaven_src/rocks_ground_02/rocks_ground_02_nor_gl_2k.jpg"
+				},
+				"uv":"UVWorld: proyeccion planar en mundo, escala (0.5, 0.5) (1 tile = ancho real del asset)",
 				"poly_haven_asset":"rocks_ground_02",
 				"poly_haven_license":"CC0",
-				"texture_dimensions_m":"[2.0, 2.0]",
-				"textures":"textures/concordia/MAT_Ash_Gray",
-				"uv":"UVWorld: proyeccion planar en mundo (caja), 1 m = 1 tile",
-				"poly_haven_ref":"Rocks Ground 02 (ceniza)",
-				"use":"ash_mask",
-				"roughness_range":"0.82-0.95"
+				"texture_width_m":2.0,
+				"hue_saturation_value":"{\"hue\": 0.5, \"saturation\": 0.0, \"value\": 1.0196, \"fac\": 1.0, \"note\": \"nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo\"}"
 			},
 			"name":"MAT_Ash_Gray",
 			"normalTexture":{
@@ -560,6 +1310,21 @@
 				},
 				"index":33
 			},
+			"occlusionTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							0.5
+						],
+						"scale":[
+							0.5,
+							0.5
+						]
+					}
+				},
+				"index":34
+			},
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
 					"extensions":{
@@ -574,9 +1339,8 @@
 							]
 						}
 					},
-					"index":34
+					"index":35
 				},
-				"metallicFactor":0,
 				"metallicRoughnessTexture":{
 					"extensions":{
 						"KHR_texture_transform":{
@@ -590,7 +1354,7 @@
 							]
 						}
 					},
-					"index":35
+					"index":34
 				}
 			}
 		},
@@ -607,23 +1371,27 @@
 				}
 			},
 			"extras":{
-				"textures":"textures/concordia/MAT_Shard_Blue",
-				"uv":"UVWorld: proyeccion planar en mundo (caja), 1 m = 1 tile",
-				"poly_haven_ref":"(cristal de esquirla)",
-				"use":"emisivo 2.5",
-				"roughness_range":"0.7-0.75"
+				"textures":{
+					"albedo":"textures/concordia/MAT_Shard_Blue/concordia_shard_blue_albedo.png",
+					"orm":"textures/concordia/MAT_Shard_Blue/concordia_shard_blue_orm.png",
+					"normal":"textures/concordia/MAT_Shard_Blue/concordia_shard_blue_normal.png"
+				},
+				"uv":"UVWorld: proyeccion planar en mundo, escala (1.0, 1.0) (1 tile = ancho real del asset)",
+				"procedural":"(cristal de esquirla)"
 			},
 			"name":"MAT_Shard_Blue",
 			"normalTexture":{
 				"index":36
 			},
+			"occlusionTexture":{
+				"index":37
+			},
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":37
-				},
-				"metallicFactor":0,
-				"metallicRoughnessTexture":{
 					"index":38
+				},
+				"metallicRoughnessTexture":{
+					"index":37
 				}
 			}
 		},
@@ -639,61 +1407,70 @@
 			},
 			"extras":{
 				"emission_strength":0.8,
-				"emission_note":"parametrizable: cambiar 'emission_strength' (y Emission Strength del BSDF); en Godot emission_energy_multiplier",
-				"textures":"textures/concordia/MAT_Wall_Runes",
-				"uv":"UVWorld: proyeccion planar en mundo (caja), 1 m = 1 tile",
-				"poly_haven_ref":"(runas)",
-				"use":"emisivo 0.8 parametrizable",
-				"roughness_range":"0.78-0.92"
+				"textures":{
+					"albedo":"textures/concordia/MAT_Wall_Runes/concordia_wall_runes_albedo.png",
+					"orm":"textures/concordia/MAT_Wall_Runes/concordia_wall_runes_orm.png",
+					"normal":"textures/concordia/MAT_Wall_Runes/concordia_wall_runes_normal.png"
+				},
+				"uv":"UVWorld: proyeccion planar en mundo, escala (1.0, 1.0) (1 tile = ancho real del asset)",
+				"procedural":"(runas)"
 			},
 			"name":"MAT_Wall_Runes",
 			"normalTexture":{
 				"index":40
 			},
+			"occlusionTexture":{
+				"index":41
+			},
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":41
-				},
-				"metallicFactor":0,
-				"metallicRoughnessTexture":{
 					"index":42
+				},
+				"metallicRoughnessTexture":{
+					"index":41
 				}
 			}
 		},
 		{
 			"doubleSided":true,
 			"extras":{
-				"textures":"textures/concordia/MAT_Water",
-				"uv":"UVWorld: proyeccion planar en mundo (caja), 1 m = 1 tile",
-				"poly_haven_ref":"(agua)",
-				"use":"Cauce",
-				"roughness_range":"0.1-0.1"
+				"textures":{
+					"albedo":"textures/concordia/MAT_Water/concordia_water_albedo.png",
+					"orm":"textures/concordia/MAT_Water/concordia_water_orm.png",
+					"normal":"textures/concordia/MAT_Water/concordia_water_normal.png"
+				},
+				"uv":"UVWorld: proyeccion planar en mundo, escala (1.0, 1.0) (1 tile = ancho real del asset)",
+				"procedural":"(agua)"
 			},
 			"name":"MAT_Water",
 			"normalTexture":{
 				"index":43
 			},
+			"occlusionTexture":{
+				"index":44
+			},
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":44
-				},
-				"metallicFactor":0,
-				"metallicRoughnessTexture":{
 					"index":45
+				},
+				"metallicRoughnessTexture":{
+					"index":44
 				}
 			}
 		},
 		{
 			"doubleSided":true,
 			"extras":{
+				"textures":{
+					"albedo":"textures/concordia/MAT_Ground_Cracked/concordia_ground_cracked_albedo.png",
+					"orm":"textures/concordia/MAT_Ground_Cracked/concordia_ground_cracked_orm.png",
+					"normal":"textures/concordia/polyhaven_src/sandstone_cracks/sandstone_cracks_nor_gl_2k.jpg"
+				},
+				"uv":"UVWorld: proyeccion planar en mundo, escala (0.5, 0.5) (1 tile = ancho real del asset)",
 				"poly_haven_asset":"sandstone_cracks",
 				"poly_haven_license":"CC0",
-				"texture_dimensions_m":"[2.0, 2.0]",
-				"textures":"textures/concordia/MAT_Ground_Cracked",
-				"uv":"UVWorld: proyeccion planar en mundo (caja), 1 m = 1 tile",
-				"poly_haven_ref":"Sandstone Cracks",
-				"use":"suelo sin mascara (patios, plataformas)",
-				"roughness_range":"0.8-0.95"
+				"texture_width_m":2.0,
+				"hue_saturation_value":"{\"hue\": 0.5264, \"saturation\": 0.3783, \"value\": 0.7842, \"fac\": 1.0, \"note\": \"nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo\"}"
 			},
 			"name":"MAT_Ground_Cracked",
 			"normalTexture":{
@@ -711,24 +1488,23 @@
 				},
 				"index":46
 			},
+			"occlusionTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							0.5
+						],
+						"scale":[
+							0.5,
+							0.5
+						]
+					}
+				},
+				"index":47
+			},
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"extensions":{
-						"KHR_texture_transform":{
-							"offset":[
-								0,
-								0.5
-							],
-							"scale":[
-								0.5,
-								0.5
-							]
-						}
-					},
-					"index":47
-				},
-				"metallicFactor":0,
-				"metallicRoughnessTexture":{
 					"extensions":{
 						"KHR_texture_transform":{
 							"offset":[
@@ -742,20 +1518,37 @@
 						}
 					},
 					"index":48
+				},
+				"metallicRoughnessTexture":{
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								0.5
+							],
+							"scale":[
+								0.5,
+								0.5
+							]
+						}
+					},
+					"index":47
 				}
 			}
 		},
 		{
 			"doubleSided":true,
 			"extras":{
-				"poly_haven_asset":"rock_boulder_cracked",
+				"textures":{
+					"albedo":"textures/concordia/MAT_Rock_Gray/concordia_rock_gray_albedo.png",
+					"orm":"textures/concordia/MAT_Rock_Gray/concordia_rock_gray_orm.png",
+					"normal":"textures/concordia/polyhaven_src/rock_boulder_dry/rock_boulder_dry_nor_gl_2k.jpg"
+				},
+				"uv":"UVWorld: proyeccion planar en mundo, escala (0.55556, 0.55556) (1 tile = ancho real del asset)",
+				"poly_haven_asset":"rock_boulder_dry",
 				"poly_haven_license":"CC0",
-				"texture_dimensions_m":"[1.39, 1.39]",
-				"textures":"textures/concordia/MAT_Rock_Gray",
-				"uv":"UVWorld: proyeccion planar en mundo (caja), 1 m = 1 tile",
-				"poly_haven_ref":"Rock Boulder Cracked",
-				"use":"taludes exteriores, cabezos, acantilados",
-				"roughness_range":"0.8-0.95"
+				"texture_width_m":1.8,
+				"hue_saturation_value":"{\"hue\": 0.5, \"saturation\": 0.0, \"value\": 0.6558, \"fac\": 1.0, \"note\": \"nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo\"}"
 			},
 			"name":"MAT_Rock_Gray",
 			"normalTexture":{
@@ -763,15 +1556,30 @@
 					"KHR_texture_transform":{
 						"offset":[
 							0,
-							0.28057998418807983
+							0.44444000720977783
 						],
 						"scale":[
-							0.7194200158119202,
-							0.7194200158119202
+							0.5555599927902222,
+							0.5555599927902222
 						]
 					}
 				},
 				"index":49
+			},
+			"occlusionTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							0.44444000720977783
+						],
+						"scale":[
+							0.5555599927902222,
+							0.5555599927902222
+						]
+					}
+				},
+				"index":50
 			},
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -779,61 +1587,193 @@
 						"KHR_texture_transform":{
 							"offset":[
 								0,
-								0.28057998418807983
+								0.44444000720977783
 							],
 							"scale":[
-								0.7194200158119202,
-								0.7194200158119202
+								0.5555599927902222,
+								0.5555599927902222
 							]
 						}
 					},
-					"index":50
+					"index":51
 				},
-				"metallicFactor":0,
 				"metallicRoughnessTexture":{
 					"extensions":{
 						"KHR_texture_transform":{
 							"offset":[
 								0,
-								0.28057998418807983
+								0.44444000720977783
 							],
 							"scale":[
-								0.7194200158119202,
-								0.7194200158119202
+								0.5555599927902222,
+								0.5555599927902222
 							]
 						}
 					},
-					"index":51
+					"index":50
 				}
 			}
 		},
 		{
 			"doubleSided":true,
 			"extras":{
-				"textures":"textures/concordia/MAT_Stone_Repair",
-				"uv":"UVWorld: proyeccion planar en mundo (caja), 1 m = 1 tile",
-				"poly_haven_ref":"Stone Wall 02 (remiendo)",
-				"use":"20 % de los pretiles",
-				"roughness_range":"0.8-0.95"
+				"textures":{
+					"albedo":"textures/concordia/MAT_Stone_Repair/concordia_stone_repair_albedo.png",
+					"orm":"textures/concordia/MAT_Stone_Repair/concordia_stone_repair_orm.png",
+					"normal":"textures/concordia/polyhaven_src/rustic_stone_wall/rustic_stone_wall_nor_gl_2k.jpg"
+				},
+				"uv":"UVWorld: proyeccion planar en mundo, escala (0.65789, 0.65789) (1 tile = ancho real del asset)",
+				"poly_haven_asset":"rustic_stone_wall",
+				"poly_haven_license":"CC0",
+				"texture_width_m":1.52,
+				"hue_saturation_value":"{\"hue\": 0.498, \"saturation\": 0.3979, \"value\": 1.1781, \"fac\": 1.0, \"note\": \"nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo\"}"
 			},
 			"name":"MAT_Stone_Repair",
 			"normalTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							0.3421099781990051
+						],
+						"scale":[
+							0.6578900218009949,
+							0.6578900218009949
+						]
+					}
+				},
 				"index":52
+			},
+			"occlusionTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							0.3421099781990051
+						],
+						"scale":[
+							0.6578900218009949,
+							0.6578900218009949
+						]
+					}
+				},
+				"index":53
 			},
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":53
-				},
-				"metallicFactor":0,
-				"metallicRoughnessTexture":{
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								0.3421099781990051
+							],
+							"scale":[
+								0.6578900218009949,
+								0.6578900218009949
+							]
+						}
+					},
 					"index":54
+				},
+				"metallicRoughnessTexture":{
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								0.3421099781990051
+							],
+							"scale":[
+								0.6578900218009949,
+								0.6578900218009949
+							]
+						}
+					},
+					"index":53
+				}
+			}
+		},
+		{
+			"doubleSided":true,
+			"extras":{
+				"textures":{
+					"albedo":"textures/concordia/MAT_Ash_Ground/concordia_ash_ground_albedo.png",
+					"orm":"textures/concordia/MAT_Ash_Ground/concordia_ash_ground_orm.png",
+					"normal":"textures/concordia/polyhaven_src/dry_ground_01/dry_ground_01_nor_gl_2k.jpg"
+				},
+				"uv":"UVWorld: proyeccion planar en mundo, escala (0.25, 0.25) (1 tile = ancho real del asset)",
+				"poly_haven_asset":"dry_ground_01",
+				"poly_haven_license":"CC0",
+				"texture_width_m":4.0,
+				"hue_saturation_value":"{\"hue\": 0.5, \"saturation\": 0.0, \"value\": 0.8416, \"fac\": 1.0, \"note\": \"nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo\"}"
+			},
+			"name":"MAT_Ash_Ground",
+			"normalTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							0.75
+						],
+						"scale":[
+							0.25,
+							0.25
+						]
+					}
+				},
+				"index":55
+			},
+			"occlusionTexture":{
+				"extensions":{
+					"KHR_texture_transform":{
+						"offset":[
+							0,
+							0.75
+						],
+						"scale":[
+							0.25,
+							0.25
+						]
+					}
+				},
+				"index":56
+			},
+			"pbrMetallicRoughness":{
+				"baseColorTexture":{
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								0.75
+							],
+							"scale":[
+								0.25,
+								0.25
+							]
+						}
+					},
+					"index":57
+				},
+				"metallicRoughnessTexture":{
+					"extensions":{
+						"KHR_texture_transform":{
+							"offset":[
+								0,
+								0.75
+							],
+							"scale":[
+								0.25,
+								0.25
+							]
+						}
+					},
+					"index":56
 				}
 			}
 		}
 	],
 	"meshes":[
 		{
-			"name":"MATLIB_MAT_Limestone_Worn",
+			"name":"MATLIB_MAT_Limestone_Worn_Plane",
 			"primitives":[
 				{
 					"attributes":{
@@ -847,7 +1787,7 @@
 			]
 		},
 		{
-			"name":"MATLIB_MAT_Cobble_Concordia",
+			"name":"MATLIB_MAT_Limestone_Worn_Sphere",
 			"primitives":[
 				{
 					"attributes":{
@@ -855,19 +1795,47 @@
 						"NORMAL":5,
 						"TEXCOORD_0":6
 					},
+					"indices":7,
+					"material":0
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Cobble_Concordia_Plane",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":8,
+						"NORMAL":9,
+						"TEXCOORD_0":10
+					},
 					"indices":3,
 					"material":1
 				}
 			]
 		},
 		{
-			"name":"MATLIB_MAT_Plaza_Slab",
+			"name":"MATLIB_MAT_Cobble_Concordia_Sphere",
 			"primitives":[
 				{
 					"attributes":{
-						"POSITION":7,
-						"NORMAL":8,
-						"TEXCOORD_0":9
+						"POSITION":11,
+						"NORMAL":12,
+						"TEXCOORD_0":13
+					},
+					"indices":14,
+					"material":1
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Plaza_Slab_Plane",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":15,
+						"NORMAL":16,
+						"TEXCOORD_0":17
 					},
 					"indices":3,
 					"material":2
@@ -875,63 +1843,21 @@
 			]
 		},
 		{
-			"name":"MATLIB_MAT_Plaza_Slab_Travertino",
+			"name":"MATLIB_MAT_Plaza_Slab_Sphere",
 			"primitives":[
 				{
 					"attributes":{
-						"POSITION":10,
-						"NORMAL":11,
-						"TEXCOORD_0":12
+						"POSITION":18,
+						"NORMAL":19,
+						"TEXCOORD_0":20
 					},
-					"indices":3,
-					"material":3
+					"indices":21,
+					"material":2
 				}
 			]
 		},
 		{
-			"name":"MATLIB_MAT_Wall_Gray",
-			"primitives":[
-				{
-					"attributes":{
-						"POSITION":13,
-						"NORMAL":14,
-						"TEXCOORD_0":15
-					},
-					"indices":3,
-					"material":4
-				}
-			]
-		},
-		{
-			"name":"MATLIB_MAT_Wood_Dark",
-			"primitives":[
-				{
-					"attributes":{
-						"POSITION":16,
-						"NORMAL":17,
-						"TEXCOORD_0":18
-					},
-					"indices":3,
-					"material":5
-				}
-			]
-		},
-		{
-			"name":"MATLIB_MAT_Roof_Tile_Ocher",
-			"primitives":[
-				{
-					"attributes":{
-						"POSITION":19,
-						"NORMAL":20,
-						"TEXCOORD_0":21
-					},
-					"indices":3,
-					"material":6
-				}
-			]
-		},
-		{
-			"name":"MATLIB_MAT_Iron_Black",
+			"name":"MATLIB_MAT_Plaza_Slab_Travertino_Plane",
 			"primitives":[
 				{
 					"attributes":{
@@ -940,12 +1866,12 @@
 						"TEXCOORD_0":24
 					},
 					"indices":3,
-					"material":7
+					"material":3
 				}
 			]
 		},
 		{
-			"name":"MATLIB_MAT_Cloth_Patch_A",
+			"name":"MATLIB_MAT_Plaza_Slab_Travertino_Sphere",
 			"primitives":[
 				{
 					"attributes":{
@@ -953,83 +1879,69 @@
 						"NORMAL":26,
 						"TEXCOORD_0":27
 					},
-					"indices":3,
-					"material":8
+					"indices":28,
+					"material":3
 				}
 			]
 		},
 		{
-			"name":"MATLIB_MAT_Cloth_Patch_B",
+			"name":"MATLIB_MAT_Wall_Gray_Plane",
 			"primitives":[
 				{
 					"attributes":{
-						"POSITION":28,
-						"NORMAL":29,
-						"TEXCOORD_0":30
+						"POSITION":29,
+						"NORMAL":30,
+						"TEXCOORD_0":31
 					},
 					"indices":3,
-					"material":9
+					"material":4
 				}
 			]
 		},
 		{
-			"name":"MATLIB_MAT_Cloth_Patch_C",
+			"name":"MATLIB_MAT_Wall_Gray_Sphere",
 			"primitives":[
 				{
 					"attributes":{
-						"POSITION":31,
-						"NORMAL":32,
-						"TEXCOORD_0":33
+						"POSITION":32,
+						"NORMAL":33,
+						"TEXCOORD_0":34
 					},
-					"indices":3,
-					"material":10
+					"indices":35,
+					"material":4
 				}
 			]
 		},
 		{
-			"name":"MATLIB_MAT_Ash_Gray",
+			"name":"MATLIB_MAT_Wood_Dark_Plane",
 			"primitives":[
 				{
 					"attributes":{
-						"POSITION":34,
-						"NORMAL":35,
-						"TEXCOORD_0":36
+						"POSITION":36,
+						"NORMAL":37,
+						"TEXCOORD_0":38
 					},
 					"indices":3,
-					"material":11
+					"material":5
 				}
 			]
 		},
 		{
-			"name":"MATLIB_MAT_Shard_Blue",
+			"name":"MATLIB_MAT_Wood_Dark_Sphere",
 			"primitives":[
 				{
 					"attributes":{
-						"POSITION":37,
-						"NORMAL":38,
-						"TEXCOORD_0":39
+						"POSITION":39,
+						"NORMAL":40,
+						"TEXCOORD_0":41
 					},
-					"indices":3,
-					"material":12
+					"indices":42,
+					"material":5
 				}
 			]
 		},
 		{
-			"name":"MATLIB_MAT_Wall_Runes",
-			"primitives":[
-				{
-					"attributes":{
-						"POSITION":40,
-						"NORMAL":41,
-						"TEXCOORD_0":42
-					},
-					"indices":3,
-					"material":13
-				}
-			]
-		},
-		{
-			"name":"MATLIB_MAT_Water",
+			"name":"MATLIB_MAT_Roof_Tile_Ocher_Plane",
 			"primitives":[
 				{
 					"attributes":{
@@ -1038,12 +1950,12 @@
 						"TEXCOORD_0":45
 					},
 					"indices":3,
-					"material":14
+					"material":6
 				}
 			]
 		},
 		{
-			"name":"MATLIB_MAT_Ground_Cracked",
+			"name":"MATLIB_MAT_Roof_Tile_Ocher_Sphere",
 			"primitives":[
 				{
 					"attributes":{
@@ -1051,19 +1963,271 @@
 						"NORMAL":47,
 						"TEXCOORD_0":48
 					},
+					"indices":49,
+					"material":6
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Iron_Black_Plane",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":50,
+						"NORMAL":51,
+						"TEXCOORD_0":52
+					},
+					"indices":3,
+					"material":7
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Iron_Black_Sphere",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":53,
+						"NORMAL":54,
+						"TEXCOORD_0":55
+					},
+					"indices":56,
+					"material":7
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Cloth_Patch_A_Plane",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":57,
+						"NORMAL":58,
+						"TEXCOORD_0":59
+					},
+					"indices":3,
+					"material":8
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Cloth_Patch_A_Sphere",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":60,
+						"NORMAL":61,
+						"TEXCOORD_0":62
+					},
+					"indices":63,
+					"material":8
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Cloth_Patch_B_Plane",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":64,
+						"NORMAL":65,
+						"TEXCOORD_0":66
+					},
+					"indices":3,
+					"material":9
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Cloth_Patch_B_Sphere",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":67,
+						"NORMAL":68,
+						"TEXCOORD_0":69
+					},
+					"indices":70,
+					"material":9
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Cloth_Patch_C_Plane",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":71,
+						"NORMAL":72,
+						"TEXCOORD_0":73
+					},
+					"indices":3,
+					"material":10
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Cloth_Patch_C_Sphere",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":74,
+						"NORMAL":75,
+						"TEXCOORD_0":76
+					},
+					"indices":77,
+					"material":10
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Ash_Gray_Plane",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":78,
+						"NORMAL":79,
+						"TEXCOORD_0":80
+					},
+					"indices":3,
+					"material":11
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Ash_Gray_Sphere",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":81,
+						"NORMAL":82,
+						"TEXCOORD_0":83
+					},
+					"indices":84,
+					"material":11
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Shard_Blue_Plane",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":85,
+						"NORMAL":86,
+						"TEXCOORD_0":87
+					},
+					"indices":3,
+					"material":12
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Shard_Blue_Sphere",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":88,
+						"NORMAL":89,
+						"TEXCOORD_0":90
+					},
+					"indices":91,
+					"material":12
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Wall_Runes_Plane",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":92,
+						"NORMAL":93,
+						"TEXCOORD_0":94
+					},
+					"indices":3,
+					"material":13
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Wall_Runes_Sphere",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":95,
+						"NORMAL":96,
+						"TEXCOORD_0":97
+					},
+					"indices":98,
+					"material":13
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Water_Plane",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":99,
+						"NORMAL":100,
+						"TEXCOORD_0":101
+					},
+					"indices":3,
+					"material":14
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Water_Sphere",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":102,
+						"NORMAL":103,
+						"TEXCOORD_0":104
+					},
+					"indices":105,
+					"material":14
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Ground_Cracked_Plane",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":106,
+						"NORMAL":107,
+						"TEXCOORD_0":108
+					},
 					"indices":3,
 					"material":15
 				}
 			]
 		},
 		{
-			"name":"MATLIB_MAT_Rock_Gray",
+			"name":"MATLIB_MAT_Ground_Cracked_Sphere",
 			"primitives":[
 				{
 					"attributes":{
-						"POSITION":49,
-						"NORMAL":50,
-						"TEXCOORD_0":51
+						"POSITION":109,
+						"NORMAL":110,
+						"TEXCOORD_0":111
+					},
+					"indices":112,
+					"material":15
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Rock_Gray_Plane",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":113,
+						"NORMAL":114,
+						"TEXCOORD_0":115
 					},
 					"indices":3,
 					"material":16
@@ -1071,16 +2235,72 @@
 			]
 		},
 		{
-			"name":"MATLIB_MAT_Stone_Repair",
+			"name":"MATLIB_MAT_Rock_Gray_Sphere",
 			"primitives":[
 				{
 					"attributes":{
-						"POSITION":52,
-						"NORMAL":53,
-						"TEXCOORD_0":54
+						"POSITION":116,
+						"NORMAL":117,
+						"TEXCOORD_0":118
+					},
+					"indices":119,
+					"material":16
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Stone_Repair_Plane",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":120,
+						"NORMAL":121,
+						"TEXCOORD_0":122
 					},
 					"indices":3,
 					"material":17
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Stone_Repair_Sphere",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":123,
+						"NORMAL":124,
+						"TEXCOORD_0":125
+					},
+					"indices":126,
+					"material":17
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Ash_Ground_Plane",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":127,
+						"NORMAL":128,
+						"TEXCOORD_0":129
+					},
+					"indices":3,
+					"material":18
+				}
+			]
+		},
+		{
+			"name":"MATLIB_MAT_Ash_Ground_Sphere",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":130,
+						"NORMAL":131,
+						"TEXCOORD_0":132
+					},
+					"indices":133,
+					"material":18
 				}
 			]
 		}
@@ -1196,6 +2416,30 @@
 		},
 		{
 			"sampler":0,
+			"source":24
+		},
+		{
+			"sampler":0,
+			"source":25
+		},
+		{
+			"sampler":0,
+			"source":26
+		},
+		{
+			"sampler":0,
+			"source":24
+		},
+		{
+			"sampler":0,
+			"source":25
+		},
+		{
+			"sampler":0,
+			"source":26
+		},
+		{
+			"sampler":0,
 			"source":27
 		},
 		{
@@ -1293,330 +2537,303 @@
 		{
 			"sampler":0,
 			"source":51
-		},
-		{
-			"sampler":0,
-			"source":52
-		},
-		{
-			"sampler":0,
-			"source":53
-		},
-		{
-			"sampler":0,
-			"source":54
 		}
 	],
 	"images":[
 		{
 			"mimeType":"image/jpeg",
-			"name":"T_Limestone_Worn_Normal.jpg",
-			"uri":"../../../textures/concordia/MAT_Limestone_Worn/T_Limestone_Worn_Normal.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Limestone_Worn_Albedo.jpg",
-			"uri":"../../../textures/concordia/MAT_Limestone_Worn/T_Limestone_Worn_Albedo.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Limestone_Worn_Roughness.jpg",
-			"uri":"../../../textures/concordia/MAT_Limestone_Worn/T_Limestone_Worn_Roughness.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Cobble_Concordia_Normal.jpg",
-			"uri":"../../../textures/concordia/MAT_Cobble_Concordia/T_Cobble_Concordia_Normal.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Cobble_Concordia_Albedo.jpg",
-			"uri":"../../../textures/concordia/MAT_Cobble_Concordia/T_Cobble_Concordia_Albedo.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Cobble_Concordia_Roughness.jpg",
-			"uri":"../../../textures/concordia/MAT_Cobble_Concordia/T_Cobble_Concordia_Roughness.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Plaza_Slab_Normal.jpg",
-			"uri":"../../../textures/concordia/MAT_Plaza_Slab/T_Plaza_Slab_Normal.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Plaza_Slab_Albedo.jpg",
-			"uri":"../../../textures/concordia/MAT_Plaza_Slab/T_Plaza_Slab_Albedo.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Plaza_Slab_Roughness.jpg",
-			"uri":"../../../textures/concordia/MAT_Plaza_Slab/T_Plaza_Slab_Roughness.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Plaza_Slab_Travertino_Normal.jpg",
-			"uri":"../../../textures/concordia/MAT_Plaza_Slab_Travertino/T_Plaza_Slab_Travertino_Normal.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Plaza_Slab_Travertino_Albedo.jpg",
-			"uri":"../../../textures/concordia/MAT_Plaza_Slab_Travertino/T_Plaza_Slab_Travertino_Albedo.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Plaza_Slab_Travertino_Roughness.jpg",
-			"uri":"../../../textures/concordia/MAT_Plaza_Slab_Travertino/T_Plaza_Slab_Travertino_Roughness.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Wall_Gray_Normal.jpg",
-			"uri":"../../../textures/concordia/MAT_Wall_Gray/T_Wall_Gray_Normal.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Wall_Gray_Albedo.jpg",
-			"uri":"../../../textures/concordia/MAT_Wall_Gray/T_Wall_Gray_Albedo.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Wall_Gray_Roughness.jpg",
-			"uri":"../../../textures/concordia/MAT_Wall_Gray/T_Wall_Gray_Roughness.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Wood_Dark_Normal.jpg",
-			"uri":"../../../textures/concordia/MAT_Wood_Dark/T_Wood_Dark_Normal.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Wood_Dark_Albedo.jpg",
-			"uri":"../../../textures/concordia/MAT_Wood_Dark/T_Wood_Dark_Albedo.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Wood_Dark_Roughness.jpg",
-			"uri":"../../../textures/concordia/MAT_Wood_Dark/T_Wood_Dark_Roughness.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Roof_Tile_Ocher_Normal.jpg",
-			"uri":"../../../textures/concordia/MAT_Roof_Tile_Ocher/T_Roof_Tile_Ocher_Normal.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Roof_Tile_Ocher_Albedo.jpg",
-			"uri":"../../../textures/concordia/MAT_Roof_Tile_Ocher/T_Roof_Tile_Ocher_Albedo.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Roof_Tile_Ocher_Roughness.jpg",
-			"uri":"../../../textures/concordia/MAT_Roof_Tile_Ocher/T_Roof_Tile_Ocher_Roughness.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Iron_Black_Normal.jpg",
-			"uri":"../../../textures/concordia/MAT_Iron_Black/T_Iron_Black_Normal.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Iron_Black_Albedo.jpg",
-			"uri":"../../../textures/concordia/MAT_Iron_Black/T_Iron_Black_Albedo.jpg"
+			"name":"stone_wall_02_nor_gl_2k.jpg",
+			"uri":"../../../textures/concordia/polyhaven_src/stone_wall_02/stone_wall_02_nor_gl_2k.jpg"
 		},
 		{
 			"mimeType":"image/png",
-			"name":"T_Iron_Black_ORM.png",
-			"uri":"../../../textures/concordia/MAT_Iron_Black/T_Iron_Black_ORM.png"
+			"name":"concordia_limestone_worn_orm.png",
+			"uri":"../../../textures/concordia/MAT_Limestone_Worn/concordia_limestone_worn_orm.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_limestone_worn_albedo.png",
+			"uri":"../../../textures/concordia/MAT_Limestone_Worn/concordia_limestone_worn_albedo.png"
 		},
 		{
 			"mimeType":"image/jpeg",
-			"name":"T_Cloth_Patch_A_Normal.jpg",
-			"uri":"../../../textures/concordia/MAT_Cloth_Patch_A/T_Cloth_Patch_A_Normal.jpg"
+			"name":"cobblestone_floor_001_nor_gl_2k.jpg",
+			"uri":"../../../textures/concordia/polyhaven_src/cobblestone_floor_001/cobblestone_floor_001_nor_gl_2k.jpg"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_cobble_concordia_orm.png",
+			"uri":"../../../textures/concordia/MAT_Cobble_Concordia/concordia_cobble_concordia_orm.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_cobble_concordia_albedo.png",
+			"uri":"../../../textures/concordia/MAT_Cobble_Concordia/concordia_cobble_concordia_albedo.png"
 		},
 		{
 			"mimeType":"image/jpeg",
-			"name":"T_Cloth_Patch_A_Albedo.jpg",
-			"uri":"../../../textures/concordia/MAT_Cloth_Patch_A/T_Cloth_Patch_A_Albedo.jpg"
+			"name":"floor_tiles_02_nor_gl_2k.jpg",
+			"uri":"../../../textures/concordia/polyhaven_src/floor_tiles_02/floor_tiles_02_nor_gl_2k.jpg"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_plaza_slab_orm.png",
+			"uri":"../../../textures/concordia/MAT_Plaza_Slab/concordia_plaza_slab_orm.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_plaza_slab_albedo.png",
+			"uri":"../../../textures/concordia/MAT_Plaza_Slab/concordia_plaza_slab_albedo.png"
 		},
 		{
 			"mimeType":"image/jpeg",
-			"name":"T_Cloth_Patch_A_Roughness.jpg",
-			"uri":"../../../textures/concordia/MAT_Cloth_Patch_A/T_Cloth_Patch_A_Roughness.jpg"
+			"name":"marble_01_nor_gl_2k.jpg",
+			"uri":"../../../textures/concordia/polyhaven_src/marble_01/marble_01_nor_gl_2k.jpg"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_plaza_slab_travertino_orm.png",
+			"uri":"../../../textures/concordia/MAT_Plaza_Slab_Travertino/concordia_plaza_slab_travertino_orm.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_plaza_slab_travertino_albedo.png",
+			"uri":"../../../textures/concordia/MAT_Plaza_Slab_Travertino/concordia_plaza_slab_travertino_albedo.png"
 		},
 		{
 			"mimeType":"image/jpeg",
-			"name":"T_Cloth_Patch_B_Normal.jpg",
-			"uri":"../../../textures/concordia/MAT_Cloth_Patch_B/T_Cloth_Patch_B_Normal.jpg"
+			"name":"castle_wall_slates_nor_gl_2k.jpg",
+			"uri":"../../../textures/concordia/polyhaven_src/castle_wall_slates/castle_wall_slates_nor_gl_2k.jpg"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_wall_gray_orm.png",
+			"uri":"../../../textures/concordia/MAT_Wall_Gray/concordia_wall_gray_orm.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_wall_gray_albedo.png",
+			"uri":"../../../textures/concordia/MAT_Wall_Gray/concordia_wall_gray_albedo.png"
 		},
 		{
 			"mimeType":"image/jpeg",
-			"name":"T_Cloth_Patch_B_Albedo.jpg",
-			"uri":"../../../textures/concordia/MAT_Cloth_Patch_B/T_Cloth_Patch_B_Albedo.jpg"
+			"name":"weathered_planks_nor_gl_1k.jpg",
+			"uri":"../../../textures/concordia/polyhaven_src/weathered_planks/weathered_planks_nor_gl_1k.jpg"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_wood_dark_orm.png",
+			"uri":"../../../textures/concordia/MAT_Wood_Dark/concordia_wood_dark_orm.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_wood_dark_albedo.png",
+			"uri":"../../../textures/concordia/MAT_Wood_Dark/concordia_wood_dark_albedo.png"
 		},
 		{
 			"mimeType":"image/jpeg",
-			"name":"T_Cloth_Patch_B_Roughness.jpg",
-			"uri":"../../../textures/concordia/MAT_Cloth_Patch_B/T_Cloth_Patch_B_Roughness.jpg"
+			"name":"roof_09_nor_gl_1k.jpg",
+			"uri":"../../../textures/concordia/polyhaven_src/roof_09/roof_09_nor_gl_1k.jpg"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_roof_tile_ocher_orm.png",
+			"uri":"../../../textures/concordia/MAT_Roof_Tile_Ocher/concordia_roof_tile_ocher_orm.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_roof_tile_ocher_albedo.png",
+			"uri":"../../../textures/concordia/MAT_Roof_Tile_Ocher/concordia_roof_tile_ocher_albedo.png"
 		},
 		{
 			"mimeType":"image/jpeg",
-			"name":"T_Cloth_Patch_C_Normal.jpg",
-			"uri":"../../../textures/concordia/MAT_Cloth_Patch_C/T_Cloth_Patch_C_Normal.jpg"
+			"name":"metal_plate_02_nor_gl_1k.jpg",
+			"uri":"../../../textures/concordia/polyhaven_src/metal_plate_02/metal_plate_02_nor_gl_1k.jpg"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_iron_black_orm.png",
+			"uri":"../../../textures/concordia/MAT_Iron_Black/concordia_iron_black_orm.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_iron_black_albedo.png",
+			"uri":"../../../textures/concordia/MAT_Iron_Black/concordia_iron_black_albedo.png"
 		},
 		{
 			"mimeType":"image/jpeg",
-			"name":"T_Cloth_Patch_C_Albedo.jpg",
-			"uri":"../../../textures/concordia/MAT_Cloth_Patch_C/T_Cloth_Patch_C_Albedo.jpg"
+			"name":"hessian_380_nor_gl_1k.jpg",
+			"uri":"../../../textures/concordia/polyhaven_src/hessian_380/hessian_380_nor_gl_1k.jpg"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_cloth_orm.png",
+			"uri":"../../../textures/concordia/MAT_Cloth/concordia_cloth_orm.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_cloth_albedo.png",
+			"uri":"../../../textures/concordia/MAT_Cloth/concordia_cloth_albedo.png"
 		},
 		{
 			"mimeType":"image/jpeg",
-			"name":"T_Cloth_Patch_C_Roughness.jpg",
-			"uri":"../../../textures/concordia/MAT_Cloth_Patch_C/T_Cloth_Patch_C_Roughness.jpg"
+			"name":"rocks_ground_02_nor_gl_2k.jpg",
+			"uri":"../../../textures/concordia/polyhaven_src/rocks_ground_02/rocks_ground_02_nor_gl_2k.jpg"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_ash_gray_orm.png",
+			"uri":"../../../textures/concordia/MAT_Ash_Gray/concordia_ash_gray_orm.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_ash_gray_albedo.png",
+			"uri":"../../../textures/concordia/MAT_Ash_Gray/concordia_ash_gray_albedo.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_shard_blue_normal.png",
+			"uri":"../../../textures/concordia/MAT_Shard_Blue/concordia_shard_blue_normal.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_shard_blue_orm.png",
+			"uri":"../../../textures/concordia/MAT_Shard_Blue/concordia_shard_blue_orm.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_shard_blue_albedo.png",
+			"uri":"../../../textures/concordia/MAT_Shard_Blue/concordia_shard_blue_albedo.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_wall_runes_emission.png",
+			"uri":"../../../textures/concordia/MAT_Wall_Runes/concordia_wall_runes_emission.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_wall_runes_normal.png",
+			"uri":"../../../textures/concordia/MAT_Wall_Runes/concordia_wall_runes_normal.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_wall_runes_orm.png",
+			"uri":"../../../textures/concordia/MAT_Wall_Runes/concordia_wall_runes_orm.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_wall_runes_albedo.png",
+			"uri":"../../../textures/concordia/MAT_Wall_Runes/concordia_wall_runes_albedo.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_water_normal.png",
+			"uri":"../../../textures/concordia/MAT_Water/concordia_water_normal.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_water_orm.png",
+			"uri":"../../../textures/concordia/MAT_Water/concordia_water_orm.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_water_albedo.png",
+			"uri":"../../../textures/concordia/MAT_Water/concordia_water_albedo.png"
 		},
 		{
 			"mimeType":"image/jpeg",
-			"name":"T_Ash_Gray_Normal.jpg",
-			"uri":"../../../textures/concordia/MAT_Ash_Gray/T_Ash_Gray_Normal.jpg"
+			"name":"sandstone_cracks_nor_gl_2k.jpg",
+			"uri":"../../../textures/concordia/polyhaven_src/sandstone_cracks/sandstone_cracks_nor_gl_2k.jpg"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_ground_cracked_orm.png",
+			"uri":"../../../textures/concordia/MAT_Ground_Cracked/concordia_ground_cracked_orm.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_ground_cracked_albedo.png",
+			"uri":"../../../textures/concordia/MAT_Ground_Cracked/concordia_ground_cracked_albedo.png"
 		},
 		{
 			"mimeType":"image/jpeg",
-			"name":"T_Ash_Gray_Albedo.jpg",
-			"uri":"../../../textures/concordia/MAT_Ash_Gray/T_Ash_Gray_Albedo.jpg"
+			"name":"rock_boulder_dry_nor_gl_2k.jpg",
+			"uri":"../../../textures/concordia/polyhaven_src/rock_boulder_dry/rock_boulder_dry_nor_gl_2k.jpg"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_rock_gray_orm.png",
+			"uri":"../../../textures/concordia/MAT_Rock_Gray/concordia_rock_gray_orm.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_rock_gray_albedo.png",
+			"uri":"../../../textures/concordia/MAT_Rock_Gray/concordia_rock_gray_albedo.png"
 		},
 		{
 			"mimeType":"image/jpeg",
-			"name":"T_Ash_Gray_Roughness.jpg",
-			"uri":"../../../textures/concordia/MAT_Ash_Gray/T_Ash_Gray_Roughness.jpg"
+			"name":"rustic_stone_wall_nor_gl_2k.jpg",
+			"uri":"../../../textures/concordia/polyhaven_src/rustic_stone_wall/rustic_stone_wall_nor_gl_2k.jpg"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_stone_repair_orm.png",
+			"uri":"../../../textures/concordia/MAT_Stone_Repair/concordia_stone_repair_orm.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"concordia_stone_repair_albedo.png",
+			"uri":"../../../textures/concordia/MAT_Stone_Repair/concordia_stone_repair_albedo.png"
 		},
 		{
 			"mimeType":"image/jpeg",
-			"name":"T_Shard_Blue_Normal.jpg",
-			"uri":"../../../textures/concordia/MAT_Shard_Blue/T_Shard_Blue_Normal.jpg"
+			"name":"dry_ground_01_nor_gl_2k.jpg",
+			"uri":"../../../textures/concordia/polyhaven_src/dry_ground_01/dry_ground_01_nor_gl_2k.jpg"
 		},
 		{
-			"mimeType":"image/jpeg",
-			"name":"T_Shard_Blue_Albedo.jpg",
-			"uri":"../../../textures/concordia/MAT_Shard_Blue/T_Shard_Blue_Albedo.jpg"
+			"mimeType":"image/png",
+			"name":"concordia_ash_ground_orm.png",
+			"uri":"../../../textures/concordia/MAT_Ash_Ground/concordia_ash_ground_orm.png"
 		},
 		{
-			"mimeType":"image/jpeg",
-			"name":"T_Shard_Blue_Roughness.jpg",
-			"uri":"../../../textures/concordia/MAT_Shard_Blue/T_Shard_Blue_Roughness.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Wall_Runes_Emission.jpg",
-			"uri":"../../../textures/concordia/MAT_Wall_Runes/T_Wall_Runes_Emission.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Wall_Runes_Normal.jpg",
-			"uri":"../../../textures/concordia/MAT_Wall_Runes/T_Wall_Runes_Normal.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Wall_Runes_Albedo.jpg",
-			"uri":"../../../textures/concordia/MAT_Wall_Runes/T_Wall_Runes_Albedo.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Wall_Runes_Roughness.jpg",
-			"uri":"../../../textures/concordia/MAT_Wall_Runes/T_Wall_Runes_Roughness.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Water_Normal.jpg",
-			"uri":"../../../textures/concordia/MAT_Water/T_Water_Normal.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Water_Albedo.jpg",
-			"uri":"../../../textures/concordia/MAT_Water/T_Water_Albedo.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Water_Roughness.jpg",
-			"uri":"../../../textures/concordia/MAT_Water/T_Water_Roughness.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Ground_Cracked_Normal.jpg",
-			"uri":"../../../textures/concordia/MAT_Ground_Cracked/T_Ground_Cracked_Normal.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Ground_Cracked_Albedo.jpg",
-			"uri":"../../../textures/concordia/MAT_Ground_Cracked/T_Ground_Cracked_Albedo.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Ground_Cracked_Roughness.jpg",
-			"uri":"../../../textures/concordia/MAT_Ground_Cracked/T_Ground_Cracked_Roughness.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Rock_Gray_Normal.jpg",
-			"uri":"../../../textures/concordia/MAT_Rock_Gray/T_Rock_Gray_Normal.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Rock_Gray_Albedo.jpg",
-			"uri":"../../../textures/concordia/MAT_Rock_Gray/T_Rock_Gray_Albedo.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Rock_Gray_Roughness.jpg",
-			"uri":"../../../textures/concordia/MAT_Rock_Gray/T_Rock_Gray_Roughness.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Stone_Repair_Normal.jpg",
-			"uri":"../../../textures/concordia/MAT_Stone_Repair/T_Stone_Repair_Normal.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Stone_Repair_Albedo.jpg",
-			"uri":"../../../textures/concordia/MAT_Stone_Repair/T_Stone_Repair_Albedo.jpg"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"T_Stone_Repair_Roughness.jpg",
-			"uri":"../../../textures/concordia/MAT_Stone_Repair/T_Stone_Repair_Roughness.jpg"
+			"mimeType":"image/png",
+			"name":"concordia_ash_ground_albedo.png",
+			"uri":"../../../textures/concordia/MAT_Ash_Ground/concordia_ash_ground_albedo.png"
 		}
 	],
 	"accessors":[
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":1262,
+			"count":4,
 			"max":[
-				0.5000001788139343,
-				0.5,
-				0.5000004172325134
+				2,
+				0,
+				2
 			],
 			"min":[
-				-0.500000536441803,
-				-0.5,
-				-0.5000006556510925
+				-2,
+				0,
+				-2
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":1262,
+			"count":4,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":1262,
+			"count":4,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
 			"componentType":5123,
-			"count":6624,
+			"count":6,
 			"type":"SCALAR"
 		},
 		{
@@ -1624,14 +2841,14 @@
 			"componentType":5126,
 			"count":1262,
 			"max":[
-				0.5000001788139343,
-				0.5,
-				0.5000004172325134
+				0.8000003099441528,
+				0.800000011920929,
+				0.8000006079673767
 			],
 			"min":[
-				-0.500000536441803,
-				-0.5,
-				-0.5000006556510925
+				-0.8000009059906006,
+				-0.800000011920929,
+				-0.800000011920929
 			],
 			"type":"VEC3"
 		},
@@ -1649,170 +2866,160 @@
 		},
 		{
 			"bufferView":7,
-			"componentType":5126,
-			"count":1262,
-			"max":[
-				0.5000001788139343,
-				0.5,
-				0.5000004172325134
-			],
-			"min":[
-				-0.500000536441803,
-				-0.5,
-				-0.5000006556510925
-			],
-			"type":"VEC3"
+			"componentType":5123,
+			"count":6624,
+			"type":"SCALAR"
 		},
 		{
 			"bufferView":8,
 			"componentType":5126,
-			"count":1262,
+			"count":4,
+			"max":[
+				2,
+				0,
+				2
+			],
+			"min":[
+				-2,
+				0,
+				-2
+			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":9,
 			"componentType":5126,
-			"count":1262,
-			"type":"VEC2"
+			"count":4,
+			"type":"VEC3"
 		},
 		{
 			"bufferView":10,
 			"componentType":5126,
-			"count":1262,
-			"max":[
-				0.5000001788139343,
-				0.5,
-				0.5000004172325134
-			],
-			"min":[
-				-0.500000536441803,
-				-0.5,
-				-0.5000006556510925
-			],
-			"type":"VEC3"
+			"count":4,
+			"type":"VEC2"
 		},
 		{
 			"bufferView":11,
 			"componentType":5126,
 			"count":1262,
+			"max":[
+				0.8000003099441528,
+				0.800000011920929,
+				0.8000006079673767
+			],
+			"min":[
+				-0.8000009059906006,
+				-0.800000011920929,
+				-0.800000011920929
+			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":12,
 			"componentType":5126,
 			"count":1262,
-			"type":"VEC2"
+			"type":"VEC3"
 		},
 		{
 			"bufferView":13,
 			"componentType":5126,
 			"count":1262,
-			"max":[
-				0.5000001788139343,
-				0.5,
-				0.5000004172325134
-			],
-			"min":[
-				-0.500000536441803,
-				-0.5,
-				-0.5000006556510925
-			],
-			"type":"VEC3"
+			"type":"VEC2"
 		},
 		{
 			"bufferView":14,
-			"componentType":5126,
-			"count":1262,
-			"type":"VEC3"
+			"componentType":5123,
+			"count":6624,
+			"type":"SCALAR"
 		},
 		{
 			"bufferView":15,
 			"componentType":5126,
-			"count":1262,
-			"type":"VEC2"
+			"count":4,
+			"max":[
+				2,
+				0,
+				2
+			],
+			"min":[
+				-2,
+				0,
+				-2
+			],
+			"type":"VEC3"
 		},
 		{
 			"bufferView":16,
 			"componentType":5126,
-			"count":1262,
-			"max":[
-				0.5000001788139343,
-				0.5,
-				0.5000004172325134
-			],
-			"min":[
-				-0.500000536441803,
-				-0.5,
-				-0.5000006556510925
-			],
+			"count":4,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":17,
 			"componentType":5126,
-			"count":1262,
-			"type":"VEC3"
+			"count":4,
+			"type":"VEC2"
 		},
 		{
 			"bufferView":18,
 			"componentType":5126,
 			"count":1262,
-			"type":"VEC2"
+			"max":[
+				0.8000003099441528,
+				0.800000011920929,
+				0.8000006079673767
+			],
+			"min":[
+				-0.8000009059906006,
+				-0.800000011920929,
+				-0.800000011920929
+			],
+			"type":"VEC3"
 		},
 		{
 			"bufferView":19,
 			"componentType":5126,
 			"count":1262,
-			"max":[
-				0.5000001788139343,
-				0.5,
-				0.5000004172325134
-			],
-			"min":[
-				-0.500000536441803,
-				-0.5,
-				-0.5000006556510925
-			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":20,
 			"componentType":5126,
 			"count":1262,
-			"type":"VEC3"
+			"type":"VEC2"
 		},
 		{
 			"bufferView":21,
-			"componentType":5126,
-			"count":1262,
-			"type":"VEC2"
+			"componentType":5123,
+			"count":6624,
+			"type":"SCALAR"
 		},
 		{
 			"bufferView":22,
 			"componentType":5126,
-			"count":1262,
+			"count":4,
 			"max":[
-				0.5000001788139343,
-				0.5,
-				0.5000004172325134
+				2,
+				0,
+				2
 			],
 			"min":[
-				-0.500000536441803,
-				-0.5,
-				-0.5000006556510925
+				-2,
+				0,
+				-2
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":23,
 			"componentType":5126,
-			"count":1262,
+			"count":4,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":24,
 			"componentType":5126,
-			"count":1262,
+			"count":4,
 			"type":"VEC2"
 		},
 		{
@@ -1820,14 +3027,14 @@
 			"componentType":5126,
 			"count":1262,
 			"max":[
-				0.5000001788139343,
-				0.5,
-				0.5000004172325134
+				0.8000003099441528,
+				0.800000011920929,
+				0.8000006079673767
 			],
 			"min":[
-				-0.500000536441803,
-				-0.5,
-				-0.5000006556510925
+				-0.8000009059906006,
+				-0.800000011920929,
+				-0.800000011920929
 			],
 			"type":"VEC3"
 		},
@@ -1845,170 +3052,160 @@
 		},
 		{
 			"bufferView":28,
-			"componentType":5126,
-			"count":1262,
-			"max":[
-				0.5000001788139343,
-				0.5,
-				0.5000004172325134
-			],
-			"min":[
-				-0.500000536441803,
-				-0.5,
-				-0.5000006556510925
-			],
-			"type":"VEC3"
+			"componentType":5123,
+			"count":6624,
+			"type":"SCALAR"
 		},
 		{
 			"bufferView":29,
 			"componentType":5126,
-			"count":1262,
+			"count":4,
+			"max":[
+				2,
+				0,
+				2
+			],
+			"min":[
+				-2,
+				0,
+				-2
+			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":30,
 			"componentType":5126,
-			"count":1262,
-			"type":"VEC2"
+			"count":4,
+			"type":"VEC3"
 		},
 		{
 			"bufferView":31,
 			"componentType":5126,
-			"count":1262,
-			"max":[
-				0.5000001788139343,
-				0.5,
-				0.5000004172325134
-			],
-			"min":[
-				-0.500000536441803,
-				-0.5,
-				-0.5000006556510925
-			],
-			"type":"VEC3"
+			"count":4,
+			"type":"VEC2"
 		},
 		{
 			"bufferView":32,
 			"componentType":5126,
 			"count":1262,
+			"max":[
+				0.8000003099441528,
+				0.800000011920929,
+				0.8000006079673767
+			],
+			"min":[
+				-0.8000009059906006,
+				-0.800000011920929,
+				-0.800000011920929
+			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":33,
 			"componentType":5126,
 			"count":1262,
-			"type":"VEC2"
+			"type":"VEC3"
 		},
 		{
 			"bufferView":34,
 			"componentType":5126,
 			"count":1262,
-			"max":[
-				0.5000001788139343,
-				0.5,
-				0.5000004172325134
-			],
-			"min":[
-				-0.500000536441803,
-				-0.5,
-				-0.5000006556510925
-			],
-			"type":"VEC3"
+			"type":"VEC2"
 		},
 		{
 			"bufferView":35,
-			"componentType":5126,
-			"count":1262,
-			"type":"VEC3"
+			"componentType":5123,
+			"count":6624,
+			"type":"SCALAR"
 		},
 		{
 			"bufferView":36,
 			"componentType":5126,
-			"count":1262,
-			"type":"VEC2"
+			"count":4,
+			"max":[
+				2,
+				0,
+				2
+			],
+			"min":[
+				-2,
+				0,
+				-2
+			],
+			"type":"VEC3"
 		},
 		{
 			"bufferView":37,
 			"componentType":5126,
-			"count":1262,
-			"max":[
-				0.5000001788139343,
-				0.5,
-				0.5000004172325134
-			],
-			"min":[
-				-0.500000536441803,
-				-0.5,
-				-0.5000006556510925
-			],
+			"count":4,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":38,
 			"componentType":5126,
-			"count":1262,
-			"type":"VEC3"
+			"count":4,
+			"type":"VEC2"
 		},
 		{
 			"bufferView":39,
 			"componentType":5126,
 			"count":1262,
-			"type":"VEC2"
+			"max":[
+				0.8000003099441528,
+				0.800000011920929,
+				0.8000006079673767
+			],
+			"min":[
+				-0.8000009059906006,
+				-0.800000011920929,
+				-0.800000011920929
+			],
+			"type":"VEC3"
 		},
 		{
 			"bufferView":40,
 			"componentType":5126,
 			"count":1262,
-			"max":[
-				0.5000001788139343,
-				0.5,
-				0.5000004172325134
-			],
-			"min":[
-				-0.500000536441803,
-				-0.5,
-				-0.5000006556510925
-			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":41,
 			"componentType":5126,
 			"count":1262,
-			"type":"VEC3"
+			"type":"VEC2"
 		},
 		{
 			"bufferView":42,
-			"componentType":5126,
-			"count":1262,
-			"type":"VEC2"
+			"componentType":5123,
+			"count":6624,
+			"type":"SCALAR"
 		},
 		{
 			"bufferView":43,
 			"componentType":5126,
-			"count":1262,
+			"count":4,
 			"max":[
-				0.5000001788139343,
-				0.5,
-				0.5000004172325134
+				2,
+				0,
+				2
 			],
 			"min":[
-				-0.500000536441803,
-				-0.5,
-				-0.5000006556510925
+				-2,
+				0,
+				-2
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":44,
 			"componentType":5126,
-			"count":1262,
+			"count":4,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":45,
 			"componentType":5126,
-			"count":1262,
+			"count":4,
 			"type":"VEC2"
 		},
 		{
@@ -2016,14 +3213,14 @@
 			"componentType":5126,
 			"count":1262,
 			"max":[
-				0.5000001788139343,
-				0.5,
-				0.5000004172325134
+				0.8000003099441528,
+				0.800000011920929,
+				0.8000006079673767
 			],
 			"min":[
-				-0.500000536441803,
-				-0.5,
-				-0.5000006556510925
+				-0.8000009059906006,
+				-0.800000011920929,
+				-0.800000011920929
 			],
 			"type":"VEC3"
 		},
@@ -2041,391 +3238,1559 @@
 		},
 		{
 			"bufferView":49,
-			"componentType":5126,
-			"count":1262,
-			"max":[
-				0.5000001788139343,
-				0.5,
-				0.5000004172325134
-			],
-			"min":[
-				-0.500000536441803,
-				-0.5,
-				-0.5000006556510925
-			],
-			"type":"VEC3"
+			"componentType":5123,
+			"count":6624,
+			"type":"SCALAR"
 		},
 		{
 			"bufferView":50,
 			"componentType":5126,
-			"count":1262,
+			"count":4,
+			"max":[
+				2,
+				0,
+				2
+			],
+			"min":[
+				-2,
+				0,
+				-2
+			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":51,
 			"componentType":5126,
-			"count":1262,
-			"type":"VEC2"
+			"count":4,
+			"type":"VEC3"
 		},
 		{
 			"bufferView":52,
 			"componentType":5126,
-			"count":1262,
-			"max":[
-				0.5000001788139343,
-				0.5,
-				0.5000004172325134
-			],
-			"min":[
-				-0.500000536441803,
-				-0.5,
-				-0.5000006556510925
-			],
-			"type":"VEC3"
+			"count":4,
+			"type":"VEC2"
 		},
 		{
 			"bufferView":53,
 			"componentType":5126,
 			"count":1262,
+			"max":[
+				0.8000003099441528,
+				0.800000011920929,
+				0.8000006079673767
+			],
+			"min":[
+				-0.8000009059906006,
+				-0.800000011920929,
+				-0.800000011920929
+			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":54,
 			"componentType":5126,
 			"count":1262,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":55,
+			"componentType":5126,
+			"count":1262,
 			"type":"VEC2"
+		},
+		{
+			"bufferView":56,
+			"componentType":5123,
+			"count":6624,
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":57,
+			"componentType":5126,
+			"count":4,
+			"max":[
+				2,
+				0,
+				2
+			],
+			"min":[
+				-2,
+				0,
+				-2
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":58,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":59,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":60,
+			"componentType":5126,
+			"count":1262,
+			"max":[
+				0.8000003099441528,
+				0.800000011920929,
+				0.8000006079673767
+			],
+			"min":[
+				-0.8000009059906006,
+				-0.800000011920929,
+				-0.800000011920929
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":61,
+			"componentType":5126,
+			"count":1262,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":62,
+			"componentType":5126,
+			"count":1262,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":63,
+			"componentType":5123,
+			"count":6624,
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":64,
+			"componentType":5126,
+			"count":4,
+			"max":[
+				2,
+				0,
+				2
+			],
+			"min":[
+				-2,
+				0,
+				-2
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":65,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":66,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":67,
+			"componentType":5126,
+			"count":1262,
+			"max":[
+				0.8000003099441528,
+				0.800000011920929,
+				0.8000006079673767
+			],
+			"min":[
+				-0.8000009059906006,
+				-0.800000011920929,
+				-0.800000011920929
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":68,
+			"componentType":5126,
+			"count":1262,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":69,
+			"componentType":5126,
+			"count":1262,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":70,
+			"componentType":5123,
+			"count":6624,
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":71,
+			"componentType":5126,
+			"count":4,
+			"max":[
+				2,
+				0,
+				2
+			],
+			"min":[
+				-2,
+				0,
+				-2
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":72,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":73,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":74,
+			"componentType":5126,
+			"count":1262,
+			"max":[
+				0.8000003099441528,
+				0.800000011920929,
+				0.8000006079673767
+			],
+			"min":[
+				-0.8000009059906006,
+				-0.800000011920929,
+				-0.800000011920929
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":75,
+			"componentType":5126,
+			"count":1262,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":76,
+			"componentType":5126,
+			"count":1262,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":77,
+			"componentType":5123,
+			"count":6624,
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":78,
+			"componentType":5126,
+			"count":4,
+			"max":[
+				2,
+				0,
+				2
+			],
+			"min":[
+				-2,
+				0,
+				-2
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":79,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":80,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":81,
+			"componentType":5126,
+			"count":1262,
+			"max":[
+				0.8000003099441528,
+				0.800000011920929,
+				0.8000006079673767
+			],
+			"min":[
+				-0.8000009059906006,
+				-0.800000011920929,
+				-0.800000011920929
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":82,
+			"componentType":5126,
+			"count":1262,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":83,
+			"componentType":5126,
+			"count":1262,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":84,
+			"componentType":5123,
+			"count":6624,
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":85,
+			"componentType":5126,
+			"count":4,
+			"max":[
+				2,
+				0,
+				2
+			],
+			"min":[
+				-2,
+				0,
+				-2
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":86,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":87,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":88,
+			"componentType":5126,
+			"count":1262,
+			"max":[
+				0.8000003099441528,
+				0.800000011920929,
+				0.8000006079673767
+			],
+			"min":[
+				-0.8000009059906006,
+				-0.800000011920929,
+				-0.800000011920929
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":89,
+			"componentType":5126,
+			"count":1262,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":90,
+			"componentType":5126,
+			"count":1262,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":91,
+			"componentType":5123,
+			"count":6624,
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":92,
+			"componentType":5126,
+			"count":4,
+			"max":[
+				2,
+				0,
+				2
+			],
+			"min":[
+				-2,
+				0,
+				-2
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":93,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":94,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":95,
+			"componentType":5126,
+			"count":1262,
+			"max":[
+				0.8000003099441528,
+				0.800000011920929,
+				0.8000006079673767
+			],
+			"min":[
+				-0.8000009059906006,
+				-0.800000011920929,
+				-0.800000011920929
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":96,
+			"componentType":5126,
+			"count":1262,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":97,
+			"componentType":5126,
+			"count":1262,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":98,
+			"componentType":5123,
+			"count":6624,
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":99,
+			"componentType":5126,
+			"count":4,
+			"max":[
+				2,
+				0,
+				2
+			],
+			"min":[
+				-2,
+				0,
+				-2
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":100,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":101,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":102,
+			"componentType":5126,
+			"count":1262,
+			"max":[
+				0.8000003099441528,
+				0.800000011920929,
+				0.8000006079673767
+			],
+			"min":[
+				-0.8000009059906006,
+				-0.800000011920929,
+				-0.800000011920929
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":103,
+			"componentType":5126,
+			"count":1262,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":104,
+			"componentType":5126,
+			"count":1262,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":105,
+			"componentType":5123,
+			"count":6624,
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":106,
+			"componentType":5126,
+			"count":4,
+			"max":[
+				2,
+				0,
+				2
+			],
+			"min":[
+				-2,
+				0,
+				-2
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":107,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":108,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":109,
+			"componentType":5126,
+			"count":1262,
+			"max":[
+				0.8000003099441528,
+				0.800000011920929,
+				0.8000006079673767
+			],
+			"min":[
+				-0.8000009059906006,
+				-0.800000011920929,
+				-0.800000011920929
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":110,
+			"componentType":5126,
+			"count":1262,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":111,
+			"componentType":5126,
+			"count":1262,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":112,
+			"componentType":5123,
+			"count":6624,
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":113,
+			"componentType":5126,
+			"count":4,
+			"max":[
+				2,
+				0,
+				2
+			],
+			"min":[
+				-2,
+				0,
+				-2
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":114,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":115,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":116,
+			"componentType":5126,
+			"count":1262,
+			"max":[
+				0.8000003099441528,
+				0.800000011920929,
+				0.8000006079673767
+			],
+			"min":[
+				-0.8000009059906006,
+				-0.800000011920929,
+				-0.800000011920929
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":117,
+			"componentType":5126,
+			"count":1262,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":118,
+			"componentType":5126,
+			"count":1262,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":119,
+			"componentType":5123,
+			"count":6624,
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":120,
+			"componentType":5126,
+			"count":4,
+			"max":[
+				2,
+				0,
+				2
+			],
+			"min":[
+				-2,
+				0,
+				-2
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":121,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":122,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":123,
+			"componentType":5126,
+			"count":1262,
+			"max":[
+				0.8000003099441528,
+				0.800000011920929,
+				0.8000006079673767
+			],
+			"min":[
+				-0.8000009059906006,
+				-0.800000011920929,
+				-0.800000011920929
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":124,
+			"componentType":5126,
+			"count":1262,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":125,
+			"componentType":5126,
+			"count":1262,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":126,
+			"componentType":5123,
+			"count":6624,
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":127,
+			"componentType":5126,
+			"count":4,
+			"max":[
+				2,
+				0,
+				2
+			],
+			"min":[
+				-2,
+				0,
+				-2
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":128,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":129,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":130,
+			"componentType":5126,
+			"count":1262,
+			"max":[
+				0.8000003099441528,
+				0.800000011920929,
+				0.8000006079673767
+			],
+			"min":[
+				-0.8000009059906006,
+				-0.800000011920929,
+				-0.800000011920929
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":131,
+			"componentType":5126,
+			"count":1262,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":132,
+			"componentType":5126,
+			"count":1262,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":133,
+			"componentType":5123,
+			"count":6624,
+			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":15144,
+			"byteLength":48,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":15144,
-			"byteOffset":15144,
+			"byteLength":48,
+			"byteOffset":48,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":10096,
-			"byteOffset":30288,
+			"byteLength":32,
+			"byteOffset":96,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":13248,
-			"byteOffset":40384,
+			"byteLength":12,
+			"byteOffset":128,
 			"target":34963
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":53632,
+			"byteOffset":140,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":68776,
+			"byteOffset":15284,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":10096,
-			"byteOffset":83920,
+			"byteOffset":30428,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":13248,
+			"byteOffset":40524,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":53772,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":53820,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":32,
+			"byteOffset":53868,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":94016,
+			"byteOffset":53900,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":109160,
+			"byteOffset":69044,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":10096,
-			"byteOffset":124304,
+			"byteOffset":84188,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":13248,
+			"byteOffset":94284,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":107532,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":107580,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":32,
+			"byteOffset":107628,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":134400,
+			"byteOffset":107660,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":149544,
+			"byteOffset":122804,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":10096,
-			"byteOffset":164688,
+			"byteOffset":137948,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":13248,
+			"byteOffset":148044,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":161292,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":161340,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":32,
+			"byteOffset":161388,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":174784,
+			"byteOffset":161420,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":189928,
+			"byteOffset":176564,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":10096,
-			"byteOffset":205072,
+			"byteOffset":191708,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":13248,
+			"byteOffset":201804,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":215052,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":215100,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":32,
+			"byteOffset":215148,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":215168,
+			"byteOffset":215180,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":230312,
+			"byteOffset":230324,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":10096,
-			"byteOffset":245456,
+			"byteOffset":245468,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":13248,
+			"byteOffset":255564,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":268812,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":268860,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":32,
+			"byteOffset":268908,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":255552,
+			"byteOffset":268940,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":270696,
+			"byteOffset":284084,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":10096,
-			"byteOffset":285840,
+			"byteOffset":299228,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":13248,
+			"byteOffset":309324,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":322572,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":322620,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":32,
+			"byteOffset":322668,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":295936,
+			"byteOffset":322700,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":311080,
+			"byteOffset":337844,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":10096,
-			"byteOffset":326224,
+			"byteOffset":352988,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":13248,
+			"byteOffset":363084,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":376332,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":376380,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":32,
+			"byteOffset":376428,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":336320,
+			"byteOffset":376460,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":351464,
+			"byteOffset":391604,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":10096,
-			"byteOffset":366608,
+			"byteOffset":406748,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":13248,
+			"byteOffset":416844,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":430092,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":430140,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":32,
+			"byteOffset":430188,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":376704,
+			"byteOffset":430220,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":391848,
+			"byteOffset":445364,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":10096,
-			"byteOffset":406992,
+			"byteOffset":460508,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":13248,
+			"byteOffset":470604,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":483852,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":483900,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":32,
+			"byteOffset":483948,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":417088,
+			"byteOffset":483980,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":432232,
+			"byteOffset":499124,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":10096,
-			"byteOffset":447376,
+			"byteOffset":514268,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":13248,
+			"byteOffset":524364,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":537612,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":537660,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":32,
+			"byteOffset":537708,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":457472,
+			"byteOffset":537740,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":472616,
+			"byteOffset":552884,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":10096,
-			"byteOffset":487760,
+			"byteOffset":568028,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":13248,
+			"byteOffset":578124,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":591372,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":591420,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":32,
+			"byteOffset":591468,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":497856,
+			"byteOffset":591500,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":513000,
+			"byteOffset":606644,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":10096,
-			"byteOffset":528144,
+			"byteOffset":621788,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":13248,
+			"byteOffset":631884,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":645132,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":645180,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":32,
+			"byteOffset":645228,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":538240,
+			"byteOffset":645260,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":553384,
+			"byteOffset":660404,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":10096,
-			"byteOffset":568528,
+			"byteOffset":675548,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":13248,
+			"byteOffset":685644,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":698892,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":698940,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":32,
+			"byteOffset":698988,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":578624,
+			"byteOffset":699020,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":593768,
+			"byteOffset":714164,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":10096,
-			"byteOffset":608912,
+			"byteOffset":729308,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":13248,
+			"byteOffset":739404,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":752652,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":752700,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":32,
+			"byteOffset":752748,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":619008,
+			"byteOffset":752780,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":634152,
+			"byteOffset":767924,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":10096,
-			"byteOffset":649296,
+			"byteOffset":783068,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":13248,
+			"byteOffset":793164,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":806412,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":806460,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":32,
+			"byteOffset":806508,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":659392,
+			"byteOffset":806540,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":674536,
+			"byteOffset":821684,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":10096,
-			"byteOffset":689680,
+			"byteOffset":836828,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":13248,
+			"byteOffset":846924,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":860172,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":860220,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":32,
+			"byteOffset":860268,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":699776,
+			"byteOffset":860300,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":15144,
-			"byteOffset":714920,
+			"byteOffset":875444,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":10096,
-			"byteOffset":730064,
+			"byteOffset":890588,
 			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":13248,
+			"byteOffset":900684,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":913932,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":913980,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":32,
+			"byteOffset":914028,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":15144,
+			"byteOffset":914060,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":15144,
+			"byteOffset":929204,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":10096,
+			"byteOffset":944348,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":13248,
+			"byteOffset":954444,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":967692,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":48,
+			"byteOffset":967740,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":32,
+			"byteOffset":967788,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":15144,
+			"byteOffset":967820,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":15144,
+			"byteOffset":982964,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":10096,
+			"byteOffset":998108,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":13248,
+			"byteOffset":1008204,
+			"target":34963
 		}
 	],
 	"samplers":[
@@ -2436,7 +4801,7 @@
 	],
 	"buffers":[
 		{
-			"byteLength":740160,
+			"byteLength":1021452,
 			"uri":"concordia_materials.bin"
 		}
 	]

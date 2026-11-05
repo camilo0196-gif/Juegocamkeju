@@ -333,9 +333,12 @@ def write_pack(me, chans):
     me.color_attributes.render_color_index = me.color_attributes.find("mask_pack")
 
 
-def dither(A, nbrs, mat, natural_idx, scale, seed):
-    """Banda de transicion de 1-2 celdas entre materiales naturales, dentada por ruido (no una linea recta)."""
+def dither(A, nbrs, mat, natural_idx, scale, seed, locked=None):
+    """Banda de transicion de 1-2 celdas entre materiales naturales, dentada por ruido (no una linea recta).
+    Las caras 'locked' (calles, plaza, muros, terrazas, jardines, parcelas) ni cambian ni contagian."""
     nat = np.isin(mat, natural_idx)
+    if locked is not None:
+        nat = nat & ~locked
     d1 = {}
     for f in np.nonzero(nat)[0]:
         m0 = mat[f]
@@ -426,7 +429,7 @@ def city(obj, mats, stats):
     else:
         rep = is_ret & False
     base = mat.copy()
-    mat, dstats = dither(A, nbrs, mat, [idx[n] for n in CITY_NATURAL], DITHER["city"], SEED + 5)
+    mat, dstats = dither(A, nbrs, mat, [idx[n] for n in CITY_NATURAL], DITHER["city"], SEED + 5, protected)
     me.materials.clear()
     for n in CITY_SLOTS:
         me.materials.append(mats[n])
@@ -444,14 +447,15 @@ def city(obj, mats, stats):
     qa = {"protected_faces": int(protected.sum()),
           "protected_with_rock_mask": int((protected & (rock_c > 0)).sum()),
           "protected_with_ash_mask": int((protected & (ash_c > 0)).sum()),
-          "protected_with_natural_material": int((protected & np.isin(mat, nat_idx)).sum()),
-          "road_faces_not_road_material": int((is_road & ~np.isin(mat, [idx["MAT_Cobble_Concordia"],
-                                                                         idx["MAT_Stone_Repair"],
-                                                                         idx["MAT_Plaza_Slab"]])).sum()),
-          "plaza_faces_not_slab": int((is_slab & ~np.isin(mat, [idx["MAT_Plaza_Slab"],
-                                                                idx["MAT_Plaza_Slab_Travertino"]])).sum()),
+          "protected_with_rock_or_ash_material": int((protected & np.isin(mat, [idx["MAT_Rock_Gray"],
+                                                                              idx["MAT_Ash_Gray"]])).sum()),
+          "protected_material_changed_by_transition": int((protected & (mat != base)).sum()),
+          "road_faces_with_natural_material": int((is_road & np.isin(mat, nat_idx)).sum()),
+          "plaza_faces_with_natural_material": int((is_slab & np.isin(mat, nat_idx)).sum()),
+          "retaining_faces_with_natural_material": int((is_ret & np.isin(mat, nat_idx)).sum()),
           "retaining_faces_not_limestone_or_repair": int((is_ret & ~np.isin(mat, [idx["MAT_Limestone_Worn"],
-                                                                                   idx["MAT_Stone_Repair"]])).sum())}
+                                                                                   idx["MAT_Stone_Repair"]])).sum()),
+          "note": "terrazas, jardines y parcelas son 'protegidas' pero llevan MAT_Ground_Cracked (suelo de ciudad)"}
     stats["city"] = {"faces": nf, "rock_faces": int(rock.sum()), "ash_faces": int(ash.sum()),
                      "rock_inside_wall": int((rock & (r < C.WALL_BASE_R[0])).sum()),
                      "rock_on_exterior_talud": int((rock & (talf | (r >= C.WALL_BASE_R[1]))).sum()),
