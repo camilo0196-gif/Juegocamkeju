@@ -133,9 +133,10 @@ class Mesh:
                 f.material_index = k
         return vs
 
-    def to_object(self, name, col):
+    def to_object(self, name, col, recalc=True):
         bmesh.ops.remove_doubles(self.bm, verts=self.bm.verts[:], dist=1e-4)
-        bmesh.ops.recalc_face_normals(self.bm, faces=self.bm.faces[:])
+        if recalc:
+            bmesh.ops.recalc_face_normals(self.bm, faces=self.bm.faces[:])
         me = bpy.data.meshes.new(name)
         self.bm.to_mesh(me)
         self.bm.free()
@@ -323,6 +324,7 @@ def boolean_cut(obj, cutters, regen=None):
         return
     from mathutils import Matrix as _M
     ok = bad = 0
+    failed_idx = []
     for k, cme in enumerate(cutters):
         probes = PROBES.get(cme.name, [])
         n = probes[0][1] if probes else Vector((0, 0, 1))
@@ -343,8 +345,10 @@ def boolean_cut(obj, cutters, regen=None):
             break
         ok += int(done)
         bad += int(not done)
+        if not done:
+            failed_idx.append(k)
         bpy.data.meshes.remove(cme)
-    BOOL_LOG.append({"object": obj.name, "strokes": len(cutters), "cut_ok": ok, "failed": bad})
+    BOOL_LOG.append({"object": obj.name, "strokes": len(cutters), "cut_ok": ok, "failed": bad, "failed_idx": failed_idx})
 
 
 def tris(o):

@@ -1,0 +1,151 @@
+{
+ "saved_before": "blender/concordia_v15.blend",
+ "materials": {
+  "MAT_Shard_Blue_E40": "creado",
+  "MAT_Faro_Beam": "creado",
+  "MAT_Pipe_Glass": "creado",
+  "MAT_Pipe_Light_Core": "creado"
+ },
+ "boolean": [
+  {
+   "object": "TMP_FaroStone",
+   "strokes": 8,
+   "cut_ok": 8,
+   "failed": 0,
+   "failed_idx": []
+  },
+  {
+   "object": "TMP_FaroCornice",
+   "strokes": 8,
+   "cut_ok": 8,
+   "failed": 0,
+   "failed_idx": []
+  }
+ ],
+ "route_cells": 74,
+ "pipe_curve": {
+  "points": 104,
+  "length_m": 117.1,
+  "elevated_plan_length_m": 108.0,
+  "supports": 14,
+  "support_every_m": 8.0,
+  "start": [
+   -16.1,
+   125.0,
+   14.72
+  ],
+  "end": [
+   45.79,
+   56.04,
+   10.55
+  ],
+  "min_clear_over_ground_m": 8.78,
+  "note": "solo la curva y los marcadores de soporte; los tubos no se colocan todavia"
+ },
+ "pipe_kit": {
+  "PIPE_Light_Straight": 144,
+  "PIPE_Light_Elbow": 432,
+  "PIPE_Light_Support": 44
+ },
+ "tris": {
+  "FARO_Body": 8555,
+  "FARO_Crystal": 216,
+  "FARO_Beam": 64,
+  "total": 8835
+ },
+ "budget": 20000,
+ "ok": true,
+ "lods": {
+  "LOD1": 4273,
+  "LOD2": 1281
+ },
+ "crystal_top_local_m": 39.8,
+ "height_total_m": 39.8,
+ "ramp": {
+  "turns": 3.5,
+  "pitch_m": 8.571,
+  "width_m": 1.4,
+  "arrival_deg": 90.0
+ },
+ "channels": {
+  "count": 4,
+  "width_m": 0.2,
+  "depth_m": 0.05,
+  "vertical_clearance_to_ramp_m": [
+   5.36,
+   3.21,
+   1.07,
+   7.5
+  ]
+ },
+ "collision": [
+  "FARO-colonly",
+  "FARO_Ramp-colonly"
+ ],
+ "visibility": {
+  "target": [
+   50.91,
+   50.91,
+   47.35
+  ],
+  "per_street": {
+   "Avenida Norte": {
+    "samples": 17,
+    "visible": 17,
+    "pct": 100.0,
+    "blocked_by": {}
+   },
+   "Avenida Sur": {
+    "samples": 17,
+    "visible": 17,
+    "pct": 100.0,
+    "blocked_by": {}
+   },
+   "Avenida Este": {
+    "samples": 17,
+    "visible": 17,
+    "pct": 100.0,
+    "blocked_by": {}
+   },
+   "Avenida Oeste": {
+    "samples": 17,
+    "visible": 17,
+    "pct": 100.0,
+    "blocked_by": {}
+   },
+   "Ronda r100": {
+    "samples": 36,
+    "visible": 35,
+    "pct": 97.2,
+    "blocked_by": {
+     "TRN_Bridge_03": 1
+    }
+   },
+   "Ronda r150": {
+    "samples": 56,
+    "visible": 53,
+    "pct": 94.6,
+    "blocked_by": {
+     "TRN_ArchBridge_02": 1,
+     "TRN_ArchBridge_03": 1,
+     "TRN_ArchBridge_04": 1
+    }
+   }
+  },
+  "note": "aun no hay edificios: hay que repetirlo cuando existan"
+ },
+ "export": {
+  "file": "export/godot/concordia_faro.glb",
+  "mb": 1.04,
+  "nodes": 9,
+  "meshes": 7,
+  "tris": 15284,
+  "materials": 7,
+  "images": 15,
+  "images_external": 15,
+  "colliders": 2,
+  "navmesh": 0,
+  "occluders": 0,
+  "empties": 2
+ }
+}
