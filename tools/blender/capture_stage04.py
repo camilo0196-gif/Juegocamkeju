@@ -128,7 +128,7 @@ def main():
         K.render(scene, cam, P("kit"))
     if "morada" in only:
         a = 135.0 + 10.0
-        cam = K.iso_at(cam_iso, pol(a, 178.0, C.DATUM + 3.5), 45.0)
+        cam = K.iso_at(cam_iso, pol(a, 194.0, C.DATUM + 8.0), 45.0)
         K.render(scene, cam, P("iso45_morada_NW_muralla"))
         K.annotate(scene, cam, P("iso45_morada_NW_muralla"),
                    "Morada NO junto a la muralla - CAM_Iso ortho 45 (el muro interior mira a la camara)",
@@ -147,8 +147,16 @@ def main():
         from mathutils import Matrix
         k = 18
         m = W.slot_matrix(k * 7.5, C.WALL_RADIUS)
-        eye = m @ Vector((0.0, W.Y_OUT + W.BASTION_D / 2 - 0.2 + 1.6, W.BASTION_PLAT + K.EYE))
-        tgt = m @ Vector((-34.0, 2.0, 7.0))           # a lo largo de la muralla, hacia k=17/16
+        # ojo en la esquina del balcon (junto al parapeto lateral, al fondo): el parapeto propio no tapa
+        y_far = W.Y_OUT + W.BASTION_D / 2 - 0.2 + W.MIRADOR[1]
+        eye = m @ Vector((-(W.MIRADOR[0] / 2 - 0.35), y_far - 0.4, W.BASTION_PLAT + 1.7))
+        from math import cos as _cos
+
+        def on_module(f, z):
+            # punto sobre la cara exterior del modulo Seg18 (cuerda entre slots 18 y 19), f in [0, 1]
+            rr = C.WALL_RADIUS * _cos(W.HALF) / _cos(radians((f - 0.5) * W.STEP_DEG))
+            return W.slot_matrix((k + f) * W.STEP_DEG, rr) @ Vector((0.0, W.Y_OUT, z))
+        tgt = on_module(0.55, W.RUNE_Z + 1.5)          # -X local = hacia k=19/20 (angulo creciente)
         for tag, is_dusk in (("mirador_eye", False), ("mirador_eye_dusk", True)):
             if tag not in only:
                 continue
@@ -159,10 +167,11 @@ def main():
             name = "eye_desde_mirador_k18" + ("_anochecer" if is_dusk else "")
             K.render(scene, cam, P(name))
             K.annotate(scene, cam, P(name),
-                       "Desde el balcon del mirador k=18 (135 grados, +19.6) mirando la muralla hacia el exterior"
+                       "Desde el balcon del mirador k=18 (135 grados, suelo +13.9 sobre la base) mirando la cara exterior hacia k=19/20"
                        + (" - anochecer" if is_dusk else ""),
-                       [("runas exteriores a +4.5", tuple(m @ Vector((-14.0, W.Y_OUT, W.RUNE_Z)))),
-                        ("TOWER_Guard k=16", tuple(W.slot_matrix(16 * 7.5, C.WALL_RADIUS) @ Vector((0, W.TOWER_CY, 26))))])
+                       [("runas exteriores a +4.5", tuple(on_module(0.45, W.RUNE_Z))),
+                        ("BASTION k=19", tuple(W.slot_matrix(19 * 7.5, C.WALL_RADIUS) @ Vector((0, W.Y_OUT + 2.5, 15.5)))),
+                        ("TOWER_Guard k=20", tuple(W.slot_matrix(20 * 7.5, C.WALL_RADIUS) @ Vector((0, W.TOWER_CY, 26))))])
     if "iso_dusk" in only:
         dusk(scene)
         cam = K.iso_at(cam_iso, C.CAM_ISO_TARGET, 460.0)
