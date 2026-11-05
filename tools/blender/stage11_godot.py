@@ -401,8 +401,8 @@ def city_chunks(stats):
         cme = lods["LOD1"].data.copy()
         cme.name = f"{base}-colonly"
         cme.materials.clear()
-        for a in list(cme.color_attributes):
-            cme.color_attributes.remove(a)
+        for an in [a.name for a in cme.color_attributes]:
+            cme.color_attributes.remove(cme.color_attributes[an])
         while cme.uv_layers:
             cme.uv_layers.remove(cme.uv_layers[0])
         co = bpy.data.objects.new(f"{base}-colonly", cme)

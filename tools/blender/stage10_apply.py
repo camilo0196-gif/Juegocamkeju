@@ -45,7 +45,7 @@ RETAIN_REPAIR_FRAC, RETAIN_REPAIR_M = 0.18, 2.2     # parches de MAT_Stone_Repai
 DITHER = {"city": 2.5, "exterior": 7.0}             # escala del ruido de la banda (m)
 DITHER_P = (0.5, 0.22)                              # prob. de cambio en la celda 1 y 2 de la banda
 MOAT_R = (204.0, 224.0)
-WALL_OUTER_R = C.WALL_RADIUS + 1.3                # cara exterior de la muralla (r 201) + margen: fuera = ceniza
+WALL_OUTER_R = 200.55                             # cara exterior de los modulos rectos (r 200.57 a 201): fuera = ceniza
 TERRAIN_UV_TOP_NZ = 0.45                         # terrenos: proyeccion cenital hasta ~63 grados (sin damero en taludes)
 
 

@@ -148,15 +148,15 @@ def main():
         K.annotate(scene, cam, P("iso_exterior_sector"), "Exterior SE - transiciones dentadas entre Ash_Ground, "
                    "Ash_Gray (dunas, foso) y Rock_Gray - ortho 260", [])
     if want("muralla_torre"):
-        cam = K.iso_at(cam_iso, pol(300, 203, 9.0), 30.0)
+        cam = K.iso_at(cam_iso, pol(300, 202, 17.0), 42.0)
         K.render(scene, cam, P("muralla_torre"))
         K.annotate(scene, cam, P("muralla_torre"), "Torre k=40 por fuera: teja (roof_09), madera (weathered_planks), "
-                   "hierro (metal_plate_02), muralla (castle_wall_slates) - ortho 30", [])
+                   "hierro (metal_plate_02), muralla (castle_wall_varriation) - ortho 42", [])
     if want("muralla_puerta_sur"):
-        cam = K.iso_at(cam_iso, pol(270, 204, 5.0), 40.0)
+        cam = K.iso_at(cam_iso, pol(270, 203, 12.0), 48.0)
         K.render(scene, cam, P("muralla_puerta_sur"))
         K.annotate(scene, cam, P("muralla_puerta_sur"), "Puerta Sur por fuera: hojas de hierro, cadalsos de madera, "
-                   "muralla gris - ortho 40", [])
+                   "muralla gris - ortho 48", [])
     best = None
     if want("mascaras_cenital") or want("iso_talud_interior"):
         bad, best = mask_diagnostic(P("mascaras_cenital"))

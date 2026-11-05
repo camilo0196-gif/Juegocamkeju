@@ -39,7 +39,7 @@ ASSETS = {
     "MAT_Cobble_Concordia": ("cobblestone_floor_001", "2k", "#ADA393", 0.24, (0.72, 0.94)),
     "MAT_Plaza_Slab": ("floor_tiles_02", "2k", "#B4ADA2", 0.16, (0.76, 0.94)),
     "MAT_Plaza_Slab_Travertino": ("marble_01", "2k", "#CFC5B0", 0.22, (0.74, 0.94)),
-    "MAT_Wall_Gray": ("castle_wall_slates", "2k", "#8C8A85", 0.08, (0.78, 0.95)),
+    "MAT_Wall_Gray": ("castle_wall_varriation", "2k", "#8C8A85", 0.08, (0.78, 0.95)),
     "MAT_Ground_Cracked": ("sandstone_cracks", "2k", "#A49A88", 0.24, (0.80, 0.95)),
     "MAT_Ash_Gray": ("rocks_ground_02", "2k", "#6F6F6F", 0.0, (0.82, 0.95)),
     "MAT_Ash_Ground": ("dry_ground_01", "2k", "#6F6F6F", 0.0, (0.82, 0.95)),
@@ -52,6 +52,38 @@ ASSETS = {
 }
 # variantes de tela: color base (glTF baseColorFactor) sobre la textura desaturada
 CLOTH_VARIANTS = {"MAT_Cloth_Patch_A": "#8A7462", "MAT_Cloth_Patch_B": "#6E6B58", "MAT_Cloth_Patch_C": "#A49884"}   # sat <= 0.30
+# aplanado de baja frecuencia (anti-damero): divide por un desenfoque periodico de la luminancia
+FLATTEN = {"MAT_Wall_Gray": 0.7, "MAT_Ash_Gray": 0.9, "MAT_Rock_Gray": 0.9, "MAT_Ash_Ground": 0.9, "MAT_Ground_Cracked": 0.8,
+           "MAT_Cobble_Concordia": 0.6}
+FLATTEN_SIGMA_FRAC = 0.08
+# compresion de brillos/sombras extremos (piedras unicas que delatan la repeticion del tile)
+SOFTCLIP = {"MAT_Wall_Gray": (3.0, 96.0), "MAT_Limestone_Worn": (2.0, 98.5), "MAT_Stone_Repair": (2.0, 98.0)}
+
+
+def softclip_luma(a, lo_pct, hi_pct):
+    L = (a * np.array([0.2126, 0.7152, 0.0722])).sum(-1)
+    lo, hi = np.percentile(L, lo_pct), np.percentile(L, hi_pct)
+    span = max(hi - lo, 1e-3)
+    t = (L - lo) / span
+    t2 = np.where(t > 1, 1 + 0.25 * np.tanh((t - 1) * 4), np.where(t < 0, 0.25 * np.tanh(t * 4), t))
+    L2 = lo + t2 * span
+    return np.clip(a * (L2 / np.maximum(L, 1e-4))[..., None], 0, 1), [round(float(lo), 3), round(float(hi), 3)]          # sigma = 8 % del tile (~16 cm en un tile de 2 m)
+
+
+def flatten_lowfreq(a, strength, sigma_frac=FLATTEN_SIGMA_FRAC):
+    """Quita la variacion de brillo grande dentro del tile (la que forma rombos al repetirse en isometrica).
+    Desenfoque gaussiano por FFT (periodico: respeta el tileado)."""
+    h, w = a.shape[:2]
+    L = (a * np.array([0.2126, 0.7152, 0.0722])).sum(-1)
+    fy = np.fft.fftfreq(h)[:, None]
+    fx = np.fft.fftfreq(w)[None, :]
+    sig = sigma_frac * w
+    g = np.exp(-2 * (np.pi * sig) ** 2 * (fx ** 2 + fy ** 2))
+    low = np.real(np.fft.ifft2(np.fft.fft2(L) * g))
+    gain = (L.mean() / np.maximum(low, 1e-3)) ** strength
+    return np.clip(a * gain[..., None], 0, 1), float(low.std() / max(L.mean(), 1e-4))
+
+
 ROCK_CANDIDATES = ("rock_boulder_dry", "rock_boulder_cracked")      # preferido, respaldo
 ROCK_WIDTH_OK = (1.5, 4.0)
 
@@ -249,6 +281,15 @@ def process(mat, asset, res, target, cap, rough_rng):
     p = paths(mat)
     os.makedirs(p["dir"], exist_ok=True)
     a = np.asarray(Image.open(f["Diffuse"]).convert("RGB")).astype(np.float32) / 255.0
+    flat = None
+    clip = None
+    if mat in SOFTCLIP:
+        a, clip = softclip_luma(a, *SOFTCLIP[mat])
+    if mat in FLATTEN:
+        a, lf_before = flatten_lowfreq(a, FLATTEN[mat])
+        flat = {"strength": FLATTEN[mat], "sigma_frac_tile": FLATTEN_SIGMA_FRAC,
+                "lowfreq_contrast_before": round(lf_before, 3),
+                "lowfreq_contrast_after": round(flatten_lowfreq(a, 0.0)[1], 3)}
     hue, sat, val = fit_hsv(a, target, cap)
     alb = hue_sat_val(a, hue, sat, val)
     Image.fromarray((alb * 255 + 0.5).astype(np.uint8)).save(p["albedo"], optimize=True)
@@ -272,6 +313,7 @@ def process(mat, asset, res, target, cap, rough_rng):
                                              "y horneado en el albedo"},
             "albedo_target_mean": target, "albedo_result_mean": to_hex(alb.reshape(-1, 3).mean(0)),
             "sat_p95_mean": [round(p95, 3), round(mean_s, 3)], "sat_cap_p95": cap,
+            "lowfreq_flatten": flat, "luma_softclip_pct": (SOFTCLIP.get(mat), clip) if clip else None,
             "orm_channels": {"R": "AO de Poly Haven" if ao is not None else "1.0", "G": f"roughness {rough_rng}",
                              "B": "Metal de Poly Haven" if metal is not None else "0.0"}}
 
