@@ -29,42 +29,61 @@ SUPERSEDED = ("concordia_terrain.glb", "concordia_terrain_structures.glb", "conc
               "concordia_exterior.glb", "concordia_wall_kit_lods.glb")
 
 
-def main():
+REPORT = os.path.join(REPO, "docs", "reports", "stage11_godot.json")
+MASTER = os.path.join(REPO, "blender", f"{C.BLEND_BASENAME}_master_v11.blend")
+
+
+def build():
     stats = {"timings_s": {}}
     src = os.path.join(REPO, "blender", f"{C.BLEND_BASENAME}_v10.blend")
-    out = os.path.join(REPO, "blender", f"{C.BLEND_BASENAME}_master_v11.blend")
     bpy.ops.wm.open_mainfile(filepath=src)
     t = time.time()
     G.cleanup(stats)
     stats["timings_s"]["cleanup"] = round(time.time() - t, 1)
     t = time.time()
     lod0, dmap, ccols = G.city_chunks(stats)
-    ecols, rocks = G.exterior_chunks(stats, dmap)
+    G.exterior_chunks(stats, dmap)
     stats["timings_s"]["chunks_lods"] = round(time.time() - t, 1)
     t = time.time()
-    sobjs, scol = G.structures(stats, dmap)
-    navcol = G.nav_mesh(stats, dmap)
-    occ = G.wall_occluders(stats)
+    G.structures(stats, dmap)
+    G.nav_mesh(stats, dmap)
+    G.wall_occluders(stats)
     stats["timings_s"]["collision_nav_occ"] = round(time.time() - t, 1)
-    empties, rows = G.markers(stats, os.path.join(REPO, "docs", "reports", "stage11_markers.csv"))
-    # --- export
+    G.markers(stats, os.path.join(REPO, "docs", "reports", "stage11_markers.csv"))
+    for cn in [c.name for c in bpy.data.collections if c.name.startswith("GODOT_")]:
+        bpy.data.collections[cn].hide_render = True
+    bpy.context.preferences.filepaths.save_version = 0
+    bpy.ops.wm.save_as_mainfile(filepath=MASTER, compress=True)
+    stats["master_blend"] = os.path.relpath(MASTER, REPO)
+    with open(REPORT, "w") as fh:
+        json.dump(stats, fh, indent=1, ensure_ascii=False, default=str)
+    print("saved:", MASTER, flush=True)
+
+
+def col_objs(prefix):
+    return [o for c in bpy.data.collections if c.name.startswith(prefix) for o in c.objects]
+
+
+def export():
+    bpy.ops.wm.open_mainfile(filepath=MASTER)
+    with open(REPORT) as fh:
+        stats = json.load(fh)
     t = time.time()
+    city = col_objs("GODOT_CITY_")
+    sobjs = [o for cn in G.STRUCT_COLS for o in bpy.data.collections[cn].objects
+             if o.type == "MESH" and not o.name.endswith("-colonly")]
+    scol = col_objs("GODOT_STRUCT_COL")
+    nav = col_objs("GODOT_NAVMESH")
     files = {}
-    city_objs = [o for c in ccols.values() for o in c.objects]
     for d in G.DISTRICTS:
-        objs = [o for o in city_objs if o.get("district") == d]
-        objs += [o for o in sobjs if o.get("district") == d]
-        objs += [o for o in scol.objects if o.get("district") == d]
-        objs += [o for o in navcol.objects if o.get("district") == d]
-        files[f"concordia_terrain_{d}.glb"] = objs
-    ext = [o for c in ecols.values() for o in c.objects]
-    ext += [o for lst in rocks.values() for o in lst]
+        files[f"concordia_terrain_{d}.glb"] = [o for o in city + sobjs + scol + nav if o.get("district") == d]
+    ext = col_objs("GODOT_EXT_") + [o for o in bpy.data.collections["EXTERIOR"].objects if o.name.startswith("EXT_Rock_")]
     files["concordia_terrain_exterior.glb"] = ext
     kit = [o for o in bpy.data.collections["WALL_KIT"].all_objects if o.type in ("MESH", "EMPTY")]
     kit += [o for o in bpy.data.collections["WALL_KIT_LODS"].all_objects if o.type == "MESH"]
     files["concordia_wall_kit.glb"] = list(dict.fromkeys(kit))
     files["concordia_wall_layout.glb"] = [o for o in bpy.data.collections["WALL_LAYOUT"].objects if o.type == "MESH"]
-    files["concordia_markers.glb"] = empties
+    files["concordia_markers.glb"] = [o for o in bpy.data.objects if o.type == "EMPTY" and o.name.startswith("MARKER_")]
     for f in SUPERSEDED:
         p = os.path.join(EXP, f)
         if os.path.exists(p):
@@ -79,15 +98,17 @@ def main():
     stats["tris_total_all_files"] = sum(r["tris"] for r in rep.values())
     stats["superseded_removed"] = list(SUPERSEDED)
     stats["timings_s"]["export"] = round(time.time() - t, 1)
-    for c in list(ccols.values()) + list(ecols.values()) + [scol, navcol, occ]:
-        c.hide_render = True
-    bpy.context.preferences.filepaths.save_version = 0
-    bpy.ops.wm.save_as_mainfile(filepath=out, compress=True)
-    stats["master_blend"] = os.path.relpath(out, REPO)
-    stats["master_blend_mb"] = round(os.path.getsize(out) / 2 ** 20, 1)
-    with open(os.path.join(REPO, "docs", "reports", "stage11_godot.json"), "w") as fh:
+    stats["master_blend_mb"] = round(os.path.getsize(MASTER) / 2 ** 20, 1)
+    with open(REPORT, "w") as fh:
         json.dump(stats, fh, indent=1, ensure_ascii=False, default=str)
-    print("saved:", out)
+    print("exported", flush=True)
+
+
+def main():
+    argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else sys.argv[1:]
+    if "--export-only" not in argv:
+        build()
+    export()
 
 
 if __name__ == "__main__":

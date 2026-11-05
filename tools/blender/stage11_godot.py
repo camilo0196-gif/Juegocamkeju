@@ -879,7 +879,7 @@ def export_glb(objs, path):
         o.select_set(True)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     bpy.ops.export_scene.gltf(filepath=path, export_format="GLB", use_selection=True, export_yup=True,
-                              export_apply=True, export_normals=True, export_texcoord=True,
+                              export_apply=True, export_normals=True, export_texcoords=True,
                               export_vertex_color="NAME", export_vertex_color_name="mask_pack",
                               export_all_vertex_colors=False, export_active_vertex_color_when_no_material=False,
                               export_extras=True, export_materials="EXPORT", export_image_format="AUTO",
