@@ -1,0 +1,527 @@
+{
+ "saved_before": "blender/concordia_v13.blend",
+ "materials": {
+  "MAT_Portal_Veil": "MAT_Portal_Veil",
+  "MAT_Rune_Glow_12": "MAT_Rune_Glow_12",
+  "MAT_Rune_Glow_10": "MAT_Rune_Glow_10"
+ },
+ "legacy_moved": [
+  "TRN_Runestones",
+  "TRN_DescentPedestals"
+ ],
+ "arch": {
+  "boolean_checks": [
+   {
+    "object": "TMP_block_-1_0",
+    "strokes": 11,
+    "cut_ok": 11,
+    "failed": 0
+   },
+   {
+    "object": "TMP_block_-1_1",
+    "strokes": 10,
+    "cut_ok": 10,
+    "failed": 0
+   },
+   {
+    "object": "TMP_block_-1_2",
+    "strokes": 10,
+    "cut_ok": 10,
+    "failed": 0
+   },
+   {
+    "object": "TMP_block_1_0",
+    "strokes": 7,
+    "cut_ok": 7,
+    "failed": 0
+   },
+   {
+    "object": "TMP_block_1_1",
+    "strokes": 12,
+    "cut_ok": 12,
+    "failed": 0
+   },
+   {
+    "object": "TMP_block_1_2",
+    "strokes": 11,
+    "cut_ok": 11,
+    "failed": 0
+   },
+   {
+    "object": "TMP_lintel",
+    "strokes": 51,
+    "cut_ok": 51,
+    "failed": 0
+   }
+  ],
+  "tris": 9055,
+  "carved_runes": 26,
+  "blocks": 6,
+  "clear_width_m": 8.0,
+  "pier_m": 2.2,
+  "height_m": 12.0,
+  "intrados_spring_key_m": [
+   10.0,
+   11.1
+  ],
+  "pier_outer_corner_radius_m": 6.3,
+  "lods": {
+   "LOD1": 4510,
+   "LOD2": 1358
+  },
+  "ok": true
+ },
+ "veil": {
+  "tris": 704,
+  "size_m": [
+   7.94,
+   11.04
+  ],
+  "material": "MAT_Portal_Veil",
+  "uv": "u = 0..1 a lo ancho, v = z / 11 m (0..1 hasta la clave) para animar como agua"
+ },
+ "runestones": {
+  "PORTAL_Runestone_01": {
+   "tris": 102,
+   "lods": {
+    "LOD1": 50,
+    "LOD2": 15
+   },
+   "ok": true,
+   "location": [
+    0.0,
+    9.0,
+    8.6
+   ]
+  },
+  "PORTAL_Runestone_02": {
+   "tris": 100,
+   "lods": {
+    "LOD1": 50,
+    "LOD2": 15
+   },
+   "ok": true,
+   "location": [
+    7.036,
+    5.611,
+    8.6
+   ]
+  },
+  "PORTAL_Runestone_03": {
+   "tris": 100,
+   "lods": {
+    "LOD1": 50,
+    "LOD2": 15
+   },
+   "ok": true,
+   "location": [
+    8.774,
+    -2.003,
+    8.6
+   ]
+  },
+  "PORTAL_Runestone_04": {
+   "tris": 100,
+   "lods": {
+    "LOD1": 50,
+    "LOD2": 14
+   },
+   "ok": true,
+   "location": [
+    3.905,
+    -8.109,
+    8.6
+   ]
+  },
+  "PORTAL_Runestone_05": {
+   "tris": 100,
+   "lods": {
+    "LOD1": 50,
+    "LOD2": 15
+   },
+   "ok": true,
+   "location": [
+    -3.905,
+    -8.109,
+    8.6
+   ]
+  },
+  "PORTAL_Runestone_06": {
+   "tris": 102,
+   "lods": {
+    "LOD1": 50,
+    "LOD2": 15
+   },
+   "ok": true,
+   "location": [
+    -8.774,
+    -2.003,
+    8.6
+   ]
+  },
+  "PORTAL_Runestone_07": {
+   "tris": 100,
+   "lods": {
+    "LOD1": 50,
+    "LOD2": 14
+   },
+   "ok": true,
+   "location": [
+    -7.036,
+    5.611,
+    8.6
+   ]
+  }
+ },
+ "descent_pedestals": {
+  "PORTAL_DescentPedestal_01": {
+   "tris": 166,
+   "lods": {
+    "LOD1": 82,
+    "LOD2": 24
+   },
+   "ok": true,
+   "floor": 1,
+   "location": [
+    0.0,
+    13.5,
+    8.6
+   ]
+  },
+  "PORTAL_DescentPedestal_02": {
+   "tris": 166,
+   "lods": {
+    "LOD1": 82,
+    "LOD2": 24
+   },
+   "ok": true,
+   "floor": 5,
+   "location": [
+    3.979,
+    12.9,
+    8.6
+   ]
+  },
+  "PORTAL_DescentPedestal_03": {
+   "tris": 166,
+   "lods": {
+    "LOD1": 82,
+    "LOD2": 24
+   },
+   "ok": true,
+   "floor": 10,
+   "location": [
+    7.605,
+    11.154,
+    8.6
+   ]
+  },
+  "PORTAL_DescentPedestal_04": {
+   "tris": 166,
+   "lods": {
+    "LOD1": 82,
+    "LOD2": 24
+   },
+   "ok": true,
+   "floor": 15,
+   "location": [
+    10.555,
+    8.417,
+    8.6
+   ]
+  },
+  "PORTAL_DescentPedestal_05": {
+   "tris": 166,
+   "lods": {
+    "LOD1": 82,
+    "LOD2": 24
+   },
+   "ok": true,
+   "floor": 20,
+   "location": [
+    12.567,
+    4.932,
+    8.6
+   ]
+  },
+  "PORTAL_DescentPedestal_06": {
+   "tris": 166,
+   "lods": {
+    "LOD1": 82,
+    "LOD2": 24
+   },
+   "ok": true,
+   "floor": 25,
+   "location": [
+    13.462,
+    1.009,
+    8.6
+   ]
+  },
+  "PORTAL_DescentPedestal_07": {
+   "tris": 166,
+   "lods": {
+    "LOD1": 82,
+    "LOD2": 24
+   },
+   "ok": true,
+   "floor": 30,
+   "location": [
+    13.162,
+    -3.004,
+    8.6
+   ]
+  },
+  "PORTAL_DescentPedestal_08": {
+   "tris": 166,
+   "lods": {
+    "LOD1": 82,
+    "LOD2": 24
+   },
+   "ok": true,
+   "floor": 35,
+   "location": [
+    11.691,
+    -6.75,
+    8.6
+   ]
+  },
+  "PORTAL_DescentPedestal_09": {
+   "tris": 166,
+   "lods": {
+    "LOD1": 82,
+    "LOD2": 24
+   },
+   "ok": true,
+   "floor": 40,
+   "location": [
+    9.182,
+    -9.896,
+    8.6
+   ]
+  },
+  "PORTAL_DescentPedestal_10": {
+   "tris": 166,
+   "lods": {
+    "LOD1": 82,
+    "LOD2": 24
+   },
+   "ok": true,
+   "floor": 45,
+   "location": [
+    5.857,
+    -12.163,
+    8.6
+   ]
+  },
+  "PORTAL_DescentPedestal_11": {
+   "tris": 166,
+   "lods": {
+    "LOD1": 82,
+    "LOD2": 24
+   },
+   "ok": true,
+   "floor": 50,
+   "location": [
+    2.012,
+    -13.349,
+    8.6
+   ]
+  },
+  "PORTAL_DescentPedestal_12": {
+   "tris": 166,
+   "lods": {
+    "LOD1": 82,
+    "LOD2": 24
+   },
+   "ok": true,
+   "floor": 55,
+   "location": [
+    -2.012,
+    -13.349,
+    8.6
+   ]
+  },
+  "PORTAL_DescentPedestal_13": {
+   "tris": 166,
+   "lods": {
+    "LOD1": 82,
+    "LOD2": 24
+   },
+   "ok": true,
+   "floor": 60,
+   "location": [
+    -5.857,
+    -12.163,
+    8.6
+   ]
+  },
+  "PORTAL_DescentPedestal_14": {
+   "tris": 166,
+   "lods": {
+    "LOD1": 82,
+    "LOD2": 24
+   },
+   "ok": true,
+   "floor": 65,
+   "location": [
+    -9.182,
+    -9.896,
+    8.6
+   ]
+  },
+  "PORTAL_DescentPedestal_15": {
+   "tris": 166,
+   "lods": {
+    "LOD1": 82,
+    "LOD2": 24
+   },
+   "ok": true,
+   "floor": 70,
+   "location": [
+    -11.691,
+    -6.75,
+    8.6
+   ]
+  },
+  "PORTAL_DescentPedestal_16": {
+   "tris": 166,
+   "lods": {
+    "LOD1": 82,
+    "LOD2": 24
+   },
+   "ok": true,
+   "floor": 75,
+   "location": [
+    -13.162,
+    -3.004,
+    8.6
+   ]
+  },
+  "PORTAL_DescentPedestal_17": {
+   "tris": 166,
+   "lods": {
+    "LOD1": 82,
+    "LOD2": 24
+   },
+   "ok": true,
+   "floor": 80,
+   "location": [
+    -13.462,
+    1.009,
+    8.6
+   ]
+  },
+  "PORTAL_DescentPedestal_18": {
+   "tris": 166,
+   "lods": {
+    "LOD1": 82,
+    "LOD2": 24
+   },
+   "ok": true,
+   "floor": 85,
+   "location": [
+    -12.567,
+    4.932,
+    8.6
+   ]
+  },
+  "PORTAL_DescentPedestal_19": {
+   "tris": 166,
+   "lods": {
+    "LOD1": 82,
+    "LOD2": 24
+   },
+   "ok": true,
+   "floor": 90,
+   "location": [
+    -10.555,
+    8.417,
+    8.6
+   ]
+  },
+  "PORTAL_DescentPedestal_20": {
+   "tris": 166,
+   "lods": {
+    "LOD1": 82,
+    "LOD2": 24
+   },
+   "ok": true,
+   "floor": 95,
+   "location": [
+    -7.605,
+    11.154,
+    8.6
+   ]
+  },
+  "PORTAL_DescentPedestal_21": {
+   "tris": 166,
+   "lods": {
+    "LOD1": 82,
+    "LOD2": 24
+   },
+   "ok": true,
+   "floor": 100,
+   "location": [
+    -3.979,
+    12.9,
+    8.6
+   ]
+  }
+ },
+ "atrio_runes": {
+  "tris": 1132,
+  "radius_m": 14.85
+ },
+ "collision": [
+  "PORTAL_Pedestal-colonly",
+  "PORTAL_Pillar_E-colonly",
+  "PORTAL_Pillar_W-colonly",
+  "PORTAL_Runestone_01-colonly",
+  "PORTAL_Runestone_02-colonly",
+  "PORTAL_Runestone_03-colonly",
+  "PORTAL_Runestone_04-colonly",
+  "PORTAL_Runestone_05-colonly",
+  "PORTAL_Runestone_06-colonly",
+  "PORTAL_Runestone_07-colonly",
+  "PORTAL_DescentPedestal_01-colonly",
+  "PORTAL_DescentPedestal_02-colonly",
+  "PORTAL_DescentPedestal_03-colonly",
+  "PORTAL_DescentPedestal_04-colonly",
+  "PORTAL_DescentPedestal_05-colonly",
+  "PORTAL_DescentPedestal_06-colonly",
+  "PORTAL_DescentPedestal_07-colonly",
+  "PORTAL_DescentPedestal_08-colonly",
+  "PORTAL_DescentPedestal_09-colonly",
+  "PORTAL_DescentPedestal_10-colonly",
+  "PORTAL_DescentPedestal_11-colonly",
+  "PORTAL_DescentPedestal_12-colonly",
+  "PORTAL_DescentPedestal_13-colonly",
+  "PORTAL_DescentPedestal_14-colonly",
+  "PORTAL_DescentPedestal_15-colonly",
+  "PORTAL_DescentPedestal_16-colonly",
+  "PORTAL_DescentPedestal_17-colonly",
+  "PORTAL_DescentPedestal_18-colonly",
+  "PORTAL_DescentPedestal_19-colonly",
+  "PORTAL_DescentPedestal_20-colonly",
+  "PORTAL_DescentPedestal_21-colonly"
+ ],
+ "over_budget": [],
+ "totals": {
+  "tris_LOD0": 15081
+ },
+ "export": {
+  "file": "export/godot/concordia_portal.glb",
+  "mb": 1.73,
+  "nodes": 120,
+  "meshes": 120,
+  "tris": 24992,
+  "materials": 5,
+  "images": 6,
+  "images_external": 6,
+  "colliders": 31,
+  "navmesh": 0,
+  "occluders": 0,
+  "empties": 0
+ }
+}
