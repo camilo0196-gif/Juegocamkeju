@@ -128,10 +128,29 @@ def clean_mesh(me, terrain=False, seat_bottom=False):
         for f in bm.faces:
             f.tag = False
         bm.normal_update()
-        ref = [f.normal.copy() for f in bm.faces]
-        bmesh.ops.recalc_face_normals(bm, faces=bm.faces[:])
+        ref = {f: f.normal.copy() for f in bm.faces}
+        # solo partes cerradas (todas sus aristas con 2 caras): en las abiertas "fuera" no esta definido
+        seen = set()
+        closed_faces = []
+        for f in bm.faces:
+            if f in seen:
+                continue
+            comp, stack = [], [f]
+            seen.add(f)
+            while stack:
+                g = stack.pop()
+                comp.append(g)
+                for e in g.edges:
+                    for h in e.link_faces:
+                        if h not in seen:
+                            seen.add(h)
+                            stack.append(h)
+            if all(len(e.link_faces) == 2 for g in comp for e in g.edges):
+                closed_faces.extend(comp)
+        if closed_faces:
+            bmesh.ops.recalc_face_normals(bm, faces=closed_faces)
         bm.normal_update()
-        flipped = sum(1 for f, n in zip(bm.faces, ref) if f.normal.dot(n) < -0.5)
+        flipped = sum(1 for f in closed_faces if f.normal.dot(ref[f]) < -0.5)
     _ = before
     bm.to_mesh(me)
     nf1 = len(bm.faces)
@@ -450,7 +469,7 @@ def exterior_chunks(stats, dmap):
                 continue
             src.data.color_attributes.active_color_name = "mask_pack" if "mask_pack" in src.data.color_attributes \
                 else src.data.color_attributes.active_color_name
-            lock, _nb = lock_set(src.data)
+            lock, _nb = lock_set(src.data, sil=(tag == "terrain"))   # acantilados: solo el borde del chunk
             base = src.name[:-5]
             row[tag] = {"LOD0": tris(src.data)}
             tot += tris(src.data)
