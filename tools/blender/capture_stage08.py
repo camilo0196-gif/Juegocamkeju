@@ -64,10 +64,11 @@ def main():
         K.render(scene, cam, P(tag))
         K.annotate(scene, cam, P(tag), f"Desde el balcon del mirador k={k} mirando el exterior: capas de relieve gris", [])
     if want("iso_puerta_sin_salida"):
-        cam = K.iso_at(cam_iso, (0, 214, 2.0), 70.0)
+        cam = K.iso_at(cam_iso, (0, -216, 1.0), 70.0)
         K.render(scene, cam, P("iso_puerta_sin_salida"))
-        K.annotate(scene, cam, P("iso_puerta_sin_salida"), "Puerta Norte por fuera: talud de ceniza, foso seco, sin camino (ortho 70)",
-                   [("foso seco (fondo -1.5)", (0, 217, -1.0)), ("monton de ceniza", (8, 216, 1.5))])
+        K.annotate(scene, cam, P("iso_puerta_sin_salida"), "Puerta Sur por fuera: talud de ceniza, foso seco, sin camino (ortho 70)",
+                   [("talud +6 -> 0", (0, -208, 3.0)), ("foso seco (fondo -1.5)", (14, -217, -1.2)),
+                    ("monton de ceniza", (0, -216, 1.5)), ("dunas 0.5-2 m", (-22, -232, 0.8))])
     if want("cenital_exterior"):
         cam = K.new_cam("TMP_top", ortho=820.0)
         cam.location = (0, 0, 600)

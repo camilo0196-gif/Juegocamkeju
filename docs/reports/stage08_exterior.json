@@ -1,0 +1,268 @@
+{
+ "exterior_mesh": {
+  "rings": 70,
+  "verts": 50413,
+  "tris": 98302,
+  "z_min": -5.51,
+  "z_max": 8.83,
+  "seam_verts_with_TRN_City": 1688
+ },
+ "exterior_masks": {
+  "mask_pack": "RGBA = ash, ash_dark, rock, dune (mas claro)",
+  "verts_rock_gt_0_5": 6592,
+  "verts_dark_gt_0_5": 5412
+ },
+ "exterior_rocks": [
+  {
+   "name": "EXT_Rock_01",
+   "height_m": 17.4,
+   "base_radius_m": 9.7,
+   "layers": 8,
+   "form": "cabezo",
+   "tris": 790,
+   "r": 251.0
+  },
+  {
+   "name": "EXT_Rock_02",
+   "height_m": 17.7,
+   "base_radius_m": 7.6,
+   "layers": 8,
+   "form": "meseta",
+   "tris": 790,
+   "r": 345.7
+  },
+  {
+   "name": "EXT_Rock_03",
+   "height_m": 8.7,
+   "base_radius_m": 9.7,
+   "layers": 4,
+   "form": "meseta",
+   "tris": 406,
+   "r": 247.3
+  },
+  {
+   "name": "EXT_Rock_04",
+   "height_m": 14.9,
+   "base_radius_m": 6.0,
+   "layers": 7,
+   "form": "cabezo",
+   "tris": 694,
+   "r": 314.3
+  },
+  {
+   "name": "EXT_Rock_05",
+   "height_m": 13.2,
+   "base_radius_m": 5.4,
+   "layers": 5,
+   "form": "cabezo",
+   "tris": 502,
+   "r": 316.4
+  },
+  {
+   "name": "EXT_Rock_06",
+   "height_m": 18.0,
+   "base_radius_m": 9.7,
+   "layers": 10,
+   "form": "meseta",
+   "tris": 982,
+   "r": 305.3
+  },
+  {
+   "name": "EXT_Rock_07",
+   "height_m": 10.3,
+   "base_radius_m": 5.8,
+   "layers": 4,
+   "form": "meseta",
+   "tris": 406,
+   "r": 255.1
+  },
+  {
+   "name": "EXT_Rock_08",
+   "height_m": 12.6,
+   "base_radius_m": 8.8,
+   "layers": 5,
+   "form": "meseta",
+   "tris": 502,
+   "r": 254.8
+  },
+  {
+   "name": "EXT_Rock_09",
+   "height_m": 6.9,
+   "base_radius_m": 8.0,
+   "layers": 4,
+   "form": "cabezo",
+   "tris": 406,
+   "r": 264.6
+  },
+  {
+   "name": "EXT_Rock_10",
+   "height_m": 16.1,
+   "base_radius_m": 9.4,
+   "layers": 8,
+   "form": "cabezo",
+   "tris": 790,
+   "r": 331.5
+  },
+  {
+   "name": "EXT_Rock_11",
+   "height_m": 9.0,
+   "base_radius_m": 5.2,
+   "layers": 6,
+   "form": "cabezo",
+   "tris": 598,
+   "r": 274.9
+  },
+  {
+   "name": "EXT_Rock_12",
+   "height_m": 10.3,
+   "base_radius_m": 9.8,
+   "layers": 5,
+   "form": "cabezo",
+   "tris": 502,
+   "r": 274.6
+  },
+  {
+   "name": "EXT_Rock_13",
+   "height_m": 15.0,
+   "base_radius_m": 9.5,
+   "layers": 6,
+   "form": "cabezo",
+   "tris": 598,
+   "r": 339.0
+  },
+  {
+   "name": "EXT_Rock_14",
+   "height_m": 17.7,
+   "base_radius_m": 8.9,
+   "layers": 7,
+   "form": "cabezo",
+   "tris": 694,
+   "r": 335.7
+  },
+  {
+   "name": "EXT_Rock_15",
+   "height_m": 19.7,
+   "base_radius_m": 5.2,
+   "layers": 8,
+   "form": "meseta",
+   "tris": 790,
+   "r": 317.5
+  },
+  {
+   "name": "EXT_Rock_16",
+   "height_m": 10.4,
+   "base_radius_m": 7.1,
+   "layers": 5,
+   "form": "cabezo",
+   "tris": 502,
+   "r": 352.5
+  },
+  {
+   "name": "EXT_Rock_17",
+   "height_m": 7.8,
+   "base_radius_m": 5.2,
+   "layers": 4,
+   "form": "cabezo",
+   "tris": 406,
+   "r": 257.4
+  }
+ ],
+ "exterior_cliffs": {
+  "r": [
+   380.0,
+   400.0
+  ],
+  "height_m": [
+   27.9,
+   37.0
+  ],
+  "strata": 9,
+  "segments": 720,
+  "tris": 27360,
+  "closed": true
+ },
+ "exterior_features": {
+  "wash": {
+   "width_m": [
+    15.0,
+    25.0
+   ],
+   "depth_m": [
+    4.0,
+    6.0
+   ],
+   "length_m": 1113.0,
+   "from_to_deg": [
+    150,
+    -40
+   ]
+  },
+  "craters": [
+   {
+    "D_m": 22.5,
+    "r": 263.7
+   },
+   {
+    "D_m": 23.8,
+    "r": 269.3
+   },
+   {
+    "D_m": 26.0,
+    "r": 284.7
+   },
+   {
+    "D_m": 24.4,
+    "r": 291.4
+   },
+   {
+    "D_m": 27.4,
+    "r": 323.9
+   },
+   {
+    "D_m": 16.5,
+    "r": 348.5
+   }
+  ],
+  "rocks": 17,
+  "moat": {
+   "r": [
+    212.0,
+    222.0
+   ],
+   "bottom_z": -1.5
+  },
+  "dunes": {
+   "band_r": [
+    212.5,
+    250.0
+   ],
+   "h_m": [
+    0.5,
+    2.0
+   ],
+   "gate_heaps_m": 2.0
+  },
+  "no_paths": "sin senderos, puentes ni rampas (las puertas dan al talud + montones de ceniza)"
+ },
+ "exterior_chunks": {
+  "count": 204,
+  "budget_exterior_per_chunk": 8000,
+  "lod0_max": 1319,
+  "lod0_avg": 591,
+  "over_budget": [],
+  "lod_totals": {
+   "LOD0": 120498,
+   "LOD1": 60372,
+   "LOD2": 25218
+  },
+  "export": "export/godot/concordia_exterior.glb",
+  "bytes": 9420820,
+  "verify": {
+   "objects": 630,
+   "empties": 0,
+   "tris": 243806,
+   "meshes_with_color0": 630
+  }
+ },
+ "time_s": 73.0
+}
