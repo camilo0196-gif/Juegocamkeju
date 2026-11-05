@@ -37,13 +37,15 @@ def main():
     xs = [1000 + (i % 6) * 1.5 for i in range(len(names))]
     ys = [1000 + (i // 6) * 1.5 for i in range(len(names))]
     cam = K.new_cam("TMP_spheres", ortho=10.5)
-    cam.rotation_euler = (1.38, 0, 0)
+    cam.rotation_euler = (0.5, 0, 0)
     c = Vector((sum(xs) / len(xs), sum(ys) / len(ys), 0.5))
     d = cam.rotation_euler.to_matrix() @ Vector((0, 0, -1))
     cam.location = c - d * 40
     K.render(scene, cam, P("materiales_esferas"))
     K.annotate(scene, cam, P("materiales_esferas"), "Materiales de Concordia - esfera de 1 m por material (UV de mundo)",
                [(n[4:], (x, y, 1.08)) for n, x, y in zip(names, xs, ys)])
+    if "--" in sys.argv and "esferas" in sys.argv[-1]:
+        return
     cam_iso = bpy.data.objects[C.CAM_ISO_NAME]
     cam = K.iso_at(cam_iso, C.CAM_ISO_TARGET, 460.0)
     K.render(scene, cam, P("iso_ciudad"))
