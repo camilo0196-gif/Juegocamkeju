@@ -1031,6 +1031,18 @@ def street_material(base_builder):
         c = mix(is_t(4), c, "#C9C0AC")                        # losas (plazoletas, fuente)
         c = mix(is_t(3), c, "#8B7457")                        # tierra apisonada
         c = mix(mathn("MULTIPLY", is_t(5), 0.55), c, "#B7A88C")   # plataforma de parcela (suelo preparado)
+        c = mix(is_t(6), c, "#6E7449")                        # jardin (Moradas, etapa 06)
+        # muros de contencion: piedra (StoneWall02, proyeccion de caja, 1 m = 1 tile) por retaining_mask
+        wall = ML.make_material("MAT_StoneWall_Retaining", "StoneWall02")
+        wall.use_fake_user = True
+        tw = N.new("ShaderNodeTexImage")
+        tw.image = wall.node_tree.nodes["Albedo"].image
+        tw.projection = "BOX"
+        tw.projection_blend = 0.2
+        Ln.new(mp.outputs["Vector"], tw.inputs["Vector"])
+        wall_col = mix(1.0, tw.outputs["Color"], "#C9BFA8", "MULTIPLY")
+        wall_col = mix(1.0, wall_col, aoa.outputs["Color"], "MULTIPLY")
+        c = mix(attr("retaining_mask"), c, wall_col)
         ao = None
         for lk in list(bsdf.inputs["Base Color"].links):
             ao = lk
