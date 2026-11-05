@@ -81,7 +81,7 @@
   "hue_saturation_value": {
    "hue": 0.5331,
    "saturation": 0.5293,
-   "value": 2.0767,
+   "value": 2.0763,
    "fac": 1.0,
    "note": "nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo"
   },
@@ -92,6 +92,17 @@
    0.138
   ],
   "sat_cap_p95": 0.22,
+  "lowfreq_flatten": null,
+  "luma_softclip_pct": [
+   [
+    2.0,
+    98.5
+   ],
+   [
+    0.252,
+    0.377
+   ]
+  ],
   "orm_channels": {
    "R": "AO de Poly Haven",
    "G": "roughness (0.75, 0.93)",
@@ -134,9 +145,9 @@
   "orm": "textures/concordia/MAT_Cobble_Concordia/concordia_cobble_concordia_orm.png",
   "normal": "textures/concordia/polyhaven_src/cobblestone_floor_001/cobblestone_floor_001_nor_gl_2k.jpg",
   "hue_saturation_value": {
-   "hue": 0.4786,
+   "hue": 0.4787,
    "saturation": 0.816,
-   "value": 1.4214,
+   "value": 1.4216,
    "fac": 1.0,
    "note": "nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo"
   },
@@ -147,6 +158,13 @@
    0.114
   ],
   "sat_cap_p95": 0.24,
+  "lowfreq_flatten": {
+   "strength": 0.6,
+   "sigma_frac_tile": 0.08,
+   "lowfreq_contrast_before": 0.03,
+   "lowfreq_contrast_after": 0.017
+  },
+  "luma_softclip_pct": null,
   "orm_channels": {
    "R": "1.0",
    "G": "roughness (0.72, 0.94)",
@@ -204,6 +222,8 @@
    0.1
   ],
   "sat_cap_p95": 0.16,
+  "lowfreq_flatten": null,
+  "luma_softclip_pct": null,
   "orm_channels": {
    "R": "AO de Poly Haven",
    "G": "roughness (0.76, 0.94)",
@@ -261,6 +281,8 @@
    0.15
   ],
   "sat_cap_p95": 0.22,
+  "lowfreq_flatten": null,
+  "luma_softclip_pct": null,
   "orm_channels": {
    "R": "AO de Poly Haven",
    "G": "roughness (0.74, 0.94)",
@@ -268,10 +290,10 @@
   }
  },
  "MAT_Wall_Gray": {
-  "asset": "castle_wall_slates",
-  "id": "castle_wall_slates",
-  "name": "Castle Wall Slates",
-  "url": "https://polyhaven.com/a/castle_wall_slates",
+  "asset": "castle_wall_varriation",
+  "id": "castle_wall_varriation",
+  "name": "Castle Wall Variation",
+  "url": "https://polyhaven.com/a/castle_wall_varriation",
   "authors": [
    "Rob Tuytel"
   ],
@@ -282,42 +304,58 @@
    2048
   ],
   "dimensions_m": [
-   2.5,
-   2.5
+   2.0,
+   2.0
   ],
   "uv_scale": [
-   0.4,
-   0.4
+   0.5,
+   0.5
   ],
   "source_files": {
-   "Diffuse": "textures/concordia/polyhaven_src/castle_wall_slates/castle_wall_slates_Diffuse_2k.jpg",
-   "nor_gl": "textures/concordia/polyhaven_src/castle_wall_slates/castle_wall_slates_nor_gl_2k.jpg",
-   "Rough": "textures/concordia/polyhaven_src/castle_wall_slates/castle_wall_slates_Rough_2k.jpg",
-   "AO": "textures/concordia/polyhaven_src/castle_wall_slates/castle_wall_slates_AO_2k.jpg"
+   "Diffuse": "textures/concordia/polyhaven_src/castle_wall_varriation/castle_wall_varriation_Diffuse_2k.jpg",
+   "nor_gl": "textures/concordia/polyhaven_src/castle_wall_varriation/castle_wall_varriation_nor_gl_2k.jpg",
+   "Rough": "textures/concordia/polyhaven_src/castle_wall_varriation/castle_wall_varriation_Rough_2k.jpg",
+   "AO": "textures/concordia/polyhaven_src/castle_wall_varriation/castle_wall_varriation_AO_2k.jpg"
   },
   "source_urls": {
-   "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/castle_wall_slates/castle_wall_slates_diff_2k.jpg",
-   "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/castle_wall_slates/castle_wall_slates_nor_gl_2k.jpg",
-   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/castle_wall_slates/castle_wall_slates_rough_2k.jpg",
-   "AO": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/castle_wall_slates/castle_wall_slates_ao_2k.jpg"
+   "Diffuse": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/castle_wall_varriation/castle_wall_varriation_diff_2k.jpg",
+   "nor_gl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/castle_wall_varriation/castle_wall_varriation_nor_gl_2k.jpg",
+   "Rough": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/castle_wall_varriation/castle_wall_varriation_rough_2k.jpg",
+   "AO": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/castle_wall_varriation/castle_wall_varriation_ao_2k.jpg"
   },
   "albedo": "textures/concordia/MAT_Wall_Gray/concordia_wall_gray_albedo.png",
   "orm": "textures/concordia/MAT_Wall_Gray/concordia_wall_gray_orm.png",
-  "normal": "textures/concordia/polyhaven_src/castle_wall_slates/castle_wall_slates_nor_gl_2k.jpg",
+  "normal": "textures/concordia/polyhaven_src/castle_wall_varriation/castle_wall_varriation_nor_gl_2k.jpg",
   "hue_saturation_value": {
-   "hue": 0.5076,
-   "saturation": 0.1471,
-   "value": 1.0137,
+   "hue": 0.5033,
+   "saturation": 0.1776,
+   "value": 1.025,
    "fac": 1.0,
    "note": "nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo"
   },
   "albedo_target_mean": "#8C8A85",
-  "albedo_result_mean": "#8C8A87",
+  "albedo_result_mean": "#8C8A86",
   "sat_p95_mean": [
    0.08,
-   0.042
+   0.041
   ],
   "sat_cap_p95": 0.08,
+  "lowfreq_flatten": {
+   "strength": 0.7,
+   "sigma_frac_tile": 0.08,
+   "lowfreq_contrast_before": 0.03,
+   "lowfreq_contrast_after": 0.015
+  },
+  "luma_softclip_pct": [
+   [
+    3.0,
+    96.0
+   ],
+   [
+    0.318,
+    0.777
+   ]
+  ],
   "orm_channels": {
    "R": "AO de Poly Haven",
    "G": "roughness (0.78, 0.95)",
@@ -375,6 +413,13 @@
    0.171
   ],
   "sat_cap_p95": 0.24,
+  "lowfreq_flatten": {
+   "strength": 0.8,
+   "sigma_frac_tile": 0.08,
+   "lowfreq_contrast_before": 0.009,
+   "lowfreq_contrast_after": 0.004
+  },
+  "luma_softclip_pct": null,
   "orm_channels": {
    "R": "AO de Poly Haven",
    "G": "roughness (0.8, 0.95)",
@@ -421,7 +466,7 @@
   "hue_saturation_value": {
    "hue": 0.5,
    "saturation": 0.0,
-   "value": 1.0196,
+   "value": 1.0221,
    "fac": 1.0,
    "note": "nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo"
   },
@@ -432,6 +477,13 @@
    0.0
   ],
   "sat_cap_p95": 0.0,
+  "lowfreq_flatten": {
+   "strength": 0.9,
+   "sigma_frac_tile": 0.08,
+   "lowfreq_contrast_before": 0.087,
+   "lowfreq_contrast_after": 0.033
+  },
+  "luma_softclip_pct": null,
   "orm_channels": {
    "R": "AO de Poly Haven",
    "G": "roughness (0.82, 0.95)",
@@ -489,6 +541,13 @@
    0.0
   ],
   "sat_cap_p95": 0.0,
+  "lowfreq_flatten": {
+   "strength": 0.9,
+   "sigma_frac_tile": 0.08,
+   "lowfreq_contrast_before": 0.01,
+   "lowfreq_contrast_after": 0.003
+  },
+  "luma_softclip_pct": null,
   "orm_channels": {
    "R": "AO de Poly Haven",
    "G": "roughness (0.82, 0.95)",
@@ -536,7 +595,7 @@
   "hue_saturation_value": {
    "hue": 0.5,
    "saturation": 0.0,
-   "value": 0.6558,
+   "value": 0.6565,
    "fac": 1.0,
    "note": "nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo"
   },
@@ -547,6 +606,13 @@
    0.0
   ],
   "sat_cap_p95": 0.0,
+  "lowfreq_flatten": {
+   "strength": 0.9,
+   "sigma_frac_tile": 0.08,
+   "lowfreq_contrast_before": 0.052,
+   "lowfreq_contrast_after": 0.016
+  },
+  "luma_softclip_pct": null,
   "orm_channels": {
    "R": "AO de Poly Haven",
    "G": "roughness (0.8, 0.95)",
@@ -593,7 +659,7 @@
   "hue_saturation_value": {
    "hue": 0.498,
    "saturation": 0.3979,
-   "value": 1.1781,
+   "value": 1.1783,
    "fac": 1.0,
    "note": "nodo Hue/Saturation de Blender (hue 0.5 = sin giro), aplicado en sRGB y horneado en el albedo"
   },
@@ -604,6 +670,17 @@
    0.143
   ],
   "sat_cap_p95": 0.2,
+  "lowfreq_flatten": null,
+  "luma_softclip_pct": [
+   [
+    2.0,
+    98.0
+   ],
+   [
+    0.271,
+    0.537
+   ]
+  ],
   "orm_channels": {
    "R": "AO de Poly Haven",
    "G": "roughness (0.8, 0.95)",
@@ -662,6 +739,8 @@
    0.265
   ],
   "sat_cap_p95": 0.35,
+  "lowfreq_flatten": null,
+  "luma_softclip_pct": null,
   "orm_channels": {
    "R": "AO de Poly Haven",
    "G": "roughness (0.72, 0.9)",
@@ -719,6 +798,8 @@
    0.261
   ],
   "sat_cap_p95": 0.4,
+  "lowfreq_flatten": null,
+  "luma_softclip_pct": null,
   "orm_channels": {
    "R": "AO de Poly Haven",
    "G": "roughness (0.7, 0.9)",
@@ -778,6 +859,8 @@
    0.061
   ],
   "sat_cap_p95": 0.08,
+  "lowfreq_flatten": null,
+  "luma_softclip_pct": null,
   "orm_channels": {
    "R": "AO de Poly Haven",
    "G": "roughness (0.33, 0.47)",
@@ -838,6 +921,8 @@
    0.0
   ],
   "sat_cap_p95": 0.0,
+  "lowfreq_flatten": null,
+  "luma_softclip_pct": null,
   "orm_channels": {
    "R": "AO de Poly Haven",
    "G": "roughness (0.84, 0.95)",
@@ -898,6 +983,8 @@
    0.0
   ],
   "sat_cap_p95": 0.0,
+  "lowfreq_flatten": null,
+  "luma_softclip_pct": null,
   "orm_channels": {
    "R": "AO de Poly Haven",
    "G": "roughness (0.84, 0.95)",
@@ -960,6 +1047,8 @@
    0.0
   ],
   "sat_cap_p95": 0.0,
+  "lowfreq_flatten": null,
+  "luma_softclip_pct": null,
   "orm_channels": {
    "R": "AO de Poly Haven",
    "G": "roughness (0.84, 0.95)",
@@ -1022,6 +1111,8 @@
    0.0
   ],
   "sat_cap_p95": 0.0,
+  "lowfreq_flatten": null,
+  "luma_softclip_pct": null,
   "orm_channels": {
    "R": "AO de Poly Haven",
    "G": "roughness (0.84, 0.95)",

@@ -1,7 +1,7 @@
 {
  "timings_s": {
-  "apply": 46.5,
-  "export": 215.1
+  "apply": 46.4,
+  "export": 219.2
  },
  "procedural_png": {
   "MAT_Shard_Blue": {
@@ -85,16 +85,16 @@
  "city": {
   "faces": 450420,
   "rock_faces": 14405,
-  "ash_faces": 12293,
+  "ash_faces": 14267,
   "rock_inside_wall": 436,
   "rock_on_exterior_talud": 13969,
   "retaining_faces": 13487,
   "retaining_repair_faces": 2428,
   "retaining_repair_pct": 18.0,
   "dither": {
-   "band1_faces": 18116,
-   "band2_faces": 13608,
-   "faces_switched": 9090
+   "band1_faces": 18382,
+   "band2_faces": 14116,
+   "faces_switched": 9267
   },
   "qa": {
    "protected_faces": 297692,
@@ -109,26 +109,26 @@
    "note": "terrazas, jardines y parcelas son 'protegidas' pero llevan MAT_Ground_Cracked (suelo de ciudad)"
   },
   "assign_threshold": {
-   "MAT_Ground_Cracked": 252873,
+   "MAT_Ground_Cracked": 250899,
    "MAT_Limestone_Worn": 11059,
    "MAT_Cobble_Concordia": 106992,
    "MAT_Plaza_Slab": 41314,
    "MAT_Plaza_Slab_Travertino": 2508,
    "MAT_Wall_Gray": 6288,
-   "MAT_Ash_Gray": 12293,
+   "MAT_Ash_Gray": 14267,
    "MAT_Stone_Repair": 2688,
    "MAT_Rock_Gray": 14405
   },
   "assign_final": {
-   "MAT_Ground_Cracked": 252311,
+   "MAT_Ground_Cracked": 250285,
    "MAT_Limestone_Worn": 11059,
    "MAT_Cobble_Concordia": 106992,
    "MAT_Plaza_Slab": 41314,
    "MAT_Plaza_Slab_Travertino": 2508,
    "MAT_Wall_Gray": 6288,
-   "MAT_Ash_Gray": 12155,
+   "MAT_Ash_Gray": 14180,
    "MAT_Stone_Repair": 2688,
-   "MAT_Rock_Gray": 15105
+   "MAT_Rock_Gray": 15106
   }
  },
  "exterior": {
@@ -225,16 +225,16 @@
   "MAT_Wall_Gray": {
    "albedo": "textures/concordia/MAT_Wall_Gray/concordia_wall_gray_albedo.png",
    "orm": "textures/concordia/MAT_Wall_Gray/concordia_wall_gray_orm.png",
-   "normal": "textures/concordia/polyhaven_src/castle_wall_slates/castle_wall_slates_nor_gl_2k.jpg",
+   "normal": "textures/concordia/polyhaven_src/castle_wall_varriation/castle_wall_varriation_nor_gl_2k.jpg",
    "uv_scale": [
-    0.4,
-    0.4
+    0.5,
+    0.5
    ],
    "kind": "polyhaven",
-   "asset": "castle_wall_slates",
+   "asset": "castle_wall_varriation",
    "dims": [
-    2.5,
-    2.5
+    2.0,
+    2.0
    ],
    "res": "2k"
   },
@@ -481,7 +481,7 @@
     "vram_mb": 2.67,
     "vram_bc7_mb": 5.33,
     "rgba8_mb": 21.33,
-    "disk_mb": 7.27
+    "disk_mb": 7.26
    },
    {
     "file": "textures/concordia/MAT_Limestone_Worn/concordia_limestone_worn_orm.png",
@@ -517,7 +517,7 @@
     "vram_mb": 2.67,
     "vram_bc7_mb": 5.33,
     "rgba8_mb": 21.33,
-    "disk_mb": 8.43
+    "disk_mb": 8.44
    },
    {
     "file": "textures/concordia/MAT_Cobble_Concordia/concordia_cobble_concordia_orm.png",
@@ -625,7 +625,7 @@
     "vram_mb": 2.67,
     "vram_bc7_mb": 5.33,
     "rgba8_mb": 21.33,
-    "disk_mb": 6.32
+    "disk_mb": 6.63
    },
    {
     "file": "textures/concordia/MAT_Wall_Gray/concordia_wall_gray_orm.png",
@@ -637,10 +637,10 @@
     "vram_mb": 2.67,
     "vram_bc7_mb": 5.33,
     "rgba8_mb": 21.33,
-    "disk_mb": 5.27
+    "disk_mb": 5.14
    },
    {
-    "file": "textures/concordia/polyhaven_src/castle_wall_slates/castle_wall_slates_nor_gl_2k.jpg",
+    "file": "textures/concordia/polyhaven_src/castle_wall_varriation/castle_wall_varriation_nor_gl_2k.jpg",
     "role": "Normal",
     "px": [
      2048,
@@ -649,7 +649,7 @@
     "vram_mb": 5.33,
     "vram_bc7_mb": 5.33,
     "rgba8_mb": 21.33,
-    "disk_mb": 3.87
+    "disk_mb": 3.37
    },
    {
     "file": "textures/concordia/MAT_Wood_Dark/concordia_wood_dark_albedo.png",
@@ -805,7 +805,7 @@
     "vram_mb": 2.67,
     "vram_bc7_mb": 5.33,
     "rgba8_mb": 21.33,
-    "disk_mb": 4.78
+    "disk_mb": 4.82
    },
    {
     "file": "textures/concordia/MAT_Ash_Gray/concordia_ash_gray_orm.png",
@@ -961,7 +961,7 @@
     "vram_mb": 2.67,
     "vram_bc7_mb": 5.33,
     "rgba8_mb": 21.33,
-    "disk_mb": 7.37
+    "disk_mb": 7.36
    },
    {
     "file": "textures/concordia/MAT_Ground_Cracked/concordia_ground_cracked_orm.png",
@@ -997,7 +997,7 @@
     "vram_mb": 2.67,
     "vram_bc7_mb": 5.33,
     "rgba8_mb": 21.33,
-    "disk_mb": 3.19
+    "disk_mb": 3.21
    },
    {
     "file": "textures/concordia/MAT_Rock_Gray/concordia_rock_gray_orm.png",
@@ -1033,7 +1033,7 @@
     "vram_mb": 2.67,
     "vram_bc7_mb": 5.33,
     "rgba8_mb": 21.33,
-    "disk_mb": 7.37
+    "disk_mb": 7.36
    },
    {
     "file": "textures/concordia/MAT_Stone_Repair/concordia_stone_repair_orm.png",
@@ -1101,7 +1101,7 @@
    "vram_mb": 152.1,
    "vram_bc7_mb": 229.2,
    "rgba8_mb": 917.2,
-   "disk_mb": 154.0
+   "disk_mb": 153.7
   },
   "assumption": "Godot 4 importacion 'VRAM Compressed' (escritorio): albedo/ORM/emision BC1 0.5 B/px, normal BC5 1 B/px, mipmaps x4/3; vram_bc7_mb = peor caso con calidad alta (BC7) en todo"
  },
@@ -1544,7 +1544,7 @@
   },
   "export": {
    "terrain_glb": "export/godot/concordia_terrain.glb",
-   "terrain_bytes": 37588564,
+   "terrain_bytes": 37590524,
    "structures_glb": "export/godot/concordia_terrain_structures.glb",
    "structures_bytes": 1971936,
    "verify_terrain": {
@@ -1624,9 +1624,9 @@
   }
  },
  "wall_reexport": {
-  "concordia_wall_kit.glb": 1662940,
-  "concordia_wall_layout.glb": 1012664,
-  "concordia_wall_kit_lods.glb": 695908
+  "concordia_wall_kit.glb": 1662948,
+  "concordia_wall_layout.glb": 1012676,
+  "concordia_wall_kit_lods.glb": 695920
  },
  "material_library_gltf": "export/godot/materials/concordia_materials.gltf",
  "material_library_check": {
@@ -1665,7 +1665,7 @@
   "MAT_Wall_Gray": {
    "baseColor": "../../../textures/concordia/MAT_Wall_Gray/concordia_wall_gray_albedo.png",
    "orm_shared": true,
-   "normal": "../../../textures/concordia/polyhaven_src/castle_wall_slates/castle_wall_slates_nor_gl_2k.jpg",
+   "normal": "../../../textures/concordia/polyhaven_src/castle_wall_varriation/castle_wall_varriation_nor_gl_2k.jpg",
    "baseColorFactor": null,
    "texture_transform": true,
    "emissive_strength": null
