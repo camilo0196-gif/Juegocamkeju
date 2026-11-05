@@ -1,0 +1,497 @@
+{
+ "saved_before": "blender/concordia_v16.blend",
+ "materials": {
+  "MAT_Limestone_Light": {
+   "albedo": "textures/concordia/MAT_Limestone_Light/concordia_limestone_light_albedo.png",
+   "mean_srgb_before": 0.716,
+   "mean_srgb_after": 0.824
+  },
+  "MAT_Stained_Glass_Blue": "creado",
+  "MAT_Bronze_Aged": "creado"
+ },
+ "SANTUARIO": {
+  "marker": "MARKER_Santuario",
+  "location": [
+   -49.497,
+   49.497,
+   7.597
+  ],
+  "rot_z_deg": 225.0,
+  "door_world_dir": [
+   0.707,
+   -0.707,
+   0.0
+  ],
+  "tris": {
+   "Body": 5330,
+   "Roof": 680,
+   "Props": 176,
+   "Well": 290,
+   "total": 6476
+  },
+  "budget": 8000,
+  "ok": true,
+  "lods": {
+   "Body": {
+    "LOD1": 2664,
+    "LOD2": 799
+   },
+   "Roof": {
+    "LOD1": 340,
+    "LOD2": 102
+   }
+  },
+  "dims": {
+   "footprint": [
+    16.0,
+    12.0
+   ],
+   "walls_outer": [
+    15.0,
+    10.8
+   ],
+   "shoulders_m": 9.0,
+   "parapet_top_m": 9.6,
+   "ridge_m": 14.0,
+   "roof_pitch_deg": 44.7,
+   "fleche_apex_m": 19.0,
+   "finial_top_m": 19.55,
+   "windows": "9 x (1.4 x 6.0) en los lados largos (4 delante + 5 detras) + 4 lancetas 1.0 x 4.6 + 2 rosetones 3.0 + oculo 1.1 sobre la puerta",
+   "door": "1.8 x 3.6 doble hoja"
+  },
+  "repairs": {
+   "stone_patches": [
+    [
+     3.61,
+     2.35
+    ],
+    [
+     3.53,
+     1.86
+    ]
+   ],
+   "roof_tile_patches": [
+    [
+     -2.88,
+     -1.8,
+     -1
+    ],
+    [
+     -6.66,
+     -5.34,
+     -1
+    ],
+    [
+     -5.61,
+     -4.12,
+     -1
+    ],
+    [
+     -4.1,
+     -2.73,
+     1
+    ]
+   ],
+   "replaced_beams": "postes [0, 1] de la linterna de la flecha"
+  },
+  "footprint_check_body": {
+   "x": [
+    -8.0,
+    8.0
+   ],
+   "y": [
+    -6.0,
+    6.12
+   ],
+   "over_x_m": 0.0,
+   "over_y_m": 0.12
+  },
+  "door_marker": [
+   "MARKER_Santuario_Door",
+   [
+    0.0,
+    6.0,
+    0.0
+   ]
+  ],
+  "interior": [
+   "Santuario_InteriorVolume",
+   [
+    13.8,
+    9.6,
+    9.0
+   ]
+  ],
+  "collision": "SANTUARIO-colonly",
+  "props": [
+   "SANTUARIO_Prop_LANTERN_Shard_00",
+   "SANTUARIO_Prop_LANTERN_Shard_01"
+  ],
+  "well": "SANTUARIO_Well"
+ },
+ "SALON_HAZANAS": {
+  "marker": "MARKER_SalonHazanas",
+  "location": [
+   50.912,
+   -50.912,
+   7.604
+  ],
+  "rot_z_deg": 45.0,
+  "door_world_dir": [
+   -0.707,
+   0.707,
+   0.0
+  ],
+  "tris": {
+   "Body": 8476,
+   "Roof": 2742,
+   "Props": 1368,
+   "total": 12586
+  },
+  "budget": 14000,
+  "ok": true,
+  "lods": {
+   "Body": {
+    "LOD1": 4237,
+    "LOD2": 1271
+   },
+   "Roof": {
+    "LOD1": 1370,
+    "LOD2": 411
+   }
+  },
+  "props_unique_meshes": {
+   "SALON_Statue_A": 130,
+   "SALON_Statue_B": 114,
+   "SALON_Plaque": 74
+  },
+  "dims": {
+   "footprint": [
+    42.0,
+    16.0
+   ],
+   "walls_outer": [
+    40.4,
+    14.2
+   ],
+   "walls_m": 8.0,
+   "ridge_m": 15.0,
+   "roof": {
+    "pitch_main_deg": 44.6,
+    "pitch_cross_deg": 50.0,
+    "cross_gable_apex_z": 14.29,
+    "valley": [
+     [
+      3.6,
+      5.07,
+      10.0
+     ],
+     [
+      0,
+      0.72,
+      14.29
+     ]
+    ],
+    "lantern_top_z": 19.8,
+    "roof_repairs": [
+     [
+      8.29,
+      9.61,
+      1
+     ],
+     [
+      -9.28,
+      -8.36,
+      1
+     ]
+    ]
+   },
+   "buttresses_every_m": 6.0,
+   "windows_per_side": 6,
+   "window": "1.8 x 4.2",
+   "portal": "3.2 x 6.0 (arquivolta 4.0)",
+   "big_window": "2.4 x 4.4",
+   "cross_gable": "7.2 m de ancho, alero 10.0, clave 14.29"
+  },
+  "niches": [
+   [
+    "+Y",
+    [
+     -9.0,
+     0.72,
+     1.4
+    ]
+   ],
+   [
+    "+Y",
+    [
+     9.0,
+     0.72,
+     1.4
+    ]
+   ],
+   [
+    "-Y",
+    [
+     -9.0,
+     0.72,
+     1.4
+    ]
+   ],
+   [
+    "-Y",
+    [
+     9.0,
+     0.72,
+     1.4
+    ]
+   ],
+   [
+    "+X",
+    [
+     -4.2,
+     0.2,
+     2.0
+    ]
+   ],
+   [
+    "+X",
+    [
+     4.2,
+     0.2,
+     2.0
+    ]
+   ],
+   [
+    "-X",
+    [
+     -4.2,
+     0.2,
+     2.0
+    ]
+   ],
+   [
+    "-X",
+    [
+     4.2,
+     0.2,
+     2.0
+    ]
+   ],
+   [
+    "+Y_front",
+    [
+     -2.8,
+     -0.25,
+     2.0
+    ]
+   ],
+   [
+    "+Y_front",
+    [
+     2.8,
+     -0.25,
+     2.0
+    ]
+   ]
+  ],
+  "hammer_ends": [
+   [
+    "+Y",
+    -15.0
+   ],
+   [
+    "+Y",
+    -9.0
+   ],
+   [
+    "+Y",
+    9.0
+   ],
+   [
+    "+Y",
+    15.0
+   ],
+   [
+    "-Y",
+    -15.0
+   ],
+   [
+    "-Y",
+    -9.0
+   ],
+   [
+    "-Y",
+    -3.0
+   ],
+   [
+    "-Y",
+    3.0
+   ],
+   [
+    "-Y",
+    9.0
+   ],
+   [
+    "-Y",
+    15.0
+   ]
+  ],
+  "repairs": {
+   "stone_patches": [
+    [
+     17.84,
+     2.09
+    ],
+    [
+     -17.02,
+     2.3
+    ]
+   ],
+   "roof_tile_patches": [
+    [
+     8.29,
+     9.61,
+     1
+    ],
+    [
+     -9.28,
+     -8.36,
+     1
+    ]
+   ],
+   "replaced_beams": [
+    [
+     "-Y",
+     9.0
+    ],
+    [
+     "-Y",
+     15.0
+    ]
+   ]
+  },
+  "footprint_check_body": {
+   "x": [
+    -21.0,
+    21.0
+   ],
+   "y": [
+    -8.08,
+    8.16
+   ],
+   "over_x_m": 0.0,
+   "over_y_m": 0.16
+  },
+  "door_marker": [
+   "MARKER_SalonHazanas_Door",
+   [
+    0.0,
+    8.0,
+    0.0
+   ]
+  ],
+  "interior": [
+   "SalonHazanas_InteriorVolume",
+   [
+    38.6,
+    12.4,
+    8.0
+   ]
+  ],
+  "collision": "SALON_HAZANAS-colonly",
+  "props": 12
+ },
+ "iso_occlusion": {
+  "SANTUARIO": {
+   "walkable_cells_within_45m": 2820,
+   "hidden_m2": 118,
+   "hidden_pct": 4.2,
+   "hidden_radius_from_plaza_center_m": [
+    76.4,
+    91.2
+   ],
+   "hidden_side": "detras (-Y)",
+   "hidden_max_dist_from_building_m": 15.2
+  },
+  "SALON_HAZANAS": {
+   "walkable_cells_within_45m": 2721,
+   "hidden_m2": 241,
+   "hidden_pct": 8.9,
+   "hidden_radius_from_plaza_center_m": [
+    43.1,
+    62.9
+   ],
+   "hidden_side": "delante (+Y, hacia la plaza)",
+   "hidden_max_dist_from_building_m": 20.9
+  }
+ },
+ "faro_visibility_after": {
+  "Avenida Norte": {
+   "pct": 100.0,
+   "samples": 17,
+   "blocked_by": {}
+  },
+  "Avenida Sur": {
+   "pct": 100.0,
+   "samples": 17,
+   "blocked_by": {}
+  },
+  "Avenida Este": {
+   "pct": 100.0,
+   "samples": 17,
+   "blocked_by": {}
+  },
+  "Avenida Oeste": {
+   "pct": 100.0,
+   "samples": 17,
+   "blocked_by": {}
+  },
+  "Ronda r100": {
+   "pct": 88.9,
+   "samples": 36,
+   "blocked_by": {
+    "SALON_HAZANAS_Body": 2,
+    "SANTUARIO_Body": 1,
+    "TRN_Bridge_03": 1
+   }
+  },
+  "Ronda r150": {
+   "pct": 94.6,
+   "samples": 56,
+   "blocked_by": {
+    "TRN_ArchBridge_02": 1,
+    "TRN_ArchBridge_03": 1,
+    "TRN_ArchBridge_04": 1
+   }
+  }
+ },
+ "export": {
+  "concordia_santuario.glb": {
+   "mb": 0.75,
+   "nodes": 14,
+   "meshes": 10,
+   "tris": 10273,
+   "materials": 9,
+   "images": 21,
+   "images_external": 21,
+   "colliders": 1,
+   "navmesh": 0,
+   "occluders": 0,
+   "empties": 3
+  },
+  "concordia_salon_hazanas.glb": {
+   "mb": 1.29,
+   "nodes": 23,
+   "meshes": 11,
+   "tris": 18777,
+   "materials": 9,
+   "images": 18,
+   "images_external": 18,
+   "colliders": 1,
+   "navmesh": 0,
+   "occluders": 0,
+   "empties": 3
+  }
+ }
+}
