@@ -1032,6 +1032,7 @@ def street_material(base_builder):
         c = mix(is_t(3), c, "#8B7457")                        # tierra apisonada
         c = mix(mathn("MULTIPLY", is_t(5), 0.55), c, "#B7A88C")   # plataforma de parcela (suelo preparado)
         c = mix(is_t(6), c, "#6E7449")                        # jardin (Moradas, etapa 06)
+        c = mix(is_t(7), c, "#3B3A32")                        # lecho y muros del Cauce (etapa 07)
         # muros de contencion: piedra (StoneWall02, proyeccion de caja, 1 m = 1 tile) por retaining_mask
         wall = ML.make_material("MAT_StoneWall_Retaining", "StoneWall02")
         wall.use_fake_user = True

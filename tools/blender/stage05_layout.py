@@ -22,6 +22,7 @@ from math import atan2, ceil, cos, degrees, hypot, pi, radians, sin, sqrt
 
 import numpy as np
 
+import cauce_route as CR
 import concordia_const as C
 import terrain_profile as T
 
@@ -51,6 +52,7 @@ PLAZUELA_D = 10.0
 HOUSE_W, HOUSE_D = (8.0, 12.0), (8.0, 10.0)
 HOUSES_PER_BARRIO = (6, 10)
 STALLS = 14
+MUELLE = (8.0, 3.0)                  # muelle del Gremio de Pescadores (a lo largo del canal x ancho)
 STALL = 3.0
 
 SETBACK = 0.6                        # calle -> parcela (franja de borde marcado)
@@ -710,17 +712,31 @@ def build_oficios(P):
     r2 = road(P, "STR_OFI_Ring150")
     s1 = lambda th: s_of_theta(r1, th, phi)  # noqa: E731
     s2 = lambda th: s_of_theta(r2, th, phi)  # noqa: E731
-    # reserva del Cauce: llega al desague del bastion k=46 (345 grados); corredor radial de 6 m
-    th_c = 46 * 7.5 - 360.0                      # -15 grados (local = mundo en Oficios)
-    cauce = [to_world(rr * cos(radians(th_c)), rr * sin(radians(th_c)), phi) for rr in (152.0, 196.0)]
-    a = radians(th_c)
-    nx, ny = -sin(a), cos(a)
-    poly = [(cauce[0][0] - nx * 3, cauce[0][1] - ny * 3), (cauce[1][0] - nx * 3, cauce[1][1] - ny * 3),
-            (cauce[1][0] + nx * 3, cauce[1][1] + ny * 3), (cauce[0][0] + nx * 3, cauce[0][1] + ny * 3)]
-    P.add_zone("ZONE_OFI_CauceReserva", D, "cauce_reserve", poly, "earth",
-               extra={"note": "corredor reservado para el Cauce (Prompt 7); llega al desague del bastion k=46"})
-    P.marker("MARKER_CauceReserve_Outlet", cauce[1], th_c, {"type": "cauce_reserve", "drain_slot": 46,
-                                                            "width_m": 6.0})
+    # junto al Cauce (corredor reservado en build_cauce_reserve): Carpinteria con rueda hidraulica en
+    # el anillo 100 y Gremio de Pescadores con muelle de 8 x 3 en el anillo 150, ambos en el lado +theta
+    th_c = CR.OUTLET_DEG
+    for name, lab, w, d, fr, sfun, d_off, extra in (
+            ("MARKER_Bld_Taller_Carpinteria", "Carpinteria", 16, 12, r1, s1, CR.CORRIDOR_HALF + TRAUFGASSE,
+             {"service": "carpinteria", "water_wheel": "MARKER_Cauce_WaterWheel (hueco de 3 m en la orilla)"}),
+            ("MARKER_Bld_Gremio_Pescadores", "Gremio de Pescadores", 18, 14, r2, s2,
+             CR.CORRIDOR_HALF + MUELLE[1] + TRAUFGASSE,
+             {"service": "gremio_pescadores", "muelle": "ZONE_OFI_MuellePescadores 8x3"})):
+        r_mid = (RING1_R + RING1_W / 2 if fr is r1 else RING2_R + RING2_W / 2) + SETBACK + d / 2
+        th0 = th_c + degrees((d_off + w / 2) / r_mid)
+        btype = "taller" if "Taller" in name else "gremio"
+        par = P.place(name, D, btype, lab, w, d, True,
+                      [(fr, -1, sfun(th0), (sfun(th0) - 0.5, sfun(th0 + 4.0)))], extra=extra)
+        if par and "Pescadores" in name:
+            # muelle de 8 x 3 entre el gremio y el canal, centrado en el fondo radial del gremio
+            rc = hypot(*par["center"])
+            a = radians(th_c)
+            e, n = (cos(a), sin(a)), (-sin(a), cos(a))
+            o0, o1 = CR.CORRIDOR_HALF, CR.CORRIDOR_HALF + MUELLE[1]
+            poly = [(e[0] * (rc + sr * MUELLE[0] / 2) + n[0] * oo, e[1] * (rc + sr * MUELLE[0] / 2) + n[1] * oo)
+                    for sr, oo in ((-1, o0), (1, o0), (1, o1), (-1, o1))]
+            z = P.add_zone("ZONE_OFI_MuellePescadores", D, "muelle", poly, "flagstone",
+                           extra={"size_m": "8x3", "parent": name})
+            z["parent"] = name
     P.place("MARKER_Bld_CasaReparaciones", D, "reparaciones", "Casa de Reparaciones", 16, 10, True,
             [(av, 1, s_of_u(av, 75, phi), sA)], extra={"service": "reparaciones", "open_structure": True})
     P.place("MARKER_Bld_Taller_JoyeriaTallado", D, "taller", "Joyeria y Tallado", 16, 12, True,
@@ -739,10 +755,10 @@ def build_oficios(P):
     caz = None
     dd = 14 + TRAUFGASSE + 10
     cands = [(r1, -1, s1(9.0)), (r1, -1, s1(-9.0)), (r2, 1, s2(9.0)), (r2, 1, s2(-9.0))]
-    fr_all = [x for x in P.roads if x["district"] == D and x["type"] in ("ring", "alley")]
+    fr_all = [x for x in P.roads if x["district"] == D and x["type"] in ("ring", "alley", "avenue")]
     for fr in fr_all:
         Lf = polyline_len(fr["pts"])
-        cands += [(fr, sd, float(s0)) for sd in (1, -1) for s0 in np.arange(10.0, Lf - 10.0, 4.0)]
+        cands += [(fr, sd, float(s0)) for sd in (1, -1) for s0 in np.arange(10.0, Lf - 10.0, 2.0)]
     cands += [(band_front(phi, sg), sg, float(u - AXIS_BAND_U0)) for sg in (1, -1) for u in range(100, 176, 4)]
     for fr, side, s0 in cands:
         res = P.try_frontage(fr, side, s0, 20, dd, D, max_tries=2)
@@ -759,23 +775,26 @@ def build_oficios(P):
             P.marker("MARKER_ArcheryRange_Targets", (cr[0] - fx * 4.0, cr[1] - fy * 4.0), ang + 180.0,
                      {"type": "archery_targets", "district": D, "range_m": "20x10", "targets": 4})
             break
-    if caz is None:
-        P.report["unplaced"].append({"name": "MARKER_Bld_Gremio_Cazadores+CampoTiro", "district": D})
+    if caz is None:                                   # respaldo: gremio solo + campo a un lado o detras
+        caz = P.place("MARKER_Bld_Gremio_Cazadores", D, "gremio", "Gremio de Cazadores", 20, 14, True,
+                      [(r2, 1, s2(9.0)), (r1, -1, s1(9.0))], extra={"service": "gremio_cazadores",
+                                                                    "range": "ZONE_OFI_CampoTiro 20x10"})
+        if caz:
+            ok = (add_side_zone(P, caz, "ZONE_OFI_CampoTiro", "archery_range", 20.0, 10.0, "earth", report=False)
+                  or add_side_zone(P, caz, "ZONE_OFI_CampoTiro", "archery_range", 10.0, 20.0, "earth", report=False)
+                  or add_behind_zone(P, caz, "ZONE_OFI_CampoTiro", "archery_range", 20.0, 10.0, "earth",
+                                     report=False))
+            if not ok:
+                P.report["unplaced"].append({"name": "ZONE_OFI_CampoTiro", "district": D})
     P.place("MARKER_Bld_Taller_Alquimia", D, "taller", "Alquimia", 16, 12, True,
             [(r1, 1, s1(12.0)), (r1, 1, s1(-12.0))], extra={"service": "alquimia"})
     P.place("MARKER_Bld_Taller_Sastreria", D, "taller", "Sastreria", 16, 12, True,
             [(r1, -1, s1(18.0)), (r1, -1, s1(-18.0))], extra={"service": "sastreria"})
     P.place("MARKER_Bld_Taller_Hornos", D, "taller", "Hornos de Concordia", 16, 12, True,
             [(r1, -1, s1(-18.0)), (r1, -1, s1(18.0))], extra={"service": "hornos"})
-    P.place("MARKER_Bld_Taller_Carpinteria", D, "taller", "Carpinteria", 16, 12, True,
-            [(r2, 1, s2(-17.0)), (r2, 1, s2(17.0))], extra={"service": "carpinteria"})
-    # junto al Cauce (lado -v del distrito): Pescadores y Curtiduria a ambos lados del corredor
-    P.place("MARKER_Bld_Gremio_Pescadores", D, "gremio", "Gremio de Pescadores", 18, 14, True,
-            [(r2, -1, s2(th_c + 4.6)), (r2, -1, s2(th_c + 6.0))], extra={"service": "gremio_pescadores",
-                                                                         "next_to": "ZONE_OFI_CauceReserva"})
     P.place("MARKER_Bld_Taller_Curtiduria", D, "taller", "Curtiduria", 16, 12, True,
             [(r2, -1, s2(th_c - 4.2)), (r2, -1, s2(th_c - 6.0))], extra={"service": "curtiduria",
-                                                                         "next_to": "ZONE_OFI_CauceReserva"})
+                                                                         "next_to": "ZONE_Cauce"})
     P.place("MARKER_Bld_Gremio_Mineros", D, "gremio", "Gremio de Mineros", 18, 14, True,
             [(r2, -1, s2(8.0)), (r2, -1, s2(18.0))], extra={"service": "gremio_mineros"})
 
@@ -1420,6 +1439,16 @@ def build_link_alleys(P, links):
     return made
 
 
+def build_cauce_reserve(P):
+    """Corredor del Cauce (canal 4 m + orillas de 1 m = 6 m) desde la Fuente del Mercado hasta la muralla.
+    Se pinta despues de las calles (los cruces seran puentes) y antes de parcelas y callejones."""
+    pts = CR.centerline()
+    poly = CR.corridor_poly(pts)
+    z = P.add_zone("ZONE_Cauce", "Cauce", "cauce", poly, "earth",
+                   extra={"width_m": CR.WIDTH, "bank_m": CR.BANK, "length_m": round(CR.cumlen(pts)[-1], 1)})
+    return z
+
+
 WALL_LANE_R, WALL_LANE_W = 186.0, 4.5     # callejon de ronda (deja libre el pomerium r 188-196 y las escaleras de la muralla)
 
 
@@ -1467,6 +1496,7 @@ def plan(obstacle_codes, obst_cell, stairs=()):
     build_streets(P)
     # escalinatas entre barrios: callejones desde las escaleras laterales (antes que las parcelas)
     lanes = build_wall_lanes(P)
+    build_cauce_reserve(P)
     build_mercado(P)
     build_oficios(P)
     build_clases(P)
