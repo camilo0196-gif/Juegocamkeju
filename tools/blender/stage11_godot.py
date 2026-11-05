@@ -41,7 +41,7 @@ SIL_ANGLE = 40.0                               # aristas vivas bloqueadas en los
 MERGE_DIST = 0.001
 PLANAR_ANGLE = 1.0
 NAV_STEP = 0.75
-NAV_MAX_DZ = 0.45                              # desnivel maximo entre esquinas de una celda (escalones 15 cm)
+NAV_MAX_DZ = 0.60                              # desnivel max. entre esquinas (escaleras de terraza ~0.5 m por metro; muros de 1 m no pasan)
 NAV_MAX_SLOPE = 40.0
 NAV_CLEAR = 2.1                                # galibo bajo puentes/arcos para la segunda capa
 HULL_RATIO_MAX = 1.35
@@ -51,7 +51,9 @@ SECTOR_GROUP = {"plaza": "plaza", "landmarks": "plaza", "sector_mercado": "merca
 STRUCT_COLS = ("STREETS", "PLAZA", "MORADAS", "CAUCE")
 NO_COLLISION_MATS = {"MAT_Water", "MAT_Void", "MAT_Shard_Blue"}
 NAV_STRUCT_PREFIX = ("TRN_StairPass", "TRN_Escalinata", "TRN_TerraceStairs", "TRN_LateralStairs", "TRN_Bridge",
-                     "TRN_ArchBridge", "TRN_Atrio", "CAU_Muelle")
+                     "TRN_Atrio", "CAU_Muelle", "TRN_Pad_")      # basamentos: explanadas (huella del edificio pendiente)
+NAV_CONNECT_M = 3.0                            # suelo comun junto a escaleras y puentes = transitable (enlace)
+NAV_MIN_ISLAND_M2 = 10.0
 
 
 def gidx(v):
@@ -510,8 +512,8 @@ def part_collision(o, col):
         hull = bmesh.new()
         hv = [hull.verts.new(v.co) for v in sub.verts]
         res = bmesh.ops.convex_hull(hull, input=hv)
-        bmesh.ops.delete(hull, geom=[g for g in res["geom_interior"] + res["geom_unused"]
-                                     if isinstance(g, bmesh.types.BMVert)], context="VERTS")
+        bmesh.ops.delete(hull, geom=list({g for g in res["geom_interior"] + res["geom_unused"]
+                                          if isinstance(g, bmesh.types.BMVert)}), context="VERTS")
         hvol = abs(hull.calc_volume()) if hull.faces else 0.0
         use_hull = closed and vol > 1e-4 and hvol / vol <= HULL_RATIO_MAX
         src = hull if use_hull else sub
@@ -598,11 +600,22 @@ def nav_mesh(stats, dmap):
     slab_f = slab[ls] > 0.01
     ret_f = ret[ls] > 0.5
     city_walk = (road_f | slab_f) & ~ret_f
+    ter = corner("terraza_id")[ls] > 0.01
+    gar = corner("garden_mask")[ls] > 0.01
+    gi_t = master.vertex_groups["talud"].index
+    talv = np.zeros(len(me.vertices), dtype=bool)
+    for v in me.vertices:
+        if any(g.group == gi_t for g in v.groups):
+            talv[v.index] = True
+    talf = np.array([all(talv[i] for i in p.vertices) for p in me.polygons])
+    city_ground = ~city_walk & ~ret_f & (ctf == 0) & ~ter & ~gar & ~talf
     tmp = bmesh.new()
     tmp.from_mesh(me)
     tmp.transform(master.matrix_world)
+    ground = []
     for f in tmp.faces:
         walk.append(bool(city_walk[f.index]))
+        ground.append(bool(city_ground[f.index]))
     off = len(tmp.faces)
     tmp_me = bpy.data.meshes.new("TMP_nav_city")
     tmp.to_mesh(tmp_me)
@@ -610,6 +623,7 @@ def nav_mesh(stats, dmap):
     bm.from_mesh(tmp_me)
     bpy.data.meshes.remove(tmp_me)
     src_objs = []
+    boxes = []
     for cn in STRUCT_COLS + ("WALL_LAYOUT",):
         for o in bpy.data.collections[cn].objects:
             if o.type != "MESH" or o.name.endswith("-colonly"):
@@ -623,8 +637,13 @@ def nav_mesh(stats, dmap):
         t.from_mesh(o.data)
         t.transform(o.matrix_world)
         w = o.name.startswith(NAV_STRUCT_PREFIX)
+        if w:
+            for f in t.faces:                      # huella real (centros y vertices) para el enlace
+                boxes.append(tuple(f.calc_center_median())[:2])
+                boxes.extend(tuple(v.co)[:2] for v in f.verts)
         for f in t.faces:
             walk.append(w)
+            ground.append(False)
         tm = bpy.data.meshes.new("TMP_nav_obj")
         t.to_mesh(tm)
         t.free()
@@ -635,32 +654,54 @@ def nav_mesh(stats, dmap):
     normals = [f.normal.z for f in bm.faces]
     bvh = BVHTree.FromBMesh(bm)
     walk = np.array(walk)
+    ground = np.array(ground)
     nz_min = np.cos(radians(NAV_MAX_SLOPE))
     R = 200.0
     xs = np.arange(-R, R + 1e-6, NAV_STEP)
-    n = len(xs)
     down = Vector((0, 0, -1))
     layers = [dict(), dict()]                       # (i, j) -> z
+    nx = len(xs)
+    foot = np.zeros((nx, nx), dtype=bool)
+    if boxes:
+        pts = np.array(boxes)
+        ii = np.clip(np.rint((pts[:, 0] + R) / NAV_STEP).astype(int), 0, nx - 1)
+        jj = np.clip(np.rint((pts[:, 1] + R) / NAV_STEP).astype(int), 0, nx - 1)
+        foot[ii, jj] = True
+        k = int(np.ceil(NAV_CONNECT_M / NAV_STEP))
+        dil = foot.copy()
+        for di in range(-k, k + 1):
+            for dj in range(-k, k + 1):
+                if di * di + dj * dj <= k * k:
+                    dil |= np.roll(np.roll(foot, di, 0), dj, 1)
+        foot = dil
+
+    def in_box(x, y):
+        return bool(foot[int(round((x + R) / NAV_STEP)), int(round((y + R) / NAV_STEP))])
     for i, x in enumerate(xs):
         for j, y in enumerate(xs):
             if x * x + y * y > (C.WALL_RADIUS - 2.0) ** 2:
                 continue
+            # todas las superficies de la vertical (de arriba abajo)
             p = Vector((x, y, 60.0))
-            for L in range(2):
-                hit = bvh.ray_cast(p, down, 200.0)
-                if hit[0] is None:
+            hits = []
+            for _ in range(10):
+                h = bvh.ray_cast(p, down, 200.0)
+                if h[0] is None:
                     break
-                fi = hit[2]
-                ok = walk[fi] and abs(normals[fi]) >= nz_min
-                if ok:
-                    layers[L][(i, j)] = hit[0].z
-                if L == 0:
-                    # segunda capa: por debajo de un puente / arco transitable o no
-                    p = hit[0] + Vector((0, 0, -0.05))
-                    h2 = bvh.ray_cast(p, down, 200.0)
-                    if h2[0] is None or hit[0].z - h2[0].z < NAV_CLEAR:
-                        break
-                    p = h2[0] + Vector((0, 0, 0.01))
+                hits.append((h[0].z, h[2], normals[h[2]]))
+                p = h[0] + Vector((0, 0, -0.002))
+            ceiling = None                             # techo encima (None = cielo)
+            L = 0
+            for z, fi, nz in hits:
+                if nz > 0:                             # cara hacia arriba: suelo candidato
+                    clear = ceiling is None or ceiling - z >= NAV_CLEAR
+                    ok = clear and nz >= nz_min and (walk[fi] or (ground[fi] and in_box(x, y)))
+                    if ok and L < 2:
+                        layers[L][(i, j)] = z
+                        L += 1
+                ceiling = z                            # todo lo que quede debajo esta bajo esta superficie
+                if L >= 2:
+                    break
     # nodos -> vertices
     out = bmesh.new()
     vid = {}
@@ -702,21 +743,30 @@ def nav_mesh(stats, dmap):
     # componentes conexas
     comp_sizes = []
     seen = set()
+    out.faces.ensure_lookup_table()
+    comp_area, id_of = {}, {}
     for f in out.faces:
         if f.index in seen:
             continue
-        stack, area = [f], 0.0
+        stack, area, members = [f], 0.0, []
         seen.add(f.index)
         while stack:
             g = stack.pop()
+            members.append(g.index)
             area += g.calc_area()
             for e in g.edges:
                 for h in e.link_faces:
                     if h.index not in seen:
                         seen.add(h.index)
                         stack.append(h)
+        for k in members:
+            comp_area[k] = area
+            id_of[k] = len(comp_sizes)
         comp_sizes.append(area)
     comp_sizes.sort(reverse=True)
+    small = [f for f in out.faces if comp_area[f.index] < NAV_MIN_ISLAND_M2]
+    dropped = len({id_of[f.index] for f in small})
+    bmesh.ops.delete(out, geom=small, context="FACES")
     full = bpy.data.meshes.new("TMP_navmesh")
     out.to_mesh(full)
     out.free()
@@ -748,7 +798,11 @@ def nav_mesh(stats, dmap):
     stats["navmesh"] = {"grid_m": NAV_STEP, "cells": cells, "layer2_nodes": len(layers[1]),
                         "area_m2": round(tot_area, 1), "components": len(comp_sizes),
                         "largest_component_pct": round(100 * comp_sizes[0] / tot_area, 1) if comp_sizes else 0,
-                        "small_islands_lt_20m2": sum(1 for a in comp_sizes if a < 20),
+                        "islands_dropped_lt_10m2": dropped,
+                        "components_kept": len(comp_sizes) - dropped,
+                        "islands_kept_10_to_200m2": sum(1 for a in comp_sizes if NAV_MIN_ISLAND_M2 <= a < 200),
+                        "arch_bridges": "fuera de la navmesh: sus tableros (+10.4) no llegan a ninguna superficie "
+                                        "transitable; la calle de debajo si esta (segunda capa)",
                         "per_district": per}
     return navcol
 
@@ -767,8 +821,8 @@ def wall_occluders(stats):
         bm = bmesh.new()
         bm.from_mesh(o.data)
         res = bmesh.ops.convex_hull(bm, input=bm.verts[:])
-        bmesh.ops.delete(bm, geom=[g for g in res["geom_interior"] + res["geom_unused"]
-                                   if isinstance(g, bmesh.types.BMVert)], context="VERTS")
+        bmesh.ops.delete(bm, geom=list({g for g in res["geom_interior"] + res["geom_unused"]
+                                        if isinstance(g, bmesh.types.BMVert)}), context="VERTS")
         c = sum((v.co for v in bm.verts), Vector()) / max(1, len(bm.verts))
         for v in bm.verts:                       # 8 % hacia dentro: nunca tapa lo que asoma por los bordes
             d = v.co - c
