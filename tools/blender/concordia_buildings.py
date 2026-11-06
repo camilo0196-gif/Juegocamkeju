@@ -29,8 +29,16 @@ import bld_kit as K  # noqa: E402
 
 STYLES = ("timber", "stone", "guild")
 ROOFS = ("gable", "gable_front", "hip", "conical", "flat", "lean_to")
-ISO_AWAY_DOT = 0.35          # puerta mirando "hacia dentro" de la vista (lado camara de su calle)
-MAX_FLOORS_CAMSIDE, MAX_FLOORS = 2, 3
+ISO_AWAY_DOT = 0.35          # (informativo) puerta mirando "hacia dentro" de la vista
+# Regla de alturas (etapa 17): manda la prueba de visibilidad desde CAM_Iso, no el lado de la calle.
+#   - hasta 3 plantas (<= 10.5 m); la torre de Alquimia hasta 4
+#   - si el edificio tapa desde la camara la puerta de otro edificio o un carril de NPC, se baja planta a planta hasta que
+#     deje de taparla, como minimo 2 plantas (7 m)
+#   - los hitos (Portal, Faro, Obelisco, Santuario, Salon de las Hazanas) quedan fuera de la regla
+MAX_FLOORS, MAX_FLOORS_ALCHEMY, MIN_FLOORS_OCCLUDING = 3, 4, 2
+MAX_HEIGHT_M, MIN_HEIGHT_M = 10.5, 7.0
+LANDMARKS = ("PORTAL", "FARO", "OBELISK", "SANTUARIO", "SALON_HAZANAS")
+NPC_LANE_PREFIX = "NPC_Lane_"
 
 
 def rng_for(name, seed):
@@ -73,7 +81,7 @@ def ensure_materials():
         b = m.node_tree.nodes["Principled BSDF"]
         b.inputs["Base Color"].default_value = (0.035, 0.03, 0.025, 1)
         b.inputs["Roughness"].default_value = 0.35
-        b.inputs["Emission Color"].default_value = (0.42, 0.24, 0.11, 1)   # sRGB ~ #AD855C: interior calido en penumbra
+        b.inputs["Emission Color"].default_value = (0.4173, 0.2803, 0.1682, 1)   # sRGB #AD9072 (sat 0.34): interior calido
         b.inputs["Emission Strength"].default_value = 1.0
         m["note"] = "luz natural calida de ventana, emision 1.0; NO es color magico"
         out["MAT_Window_Warm"] = "creado"
@@ -96,14 +104,99 @@ def iso_view_dir():
     return d.normalized()
 
 
-def iso_max_floors(rot_z, landmark=False):
-    """La puerta (+Y local) apunta en la direccion de la vista -> el edificio queda entre la camara y su calle:
-    taparia su puerta y la calle -> 2 plantas. Si la puerta mira a la camara o de lado -> 3."""
+def iso_max_floors(rot_z, landmark=False, use="house"):
+    """Tope de plantas antes de la prueba de visibilidad: 3 (torre de Alquimia 4); hitos sin tope. Devuelve
+    (tope, puerta mirando hacia dentro de la vista) - lo segundo solo es informativo."""
     door = Vector((-math.sin(rot_z), math.cos(rot_z), 0))
     away = door.dot(iso_view_dir()) > ISO_AWAY_DOT
     if landmark:
         return 99, away
-    return (MAX_FLOORS_CAMSIDE if away else MAX_FLOORS), away
+    return (MAX_FLOORS_ALCHEMY if use == "alchemy_tower" else MAX_FLOORS), away
+
+
+def iso_cam_back():
+    """Direccion 3D desde la escena hacia CAM_Iso."""
+    cam = bpy.data.objects.get("CAM_Iso")
+    d = cam.matrix_world.to_3x3() @ Vector((0, 0, -1)) if cam else Vector((-0.5774, 0.5774, -0.5774))
+    return -d.normalized()
+
+
+def iso_targets(exclude_root=None, lane_step=2.0, h=1.0):
+    """Puntos que ningun edificio debe tapar desde CAM_Iso: puertas (MARKER_*_Door y el frente de cada
+    MARKER_Bld_* aun sin construir) y carriles de NPC (curvas NPC_Lane_*, una muestra cada lane_step m), a h m."""
+    pts = []
+    own = set()
+    if exclude_root is not None:
+        own = {o.name for o in exclude_root.children_recursive} | {exclude_root.name}
+        own.add(exclude_root.get("marker", ""))
+    for o in bpy.data.objects:
+        if o.name in own:
+            continue
+        if o.type == "EMPTY" and o.name.startswith("MARKER_") and o.name.endswith("_Door"):
+            pts.append((o.name, o.matrix_world.translation + Vector((0, 0, h))))
+        elif o.type == "EMPTY" and o.name.startswith("MARKER_Bld_") and "footprint_d" in o:
+            if any(c.name.startswith("MARKER_") and c.name.endswith("_Door") for c in o.children_recursive):
+                continue
+            mw = o.matrix_world
+            p = mw @ Vector((0, float(o["footprint_d"]) / 2 + 0.5, 0))
+            pts.append((o.name + ":door", p + Vector((0, 0, h))))
+        elif o.type == "CURVE" and o.name.startswith(NPC_LANE_PREFIX):
+            for sp in o.data.splines:
+                cs = [o.matrix_world @ Vector(p.co[:3]) for p in sp.points] or \
+                     [o.matrix_world @ p.co for p in sp.bezier_points]
+                for a, b in zip(cs[:-1], cs[1:]):
+                    n = max(1, int((b - a).length / lane_step))
+                    for k in range(n):
+                        pts.append((o.name, a.lerp(b, k / n) + Vector((0, 0, h))))
+    return pts
+
+
+def iso_blocked(objs, targets, max_dist=60.0):
+    """Puntos de targets que las mallas objs tapan desde CAM_Iso (rayo desde el punto hacia la camara)."""
+    import bmesh
+    from mathutils.bvhtree import BVHTree
+    bm = bmesh.new()
+    for o in objs:
+        if o.type != "MESH":
+            continue
+        t = bmesh.new()
+        t.from_mesh(o.data)
+        t.transform(o.matrix_world)
+        me = bpy.data.meshes.new("TMP_iso")
+        t.to_mesh(me)
+        t.free()
+        bm.from_mesh(me)
+        bpy.data.meshes.remove(me)
+    if not bm.faces:
+        bm.free()
+        return []
+    bvh = BVHTree.FromBMesh(bm)
+    bm.free()
+    back = iso_cam_back()
+    return [(n, p) for n, p in targets if bvh.ray_cast(p, back, max_dist)[0] is not None]
+
+
+def fit_iso_height(nombre, pisos, targets=None, **kw):
+    """Construye el edificio y aplica la regla de alturas: si tapa una puerta o un carril de NPC desde CAM_Iso, lo
+    reconstruye con una planta menos hasta que no tape nada o llegue a 2 plantas. Los hitos no se prueban."""
+    history = []
+    p = pisos
+    while True:
+        root, objs, rep = build_building(nombre, pisos=p, **kw)
+        if kw.get("landmark"):
+            rep["iso_rule"] = "hito: fuera de la regla"
+            return root, objs, rep
+        bpy.context.view_layer.update()                      # matrices del mundo de las piezas recien creadas
+        tg = targets if targets is not None else iso_targets(exclude_root=root)
+        lod0 = [o for k, o in objs.items() if k in ("Body", "Roof")]
+        blocked = iso_blocked(lod0, tg)
+        history.append({"floors": rep["floors"], "blocked": sorted({n for n, _ in blocked})})
+        if not blocked or rep["floors"] <= MIN_FLOORS_OCCLUDING:
+            rep["iso_rule"] = {"history": history, "final_floors": rep["floors"], "still_blocking": bool(blocked)}
+            return root, objs, rep
+        for o in list(root.children_recursive) + [root]:
+            bpy.data.objects.remove(o)
+        p = rep["floors"] - 1
 
 
 def facades(W, D, t):
@@ -409,9 +502,9 @@ def build_building(nombre, footprint=None, pisos=2, tipo_techo="gable", estilo="
         interior = bool(marker.get("interior", interior))
     else:
         W, D = footprint
-    mx, away = iso_max_floors(rot_z, landmark)
+    mx, away = iso_max_floors(rot_z, landmark, use)
     if pisos > mx:
-        report["floors_clamped"] = f"{pisos} -> {mx} (lado de la camara isometrica)"
+        report["floors_clamped"] = f"{pisos} -> {mx} (tope de la regla de alturas)"
         pisos = mx
     report.update({"footprint": [W, D], "floors": pisos, "roof": tipo_techo, "style": estilo,
                    "camera_side": away, "max_floors_rule": mx})
@@ -425,6 +518,8 @@ def build_building(nombre, footprint=None, pisos=2, tipo_techo="gable", estilo="
     root.location = location
     root.rotation_euler = (0, 0, rot_z)
     root["building"] = True
+    if marker is not None:
+        root["marker"] = marker.name
     root["footprint_w"], root["footprint_d"] = W, D
     root["floors"], root["roof"], root["style"], root["seed"] = pisos, tipo_techo, estilo, seed
     objs = {}

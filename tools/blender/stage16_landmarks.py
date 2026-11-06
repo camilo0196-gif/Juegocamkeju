@@ -84,7 +84,7 @@ def ensure_materials():
         m = bpy.data.materials.new(M_BRONZE)
         m.use_nodes = True
         bs = m.node_tree.nodes["Principled BSDF"]
-        bs.inputs["Base Color"].default_value = (_lin(0.45), _lin(0.36), _lin(0.22), 1)      # #735C38 bronce viejo
+        bs.inputs["Base Color"].default_value = (_lin(0.451), _lin(0.391), _lin(0.298), 1)  # #73644C bronce viejo (sat 0.34)
         bs.inputs["Metallic"].default_value = 0.85
         bs.inputs["Roughness"].default_value = 0.5
         m["note"] = "bronce envejecido (placas del Salon), sin textura"

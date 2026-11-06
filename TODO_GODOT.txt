@@ -1,0 +1,60 @@
+CONCORDIA - TODO en Godot 4 (lo que el glTF no guarda)
+======================================================
+Se actualiza en cada etapa. Ultima: etapa 17. [ ] = pendiente en Godot; (E#) = etapa en que aparece.
+
+Importacion general
+[ ] (E11) Los .glb usan texturas EXTERNAS con ruta relativa "../../textures/concordia/...": copiar la carpeta textures/
+    con la misma estructura junto a export/ en el proyecto de Godot, o reimportar con las texturas embebidas.
+[ ] (E11) Importar las texturas como "VRAM Compressed" (albedo/ORM/emision BC1, normales BC5) para quedarse en
+    ~155 MB (limite acordado 220 MB).
+[ ] (E11) Sufijos de importacion: "-colonly" -> StaticBody3D solo colision; "-navmesh" -> malla de navegacion;
+    "-occonly" -> OccluderInstance3D. Comprobar que el importador los aplica (Advanced Import Settings).
+[ ] (E11) COLOR_0 = mask_pack (mascaras del terreno, ver README_masks.txt): shader del terreno que lo lea.
+[ ] (E11/E13-16) LODs manuales (_LOD1 / _LOD2): asignar visibility_range_begin/end en cada MeshInstance3D (o un HLOD)
+    y desactivar el LOD automatico del importador en esas mallas para no duplicar.
+[ ] (E17) Todos los materiales salen con doubleSided = true (en Blender esta desactivado el backface culling). Para
+    los opacos poner cull_mode = BACK (ahorra relleno); dejar dos caras solo en velo, haz, vidrios y telas. Hacerlo en
+    Godot o pedir que se active el culling en Blender antes del export.
+[ ] (E13-17) Emision: activar Glow en el WorldEnvironment (HDR threshold ~1.0) para que #8FD0FF brille. Comprobar que
+    el importador lee KHR_materials_emissive_strength (fuerza > 1.0: cristal 4.0, velo 3.0, marcas 3.0...).
+[ ] (E13-17) Materiales con alpha (BLEND): MAT_Portal_Veil 0.6, MAT_Faro_Beam 0.3, MAT_Pipe_Glass 0.35 -> revisar
+    render_priority / orden de transparencias y desactivar sombras en el velo y el haz.
+
+Portal (E13, E17)
+[ ] PORTAL_Veil: animar el velo como agua (desplazamiento de UV: u = 0..1 a lo ancho, v = z / 11 m) + brillo;
+    sin colision (propiedad no_collision). Tamano en la etapa 17: 7.8 x 11 m.
+[ ] Runas del Atrio y lineas de los pilares (MAT_Rune_Glow_10/12): pulso opcional.
+
+Obelisco (E14)
+[ ] OBELISK_Mark_001..100: al alcanzar un piso, cambiar la superficie 0 de la marca a MAT_Obelisk_Mark_Lit
+    (material_override o set_surface_override_material). El .blend y el .glb las dejan todas apagadas.
+[ ] OBELISK_Mark_LitMaterialRef: pieza oculta dentro del pedestal solo para que el .glb incluya MAT_Obelisk_Mark_Lit;
+    ocultarla o borrarla al importar (guardar antes el material).
+
+Faro (E15, E17)
+[ ] FARO_Beam: material con blend_mode = ADD, unshaded, sin sombras, cull desactivado; animar el desplazamiento de
+    UV en v (0..1 a lo largo de los 80 m) y/o un giro lento. Sin colision.
+[ ] FARO_Crystal: emision 4.0 (Glow). Opcional: OmniLight3D azul palido en el cristal.
+[ ] Rampa decorativa: no incluir FARO_Body en la NavigationRegion3D (raiz FARO: navigation = false). La colision de
+    la rampa es solo el arranque por debajo de 3 m (FARO_Ramp-colonly).
+[ ] Canales de luz (torre -> plaza): opcional, un pulso que baje del cristal por los 4 canales y siga por los canales
+    de la plaza (TRN_LightCanals) hacia el Portal.
+[ ] CRV_LightPipe_Tesoreria_Faro -> Path3D; colocar las piezas PIPE_Light_Straight/Elbow/Support (BLD_KIT) cuando
+    se pida. El primer punto es provisional (MARKER_PipeOutlet_TesoreriaMuralla) hasta la Tesoreria (E5).
+    Soportes en MARKER_PipeSupport_NN. MAT_Pipe_Light_Core 1.5: pulso opcional.
+
+Santuario y Salon de las Hazanas (E16)
+[ ] MARKER_Santuario_Door / MARKER_SalonHazanas_Door + *_InteriorVolume: disparador de puerta -> escena interior.
+[ ] SANTUARIO_Well: modelo para el interior; esta colocado provisionalmente en el centro de la nave.
+[ ] Salon: desde CAM_Iso tapa ~241 m2 de plaza delante de su fachada (hasta 20.9 m): fundido/dither o corte del
+    tejado cuando el jugador quede detras (decision pendiente).
+[ ] Farolillos de esquirla (LANTERN_Shard): OmniLight3D pequena azul palido opcional.
+[ ] Vitrales (MAT_Stained_Glass_Blue, emision 0.6) y MAT_Window_Warm (1.0): subir o bajar con el ciclo dia/noche.
+
+Cauce y molino (E07)
+[ ] MARKER_Cauce_WaterWheel: rueda hidraulica (aun sin modelo) con animacion de giro.
+[ ] MAT_Water del cauce: desplazamiento de UV en el sentido de la corriente (MARKER_Cauce_Source -> _Outlet).
+
+Kit de edificios (E12, E17)
+[ ] Regla de alturas aplicada en Blender (fit_iso_height). En Godot, carriles de NPC: si se crean, exportarlos
+    tambien como curvas NPC_Lane_* para poder repetir la prueba en Blender.

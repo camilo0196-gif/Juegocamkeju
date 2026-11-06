@@ -277,6 +277,14 @@
    "empties": 0
   }
  },
+ "palette_fix": {
+  "MAT_Window_Warm": "emision #AD865D (sat 0.46) -> #AD9072 (sat 0.34)",
+  "MAT_Bronze_Aged": "base #735C38 (sat 0.51) -> #73644C (sat 0.34)",
+  "reexport": {
+   "file": "concordia_salon_hazanas.glb",
+   "mb": 1.29
+  }
+ },
  "faro_visibility": {
   "Avenida Norte": {
    "axis_pct": 100.0,

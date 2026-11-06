@@ -207,6 +207,25 @@ def faro_visibility(st, target):
 
 
 # ---------------------------------------------------------------------------
+def palette_fix(st):
+    """Paleta: nada saturado fuera del azul palido (saturacion <= 0.34). Mismo tono y valor."""
+    import stage16_landmarks as L
+    w = bpy.data.materials["MAT_Window_Warm"]
+    b = next(n for n in w.node_tree.nodes if n.type == "BSDF_PRINCIPLED")
+    b.inputs["Emission Color"].default_value = (0.4173, 0.2803, 0.1682, 1)
+    w["note"] = "luz natural calida de ventana, emision 1.0, #AD9072 (sat 0.34); NO es color magico"
+    m = bpy.data.materials["MAT_Bronze_Aged"]
+    b = next(n for n in m.node_tree.nodes if n.type == "BSDF_PRINCIPLED")
+    b.inputs["Base Color"].default_value = (L._lin(0.451), L._lin(0.391), L._lin(0.298), 1)
+    st["palette_fix"] = {"MAT_Window_Warm": "emision #AD865D (sat 0.46) -> #AD9072 (sat 0.34)",
+                         "MAT_Bronze_Aged": "base #735C38 (sat 0.51) -> #73644C (sat 0.34)"}
+    import stage11_godot as G
+    root = bpy.data.objects["SALON_HAZANAS"]
+    path = os.path.join(REPO, "export", "godot", "concordia_salon_hazanas.glb")
+    size = G.export_glb([root] + list(root.children_recursive), path)
+    st["palette_fix"]["reexport"] = {"file": os.path.basename(path), "mb": round(size / 2 ** 20, 2)}
+
+
 def main():
     st = {}
     bpy.ops.wm.open_mainfile(filepath=SRC)
@@ -220,6 +239,7 @@ def main():
     B15.export_faro(st["faro"])
     canal_alignment(st)
     rebuild_portal(st)
+    palette_fix(st)
     for o in bpy.data.objects:
         if o.name.endswith(("_LOD1", "_LOD2")):
             o.hide_set(True)
