@@ -279,6 +279,7 @@ class SAL:
     PITCH = 26.0
     COLS = (-6.9, -2.3, 2.3, 6.9)
     SLOTS = ((-4.6, 4.6), (4.6, 4.6), (-8.0, 4.6))
+    SKIRT = 0.6               # el basamento baja 0.6 m bajo el origen: la parcela no es plana
 
 
 def salon_meshes(rng, preset_key):
@@ -287,10 +288,11 @@ def salon_meshes(rng, preset_key):
     body, roof = K.MB(), K.MB()
     p = CLASS_PRESETS[preset_key]
     # basamento y escalinata (dentro de la huella)
-    body.box((-hw, -hd, 0.0), (hw, S.YF, 0.45), ST, skip=("z-",))
+    # basamento: sobresale 6 cm de los muros (no coplanario con ellos) y baja 0.6 m bajo el origen (terreno +-0.25 m)
+    body.box((-hw - 0.06, -hd - 0.06, -S.SKIRT), (hw + 0.06, S.YF, 0.45), ST, skip=("z-",))
     for k in range(3):
         y0 = S.YF + 0.2 * k
-        body.box((-hw + 0.6, y0, 0.0), (hw - 0.6, y0 + 0.2, 0.45 - 0.15 * (k + 1) + 0.15), ST, skip=("z-",))
+        body.box((-hw + 0.6, y0, -S.SKIRT), (hw - 0.6, y0 + 0.2, 0.45 - 0.15 * (k + 1) + 0.15), ST, skip=("z-",))
     # muros
     for side in ("+Y", "-Y", "+X", "-X"):
         Y = S.YP if side == "+Y" else hd
@@ -311,7 +313,7 @@ def salon_meshes(rng, preset_key):
             wins = (-5.2, 5.2)
         else:
             outer = [(ua, 0), (ub, 0)] + top
-            wins = [u for u in ((-4.6, -1.2, 2.2) if side == "-X" else (-2.2, 1.2, 4.6))]
+            wins = (-4.6, -1.2, 1.9) if side == "-X" else (-1.9, 1.2, 4.6)   # 0.2 m de muro hasta el frontal
         holes = [M.rect(u, 3.9, 1.2, 2.8) for u in wins]
         L.plate(body, outer, holes, 0.7, ST)
         for u in wins:

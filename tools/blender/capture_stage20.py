@@ -70,14 +70,16 @@ def main():
                    "fronton con remate, estandarte 2.5 x 6 m, 3 slots de props", [])
     if want("salon_calle"):
         cam = K.new_cam("TMP_s", lens=22)
-        K.look_at(cam, mw @ Vector((7.0, 21.0, 1.7)), mw @ Vector((0.0, 4.0, 5.2)))
+        K.look_at(cam, mw @ Vector((5.0, 16.0, 1.7)), mw @ Vector((0.0, 4.0, 4.6)))
         K.render(scene, cam, P("salon_calle"))
         K.annotate(scene, cam, P("salon_calle"), f"Salon de clase 02 ({r['class_preset']}) desde la plaza: estandarte con "
                    "emblema (textura por clase), remate, props de clase en las peanas", [])
     if want("reposicion"):
         rr = bpy.data.objects["CasaReposicion"].matrix_world
         cam = K.new_cam("TMP_r", lens=22)
-        K.look_at(cam, rr @ Vector((9.0, 17.0, 2.0)), rr @ Vector((0.0, 5.0, 3.2)))
+        # la fachada mira a una calle de ~10 m frente al Salon 06: camara pegada a la acera de enfrente
+        cam.data.lens = 16
+        K.look_at(cam, rr @ Vector((5.0, 10.8, 1.7)), rr @ Vector((-1.5, 4.0, 3.0)))
         K.render(scene, cam, P("reposicion"))
         K.annotate(scene, cam, P("reposicion"), "Casa de Reposicion \"El Remiendo\": perchas con armaduras remendadas, "
                    "espadas pulidas, cajones de botas y capas, letrero con parche cosido", [])

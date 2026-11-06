@@ -24,6 +24,7 @@ EAVE = 0.4
 ROOF_PITCH = 40.0
 TILE_COURSE = 0.42           # paso de las hiladas de teja sobre la pendiente
 TILE_SEG = 3.0               # largo de cada tramo de hilada (se puede subir en edificios grandes para el presupuesto)
+DOOR_SCALE = 1.0             # escala de puertas, dintel y umbral (razas de otra talla; ver build_building(opts=door_scale))
 
 M_STONE = "MAT_Limestone_Worn"
 M_WOOD = "MAT_Wood_Dark"
@@ -217,8 +218,8 @@ def opening_of(kind, w):
         ow = min(0.95, w * 0.34)
         return ("win", -ow / 2, 0.95, ow / 2, 2.25)
     if kind == "Door":
-        ow = min(1.3, w * 0.45)
-        return ("door", -ow / 2, 0.0, ow / 2, 2.35)
+        ow = min(1.3 * DOOR_SCALE, w * 0.6)
+        return ("door", -ow / 2, 0.0, ow / 2, min(2.35 * DOOR_SCALE, FLOOR_H - 0.25))
     if kind == "Arch":
         ow = min(2.2, w * 0.74)
         return ("arch", -ow / 2, 0.0, ow / 2, 1.9 + ow / 2)
@@ -297,6 +298,8 @@ def wall(mb, kind="Solid", w=MODULE_W, h=FLOOR_H, t=WALL_T, variant="Clean", rng
                     xa = ox0 - sw if side < 0 else ox1
                     mb.box((xa, y1, oz0 - 0.02), (xa + sw, y1 + 0.04, oz1 + 0.02), M_WOOD, skip=("y-",))
         elif op[0] == "door":
+            # umbral escalado con DOOR_SCALE (dentro de la huella: sobresale como mucho 0.18 m)
+            mb.box((ox0 - 0.15, y1 - 0.12, 0.0), (ox1 + 0.15, y1 + 0.18, 0.12 * DOOR_SCALE), M_STONE, skip=("z-",))
             # hoja de madera rehundida, herrajes y dintel
             mb.box((ox0, y0 + 0.12, 0), (ox1, y0 + 0.18, oz1), M_WOOD, skip=("y-",))
             if detail == 0:
@@ -605,6 +608,38 @@ def roof_hip(mb, W, D, pitch=ROOF_PITCH, eave=EAVE, rng=None, detail=0):
                 mb.face([(a[0], a[1], z), (b[0], b[1], z), (b[0] * 0.995, b[1] * 0.995, z + 0.05),
                          (a[0] * 0.995, a[1] * 0.995, z + 0.05)], M_ROOF if rng.random() > 0.2 else M_ROOF_B,
                         nrm=((a[0] + b[0]) / 2, (a[1] + b[1]) / 2, 0))
+    return rise
+
+
+def roof_spire(mb, W, D, pitch=55.0, eave=EAVE, rng=None, detail=0, max_rise=7.5):
+    """Chapitel: piramide de 4 vertientes con un solo vertice (cono de base rectangular). La pendiente se mide en el
+    lado corto y la altura se limita a max_rise (en huellas grandes las vertientes largas quedan algo mas tendidas)."""
+    rng = rng or random.Random(0)
+    hx, hy = W / 2 + eave, D / 2 + eave
+    rise = min(max_rise, (min(W, D) / 2) * math.tan(math.radians(pitch)))
+    z_e = -eave * rise / (min(W, D) / 2)
+    apex = (0.0, 0.0, rise)
+    base = [(-hx, -hy, z_e), (hx, -hy, z_e), (hx, hy, z_e), (-hx, hy, z_e)]
+    for i in range(4):
+        j = (i + 1) % 4
+        out = ((base[i][0] + base[j][0]) / 2, (base[i][1] + base[j][1]) / 2, 0)
+        mb.face([base[i], base[j], apex], M_ROOF if rng.random() > 0.25 else M_ROOF_B, nrm=(out[0], out[1], 1))
+        mb.face([base[j], base[i], (base[i][0], base[i][1], base[i][2] - 0.18), (base[j][0], base[j][1], base[j][2] - 0.18)],
+                M_WOOD, nrm=out)
+    mb.face([(b[0], b[1], b[2] - 0.18) for b in base], M_WOOD, nrm=(0, 0, -1))
+    if detail == 0:
+        L = rise - z_e
+        n = max(2, int(L / (TILE_COURSE * 1.6)))
+        for k in range(1, n):
+            f = k / n
+            z = z_e + L * f
+            bx, by = hx * (1 - f), hy * (1 - f)
+            for (a, b) in (((-bx, -by), (bx, -by)), ((bx, -by), (bx, by)), ((bx, by), (-bx, by)), ((-bx, by), (-bx, -by))):
+                mb.face([(a[0], a[1], z), (b[0], b[1], z), (b[0] * 0.993, b[1] * 0.993, z + 0.05),
+                         (a[0] * 0.993, a[1] * 0.993, z + 0.05)], M_ROOF if rng.random() > 0.2 else M_ROOF_B,
+                        nrm=((a[0] + b[0]) / 2, (a[1] + b[1]) / 2, 0))
+    # remate de hierro en el vertice
+    mb.cylinder(0.05, rise - 0.1, rise + 1.2, 6, M_IRON, caps=True)
     return rise
 
 

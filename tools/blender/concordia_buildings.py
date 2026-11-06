@@ -28,7 +28,7 @@ sys.path.insert(0, HERE)
 import bld_kit as K  # noqa: E402
 
 STYLES = ("timber", "stone", "guild")
-ROOFS = ("gable", "gable_front", "hip", "conical", "flat", "lean_to")
+ROOFS = ("gable", "gable_front", "hip", "conical", "flat", "lean_to", "spire")
 ISO_AWAY_DOT = 0.35          # (informativo) puerta mirando "hacia dentro" de la vista
 # Regla de alturas (etapa 17): manda la prueba de visibilidad desde CAM_Iso, no el lado de la calle.
 #   - hasta 3 plantas (<= 10.5 m); la torre de Alquimia hasta 4
@@ -257,7 +257,8 @@ def plan_modules(W, D, floors, style, rng, door_index=None, use="house", module_
 
 def build_meshes(W, D, floors, roof_type, style, seed_int, plan, detail, use="house", balcony_ok=True, opts=None):
     """opts (opcional): side_detail {lado: detalle minimo en LOD0}, roof_seg (m por tramo de teja), eave (alero),
-    n_balconies (balcones en la fachada), wall_mat (material de los muros)."""
+    n_balconies (balcones en la fachada), wall_mat (material de los muros), pitch (pendiente del tejado, grados),
+    max_rise (tope de altura del chapitel 'spire'), gable_mat (material de los hastiales), door_scale (DOOR_SCALE)."""
     opts = opts or {}
     rng = random.Random(seed_int * 7 + 1)            # mismas decisiones en todos los LODs
     eave = opts.get("eave", K.EAVE)
@@ -320,8 +321,9 @@ def build_meshes(W, D, floors, roof_type, style, seed_int, plan, detail, use="ho
     reps = rrng.randint(2, 4)
     ridge = 0.0
     if roof_type == "gable":
-        ridge = K.roof_gable(roof, W, D, rng=rrng, detail=detail, repairs=reps, eave=eave)
-        K.gable_walls(body, W, D, ridge)
+        ridge = K.roof_gable(roof, W, D, rng=rrng, detail=detail, repairs=reps, eave=eave,
+                             pitch=opts.get("pitch", K.ROOF_PITCH))
+        K.gable_walls(body, W, D, ridge, mat=opts.get("gable_mat", K.M_STONE))
     elif roof_type == "gable_front":
         roof.push(Matrix.Rotation(math.pi / 2, 4, "Z"))
         ridge = K.roof_gable(roof, D, W, rng=rrng, detail=detail, repairs=reps, eave=eave)
@@ -330,10 +332,13 @@ def build_meshes(W, D, floors, roof_type, style, seed_int, plan, detail, use="ho
         if style == "guild":
             stepped_gables(body, D, W, ridge)
         else:
-            K.gable_walls(body, D, W, ridge)
+            K.gable_walls(body, D, W, ridge, mat=opts.get("gable_mat", K.M_STONE))
         body.pop()
     elif roof_type == "hip":
-        ridge = K.roof_hip(roof, W, D, rng=rrng, detail=detail)
+        ridge = K.roof_hip(roof, W, D, rng=rrng, detail=detail, pitch=opts.get("pitch", K.ROOF_PITCH))
+    elif roof_type == "spire":
+        ridge = K.roof_spire(roof, W, D, pitch=opts.get("pitch", 55.0), rng=rrng, detail=detail,
+                             max_rise=opts.get("max_rise", 7.5))
     elif roof_type == "conical":
         ridge = K.roof_conical(roof, min(W, D) / 2, rng=rrng, detail=detail)
     elif roof_type == "flat":
@@ -550,12 +555,14 @@ def build_building(nombre, footprint=None, pisos=2, tipo_techo="gable", estilo="
     tris = {}
     door_local, top, ridge = None, 0.0, 0.0
     for detail, suf in ((0, ""), (1, "_LOD1"), (2, "_LOD2")):
-        seg0 = K.TILE_SEG
+        seg0, ds0 = K.TILE_SEG, K.DOOR_SCALE
         if opts and opts.get("roof_seg"):
             K.TILE_SEG = opts["roof_seg"]
+        if opts and opts.get("door_scale"):
+            K.DOOR_SCALE = opts["door_scale"]
         body, roof, dl, top, ridge = build_meshes(W, D, pisos, tipo_techo, estilo, seed_int, plan, detail, use,
                                                   opts=opts)
-        K.TILE_SEG = seg0
+        K.TILE_SEG, K.DOOR_SCALE = seg0, ds0
         if detail == 0:
             door_local = dl
         for part, mb in (("Body", body), ("Roof", roof)):
