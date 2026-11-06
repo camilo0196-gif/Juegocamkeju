@@ -5,18 +5,18 @@
     759,
     978
    ],
-   "mean_diff": 19.79,
-   "pct_px_over_25": 27.19,
-   "pct_px_over_50": 15.33
+   "mean_diff": 23.23,
+   "pct_px_over_25": 30.06,
+   "pct_px_over_50": 19.3
   },
   "ortho_120": {
    "px": [
     333,
     401
    ],
-   "mean_diff": 14.99,
-   "pct_px_over_25": 20.74,
-   "pct_px_over_50": 10.6
+   "mean_diff": 17.77,
+   "pct_px_over_25": 23.78,
+   "pct_px_over_50": 14.59
   }
  },
  "SALON_HAZANAS": {
@@ -25,38 +25,18 @@
     1869,
     1061
    ],
-   "mean_diff": 26.61,
-   "pct_px_over_25": 35.94,
-   "pct_px_over_50": 19.78
+   "mean_diff": 19.43,
+   "pct_px_over_25": 28.99,
+   "pct_px_over_50": 9.97
   },
   "ortho_120": {
    "px": [
     749,
     450
    ],
-   "mean_diff": 21.54,
-   "pct_px_over_25": 28.49,
-   "pct_px_over_50": 15.58
-  }
- },
- "FARO": {
-  "ortho_45": {
-   "px": [
-    736,
-    1080
-   ],
-   "mean_diff": 10.52,
-   "pct_px_over_25": 9.29,
-   "pct_px_over_50": 5.06
-  },
-  "ortho_120": {
-   "px": [
-    324,
-    711
-   ],
-   "mean_diff": 8.56,
-   "pct_px_over_25": 9.95,
-   "pct_px_over_50": 3.6
+   "mean_diff": 14.83,
+   "pct_px_over_25": 21.33,
+   "pct_px_over_50": 5.67
   }
  },
  "TesoreriaMuralla": {
@@ -65,18 +45,18 @@
     1486,
     1080
    ],
-   "mean_diff": 16.59,
-   "pct_px_over_25": 24.65,
-   "pct_px_over_50": 13.85
+   "mean_diff": 11.58,
+   "pct_px_over_25": 19.25,
+   "pct_px_over_50": 4.53
   },
   "ortho_120": {
    "px": [
     605,
     585
    ],
-   "mean_diff": 11.58,
-   "pct_px_over_25": 16.68,
-   "pct_px_over_50": 9.36
+   "mean_diff": 7.85,
+   "pct_px_over_25": 13.6,
+   "pct_px_over_50": 2.67
   }
  },
  "GranSubasta": {
@@ -85,18 +65,18 @@
     1643,
     1080
    ],
-   "mean_diff": 24.24,
-   "pct_px_over_25": 34.94,
-   "pct_px_over_50": 17.22
+   "mean_diff": 13.72,
+   "pct_px_over_25": 24.15,
+   "pct_px_over_50": 4.39
   },
   "ortho_120": {
    "px": [
     663,
     579
    ],
-   "mean_diff": 18.07,
-   "pct_px_over_25": 25.62,
-   "pct_px_over_50": 12.06
+   "mean_diff": 8.54,
+   "pct_px_over_25": 13.6,
+   "pct_px_over_50": 1.94
   }
  }
 }

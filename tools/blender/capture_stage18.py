@@ -77,8 +77,8 @@ def main():
                    [("balanza", tuple(Lf(1.9, 8.8, 6.2))), ("salida 02 -> Faro", tuple(Lf(-1.2, 6.6, 9.6)))])
     if want("posada"):
         _, Lf = frame_of("Posada")
-        cam = K.new_cam("TMP_p", lens=20)
-        K.look_at(cam, Lf(-12.0, 13.5, 2.0), Lf(1.0, 5.0, 5.5))       # desde la avenida, al NE de la fachada
+        cam = K.new_cam("TMP_p", lens=24)
+        K.look_at(cam, Lf(-21.0, 24.0, 4.0), Lf(0.5, 3.0, 6.0))       # desde la avenida, al NE de la fachada
         K.render(scene, cam, P("posada"))
         K.annotate(scene, cam, P("posada"), "Posada de Concordia (3 plantas): entramado, balcones, aleros de 0.9 m, "
                    "chimenea, letrero con vela y Tablon de Grupos",

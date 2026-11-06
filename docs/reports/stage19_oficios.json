@@ -1,0 +1,1122 @@
+{
+ "saved_before": "blender/concordia_v19.blend",
+ "materials": {
+  "MAT_Embers": "creado",
+  "MAT_Herb_Green": "creado"
+ },
+ "Gremio_Mineros": {
+  "marker": "MARKER_Bld_Gremio_Mineros",
+  "floors": 2,
+  "style": "stone",
+  "roof": "gable",
+  "eave_m": 6.4,
+  "ridge_m": 12.27,
+  "tris": {
+   "Body": 2990,
+   "Roof": 1150,
+   "Props": 698,
+   "total_body_roof": 4140,
+   "total_with_extras": 4524
+  },
+  "budget": 5000,
+  "ok": true,
+  "budget_class": "media",
+  "lod_ratios": [
+   0.582,
+   0.126
+  ],
+  "iso_rule": {
+   "history": [
+    {
+     "floors": 2,
+     "blocked": []
+    }
+   ],
+   "final_floors": 2,
+   "still_blocking": false
+  },
+  "collision": "Gremio_Mineros-colonly",
+  "footprint_check": {
+   "x": [
+    -9.22,
+    9.22
+   ],
+   "y": [
+    -7.22,
+    7.23
+   ],
+   "over_x_m": 0.22,
+   "over_y_m": 0.23
+  },
+  "footprint_ground_check": {
+   "over_x_m": 0.1,
+   "over_y_m": 0.19,
+   "below_z_m": 2.2
+  },
+  "door_local": [
+   0.0,
+   7.0,
+   0.0
+  ],
+  "headframe_top_m": 19.47,
+  "pick_m": 3.32,
+  "rails_sleepers": 8,
+  "carts": 2,
+  "rails_tris": 100,
+  "carts_tris": 284
+ },
+ "Gremio_Herbolarios": {
+  "marker": "MARKER_Bld_Gremio_Herbolarios",
+  "tris": {
+   "Body": 1069,
+   "Roof": 160,
+   "total": 1229
+  },
+  "budget": 6000,
+  "ok": true,
+  "lods": {
+   "LOD1": 614,
+   "LOD2": 30,
+   "LOD2_material": "LOD2: color plano = media del LOD0 (sRGB #ADB2AF)"
+  },
+  "info": {
+   "greenhouse": [
+    16.0,
+    7.2,
+    5.6
+   ],
+   "herb_clumps": 111,
+   "door": [
+    0.0,
+    2.2,
+    0.0
+   ]
+  },
+  "door_marker": "MARKER_Gremio_Herbolarios_Door",
+  "interior": [
+   "Gremio_Herbolarios_InteriorVolume",
+   [
+    15.4,
+    6.6,
+    3.2
+   ]
+  ],
+  "iso_blocks": [],
+  "footprint_check": {
+   "x": [
+    -10.7,
+    10.7
+   ],
+   "y": [
+    -5.07,
+    4.4
+   ],
+   "over_x_m": 0.0,
+   "over_y_m": 0.0
+  },
+  "collision": "Gremio_Herbolarios-colonly"
+ },
+ "Gremio_Pescadores": {
+  "marker": "MARKER_Bld_Gremio_Pescadores",
+  "floors": 2,
+  "style": "timber",
+  "roof": "gable",
+  "eave_m": 6.4,
+  "ridge_m": 12.27,
+  "tris": {
+   "Body": 2520,
+   "Roof": 948,
+   "Props": 878,
+   "total_body_roof": 3468,
+   "total_with_extras": 3896
+  },
+  "budget": 5000,
+  "ok": true,
+  "budget_class": "media",
+  "lod_ratios": [
+   0.622,
+   0.134
+  ],
+  "iso_rule": {
+   "history": [
+    {
+     "floors": 2,
+     "blocked": []
+    }
+   ],
+   "final_floors": 2,
+   "still_blocking": false
+  },
+  "collision": "Gremio_Pescadores-colonly",
+  "footprint_check": {
+   "x": [
+    -9.22,
+    9.22
+   ],
+   "y": [
+    -7.22,
+    8.52
+   ],
+   "over_x_m": 0.22,
+   "over_y_m": 1.52
+  },
+  "footprint_ground_check": {
+   "over_x_m": 0.05,
+   "over_y_m": 0.07,
+   "below_z_m": 2.2
+  },
+  "door_local": [
+   0.0,
+   7.0,
+   0.0
+  ],
+  "nets": 3,
+  "boats": [
+   "Gremio_Pescadores_Prop_Boat_01",
+   "Gremio_Pescadores_Prop_Boat_02"
+  ],
+  "nets_tris": 324,
+  "boats_tris": 104,
+  "pier": "CAU_Muelle_Pescadores (etapa 07, 8 x 3) reutilizado"
+ },
+ "Taller_GranForja": {
+  "marker": "MARKER_Bld_Taller_GranForja",
+  "floors": 2,
+  "style": "stone",
+  "roof": "gable",
+  "eave_m": 6.4,
+  "ridge_m": 13.11,
+  "tris": {
+   "Body": 3160,
+   "Roof": 1074,
+   "Props": 562,
+   "total_body_roof": 4234,
+   "total_with_extras": 4626
+  },
+  "budget": 8000,
+  "ok": true,
+  "budget_class": "media",
+  "lod_ratios": [
+   0.5,
+   0.105
+  ],
+  "iso_rule": {
+   "history": [
+    {
+     "floors": 2,
+     "blocked": []
+    }
+   ],
+   "final_floors": 2,
+   "still_blocking": false
+  },
+  "collision": "Taller_GranForja-colonly",
+  "footprint_check": {
+   "x": [
+    -8.22,
+    8.22
+   ],
+   "y": [
+    -8.22,
+    8.22
+   ],
+   "over_x_m": 0.22,
+   "over_y_m": 0.22
+  },
+  "footprint_ground_check": {
+   "over_x_m": 0.1,
+   "over_y_m": 0.1,
+   "below_z_m": 2.2
+  },
+  "door_local": [
+   2.0,
+   8.0,
+   0.0
+  ],
+  "chimney_m": 14.0,
+  "yard_tris": 170,
+  "anvils": 3,
+  "anvils_tris": 222,
+  "yard_side": "+X",
+  "steam_marker": "MARKER_GranForja_Steam",
+  "embers": "MAT_Embers (1.5, natural)"
+ },
+ "Taller_Curtiduria": {
+  "marker": "MARKER_Bld_Taller_Curtiduria",
+  "floors": 2,
+  "style": "timber",
+  "roof": "gable",
+  "eave_m": 6.4,
+  "ridge_m": 9.34,
+  "tris": {
+   "Body": 3016,
+   "Roof": 580,
+   "Props": 608,
+   "total_body_roof": 3596,
+   "total_with_extras": 3946
+  },
+  "budget": 5000,
+  "ok": true,
+  "budget_class": "media",
+  "lod_ratios": [
+   0.542,
+   0.099
+  ],
+  "iso_rule": {
+   "history": [
+    {
+     "floors": 2,
+     "blocked": []
+    }
+   ],
+   "final_floors": 2,
+   "still_blocking": false
+  },
+  "collision": "Taller_Curtiduria-colonly",
+  "footprint_check": {
+   "x": [
+    -8.22,
+    8.22
+   ],
+   "y": [
+    -3.72,
+    5.02
+   ],
+   "over_x_m": 0.22,
+   "over_y_m": 1.52
+  },
+  "footprint_ground_check": {
+   "over_x_m": 0.07,
+   "over_y_m": 0.07,
+   "below_z_m": 2.2
+  },
+  "door_local": [
+   2.0,
+   3.5,
+   0.0
+  ],
+  "vats": 4,
+  "yard_tris": 272,
+  "racks": 2,
+  "racks_tris": 78
+ },
+ "Taller_Sastreria": {
+  "marker": "MARKER_Bld_Taller_Sastreria",
+  "floors": 1,
+  "style": "guild",
+  "roof": "flat",
+  "eave_m": 3.2,
+  "ridge_m": 10.52,
+  "tris": {
+   "Body": 1896,
+   "Roof": 1106,
+   "Props": 288,
+   "total_body_roof": 3002,
+   "total_with_extras": 3002
+  },
+  "budget": 5000,
+  "ok": true,
+  "budget_class": "media",
+  "lod_ratios": [
+   0.696,
+   0.137
+  ],
+  "iso_rule": {
+   "history": [
+    {
+     "floors": 1,
+     "blocked": []
+    }
+   ],
+   "final_floors": 1,
+   "still_blocking": false
+  },
+  "collision": "Taller_Sastreria-colonly",
+  "footprint_check": {
+   "x": [
+    -8.87,
+    8.87
+   ],
+   "y": [
+    -6.87,
+    6.87
+   ],
+   "over_x_m": 0.87,
+   "over_y_m": 0.87
+  },
+  "footprint_ground_check": {
+   "over_x_m": 0.1,
+   "over_y_m": 0.1,
+   "below_z_m": 2.2
+  },
+  "door_local": [
+   2.0,
+   6.0,
+   0.0
+  ],
+  "open_loom_floor_z": 3.32,
+  "looms": 2,
+  "iso_blocks_full": []
+ },
+ "Taller_Carpinteria": {
+  "marker": "MARKER_Bld_Taller_Carpinteria",
+  "floors": 2,
+  "style": "timber",
+  "roof": "gable",
+  "eave_m": 6.4,
+  "ridge_m": 11.43,
+  "tris": {
+   "Body": 3388,
+   "Roof": 832,
+   "Props": 496,
+   "total_body_roof": 4220,
+   "total_with_extras": 4988
+  },
+  "budget": 6000,
+  "ok": true,
+  "budget_class": "media",
+  "lod_ratios": [
+   0.469,
+   0.096
+  ],
+  "iso_rule": {
+   "history": [
+    {
+     "floors": 2,
+     "blocked": []
+    }
+   ],
+   "final_floors": 2,
+   "still_blocking": false
+  },
+  "collision": "Taller_Carpinteria-colonly",
+  "footprint_check": {
+   "x": [
+    -8.22,
+    8.22
+   ],
+   "y": [
+    -6.22,
+    7.52
+   ],
+   "over_x_m": 0.22,
+   "over_y_m": 1.52
+  },
+  "footprint_ground_check": {
+   "over_x_m": 0.07,
+   "over_y_m": 0.075,
+   "below_z_m": 2.2
+  },
+  "door_local": [
+   2.0,
+   6.0,
+   0.0
+  ],
+  "waterwheel": "Taller_Carpinteria_WATERWHEEL",
+  "waterwheel_tris": 540,
+  "axle_tris": 20,
+  "logs_tris": 144,
+  "saw_tris": 64,
+  "wheel_center_world": [
+   85.96,
+   13.44,
+   6.95
+  ]
+ },
+ "Taller_Alquimia": {
+  "marker": "MARKER_Bld_Taller_Alquimia",
+  "tris": {
+   "Body": 4262,
+   "Roof": 68,
+   "total": 4330
+  },
+  "budget": 5000,
+  "ok": true,
+  "lods": {
+   "LOD1": 2164,
+   "LOD2": 26,
+   "LOD2_material": "LOD2: color plano = media del LOD0 (sRGB #BEB3A3)"
+  },
+  "info": {
+   "tower_m": [
+    6.5,
+    6.5,
+    12.8
+   ],
+   "top_m": 17.4,
+   "chimneys": [
+    [
+     -1.6,
+     -1.1,
+     19.0
+    ],
+    [
+     1.7,
+     1.7,
+     19.0
+    ]
+   ],
+   "alembics": 4,
+   "door": [
+    0.9,
+    3.75,
+    0.0
+   ]
+  },
+  "door_marker": "MARKER_Taller_Alquimia_Door",
+  "interior": [
+   "Taller_Alquimia_InteriorVolume",
+   [
+    5.5,
+    5.5,
+    12.8
+   ]
+  ],
+  "iso_blocks": [],
+  "footprint_check": {
+   "x": [
+    -8.0,
+    8.0
+   ],
+   "y": [
+    -6.0,
+    6.0
+   ],
+   "over_x_m": 0.0,
+   "over_y_m": 0.0
+  }
+ },
+ "Taller_Hornos": {
+  "marker": "MARKER_Bld_Taller_Hornos",
+  "tris": {
+   "Body": 470,
+   "Roof": 362,
+   "total": 832
+  },
+  "budget": 4000,
+  "ok": true,
+  "lods": {
+   "LOD1": 415,
+   "LOD2": 50,
+   "LOD2_material": "LOD2: color plano = media del LOD0 (sRGB #918373)"
+  },
+  "info": {
+   "oven_dome_d_m": 5.2,
+   "chimney_m": 8.0,
+   "tables": 2,
+   "door": [
+    2.5,
+    6.0,
+    0.0
+   ]
+  },
+  "door_marker": "MARKER_Taller_Hornos_Door",
+  "interior": [
+   "Taller_Hornos_InteriorVolume",
+   [
+    15.0,
+    11.0,
+    3.5
+   ]
+  ],
+  "iso_blocks": [],
+  "footprint_check": {
+   "x": [
+    -7.34,
+    7.82
+   ],
+   "y": [
+    -5.82,
+    5.82
+   ],
+   "over_x_m": 0.0,
+   "over_y_m": 0.0
+  }
+ },
+ "Taller_JoyeriaTallado": {
+  "marker": "MARKER_Bld_Taller_JoyeriaTallado",
+  "tris": {
+   "Body": 1282,
+   "Roof": 54,
+   "total": 1336
+  },
+  "budget": 3000,
+  "ok": true,
+  "lods": {
+   "LOD1": 666,
+   "LOD2": 18,
+   "LOD2_material": "LOD2: color plano = media del LOD0 (sRGB #BBB4AA)"
+  },
+  "info": {
+   "size": [
+    10.0,
+    10.0
+   ],
+   "shop_windows": 7,
+   "magnifiers": [
+    [
+     "+Y",
+     -2.8
+    ],
+    [
+     "+Y",
+     2.8
+    ],
+    [
+     "-Y",
+     0.0
+    ],
+    [
+     "+X",
+     -2.0
+    ],
+    [
+     "+X",
+     2.0
+    ],
+    [
+     "-X",
+     -2.0
+    ],
+    [
+     "-X",
+     2.0
+    ]
+   ],
+   "door": [
+    0.0,
+    6.0,
+    0.0
+   ],
+   "off_y": 1.0
+  },
+  "door_marker": "MARKER_Taller_JoyeriaTallado_Door",
+  "interior": [
+   "Taller_JoyeriaTallado_InteriorVolume",
+   [
+    9.1,
+    9.1,
+    6.6
+   ]
+  ],
+  "iso_blocks": [],
+  "footprint_check": {
+   "x": [
+    -5.2,
+    5.2
+   ],
+   "y": [
+    -4.2,
+    6.2
+   ],
+   "over_x_m": 0.0,
+   "over_y_m": 0.2
+  },
+  "note": "10 x 10 (prompt) dentro de la parcela 16 x 12 del marcador, alineado al frente",
+  "props": {
+   "lupas": 7,
+   "lupas_tris": 854,
+   "farolillo": "Taller_JoyeriaTallado_Prop_LANTERN_Shard"
+  }
+ },
+ "CrisolPiedras": {
+  "marker": "MARKER_Bld_CrisolPiedras",
+  "tris": {
+   "Body": 2919,
+   "Roof": 160,
+   "total": 3079
+  },
+  "budget": 9000,
+  "ok": true,
+  "lods": {
+   "LOD1": 1539,
+   "LOD2": 66,
+   "LOD2_material": "LOD2: color plano = media del LOD0 (sRGB #B5B3AC)"
+  },
+  "info": {
+   "diameter_m": 22.0,
+   "windows": 11,
+   "oculus_d_m": 3.0,
+   "bowl_d_m": 4.0,
+   "top_m": 12.35,
+   "door": [
+    0.0,
+    11.0,
+    0.0
+   ]
+  },
+  "door_marker": "MARKER_CrisolPiedras_Door",
+  "interior": [
+   "CrisolPiedras_InteriorVolume",
+   [
+    19.0,
+    19.0,
+    8.0
+   ]
+  ],
+  "iso_blocks": [],
+  "footprint_check": {
+   "x": [
+    -11.046,
+    11.046
+   ],
+   "y": [
+    -11.046,
+    11.046
+   ],
+   "over_x_m": 0.046,
+   "over_y_m": 0.046
+  },
+  "float_stones": {
+   "count": 7,
+   "tris_each": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10
+   ]
+  }
+ },
+ "CasaReparaciones": {
+  "marker": "MARKER_Bld_CasaReparaciones",
+  "tris": {
+   "Body": 358,
+   "Roof": 614,
+   "total": 972
+  },
+  "budget": 3500,
+  "ok": true,
+  "lods": {
+   "LOD1": 485,
+   "LOD2": 22,
+   "LOD2_material": "LOD2: color plano = media del LOD0 (sRGB #978878)"
+  },
+  "info": {
+   "open_front": true,
+   "door": [
+    0.0,
+    5.0,
+    0.0
+   ],
+   "tool_racks": [
+    [
+     -3.5,
+     -4.5,
+     0.0
+    ],
+    [
+     2.5,
+     -4.5,
+     0.0
+    ]
+   ]
+  },
+  "door_marker": "MARKER_CasaReparaciones_Door",
+  "interior": [
+   "CasaReparaciones_InteriorVolume",
+   [
+    15.0,
+    9.0,
+    3.4
+   ]
+  ],
+  "iso_blocks": [],
+  "footprint_check": {
+   "x": [
+    -8.0,
+    8.0
+   ],
+   "y": [
+    -5.0,
+    4.92
+   ],
+   "over_x_m": 0.0,
+   "over_y_m": 0.0
+  },
+  "props": {
+   "tool_racks": 2,
+   "tris": 272
+  }
+ },
+ "casas": {
+  "OFI_Casa_01": {
+   "marker": "MARKER_Bld_OFI_Casa_01",
+   "floors": 2,
+   "style": "timber",
+   "roof": "gable",
+   "eave_m": 6.4,
+   "ridge_m": 9.76,
+   "tris": {
+    "Body": 2150,
+    "Roof": 606,
+    "Props": 370,
+    "total_body_roof": 2756,
+    "total_with_extras": 2756
+   },
+   "budget": null,
+   "ok": null,
+   "budget_class": "media",
+   "lod_ratios": [
+    0.536,
+    0.116
+   ],
+   "iso_rule": {
+    "history": [
+     {
+      "floors": 2,
+      "blocked": []
+     }
+    ],
+    "final_floors": 2,
+    "still_blocking": false
+   },
+   "collision": "OFI_Casa_01-colonly",
+   "footprint_check": {
+    "x": [
+     -4.22,
+     4.22
+    ],
+    "y": [
+     -4.22,
+     4.22
+    ],
+    "over_x_m": 0.22,
+    "over_y_m": 0.22
+   },
+   "footprint_ground_check": {
+    "over_x_m": 0.075,
+    "over_y_m": 0.075,
+    "below_z_m": 2.2
+   },
+   "door_local": [
+    0.0,
+    4.0,
+    0.0
+   ]
+  },
+  "OFI_Casa_02": {
+   "marker": "MARKER_Bld_OFI_Casa_02",
+   "floors": 2,
+   "style": "stone",
+   "roof": "gable",
+   "eave_m": 6.4,
+   "ridge_m": 9.76,
+   "tris": {
+    "Body": 2838,
+    "Roof": 626,
+    "Props": 234,
+    "total_body_roof": 3464,
+    "total_with_extras": 3464
+   },
+   "budget": null,
+   "ok": null,
+   "budget_class": "media",
+   "lod_ratios": [
+    0.555,
+    0.103
+   ],
+   "iso_rule": {
+    "history": [
+     {
+      "floors": 2,
+      "blocked": []
+     }
+    ],
+    "final_floors": 2,
+    "still_blocking": false
+   },
+   "collision": "OFI_Casa_02-colonly",
+   "footprint_check": {
+    "x": [
+     -5.72,
+     5.72
+    ],
+    "y": [
+     -4.22,
+     4.22
+    ],
+    "over_x_m": 0.22,
+    "over_y_m": 0.22
+   },
+   "footprint_ground_check": {
+    "over_x_m": 0.1,
+    "over_y_m": 0.1,
+    "below_z_m": 2.2
+   },
+   "door_local": [
+    1.375,
+    4.0,
+    0.0
+   ]
+  }
+ },
+ "Gremio_Cazadores": {
+  "placement": "PENDIENTE: no existe MARKER_Bld_Gremio_Cazadores en el archivo",
+  "kit_location": [
+   3200.0,
+   1250.0
+  ],
+  "tris": {
+   "Body": 2284,
+   "Roof": 978,
+   "props": 807,
+   "range": 160,
+   "total": 4229
+  },
+  "budget": 5000,
+  "ok": true,
+  "floors": 2,
+  "antlers": 3,
+  "hide_racks": 3,
+  "targets": 6,
+  "range_m": "20 x 10 (detras de la casa)"
+ },
+ "faro_visibility": {
+  "Avenida Norte": {
+   "axis_pct": 84.8,
+   "lanes": {
+    "-2.5": {
+     "samples": 33,
+     "pct": 87.9,
+     "blocked_by": {
+      "CasaRegistro_Body": 4
+     }
+    },
+    "+0.0": {
+     "samples": 33,
+     "pct": 84.8,
+     "blocked_by": {
+      "CasaRegistro_Body": 4,
+      "FuenteMercado": 1
+     }
+    },
+    "+2.5": {
+     "samples": 33,
+     "pct": 84.8,
+     "blocked_by": {
+      "CasaRegistro_Body": 5
+     }
+    }
+   },
+   "best_lane_pct": 87.9,
+   "samples_axis": 33
+  },
+  "Avenida Sur": {
+   "axis_pct": 100.0,
+   "lanes": {
+    "-2.5": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+0.0": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+2.5": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    }
+   },
+   "best_lane_pct": 100.0,
+   "samples_axis": 33
+  },
+  "Avenida Este": {
+   "axis_pct": 84.4,
+   "lanes": {
+    "-2.5": {
+     "samples": 32,
+     "pct": 90.6,
+     "blocked_by": {
+      "Taller_Carpinteria_Roof": 3
+     }
+    },
+    "+0.0": {
+     "samples": 32,
+     "pct": 84.4,
+     "blocked_by": {
+      "Taller_Carpinteria_Body": 4,
+      "Taller_Carpinteria_Roof": 1
+     }
+    },
+    "+2.5": {
+     "samples": 32,
+     "pct": 84.4,
+     "blocked_by": {
+      "Taller_Carpinteria_Body": 5
+     }
+    }
+   },
+   "best_lane_pct": 90.6,
+   "samples_axis": 32
+  },
+  "Avenida Oeste": {
+   "axis_pct": 100.0,
+   "lanes": {
+    "-2.5": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+0.0": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+2.5": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    }
+   },
+   "best_lane_pct": 100.0,
+   "samples_axis": 33
+  },
+  "Diagonal NE (Faro)": {
+   "axis_pct": 100.0,
+   "lanes": {
+    "-2.5": {
+     "samples": 25,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+0.0": {
+     "samples": 25,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+2.5": {
+     "samples": 25,
+     "pct": 100.0,
+     "blocked_by": {}
+    }
+   },
+   "best_lane_pct": 100.0,
+   "samples_axis": 25
+  },
+  "Diagonal NO (Santuario)": {
+   "axis_pct": 92.6,
+   "lanes": {
+    "-2.5": {
+     "samples": 27,
+     "pct": 96.3,
+     "blocked_by": {
+      "SANTUARIO_Body": 1
+     }
+    },
+    "+0.0": {
+     "samples": 27,
+     "pct": 92.6,
+     "blocked_by": {
+      "SANTUARIO_Body": 2
+     }
+    },
+    "+2.5": {
+     "samples": 27,
+     "pct": 88.9,
+     "blocked_by": {
+      "SANTUARIO_Body": 3
+     }
+    }
+   },
+   "best_lane_pct": 96.3,
+   "samples_axis": 27
+  },
+  "Diagonal SO (Obelisco)": {
+   "axis_pct": 3.4,
+   "lanes": {
+    "-2.5": {
+     "samples": 29,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+0.0": {
+     "samples": 29,
+     "pct": 3.4,
+     "blocked_by": {
+      "OBELISK_Body": 23,
+      "OBELISK_Mark_013": 1,
+      "OBELISK_Mark_033": 1,
+      "OBELISK_Mark_053": 1
+     }
+    },
+    "+2.5": {
+     "samples": 29,
+     "pct": 100.0,
+     "blocked_by": {}
+    }
+   },
+   "best_lane_pct": 100.0,
+   "samples_axis": 29
+  },
+  "Diagonal SE (Salon)": {
+   "axis_pct": 80.8,
+   "lanes": {
+    "-2.5": {
+     "samples": 26,
+     "pct": 76.9,
+     "blocked_by": {
+      "SALON_HAZANAS_Body": 5,
+      "SALON_HAZANAS_Roof": 1
+     }
+    },
+    "+0.0": {
+     "samples": 26,
+     "pct": 80.8,
+     "blocked_by": {
+      "SALON_HAZANAS_Body": 5
+     }
+    },
+    "+2.5": {
+     "samples": 26,
+     "pct": 84.6,
+     "blocked_by": {
+      "SALON_HAZANAS_Body": 4
+     }
+    }
+   },
+   "best_lane_pct": 84.6,
+   "samples_axis": 26
+  },
+  "Ronda r100": {
+   "axis_pct": 80.6,
+   "samples_axis": 36,
+   "blocked_by": {
+    "MER_Casa_01_Body": 2,
+    "SALON_HAZANAS_Body": 2,
+    "SANTUARIO_Body": 1,
+    "Taller_Alquimia_Body": 1
+   }
+  },
+  "Ronda r150": {
+   "axis_pct": 83.9,
+   "samples_axis": 56,
+   "blocked_by": {
+    "Banco_Body": 2,
+    "TesoreriaMuralla_Body": 2,
+    "Taller_GranForja_Body": 1,
+    "TRN_ArchBridge_02": 1
+   }
+  }
+ },
+ "faro_visibility_note": "muestras cada 4 m (radiales, r 62-190) y cada 6 grados (rondas), solo sobre calle o plaza transitable (fuera de parcelas y pads); ojo a 1.7 m; objetivo: cima del cristal",
+ "export": {
+  "file": "export/godot/concordia_oficios.glb",
+  "mb": 4.48,
+  "nodes": 222,
+  "meshes": 130,
+  "tris": 67337,
+  "materials": 29,
+  "images": 37,
+  "images_external": 37,
+  "colliders": 15,
+  "navmesh": 0,
+  "occluders": 0,
+  "empties": 39
+ }
+}

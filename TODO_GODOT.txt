@@ -1,6 +1,6 @@
 CONCORDIA - TODO en Godot 4 (lo que el glTF no guarda)
 ======================================================
-Se actualiza en cada etapa. Ultima: etapa 18. [ ] = pendiente en Godot; (E#) = etapa en que aparece.
+Se actualiza en cada etapa. Ultima: etapa 19. [ ] = pendiente en Godot; (E#) = etapa en que aparece.
 
 Importacion general
 [ ] (E11) Los .glb usan texturas EXTERNAS con ruta relativa "../../textures/concordia/...": copiar la carpeta textures/
@@ -72,3 +72,16 @@ Mercado (E18)
 [ ] Puestos (PuestoProvisiones_01..14): comparten 5 mallas (STALL_A..E) -> se pueden pasar a MultiMeshInstance3D.
     Toldos: balanceo leve opcional.
 [ ] LOD2 de Santuario, Salon, Faro, Tesoreria y Gran Subasta: un solo objeto *_Body_LOD2 que sustituye a cuerpo + cubierta.
+
+Oficios (E19)
+[ ] Taller_Carpinteria_WATERWHEEL: giro continuo sobre su eje Y local (eje hacia la Carpinteria), ~6 rpm; el agua
+    del Cauce en la rueda puede llevar salpicaduras (particulas). Sustituye a MARKER_Cauce_WaterWheel.
+[ ] Gran Forja: vapor en MARKER_GranForja_Steam (abrevadero de temple); brasas (MAT_Embers 1.5) con parpadeo y
+    OmniLight3D naranja; chispas opcionales sobre los yunques.
+[ ] Alquimia: humo de color en MARKER_Alquimia_Smoke_01/02 (bocas de las chimeneas).
+[ ] Crisol de las Piedras: CRISOL_FloatStone_01..07 flotan y giran sobre el cuenco; el haz del oculo
+    (MAT_Faro_Beam dentro de CrisolPiedras_Body) en blend_mode ADD como el del Faro; el cuenco (MAT_Embers) con
+    ondulacion.
+[ ] Hornos: humo en la chimenea y brasas en la boca del horno.
+[ ] Pescadores: las barcas (Gremio_Pescadores_Prop_Boat_01/02) con balanceo leve en el agua.
+[ ] Gremio de Cazadores: colocar cuando tenga parcela (escena aparte concordia_gremio_cazadores_sin_parcela.glb).

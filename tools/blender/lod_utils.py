@@ -237,3 +237,46 @@ def massing_lod2(kind, name, src_objs, col, parent):
     o["lod"] = 2
     o["lod2_method"] = f"volumetria cerrada (massing) con material plano {mat.name}"
     return o, sum(len(p.vertices) - 2 for p in o.data.polygons), mat.name, mat["note"]
+
+
+def massing_spec(name, spec, src_objs, col, parent, mat_name=None):
+    """LOD2 por volumetria a partir de una lista de primitivas cerradas:
+    ("box", lo, hi) | ("gable", x0, x1, y_half, z_eave, z_ridge, y_center) | ("cone", cx, cy, r, z0, z1, n) |
+    ("cyl", cx, cy, r, z0, z1, n). Un material plano (color medio del LOD0)."""
+    import bld_kit as K
+    from mathutils import Matrix
+    old = bpy.data.objects.get(name)
+    if old is not None:
+        me = old.data
+        bpy.data.objects.remove(old)
+        if me.users == 0:
+            bpy.data.meshes.remove(me)
+    mat = flat_material(mat_name or f"MAT_LOD2_{name.replace('_Body_LOD2', '')}", average_color(src_objs))
+    m = mat.name
+    mb = K.MB()
+    for p in spec:
+        if p[0] == "box":
+            mb.box(p[1], p[2], m)
+        elif p[0] == "gable":
+            _, x0, x1, yh, ze, zr, yc = p
+            mb.push(Matrix.Translation((0, yc, 0)))
+            _gable(mb, x0, x1, yh, ze, zr, m)
+            mb.pop()
+        elif p[0] == "cone":
+            _, cx, cy, r, z0, z1, n = p
+            _cone(mb, cx, cy, r, z0, z1, n, m)
+        elif p[0] == "cyl":
+            _, cx, cy, r, z0, z1, n = p
+            mb.cylinder(r, z0, z1, n, m, caps=True, center=(cx, cy))
+    mb.finish()
+    me = bpy.data.meshes.new(name)
+    mb.bm.to_mesh(me)
+    mb.bm.free()
+    me.materials.append(mat)
+    o = bpy.data.objects.new(name, me)
+    col.objects.link(o)
+    o.parent = parent
+    o.hide_render = True
+    o["lod"] = 2
+    o["lod2_method"] = f"volumetria (massing) con material plano {mat.name}"
+    return o, sum(len(p.vertices) - 2 for p in o.data.polygons), mat.name, mat["note"]

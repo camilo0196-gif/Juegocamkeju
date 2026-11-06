@@ -1,6 +1,6 @@
 CONCORDIA - Edificios y materiales nuevos (kit, Portal y landmarks)
 ==================================================================
-Actualizado en la etapa 18 (concordia_v18.blend). Auditoria automatica: tools/blender/audit_materials.py ->
+Actualizado en la etapa 19 (concordia_v19.blend). Auditoria automatica: tools/blender/audit_materials.py ->
 docs/reports/stage17_materials.json.
 
 1. Regla de aprobacion de materiales nuevos
@@ -94,8 +94,10 @@ Prueba con CAM_Iso a ortho 45 y 120 (docs/captures/stage17_lod2_test.png, docs/r
   - Kit (LOD2 simplificado por el propio kit), Obelisco y Portal: no se nota -> se acepta.
   - Santuario, Salon y Faro (LOD2 diezmado al 15 %): se nota (las tejas desaparecen y aparece el tablero oscuro de
     debajo; tracerias y contrafuertes se vuelven pinchos). Desde la etapa 18 su LOD2 es UN objeto <NOMBRE>_Body_LOD2
-    (cuerpo + cubierta) con UN material plano MAT_LOD2_<NOMBRE> = color medio del LOD0 ponderado por area, y la malla
-    sale de una envolvente por voxeles (Remesh 0.3-0.4 m) diezmada al 15 %, para que no se rompa.
+    (cuerpo + cubierta) con UN material plano MAT_LOD2_<NOMBRE> = color medio del LOD0 ponderado por area.
+    Malla: volumetria cerrada con las cotas reales (caja + prisma de cubierta + torres/flecha/linterna), porque la
+    envolvente por voxeles no cierra las cubiertas de una cara y el diezmado las borraba (cajas sin tapa). El Faro
+    (volumenes cerrados) conserva la envolvente por voxeles (Remesh 0.3 m) diezmada al 15 %.
     MAT_LOD2_SANTUARIO #C0BBB4, MAT_LOD2_SALON_HAZANAS #91877E, MAT_LOD2_FARO #B5B0A5 (grises calidos, saturacion
     < 0.1: cumplen la paleta). Lo mismo para los edificios hechos a mano del Mercado (Tesoreria, Gran Subasta).
   - Herramienta: tools/blender/lod_utils.flat_lod2().
@@ -123,3 +125,18 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
   - Gran Subasta: pabellon abierto (interior = false, aunque el marcador decia true): sin puerta ni InteriorVolume.
   - Posada: letrero colgante con vela (llama MAT_Window_Warm, emision 1.0) y Posada_TablonGrupos (3 x 2 m, objeto aparte,
     interactive = true) en MARKER_Prop_TablonGrupos.
+
+9. Oficios (etapa 19)
+---------------------
+  - MAT_Embers (nuevo): brasas y metal fundido, naranja calido NATURAL #E09A62, emision 1.5 (Forja, Hornos, cuenco del
+    Crisol). Saturacion 0.56 > 0.35: excepcion pedida en el prompt ("luz naranja calida de las brasas"); confirmar.
+  - MAT_Herb_Green (nuevo): hierbas, verde apagado #6E7B58 (saturacion 0.28, dentro de la paleta).
+  - Vidrio del invernadero y alambiques: MAT_Pipe_Glass (alpha 0.35, ya aprobado). Lupas: MAT_Bronze_Aged.
+  - Gremio de Cazadores: NO hay MARKER_Bld_Gremio_Cazadores. Esta montado en la zona del kit (3200, 1250) con su campo
+    de tiro y exportado aparte (concordia_gremio_cazadores_sin_parcela.glb) hasta que se decida su parcela.
+  - Gremio de Pescadores: el muelle 8 x 3 ya existia (CAU_Muelle_Pescadores, etapa 07); las 2 barcas van en
+    MARKER_Mooring_01 y _03.
+  - Joyeria y Tallado: 10 x 10 (prompt) dentro de su parcela de 16 x 12, alineada al frente.
+  - Gran Forja: edificio 16 x 16 + patio de fundicion 10 x 16 en el extremo exterior de la parcela (26 x 16).
+  - Curtiduria: casa 16 x 7 al fondo y patio delante con las 4 tinas (la puerta mira a la camara).
+  - Sastreria: 2 plantas = planta baja cerrada + planta alta abierta de telares (balcones y telas en los 4 lados).
