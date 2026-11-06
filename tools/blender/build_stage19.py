@@ -190,7 +190,18 @@ def build_all(col, pcol, kitcol, st):
                  root.matrix_world @ Matrix.Translation((-W / 2 - 1.2, y, 0)) @ Matrix.Rotation(math.pi / 2, 4, "Z"))
             for k, y in enumerate((-4.0, 0.0, 4.0), 1)]
     boatm = shared("PROP_Boat_4m", O.boat)
-    g = B18.ground_fn()
+    import bmesh
+    from mathutils.bvhtree import BVHTree
+    cw = bpy.data.objects["CAU_Water"]
+    tb = bmesh.new()
+    tb.from_mesh(cw.data)
+    tb.transform(cw.matrix_world)
+    wbvh = BVHTree.FromBMesh(tb)
+    tb.free()
+
+    def g(x, y):                                     # cota de la lamina de agua (no la del lecho)
+        h = wbvh.ray_cast(Vector((x, y, 100.0)), Vector((0, 0, -1)))
+        return h[0].z if h[0] else 4.3
     boats = []
     for k, mn in enumerate(("MARKER_Mooring_01", "MARKER_Mooring_03"), 1):
         mo = bpy.data.objects[mn]
@@ -199,7 +210,7 @@ def build_all(col, pcol, kitcol, st):
         p = mo.matrix_world.translation + d * 1.3
         zw = g(p.x, p.y)
         boats.append(prop(f"{name}_Prop_Boat_{k:02d}", boatm, pcol, pe,
-                          Matrix.Translation((p.x, p.y, zw - 0.15)) @ Matrix.Rotation(a + math.pi / 2, 4, "Z")))
+                          Matrix.Translation((p.x, p.y, zw - 0.12)) @ Matrix.Rotation(a + math.pi / 2, 4, "Z")))
     colo = box_collider(f"{name}-colonly", col, root, [((-W / 2, -D / 2, 0), (W / 2, D / 2, rep["eave_height_m"]))])
     finish_kit(name, root, objs, rep, st, colo, extra={"nets": len(nets), "boats": [b_.name for b_ in boats],
                                                        "nets_tris": tris(nets[0]) * 3, "boats_tris": tris(boats[0]) * 2,
