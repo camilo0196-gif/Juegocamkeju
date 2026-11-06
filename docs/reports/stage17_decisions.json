@@ -1,0 +1,495 @@
+{
+ "saved_before": "blender/concordia_v17.blend",
+ "pipe": {
+  "curve": "CRV_LightPipe_Tesoreria_Faro",
+  "first_point": [
+   -16.1,
+   125.0,
+   14.72
+  ],
+  "marker": "MARKER_PipeOutlet_TesoreriaMuralla",
+  "provisional": true,
+  "tesoreria_marker": "MARKER_Bld_TesoreriaMuralla",
+  "pad_z": 5.116
+ },
+ "faro": {
+  "materials": {},
+  "boolean": [
+   {
+    "object": "TMP_FaroStone",
+    "strokes": 66,
+    "cut_ok": 66,
+    "failed": 0,
+    "failed_idx": []
+   },
+   {
+    "object": "TMP_FaroCornice",
+    "strokes": 66,
+    "cut_ok": 66,
+    "failed": 0,
+    "failed_idx": []
+   }
+  ],
+  "channel_starts_local": [
+   [
+    0.6,
+    7.7,
+    1.55
+   ],
+   [
+    -0.6,
+    7.7,
+    -1.55
+   ],
+   [
+    1.8,
+    7.6,
+    1.8
+   ],
+   [
+    -1.8,
+    7.6,
+    -1.8
+   ]
+  ],
+  "tris": {
+   "FARO_Body": 11582,
+   "FARO_Crystal": 216,
+   "FARO_Beam": 64,
+   "total": 11862
+  },
+  "budget": 20000,
+  "ok": true,
+  "lods": {
+   "LOD1": 5788,
+   "LOD2": 1735
+  },
+  "crystal_top_local_m": 39.8,
+  "height_total_m": 39.8,
+  "ramp": {
+   "turns": 3.5,
+   "pitch_m": 8.571,
+   "width_m": 1.4,
+   "arrival_deg": 90.0
+  },
+  "channels": {
+   "count": 4,
+   "width_m": 0.2,
+   "depth_m": 0.05,
+   "vertical_clearance_to_ramp_m": [
+    5.36,
+    3.21,
+    1.07,
+    7.5
+   ]
+  },
+  "collision": [
+   "FARO-colonly",
+   "FARO_Ramp-colonly"
+  ],
+  "export": {
+   "file": "export/godot/concordia_faro.glb",
+   "mb": 1.33,
+   "nodes": 9,
+   "meshes": 7,
+   "tris": 19871,
+   "materials": 7,
+   "images": 15,
+   "images_external": 15,
+   "colliders": 2,
+   "navmesh": 0,
+   "occluders": 0,
+   "empties": 2
+  }
+ },
+ "canal_alignment": [
+  {
+   "ground_canal_x": -1.8,
+   "ground_centerline_x": -1.8,
+   "ground_y_range": [
+    6.71,
+    11.7
+   ],
+   "tower_start_x": -1.8,
+   "tower_start_y": 7.6,
+   "tower_drop_x": -1.8,
+   "lateral_offset_cm": 0.0,
+   "start_on_canal": true,
+   "ok_5cm": true
+  },
+  {
+   "ground_canal_x": -0.6,
+   "ground_centerline_x": -0.6,
+   "ground_y_range": [
+    6.92,
+    11.93
+   ],
+   "tower_start_x": -0.6,
+   "tower_start_y": 7.7,
+   "tower_drop_x": -1.55,
+   "lateral_offset_cm": 0.0,
+   "start_on_canal": true,
+   "ok_5cm": true
+  },
+  {
+   "ground_canal_x": 0.6,
+   "ground_centerline_x": 0.6,
+   "ground_y_range": [
+    6.92,
+    11.93
+   ],
+   "tower_start_x": 0.6,
+   "tower_start_y": 7.7,
+   "tower_drop_x": 1.55,
+   "lateral_offset_cm": 0.0,
+   "start_on_canal": true,
+   "ok_5cm": true
+  },
+  {
+   "ground_canal_x": 1.8,
+   "ground_centerline_x": 1.8,
+   "ground_y_range": [
+    6.71,
+    11.7
+   ],
+   "tower_start_x": 1.8,
+   "tower_start_y": 7.6,
+   "tower_drop_x": 1.8,
+   "lateral_offset_cm": 0.0,
+   "start_on_canal": true,
+   "ok_5cm": true
+  }
+ ],
+ "canal_alignment_note": "canales exteriores (+-1.8): la bajada de la torre cae sobre el canal; interiores (+-0.6): llegan al umbral de la puerta (+-1.45), la torre baja a x = +-1.55 junto a la portada y se une al canal con una L sobre el pavimento delante del umbral",
+ "portal": {
+  "clear_width_m": 7.8,
+  "pier_m": [
+   2.0,
+   2.0
+  ],
+  "pier_center_x": 4.9,
+  "pier_corners_xy_r": [
+   [
+    -5.9,
+    -1.0,
+    5.984
+   ],
+   [
+    -5.9,
+    1.0,
+    5.984
+   ],
+   [
+    5.9,
+    -1.0,
+    5.984
+   ],
+   [
+    5.9,
+    1.0,
+    5.984
+   ]
+  ],
+  "lintel_corner_r": 5.993,
+  "max_vertex_radius_above_pedestal_m": 6.0,
+  "worst_vertex": [
+   -4.84,
+   3.546,
+   0.004
+  ],
+  "ok_r_le_6": true,
+  "tris": 9124,
+  "lods": {
+   "LOD1": 4542,
+   "LOD2": 1368
+  },
+  "carved_runes": 26,
+  "boolean": [
+   {
+    "object": "TMP_block_-1_0",
+    "strokes": 11,
+    "cut_ok": 11,
+    "failed": 0,
+    "failed_idx": []
+   },
+   {
+    "object": "TMP_block_-1_1",
+    "strokes": 10,
+    "cut_ok": 10,
+    "failed": 0,
+    "failed_idx": []
+   },
+   {
+    "object": "TMP_block_-1_2",
+    "strokes": 10,
+    "cut_ok": 10,
+    "failed": 0,
+    "failed_idx": []
+   },
+   {
+    "object": "TMP_block_1_0",
+    "strokes": 7,
+    "cut_ok": 7,
+    "failed": 0,
+    "failed_idx": []
+   },
+   {
+    "object": "TMP_block_1_1",
+    "strokes": 12,
+    "cut_ok": 12,
+    "failed": 0,
+    "failed_idx": []
+   },
+   {
+    "object": "TMP_block_1_2",
+    "strokes": 11,
+    "cut_ok": 11,
+    "failed": 0,
+    "failed_idx": []
+   },
+   {
+    "object": "TMP_lintel",
+    "strokes": 51,
+    "cut_ok": 51,
+    "failed": 0,
+    "failed_idx": []
+   }
+  ],
+  "veil_m": [
+   7.8,
+   11.0
+  ],
+  "pillar_colliders": [
+   "PORTAL_Pillar_E-colonly",
+   "PORTAL_Pillar_W-colonly"
+  ],
+  "export": {
+   "mb": 1.74,
+   "nodes": 120,
+   "meshes": 120,
+   "tris": 25007,
+   "materials": 5,
+   "images": 6,
+   "images_external": 6,
+   "colliders": 31,
+   "navmesh": 0,
+   "occluders": 0,
+   "empties": 0
+  }
+ },
+ "faro_visibility": {
+  "Avenida Norte": {
+   "axis_pct": 100.0,
+   "lanes": {
+    "-2.5": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+0.0": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+2.5": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    }
+   },
+   "best_lane_pct": 100.0,
+   "samples_axis": 33
+  },
+  "Avenida Sur": {
+   "axis_pct": 100.0,
+   "lanes": {
+    "-2.5": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+0.0": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+2.5": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    }
+   },
+   "best_lane_pct": 100.0,
+   "samples_axis": 33
+  },
+  "Avenida Este": {
+   "axis_pct": 100.0,
+   "lanes": {
+    "-2.5": {
+     "samples": 32,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+0.0": {
+     "samples": 32,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+2.5": {
+     "samples": 32,
+     "pct": 100.0,
+     "blocked_by": {}
+    }
+   },
+   "best_lane_pct": 100.0,
+   "samples_axis": 32
+  },
+  "Avenida Oeste": {
+   "axis_pct": 100.0,
+   "lanes": {
+    "-2.5": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+0.0": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+2.5": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    }
+   },
+   "best_lane_pct": 100.0,
+   "samples_axis": 33
+  },
+  "Diagonal NE (Faro)": {
+   "axis_pct": 100.0,
+   "lanes": {
+    "-2.5": {
+     "samples": 25,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+0.0": {
+     "samples": 25,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+2.5": {
+     "samples": 25,
+     "pct": 100.0,
+     "blocked_by": {}
+    }
+   },
+   "best_lane_pct": 100.0,
+   "samples_axis": 25
+  },
+  "Diagonal NO (Santuario)": {
+   "axis_pct": 92.6,
+   "lanes": {
+    "-2.5": {
+     "samples": 27,
+     "pct": 96.3,
+     "blocked_by": {
+      "SANTUARIO_Body": 1
+     }
+    },
+    "+0.0": {
+     "samples": 27,
+     "pct": 92.6,
+     "blocked_by": {
+      "SANTUARIO_Body": 2
+     }
+    },
+    "+2.5": {
+     "samples": 27,
+     "pct": 88.9,
+     "blocked_by": {
+      "SANTUARIO_Body": 3
+     }
+    }
+   },
+   "best_lane_pct": 96.3,
+   "samples_axis": 27
+  },
+  "Diagonal SO (Obelisco)": {
+   "axis_pct": 3.4,
+   "lanes": {
+    "-2.5": {
+     "samples": 29,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+0.0": {
+     "samples": 29,
+     "pct": 3.4,
+     "blocked_by": {
+      "OBELISK_Body": 23,
+      "OBELISK_Mark_013": 1,
+      "OBELISK_Mark_033": 1,
+      "OBELISK_Mark_053": 1
+     }
+    },
+    "+2.5": {
+     "samples": 29,
+     "pct": 100.0,
+     "blocked_by": {}
+    }
+   },
+   "best_lane_pct": 100.0,
+   "samples_axis": 29
+  },
+  "Diagonal SE (Salon)": {
+   "axis_pct": 80.8,
+   "lanes": {
+    "-2.5": {
+     "samples": 26,
+     "pct": 76.9,
+     "blocked_by": {
+      "SALON_HAZANAS_Body": 5,
+      "SALON_HAZANAS_Roof": 1
+     }
+    },
+    "+0.0": {
+     "samples": 26,
+     "pct": 80.8,
+     "blocked_by": {
+      "SALON_HAZANAS_Body": 5
+     }
+    },
+    "+2.5": {
+     "samples": 26,
+     "pct": 84.6,
+     "blocked_by": {
+      "SALON_HAZANAS_Body": 4
+     }
+    }
+   },
+   "best_lane_pct": 84.6,
+   "samples_axis": 26
+  },
+  "Ronda r100": {
+   "axis_pct": 88.9,
+   "samples_axis": 36,
+   "blocked_by": {
+    "SALON_HAZANAS_Body": 2,
+    "SANTUARIO_Body": 1,
+    "TRN_Bridge_03": 1
+   }
+  },
+  "Ronda r150": {
+   "axis_pct": 94.6,
+   "samples_axis": 56,
+   "blocked_by": {
+    "TRN_ArchBridge_02": 1,
+    "TRN_ArchBridge_03": 1,
+    "TRN_ArchBridge_04": 1
+   }
+  }
+ },
+ "faro_visibility_note": "muestras cada 4 m (radiales, r 62-190) y cada 6 grados (rondas), solo sobre calle o plaza transitable (fuera de parcelas y pads); ojo a 1.7 m; objetivo: cima del cristal"
+}

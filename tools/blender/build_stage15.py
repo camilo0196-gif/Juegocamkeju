@@ -230,7 +230,8 @@ def pipe_curve(col, faro_root, stats):
 
 
 # ---------------------------------------------------------------------------
-def visibility(target, exclude_prefix=("FARO_",), stats=None):
+def visibility(target, exclude_prefix=("FARO_",), stats=None, streets=None, walkable=None):
+    """Rayos desde las calles (ojo a 1.7 m) a la cima del Faro. streets: {nombre: [(x, y)]}; walkable(x, y) -> bool."""
     bm = bmesh.new()
     owners = []
     dg = bpy.context.evaluated_depsgraph_get()
@@ -259,22 +260,27 @@ def visibility(target, exclude_prefix=("FARO_",), stats=None):
         owners.append((n0, len(bm.faces), o.name))
     bvh = BVHTree.FromBMesh(bm)
     gb = city_bvh()
-    g, cell, R = street_grid()
+    if walkable is None:
+        g, cell, R = street_grid()
 
-    def on_street(x, y):
-        i, j = int((x + R) / cell), int((y + R) / cell)
-        return 0 <= i < g.shape[0] and 0 <= j < g.shape[1] and g[i, j]
+        def on_street(x, y):
+            i, j = int((x + R) / cell), int((y + R) / cell)
+            return 0 <= i < g.shape[0] and 0 <= j < g.shape[1] and g[i, j]
+    else:
+        on_street = walkable
 
     def owner(fi):
         for a, b, n in owners:
             if a <= fi < b:
                 return n
         return "?"
-    streets = {}
+    default = streets is None
+    streets = streets or {}
     for name, d in (("Avenida Norte", (0, 1)), ("Avenida Sur", (0, -1)), ("Avenida Este", (1, 0)),
                     ("Avenida Oeste", (-1, 0))):
-        streets[name] = [(d[0] * r, d[1] * r) for r in range(62, 192, 8)]
-    for rr in (100, 150):
+        if default:
+            streets[name] = [(d[0] * r, d[1] * r) for r in range(62, 192, 8)]
+    for rr in ((100, 150) if default else ()):
         streets[f"Ronda r{rr}"] = [(rr * math.cos(math.radians(a)), rr * math.sin(math.radians(a))) for a in range(0, 360, 6)]
     rep = {}
     for name, pts in streets.items():
@@ -301,11 +307,8 @@ def visibility(target, exclude_prefix=("FARO_",), stats=None):
 
 
 # ---------------------------------------------------------------------------
-def main():
-    st = {}
-    bpy.ops.wm.open_mainfile(filepath=SRC)
-    save()
-    st["saved_before"] = os.path.relpath(OUT, REPO)
+def build_faro(st, with_pipes=True):
+    """Construye el Faro completo en el archivo abierto (borra antes los objetos FARO*). Devuelve la raiz."""
     st["materials"] = F.ensure_materials()
     import concordia_buildings as B
     col = bpy.data.collections["BLD_PORTAL"]
@@ -345,7 +348,8 @@ def main():
         P13.PROBES[cme.name] = []          # la sonda del canal no cae sobre la cornisa: se corta sin verificar
     P13.boolean_cut(co_o, ccut)
     st["boolean"] = list(P13.BOOL_LOG)
-    F.ground_ring(glow, ground_local)
+    starts = F.ground_ring(glow, ground_local)
+    st["channel_starts_local"] = [[round(a, 3), round(b, 3), round(c, 3)] for a, b, c in starts]
     extra = P13.Mesh()
     F.build_ramp(extra, 0)
     F.build_stair(extra)
@@ -413,9 +417,11 @@ def main():
     colo.hide_render = True
     attach(colo)
     rm = P13.Mesh()
-    F.build_ramp(rm, 1)
-    F.build_stair(rm)
+    n_steps = F.ramp_collider(rm)
     rcol = rm.to_object("FARO_Ramp-colonly", col)
+    rcol["note"] = f"solo el arranque de la escalera (<= {F.RAMP_COLLIDE_MAX_Z} m, {n_steps} peldanos)"
+    root["ramp"] = "decorativa: sin navegacion; sin colision por encima de 3 m"
+    root["navigation"] = False
     rcol.data.materials.clear()
     rcol.matrix_world = mw
     rcol.hide_render = True
@@ -428,18 +434,19 @@ def main():
     attach(dm)
     dm["axis"] = "+Y hacia fuera (hacia la plaza)"
     # tubos de luz: piezas del kit y curva
-    kit = bpy.data.collections["BLD_KIT"]
-    pieces = F.build_pipe_kit(kit)
-    for o in pieces.values():
-        B.box_uv(o)
-    props = bpy.data.collections["BLD_PROPS"]
-    pcol = bpy.data.collections.get("BLD_PIPES") or bpy.data.collections.new("BLD_PIPES")
-    if pcol.name not in props.children:
-        props.children.link(pcol)
-    for o in list(pcol.objects):
-        bpy.data.objects.remove(o)
-    pipe_curve(pcol, root, st)
-    st["pipe_kit"] = {n: o["tris"] for n, o in pieces.items()}
+    if with_pipes:
+        kit = bpy.data.collections["BLD_KIT"]
+        pieces = F.build_pipe_kit(kit)
+        for o in pieces.values():
+            B.box_uv(o)
+        props = bpy.data.collections["BLD_PROPS"]
+        pcol = bpy.data.collections.get("BLD_PIPES") or bpy.data.collections.new("BLD_PIPES")
+        if pcol.name not in props.children:
+            props.children.link(pcol)
+        for o in list(pcol.objects):
+            bpy.data.objects.remove(o)
+        pipe_curve(pcol, root, st)
+        st["pipe_kit"] = {n: o["tris"] for n, o in pieces.items()}
     # numeros
     t_body, t_cr, t_beam = tris(body), tris(crystal), tris(beam)
     st.update({"tris": {"FARO_Body": t_body, "FARO_Crystal": t_cr, "FARO_Beam": t_beam,
@@ -450,13 +457,28 @@ def main():
                "channels": {"count": 4, "width_m": F.CH_W, "depth_m": F.CH_D,
                             "vertical_clearance_to_ramp_m": [round(F.PITCH * f, 2) for f in (0.625, 0.375, 0.125, 0.875)]},
                "collision": [colo.name, rcol.name]})
-    target = mw @ Vector((0, 0, ctop))
-    visibility(target, stats=st)
+    st["target"] = mw @ Vector((0, 0, ctop))
+    return root
+
+
+def export_faro(st):
     import stage11_godot as G
+    col = bpy.data.collections["BLD_PORTAL"]
+    root = bpy.data.objects["FARO"]
     objs = [root] + [o for o in col.objects if o.name.startswith(("FARO", "MARKER_Faro_Door")) and o is not root]
     path = os.path.join(REPO, "export", "godot", "concordia_faro.glb")
     size = G.export_glb(objs, path)
     st["export"] = {"file": os.path.relpath(path, REPO), "mb": round(size / 2 ** 20, 2), **G.glb_info(path)}
+
+
+def main():
+    st = {}
+    bpy.ops.wm.open_mainfile(filepath=SRC)
+    save()
+    st["saved_before"] = os.path.relpath(OUT, REPO)
+    build_faro(st)
+    visibility(st.pop("target"), stats=st)
+    export_faro(st)
     save()
     with open(REPORT, "w") as fh:
         json.dump(st, fh, indent=1, ensure_ascii=False, default=str)

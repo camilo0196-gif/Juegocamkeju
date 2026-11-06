@@ -44,6 +44,16 @@ SEG = 32
 CH_Z0 = ZOC_H + 0.18                 # arranque de los canales en el fuste
 CH_Z1 = Z_GAL - 0.6
 DOOR_T = math.radians(90.0)
+# Enlace con los 4 canales de la plaza (stage03_plaza: CANAL_OFFSETS +-0.6 / +-1.8 a lo largo de la diagonal NE, que en
+# el marco local del Faro llegan paralelos a +Y, hacia la puerta). Cada canal de la torre: (fase en el fuste, x de la
+# bajada por el zocalo, radio del arco en la terraza, x del canal del suelo al que se une). Los dos interiores (+-0.6)
+# chocan con el umbral de la puerta (+-1.45): bajan junto a la portada (x = +-1.55) y se unen al canal del suelo con una
+# L sobre el pavimento delante del umbral.
+CH_ROUTES = ((math.radians(45), 1.55, 5.95, 0.6), (math.radians(135), -1.55, 5.95, -0.6),
+             (math.radians(315), 1.8, 6.35, 1.8), (math.radians(225), -1.8, 6.35, -1.8))
+THRESH_FRONT = ZOC_R - 0.05 + 0.6          # cara delantera del umbral (r)
+L_Y = THRESH_FRONT + 0.15                  # eje del tramo transversal de la L
+RAMP_COLLIDE_MAX_Z = 3.0                   # rampa decorativa: colision solo en el arranque (< 3 m)
 STONE, BASE, WOOD, IRON = "MAT_Limestone_Worn", "MAT_Wall_Gray", "MAT_Wood_Dark", "MAT_Iron_Black"
 GLOW = "MAT_Rune_Glow_12"
 
@@ -325,29 +335,60 @@ def build_ramp(m, lod=0):
         if lod == 0 and k % 3 == 0:
             p = pol(ro - 0.06, th, z)
             P13_box(m, p, 0.05, 1.05, IRON)
-        if lod == 0 and z > 29.5 and k % 2 == 0 and ri > r_shaft(z) + 0.05:
-            rs = r_shaft(z - 0.9)
-            c = [pol(rs - 0.05, th - 0.02, z - 1.2), pol(ri + 0.3, th - 0.02, z - 0.35),
-                 pol(ri + 0.3, th + 0.02, z - 0.35), pol(rs - 0.05, th + 0.02, z - 1.2)]
-            d = [pol(rs - 0.05, th - 0.02, z - 0.35), pol(ri + 0.3, th - 0.02, z - 0.34),
-                 pol(ri + 0.3, th + 0.02, z - 0.34), pol(rs - 0.05, th + 0.02, z - 0.35)]
-            _hexa(m, c, d, STONE)
+        if lod == 0 and z > 29.3 and k % 2 == 0 and ri > r_shaft(z) + 0.05:
+            cartela(m, th, z, ri)
     if lod == 0:
-        # pasamanos continuo
-        for h in (1.05,):
+        # barandilla exterior continua (pasamanos + barra intermedia) de la terraza a la galeria
+        for h in (1.05, 0.55):
             pts = []
             for k in range(n_seg + 1):
                 th = RAMP_T0 + t_tot * k / n_seg
                 z = ramp_z(th)
                 pts.append(pol(ramp_inner(z) + RAMP_W - 0.06, th, z + h))
-            for a, b in zip(pts[:-1], pts[1:]):
-                d = b - a
-                s = Vector((0, 0, 1)).cross(d).normalized() * 0.025
-                up = Vector((0, 0, 0.025))
-                m_face(m, [a - s + up, b - s + up, b + s + up, a + s + up], IRON)
-                m_face(m, [a - s - up, a + s - up, b + s - up, b - s - up], IRON)
-                m_face(m, [a + s - up, a + s + up, b + s + up, b + s - up], IRON)
-                m_face(m, [a - s + up, a - s - up, b - s - up, b - s + up], IRON)
+            rail_polyline(m, pts)
+        # barandilla interior donde la rampa se separa del fuste (hueco > 10 cm), continua y con postes
+        inner = []
+        for k in range(n_seg + 1):
+            th = RAMP_T0 + t_tot * k / n_seg
+            z = ramp_z(th)
+            if ramp_inner(z) > r_shaft(z) + 0.1:
+                inner.append((k, th, z))
+        if inner:
+            for h in (1.05, 0.55):
+                rail_polyline(m, [pol(ramp_inner(z) + 0.06, th, z + h) for _, th, z in inner])
+            for k, th, z in inner:
+                if k % 3 == 0 or k == inner[0][0] or k == inner[-1][0]:
+                    P13_box(m, pol(ramp_inner(z) + 0.06, th, z), 0.05, 1.05, IRON)
+
+
+def cartela(m, th, z, ri, w=0.32):
+    """Mensula estructural de piedra (cartela) bajo la ultima vuelta: empotrada en el fuste, perfil trapecial que
+    recoge la losa hasta 0.9 m de su borde interior, con zapata de apoyo. Ancho tangencial constante w."""
+    rs = r_shaft(z - 1.0) - 0.15
+    tv = pol(1, th + math.pi / 2, 0)
+    prof = [(rs, z - 0.35), (ri + 0.9, z - 0.35), (ri + 0.9, z - 0.62), (rs, z - 2.1)]
+    rad = pol(1, th, 0)
+    c = [rad * r + Vector((0, 0, zz)) - tv * (w / 2) for r, zz in prof]
+    d = [rad * r + Vector((0, 0, zz)) + tv * (w / 2) for r, zz in prof]
+    _hexa(m, [c[0], c[1], c[2], c[3]], [d[0], d[1], d[2], d[3]], STONE)
+    # zapata: dado bajo el arranque de la cartela, contra el fuste
+    rz = r_shaft(z - 2.3)
+    c2 = [rad * (rz - 0.1) - tv * (w / 2 + 0.05) + Vector((0, 0, z - 2.35)), rad * (rz + 0.25) - tv * (w / 2 + 0.05) +
+          Vector((0, 0, z - 2.35)), rad * (rz + 0.25) + tv * (w / 2 + 0.05) + Vector((0, 0, z - 2.35)),
+          rad * (rz - 0.1) + tv * (w / 2 + 0.05) + Vector((0, 0, z - 2.35))]
+    d2 = [p + Vector((0, 0, 0.25)) for p in c2]
+    _hexa(m, c2, d2, STONE)
+
+
+def rail_polyline(m, pts, r=0.025, mat=IRON):
+    for a, b in zip(pts[:-1], pts[1:]):
+        dv = b - a
+        sv = Vector((0, 0, 1)).cross(dv).normalized() * r
+        up = Vector((0, 0, r))
+        m_face(m, [a - sv + up, b - sv + up, b + sv + up, a + sv + up], mat)
+        m_face(m, [a - sv - up, a + sv - up, b + sv - up, b - sv - up], mat)
+        m_face(m, [a + sv - up, a + sv + up, b + sv + up, b + sv - up], mat)
+        m_face(m, [a - sv + up, a - sv - up, b - sv - up, b - sv + up], mat)
 
 
 def P13_box(m, base, half, h, mat):
@@ -382,6 +423,27 @@ def build_stair(m):
         x = x_top + min(i, n) * tread
         z = ZOC_H - min(i, n) * rise
         P13_box(m, Vector((x, y_out + 0.05, z)), 0.03, 1.0, IRON)
+    rail_polyline(m, [Vector((x_top - 0.6, y_out + 0.05, ZOC_H + 1.0)), Vector((x_top, y_out + 0.05, ZOC_H + 1.0)),
+                      Vector((x_top + n * tread, y_out + 0.05, 1.0))])
+
+
+def ramp_collider(m):
+    """Colision de la rampa decorativa: solo el arranque por debajo de RAMP_COLLIDE_MAX_Z (peldanos de la escalera
+    recta con su huella a <= 3 m), en cajas."""
+    n, rise, tread, w = 20, 0.2, 0.3, 1.4
+    y_in, y_out = -6.25, -6.25 - w
+    x_top = -3.0
+    out = 0
+    for i in range(n):
+        z = ZOC_H - (i + 1) * rise
+        if z > RAMP_COLLIDE_MAX_Z + 1e-6:
+            continue
+        x0, x1 = x_top + i * tread, x_top + (i + 1) * tread
+        c = [Vector((x0, y_out, 0)), Vector((x1, y_out, 0)), Vector((x1, y_in, 0)), Vector((x0, y_in, 0))]
+        d = [p + Vector((0, 0, z)) for p in c]
+        _hexa(m, c, d, STONE)
+        out += 1
+    return out
 
 
 def door_cutter():
@@ -520,21 +582,21 @@ def channel_cutters_and_strips(m_glow):
     """Cortadores (fuste, terraza, zocalo) + tiras emisivas en el fondo, y anillo al pie."""
     cutters = []
     k = 0
-    for phase, segs in channel_paths():
+    for phase, chords, t in terrace_routes():
         # (el tramo del fuste se construye con build_shaft_channels, sin cortes)
-        # terraza del zocalo: radial desde el fuste hasta el borde (normal +Z)
-        t = phase
-        rs = SECTIONS[0][2]
-        pa, pb = pol(rs - 0.05, t, ZOC_H), pol(ZOC_R + 0.3, t, ZOC_H)
-        cutters.append(chord_cutter(pa, pb, Vector((0, 0, 1)), CH_W, CH_D, 0.5, k))
-        k += 1
-        s = pol(1, t + math.pi / 2, 0) * (CH_W / 2 * 0.96)
-        za = ZOC_H - CH_D + 0.004
-        f = m_face(m_glow, [pa - s + Vector((0, 0, za - ZOC_H)), pb - s + Vector((0, 0, za - ZOC_H)),
-                            pb + s + Vector((0, 0, za - ZOC_H)), pa + s + Vector((0, 0, za - ZOC_H))], GLOW)
-        f.normal_update()
-        if f.normal.z < 0:
-            f.normal_flip()
+        # terraza del zocalo: radial desde el fuste, arco y radial hasta el borde sobre la bajada (normal +Z)
+        for pa, pb in chords:
+            cutters.append(chord_cutter(pa, pb, Vector((0, 0, 1)), CH_W, CH_D, 0.5, k))
+            k += 1
+            dv = (pb - pa).normalized()
+            s = Vector((0, 0, 1)).cross(dv) * (CH_W / 2 * 0.96)
+            za = ZOC_H - CH_D + 0.004
+            e = dv * 0.03
+            f = m_face(m_glow, [pa - e - s + Vector((0, 0, za - ZOC_H)), pb + e - s + Vector((0, 0, za - ZOC_H)),
+                                pb + e + s + Vector((0, 0, za - ZOC_H)), pa - e + s + Vector((0, 0, za - ZOC_H))], GLOW)
+            f.normal_update()
+            if f.normal.z < 0:
+                f.normal_flip()
         # bajada vertical por el zocalo (y su cornisa) hasta el suelo
         nm = pol(1, t, 0)
         pa, pb = pol(ZOC_R, t, ZOC_H + 0.05), pol(ZOC_R, t, -0.05)
@@ -549,6 +611,56 @@ def channel_cutters_and_strips(m_glow):
     return cutters
 
 
+def drop_angle(x):
+    """Angulo (local) de la bajada por la cara del zocalo en el lado de la plaza para una x dada."""
+    return math.atan2(math.sqrt(ZOC_R ** 2 - x * x), x)
+
+
+def terrace_routes():
+    """Por canal: (fase, cuerdas sobre la terraza, angulo de la bajada). Radial desde el fuste, arco por el lado que no
+    pasa por la escalera/rampa (theta 270) y radial hasta el borde."""
+    out = []
+    rs = SECTIONS[0][2]
+    for phase, xd, ra, _xg in CH_ROUTES:
+        td = drop_angle(xd)
+        delta = (td - phase + math.pi) % (2 * math.pi) - math.pi
+        pts = [pol(rs - 0.05, phase, ZOC_H), pol(ra, phase, ZOC_H)]
+        n = max(1, int(math.ceil(abs(math.degrees(delta)) / 6.0)))
+        pts += [pol(ra, phase + delta * i / n, ZOC_H) for i in range(1, n + 1)]
+        pts.append(pol(ZOC_R + 0.3, td, ZOC_H))
+        out.append((phase, list(zip(pts[:-1], pts[1:])), td))
+    return out
+
+
+def ground_links(m_glow, ground_z_xy):
+    """Uniones sobre el pavimento entre el pie de cada bajada y su canal de la plaza (tiras emisivas a ras, +4 mm).
+    Devuelve, por canal, el punto de arranque (x, y) que debe coincidir con el canal del suelo."""
+    hw = CH_W / 2
+    starts = []
+
+    def strip(x0, y0, x1, y1):
+        dv = Vector((x1 - x0, y1 - y0, 0)).normalized()
+        s = Vector((0, 0, 1)).cross(dv) * hw
+        e = dv * hw
+        a, b = Vector((x0, y0, 0)) - e, Vector((x1, y1, 0)) + e
+        q = [a - s, b - s, b + s, a + s]
+        q = [p + Vector((0, 0, ground_z_xy(p.x, p.y) + 0.004)) for p in q]
+        f = m_face(m_glow, q, GLOW)
+        f.normal_update()
+        if f.normal.z < 0:
+            f.normal_flip()
+    for _phase, xd, _ra, xg in CH_ROUTES:
+        y_face = math.sqrt(ZOC_R ** 2 - xd * xd) - CH_D
+        if abs(xd - xg) < 1e-6:
+            strip(xd, y_face, xd, ZOC_R + 0.6)
+            starts.append((xg, ZOC_R + 0.6, xd))
+        else:
+            strip(xd, y_face, xd, L_Y)
+            strip(xd, L_Y, xg, L_Y)
+            starts.append((xg, L_Y, xd))
+    return starts
+
+
 def ground_ring(m_glow, ground_z):
     """Anillo emisivo al pie del zocalo (sobre el suelo de la plaza) + uniones con las 4 bajadas."""
     n = 64
@@ -561,16 +673,9 @@ def ground_ring(m_glow, ground_z):
         f.normal_update()
         if f.normal.z < 0:
             f.normal_flip()
-    for t in CH_PHASES:
-        s = pol(1, t + math.pi / 2, 0) * 0.1
-        a, b = pol(ZOC_R - CH_D, t, 0), pol(ri, t, 0)
-        za, zb = ground_z(ZOC_R, t), ground_z(ri, t)
-        q = [a - s + Vector((0, 0, za)), b - s + Vector((0, 0, zb)), b + s + Vector((0, 0, zb)),
-             a + s + Vector((0, 0, za))]
-        f = m_face(m_glow, q, GLOW)
-        f.normal_update()
-        if f.normal.z < 0:
-            f.normal_flip()
+    def gz_xy(x, y):
+        return ground_z(math.hypot(x, y), math.atan2(y, x))
+    return ground_links(m_glow, gz_xy)
 
 
 # ---------------------------------------------------------------------------

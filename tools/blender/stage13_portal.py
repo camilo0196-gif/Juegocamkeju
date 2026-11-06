@@ -31,13 +31,15 @@ PLATE = "MAT_Iron_Black"
 Z_TOP = 8.9                       # cara superior del pedestal existente (MARKER_Portal_Center)
 Z_STEP = 8.75                     # escalon del pedestal (r 6.35): apoyo de los pilares
 Z_ATRIO = 8.6
-CLEAR = 8.0
-PIER = 2.2
-PIER_X = CLEAR / 2 + PIER / 2     # 5.1
+CLEAR = 7.8                       # etapa 17: 8.0 -> 7.8 (el arco ya no sobresale del pedestal r 6.0)
+PIER = 2.0                        # pilares 2.0 x 2.0
+PIER_X = CLEAR / 2 + PIER / 2     # 4.9 -> esquina exterior (5.9, 1.0): r 5.98
 H_ARCH = 12.0
 Z_SPRING = 10.0                   # cara superior de los pilares (sobre Z_TOP)
 Z_KEY = 11.1                      # intrados en la clave
-DEPTH = 2.2
+DEPTH = 2.0
+LINTEL_OVER_X, LINTEL_OVER_Y = 0.0, 0.05   # vuelo del dintel sobre los pilares (antes 0.15 / 0.1)
+PED_R = 6.0
 
 # runas inventadas: trazos en un cuadrado unidad (x, z) en [-0.5, 0.5]
 GLYPHS = [
@@ -448,8 +450,8 @@ def build_arch(col, rng):
     blocks = []
     for sx in (-1, 1):
         for k in range(3):
-            w = PIER + rng.uniform(-0.05, 0.04)
-            dx, dy = rng.uniform(-0.04, 0.04), rng.uniform(-0.04, 0.04)
+            w = PIER + rng.uniform(-0.05, 0.0)                  # descuadres solo hacia dentro
+            dx, dy = -sx * rng.uniform(0.0, 0.04), rng.uniform(-0.02, 0.02)
             z0 = cuts[k] - (Z_TOP - Z_STEP if k == 0 else 0.0)
             z1 = cuts[k + 1]
             cx = sx * PIER_X + dx
@@ -468,8 +470,8 @@ def build_arch(col, rng):
         objs.append((o, (sx, k, x0, x1, y0, y1, z0, z1)))
     # dintel curvo
     m = Mesh()
-    xL, xR = -PIER_X - PIER / 2 - 0.15, PIER_X + PIER / 2 + 0.15
-    yF, yB = DEPTH / 2 + 0.1, -DEPTH / 2 - 0.1
+    xL, xR = -PIER_X - PIER / 2 - LINTEL_OVER_X, PIER_X + PIER / 2 + LINTEL_OVER_X
+    yF, yB = DEPTH / 2 + LINTEL_OVER_Y, -DEPTH / 2 - LINTEL_OVER_Y
     nx = 34
 
     def front_z(p, u, v):
@@ -579,9 +581,11 @@ def build_arch(col, rng):
             y_edge = math.sqrt(max(0.0, 6.0 ** 2 - cx * cx)) * nys
             k = gm.mi("MAT_Rune_Glow_12")
             hw = 0.06
+            ye_a = math.sqrt(max(0.0, PED_R ** 2 - (cx - hw) ** 2)) * nys      # extremo recortado al borde curvo
+            ye_b = math.sqrt(max(0.0, PED_R ** 2 - (cx + hw) ** 2)) * nys
             quads = [((cx - hw, yf + nys * 0.005, 0.0), (cx + hw, yf + nys * 0.005, 0.0),
                       (cx + hw, yf + nys * 0.005, 0.32), (cx - hw, yf + nys * 0.005, 0.32)),
-                     ((cx - hw, yf, 0.004), (cx + hw, yf, 0.004), (cx + hw, y_edge, 0.004), (cx - hw, y_edge, 0.004))]
+                     ((cx - hw, yf, 0.004), (cx + hw, yf, 0.004), (cx + hw, ye_b, 0.004), (cx - hw, ye_a, 0.004))]
             for qd in quads:
                 vs = [bm.verts.new(q) for q in qd]
                 f = bm.faces.new(vs)
@@ -590,7 +594,7 @@ def build_arch(col, rng):
                 if f.normal.dot(Vector((0, nys, 0)) if qd is quads[0] else Vector((0, 0, 1))) < 0:
                     f.normal_flip()
             # por el canto del pedestal (z 0 -> -0.3) hasta el atrio
-            vs = [bm.verts.new(q) for q in ((cx - hw, y_edge + nys * 0.01, 0.004), (cx + hw, y_edge + nys * 0.01, 0.004),
+            vs = [bm.verts.new(q) for q in ((cx - hw, ye_a + nys * 0.01, -0.002), (cx + hw, ye_b + nys * 0.01, -0.002),
                                             (cx + hw, y_edge + nys * 0.36, Z_ATRIO - Z_TOP + 0.004),
                                             (cx - hw, y_edge + nys * 0.36, Z_ATRIO - Z_TOP + 0.004))]
             f = bm.faces.new(vs)
@@ -613,18 +617,21 @@ def build_arch(col, rng):
     return arch, report
 
 
+VEIL_H = 11.0
+
+
 def build_veil(col):
     bm = bmesh.new()
     nu, nv = 16, 22
     sag = 0.45
     verts = []
-    hw = CLEAR / 2 - 0.03
+    hw = CLEAR / 2
     for j in range(nv + 1):
         row = []
         for i in range(nu + 1):
             u = i / nu
             x = -hw + 2 * hw * u
-            top = z_intrados(x) - 0.06
+            top = min(VEIL_H, z_intrados(x) - 0.06)
             v = j / nv
             z = v * top
             y = sag * (1 - (x / hw) ** 2) * 0.5
