@@ -91,3 +91,13 @@ Clases (E20)
     UV 0..1); ondulacion leve con un shader de vertices (viento).
 [ ] MARKER_ClassProp_Slot_<salon>_<slot>: instanciar ahi los objetos de clase (el slot 03 esta libre).
 [ ] DUMMY_Straw_NN: estaticos; MARKER_DamageNumber_NN es el punto de los numeros de dano (Label3D / particulas).
+
+Razas (E21)
+[ ] Estandartes y banderas (CasaRaza_NN_Banner / _Flag): textura por raza (MAT_Banner_RNN, UV 0..1; la bandera usa un
+    recorte del simbolo); ondulacion por viento con shader de vertices; la bandera mira hacia CAM_Iso.
+[ ] MARKER_RaceSpawn_NN: punto de aparicion de cada raza (delante de la puerta de su Casa, +Y hacia fuera).
+[ ] MAT_Glass_R04: alpha 0.35 BLEND con emision 0.25; en Godot, transparencia con depth draw "opaque only" para que
+    las laminas delante de las ventanas no parpadeen con el cristal calido de detras.
+[ ] Yurtas (CasaRaza_05): humo suave en la chimenea de la corona.
+[ ] Plazuelas: agua de las fuentes (MAT_Water) con desplazamiento de UV; arboles viejos con balanceo leve de las copas.
+

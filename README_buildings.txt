@@ -47,6 +47,26 @@ MAT_Bronze_Aged          placas de bronce del Salon        #73644C plano, metall
                                                            roughness 0.5
                                                            (etapa 17: #735C38 sat 0.51 -> #73644C sat 0.34)
 
+Etapa 21 (Razas; todos pasan la paleta: saturacion <= 0.35 o tono 185-215; ver docs/reports/stage21_razas.json)
+MAT_Wood_Light           madera clara (R02, yurtas R05)    albedo horneado propio (#A4947C,     -               1.0 opaco
+                                                           s 0.24) de MAT_Wood_Dark; 1K, +0.67 MB de VRAM
+MAT_Roof_Slate           pizarra gris (R01)                albedo horneado propio (#6D6F74,     -               1.0 opaco
+                                                           s 0.06) de la teja ocre; 1K, +0.67 MB de VRAM
+MAT_Roof_Slate_B         pizarra de reparacion             Slate x (0.84,0.84,0.86)             -               1.0 opaco
+MAT_Roof_Slate_Blue      pizarra azulada (R04)             Slate x (0.74,0.88,1.0) #5F6974      -               1.0 opaco
+MAT_Roof_Shingle_Dark(_B) teja oscura (R03)                teja ocre x (0.50,0.43,0.39) /       -               1.0 opaco
+                                                           (0.42,0.37,0.34); #725D4B s 0.34
+MAT_Stone_R01            piedra gris (R01)                 caliza x (0.80,0.80,0.82)            -               1.0 opaco
+MAT_Stone_Sand           arenisca (R06)                    caliza x (1.0,0.90,0.76) #C3B195     -               1.0 opaco
+MAT_Felt_R05             fieltro de yurta                  Cloth_Patch_A x (1.0,0.98,0.92)      -               1.0 opaco
+MAT_Hide_R05             pieles y cuero (R05)              Cloth_Patch_A x (0.62,0.48,0.37)     -               1.0 opaco
+MAT_Glass_R04            vidrio de R04 (laminas delante    #A9C9DC plano (copia de              #8FD0FF  0.25   0.35 BLEND
+                         del cristal calido; linterna)     MAT_Pipe_Glass), roughness 0.08
+MAT_Leaf_Old             hojas del arbol viejo             #5F6B4E plano (s 0.27)               -               1.0 opaco
+MAT_Banner_R01..R06      estandarte y bandera de la raza   textura generada 512 x 1024 por      -               1.0, 2 caras
+                                                           raza (+0.35 MB de VRAM cada una)
+Memoria de texturas tras la etapa 21: ~160.8 MB (154.7 + 8 estandartes de clase + 2 albedos + 6 estandartes de raza).
+
 Ya existentes y con emision: MAT_Shard_Blue (#8FD0FF, 2.5; farolillos de esquirla). MAT_Water: sin emision.
 
 3. Convencion de piezas por edificio
@@ -155,3 +175,31 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
   - MAT_Straw (nuevo): paja de los maniquies #A69472 (saturacion 0.31).
   - Plaza de las Armas: DUMMY_Straw_A/B/C (156-186 triangulos), 12 maniquies con MARKER_DamageNumber_NN en el pecho,
     10 blancos, 8 postes de prueba, valla baja con huecos en la avenida y delante de los salones 01 y 02.
+
+11. Razas (etapa 21): plantilla de barrio y presets
+----------------------------------------------------
+  - tools/blender/stage21_razas.py: N_RAZAS (parametro, <= 6 parcelas MARKER_Bld_CasaRaza_*) y RACE_PRESETS R01..R06:
+      R01 piedra gris, dos aguas 40 grados, pizarra, puerta x1.0      (Rothenburg / Cesky Krumlov)
+      R02 madera clara, cuatro aguas 34 grados, teja ocre, puerta x1.0 (Mala Strana)
+      R03 madera oscura, dos aguas muy inclinado 52 grados, puerta x0.9 (Cesky Krumlov / Selva Negra)
+      R04 piedra clara y vidrio, chapitel 'spire' 58 grados + torrecillas conicas, puerta x1.1 (chapiteles de Praga)
+      R05 pieles y madera, yurtas (ger) con corona, puerta x1.3
+      R06 piedra arenisca abajo y entramado arriba, azotea con pretil, puerta x0.8 (Toledo)
+    Cada preset: material de muro (con alternativas por casa), remates, hastiales, tejas (tono A/B que se alterna en
+    una de cada tres casas), pendiente, escala de puerta, color del estandarte y simbolo (placeholder).
+    Para otro numero de razas: python build_stage21.py -- N.
+  - DOOR_SCALE (bld_kit.DOOR_SCALE, opts door_scale del ensamblador): escala el ancho y alto del hueco de puerta, el
+    dintel y el escalon de umbral (0.12 m x escala; sale 0.18 m de la fachada, dentro de la tolerancia de 0.2).
+  - Casa de la Raza (20 x 16, interior = true): la mas grande del barrio. Estandarte CasaRaza_NN_Banner (1.8 m de ancho,
+    UV 0..1, MAT_Banner_RNN) colgado sobre la puerta (sin ventana encima), bandera CasaRaza_NN_Flag (UV recortada al
+    simbolo) en la cumbrera / vertice / pretil / corona, y MARKER_RaceSpawn_NN 3 m delante de la puerta (+Y fuera).
+    R05: yurta grande (r 6.8) + 2 anexos, estandarte en mastil exento junto a la puerta.
+  - Casas del barrio: las parcelas MARKER_Bld_RAZ_Bxx_Casa_yy existentes (22): B01 5, B02 5, B03 6, B04 5, B05 0,
+    B06 1. El prompt pide 6-10 por barrio: faltan parcelas (no se han inventado; ver informe).
+  - Presupuesto por niveles: si una casa pasa de 2,500 (4,000 con 3 plantas) o la Casa de la Raza de 6,000, se
+    reconstruye con modulos mas anchos, hiladas de teja mas largas y menos detalle en los lados que no ve CAM_Iso.
+  - Faldon bajo rasante en todas las casas (las parcelas tienen hasta 0.86 m de desnivel): llega 20 cm por debajo del
+    punto mas bajo del terreno en el perimetro, 8 cm fuera del muro (sin caras coplanarias).
+  - Plazuelas (ya pavimentadas en el terreno): fuente pequena de 3.2 m (barrios 1, 2, 5) o arbol viejo de ~10 m con
+    alcorque (3, 4, 6) y 4 bancos a 3.7 m del centro.
+

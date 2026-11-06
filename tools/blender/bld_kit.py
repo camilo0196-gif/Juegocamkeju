@@ -617,7 +617,10 @@ def roof_spire(mb, W, D, pitch=55.0, eave=EAVE, rng=None, detail=0, max_rise=7.5
     rng = rng or random.Random(0)
     hx, hy = W / 2 + eave, D / 2 + eave
     rise = min(max_rise, (min(W, D) / 2) * math.tan(math.radians(pitch)))
-    z_e = -eave * rise / (min(W, D) / 2)
+    # alero plano: las vertientes tendidas (lados largos) pasan por z=0 en la linea del muro; en las empinadas queda
+    # una franja de 'gap' m sobre el muro que se cierra con un friso
+    z_e = -eave * rise / max(hx, hy)
+    gap = z_e + eave * rise / min(hx, hy)
     apex = (0.0, 0.0, rise)
     base = [(-hx, -hy, z_e), (hx, -hy, z_e), (hx, hy, z_e), (-hx, hy, z_e)]
     for i in range(4):
@@ -627,6 +630,16 @@ def roof_spire(mb, W, D, pitch=55.0, eave=EAVE, rng=None, detail=0, max_rise=7.5
         mb.face([base[j], base[i], (base[i][0], base[i][1], base[i][2] - 0.18), (base[j][0], base[j][1], base[j][2] - 0.18)],
                 M_WOOD, nrm=out)
     mb.face([(b[0], b[1], b[2] - 0.18) for b in base], M_WOOD, nrm=(0, 0, -1))
+    if gap > 0.01:
+        o = 0.02                                    # 2 cm fuera del muro: sin caras coplanarias
+        if hy <= hx:
+            for sy in (-1, 1):
+                y0, y1 = sorted((sy * (D / 2 + o), sy * (D / 2 - 0.35)))
+                mb.box((-W / 2 - o, y0, -0.05), (W / 2 + o, y1, gap + 0.03), M_STONE, skip=("z-",))
+        else:
+            for sx in (-1, 1):
+                x0, x1 = sorted((sx * (W / 2 + o), sx * (W / 2 - 0.35)))
+                mb.box((x0, -D / 2 - o, -0.05), (x1, D / 2 + o, gap + 0.03), M_STONE, skip=("z-",))
     if detail == 0:
         L = rise - z_e
         n = max(2, int(L / (TILE_COURSE * 1.6)))

@@ -1,0 +1,3258 @@
+{
+ "N_RAZAS": 6,
+ "budgets": {
+  "casa_raza": 6000,
+  "house": 2500,
+  "house_3f": 4000
+ },
+ "saved_before": "blender/concordia_v21.blend",
+ "materials": {
+  "MAT_Wood_Light": {
+   "albedo": "textures/concordia/MAT_Wood_Light/concordia_wood_light_albedo.png",
+   "size": [
+    1024,
+    1024
+   ],
+   "mean_srgb_before": 0.251,
+   "mean_srgb_after": 0.57
+  },
+  "MAT_Roof_Slate": {
+   "albedo": "textures/concordia/MAT_Roof_Slate/concordia_roof_slate_albedo.png",
+   "size": [
+    1024,
+    1024
+   ],
+   "mean_srgb_before": 0.527,
+   "mean_srgb_after": 0.43
+  },
+  "MAT_Roof_Slate_B": {
+   "src": "MAT_Roof_Slate",
+   "baseColorFactor": [
+    0.84,
+    0.84,
+    0.86
+   ]
+  },
+  "MAT_Roof_Slate_Blue": {
+   "src": "MAT_Roof_Slate",
+   "baseColorFactor": [
+    0.74,
+    0.88,
+    1.0
+   ]
+  },
+  "MAT_Roof_Shingle_Dark": {
+   "src": "MAT_Roof_Tile_Ocher",
+   "baseColorFactor": [
+    0.5,
+    0.43,
+    0.39
+   ]
+  },
+  "MAT_Roof_Shingle_Dark_B": {
+   "src": "MAT_Roof_Tile_Ocher",
+   "baseColorFactor": [
+    0.42,
+    0.37,
+    0.34
+   ]
+  },
+  "MAT_Stone_R01": {
+   "src": "MAT_Limestone_Worn",
+   "baseColorFactor": [
+    0.8,
+    0.8,
+    0.82
+   ]
+  },
+  "MAT_Stone_Sand": {
+   "src": "MAT_Limestone_Worn",
+   "baseColorFactor": [
+    1.0,
+    0.9,
+    0.76
+   ]
+  },
+  "MAT_Felt_R05": {
+   "src": "MAT_Cloth_Patch_A",
+   "baseColorFactor": [
+    1.0,
+    0.98,
+    0.92
+   ]
+  },
+  "MAT_Hide_R05": {
+   "src": "MAT_Cloth_Patch_A",
+   "baseColorFactor": [
+    0.62,
+    0.48,
+    0.37
+   ]
+  },
+  "MAT_Glass_R04": {
+   "base": "#A9C9DC",
+   "alpha": 0.35,
+   "emission": "#8FD0FF",
+   "emission_strength": 0.25
+  },
+  "MAT_Leaf_Old": {
+   "color": "#5F6B4E"
+  },
+  "MAT_Banner_R01": {
+   "texture": "textures/concordia/MAT_Banner/concordia_banner_raza_r01_albedo.png",
+   "color": "#6E6A66"
+  },
+  "MAT_Banner_R02": {
+   "texture": "textures/concordia/MAT_Banner/concordia_banner_raza_r02_albedo.png",
+   "color": "#8A7A5C"
+  },
+  "MAT_Banner_R03": {
+   "texture": "textures/concordia/MAT_Banner/concordia_banner_raza_r03_albedo.png",
+   "color": "#5E4E42"
+  },
+  "MAT_Banner_R04": {
+   "texture": "textures/concordia/MAT_Banner/concordia_banner_raza_r04_albedo.png",
+   "color": "#6C7A86"
+  },
+  "MAT_Banner_R05": {
+   "texture": "textures/concordia/MAT_Banner/concordia_banner_raza_r05_albedo.png",
+   "color": "#8A7260"
+  },
+  "MAT_Banner_R06": {
+   "texture": "textures/concordia/MAT_Banner/concordia_banner_raza_r06_albedo.png",
+   "color": "#9A8668"
+  }
+ },
+ "barrios": {
+  "B01": {
+   "preset": "R01",
+   "material": "piedra",
+   "roof": "gable",
+   "pitch": 40.0,
+   "door_scale": 1.0,
+   "reference": "Rothenburg / Cesky Krumlov: casas de piedra gris con hastial y pizarra",
+   "banner_color": "#6E6A66",
+   "symbol": "tower",
+   "houses_built": 5,
+   "houses_requested": [
+    6,
+    10
+   ],
+   "houses_missing_parcels": 1,
+   "colors": {
+    "Body": {
+     "hex": "#A9A195",
+     "saturation": 0.119,
+     "hue": 36.2
+    },
+    "Roof": {
+     "hex": "#666465",
+     "saturation": 0.014,
+     "hue": 317.9
+    }
+   },
+   "buildings": {
+    "CasaRaza_01": {
+     "marker": "MARKER_Bld_CasaRaza_01",
+     "floors": 3,
+     "style": "stone",
+     "roof": "gable",
+     "eave_m": 9.6,
+     "ridge_m": 16.31,
+     "tris": {
+      "Body": 4472,
+      "Roof": 1332,
+      "Props": 428,
+      "total_body_roof": 5804,
+      "total_with_extras": 5921
+     },
+     "budget": 6000,
+     "ok": true,
+     "budget_class": "grande",
+     "lod_ratios": [
+      0.567,
+      0.115
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 3,
+        "blocked": []
+       }
+      ],
+      "final_floors": 3,
+      "still_blocking": false
+     },
+     "collision": "CasaRaza_01-colonly",
+     "footprint_check": {
+      "x": [
+       -10.22,
+       10.22
+      ],
+      "y": [
+       -8.22,
+       8.22
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 0.22
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.1,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      1.667,
+      8.0,
+      0.0
+     ],
+     "banner": "CasaRaza_01_Banner",
+     "banner_size_m": [
+      1.8,
+      5.0
+     ],
+     "flag": "CasaRaza_01_Flag",
+     "spawn_marker": "MARKER_RaceSpawn_01",
+     "race": {
+      "preset": "R01",
+      "wall": "MAT_Stone_R01",
+      "skirt_depth_m": 0.6,
+      "roof_tone_swapped": false,
+      "tier": 1,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 3,
+        "tris": 6868,
+        "budget": 5840
+       },
+       {
+        "tier": 1,
+        "floors": 3,
+        "tris": 5804,
+        "budget": 5840
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 1,
+       "right": 1,
+       "left": 0
+      },
+      "glass_panes": 0
+     },
+     "banner_flag_tris": 117,
+     "iso_blocks": [],
+     "door_scale": 1.0,
+     "ground_gap_m": 0.0
+    },
+    "RAZ_B01_Casa_01": {
+     "marker": "MARKER_Bld_RAZ_B01_Casa_01",
+     "floors": 2,
+     "style": "stone",
+     "roof": "gable",
+     "eave_m": 6.4,
+     "ridge_m": 9.97,
+     "tris": {
+      "Body": 1728,
+      "Roof": 552,
+      "Props": 424,
+      "total_body_roof": 2280,
+      "total_with_extras": 2280
+     },
+     "budget": 2500,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.696,
+      0.128
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 2,
+        "blocked": []
+       }
+      ],
+      "final_floors": 2,
+      "still_blocking": false
+     },
+     "collision": "RAZ_B01_Casa_01-colonly",
+     "footprint_check": {
+      "x": [
+       -4.72,
+       4.72
+      ],
+      "y": [
+       -4.47,
+       4.47
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 0.22
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.1,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      2.25,
+      4.25,
+      0.0
+     ],
+     "race": {
+      "preset": "R01",
+      "wall": "MAT_Stone_R01",
+      "skirt_depth_m": 0.6,
+      "roof_tone_swapped": true,
+      "tier": 2,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 2,
+        "tris": 3146,
+        "budget": 2500
+       },
+       {
+        "tier": 1,
+        "floors": 2,
+        "tris": 2870,
+        "budget": 2500
+       },
+       {
+        "tier": 2,
+        "floors": 2,
+        "tris": 2280,
+        "budget": 2500
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 1,
+       "right": 1,
+       "left": 2
+      },
+      "glass_panes": 0
+     },
+     "door_scale": 1.0,
+     "ground_gap_m": 0.278
+    },
+    "RAZ_B01_Casa_02": {
+     "marker": "MARKER_Bld_RAZ_B01_Casa_02",
+     "floors": 2,
+     "style": "stone",
+     "roof": "gable",
+     "eave_m": 6.4,
+     "ridge_m": 10.6,
+     "tris": {
+      "Body": 1952,
+      "Roof": 430,
+      "Props": 234,
+      "total_body_roof": 2382,
+      "total_with_extras": 2382
+     },
+     "budget": 2500,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.766,
+      0.139
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 2,
+        "blocked": []
+       }
+      ],
+      "final_floors": 2,
+      "still_blocking": false
+     },
+     "collision": "RAZ_B01_Casa_02-colonly",
+     "footprint_check": {
+      "x": [
+       -5.72,
+       5.72
+      ],
+      "y": [
+       -5.22,
+       5.22
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 0.22
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.1,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      0.0,
+      5.0,
+      0.0
+     ],
+     "race": {
+      "preset": "R01",
+      "wall": "MAT_Stone_R01",
+      "skirt_depth_m": 0.6,
+      "roof_tone_swapped": true,
+      "tier": 2,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 2,
+        "tris": 3624,
+        "budget": 2500
+       },
+       {
+        "tier": 1,
+        "floors": 2,
+        "tris": 3350,
+        "budget": 2500
+       },
+       {
+        "tier": 2,
+        "floors": 2,
+        "tris": 2382,
+        "budget": 2500
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 1,
+       "right": 1,
+       "left": 2
+      },
+      "glass_panes": 0
+     },
+     "door_scale": 1.0,
+     "ground_gap_m": 0.325
+    },
+    "RAZ_B01_Casa_03": {
+     "marker": "MARKER_Bld_RAZ_B01_Casa_03",
+     "floors": 3,
+     "style": "stone",
+     "roof": "gable",
+     "eave_m": 9.6,
+     "ridge_m": 13.17,
+     "tris": {
+      "Body": 2814,
+      "Roof": 592,
+      "Props": 344,
+      "total_body_roof": 3406,
+      "total_with_extras": 3406
+     },
+     "budget": 4000,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.712,
+      0.116
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 3,
+        "blocked": []
+       }
+      ],
+      "final_floors": 3,
+      "still_blocking": false
+     },
+     "collision": "RAZ_B01_Casa_03-colonly",
+     "footprint_check": {
+      "x": [
+       -5.72,
+       5.72
+      ],
+      "y": [
+       -4.47,
+       4.47
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 0.22
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.1,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      0.0,
+      4.25,
+      0.0
+     ],
+     "race": {
+      "preset": "R01",
+      "wall": "MAT_Stone_R01",
+      "skirt_depth_m": 0.6,
+      "roof_tone_swapped": false,
+      "tier": 1,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 3,
+        "tris": 4174,
+        "budget": 4000
+       },
+       {
+        "tier": 1,
+        "floors": 3,
+        "tris": 3406,
+        "budget": 4000
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 1,
+       "right": 1,
+       "left": 0
+      },
+      "glass_panes": 0
+     },
+     "door_scale": 1.0,
+     "ground_gap_m": 0.0
+    },
+    "RAZ_B01_Casa_04": {
+     "marker": "MARKER_Bld_RAZ_B01_Casa_04",
+     "floors": 2,
+     "style": "stone",
+     "roof": "gable",
+     "eave_m": 6.4,
+     "ridge_m": 9.97,
+     "tris": {
+      "Body": 1534,
+      "Roof": 432,
+      "Props": 260,
+      "total_body_roof": 1966,
+      "total_with_extras": 1966
+     },
+     "budget": 2500,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.788,
+      0.148
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 2,
+        "blocked": []
+       }
+      ],
+      "final_floors": 2,
+      "still_blocking": false
+     },
+     "collision": "RAZ_B01_Casa_04-colonly",
+     "footprint_check": {
+      "x": [
+       -4.97,
+       4.97
+      ],
+      "y": [
+       -4.47,
+       4.47
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 0.22
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.1,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      2.375,
+      4.25,
+      0.0
+     ],
+     "race": {
+      "preset": "R01",
+      "wall": "MAT_Stone_R01",
+      "skirt_depth_m": 0.6,
+      "roof_tone_swapped": true,
+      "tier": 2,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 2,
+        "tris": 2894,
+        "budget": 2500
+       },
+       {
+        "tier": 1,
+        "floors": 2,
+        "tris": 2636,
+        "budget": 2500
+       },
+       {
+        "tier": 2,
+        "floors": 2,
+        "tris": 1966,
+        "budget": 2500
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 2,
+       "right": 2,
+       "left": 1
+      },
+      "glass_panes": 0
+     },
+     "door_scale": 1.0,
+     "ground_gap_m": 0.0
+    },
+    "RAZ_B01_Casa_05": {
+     "marker": "MARKER_Bld_RAZ_B01_Casa_05",
+     "floors": 3,
+     "style": "stone",
+     "roof": "gable",
+     "eave_m": 9.6,
+     "ridge_m": 12.96,
+     "tris": {
+      "Body": 2454,
+      "Roof": 486,
+      "Props": 234,
+      "total_body_roof": 2940,
+      "total_with_extras": 2940
+     },
+     "budget": 4000,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.809,
+      0.123
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 3,
+        "blocked": []
+       }
+      ],
+      "final_floors": 3,
+      "still_blocking": false
+     },
+     "collision": "RAZ_B01_Casa_05-colonly",
+     "footprint_check": {
+      "x": [
+       -4.97,
+       4.97
+      ],
+      "y": [
+       -4.22,
+       4.22
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 0.22
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.1,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      2.375,
+      4.0,
+      0.0
+     ],
+     "race": {
+      "preset": "R01",
+      "wall": "MAT_Wall_Gray",
+      "skirt_depth_m": 0.6,
+      "roof_tone_swapped": false,
+      "tier": 2,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 3,
+        "tris": 4586,
+        "budget": 4000
+       },
+       {
+        "tier": 1,
+        "floors": 3,
+        "tris": 4434,
+        "budget": 4000
+       },
+       {
+        "tier": 2,
+        "floors": 3,
+        "tris": 2940,
+        "budget": 4000
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 1,
+       "right": 2,
+       "left": 1
+      },
+      "glass_panes": 0
+     },
+     "door_scale": 1.0,
+     "ground_gap_m": 0.0
+    },
+    "Plazuela_01": {
+     "marker": "MARKER_Prop_Plazuela_01",
+     "type": "fountain",
+     "diameter_m": 10.0,
+     "terrain_materials": [
+      "MAT_Cobble_Concordia"
+     ],
+     "paving_added": false,
+     "paving_tris": 0,
+     "centre_piece": "Plazuela_01_Fountain",
+     "centre_tris": 144,
+     "benches": 4,
+     "bench_tris": 32,
+     "bench_radius_m": 3.7
+    }
+   }
+  },
+  "B02": {
+   "preset": "R02",
+   "material": "madera clara",
+   "roof": "hip",
+   "pitch": 34.0,
+   "door_scale": 1.0,
+   "reference": "Mala Strana: casas de madera clara y revoco con cubierta a cuatro aguas",
+   "banner_color": "#8A7A5C",
+   "symbol": "leaf",
+   "houses_built": 5,
+   "houses_requested": [
+    6,
+    10
+   ],
+   "houses_missing_parcels": 1,
+   "colors": {
+    "Body": {
+     "hex": "#B2AAA0",
+     "saturation": 0.102,
+     "hue": 35.8
+    },
+    "Roof": {
+     "hex": "#7F6F60",
+     "saturation": 0.25,
+     "hue": 29.4
+    }
+   },
+   "buildings": {
+    "CasaRaza_02": {
+     "marker": "MARKER_Bld_CasaRaza_02",
+     "floors": 3,
+     "style": "timber",
+     "roof": "hip",
+     "eave_m": 9.6,
+     "ridge_m": 15.0,
+     "tris": {
+      "Body": 3490,
+      "Roof": 152,
+      "Props": 318,
+      "total_body_roof": 3642,
+      "total_with_extras": 3759
+     },
+     "budget": 6000,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.654,
+      0.135
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 3,
+        "blocked": []
+       }
+      ],
+      "final_floors": 3,
+      "still_blocking": false
+     },
+     "collision": "CasaRaza_02-colonly",
+     "footprint_check": {
+      "x": [
+       -10.22,
+       10.22
+      ],
+      "y": [
+       -8.22,
+       9.52
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 1.52
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.08,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      0.0,
+      8.0,
+      0.0
+     ],
+     "banner": "CasaRaza_02_Banner",
+     "banner_size_m": [
+      1.8,
+      5.0
+     ],
+     "flag": "CasaRaza_02_Flag",
+     "spawn_marker": "MARKER_RaceSpawn_02",
+     "race": {
+      "preset": "R02",
+      "wall": "MAT_Limestone_Light",
+      "skirt_depth_m": 0.6,
+      "roof_tone_swapped": false,
+      "tier": 2,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 3,
+        "tris": 6926,
+        "budget": 5840
+       },
+       {
+        "tier": 1,
+        "floors": 3,
+        "tris": 6242,
+        "budget": 5840
+       },
+       {
+        "tier": 2,
+        "floors": 3,
+        "tris": 3642,
+        "budget": 5840
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 2,
+       "right": 2,
+       "left": 1
+      },
+      "glass_panes": 0
+     },
+     "banner_flag_tris": 117,
+     "iso_blocks": [],
+     "door_scale": 1.0,
+     "ground_gap_m": 0.0
+    },
+    "RAZ_B02_Casa_01": {
+     "marker": "MARKER_Bld_RAZ_B02_Casa_01",
+     "floors": 3,
+     "style": "timber",
+     "roof": "hip",
+     "eave_m": 9.6,
+     "ridge_m": 12.8,
+     "tris": {
+      "Body": 3746,
+      "Roof": 128,
+      "Props": 314,
+      "total_body_roof": 3874,
+      "total_with_extras": 3874
+     },
+     "budget": 4000,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.524,
+      0.076
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 3,
+        "blocked": []
+       }
+      ],
+      "final_floors": 3,
+      "still_blocking": false
+     },
+     "collision": "RAZ_B02_Casa_01-colonly",
+     "footprint_check": {
+      "x": [
+       -6.22,
+       6.22
+      ],
+      "y": [
+       -4.97,
+       4.97
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 0.22
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.08,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      0.0,
+      4.75,
+      0.0
+     ],
+     "race": {
+      "preset": "R02",
+      "wall": "MAT_Limestone_Light",
+      "skirt_depth_m": 0.6,
+      "roof_tone_swapped": false,
+      "tier": 1,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 3,
+        "tris": 5122,
+        "budget": 4000
+       },
+       {
+        "tier": 1,
+        "floors": 3,
+        "tris": 3874,
+        "budget": 4000
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 0,
+       "right": 0,
+       "left": 1
+      },
+      "glass_panes": 0
+     },
+     "door_scale": 1.0,
+     "ground_gap_m": 0.303
+    },
+    "RAZ_B02_Casa_02": {
+     "marker": "MARKER_Bld_RAZ_B02_Casa_02",
+     "floors": 3,
+     "style": "timber",
+     "roof": "hip",
+     "eave_m": 9.6,
+     "ridge_m": 12.3,
+     "tris": {
+      "Body": 3438,
+      "Roof": 72,
+      "Props": 424,
+      "total_body_roof": 3510,
+      "total_with_extras": 3510
+     },
+     "budget": 4000,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.549,
+      0.078
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 3,
+        "blocked": []
+       }
+      ],
+      "final_floors": 3,
+      "still_blocking": false
+     },
+     "collision": "RAZ_B02_Casa_02-colonly",
+     "footprint_check": {
+      "x": [
+       -4.22,
+       4.22
+      ],
+      "y": [
+       -4.22,
+       4.22
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 0.22
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.08,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      0.0,
+      4.0,
+      0.0
+     ],
+     "race": {
+      "preset": "R02",
+      "wall": "MAT_Wood_Light",
+      "skirt_depth_m": 0.6,
+      "roof_tone_swapped": false,
+      "tier": 0,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 3,
+        "tris": 3510,
+        "budget": 4000
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 0,
+       "right": 0,
+       "left": 1
+      },
+      "glass_panes": 0
+     },
+     "door_scale": 1.0,
+     "ground_gap_m": 0.148
+    },
+    "RAZ_B02_Casa_03": {
+     "marker": "MARKER_Bld_RAZ_B02_Casa_03",
+     "floors": 3,
+     "style": "timber",
+     "roof": "hip",
+     "eave_m": 9.6,
+     "ridge_m": 12.64,
+     "tris": {
+      "Body": 3826,
+      "Roof": 72,
+      "Props": 208,
+      "total_body_roof": 3898,
+      "total_with_extras": 3898
+     },
+     "budget": 4000,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.628,
+      0.084
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 3,
+        "blocked": []
+       }
+      ],
+      "final_floors": 3,
+      "still_blocking": false
+     },
+     "collision": "RAZ_B02_Casa_03-colonly",
+     "footprint_check": {
+      "x": [
+       -4.72,
+       4.72
+      ],
+      "y": [
+       -4.72,
+       6.02
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 1.52
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.08,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      0.0,
+      4.5,
+      0.0
+     ],
+     "race": {
+      "preset": "R02",
+      "wall": "MAT_Limestone_Light",
+      "skirt_depth_m": 0.6,
+      "roof_tone_swapped": true,
+      "tier": 0,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 3,
+        "tris": 3898,
+        "budget": 4000
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 1,
+       "right": 1,
+       "left": 0
+      },
+      "glass_panes": 0
+     },
+     "door_scale": 1.0,
+     "ground_gap_m": 0.0
+    },
+    "RAZ_B02_Casa_04": {
+     "marker": "MARKER_Bld_RAZ_B02_Casa_04",
+     "floors": 2,
+     "style": "timber",
+     "roof": "hip",
+     "eave_m": 6.4,
+     "ridge_m": 9.44,
+     "tris": {
+      "Body": 2100,
+      "Roof": 120,
+      "Props": 314,
+      "total_body_roof": 2220,
+      "total_with_extras": 2220
+     },
+     "budget": 2500,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.684,
+      0.094
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 2,
+        "blocked": [
+         "MARKER_CasaRaza_02_Door"
+        ]
+       }
+      ],
+      "final_floors": 2,
+      "still_blocking": true
+     },
+     "collision": "RAZ_B02_Casa_04-colonly",
+     "footprint_check": {
+      "x": [
+       -5.72,
+       5.72
+      ],
+      "y": [
+       -4.72,
+       6.02
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 1.52
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.08,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      0.0,
+      4.5,
+      0.0
+     ],
+     "race": {
+      "preset": "R02",
+      "wall": "MAT_Wood_Light",
+      "skirt_depth_m": 0.6,
+      "roof_tone_swapped": false,
+      "tier": 1,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 2,
+        "tris": 2682,
+        "budget": 2500
+       },
+       {
+        "tier": 1,
+        "floors": 2,
+        "tris": 2220,
+        "budget": 2500
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 1,
+       "right": 1,
+       "left": 0
+      },
+      "glass_panes": 0
+     },
+     "door_scale": 1.0,
+     "ground_gap_m": 0.0
+    },
+    "RAZ_B02_Casa_05": {
+     "marker": "MARKER_Bld_RAZ_B02_Casa_05",
+     "floors": 2,
+     "style": "timber",
+     "roof": "hip",
+     "eave_m": 6.4,
+     "ridge_m": 9.1,
+     "tris": {
+      "Body": 1830,
+      "Roof": 120,
+      "Props": 480,
+      "total_body_roof": 1950,
+      "total_with_extras": 1950
+     },
+     "budget": 2500,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.694,
+      0.109
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 2,
+        "blocked": []
+       }
+      ],
+      "final_floors": 2,
+      "still_blocking": false
+     },
+     "collision": "RAZ_B02_Casa_05-colonly",
+     "footprint_check": {
+      "x": [
+       -4.97,
+       4.97
+      ],
+      "y": [
+       -4.22,
+       4.22
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 0.22
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.08,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      0.0,
+      4.0,
+      0.0
+     ],
+     "race": {
+      "preset": "R02",
+      "wall": "MAT_Wood_Light",
+      "skirt_depth_m": 0.6,
+      "roof_tone_swapped": false,
+      "tier": 0,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 2,
+        "tris": 1950,
+        "budget": 2500
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 1,
+       "right": 0,
+       "left": 1
+      },
+      "glass_panes": 0
+     },
+     "door_scale": 1.0,
+     "ground_gap_m": 0.0
+    },
+    "Plazuela_02": {
+     "marker": "MARKER_Prop_Plazuela_02",
+     "type": "fountain",
+     "diameter_m": 10.0,
+     "terrain_materials": [
+      "MAT_Cobble_Concordia"
+     ],
+     "paving_added": false,
+     "paving_tris": 0,
+     "centre_piece": "Plazuela_02_Fountain",
+     "centre_tris": 144,
+     "benches": 4,
+     "bench_tris": 32,
+     "bench_radius_m": 3.7
+    }
+   }
+  },
+  "B03": {
+   "preset": "R03",
+   "material": "madera oscura",
+   "roof": "gable",
+   "pitch": 52.0,
+   "door_scale": 0.9,
+   "reference": "Cesky Krumlov / Selva Negra: madera oscura y tejados muy inclinados",
+   "banner_color": "#5E4E42",
+   "symbol": "pine",
+   "houses_built": 6,
+   "houses_requested": [
+    6,
+    10
+   ],
+   "houses_missing_parcels": 0,
+   "colors": {
+    "Body": {
+     "hex": "#655D54",
+     "saturation": 0.169,
+     "hue": 31.5
+    },
+    "Roof": {
+     "hex": "#695849",
+     "saturation": 0.302,
+     "hue": 27.4
+    }
+   },
+   "buildings": {
+    "CasaRaza_03": {
+     "marker": "MARKER_Bld_CasaRaza_03",
+     "floors": 3,
+     "style": "timber",
+     "roof": "gable",
+     "eave_m": 9.6,
+     "ridge_m": 19.84,
+     "tris": {
+      "Body": 3624,
+      "Roof": 1232,
+      "Props": 530,
+      "total_body_roof": 4856,
+      "total_with_extras": 4973
+     },
+     "budget": 6000,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.625,
+      0.132
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 3,
+        "blocked": []
+       }
+      ],
+      "final_floors": 3,
+      "still_blocking": false
+     },
+     "collision": "CasaRaza_03-colonly",
+     "footprint_check": {
+      "x": [
+       -10.22,
+       10.22
+      ],
+      "y": [
+       -8.22,
+       9.52
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 1.52
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.08,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      0.0,
+      8.0,
+      0.0
+     ],
+     "banner": "CasaRaza_03_Banner",
+     "banner_size_m": [
+      1.8,
+      5.0
+     ],
+     "flag": "CasaRaza_03_Flag",
+     "spawn_marker": "MARKER_RaceSpawn_03",
+     "race": {
+      "preset": "R03",
+      "wall": "MAT_Wood_Dark",
+      "skirt_depth_m": 0.6,
+      "roof_tone_swapped": false,
+      "tier": 2,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 3,
+        "tris": 10174,
+        "budget": 5840
+       },
+       {
+        "tier": 1,
+        "floors": 3,
+        "tris": 8528,
+        "budget": 5840
+       },
+       {
+        "tier": 2,
+        "floors": 3,
+        "tris": 4856,
+        "budget": 5840
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 1,
+       "right": 1,
+       "left": 2
+      },
+      "glass_panes": 0
+     },
+     "banner_flag_tris": 117,
+     "iso_blocks": [],
+     "door_scale": 0.9,
+     "ground_gap_m": 0.0
+    },
+    "RAZ_B03_Casa_01": {
+     "marker": "MARKER_Bld_RAZ_B03_Casa_01",
+     "floors": 3,
+     "style": "timber",
+     "roof": "gable",
+     "eave_m": 9.6,
+     "ridge_m": 15.68,
+     "tris": {
+      "Body": 1632,
+      "Roof": 628,
+      "Props": 368,
+      "total_body_roof": 2260,
+      "total_with_extras": 2260
+     },
+     "budget": 4000,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.649,
+      0.163
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 3,
+        "blocked": []
+       }
+      ],
+      "final_floors": 3,
+      "still_blocking": false
+     },
+     "collision": "RAZ_B03_Casa_01-colonly",
+     "footprint_check": {
+      "x": [
+       -4.97,
+       4.97
+      ],
+      "y": [
+       -4.97,
+       4.97
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 0.22
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.08,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      2.375,
+      4.75,
+      0.0
+     ],
+     "race": {
+      "preset": "R03",
+      "wall": "MAT_Wood_Dark",
+      "skirt_depth_m": 0.6,
+      "roof_tone_swapped": false,
+      "tier": 2,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 3,
+        "tris": 4694,
+        "budget": 4000
+       },
+       {
+        "tier": 1,
+        "floors": 3,
+        "tris": 4092,
+        "budget": 4000
+       },
+       {
+        "tier": 2,
+        "floors": 3,
+        "tris": 2260,
+        "budget": 4000
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 1,
+       "right": 1,
+       "left": 2
+      },
+      "glass_panes": 0
+     },
+     "door_scale": 0.9,
+     "ground_gap_m": 0.235
+    },
+    "RAZ_B03_Casa_02": {
+     "marker": "MARKER_Bld_RAZ_B03_Casa_02",
+     "floors": 3,
+     "style": "timber",
+     "roof": "gable",
+     "eave_m": 9.6,
+     "ridge_m": 14.72,
+     "tris": {
+      "Body": 2140,
+      "Roof": 516,
+      "Props": 208,
+      "total_body_roof": 2656,
+      "total_with_extras": 2656
+     },
+     "budget": 4000,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.686,
+      0.139
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 3,
+        "blocked": []
+       }
+      ],
+      "final_floors": 3,
+      "still_blocking": false
+     },
+     "collision": "RAZ_B03_Casa_02-colonly",
+     "footprint_check": {
+      "x": [
+       -4.97,
+       4.97
+      ],
+      "y": [
+       -4.22,
+       5.52
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 1.52
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.08,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      2.375,
+      4.0,
+      0.0
+     ],
+     "race": {
+      "preset": "R03",
+      "wall": "MAT_Stone_R01",
+      "skirt_depth_m": 0.6,
+      "roof_tone_swapped": true,
+      "tier": 2,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 3,
+        "tris": 4464,
+        "budget": 4000
+       },
+       {
+        "tier": 1,
+        "floors": 3,
+        "tris": 4348,
+        "budget": 4000
+       },
+       {
+        "tier": 2,
+        "floors": 3,
+        "tris": 2656,
+        "budget": 4000
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 1,
+       "right": 1,
+       "left": 2
+      },
+      "glass_panes": 0
+     },
+     "door_scale": 0.9,
+     "ground_gap_m": 0.222
+    },
+    "RAZ_B03_Casa_03": {
+     "marker": "MARKER_Bld_RAZ_B03_Casa_03",
+     "floors": 2,
+     "style": "timber",
+     "roof": "gable",
+     "eave_m": 6.4,
+     "ridge_m": 12.48,
+     "tris": {
+      "Body": 1374,
+      "Roof": 560,
+      "Props": 454,
+      "total_body_roof": 1934,
+      "total_with_extras": 1934
+     },
+     "budget": 2500,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.683,
+      0.157
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 2,
+        "blocked": []
+       }
+      ],
+      "final_floors": 2,
+      "still_blocking": false
+     },
+     "collision": "RAZ_B03_Casa_03-colonly",
+     "footprint_check": {
+      "x": [
+       -4.72,
+       4.72
+      ],
+      "y": [
+       -4.97,
+       6.27
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 1.52
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.08,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      2.25,
+      4.75,
+      0.0
+     ],
+     "race": {
+      "preset": "R03",
+      "wall": "MAT_Wood_Dark",
+      "skirt_depth_m": 0.6,
+      "roof_tone_swapped": true,
+      "tier": 2,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 2,
+        "tris": 3452,
+        "budget": 2500
+       },
+       {
+        "tier": 1,
+        "floors": 2,
+        "tris": 2568,
+        "budget": 2500
+       },
+       {
+        "tier": 2,
+        "floors": 2,
+        "tris": 1934,
+        "budget": 2500
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 1,
+       "right": 1,
+       "left": 2
+      },
+      "glass_panes": 0
+     },
+     "door_scale": 0.9,
+     "ground_gap_m": 0.157
+    },
+    "RAZ_B03_Casa_04": {
+     "marker": "MARKER_Bld_RAZ_B03_Casa_04",
+     "floors": 3,
+     "style": "timber",
+     "roof": "gable",
+     "eave_m": 9.6,
+     "ridge_m": 14.72,
+     "tris": {
+      "Body": 2576,
+      "Roof": 514,
+      "Props": 318,
+      "total_body_roof": 3090,
+      "total_with_extras": 3090
+     },
+     "budget": 4000,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.632,
+      0.117
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 3,
+        "blocked": []
+       }
+      ],
+      "final_floors": 3,
+      "still_blocking": false
+     },
+     "collision": "RAZ_B03_Casa_04-colonly",
+     "footprint_check": {
+      "x": [
+       -4.22,
+       4.22
+      ],
+      "y": [
+       -4.22,
+       5.52
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 1.52
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.08,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      2.0,
+      4.0,
+      0.0
+     ],
+     "race": {
+      "preset": "R03",
+      "wall": "MAT_Wood_Dark",
+      "skirt_depth_m": 1.06,
+      "roof_tone_swapped": true,
+      "tier": 1,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 3,
+        "tris": 4010,
+        "budget": 4000
+       },
+       {
+        "tier": 1,
+        "floors": 3,
+        "tris": 3090,
+        "budget": 4000
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 1,
+       "right": 1,
+       "left": 0
+      },
+      "glass_panes": 0
+     },
+     "door_scale": 0.9,
+     "ground_gap_m": 0.86
+    },
+    "RAZ_B03_Casa_05": {
+     "marker": "MARKER_Bld_RAZ_B03_Casa_05",
+     "floors": 2,
+     "style": "timber",
+     "roof": "gable",
+     "eave_m": 6.4,
+     "ridge_m": 12.48,
+     "tris": {
+      "Body": 1604,
+      "Roof": 714,
+      "Props": 318,
+      "total_body_roof": 2318,
+      "total_with_extras": 2318
+     },
+     "budget": 2500,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.646,
+      0.144
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 2,
+        "blocked": []
+       }
+      ],
+      "final_floors": 2,
+      "still_blocking": false
+     },
+     "collision": "RAZ_B03_Casa_05-colonly",
+     "footprint_check": {
+      "x": [
+       -5.72,
+       5.72
+      ],
+      "y": [
+       -4.97,
+       4.97
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 0.22
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.08,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      0.0,
+      4.75,
+      0.0
+     ],
+     "race": {
+      "preset": "R03",
+      "wall": "MAT_Wood_Dark",
+      "skirt_depth_m": 0.94,
+      "roof_tone_swapped": false,
+      "tier": 1,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 2,
+        "tris": 2912,
+        "budget": 2500
+       },
+       {
+        "tier": 1,
+        "floors": 2,
+        "tris": 2318,
+        "budget": 2500
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 1,
+       "right": 1,
+       "left": 0
+      },
+      "glass_panes": 0
+     },
+     "door_scale": 0.9,
+     "ground_gap_m": 0.735
+    },
+    "RAZ_B03_Casa_06": {
+     "marker": "MARKER_Bld_RAZ_B03_Casa_06",
+     "floors": 2,
+     "style": "timber",
+     "roof": "gable",
+     "eave_m": 6.4,
+     "ridge_m": 11.52,
+     "tris": {
+      "Body": 1320,
+      "Roof": 530,
+      "Props": 234,
+      "total_body_roof": 1850,
+      "total_with_extras": 1850
+     },
+     "budget": 2500,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.622,
+      0.16
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 2,
+        "blocked": []
+       }
+      ],
+      "final_floors": 2,
+      "still_blocking": false
+     },
+     "collision": "RAZ_B03_Casa_06-colonly",
+     "footprint_check": {
+      "x": [
+       -4.97,
+       4.97
+      ],
+      "y": [
+       -4.22,
+       5.52
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 1.52
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.08,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      2.375,
+      4.0,
+      0.0
+     ],
+     "race": {
+      "preset": "R03",
+      "wall": "MAT_Wood_Dark",
+      "skirt_depth_m": 1.0,
+      "roof_tone_swapped": true,
+      "tier": 2,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 2,
+        "tris": 2756,
+        "budget": 2500
+       },
+       {
+        "tier": 1,
+        "floors": 2,
+        "tris": 2702,
+        "budget": 2500
+       },
+       {
+        "tier": 2,
+        "floors": 2,
+        "tris": 1850,
+        "budget": 2500
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 2,
+       "right": 2,
+       "left": 1
+      },
+      "glass_panes": 0
+     },
+     "door_scale": 0.9,
+     "ground_gap_m": 0.796
+    },
+    "Plazuela_03": {
+     "marker": "MARKER_Prop_Plazuela_03",
+     "type": "tree",
+     "diameter_m": 10.0,
+     "terrain_materials": [
+      "MAT_Cobble_Concordia"
+     ],
+     "paving_added": false,
+     "paving_tris": 0,
+     "centre_piece": "Plazuela_03_OldTree",
+     "centre_tris": 356,
+     "benches": 4,
+     "bench_tris": 32,
+     "bench_radius_m": 3.7
+    }
+   }
+  },
+  "B04": {
+   "preset": "R04",
+   "material": "piedra y vidrio",
+   "roof": "spire",
+   "pitch": 58.0,
+   "door_scale": 1.1,
+   "reference": "Cesky Krumlov (torre) / chapiteles de Praga: piedra clara, vidrio azul palido, cubiertas conicas",
+   "banner_color": "#6C7A86",
+   "symbol": "crystal",
+   "houses_built": 5,
+   "houses_requested": [
+    6,
+    10
+   ],
+   "houses_missing_parcels": 1,
+   "colors": {
+    "Body": {
+     "hex": "#C8C3BB",
+     "saturation": 0.066,
+     "hue": 37.9
+    },
+    "Roof": {
+     "hex": "#616469",
+     "saturation": 0.072,
+     "hue": 217.1
+    }
+   },
+   "buildings": {
+    "CasaRaza_04": {
+     "marker": "MARKER_Bld_CasaRaza_04",
+     "floors": 3,
+     "style": "stone",
+     "roof": "spire",
+     "eave_m": 9.6,
+     "ridge_m": 19.1,
+     "tris": {
+      "Body": 5374,
+      "Roof": 232,
+      "Props": 318,
+      "total_body_roof": 5606,
+      "total_with_extras": 5723
+     },
+     "budget": 6000,
+     "ok": true,
+     "budget_class": "grande",
+     "lod_ratios": [
+      0.616,
+      0.119
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 3,
+        "blocked": []
+       }
+      ],
+      "final_floors": 3,
+      "still_blocking": false
+     },
+     "collision": "CasaRaza_04-colonly",
+     "footprint_check": {
+      "x": [
+       -10.22,
+       10.29
+      ],
+      "y": [
+       -8.229,
+       8.22
+      ],
+      "over_x_m": 0.29,
+      "over_y_m": 0.229
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.15,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      0.0,
+      8.0,
+      0.0
+     ],
+     "banner": "CasaRaza_04_Banner",
+     "banner_size_m": [
+      1.8,
+      5.0
+     ],
+     "flag": "CasaRaza_04_Flag",
+     "spawn_marker": "MARKER_RaceSpawn_04",
+     "race": {
+      "preset": "R04",
+      "wall": "MAT_Limestone_Light",
+      "skirt_depth_m": 0.6,
+      "roof_tone_swapped": false,
+      "tier": 0,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 3,
+        "tris": 5606,
+        "budget": 5840
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 0,
+       "right": 0,
+       "left": 1
+      },
+      "glass_panes": 60,
+      "turret": {
+       "center": [
+        7.85,
+        -5.85
+       ],
+       "r": 2.3,
+       "apex_m": 22.22,
+       "lantern": true
+      }
+     },
+     "banner_flag_tris": 117,
+     "iso_blocks": [],
+     "door_scale": 1.1,
+     "ground_gap_m": 0.003
+    },
+    "RAZ_B04_Casa_01": {
+     "marker": "MARKER_Bld_RAZ_B04_Casa_01",
+     "floors": 3,
+     "style": "stone",
+     "roof": "spire",
+     "eave_m": 9.6,
+     "ridge_m": 16.8,
+     "tris": {
+      "Body": 3526,
+      "Roof": 208,
+      "Props": 260,
+      "total_body_roof": 3734,
+      "total_with_extras": 3734
+     },
+     "budget": 4000,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.665,
+      0.089
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 3,
+        "blocked": []
+       }
+      ],
+      "final_floors": 3,
+      "still_blocking": false
+     },
+     "collision": "RAZ_B04_Casa_01-colonly",
+     "footprint_check": {
+      "x": [
+       -5.47,
+       5.54
+      ],
+      "y": [
+       -4.754,
+       4.72
+      ],
+      "over_x_m": 0.29,
+      "over_y_m": 0.254
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.15,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      0.0,
+      4.5,
+      0.0
+     ],
+     "race": {
+      "preset": "R04",
+      "wall": "MAT_Limestone_Light",
+      "skirt_depth_m": 0.6,
+      "roof_tone_swapped": false,
+      "tier": 1,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 3,
+        "tris": 4316,
+        "budget": 4000
+       },
+       {
+        "tier": 1,
+        "floors": 3,
+        "tris": 3734,
+        "budget": 4000
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 0,
+       "right": 0,
+       "left": 1
+      },
+      "glass_panes": 32,
+      "turret": {
+       "center": [
+        4.1,
+        -3.35
+       ],
+       "r": 1.3,
+       "apex_m": 19.42,
+       "lantern": false
+      }
+     },
+     "door_scale": 1.1,
+     "ground_gap_m": 0.267
+    },
+    "RAZ_B04_Casa_02": {
+     "marker": "MARKER_Bld_RAZ_B04_Casa_02",
+     "floors": 3,
+     "style": "stone",
+     "roof": "spire",
+     "eave_m": 9.6,
+     "ridge_m": 16.4,
+     "tris": {
+      "Body": 3622,
+      "Roof": 126,
+      "Props": 368,
+      "total_body_roof": 3748,
+      "total_with_extras": 3748
+     },
+     "budget": 4000,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.685,
+      0.098
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 3,
+        "blocked": []
+       }
+      ],
+      "final_floors": 3,
+      "still_blocking": false
+     },
+     "collision": "RAZ_B04_Casa_02-colonly",
+     "footprint_check": {
+      "x": [
+       -4.47,
+       4.47
+      ],
+      "y": [
+       -4.72,
+       4.72
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 0.22
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.1,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      0.0,
+      4.5,
+      0.0
+     ],
+     "race": {
+      "preset": "R04",
+      "wall": "MAT_Stone_R01",
+      "skirt_depth_m": 0.6,
+      "roof_tone_swapped": false,
+      "tier": 0,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 3,
+        "tris": 3748,
+        "budget": 4000
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 0,
+       "right": 0,
+       "left": 1
+      },
+      "glass_panes": 38
+     },
+     "door_scale": 1.1,
+     "ground_gap_m": 0.253
+    },
+    "RAZ_B04_Casa_03": {
+     "marker": "MARKER_Bld_RAZ_B04_Casa_03",
+     "floors": 2,
+     "style": "stone",
+     "roof": "spire",
+     "eave_m": 6.4,
+     "ridge_m": 12.8,
+     "tris": {
+      "Body": 2082,
+      "Roof": 106,
+      "Props": 208,
+      "total_body_roof": 2188,
+      "total_with_extras": 2188
+     },
+     "budget": 2500,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.75,
+      0.099
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 2,
+        "blocked": []
+       }
+      ],
+      "final_floors": 2,
+      "still_blocking": false
+     },
+     "collision": "RAZ_B04_Casa_03-colonly",
+     "footprint_check": {
+      "x": [
+       -4.22,
+       4.22
+      ],
+      "y": [
+       -4.22,
+       4.22
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 0.22
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.1,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      0.0,
+      4.0,
+      0.0
+     ],
+     "race": {
+      "preset": "R04",
+      "wall": "MAT_Stone_R01",
+      "skirt_depth_m": 0.98,
+      "roof_tone_swapped": false,
+      "tier": 0,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 2,
+        "tris": 2188,
+        "budget": 2500
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 1,
+       "right": 1,
+       "left": 0
+      },
+      "glass_panes": 18
+     },
+     "door_scale": 1.1,
+     "ground_gap_m": 0.78
+    },
+    "RAZ_B04_Casa_04": {
+     "marker": "MARKER_Bld_RAZ_B04_Casa_04",
+     "floors": 2,
+     "style": "stone",
+     "roof": "spire",
+     "eave_m": 6.4,
+     "ridge_m": 13.2,
+     "tris": {
+      "Body": 1654,
+      "Roof": 126,
+      "Props": 428,
+      "total_body_roof": 1780,
+      "total_with_extras": 1780
+     },
+     "budget": 2500,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.774,
+      0.12
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 2,
+        "blocked": []
+       }
+      ],
+      "final_floors": 2,
+      "still_blocking": false
+     },
+     "collision": "RAZ_B04_Casa_04-colonly",
+     "footprint_check": {
+      "x": [
+       -4.97,
+       4.97
+      ],
+      "y": [
+       -4.47,
+       4.47
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 0.22
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.1,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      2.375,
+      4.25,
+      0.0
+     ],
+     "race": {
+      "preset": "R04",
+      "wall": "MAT_Limestone_Light",
+      "skirt_depth_m": 0.7,
+      "roof_tone_swapped": true,
+      "tier": 2,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 2,
+        "tris": 2832,
+        "budget": 2500
+       },
+       {
+        "tier": 1,
+        "floors": 2,
+        "tris": 2644,
+        "budget": 2500
+       },
+       {
+        "tier": 2,
+        "floors": 2,
+        "tris": 1780,
+        "budget": 2500
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 2,
+       "right": 2,
+       "left": 1
+      },
+      "glass_panes": 22
+     },
+     "door_scale": 1.1,
+     "ground_gap_m": 0.495
+    },
+    "RAZ_B04_Casa_05": {
+     "marker": "MARKER_Bld_RAZ_B04_Casa_05",
+     "floors": 2,
+     "style": "stone",
+     "roof": "spire",
+     "eave_m": 6.4,
+     "ridge_m": 12.8,
+     "tris": {
+      "Body": 2202,
+      "Roof": 200,
+      "Props": 424,
+      "total_body_roof": 2402,
+      "total_with_extras": 2402
+     },
+     "budget": 2500,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.746,
+      0.108
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 2,
+        "blocked": []
+       }
+      ],
+      "final_floors": 2,
+      "still_blocking": false
+     },
+     "collision": "RAZ_B04_Casa_05-colonly",
+     "footprint_check": {
+      "x": [
+       -4.97,
+       5.04
+      ],
+      "y": [
+       -4.254,
+       4.22
+      ],
+      "over_x_m": 0.29,
+      "over_y_m": 0.254
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.15,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      0.0,
+      4.0,
+      0.0
+     ],
+     "race": {
+      "preset": "R04",
+      "wall": "MAT_Limestone_Light",
+      "skirt_depth_m": 0.6,
+      "roof_tone_swapped": false,
+      "tier": 0,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 2,
+        "tris": 2402,
+        "budget": 2500
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 1,
+       "right": 0,
+       "left": 1
+      },
+      "glass_panes": 22,
+      "turret": {
+       "center": [
+        3.6,
+        -2.85
+       ],
+       "r": 1.3,
+       "apex_m": 15.42,
+       "lantern": false
+      }
+     },
+     "door_scale": 1.1,
+     "ground_gap_m": 0.221
+    },
+    "Plazuela_04": {
+     "marker": "MARKER_Prop_Plazuela_04",
+     "type": "tree",
+     "diameter_m": 10.0,
+     "terrain_materials": [
+      "MAT_Cobble_Concordia"
+     ],
+     "paving_added": false,
+     "paving_tris": 0,
+     "centre_piece": "Plazuela_04_OldTree",
+     "centre_tris": 356,
+     "benches": 4,
+     "bench_tris": 32,
+     "bench_radius_m": 3.7
+    }
+   }
+  },
+  "B05": {
+   "preset": "R05",
+   "material": "pieles y madera",
+   "roof": "yurt",
+   "pitch": 28.0,
+   "door_scale": 1.3,
+   "reference": "ger mongol: celosia de madera clara, fieltro, cubierta de pieles y corona central",
+   "banner_color": "#8A7260",
+   "symbol": "sun",
+   "houses_built": 0,
+   "houses_requested": [
+    6,
+    10
+   ],
+   "houses_missing_parcels": 6,
+   "colors": {
+    "Body": {
+     "hex": "#B6AFA3",
+     "saturation": 0.104,
+     "hue": 37.3
+    },
+    "Roof": {
+     "hex": "#948576",
+     "saturation": 0.203,
+     "hue": 30.1
+    }
+   },
+   "buildings": {
+    "CasaRaza_05": {
+     "marker": "MARKER_Bld_CasaRaza_05",
+     "tris": {
+      "Body": 772,
+      "Roof": 550,
+      "total_body_roof": 1322,
+      "total_with_extras": 1431
+     },
+     "budget": 6000,
+     "ok": true,
+     "lods": {
+      "LOD1": 550,
+      "LOD2": 162,
+      "LOD2_material": "LOD2: color plano = media del LOD0 (sRGB #ABA295)"
+     },
+     "roof": "yurt",
+     "door_scale": 1.3,
+     "door_local": [
+      -3.0,
+      7.85,
+      0.0
+     ],
+     "yurts": {
+      "main": {
+       "center": [
+        -3.0,
+        0.6
+       ],
+       "r": 6.8,
+       "wall_h": 3.6,
+       "crown_z": 6.83
+      },
+      "annexes": [
+       {
+        "center": [
+         6.6,
+         -3.4
+        ],
+        "r": 3.0
+       },
+       {
+        "center": [
+         7.4,
+         4.6
+        ],
+        "r": 2.2
+       }
+      ]
+     },
+     "banner": "CasaRaza_05_Banner",
+     "banner_size_m": [
+      1.8,
+      4.2
+     ],
+     "flag": "CasaRaza_05_Flag",
+     "spawn_marker": "MARKER_RaceSpawn_05",
+     "door_marker": "MARKER_CasaRaza_05_Door",
+     "interior": "CasaRaza_05_InteriorVolume",
+     "collision": "CasaRaza_05-colonly",
+     "iso_blocks": [],
+     "footprint_check": {
+      "x": [
+       -9.92,
+       9.72
+      ],
+      "y": [
+       -6.442,
+       7.95
+      ],
+      "over_x_m": 0.0,
+      "over_y_m": 0.0
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.0,
+      "over_y_m": 0.0,
+      "below_z_m": 2.2
+     },
+     "ground_gap_m": 0.0
+    },
+    "Plazuela_05": {
+     "marker": "MARKER_Prop_Plazuela_05",
+     "type": "fountain",
+     "diameter_m": 10.0,
+     "terrain_materials": [
+      "MAT_Cobble_Concordia"
+     ],
+     "paving_added": false,
+     "paving_tris": 0,
+     "centre_piece": "Plazuela_05_Fountain",
+     "centre_tris": 144,
+     "benches": 4,
+     "bench_tris": 32,
+     "bench_radius_m": 3.7
+    }
+   }
+  },
+  "B06": {
+   "preset": "R06",
+   "material": "piedra y madera",
+   "roof": "flat",
+   "pitch": 0.0,
+   "door_scale": 0.8,
+   "reference": "Toledo: planta baja de piedra arenisca, alta de entramado y azotea con pretil",
+   "banner_color": "#9A8668",
+   "symbol": "anvil",
+   "houses_built": 1,
+   "houses_requested": [
+    6,
+    10
+   ],
+   "houses_missing_parcels": 5,
+   "colors": {
+    "Body": {
+     "hex": "#B4A794",
+     "saturation": 0.176,
+     "hue": 35.6
+    },
+    "Roof": {
+     "hex": "#A59C8E",
+     "saturation": 0.141,
+     "hue": 36.3
+    }
+   },
+   "buildings": {
+    "CasaRaza_06": {
+     "marker": "MARKER_Bld_CasaRaza_06",
+     "floors": 3,
+     "style": "timber",
+     "roof": "flat",
+     "eave_m": 9.6,
+     "ridge_m": 10.5,
+     "tris": {
+      "Body": 2938,
+      "Roof": 70,
+      "Props": 450,
+      "total_body_roof": 3008,
+      "total_with_extras": 3125
+     },
+     "budget": 6000,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.709,
+      0.175
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 3,
+        "blocked": []
+       }
+      ],
+      "final_floors": 3,
+      "still_blocking": false
+     },
+     "collision": "CasaRaza_06-colonly",
+     "footprint_check": {
+      "x": [
+       -10.22,
+       10.22
+      ],
+      "y": [
+       -8.22,
+       9.52
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 1.52
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.08,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      0.0,
+      8.0,
+      0.0
+     ],
+     "banner": "CasaRaza_06_Banner",
+     "banner_size_m": [
+      1.8,
+      5.0
+     ],
+     "flag": "CasaRaza_06_Flag",
+     "spawn_marker": "MARKER_RaceSpawn_06",
+     "race": {
+      "preset": "R06",
+      "wall": "MAT_Stone_Sand",
+      "skirt_depth_m": 0.6,
+      "roof_tone_swapped": false,
+      "tier": 2,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 3,
+        "tris": 6962,
+        "budget": 5840
+       },
+       {
+        "tier": 1,
+        "floors": 3,
+        "tris": 5842,
+        "budget": 5840
+       },
+       {
+        "tier": 2,
+        "floors": 3,
+        "tris": 3008,
+        "budget": 5840
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 2,
+       "right": 2,
+       "left": 1
+      },
+      "glass_panes": 0
+     },
+     "banner_flag_tris": 117,
+     "iso_blocks": [],
+     "door_scale": 0.8,
+     "ground_gap_m": 0.0
+    },
+    "RAZ_B06_Casa_01": {
+     "marker": "MARKER_Bld_RAZ_B06_Casa_01",
+     "floors": 2,
+     "style": "timber",
+     "roof": "flat",
+     "eave_m": 6.4,
+     "ridge_m": 7.3,
+     "tris": {
+      "Body": 2158,
+      "Roof": 70,
+      "Props": 340,
+      "total_body_roof": 2228,
+      "total_with_extras": 2228
+     },
+     "budget": 2500,
+     "ok": true,
+     "budget_class": "media",
+     "lod_ratios": [
+      0.651,
+      0.113
+     ],
+     "iso_rule": {
+      "history": [
+       {
+        "floors": 2,
+        "blocked": []
+       }
+      ],
+      "final_floors": 2,
+      "still_blocking": false
+     },
+     "collision": "RAZ_B06_Casa_01-colonly",
+     "footprint_check": {
+      "x": [
+       -4.22,
+       4.22
+      ],
+      "y": [
+       -4.22,
+       5.52
+      ],
+      "over_x_m": 0.22,
+      "over_y_m": 1.52
+     },
+     "footprint_ground_check": {
+      "over_x_m": 0.08,
+      "over_y_m": 0.18,
+      "below_z_m": 2.2
+     },
+     "door_local": [
+      0.0,
+      4.0,
+      0.0
+     ],
+     "race": {
+      "preset": "R06",
+      "wall": "MAT_Limestone_Light",
+      "skirt_depth_m": 0.6,
+      "roof_tone_swapped": true,
+      "tier": 0,
+      "tiers_tried": [
+       {
+        "tier": 0,
+        "floors": 2,
+        "tris": 2228,
+        "budget": 2500
+       }
+      ],
+      "side_detail": {
+       "front": 0,
+       "back": 1,
+       "right": 0,
+       "left": 1
+      },
+      "glass_panes": 0
+     },
+     "door_scale": 0.8,
+     "ground_gap_m": 0.08
+    },
+    "Plazuela_06": {
+     "marker": "MARKER_Prop_Plazuela_06",
+     "type": "tree",
+     "diameter_m": 10.0,
+     "terrain_materials": [
+      "MAT_Cobble_Concordia"
+     ],
+     "paving_added": false,
+     "paving_tris": 0,
+     "centre_piece": "Plazuela_06_OldTree",
+     "centre_tris": 356,
+     "benches": 4,
+     "bench_tris": 32,
+     "bench_radius_m": 3.7
+    }
+   }
+  }
+ },
+ "parcels_unused_casas": [],
+ "faro_visibility": {
+  "Avenida Norte": {
+   "axis_pct": 84.8,
+   "lanes": {
+    "-2.5": {
+     "samples": 33,
+     "pct": 87.9,
+     "blocked_by": {
+      "CasaRegistro_Body": 4
+     }
+    },
+    "+0.0": {
+     "samples": 33,
+     "pct": 84.8,
+     "blocked_by": {
+      "CasaRegistro_Body": 4,
+      "FuenteMercado": 1
+     }
+    },
+    "+2.5": {
+     "samples": 33,
+     "pct": 84.8,
+     "blocked_by": {
+      "CasaRegistro_Body": 5
+     }
+    }
+   },
+   "best_lane_pct": 87.9,
+   "samples_axis": 33
+  },
+  "Avenida Sur": {
+   "axis_pct": 100.0,
+   "lanes": {
+    "-2.5": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+0.0": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+2.5": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    }
+   },
+   "best_lane_pct": 100.0,
+   "samples_axis": 33
+  },
+  "Avenida Este": {
+   "axis_pct": 84.4,
+   "lanes": {
+    "-2.5": {
+     "samples": 32,
+     "pct": 90.6,
+     "blocked_by": {
+      "Taller_Carpinteria_Roof": 3
+     }
+    },
+    "+0.0": {
+     "samples": 32,
+     "pct": 84.4,
+     "blocked_by": {
+      "Taller_Carpinteria_Body": 4,
+      "Taller_Carpinteria_Roof": 1
+     }
+    },
+    "+2.5": {
+     "samples": 32,
+     "pct": 84.4,
+     "blocked_by": {
+      "Taller_Carpinteria_Body": 5
+     }
+    }
+   },
+   "best_lane_pct": 90.6,
+   "samples_axis": 32
+  },
+  "Avenida Oeste": {
+   "axis_pct": 78.8,
+   "lanes": {
+    "-2.5": {
+     "samples": 33,
+     "pct": 75.8,
+     "blocked_by": {
+      "CLA_Casa_02_Body": 5,
+      "CLA_Casa_02_Roof": 3
+     }
+    },
+    "+0.0": {
+     "samples": 33,
+     "pct": 78.8,
+     "blocked_by": {
+      "CLA_Casa_02_Roof": 4,
+      "CLA_Casa_02_Body": 3
+     }
+    },
+    "+2.5": {
+     "samples": 33,
+     "pct": 81.8,
+     "blocked_by": {
+      "CLA_Casa_02_Body": 3,
+      "CLA_Casa_02_Roof": 3
+     }
+    }
+   },
+   "best_lane_pct": 81.8,
+   "samples_axis": 33
+  },
+  "Diagonal NE (Faro)": {
+   "axis_pct": 100.0,
+   "lanes": {
+    "-2.5": {
+     "samples": 25,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+0.0": {
+     "samples": 25,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+2.5": {
+     "samples": 25,
+     "pct": 100.0,
+     "blocked_by": {}
+    }
+   },
+   "best_lane_pct": 100.0,
+   "samples_axis": 25
+  },
+  "Diagonal NO (Santuario)": {
+   "axis_pct": 92.6,
+   "lanes": {
+    "-2.5": {
+     "samples": 27,
+     "pct": 96.3,
+     "blocked_by": {
+      "SANTUARIO_Body": 1
+     }
+    },
+    "+0.0": {
+     "samples": 27,
+     "pct": 92.6,
+     "blocked_by": {
+      "SANTUARIO_Body": 2
+     }
+    },
+    "+2.5": {
+     "samples": 27,
+     "pct": 88.9,
+     "blocked_by": {
+      "SANTUARIO_Body": 3
+     }
+    }
+   },
+   "best_lane_pct": 96.3,
+   "samples_axis": 27
+  },
+  "Diagonal SO (Obelisco)": {
+   "axis_pct": 3.4,
+   "lanes": {
+    "-2.5": {
+     "samples": 29,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+0.0": {
+     "samples": 29,
+     "pct": 3.4,
+     "blocked_by": {
+      "OBELISK_Body": 23,
+      "OBELISK_Mark_013": 1,
+      "OBELISK_Mark_033": 1,
+      "OBELISK_Mark_053": 1
+     }
+    },
+    "+2.5": {
+     "samples": 29,
+     "pct": 100.0,
+     "blocked_by": {}
+    }
+   },
+   "best_lane_pct": 100.0,
+   "samples_axis": 29
+  },
+  "Diagonal SE (Salon)": {
+   "axis_pct": 80.8,
+   "lanes": {
+    "-2.5": {
+     "samples": 26,
+     "pct": 76.9,
+     "blocked_by": {
+      "SALON_HAZANAS_Body": 5,
+      "SALON_HAZANAS_Roof": 1
+     }
+    },
+    "+0.0": {
+     "samples": 26,
+     "pct": 80.8,
+     "blocked_by": {
+      "SALON_HAZANAS_Body": 5
+     }
+    },
+    "+2.5": {
+     "samples": 26,
+     "pct": 84.6,
+     "blocked_by": {
+      "SALON_HAZANAS_Body": 4
+     }
+    }
+   },
+   "best_lane_pct": 84.6,
+   "samples_axis": 26
+  },
+  "Ronda r100": {
+   "axis_pct": 52.8,
+   "samples_axis": 36,
+   "blocked_by": {
+    "SalonClase_08_Body": 3,
+    "SalonClase_07_Body": 3,
+    "MER_Casa_01_Body": 2,
+    "SALON_HAZANAS_Body": 2
+   }
+  },
+  "Ronda r150": {
+   "axis_pct": 73.2,
+   "samples_axis": 56,
+   "blocked_by": {
+    "Banco_Body": 2,
+    "TesoreriaMuralla_Body": 2,
+    "Taller_GranForja_Body": 1,
+    "CasaReposicion_Prop_LANTERN_Shard_00": 1
+   }
+  }
+ },
+ "faro_visibility_note": "muestras cada 4 m (radiales, r 62-190) y cada 6 grados (rondas), solo sobre calle o plaza transitable (fuera de parcelas y pads); ojo a 1.7 m; objetivo: cima del cristal",
+ "export": {
+  "file": "export/godot/concordia_razas.glb",
+  "mb": 9.61,
+  "nodes": 473,
+  "meshes": 235,
+  "tris": 149808,
+  "materials": 34,
+  "images": 39,
+  "images_external": 39,
+  "colliders": 37,
+  "navmesh": 0,
+  "occluders": 0,
+  "empties": 79
+ },
+ "palette_audit": {
+  "MAT_Wood_Light": {
+   "mean_srgb": "#A4947C",
+   "saturation": 0.243,
+   "hue": 36.2,
+   "pass": true
+  },
+  "MAT_Roof_Slate": {
+   "mean_srgb": "#6D6F74",
+   "saturation": 0.062,
+   "hue": 220.9,
+   "pass": true
+  },
+  "MAT_Roof_Slate_B": {
+   "mean_srgb": "#64676C",
+   "saturation": 0.072,
+   "hue": 223.8,
+   "pass": true
+  },
+  "MAT_Roof_Slate_Blue": {
+   "mean_srgb": "#5F6974",
+   "saturation": 0.186,
+   "hue": 211.5,
+   "pass": true
+  },
+  "MAT_Roof_Shingle_Dark": {
+   "mean_srgb": "#725D4B",
+   "saturation": 0.343,
+   "hue": 26.6,
+   "pass": true
+  },
+  "MAT_Roof_Shingle_Dark_B": {
+   "mean_srgb": "#695646",
+   "saturation": 0.334,
+   "hue": 27.1,
+   "pass": true
+  },
+  "MAT_Stone_R01": {
+   "mean_srgb": "#B1A89A",
+   "saturation": 0.128,
+   "hue": 36.2,
+   "pass": true
+  },
+  "MAT_Stone_Sand": {
+   "mean_srgb": "#C3B195",
+   "saturation": 0.238,
+   "hue": 36.2,
+   "pass": true
+  },
+  "MAT_Felt_R05": {
+   "mean_srgb": "#B8B6B1",
+   "saturation": 0.037,
+   "hue": 45.3,
+   "pass": true
+  },
+  "MAT_Hide_R05": {
+   "mean_srgb": "#948475",
+   "saturation": 0.212,
+   "hue": 28.6,
+   "pass": true
+  },
+  "MAT_Glass_R04": {
+   "mean_srgb": "#A9C9DC",
+   "saturation": 0.232,
+   "hue": 202.4,
+   "pass": true
+  },
+  "MAT_Leaf_Old": {
+   "mean_srgb": "#5F6B4E",
+   "saturation": 0.271,
+   "hue": 84.8,
+   "pass": true
+  },
+  "MAT_Banner_R01": {
+   "mean_srgb": "#76726E",
+   "saturation": 0.071,
+   "hue": 30.5,
+   "pass": true
+  },
+  "MAT_Banner_R02": {
+   "mean_srgb": "#948363",
+   "saturation": 0.327,
+   "hue": 39.2,
+   "pass": true
+  },
+  "MAT_Banner_R03": {
+   "mean_srgb": "#665549",
+   "saturation": 0.287,
+   "hue": 25.6,
+   "pass": true
+  },
+  "MAT_Banner_R04": {
+   "mean_srgb": "#748390",
+   "saturation": 0.189,
+   "hue": 207.6,
+   "pass": true
+  },
+  "MAT_Banner_R05": {
+   "mean_srgb": "#937A67",
+   "saturation": 0.298,
+   "hue": 25.7,
+   "pass": true
+  },
+  "MAT_Banner_R06": {
+   "mean_srgb": "#A48F6F",
+   "saturation": 0.319,
+   "hue": 35.9,
+   "pass": true
+  }
+ },
+ "texture_memory_mb": {
+  "stage17_total": 154.7,
+  "class_banners_8": 2.8,
+  "new_albedos_1k_2": 1.34,
+  "race_banners_6": 2.1,
+  "total": 160.9,
+  "limit": 220
+ },
+ "parcel_shortfall": {
+  "requested_per_barrio": [
+   6,
+   10
+  ],
+  "built": {
+   "B01": 5,
+   "B02": 5,
+   "B03": 6,
+   "B04": 5,
+   "B05": 0,
+   "B06": 1
+  },
+  "note": "solo se usan parcelas MARKER_Bld_RAZ_Bxx_Casa_yy existentes; no se inventan parcelas"
+ }
+}
