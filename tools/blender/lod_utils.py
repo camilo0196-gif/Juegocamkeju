@@ -262,6 +262,9 @@ def massing_spec(name, spec, src_objs, col, parent, mat_name=None):
             mb.push(Matrix.Translation((0, yc, 0)))
             _gable(mb, x0, x1, yh, ze, zr, m)
             mb.pop()
+        elif p[0] == "gable_y":                     # cumbrera a lo largo de Y: ("gable_y", y0, y1, x_half, z_eave, z_ridge)
+            _, y0, y1, xh, ze, zr = p
+            _gable(mb, y0, y1, xh, ze, zr, m, axis="y")
         elif p[0] == "cone":
             _, cx, cy, r, z0, z1, n = p
             _cone(mb, cx, cy, r, z0, z1, n, m)

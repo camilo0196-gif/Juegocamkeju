@@ -1,0 +1,1485 @@
+{
+ "N_CLASES": 8,
+ "saved_before": "blender/concordia_v20.blend",
+ "materials": {
+  "MAT_Straw": "creado",
+  "MAT_Banner_CLASE_01": {
+   "texture": "textures/concordia/MAT_Banner/concordia_banner_clase_01_albedo.png",
+   "color": "#866E5C",
+   "saturation": 0.313
+  },
+  "MAT_Banner_CLASE_02": {
+   "texture": "textures/concordia/MAT_Banner/concordia_banner_clase_02_albedo.png",
+   "color": "#6E7480",
+   "saturation": 0.141
+  },
+  "MAT_Banner_CLASE_03": {
+   "texture": "textures/concordia/MAT_Banner/concordia_banner_clase_03_albedo.png",
+   "color": "#6F765A",
+   "saturation": 0.237
+  },
+  "MAT_Banner_CLASE_04": {
+   "texture": "textures/concordia/MAT_Banner/concordia_banner_clase_04_albedo.png",
+   "color": "#77707E",
+   "saturation": 0.111
+  },
+  "MAT_Banner_CLASE_05": {
+   "texture": "textures/concordia/MAT_Banner/concordia_banner_clase_05_albedo.png",
+   "color": "#7E6A52",
+   "saturation": 0.349
+  },
+  "MAT_Banner_CLASE_06": {
+   "texture": "textures/concordia/MAT_Banner/concordia_banner_clase_06_albedo.png",
+   "color": "#6C7A68",
+   "saturation": 0.148
+  },
+  "MAT_Banner_CLASE_07": {
+   "texture": "textures/concordia/MAT_Banner/concordia_banner_clase_07_albedo.png",
+   "color": "#998A6A",
+   "saturation": 0.307
+  },
+  "MAT_Banner_CLASE_08": {
+   "texture": "textures/concordia/MAT_Banner/concordia_banner_clase_08_albedo.png",
+   "color": "#5E5A56",
+   "saturation": 0.085
+  }
+ },
+ "salones": {
+  "SalonClase_01": {
+   "preset": "CLASE_01",
+   "marker": "MARKER_Bld_SalonClase_01",
+   "tris": {
+    "Body": 1190,
+    "Roof": 844,
+    "banners": 6,
+    "props": 96,
+    "total": 2120
+   },
+   "budget": 5000,
+   "ok": true,
+   "lods": {
+    "LOD1": 1016,
+    "LOD2": 68,
+    "LOD2_material": "LOD2: color plano = media del LOD0 (sRGB #AFA393)"
+   },
+   "ridge_m": 11.39,
+   "finial": "spear",
+   "banner_color": "#866E5C",
+   "props": [
+    "SalonClase_01_Prop_weapon_rack",
+    "SalonClase_01_Prop_shield_stand"
+   ],
+   "slots": [
+    "MARKER_ClassProp_Slot_01_01",
+    "MARKER_ClassProp_Slot_01_02",
+    "MARKER_ClassProp_Slot_01_03"
+   ],
+   "door_marker": "MARKER_SalonClase_01_Door",
+   "collision": "SalonClase_01-colonly",
+   "iso_blocks": [],
+   "footprint_check": {
+    "x": [
+     -9.22,
+     9.22
+    ],
+    "y": [
+     -7.18,
+     7.0
+    ],
+    "over_x_m": 0.22,
+    "over_y_m": 0.18
+   }
+  },
+  "SalonClase_02": {
+   "preset": "CLASE_02",
+   "marker": "MARKER_Bld_SalonClase_02",
+   "tris": {
+    "Body": 1214,
+    "Roof": 846,
+    "banners": 6,
+    "props": 130,
+    "total": 2146
+   },
+   "budget": 5000,
+   "ok": true,
+   "lods": {
+    "LOD1": 1029,
+    "LOD2": 68,
+    "LOD2_material": "LOD2: color plano = media del LOD0 (sRGB #AFA393)"
+   },
+   "ridge_m": 11.39,
+   "finial": "orb",
+   "banner_color": "#6E7480",
+   "props": [
+    "SalonClase_02_Prop_lectern_book",
+    "SalonClase_02_Prop_scroll_basket"
+   ],
+   "slots": [
+    "MARKER_ClassProp_Slot_02_01",
+    "MARKER_ClassProp_Slot_02_02",
+    "MARKER_ClassProp_Slot_02_03"
+   ],
+   "door_marker": "MARKER_SalonClase_02_Door",
+   "collision": "SalonClase_02-colonly",
+   "iso_blocks": [],
+   "footprint_check": {
+    "x": [
+     -9.22,
+     9.22
+    ],
+    "y": [
+     -7.18,
+     7.0
+    ],
+    "over_x_m": 0.22,
+    "over_y_m": 0.18
+   }
+  },
+  "SalonClase_03": {
+   "preset": "CLASE_03",
+   "marker": "MARKER_Bld_SalonClase_03",
+   "tris": {
+    "Body": 1205,
+    "Roof": 844,
+    "banners": 6,
+    "props": 192,
+    "total": 2135
+   },
+   "budget": 5000,
+   "ok": true,
+   "lods": {
+    "LOD1": 1024,
+    "LOD2": 68,
+    "LOD2_material": "LOD2: color plano = media del LOD0 (sRGB #AFA393)"
+   },
+   "ridge_m": 11.39,
+   "finial": "arrow",
+   "banner_color": "#6F765A",
+   "props": [
+    "SalonClase_03_Prop_bow_rack",
+    "SalonClase_03_Prop_quiver_stand"
+   ],
+   "slots": [
+    "MARKER_ClassProp_Slot_03_01",
+    "MARKER_ClassProp_Slot_03_02",
+    "MARKER_ClassProp_Slot_03_03"
+   ],
+   "door_marker": "MARKER_SalonClase_03_Door",
+   "collision": "SalonClase_03-colonly",
+   "iso_blocks": [],
+   "footprint_check": {
+    "x": [
+     -9.22,
+     9.22
+    ],
+    "y": [
+     -7.18,
+     7.0
+    ],
+    "over_x_m": 0.22,
+    "over_y_m": 0.18
+   }
+  },
+  "SalonClase_04": {
+   "preset": "CLASE_04",
+   "marker": "MARKER_Bld_SalonClase_04",
+   "tris": {
+    "Body": 1238,
+    "Roof": 846,
+    "banners": 6,
+    "props": 62,
+    "total": 2170
+   },
+   "budget": 5000,
+   "ok": true,
+   "lods": {
+    "LOD1": 1041,
+    "LOD2": 68,
+    "LOD2_material": "LOD2: color plano = media del LOD0 (sRGB #AFA393)"
+   },
+   "ridge_m": 11.39,
+   "finial": "star",
+   "banner_color": "#77707E",
+   "props": [
+    "SalonClase_04_Prop_staff_stand",
+    "SalonClase_04_Prop_crystal_pedestal"
+   ],
+   "slots": [
+    "MARKER_ClassProp_Slot_04_01",
+    "MARKER_ClassProp_Slot_04_02",
+    "MARKER_ClassProp_Slot_04_03"
+   ],
+   "door_marker": "MARKER_SalonClase_04_Door",
+   "collision": "SalonClase_04-colonly",
+   "iso_blocks": [],
+   "footprint_check": {
+    "x": [
+     -9.22,
+     9.22
+    ],
+    "y": [
+     -7.18,
+     7.0
+    ],
+    "over_x_m": 0.22,
+    "over_y_m": 0.18
+   }
+  },
+  "SalonClase_05": {
+   "preset": "CLASE_05",
+   "marker": "MARKER_Bld_SalonClase_05",
+   "tris": {
+    "Body": 1198,
+    "Roof": 844,
+    "banners": 6,
+    "props": 138,
+    "total": 2128
+   },
+   "budget": 5000,
+   "ok": true,
+   "lods": {
+    "LOD1": 1020,
+    "LOD2": 68,
+    "LOD2_material": "LOD2: color plano = media del LOD0 (sRGB #AFA393)"
+   },
+   "ridge_m": 11.39,
+   "finial": "hammer",
+   "banner_color": "#7E6A52",
+   "props": [
+    "SalonClase_05_Prop_mace_stand",
+    "SalonClase_05_Prop_anvil_hammer"
+   ],
+   "slots": [
+    "MARKER_ClassProp_Slot_05_01",
+    "MARKER_ClassProp_Slot_05_02",
+    "MARKER_ClassProp_Slot_05_03"
+   ],
+   "door_marker": "MARKER_SalonClase_05_Door",
+   "collision": "SalonClase_05-colonly",
+   "iso_blocks": [],
+   "footprint_check": {
+    "x": [
+     -9.22,
+     9.22
+    ],
+    "y": [
+     -7.18,
+     7.0
+    ],
+    "over_x_m": 0.22,
+    "over_y_m": 0.18
+   }
+  },
+  "SalonClase_06": {
+   "preset": "CLASE_06",
+   "marker": "MARKER_Bld_SalonClase_06",
+   "tris": {
+    "Body": 1196,
+    "Roof": 846,
+    "banners": 6,
+    "props": 113,
+    "total": 2128
+   },
+   "budget": 5000,
+   "ok": true,
+   "lods": {
+    "LOD1": 1020,
+    "LOD2": 68,
+    "LOD2_material": "LOD2: color plano = media del LOD0 (sRGB #AFA393)"
+   },
+   "ridge_m": 11.39,
+   "finial": "flame",
+   "banner_color": "#6C7A68",
+   "props": [
+    "SalonClase_06_Prop_herb_table",
+    "SalonClase_06_Prop_mortar_pot"
+   ],
+   "slots": [
+    "MARKER_ClassProp_Slot_06_01",
+    "MARKER_ClassProp_Slot_06_02",
+    "MARKER_ClassProp_Slot_06_03"
+   ],
+   "door_marker": "MARKER_SalonClase_06_Door",
+   "collision": "SalonClase_06-colonly",
+   "iso_blocks": [],
+   "footprint_check": {
+    "x": [
+     -9.22,
+     9.22
+    ],
+    "y": [
+     -7.18,
+     7.0
+    ],
+    "over_x_m": 0.22,
+    "over_y_m": 0.18
+   }
+  },
+  "SalonClase_07": {
+   "preset": "CLASE_07",
+   "marker": "MARKER_Bld_SalonClase_07",
+   "tris": {
+    "Body": 1254,
+    "Roof": 844,
+    "banners": 6,
+    "props": 56,
+    "total": 2184
+   },
+   "budget": 5000,
+   "ok": true,
+   "lods": {
+    "LOD1": 1047,
+    "LOD2": 68,
+    "LOD2_material": "LOD2: color plano = media del LOD0 (sRGB #AFA393)"
+   },
+   "ridge_m": 11.39,
+   "finial": "crescent",
+   "banner_color": "#998A6A",
+   "props": [
+    "SalonClase_07_Prop_lute_stand",
+    "SalonClase_07_Prop_drum"
+   ],
+   "slots": [
+    "MARKER_ClassProp_Slot_07_01",
+    "MARKER_ClassProp_Slot_07_02",
+    "MARKER_ClassProp_Slot_07_03"
+   ],
+   "door_marker": "MARKER_SalonClase_07_Door",
+   "collision": "SalonClase_07-colonly",
+   "iso_blocks": [],
+   "footprint_check": {
+    "x": [
+     -9.22,
+     9.22
+    ],
+    "y": [
+     -7.18,
+     7.0
+    ],
+    "over_x_m": 0.22,
+    "over_y_m": 0.18
+   }
+  },
+  "SalonClase_08": {
+   "preset": "CLASE_08",
+   "marker": "MARKER_Bld_SalonClase_08",
+   "tris": {
+    "Body": 1202,
+    "Roof": 846,
+    "banners": 6,
+    "props": 116,
+    "total": 2134
+   },
+   "budget": 5000,
+   "ok": true,
+   "lods": {
+    "LOD1": 1024,
+    "LOD2": 68,
+    "LOD2_material": "LOD2: color plano = media del LOD0 (sRGB #AFA393)"
+   },
+   "ridge_m": 11.39,
+   "finial": "pyramid",
+   "banner_color": "#5E5A56",
+   "props": [
+    "SalonClase_08_Prop_dagger_table",
+    "SalonClase_08_Prop_cloak_hook"
+   ],
+   "slots": [
+    "MARKER_ClassProp_Slot_08_01",
+    "MARKER_ClassProp_Slot_08_02",
+    "MARKER_ClassProp_Slot_08_03"
+   ],
+   "door_marker": "MARKER_SalonClase_08_Door",
+   "collision": "SalonClase_08-colonly",
+   "iso_blocks": [],
+   "footprint_check": {
+    "x": [
+     -9.22,
+     9.22
+    ],
+    "y": [
+     -7.18,
+     7.0
+    ],
+    "over_x_m": 0.22,
+    "over_y_m": 0.18
+   }
+  }
+ },
+ "parcels_unused": [],
+ "plaza": {
+  "dummies": 12,
+  "dummy_variants_tris": {
+   "A": 156,
+   "B": 164,
+   "C": 186
+  },
+  "dummy_budget": 600,
+  "targets": 10,
+  "test_posts": 8,
+  "fence_posts": 62,
+  "fence_tris": 1484,
+  "damage_markers": 12,
+  "layout": "maniquies en las zonas 1, 2, 4 y 5 (3 por zona); blancos en las zonas 3 y 6 (5 por zona, mirando al centro); postes a los lados de la avenida; valla con huecos en la avenida y delante de las puertas de los salones 01 y 02"
+ },
+ "CasaReposicion": {
+  "marker": "MARKER_Bld_CasaReposicion",
+  "floors": 2,
+  "style": "timber",
+  "roof": "gable",
+  "eave_m": 6.4,
+  "ridge_m": 11.43,
+  "tris": {
+   "Body": 2658,
+   "Roof": 1138,
+   "Props": 1422,
+   "total_body_roof": 3796,
+   "total_with_extras": 4674
+  },
+  "budget": 5000,
+  "ok": true,
+  "budget_class": "media",
+  "lod_ratios": [
+   0.558,
+   0.124
+  ],
+  "iso_rule": {
+   "history": [
+    {
+     "floors": 2,
+     "blocked": []
+    }
+   ],
+   "final_floors": 2,
+   "still_blocking": false
+  },
+  "collision": "CasaReposicion-colonly",
+  "footprint_check": {
+   "x": [
+    -12.22,
+    12.22
+   ],
+   "y": [
+    -6.22,
+    6.22
+   ],
+   "over_x_m": 0.22,
+   "over_y_m": 0.22
+  },
+  "footprint_ground_check": {
+   "over_x_m": 0.05,
+   "over_y_m": 0.075,
+   "below_z_m": 2.2
+  },
+  "door_local": [
+   2.0,
+   6.0,
+   0.0
+  ],
+  "props_tris": 878,
+  "props": [
+   "CasaReposicion_Prop_ArmorRack_01",
+   "CasaReposicion_Prop_ArmorRack_02",
+   "CasaReposicion_Prop_ArmorRack_03",
+   "CasaReposicion_Prop_ArmorRack_04",
+   "CasaReposicion_Prop_SwordBoard_01",
+   "CasaReposicion_Prop_Crate_01",
+   "CasaReposicion_Prop_Crate_02",
+   "CasaReposicion_Prop_Crate_03",
+   "CasaReposicion_Prop_ArmorRack_Side",
+   "CasaReposicion_Prop_SwordBoard_Side",
+   "CasaReposicion_Prop_Crate_Side"
+  ]
+ },
+ "casas": {
+  "CLA_Casa_01": {
+   "marker": "MARKER_Bld_CLA_Casa_01",
+   "floors": 2,
+   "style": "stone",
+   "roof": "gable",
+   "eave_m": 6.4,
+   "ridge_m": 9.76,
+   "tris": {
+    "Body": 2394,
+    "Roof": 568,
+    "Props": 530,
+    "total_body_roof": 2962,
+    "total_with_extras": 2962
+   },
+   "budget": null,
+   "ok": null,
+   "budget_class": "media",
+   "lod_ratios": [
+    0.603,
+    0.108
+   ],
+   "iso_rule": {
+    "history": [
+     {
+      "floors": 2,
+      "blocked": []
+     }
+    ],
+    "final_floors": 2,
+    "still_blocking": false
+   },
+   "collision": "CLA_Casa_01-colonly",
+   "footprint_check": {
+    "x": [
+     -4.47,
+     4.47
+    ],
+    "y": [
+     -4.22,
+     4.22
+    ],
+    "over_x_m": 0.22,
+    "over_y_m": 0.22
+   },
+   "footprint_ground_check": {
+    "over_x_m": 0.1,
+    "over_y_m": 0.1,
+    "below_z_m": 2.2
+   },
+   "door_local": [
+    0.0,
+    4.0,
+    0.0
+   ]
+  },
+  "CLA_Casa_02": {
+   "marker": "MARKER_Bld_CLA_Casa_02",
+   "floors": 2,
+   "style": "stone",
+   "roof": "hip",
+   "eave_m": 6.4,
+   "ridge_m": 9.76,
+   "tris": {
+    "Body": 2382,
+    "Roof": 94,
+    "Props": 560,
+    "total_body_roof": 2476,
+    "total_with_extras": 2476
+   },
+   "budget": null,
+   "ok": null,
+   "budget_class": "media",
+   "lod_ratios": [
+    0.739,
+    0.095
+   ],
+   "iso_rule": {
+    "history": [
+     {
+      "floors": 2,
+      "blocked": []
+     }
+    ],
+    "final_floors": 2,
+    "still_blocking": false
+   },
+   "collision": "CLA_Casa_02-colonly",
+   "footprint_check": {
+    "x": [
+     -4.22,
+     4.22
+    ],
+    "y": [
+     -5.22,
+     5.22
+    ],
+    "over_x_m": 0.22,
+    "over_y_m": 0.22
+   },
+   "footprint_ground_check": {
+    "over_x_m": 0.1,
+    "over_y_m": 0.1,
+    "below_z_m": 2.2
+   },
+   "door_local": [
+    0.0,
+    5.0,
+    0.0
+   ]
+  },
+  "CLA_Casa_03": {
+   "marker": "MARKER_Bld_CLA_Casa_03",
+   "floors": 2,
+   "style": "stone",
+   "roof": "hip",
+   "eave_m": 6.4,
+   "ridge_m": 9.97,
+   "tris": {
+    "Body": 2176,
+    "Roof": 94,
+    "Props": 234,
+    "total_body_roof": 2270,
+    "total_with_extras": 2270
+   },
+   "budget": null,
+   "ok": null,
+   "budget_class": "media",
+   "lod_ratios": [
+    0.722,
+    0.103
+   ],
+   "iso_rule": {
+    "history": [
+     {
+      "floors": 2,
+      "blocked": []
+     }
+    ],
+    "final_floors": 2,
+    "still_blocking": false
+   },
+   "collision": "CLA_Casa_03-colonly",
+   "footprint_check": {
+    "x": [
+     -5.22,
+     5.22
+    ],
+    "y": [
+     -4.47,
+     4.47
+    ],
+    "over_x_m": 0.22,
+    "over_y_m": 0.22
+   },
+   "footprint_ground_check": {
+    "over_x_m": 0.1,
+    "over_y_m": 0.1,
+    "below_z_m": 2.2
+   },
+   "door_local": [
+    0.0,
+    4.25,
+    0.0
+   ]
+  },
+  "CLA_Casa_04": {
+   "marker": "MARKER_Bld_CLA_Casa_04",
+   "floors": 3,
+   "style": "stone",
+   "roof": "gable",
+   "eave_m": 9.6,
+   "ridge_m": 13.17,
+   "tris": {
+    "Body": 3744,
+    "Roof": 592,
+    "Props": 560,
+    "total_body_roof": 4336,
+    "total_with_extras": 4336
+   },
+   "budget": null,
+   "ok": null,
+   "budget_class": "media",
+   "lod_ratios": [
+    0.615,
+    0.101
+   ],
+   "iso_rule": {
+    "history": [
+     {
+      "floors": 3,
+      "blocked": []
+     }
+    ],
+    "final_floors": 3,
+    "still_blocking": false
+   },
+   "collision": "CLA_Casa_04-colonly",
+   "footprint_check": {
+    "x": [
+     -4.72,
+     4.72
+    ],
+    "y": [
+     -4.47,
+     4.47
+    ],
+    "over_x_m": 0.22,
+    "over_y_m": 0.22
+   },
+   "footprint_ground_check": {
+    "over_x_m": 0.1,
+    "over_y_m": 0.1,
+    "below_z_m": 2.2
+   },
+   "door_local": [
+    0.0,
+    4.25,
+    0.0
+   ]
+  },
+  "CLA_Casa_05": {
+   "marker": "MARKER_Bld_CLA_Casa_05",
+   "floors": 3,
+   "style": "stone",
+   "roof": "gable",
+   "eave_m": 9.6,
+   "ridge_m": 13.38,
+   "tris": {
+    "Body": 3748,
+    "Roof": 654,
+    "Props": 420,
+    "total_body_roof": 4402,
+    "total_with_extras": 4402
+   },
+   "budget": null,
+   "ok": null,
+   "budget_class": "media",
+   "lod_ratios": [
+    0.607,
+    0.102
+   ],
+   "iso_rule": {
+    "history": [
+     {
+      "floors": 3,
+      "blocked": []
+     }
+    ],
+    "final_floors": 3,
+    "still_blocking": false
+   },
+   "collision": "CLA_Casa_05-colonly",
+   "footprint_check": {
+    "x": [
+     -4.22,
+     4.22
+    ],
+    "y": [
+     -4.72,
+     4.72
+    ],
+    "over_x_m": 0.22,
+    "over_y_m": 0.22
+   },
+   "footprint_ground_check": {
+    "over_x_m": 0.1,
+    "over_y_m": 0.1,
+    "below_z_m": 2.2
+   },
+   "door_local": [
+    0.0,
+    4.5,
+    0.0
+   ]
+  },
+  "CLA_Casa_06": {
+   "marker": "MARKER_Bld_CLA_Casa_06",
+   "floors": 2,
+   "style": "stone",
+   "roof": "hip",
+   "eave_m": 6.4,
+   "ridge_m": 10.18,
+   "tris": {
+    "Body": 2482,
+    "Roof": 136,
+    "Props": 480,
+    "total_body_roof": 2618,
+    "total_with_extras": 2618
+   },
+   "budget": null,
+   "ok": null,
+   "budget_class": "media",
+   "lod_ratios": [
+    0.706,
+    0.102
+   ],
+   "iso_rule": {
+    "history": [
+     {
+      "floors": 2,
+      "blocked": []
+     }
+    ],
+    "final_floors": 2,
+    "still_blocking": false
+   },
+   "collision": "CLA_Casa_06-colonly",
+   "footprint_check": {
+    "x": [
+     -5.47,
+     5.47
+    ],
+    "y": [
+     -4.72,
+     4.72
+    ],
+    "over_x_m": 0.22,
+    "over_y_m": 0.22
+   },
+   "footprint_ground_check": {
+    "over_x_m": 0.1,
+    "over_y_m": 0.1,
+    "below_z_m": 2.2
+   },
+   "door_local": [
+    1.312,
+    4.5,
+    0.0
+   ]
+  },
+  "CLA_Casa_07": {
+   "marker": "MARKER_Bld_CLA_Casa_07",
+   "floors": 2,
+   "style": "stone",
+   "roof": "hip",
+   "eave_m": 6.4,
+   "ridge_m": 9.76,
+   "tris": {
+    "Body": 2336,
+    "Roof": 148,
+    "Props": 428,
+    "total_body_roof": 2484,
+    "total_with_extras": 2484
+   },
+   "budget": null,
+   "ok": null,
+   "budget_class": "media",
+   "lod_ratios": [
+    0.699,
+    0.079
+   ],
+   "iso_rule": {
+    "history": [
+     {
+      "floors": 2,
+      "blocked": []
+     }
+    ],
+    "final_floors": 2,
+    "still_blocking": false
+   },
+   "collision": "CLA_Casa_07-colonly",
+   "footprint_check": {
+    "x": [
+     -4.22,
+     4.22
+    ],
+    "y": [
+     -4.22,
+     4.22
+    ],
+    "over_x_m": 0.22,
+    "over_y_m": 0.22
+   },
+   "footprint_ground_check": {
+    "over_x_m": 0.1,
+    "over_y_m": 0.1,
+    "below_z_m": 2.2
+   },
+   "door_local": [
+    0.0,
+    4.0,
+    0.0
+   ]
+  },
+  "CLA_Casa_08": {
+   "marker": "MARKER_Bld_CLA_Casa_08",
+   "floors": 3,
+   "style": "stone",
+   "roof": "gable",
+   "eave_m": 9.6,
+   "ridge_m": 13.59,
+   "tris": {
+    "Body": 4044,
+    "Roof": 678,
+    "Props": 398,
+    "total_body_roof": 4722,
+    "total_with_extras": 4722
+   },
+   "budget": null,
+   "ok": null,
+   "budget_class": "media",
+   "lod_ratios": [
+    0.585,
+    0.096
+   ],
+   "iso_rule": {
+    "history": [
+     {
+      "floors": 3,
+      "blocked": []
+     }
+    ],
+    "final_floors": 3,
+    "still_blocking": false
+   },
+   "collision": "CLA_Casa_08-colonly",
+   "footprint_check": {
+    "x": [
+     -4.97,
+     4.97
+    ],
+    "y": [
+     -4.97,
+     4.97
+    ],
+    "over_x_m": 0.22,
+    "over_y_m": 0.22
+   },
+   "footprint_ground_check": {
+    "over_x_m": 0.1,
+    "over_y_m": 0.1,
+    "below_z_m": 2.2
+   },
+   "door_local": [
+    0.0,
+    4.75,
+    0.0
+   ]
+  },
+  "CLA_Casa_09": {
+   "marker": "MARKER_Bld_CLA_Casa_09",
+   "floors": 2,
+   "style": "stone",
+   "roof": "hip",
+   "eave_m": 6.4,
+   "ridge_m": 9.76,
+   "tris": {
+    "Body": 2810,
+    "Roof": 162,
+    "Props": 234,
+    "total_body_roof": 2972,
+    "total_with_extras": 2972
+   },
+   "budget": null,
+   "ok": null,
+   "budget_class": "media",
+   "lod_ratios": [
+    0.631,
+    0.083
+   ],
+   "iso_rule": {
+    "history": [
+     {
+      "floors": 2,
+      "blocked": []
+     }
+    ],
+    "final_floors": 2,
+    "still_blocking": false
+   },
+   "collision": "CLA_Casa_09-colonly",
+   "footprint_check": {
+    "x": [
+     -5.97,
+     5.97
+    ],
+    "y": [
+     -4.22,
+     4.22
+    ],
+    "over_x_m": 0.22,
+    "over_y_m": 0.22
+   },
+   "footprint_ground_check": {
+    "over_x_m": 0.1,
+    "over_y_m": 0.1,
+    "below_z_m": 2.2
+   },
+   "door_local": [
+    1.438,
+    4.0,
+    0.0
+   ]
+  },
+  "CLA_Casa_10": {
+   "marker": "MARKER_Bld_CLA_Casa_10",
+   "floors": 3,
+   "style": "timber",
+   "roof": "hip",
+   "eave_m": 9.6,
+   "ridge_m": 12.96,
+   "tris": {
+    "Body": 3658,
+    "Roof": 182,
+    "Props": 420,
+    "total_body_roof": 3840,
+    "total_with_extras": 3840
+   },
+   "budget": null,
+   "ok": null,
+   "budget_class": "media",
+   "lod_ratios": [
+    0.572,
+    0.072
+   ],
+   "iso_rule": {
+    "history": [
+     {
+      "floors": 3,
+      "blocked": []
+     }
+    ],
+    "final_floors": 3,
+    "still_blocking": false
+   },
+   "collision": "CLA_Casa_10-colonly",
+   "footprint_check": {
+    "x": [
+     -4.22,
+     4.22
+    ],
+    "y": [
+     -4.22,
+     5.52
+    ],
+    "over_x_m": 0.22,
+    "over_y_m": 1.52
+   },
+   "footprint_ground_check": {
+    "over_x_m": 0.07,
+    "over_y_m": 0.075,
+    "below_z_m": 2.2
+   },
+   "door_local": [
+    0.0,
+    4.0,
+    0.0
+   ]
+  },
+  "CLA_Casa_11": {
+   "marker": "MARKER_Bld_CLA_Casa_11",
+   "floors": 2,
+   "style": "timber",
+   "roof": "hip",
+   "eave_m": 6.4,
+   "ridge_m": 9.97,
+   "tris": {
+    "Body": 2544,
+    "Roof": 162,
+    "Props": 314,
+    "total_body_roof": 2706,
+    "total_with_extras": 2706
+   },
+   "budget": null,
+   "ok": null,
+   "budget_class": "media",
+   "lod_ratios": [
+    0.596,
+    0.086
+   ],
+   "iso_rule": {
+    "history": [
+     {
+      "floors": 2,
+      "blocked": []
+     }
+    ],
+    "final_floors": 2,
+    "still_blocking": false
+   },
+   "collision": "CLA_Casa_11-colonly",
+   "footprint_check": {
+    "x": [
+     -4.47,
+     4.47
+    ],
+    "y": [
+     -4.72,
+     6.02
+    ],
+    "over_x_m": 0.22,
+    "over_y_m": 1.52
+   },
+   "footprint_ground_check": {
+    "over_x_m": 0.07,
+    "over_y_m": 0.07,
+    "below_z_m": 2.2
+   },
+   "door_local": [
+    0.0,
+    4.5,
+    0.0
+   ]
+  },
+  "CLA_Casa_12": {
+   "marker": "MARKER_Bld_CLA_Casa_12",
+   "floors": 2,
+   "style": "stone",
+   "roof": "gable",
+   "eave_m": 6.4,
+   "ridge_m": 9.76,
+   "tris": {
+    "Body": 2238,
+    "Roof": 640,
+    "Props": 398,
+    "total_body_roof": 2878,
+    "total_with_extras": 2878
+   },
+   "budget": null,
+   "ok": null,
+   "budget_class": "media",
+   "lod_ratios": [
+    0.612,
+    0.11
+   ],
+   "iso_rule": {
+    "history": [
+     {
+      "floors": 2,
+      "blocked": []
+     }
+    ],
+    "final_floors": 2,
+    "still_blocking": false
+   },
+   "collision": "CLA_Casa_12-colonly",
+   "footprint_check": {
+    "x": [
+     -4.97,
+     4.97
+    ],
+    "y": [
+     -4.22,
+     4.22
+    ],
+    "over_x_m": 0.22,
+    "over_y_m": 0.22
+   },
+   "footprint_ground_check": {
+    "over_x_m": 0.1,
+    "over_y_m": 0.1,
+    "below_z_m": 2.2
+   },
+   "door_local": [
+    0.0,
+    4.0,
+    0.0
+   ]
+  }
+ },
+ "presets_sheet": "docs/captures/stage20_presets.png",
+ "presets": {
+  "CLASE_01": {
+   "color": "#866E5C",
+   "emblem": "chevron",
+   "finial": "spear",
+   "props": [
+    "weapon_rack",
+    "shield_stand"
+   ]
+  },
+  "CLASE_02": {
+   "color": "#6E7480",
+   "emblem": "circle",
+   "finial": "orb",
+   "props": [
+    "lectern_book",
+    "scroll_basket"
+   ]
+  },
+  "CLASE_03": {
+   "color": "#6F765A",
+   "emblem": "triangle",
+   "finial": "arrow",
+   "props": [
+    "bow_rack",
+    "quiver_stand"
+   ]
+  },
+  "CLASE_04": {
+   "color": "#77707E",
+   "emblem": "star",
+   "finial": "star",
+   "props": [
+    "staff_stand",
+    "crystal_pedestal"
+   ]
+  },
+  "CLASE_05": {
+   "color": "#7E6A52",
+   "emblem": "square",
+   "finial": "hammer",
+   "props": [
+    "mace_stand",
+    "anvil_hammer"
+   ]
+  },
+  "CLASE_06": {
+   "color": "#6C7A68",
+   "emblem": "diamond",
+   "finial": "flame",
+   "props": [
+    "herb_table",
+    "mortar_pot"
+   ]
+  },
+  "CLASE_07": {
+   "color": "#998A6A",
+   "emblem": "crescent",
+   "finial": "crescent",
+   "props": [
+    "lute_stand",
+    "drum"
+   ]
+  },
+  "CLASE_08": {
+   "color": "#5E5A56",
+   "emblem": "dagger",
+   "finial": "pyramid",
+   "props": [
+    "dagger_table",
+    "cloak_hook"
+   ]
+  }
+ },
+ "faro_visibility": {
+  "Avenida Norte": {
+   "axis_pct": 84.8,
+   "lanes": {
+    "-2.5": {
+     "samples": 33,
+     "pct": 87.9,
+     "blocked_by": {
+      "CasaRegistro_Body": 4
+     }
+    },
+    "+0.0": {
+     "samples": 33,
+     "pct": 84.8,
+     "blocked_by": {
+      "CasaRegistro_Body": 4,
+      "FuenteMercado": 1
+     }
+    },
+    "+2.5": {
+     "samples": 33,
+     "pct": 84.8,
+     "blocked_by": {
+      "CasaRegistro_Body": 5
+     }
+    }
+   },
+   "best_lane_pct": 87.9,
+   "samples_axis": 33
+  },
+  "Avenida Sur": {
+   "axis_pct": 100.0,
+   "lanes": {
+    "-2.5": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+0.0": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+2.5": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    }
+   },
+   "best_lane_pct": 100.0,
+   "samples_axis": 33
+  },
+  "Avenida Este": {
+   "axis_pct": 84.4,
+   "lanes": {
+    "-2.5": {
+     "samples": 32,
+     "pct": 90.6,
+     "blocked_by": {
+      "Taller_Carpinteria_Roof": 3
+     }
+    },
+    "+0.0": {
+     "samples": 32,
+     "pct": 84.4,
+     "blocked_by": {
+      "Taller_Carpinteria_Body": 4,
+      "Taller_Carpinteria_Roof": 1
+     }
+    },
+    "+2.5": {
+     "samples": 32,
+     "pct": 84.4,
+     "blocked_by": {
+      "Taller_Carpinteria_Body": 5
+     }
+    }
+   },
+   "best_lane_pct": 90.6,
+   "samples_axis": 32
+  },
+  "Avenida Oeste": {
+   "axis_pct": 78.8,
+   "lanes": {
+    "-2.5": {
+     "samples": 33,
+     "pct": 75.8,
+     "blocked_by": {
+      "CLA_Casa_02_Body": 5,
+      "CLA_Casa_02_Roof": 3
+     }
+    },
+    "+0.0": {
+     "samples": 33,
+     "pct": 78.8,
+     "blocked_by": {
+      "CLA_Casa_02_Roof": 4,
+      "CLA_Casa_02_Body": 3
+     }
+    },
+    "+2.5": {
+     "samples": 33,
+     "pct": 81.8,
+     "blocked_by": {
+      "CLA_Casa_02_Body": 3,
+      "CLA_Casa_02_Roof": 3
+     }
+    }
+   },
+   "best_lane_pct": 81.8,
+   "samples_axis": 33
+  },
+  "Diagonal NE (Faro)": {
+   "axis_pct": 100.0,
+   "lanes": {
+    "-2.5": {
+     "samples": 25,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+0.0": {
+     "samples": 25,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+2.5": {
+     "samples": 25,
+     "pct": 100.0,
+     "blocked_by": {}
+    }
+   },
+   "best_lane_pct": 100.0,
+   "samples_axis": 25
+  },
+  "Diagonal NO (Santuario)": {
+   "axis_pct": 92.6,
+   "lanes": {
+    "-2.5": {
+     "samples": 27,
+     "pct": 96.3,
+     "blocked_by": {
+      "SANTUARIO_Body": 1
+     }
+    },
+    "+0.0": {
+     "samples": 27,
+     "pct": 92.6,
+     "blocked_by": {
+      "SANTUARIO_Body": 2
+     }
+    },
+    "+2.5": {
+     "samples": 27,
+     "pct": 88.9,
+     "blocked_by": {
+      "SANTUARIO_Body": 3
+     }
+    }
+   },
+   "best_lane_pct": 96.3,
+   "samples_axis": 27
+  },
+  "Diagonal SO (Obelisco)": {
+   "axis_pct": 3.4,
+   "lanes": {
+    "-2.5": {
+     "samples": 29,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+0.0": {
+     "samples": 29,
+     "pct": 3.4,
+     "blocked_by": {
+      "OBELISK_Body": 23,
+      "OBELISK_Mark_013": 1,
+      "OBELISK_Mark_033": 1,
+      "OBELISK_Mark_053": 1
+     }
+    },
+    "+2.5": {
+     "samples": 29,
+     "pct": 100.0,
+     "blocked_by": {}
+    }
+   },
+   "best_lane_pct": 100.0,
+   "samples_axis": 29
+  },
+  "Diagonal SE (Salon)": {
+   "axis_pct": 80.8,
+   "lanes": {
+    "-2.5": {
+     "samples": 26,
+     "pct": 76.9,
+     "blocked_by": {
+      "SALON_HAZANAS_Body": 5,
+      "SALON_HAZANAS_Roof": 1
+     }
+    },
+    "+0.0": {
+     "samples": 26,
+     "pct": 80.8,
+     "blocked_by": {
+      "SALON_HAZANAS_Body": 5
+     }
+    },
+    "+2.5": {
+     "samples": 26,
+     "pct": 84.6,
+     "blocked_by": {
+      "SALON_HAZANAS_Body": 4
+     }
+    }
+   },
+   "best_lane_pct": 84.6,
+   "samples_axis": 26
+  },
+  "Ronda r100": {
+   "axis_pct": 61.1,
+   "samples_axis": 36,
+   "blocked_by": {
+    "SalonClase_08_Body": 3,
+    "SalonClase_07_Body": 3,
+    "MER_Casa_01_Body": 2,
+    "SALON_HAZANAS_Body": 2
+   }
+  },
+  "Ronda r150": {
+   "axis_pct": 76.8,
+   "samples_axis": 56,
+   "blocked_by": {
+    "Banco_Body": 2,
+    "TesoreriaMuralla_Body": 2,
+    "Taller_GranForja_Body": 1,
+    "CasaReposicion_Prop_LANTERN_Shard_00": 1
+   }
+  }
+ },
+ "faro_visibility_note": "muestras cada 4 m (radiales, r 62-190) y cada 6 grados (rondas), solo sobre calle o plaza transitable (fuera de parcelas y pads); ojo a 1.7 m; objetivo: cima del cristal",
+ "export": {
+  "file": "export/godot/concordia_clases.glb",
+  "mb": 6.84,
+  "nodes": 395,
+  "meshes": 189,
+  "tris": 103145,
+  "materials": 32,
+  "images": 33,
+  "images_external": 33,
+  "colliders": 21,
+  "navmesh": 0,
+  "occluders": 0,
+  "empties": 88
+ }
+}

@@ -1,6 +1,6 @@
 CONCORDIA - Edificios y materiales nuevos (kit, Portal y landmarks)
 ==================================================================
-Actualizado en la etapa 19 (concordia_v19.blend). Auditoria automatica: tools/blender/audit_materials.py ->
+Actualizado en la etapa 20 (concordia_v20.blend). Auditoria automatica: tools/blender/audit_materials.py ->
 docs/reports/stage17_materials.json.
 
 1. Regla de aprobacion de materiales nuevos
@@ -140,3 +140,18 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
   - Gran Forja: edificio 16 x 16 + patio de fundicion 10 x 16 en el extremo exterior de la parcela (26 x 16).
   - Curtiduria: casa 16 x 7 al fondo y patio delante con las 4 tinas (la puerta mira a la camara).
   - Sastreria: 2 plantas = planta baja cerrada + planta alta abierta de telares (balcones y telas en los 4 lados).
+
+10. Clases (etapa 20): plantilla de Salon de clase y presets
+------------------------------------------------------------
+  - tools/blender/stage20_clases.py: N_CLASES (parametro, <= 8 parcelas) y CLASS_PRESETS (CLASE_01..CLASE_08, nombres
+    genericos para renombrar). Cada preset: color tierra apagado del estandarte (saturacion <= 0.35), emblema
+    (textura generada, placeholder), remate sobre el fronton y 2 modelos de props de clase.
+    Para otro numero de clases: python build_stage20.py -- N.
+  - Estandartes: objetos aparte SalonClase_NN_Banner_Front / _Back (2.5 x 6 m, UV 0..1) con MAT_Banner_CLASE_NN y su
+    textura textures/concordia/MAT_Banner/concordia_banner_clase_NN_albedo.png (512 x 1024, +0.33 MB de VRAM cada una).
+    El trasero se lee desde CAM_Iso cuando la fachada mira al otro lado.
+  - Slots: MARKER_ClassProp_Slot_<salon>_<slot> (3 por salon, sobre peanas a la entrada); los slots 01 y 02 llevan los
+    2 props del preset y el 03 queda libre.
+  - MAT_Straw (nuevo): paja de los maniquies #A69472 (saturacion 0.31).
+  - Plaza de las Armas: DUMMY_Straw_A/B/C (156-186 triangulos), 12 maniquies con MARKER_DamageNumber_NN en el pecho,
+    10 blancos, 8 postes de prueba, valla baja con huecos en la avenida y delante de los salones 01 y 02.

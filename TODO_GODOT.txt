@@ -1,6 +1,6 @@
 CONCORDIA - TODO en Godot 4 (lo que el glTF no guarda)
 ======================================================
-Se actualiza en cada etapa. Ultima: etapa 19. [ ] = pendiente en Godot; (E#) = etapa en que aparece.
+Se actualiza en cada etapa. Ultima: etapa 20. [ ] = pendiente en Godot; (E#) = etapa en que aparece.
 
 Importacion general
 [ ] (E11) Los .glb usan texturas EXTERNAS con ruta relativa "../../textures/concordia/...": copiar la carpeta textures/
@@ -85,3 +85,9 @@ Oficios (E19)
 [ ] Hornos: humo en la chimenea y brasas en la boca del horno.
 [ ] Pescadores: las barcas (Gremio_Pescadores_Prop_Boat_01/02) con balanceo leve en el agua.
 [ ] Gremio de Cazadores: colocar cuando tenga parcela (escena aparte concordia_gremio_cazadores_sin_parcela.glb).
+
+Clases (E20)
+[ ] Estandartes (SalonClase_NN_Banner_*): cambiar la textura por clase (material_override con el emblema definitivo,
+    UV 0..1); ondulacion leve con un shader de vertices (viento).
+[ ] MARKER_ClassProp_Slot_<salon>_<slot>: instanciar ahi los objetos de clase (el slot 03 esta libre).
+[ ] DUMMY_Straw_NN: estaticos; MARKER_DamageNumber_NN es el punto de los numeros de dano (Label3D / particulas).
