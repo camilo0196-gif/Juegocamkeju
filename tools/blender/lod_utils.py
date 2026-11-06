@@ -126,3 +126,114 @@ def flat_lod2(name, src_objs, col, parent, target_tris, voxel=0.35, mat_name=Non
     o["lod"] = 2
     o["lod2_method"] = f"remesh voxel {voxel} m + decimate; material plano {mat.name}"
     return o, sum(len(p.vertices) - 2 for p in o.data.polygons), mat.name, mat["note"]
+
+
+# ---------------------------------------------------------------------------
+# LOD2 por volumetria (massing): para edificios con cubiertas abiertas de una cara (el Remesh por voxeles no las
+# cierra y el diezmado las borra). Volumenes cerrados simples con las cotas reales del edificio.
+# ---------------------------------------------------------------------------
+def _gable(mb, x0, x1, y_e, z_e, z_r, mat, axis="x"):
+    """Prisma de cubierta a dos aguas cerrado: alero a +-y_e (z_e), cumbrera z_r sobre y = 0 (axis x)."""
+    if axis == "x":
+        poly = [(-y_e, z_e), (y_e, z_e), (0.0, z_r)]
+        a = [(x0, y, z) for y, z in poly]
+        b = [(x1, y, z) for y, z in poly]
+    else:
+        poly = [(-y_e, z_e), (y_e, z_e), (0.0, z_r)]
+        a = [(y, x0, z) for y, z in poly]
+        b = [(y, x1, z) for y, z in poly]
+    mb.face(a, mat, nrm=(-1, 0, 0) if axis == "x" else (0, -1, 0))
+    mb.face(b, mat, nrm=(1, 0, 0) if axis == "x" else (0, 1, 0))
+    for i in range(3):
+        j = (i + 1) % 3
+        mid = [(a[i][k] + a[j][k]) / 2 for k in range(3)]
+        n = (0, mid[1], mid[2] - (z_e + z_r) / 2) if axis == "x" else (mid[0], 0, mid[2] - (z_e + z_r) / 2)
+        mb.face([a[i], a[j], b[j], b[i]], mat, nrm=n)
+
+
+def _cone(mb, cx, cy, r, z0, z1, n, mat):
+    pts = [(cx + r * __import__("math").cos(2 * 3.14159265 * i / n), cy + r * __import__("math").sin(2 * 3.14159265 * i / n),
+            z0) for i in range(n)]
+    for i in range(n):
+        j = (i + 1) % n
+        mb.face([pts[i], pts[j], (cx, cy, z1)], mat, nrm=(pts[i][0] + pts[j][0] - 2 * cx, pts[i][1] + pts[j][1] - 2 * cy, r))
+    mb.face(pts[::-1], mat, nrm=(0, 0, -1))
+
+
+def massing(kind, mb, m="MAT_LOD2_TMP"):
+    if kind == "SANTUARIO":
+        mb.box((-7.5, -5.4, 0.0), (7.5, 5.4, 9.6), m)
+        _gable(mb, -7.2, 7.2, 5.05, 9.0, 14.0, m)
+        for x in (-7.6, 7.6):
+            _gable(mb, x - 0.3, x + 0.3, 5.4, 9.6, 14.35, m)
+        mb.box((4.0, -0.5, 13.0), (5.0, 0.5, 16.6), m)
+        _cone(mb, 4.5, 0.0, 0.7, 16.6, 19.5, 6, m)
+        for x in (-7.2, -4.5, -1.5, 1.5, 4.5, 7.2):
+            for y in (-5.7, 5.7):
+                mb.box((x - 0.25, y - 0.3, 0.0), (x + 0.25, y + 0.3, 9.2), m)
+                _cone(mb, x, y, 0.25, 9.2, 11.3, 4, m)
+    elif kind == "SALON_HAZANAS":
+        mb.box((-20.2, -7.1, 0.0), (20.2, 7.1, 8.0), m)
+        _gable(mb, -20.2, 20.2, 7.95, 7.16, 15.0, m)
+        mb.box((-3.6, 7.1, 0.0), (3.6, 8.0, 10.3), m)
+        _gable(mb, 5.07, 8.0, 3.6, 10.0, 14.29, m, axis="y")
+        for sx in (-1, 1):
+            a, b = sorted((sx * 3.6, sx * 4.5))
+            mb.box((a, 7.1, 0.0), (b, 8.0, 12.7), m)
+            _cone(mb, (a + b) / 2, 7.55, 0.6, 12.7, 14.0, 4, m)
+        mb.box((-1.25, -1.25, 13.6), (1.25, 1.25, 16.6), m)
+        _cone(mb, 0.0, 0.0, 1.45, 16.6, 18.0, 6, m)
+        for x in (-15.0, -9.0, -3.0, 3.0, 9.0, 15.0, -19.6, 19.6):
+            for y in (-7.55, 7.55):
+                if y > 0 and abs(x) == 3.0:
+                    continue
+                mb.box((x - 0.6, y - 0.45, 0.0), (x + 0.6, y + 0.45, 6.3), m)
+    elif kind == "TesoreriaMuralla":
+        mb.box((-14.0, -9.0, 0.0), (14.0, 5.4, 9.3), m)
+        mb.box((-14.0, 5.4, 4.8), (14.0, 8.7, 9.3), m)
+        for k in range(8):
+            u = -14.0 + 0.6 + (28.0 - 1.2) * k / 7
+            mb.box((u - 0.5, 7.9, 0.0), (u + 0.5, 8.9, 4.8), m)
+        for x in [-13.4 + 1.2 * i for i in range(23)]:
+            mb.box((x - 0.3, 7.9, 9.3), (x + 0.3, 8.7, 10.1), m)
+        mb.box((-14.0, -9.0, 9.3), (-9.6, -4.6, 18.1), m)
+    elif kind == "GranSubasta":
+        _gable(mb, -20.6, 20.6, 8.5, 4.57, 10.4, m)
+        import math as _m
+        for k in range(11):
+            x = -19.7 + 39.4 * k / 10
+            for y in (-7.7, 7.7):
+                mb.box((x - 0.2, y - 0.2, 0.0), (x + 0.2, y + 0.2, 4.8), m)
+        mb.box((-19.9, -7.85, 3.35), (19.9, -3.75, 3.5), m)
+        mb.box((-19.9, 3.75, 3.35), (19.9, 7.85, 3.5), m)
+        mb.box((-2.5, -1.5, 0.0), (2.5, 1.5, 0.8), m)
+        _ = _m
+    else:
+        raise KeyError(kind)
+
+
+def massing_lod2(kind, name, src_objs, col, parent):
+    """LOD2 = volumetria cerrada (massing) con un material plano (color medio del LOD0)."""
+    import bld_kit as K
+    old = bpy.data.objects.get(name)
+    if old is not None:
+        me = old.data
+        bpy.data.objects.remove(old)
+        if me.users == 0:
+            bpy.data.meshes.remove(me)
+    col_lin = average_color(src_objs)
+    mat = flat_material(f"MAT_LOD2_{kind}", col_lin)
+    mb = K.MB()
+    massing(kind, mb, mat.name)
+    mb.finish()
+    me = bpy.data.meshes.new(name)
+    mb.bm.to_mesh(me)
+    mb.bm.free()
+    me.materials.append(mat)
+    o = bpy.data.objects.new(name, me)
+    col.objects.link(o)
+    o.parent = parent
+    o.hide_render = True
+    o["lod"] = 2
+    o["lod2_method"] = f"volumetria cerrada (massing) con material plano {mat.name}"
+    return o, sum(len(p.vertices) - 2 for p in o.data.polygons), mat.name, mat["note"]

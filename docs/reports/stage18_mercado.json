@@ -9,7 +9,7 @@
    },
    "new_LOD2": [
     "SANTUARIO_Body_LOD2",
-    900
+    274
    ],
    "material": "MAT_LOD2_SANTUARIO",
    "note": "LOD2: color plano = media del LOD0 (sRGB #C0BBB4)"
@@ -21,7 +21,7 @@
    },
    "new_LOD2": [
     "SALON_HAZANAS_Body_LOD2",
-    1682
+    266
    ],
    "material": "MAT_LOD2_SALON_HAZANAS",
    "note": "LOD2: color plano = media del LOD0 (sRGB #91877E)"
@@ -49,7 +49,7 @@
   "ok": true,
   "lods": {
    "LOD1": 3483,
-   "LOD2": 1044,
+   "LOD2": 408,
    "LOD2_material": "LOD2: color plano = media del LOD0 (sRGB #BAB1A2)"
   },
   "dims": {
@@ -201,7 +201,7 @@
   "ok": true,
   "lods": {
    "LOD1": 2574,
-   "LOD2": 1342,
+   "LOD2": 308,
    "LOD2_material": "LOD2: color plano = media del LOD0 (sRGB #79695A)"
   },
   "dims": {
@@ -1218,10 +1218,10 @@
  "faro_visibility_note": "muestras cada 4 m (radiales, r 62-190) y cada 6 grados (rondas), solo sobre calle o plaza transitable (fuera de parcelas y pads); ojo a 1.7 m; objetivo: cima del cristal",
  "export": {
   "file": "export/godot/concordia_mercado.glb",
-  "mb": 6.95,
+  "mb": 6.84,
   "nodes": 260,
   "meshes": 130,
-  "tris": 108770,
+  "tris": 107180,
   "materials": 18,
   "images": 28,
   "images_external": 28,

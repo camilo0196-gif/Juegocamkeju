@@ -50,6 +50,9 @@ def main():
             o.hide_render = True
     cam_iso = bpy.data.objects[C.CAM_ISO_NAME]
     if want("mercado_iso"):
+        beam = bpy.data.objects.get("FARO_Beam")
+        if beam:
+            beam.hide_render = True             # el haz de 80 m cruza todo el encuadre: solo en esta captura
         cam = K.iso_at(cam_iso, (0.0, 128.0, 8.0), 150.0)
         cam.data.clip_end = 5000
         K.render(scene, cam, P("mercado_iso"))
@@ -60,7 +63,10 @@ def main():
             labs.append((lab, tuple(Lf(0, 0, 8))))
         labs.append(("Fuente", tuple(bpy.data.objects["FuenteMercado"].matrix_world.translation)))
         labs.append(("Provisiones", tuple(bpy.data.objects["PuestoProvisiones_04"].matrix_world.translation)))
-        K.annotate(scene, cam, P("mercado_iso"), "Distrito del Mercado - CAM_Iso ortho 150", labs)
+        K.annotate(scene, cam, P("mercado_iso"), "Distrito del Mercado - CAM_Iso ortho 150 (haz del Faro oculto en esta "
+                   "captura)", labs)
+        if beam:
+            beam.hide_render = False
     if want("tesoreria"):
         _, Lf = frame_of("TesoreriaMuralla")
         cam = K.new_cam("TMP_t", lens=24)
@@ -72,7 +78,7 @@ def main():
     if want("posada"):
         _, Lf = frame_of("Posada")
         cam = K.new_cam("TMP_p", lens=20)
-        K.look_at(cam, Lf(9.0, 21.0, 1.7), Lf(-1.0, 4.0, 6.5))
+        K.look_at(cam, Lf(-12.0, 13.5, 2.0), Lf(1.0, 5.0, 5.5))       # desde la avenida, al NE de la fachada
         K.render(scene, cam, P("posada"))
         K.annotate(scene, cam, P("posada"), "Posada de Concordia (3 plantas): entramado, balcones, aleros de 0.9 m, "
                    "chimenea, letrero con vela y Tablon de Grupos",
@@ -80,7 +86,7 @@ def main():
     if want("subasta"):
         _, Lf = frame_of("GranSubasta")
         cam = K.new_cam("TMP_s", lens=20)
-        K.look_at(cam, Lf(12.0, 15.0, 4.5), Lf(0.0, 0.0, 2.5))
+        K.look_at(cam, Lf(25.5, 2.5, 3.2), Lf(0.0, 0.0, 2.2))         # por la nave desde el hastial
         K.render(scene, cam, P("subasta"))
         K.annotate(scene, cam, P("subasta"), "Gran Subasta: halle de madera abierta, galerias a +3.5 m, tarima 5 x 3 con "
                    "campana de 1.2 m y 6 tableros de precios", [])

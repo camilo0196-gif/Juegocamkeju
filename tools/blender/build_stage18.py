@@ -69,13 +69,17 @@ def collider(mb, name, col, root):
     return o
 
 
-def custom_lods(body, roof, col, root, voxel=0.35):
+def custom_lods(body, roof, col, root, voxel=0.35, massing=None):
     """LOD1: diezmado 50 % de cuerpo y techo; LOD2: envolvente de color plano (pendiente D)."""
     out = {"LOD1": P13.lods(body, col, (("LOD1", 0.5),))["LOD1"]}
     if roof is not None:
         out["LOD1"] += P13.lods(roof, col, (("LOD1", 0.5),))["LOD1"]
     src = [body] + ([roof] if roof is not None else [])
-    o, n, mat, note = LU.flat_lod2(f"{body.name}_LOD2", src, col, root, int(0.15 * sum(tris(s) for s in src)), voxel=voxel)
+    if massing:
+        o, n, mat, note = LU.massing_lod2(massing, f"{body.name}_LOD2", src, col, root)
+    else:
+        o, n, mat, note = LU.flat_lod2(f"{body.name}_LOD2", src, col, root, int(0.15 * sum(tris(s) for s in src)),
+                                       voxel=voxel)
     out["LOD2"], out["LOD2_material"] = n, note
     for s in src:
         for suf in ("_LOD1",):
@@ -125,7 +129,7 @@ def build_tesoreria(col, pcol, st):
     bmb, rmb, info = M.tesoreria_meshes(rng)
     body = B16.mesh_obj(bmb, f"{name}_Body", col, root)
     roof = B16.mesh_obj(rmb, f"{name}_Roof", col, root)
-    lods = custom_lods(body, roof, col, root, voxel=0.35)
+    lods = custom_lods(body, roof, col, root, massing="TesoreriaMuralla")
     T = M.TES
     dm = B16.door_marker(name, col, root, info["door_local"])
     c, sz = info["interior"]["center"], info["interior"]["size"]
@@ -266,7 +270,7 @@ def build_subasta(col, pcol, st):
     bmb, rmb, cmb, info = M.subasta_meshes(rng)
     body = B16.mesh_obj(bmb, f"{name}_Body", col, root)
     roof = B16.mesh_obj(rmb, f"{name}_Roof", col, root)
-    lods = custom_lods(body, roof, col, root, voxel=0.4)
+    lods = custom_lods(body, roof, col, root, massing="GranSubasta")
     colo = collider(cmb, f"{name}-colonly", col, root)
     t = {"Body": tris(body), "Roof": tris(roof)}
     t["total"] = t["Body"] + t["Roof"]
@@ -474,7 +478,10 @@ def landmark_lod2_fix(st):
         if r is not None:
             bpy.data.objects.remove(r)
         n0 = sum(tris(s) for s in src)
-        o, n, mat, note = LU.flat_lod2(f"{parts[0]}_LOD2", src, col, bpy.data.objects[root], int(0.15 * n0), voxel=vox)
+        if root == "FARO":                       # volumenes cerrados: la envolvente por voxeles funciona
+            o, n, mat, note = LU.flat_lod2(f"{parts[0]}_LOD2", src, col, bpy.data.objects[root], int(0.15 * n0), voxel=vox)
+        else:                                    # cubiertas de una cara: volumetria
+            o, n, mat, note = LU.massing_lod2(root, f"{parts[0]}_LOD2", src, col, bpy.data.objects[root])
         out[root] = {"old_LOD2": old, "new_LOD2": [o.name, n], "material": mat, "note": note}
     st["lod2_fix_landmarks"] = out
     import stage11_godot as G
