@@ -181,33 +181,33 @@
  },
  "Taller_GranForja": {
   "marker": "MARKER_Bld_Taller_GranForja",
-  "floors": 2,
+  "floors": 1,
   "style": "stone",
   "roof": "gable",
-  "eave_m": 6.4,
-  "ridge_m": 13.11,
+  "eave_m": 3.2,
+  "ridge_m": 9.91,
   "tris": {
-   "Body": 3160,
+   "Body": 1586,
    "Roof": 1074,
    "Props": 562,
-   "total_body_roof": 4234,
-   "total_with_extras": 4626
+   "total_body_roof": 2660,
+   "total_with_extras": 3052
   },
   "budget": 8000,
   "ok": true,
   "budget_class": "media",
   "lod_ratios": [
-   0.5,
-   0.105
+   0.48,
+   0.122
   ],
   "iso_rule": {
    "history": [
     {
-     "floors": 2,
+     "floors": 1,
      "blocked": []
     }
    ],
-   "final_floors": 2,
+   "final_floors": 1,
    "still_blocking": false
   },
   "collision": "Taller_GranForja-colonly",
@@ -1107,10 +1107,10 @@
  "faro_visibility_note": "muestras cada 4 m (radiales, r 62-190) y cada 6 grados (rondas), solo sobre calle o plaza transitable (fuera de parcelas y pads); ojo a 1.7 m; objetivo: cima del cristal",
  "export": {
   "file": "export/godot/concordia_oficios.glb",
-  "mb": 4.48,
+  "mb": 4.33,
   "nodes": 222,
   "meshes": 130,
-  "tris": 67337,
+  "tris": 64803,
   "materials": 29,
   "images": 37,
   "images_external": 37,

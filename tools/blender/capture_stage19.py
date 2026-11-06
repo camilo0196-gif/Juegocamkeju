@@ -21,7 +21,7 @@ ONLY = set(sys.argv[sys.argv.index("--") + 1:]) if "--" in sys.argv else set()
 SHOTS = [  # (raiz, ortho, alto del centro, titulo)
     ("Gremio_Mineros", 34, 5, "Gremio de Mineros: bocamina, vagonetas en carriles, pico dorado de 3 m y castillete en el tejado"),
     ("Gremio_Herbolarios", 32, 2, "Gremio de Herbolarios: invernadero de vidrio (alpha 0.35) y madera, terrazas de hierbas"),
-    ("Gremio_Pescadores", 40, 3, "Gremio de Pescadores: redes en bastidores y 2 barcas de 4 m en el muelle del Cauce"),
+    ("Gremio_Pescadores", 46, 3, "Gremio de Pescadores: redes en bastidores y 2 barcas de 4 m en el muelle del Cauce"),
     ("Taller_GranForja", 44, 6, "La Gran Forja: chimenea de 14 m, fundicion al aire libre con crisol, 3 yunques, brasas"),
     ("Taller_Curtiduria", 30, 3, "Curtiduria: 4 tinas de curtido y bastidores con pieles"),
     ("Taller_Sastreria", 30, 4, "Sastreria: planta alta abierta con telares y telas colgando de los balcones"),
@@ -63,18 +63,33 @@ def main():
         labs = [(n.split("_")[-1], tuple(bpy.data.objects[n].matrix_world @ Vector((0, 0, 6)))) for n, *_ in SHOTS
                 if n != "Gremio_Cazadores"]
         K.annotate(scene, cam, P("oficios_iso"), "Distrito Este (Oficios) - CAM_Iso ortho 150 (haz del Faro oculto)", labs)
+    district = [n for n, *_ in SHOTS if n != "Gremio_Cazadores"] + ["OFI_Casa_01", "OFI_Casa_02"]
+
+    def isolate(keep):
+        """En las vistas de un edificio se ocultan los demas edificios del distrito (no el terreno)."""
+        for n in district:
+            ro = bpy.data.objects.get(n)
+            if ro is None:
+                continue
+            for o in [ro] + list(ro.children_recursive):
+                if o.name.endswith(("-colonly", "_LOD1", "_LOD2", "_InteriorVolume")):
+                    continue
+                o.hide_render = n != keep
     for name, ortho, zc, title in SHOTS:
         key = name.lower()
         if not want(key):
             continue
+        isolate(name)
         r = bpy.data.objects[name]
         c = r.matrix_world.translation
         if name == "Gremio_Cazadores":
             c = r.matrix_world @ Vector((0, -6.0, 0))
+        if name == "Gremio_Pescadores":
+            c = (c + bpy.data.objects["MARKER_Mooring_02"].matrix_world.translation) / 2
         cam = K.iso_at(cam_iso, (c.x, c.y, c.z + zc), ortho)
         cam.data.clip_end = 5000
         K.render(scene, cam, P(key))
-        K.annotate(scene, cam, P(key), title, [])
+        K.annotate(scene, cam, P(key), title + " (vecinos ocultos)", [])
         bpy.data.objects.remove(cam)
 
 

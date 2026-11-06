@@ -211,7 +211,7 @@ def build_all(col, pcol, kitcol, st):
     m = mk(name)
     ex = m.matrix_world.to_3x3() @ Vector((1, 0, 0))
     sgn = 1 if ex.dot(m.matrix_world.translation.normalized()) > 0 else -1
-    root, objs, rep = kit(name, 2, col, pcol, footprint=(16.0, 16.0), loc_local=(-sgn * 5.0, 0, 0), tipo_techo="gable",
+    root, objs, rep = kit(name, 1, col, pcol, footprint=(16.0, 16.0), loc_local=(-sgn * 5.0, 0, 0), tipo_techo="gable",
                           estilo="stone", module_w=4.0, opts={"no_buttress": True, "side_detail": {"back": 1}, "roof_seg": 4.5})
     eb = K.MB()
     O.chimney_tall(eb, sgn * 6.9, -4.5, 0.0, 14.0)
