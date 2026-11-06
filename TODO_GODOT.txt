@@ -1,6 +1,6 @@
 CONCORDIA - TODO en Godot 4 (lo que el glTF no guarda)
 ======================================================
-Se actualiza en cada etapa. Ultima: etapa 17. [ ] = pendiente en Godot; (E#) = etapa en que aparece.
+Se actualiza en cada etapa. Ultima: etapa 18. [ ] = pendiente en Godot; (E#) = etapa en que aparece.
 
 Importacion general
 [ ] (E11) Los .glb usan texturas EXTERNAS con ruta relativa "../../textures/concordia/...": copiar la carpeta textures/
@@ -58,3 +58,17 @@ Cauce y molino (E07)
 Kit de edificios (E12, E17)
 [ ] Regla de alturas aplicada en Blender (fit_iso_height). En Godot, carriles de NPC: si se crean, exportarlos
     tambien como curvas NPC_Lane_* para poder repetir la prueba en Blender.
+
+Mercado (E18)
+[ ] Posada_TablonGrupos: interactive = true -> Area3D + UI del tablon de grupos.
+[ ] Letrero de la Posada: la llama de la vela (MAT_Window_Warm, 1.0) con parpadeo suave y OmniLight3D calida pequena.
+[ ] Chimenea de la Posada: particulas de humo.
+[ ] Gran Subasta: la campana (GranSubasta_Body, malla de la tarima) -> si debe sonar/moverse, separarla como nodo
+    propio; los 6 tableros de precios admiten texto dinamico (Label3D delante de cada tablero).
+[ ] Tesoreria: manecillas del reloj (parte de TesoreriaMuralla_Body; si se quieren animar, separarlas); bocas de los
+    tubos (MAT_Pipe_Light_Core 1.5) y Path3D de la curva hacia el Faro.
+[ ] Fuente del Mercado: agua de la pila y chorros (MAT_Water) con desplazamiento de UV o shader; el rebosadero corre
+    hacia CAU_SpringHead (sentido: de la fuente al manantial).
+[ ] Puestos (PuestoProvisiones_01..14): comparten 5 mallas (STALL_A..E) -> se pueden pasar a MultiMeshInstance3D.
+    Toldos: balanceo leve opcional.
+[ ] LOD2 de Santuario, Salon, Faro, Tesoreria y Gran Subasta: un solo objeto *_Body_LOD2 que sustituye a cuerpo + cubierta.

@@ -23,6 +23,7 @@ WALL_T = 0.45
 EAVE = 0.4
 ROOF_PITCH = 40.0
 TILE_COURSE = 0.42           # paso de las hiladas de teja sobre la pendiente
+TILE_SEG = 3.0               # largo de cada tramo de hilada (se puede subir en edificios grandes para el presupuesto)
 
 M_STONE = "MAT_Limestone_Worn"
 M_WOOD = "MAT_Wood_Dark"
@@ -502,7 +503,7 @@ def _course_slope(mb, x0, x1, y_eave, y_ridge, z_eave, z_ridge, rng, toneB=0.18,
     """Una vertiente de tejas por hiladas (tablas solapadas) entre el alero y la cumbrera, con 2 tonos."""
     L = math.hypot(y_ridge - y_eave, z_ridge - z_eave)
     n = max(1, int(L / TILE_COURSE)) if detail == 0 else max(1, int(L / (TILE_COURSE * 3)))
-    seg = 3.0 if detail == 0 else (x1 - x0)
+    seg = TILE_SEG if detail == 0 else (x1 - x0)
     nx = max(1, int(round((x1 - x0) / seg)))
     for i in range(n):
         t0, t1 = i / n, min(1.0, (i + 1) / n + 0.06)

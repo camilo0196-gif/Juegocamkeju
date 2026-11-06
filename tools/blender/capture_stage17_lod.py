@@ -18,13 +18,18 @@ import concordia_const as C  # noqa: E402
 import capture_stage02 as K  # noqa: E402
 
 REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
-BLEND = os.path.join(REPO, "blender", f"{C.BLEND_BASENAME}_v17.blend")
+BLEND = os.environ.get("LOD_BLEND") or os.path.join(REPO, "blender", f"{C.BLEND_BASENAME}_v17.blend")
+TAG = os.environ.get("LOD_TAG", "stage17")
 SP = os.environ.get("LOD_TMP", os.path.join(REPO, "docs", "captures", "_lod_tmp"))
 BUILDINGS = [("TEST_Casa_12x9", ("TEST_Casa_12x9_Body", "TEST_Casa_12x9_Roof")),
              ("SANTUARIO", ("SANTUARIO_Body", "SANTUARIO_Roof")),
              ("SALON_HAZANAS", ("SALON_HAZANAS_Body", "SALON_HAZANAS_Roof")),
              ("FARO", ("FARO_Body",)), ("OBELISK", ("OBELISK_Body",)), ("PORTAL_Arch", ("PORTAL_Arch",))]
 SCALES = (45.0, 120.0)
+if os.environ.get("LOD_SET"):
+    BUILDINGS = [b for b in BUILDINGS + [("TesoreriaMuralla", ("TesoreriaMuralla_Body", "TesoreriaMuralla_Roof")),
+                                         ("GranSubasta", ("GranSubasta_Body", "GranSubasta_Roof"))]
+                 if b[0] in os.environ["LOD_SET"].split(",")]
 
 
 def show(names, lod):
@@ -113,9 +118,10 @@ def main():
     for t in tiles:
         sheet.paste(t, (0, y))
         y += t.height
-    out = os.path.join(REPO, "docs", "captures", "stage17_lod2_test.png")
+    out = os.path.join(REPO, "docs", "captures", f"{TAG}_lod2_test.png")
+    sheet.thumbnail((2400, 2400))
     sheet.save(out)
-    with open(os.path.join(REPO, "docs", "reports", "stage17_lod2_test.json"), "w") as fh:
+    with open(os.path.join(REPO, "docs", "reports", f"{TAG}_lod2_test.json"), "w") as fh:
         json.dump(res, fh, indent=1)
     print(json.dumps(res))
 

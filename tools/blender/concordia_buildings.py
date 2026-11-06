@@ -121,9 +121,18 @@ def iso_cam_back():
     return -d.normalized()
 
 
-def iso_targets(exclude_root=None, lane_step=2.0, h=1.0):
+def iso_targets(exclude_root=None, lane_step=2.0, h=1.0, facing_min=-0.05):
     """Puntos que ningun edificio debe tapar desde CAM_Iso: puertas (MARKER_*_Door y el frente de cada
-    MARKER_Bld_* aun sin construir) y carriles de NPC (curvas NPC_Lane_*, una muestra cada lane_step m), a h m."""
+    MARKER_Bld_* aun sin construir) y carriles de NPC (curvas NPC_Lane_*, una muestra cada lane_step m), a h m.
+    Solo cuentan las puertas que se pueden ver desde la camara: las que miran hacia ella o de lado (+Y . hacia la
+    camara >= facing_min); una puerta de espaldas a la camara la tapa siempre su propio edificio."""
+    back = iso_cam_back()
+    bxy = Vector((back.x, back.y, 0)).normalized()
+
+    def faces_cam(o):
+        d = o.matrix_world.to_3x3() @ Vector((0, 1, 0))
+        d.z = 0
+        return d.length < 1e-6 or d.normalized().dot(bxy) >= facing_min
     pts = []
     own = set()
     if exclude_root is not None:
@@ -133,9 +142,15 @@ def iso_targets(exclude_root=None, lane_step=2.0, h=1.0):
         if o.name in own:
             continue
         if o.type == "EMPTY" and o.name.startswith("MARKER_") and o.name.endswith("_Door"):
+            if not faces_cam(o):
+                continue
             pts.append((o.name, o.matrix_world.translation + Vector((0, 0, h))))
         elif o.type == "EMPTY" and o.name.startswith("MARKER_Bld_") and "footprint_d" in o:
             if any(c.name.startswith("MARKER_") and c.name.endswith("_Door") for c in o.children_recursive):
+                continue
+            if any(b.get("marker") == o.name for b in bpy.data.objects if b.get("building") or b.get("landmark")):
+                continue                                  # ya construido (sin puerta de interior)
+            if not faces_cam(o):
                 continue
             mw = o.matrix_world
             p = mw @ Vector((0, float(o["footprint_d"]) / 2 + 0.5, 0))
@@ -205,11 +220,11 @@ def facades(W, D, t):
             ("right", D - 2 * t, (W / 2 - t / 2, 0.0), -math.pi / 2), ("left", D - 2 * t, (-W / 2 + t / 2, 0.0), math.pi / 2)]
 
 
-def plan_modules(W, D, floors, style, rng, door_index=None, use="house"):
+def plan_modules(W, D, floors, style, rng, door_index=None, use="house", module_w=None):
     """Decide tipo y variante de cada modulo (mismo plan para LOD0/1/2)."""
     plan = []
     for side, length, c, rz in facades(W, D, K.WALL_T):
-        n = max(1, int(round(length / K.MODULE_W)))
+        n = max(1, int(round(length / (module_w or K.MODULE_W))))
         for f in range(floors):
             for i in range(n):
                 if side == "front" and f == 0:
@@ -240,8 +255,13 @@ def plan_modules(W, D, floors, style, rng, door_index=None, use="house"):
     return plan
 
 
-def build_meshes(W, D, floors, roof_type, style, seed_int, plan, detail, use="house", balcony_ok=True):
+def build_meshes(W, D, floors, roof_type, style, seed_int, plan, detail, use="house", balcony_ok=True, opts=None):
+    """opts (opcional): side_detail {lado: detalle minimo en LOD0}, roof_seg (m por tramo de teja), eave (alero),
+    n_balconies (balcones en la fachada), wall_mat (material de los muros)."""
+    opts = opts or {}
     rng = random.Random(seed_int * 7 + 1)            # mismas decisiones en todos los LODs
+    eave = opts.get("eave", K.EAVE)
+    wall_mat = opts.get("wall_mat", K.M_STONE)
     body, roof = K.MB(), K.MB()
     t = K.WALL_T
     door_local = None
@@ -255,9 +275,10 @@ def build_meshes(W, D, floors, roof_type, style, seed_int, plan, detail, use="ho
             mrng = random.Random(stable(seed_int, side, m["floor"], m["i"]))
             body.push(Matrix.Translation((cx, cy, z0)) @ Matrix.Rotation(rz, 4, "Z") @ Matrix.Translation((x, 0, 0)))
             timber_floor = style == "timber" and m["floor"] >= 1 or style == "guild" and m["floor"] == floors - 1 >= 1
-            K.wall(body, m["kind"], w=mw, variant=m["variant"], rng=mrng, ground=m["floor"] == 0, detail=detail)
-            if timber_floor and detail < 2:
-                K.timber_overlay(body, mw, K.FLOOR_H, t / 2, K.opening_of(m["kind"], mw), mrng, detail)
+            dd = max(detail, opts.get("side_detail", {}).get(side, 0))
+            K.wall(body, m["kind"], w=mw, variant=m["variant"], rng=mrng, ground=m["floor"] == 0, detail=dd, mat=wall_mat)
+            if timber_floor and dd < 2:
+                K.timber_overlay(body, mw, K.FLOOR_H, t / 2, K.opening_of(m["kind"], mw), mrng, dd)
             body.pop()
             if m["kind"] == "Door" and side == "front":
                 door_local = (x, D / 2, 0.0)
@@ -266,7 +287,7 @@ def build_meshes(W, D, floors, roof_type, style, seed_int, plan, detail, use="ho
     if detail < 2:
         for f in range(1, floors + 1):
             for side, length, (cx, cy), rz in facades(W, D, t):
-                L = W + 0.44 if side in ("front", "back") else D
+                L = W + 0.40 if side in ("front", "back") else D
                 body.push(Matrix.Translation((cx, cy, f * K.FLOOR_H)) @ Matrix.Rotation(rz, 4, "Z"))
                 K.floor_edge(body, L, t / 2, "timber" if style == "timber" and f > 1 else "stone")
                 body.pop()
@@ -277,16 +298,17 @@ def build_meshes(W, D, floors, roof_type, style, seed_int, plan, detail, use="ho
             K.corner_post(body, top, "timber" if style == "timber" else "stone", random.Random(seed_int + sx * 3 + sy))
             body.pop()
     # balcon y contrafuertes
-    if detail < 2 and balcony_ok and floors >= 2 and style in ("timber", "guild") and rng.random() < 0.65:
-        cands = [m for m in plan if m["side"] == "front" and m["floor"] == 1 and m["kind"] in ("Window", "Shutter")]
-        if cands:
-            m = rng.choice(cands)
+    nb = opts.get("n_balconies")
+    if detail < 2 and balcony_ok and floors >= 2 and style in ("timber", "guild") and (nb or rng.random() < 0.65):
+        cands = [m for m in plan if m["side"] == "front" and m["floor"] >= 1 and m["kind"] in ("Window", "Shutter")]
+        picks = rng.sample(cands, min(len(cands), nb)) if nb else ([rng.choice(cands)] if cands else [])
+        for m in picks:
             mw = W / m["n"]
             x = -W / 2 + mw * (m["i"] + 0.5)
-            body.push(Matrix.Translation((x, D / 2, K.FLOOR_H)))
+            body.push(Matrix.Translation((x, D / 2, K.FLOOR_H * m["floor"])))
             K.balcony(body, min(mw, 3.0) - 0.2, 1.5 if detail == 0 else 1.2, "wood" if style == "timber" else "stone")
             body.pop()
-    if style == "stone" and W >= 10 and detail < 2:
+    if style == "stone" and W >= 10 and detail < 2 and not opts.get("no_buttress"):
         for sx in (-1, 1):
             body.push(Matrix.Translation((sx * W / 2, 0.0, 0)) @ Matrix.Rotation(-sx * math.pi / 2, 4, "Z"))
             K.buttress(body, top - 0.6)
@@ -298,11 +320,11 @@ def build_meshes(W, D, floors, roof_type, style, seed_int, plan, detail, use="ho
     reps = rrng.randint(2, 4)
     ridge = 0.0
     if roof_type == "gable":
-        ridge = K.roof_gable(roof, W, D, rng=rrng, detail=detail, repairs=reps)
+        ridge = K.roof_gable(roof, W, D, rng=rrng, detail=detail, repairs=reps, eave=eave)
         K.gable_walls(body, W, D, ridge)
     elif roof_type == "gable_front":
         roof.push(Matrix.Rotation(math.pi / 2, 4, "Z"))
-        ridge = K.roof_gable(roof, D, W, rng=rrng, detail=detail, repairs=reps)
+        ridge = K.roof_gable(roof, D, W, rng=rrng, detail=detail, repairs=reps, eave=eave)
         roof.pop()
         body.push(Matrix.Rotation(math.pi / 2, 4, "Z"))
         if style == "guild":
@@ -487,7 +509,7 @@ def place_props(name, root, col, W, D, door_local, plan, use, rng):
 # ---------------------------------------------------------------------------
 def build_building(nombre, footprint=None, pisos=2, tipo_techo="gable", estilo="timber", seed=0, marker=None,
                    location=(0.0, 0.0, 0.0), rot_z=0.0, collection=None, props_collection=None, interior=True,
-                   use="house", landmark=False, door_index=None):
+                   use="house", landmark=False, door_index=None, module_w=None, plan_edit=None, opts=None):
     """Crea un edificio a partir del kit. Si se da 'marker' (MARKER_Bld_*), se usan su footprint, su posicion
     (centro de la base a pad_z) y su +Y (door_direction) y se ignoran footprint/location/rot_z."""
     assert estilo in STYLES and tipo_techo in ROOFS
@@ -510,7 +532,9 @@ def build_building(nombre, footprint=None, pisos=2, tipo_techo="gable", estilo="
                    "camera_side": away, "max_floors_rule": mx})
     seed_int = rng_for(nombre, seed)
     rng = random.Random(seed_int)
-    plan = plan_modules(W, D, pisos, estilo, rng, door_index, use)
+    plan = plan_modules(W, D, pisos, estilo, rng, door_index, use, module_w)
+    if plan_edit is not None:
+        plan_edit(plan, random.Random(seed_int + 7))
     col = collection or bpy.context.scene.collection
     root = bpy.data.objects.new(nombre, None)
     root.empty_display_size = 1.0
@@ -526,7 +550,12 @@ def build_building(nombre, footprint=None, pisos=2, tipo_techo="gable", estilo="
     tris = {}
     door_local, top, ridge = None, 0.0, 0.0
     for detail, suf in ((0, ""), (1, "_LOD1"), (2, "_LOD2")):
-        body, roof, dl, top, ridge = build_meshes(W, D, pisos, tipo_techo, estilo, seed_int, plan, detail, use)
+        seg0 = K.TILE_SEG
+        if opts and opts.get("roof_seg"):
+            K.TILE_SEG = opts["roof_seg"]
+        body, roof, dl, top, ridge = build_meshes(W, D, pisos, tipo_techo, estilo, seed_int, plan, detail, use,
+                                                  opts=opts)
+        K.TILE_SEG = seg0
         if detail == 0:
             door_local = dl
         for part, mb in (("Body", body), ("Roof", roof)):

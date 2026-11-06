@@ -195,11 +195,11 @@ def pinnacle(mb, u, y, z0, s, h_shaft, h_spire, mat):
         tri_face(mb, (xa, ya, z0 + h_shaft), (xb, yb, z0 + h_shaft), top, mat, (mx, my, 0.4))
 
 
-def window_fill(mb, uc, w, z0, ztop, y_glass, lights, mat_tr, r_tr=0.045, rose=True, bars=0):
+def window_fill(mb, uc, w, z0, ztop, y_glass, lights, mat_tr, r_tr=0.045, rose=True, bars=0, glass=None, arc_n=3):
     """Vitral + traceria dentro de un hueco apuntado: parteluces, arcos de cada luz, oculo en la cabeza y barras de
-    hierro (saddle bars)."""
+    hierro (saddle bars). glass: material del vidrio (por defecto el vitral azul)."""
     poly = lancet(uc, w, z0, ztop)
-    mb.face([(x, y_glass, z) for x, z in poly], M_GLASS, nrm=(0, 1, 0))
+    mb.face([(x, y_glass, z) for x, z in poly], glass or M_GLASS, nrm=(0, 1, 0))
     zs = ztop - 0.866 * w
     y = y_glass + r_tr + 0.005
     if lights > 1:
@@ -209,7 +209,7 @@ def window_fill(mb, uc, w, z0, ztop, y_glass, lights, mat_tr, r_tr=0.045, rose=T
             mb.box((u - r_tr * 1.4, y_glass, z0), (u + r_tr * 1.4, y_glass + 2 * r_tr + 0.01, zs), mat_tr, skip=("y-",))
         for k in range(lights):
             a, b = uc - w / 2 + lw * k, uc - w / 2 + lw * (k + 1)
-            rod_path(mb, pointed(a, b, zs, n=3), y, r_tr, mat_tr)
+            rod_path(mb, pointed(a, b, zs, n=arc_n), y, r_tr, mat_tr)
         if rose:
             apex_sub = zs + 0.866 * lw
             zc = (apex_sub + ztop) / 2 - 0.02

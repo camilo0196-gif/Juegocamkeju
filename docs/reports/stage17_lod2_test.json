@@ -1,0 +1,122 @@
+{
+ "TEST_Casa_12x9": {
+  "ortho_45": {
+   "px": [
+    757,
+    797
+   ],
+   "mean_diff": 13.13,
+   "pct_px_over_25": 17.12,
+   "pct_px_over_50": 8.31
+  },
+  "ortho_120": {
+   "px": [
+    332,
+    325
+   ],
+   "mean_diff": 9.46,
+   "pct_px_over_25": 12.26,
+   "pct_px_over_50": 5.28
+  }
+ },
+ "SANTUARIO": {
+  "ortho_45": {
+   "px": [
+    759,
+    978
+   ],
+   "mean_diff": 19.55,
+   "pct_px_over_25": 27.13,
+   "pct_px_over_50": 16.66
+  },
+  "ortho_120": {
+   "px": [
+    333,
+    401
+   ],
+   "mean_diff": 15.12,
+   "pct_px_over_25": 21.42,
+   "pct_px_over_50": 13.36
+  }
+ },
+ "SALON_HAZANAS": {
+  "ortho_45": {
+   "px": [
+    1869,
+    1061
+   ],
+   "mean_diff": 10.08,
+   "pct_px_over_25": 11.18,
+   "pct_px_over_50": 3.82
+  },
+  "ortho_120": {
+   "px": [
+    749,
+    450
+   ],
+   "mean_diff": 7.9,
+   "pct_px_over_25": 7.55,
+   "pct_px_over_50": 2.45
+  }
+ },
+ "FARO": {
+  "ortho_45": {
+   "px": [
+    736,
+    1080
+   ],
+   "mean_diff": 11.71,
+   "pct_px_over_25": 13.73,
+   "pct_px_over_50": 5.79
+  },
+  "ortho_120": {
+   "px": [
+    324,
+    711
+   ],
+   "mean_diff": 9.33,
+   "pct_px_over_25": 11.54,
+   "pct_px_over_50": 4.43
+  }
+ },
+ "OBELISK": {
+  "ortho_45": {
+   "px": [
+    291,
+    1037
+   ],
+   "mean_diff": 0.45,
+   "pct_px_over_25": 0.07,
+   "pct_px_over_50": 0.03
+  },
+  "ortho_120": {
+   "px": [
+    157,
+    415
+   ],
+   "mean_diff": 0.31,
+   "pct_px_over_25": 0.06,
+   "pct_px_over_50": 0.02
+  }
+ },
+ "PORTAL_Arch": {
+  "ortho_45": {
+   "px": [
+    663,
+    811
+   ],
+   "mean_diff": 2.31,
+   "pct_px_over_25": 1.3,
+   "pct_px_over_50": 0.25
+  },
+  "ortho_120": {
+   "px": [
+    297,
+    331
+   ],
+   "mean_diff": 1.42,
+   "pct_px_over_25": 0.48,
+   "pct_px_over_50": 0.08
+  }
+ }
+}
