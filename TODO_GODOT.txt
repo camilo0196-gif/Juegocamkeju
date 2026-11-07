@@ -111,3 +111,14 @@ Conexiones (E22)
 [ ] Linternas de esquirla de los arcos (MAT_Shard_Blue, 2.5): OmniLight3D azul palido pequena opcional.
 [ ] RAIL_Stone_3m de los arcos: instancias escaladas en Y (0.85-0.86); se pueden pasar a MultiMeshInstance3D.
 
+Moradas (E23)
+[ ] Importar moradas_NE / _NO / _SO / _SE.glb (una escena por conjunto; 63 mallas compartidas entre las 283 casas):
+    pasar Body/Roof/LOD a MultiMeshInstance3D o dejar las instancias (mismas mallas).
+[ ] DOOR_Morada: material_override de la ranura de pintura por instancia (prop paint_material); Decal o Label3D con el
+    house_number sobre PLATE_Morada_*; MARKER_Lantern_*: farol LANTERN_Shard opcional (solo planta baja trae el
+    modelo) y OmniLight3D pequena si se quiere de noche.
+[ ] MARKER_Morada_Door_*: zona de interaccion que carga el interior propio de cada vivienda; MARKER_TrophyCase_*: punto
+    de la vitrina dentro del interior.
+[ ] Escaleras exteriores y galerias de las casas comunales: la -colonly incluye rampa y pasarelas (las puertas de
+    las plantas 2 y 3 son accesibles desde la calle).
+

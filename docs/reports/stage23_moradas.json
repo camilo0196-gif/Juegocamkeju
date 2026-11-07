@@ -1,0 +1,894 @@
+{
+ "budgets": {
+  "habitacion": 1500,
+  "casa_pequena": 2000,
+  "casa_grande": 3500
+ },
+ "saved_before": "blender/concordia_v23.blend",
+ "materials": {
+  "MAT_Facade_Earth_A": {
+   "src": "MAT_Limestone_Light",
+   "baseColorFactor": [
+    1.0,
+    0.89,
+    0.72
+   ]
+  },
+  "MAT_Facade_Earth_B": {
+   "src": "MAT_Limestone_Light",
+   "baseColorFactor": [
+    0.98,
+    0.84,
+    0.76
+   ]
+  },
+  "MAT_Facade_Earth_C": {
+   "src": "MAT_Limestone_Light",
+   "baseColorFactor": [
+    0.9,
+    0.9,
+    0.81
+   ]
+  },
+  "MAT_Door_Paint_01": {
+   "src": "MAT_Wood_Light",
+   "baseColorFactor": [
+    0.62,
+    0.7,
+    0.6
+   ]
+  },
+  "MAT_Door_Paint_02": {
+   "src": "MAT_Wood_Light",
+   "baseColorFactor": [
+    0.6,
+    0.7,
+    0.8
+   ]
+  },
+  "MAT_Door_Paint_03": {
+   "src": "MAT_Wood_Light",
+   "baseColorFactor": [
+    0.72,
+    0.6,
+    0.56
+   ]
+  },
+  "MAT_Door_Paint_04": {
+   "src": "MAT_Wood_Light",
+   "baseColorFactor": [
+    0.55,
+    0.5,
+    0.46
+   ]
+  },
+  "MAT_Door_Paint_05": {
+   "src": "MAT_Wood_Light",
+   "baseColorFactor": [
+    0.76,
+    0.71,
+    0.61
+   ]
+  },
+  "MAT_Door_Paint_06": {
+   "src": "MAT_Wood_Light",
+   "baseColorFactor": [
+    0.66,
+    0.62,
+    0.7
+   ]
+  },
+  "MAT_Door_NumberPlate": {
+   "color": "#D9D3C4"
+  }
+ },
+ "sets": {
+  "NE": {
+   "houses": 72,
+   "types": {
+    "casa_pequena": 25,
+    "casa_grande": 11,
+    "habitacion": 36
+   },
+   "occlusion_plan": [
+    {
+     "iter": 0,
+     "door_targets": 200,
+     "blocked_other_terrace": 0,
+     "blocked_same_terrace": 41
+    }
+   ],
+   "occlusion_real_iterations": [
+    {
+     "iter": 0,
+     "blocked_other_terrace": 0,
+     "occluders": []
+    }
+   ],
+   "occlusion_final_real_meshes": {
+    "door_targets_facing_camera": 200,
+    "blocked_by_other_terrace": 0,
+    "blocked_by_same_terrace_neighbour": 33,
+    "examples_other": [],
+    "examples_same": [
+     [
+      "Morada_NE_013",
+      [
+       -2.0,
+       0
+      ],
+      "Morada_NE_012"
+     ],
+     [
+      "Morada_NE_013",
+      [
+       0.0,
+       0
+      ],
+      "Morada_NE_012"
+     ],
+     [
+      "Morada_NE_013",
+      [
+       2.0,
+       0
+      ],
+      "Morada_NE_012"
+     ],
+     [
+      "Morada_NE_013",
+      [
+       -2.0,
+       1
+      ],
+      "Morada_NE_012"
+     ],
+     [
+      "Morada_NE_013",
+      [
+       0.0,
+       1
+      ],
+      "Morada_NE_012"
+     ],
+     [
+      "Morada_NE_014",
+      [
+       -1.2,
+       0
+      ],
+      "Morada_NE_013"
+     ]
+    ]
+   },
+   "units_doors": 360,
+   "tris_LOD0_houses": 45008,
+   "tris_LOD0_doors_plates_lanterns": 29232,
+   "tris_LOD0_total": 74240,
+   "tris_LOD1": 22470,
+   "tris_LOD2": 4760,
+   "lod1_ratio": 0.499,
+   "lod2_ratio": 0.106,
+   "per_type_max": {
+    "casa_pequena": 672,
+    "casa_grande": 752,
+    "habitacion": 1460
+   },
+   "per_type_ok": {
+    "casa_pequena": true,
+    "casa_grande": true,
+    "habitacion": true
+   },
+   "remedies": {
+    "-": 72
+   },
+   "sections": {
+    "casa_pequena:f1gf0": 11,
+    "casa_grande:f2gn32": 11,
+    "casa_pequena:f1lf0": 14,
+    "habitacion:f3lf0": 36
+   },
+   "per_terrace": {
+    "1": [
+     "casav2B",
+     "casav3A",
+     "casav0C",
+     "casav1B",
+     "casav2A",
+     "habiv3C"
+    ],
+    "2": [
+     "casav0C",
+     "habiv1B",
+     "casav2A",
+     "habiv3C",
+     "casav0B",
+     "habiv1A",
+     "habiv2C",
+     "casav3B",
+     "habiv0A",
+     "habiv1C"
+    ],
+    "3": [
+     "habiv2A",
+     "casav3C",
+     "habiv0B",
+     "casav1A",
+     "habiv2C",
+     "casav3B",
+     "casav0A",
+     "habiv1C",
+     "casav2B",
+     "habiv3A",
+     "casav0C",
+     "habiv1B"
+    ],
+    "4": [
+     "casav0B",
+     "habiv1A",
+     "habiv2C",
+     "casav3B",
+     "casav0A",
+     "casav1C",
+     "habiv2B",
+     "casav3A",
+     "casav0C",
+     "habiv1B",
+     "casav2A",
+     "habiv3C"
+    ],
+    "5": [
+     "habiv2C",
+     "habiv3B",
+     "habiv0A",
+     "habiv1C",
+     "casav2B",
+     "habiv3A",
+     "casav0C",
+     "casav1B",
+     "casav2A",
+     "casav3C",
+     "habiv0B",
+     "casav1A",
+     "habiv2C",
+     "habiv3B"
+    ],
+    "6": [
+     "casav0A",
+     "habiv1C",
+     "casav2B",
+     "habiv3A",
+     "habiv0C",
+     "casav1B",
+     "habiv2A",
+     "casav3C",
+     "casav0B",
+     "habiv1A",
+     "habiv2C",
+     "casav3B",
+     "habiv0A",
+     "casav1C",
+     "habiv2B",
+     "habiv3A",
+     "habiv0C",
+     "casav1B"
+    ]
+   },
+   "export": {
+    "file": "export/godot/moradas_NE.glb",
+    "mb": 3.0,
+    "nodes": 2448,
+    "meshes": 194,
+    "tris": 33026,
+    "materials": 53,
+    "images": 20,
+    "images_external": 20,
+    "colliders": 72,
+    "navmesh": 0,
+    "occluders": 0,
+    "empties": 1152
+   }
+  },
+  "NO": {
+   "houses": 72,
+   "types": {
+    "casa_grande": 11,
+    "habitacion": 36,
+    "casa_pequena": 25
+   },
+   "occlusion_plan": [
+    {
+     "iter": 0,
+     "door_targets": 360,
+     "blocked_other_terrace": 102,
+     "blocked_same_terrace": 0
+    },
+    {
+     "iter": 1,
+     "door_targets": 360,
+     "blocked_other_terrace": 0,
+     "blocked_same_terrace": 0
+    }
+   ],
+   "occlusion_real_iterations": [
+    {
+     "iter": 0,
+     "blocked_other_terrace": 0,
+     "occluders": []
+    }
+   ],
+   "occlusion_final_real_meshes": {
+    "door_targets_facing_camera": 360,
+    "blocked_by_other_terrace": 0,
+    "blocked_by_same_terrace_neighbour": 0,
+    "examples_other": [],
+    "examples_same": []
+   },
+   "units_doors": 360,
+   "tris_LOD0_houses": 42760,
+   "tris_LOD0_doors_plates_lanterns": 29232,
+   "tris_LOD0_total": 71992,
+   "tris_LOD1": 21160,
+   "tris_LOD2": 4830,
+   "lod1_ratio": 0.495,
+   "lod2_ratio": 0.113,
+   "per_type_max": {
+    "casa_grande": 752,
+    "habitacion": 1460,
+    "casa_pequena": 672
+   },
+   "per_type_ok": {
+    "casa_grande": true,
+    "habitacion": true,
+    "casa_pequena": true
+   },
+   "remedies": {
+    "-": 46,
+    "lado trasero bajo": 26
+   },
+   "sections": {
+    "casa_grande:f2gn32": 11,
+    "habitacion:f3lb0": 26,
+    "casa_pequena:f1gf0": 16,
+    "casa_pequena:f1lf0": 9,
+    "habitacion:f3lf0": 10
+   },
+   "per_terrace": {
+    "1": [
+     "casav3C",
+     "habiv0B",
+     "habiv1A",
+     "casav2C",
+     "habiv3B",
+     "habiv0A"
+    ],
+    "2": [
+     "casav1A",
+     "habiv2C",
+     "habiv3B",
+     "habiv0A",
+     "casav1C",
+     "casav2B",
+     "habiv3A",
+     "habiv0C",
+     "casav1B",
+     "casav2A"
+    ],
+    "3": [
+     "casav3B",
+     "casav0A",
+     "habiv1C",
+     "casav2B",
+     "casav3A",
+     "casav0C",
+     "habiv1B",
+     "casav2A",
+     "habiv3C",
+     "casav0B",
+     "habiv1A",
+     "habiv2C"
+    ],
+    "4": [
+     "casav1C",
+     "habiv2B",
+     "habiv3A",
+     "casav0C",
+     "habiv1B",
+     "habiv2A",
+     "casav3C",
+     "casav0B",
+     "habiv1A",
+     "casav2C",
+     "habiv3B",
+     "casav0A"
+    ],
+    "5": [
+     "habiv3A",
+     "casav0C",
+     "casav1B",
+     "habiv2A",
+     "casav3C",
+     "habiv0B",
+     "habiv1A",
+     "casav2C",
+     "casav3B",
+     "habiv0A",
+     "casav1C",
+     "casav2B",
+     "habiv3A",
+     "casav0C"
+    ],
+    "6": [
+     "casav1B",
+     "habiv2A",
+     "habiv3C",
+     "habiv0B",
+     "habiv1A",
+     "habiv2C",
+     "casav3B",
+     "casav0A",
+     "casav1C",
+     "habiv2B",
+     "habiv3A",
+     "casav0C",
+     "habiv1B",
+     "casav2A",
+     "casav3C",
+     "habiv0B",
+     "habiv1A",
+     "casav2C"
+    ]
+   },
+   "export": {
+    "file": "export/godot/moradas_NO.glb",
+    "mb": 3.47,
+    "nodes": 2448,
+    "meshes": 236,
+    "tris": 40190,
+    "materials": 60,
+    "images": 20,
+    "images_external": 20,
+    "colliders": 72,
+    "navmesh": 0,
+    "occluders": 0,
+    "empties": 1152
+   }
+  },
+  "SO": {
+   "houses": 72,
+   "types": {
+    "casa_pequena": 25,
+    "habitacion": 36,
+    "casa_grande": 11
+   },
+   "occlusion_plan": [
+    {
+     "iter": 0,
+     "door_targets": 216,
+     "blocked_other_terrace": 0,
+     "blocked_same_terrace": 62
+    }
+   ],
+   "occlusion_real_iterations": [
+    {
+     "iter": 0,
+     "blocked_other_terrace": 0,
+     "occluders": []
+    }
+   ],
+   "occlusion_final_real_meshes": {
+    "door_targets_facing_camera": 216,
+    "blocked_by_other_terrace": 0,
+    "blocked_by_same_terrace_neighbour": 50,
+    "examples_other": [],
+    "examples_same": [
+     [
+      "Morada_SO_007",
+      [
+       0.9,
+       0
+      ],
+      "Morada_SO_008"
+     ],
+     [
+      "Morada_SO_008",
+      [
+       0.0,
+       0
+      ],
+      "Morada_SO_009"
+     ],
+     [
+      "Morada_SO_008",
+      [
+       2.0,
+       0
+      ],
+      "Morada_SO_009"
+     ],
+     [
+      "Morada_SO_009",
+      [
+       2.0,
+       0
+      ],
+      "Morada_SO_010"
+     ],
+     [
+      "Morada_SO_017",
+      [
+       2.0,
+       0
+      ],
+      "Morada_SO_018"
+     ],
+     [
+      "Morada_SO_017",
+      [
+       2.0,
+       1
+      ],
+      "Morada_SO_018"
+     ]
+    ]
+   },
+   "units_doors": 360,
+   "tris_LOD0_houses": 45302,
+   "tris_LOD0_doors_plates_lanterns": 29232,
+   "tris_LOD0_total": 74534,
+   "tris_LOD1": 22337,
+   "tris_LOD2": 4788,
+   "lod1_ratio": 0.493,
+   "lod2_ratio": 0.106,
+   "per_type_max": {
+    "casa_pequena": 672,
+    "habitacion": 1460,
+    "casa_grande": 752
+   },
+   "per_type_ok": {
+    "casa_pequena": true,
+    "habitacion": true,
+    "casa_grande": true
+   },
+   "remedies": {
+    "-": 72
+   },
+   "sections": {
+    "casa_pequena:f1lf0": 12,
+    "habitacion:f3lf0": 36,
+    "casa_pequena:f1gf0": 13,
+    "casa_grande:f2gn32": 11
+   },
+   "per_terrace": {
+    "1": [
+     "casav0A",
+     "habiv1C",
+     "casav2B",
+     "casav3A",
+     "casav0C",
+     "casav1B"
+    ],
+    "2": [
+     "casav2B",
+     "habiv3A",
+     "habiv0C",
+     "casav1B",
+     "casav2A",
+     "casav3C",
+     "habiv0B",
+     "casav1A",
+     "casav2C",
+     "casav3B"
+    ],
+    "3": [
+     "habiv0C",
+     "habiv1B",
+     "habiv2A",
+     "casav3C",
+     "habiv0B",
+     "habiv1A",
+     "habiv2C",
+     "casav3B",
+     "casav0A",
+     "habiv1C",
+     "casav2B",
+     "casav3A"
+    ],
+    "4": [
+     "habiv2A",
+     "habiv3C",
+     "casav0B",
+     "habiv1A",
+     "casav2C",
+     "habiv3B",
+     "habiv0A",
+     "habiv1C",
+     "habiv2B",
+     "habiv3A",
+     "casav0C",
+     "casav1B"
+    ],
+    "5": [
+     "habiv0B",
+     "casav1A",
+     "casav2C",
+     "habiv3B",
+     "casav0A",
+     "casav1C",
+     "habiv2B",
+     "casav3A",
+     "habiv0C",
+     "habiv1B",
+     "casav2A",
+     "habiv3C",
+     "casav0B",
+     "casav1A"
+    ],
+    "6": [
+     "habiv2C",
+     "casav3B",
+     "casav0A",
+     "habiv1C",
+     "habiv2B",
+     "habiv3A",
+     "casav0C",
+     "casav1B",
+     "habiv2A",
+     "casav3C",
+     "casav0B",
+     "habiv1A",
+     "habiv2C",
+     "casav3B",
+     "habiv0A",
+     "habiv1C",
+     "habiv2B",
+     "habiv3A"
+    ]
+   },
+   "export": {
+    "file": "export/godot/moradas_SO.glb",
+    "mb": 3.01,
+    "nodes": 2448,
+    "meshes": 194,
+    "tris": 33175,
+    "materials": 53,
+    "images": 20,
+    "images_external": 20,
+    "colliders": 72,
+    "navmesh": 0,
+    "occluders": 0,
+    "empties": 1152
+   }
+  },
+  "SE": {
+   "houses": 67,
+   "types": {
+    "casa_pequena": 23,
+    "habitacion": 34,
+    "casa_grande": 10
+   },
+   "occlusion_plan": [
+    {
+     "iter": 0,
+     "door_targets": 339,
+     "blocked_other_terrace": 18,
+     "blocked_same_terrace": 0
+    },
+    {
+     "iter": 1,
+     "door_targets": 339,
+     "blocked_other_terrace": 13,
+     "blocked_same_terrace": 0
+    }
+   ],
+   "occlusion_real_iterations": [
+    {
+     "iter": 0,
+     "blocked_other_terrace": 0,
+     "occluders": []
+    }
+   ],
+   "occlusion_final_real_meshes": {
+    "door_targets_facing_camera": 339,
+    "blocked_by_other_terrace": 0,
+    "blocked_by_same_terrace_neighbour": 0,
+    "examples_other": [],
+    "examples_same": []
+   },
+   "units_doors": 339,
+   "tris_LOD0_houses": 38194,
+   "tris_LOD0_doors_plates_lanterns": 27474,
+   "tris_LOD0_total": 65668,
+   "tris_LOD1": 18840,
+   "tris_LOD2": 4446,
+   "lod1_ratio": 0.493,
+   "lod2_ratio": 0.116,
+   "per_type_max": {
+    "casa_pequena": 672,
+    "habitacion": 1344,
+    "casa_grande": 724
+   },
+   "per_type_ok": {
+    "casa_pequena": true,
+    "habitacion": true,
+    "casa_grande": true
+   },
+   "remedies": {
+    "-": 59,
+    "faldon trasero largo (3.8 m)": 8
+   },
+   "sections": {
+    "casa_pequena:f1lb0": 12,
+    "casa_pequena:f1gb0": 11,
+    "habitacion:f3lb0": 34,
+    "casa_grande:f2gn32": 2,
+    "casa_grande:f2cn28": 8
+   },
+   "per_terrace": {
+    "1": [
+     "casav1B",
+     "casav2A",
+     "habiv3C",
+     "habiv0B",
+     "casav1A"
+    ],
+    "2": [
+     "casav3C",
+     "casav0B",
+     "casav1A",
+     "habiv2C",
+     "casav3B",
+     "habiv0A",
+     "casav1C",
+     "casav2B",
+     "casav3A",
+     "habiv0C"
+    ],
+    "3": [
+     "casav1A",
+     "habiv2C",
+     "casav3B",
+     "casav0A",
+     "habiv1C",
+     "habiv2B",
+     "habiv3A",
+     "habiv0C",
+     "habiv1B",
+     "habiv2A",
+     "habiv3C",
+     "habiv0B"
+    ],
+    "4": [
+     "casav3B",
+     "habiv0A",
+     "habiv1C",
+     "casav2B",
+     "habiv3A",
+     "casav0C",
+     "casav1B",
+     "casav2A",
+     "habiv3C",
+     "habiv0B",
+     "casav1A",
+     "habiv2C",
+     "casav3B",
+     "casav0A"
+    ],
+    "5": [
+     "habiv1C",
+     "casav2B",
+     "casav3A",
+     "habiv0C",
+     "casav1B",
+     "casav2A",
+     "habiv3C",
+     "casav0B",
+     "casav1A",
+     "casav2C",
+     "habiv3B",
+     "habiv0A"
+    ],
+    "6": [
+     "habiv3A",
+     "casav0C",
+     "habiv1B",
+     "habiv2A",
+     "habiv3C",
+     "habiv0B",
+     "habiv1A",
+     "casav2C",
+     "habiv3B",
+     "casav0A",
+     "habiv1C",
+     "casav2B",
+     "habiv3A",
+     "casav0C"
+    ]
+   },
+   "export": {
+    "file": "export/godot/moradas_SE.glb",
+    "mb": 2.72,
+    "nodes": 2299,
+    "meshes": 188,
+    "tris": 29988,
+    "materials": 52,
+    "images": 20,
+    "images_external": 20,
+    "colliders": 67,
+    "navmesh": 0,
+    "occluders": 0,
+    "empties": 1084
+   }
+  }
+ },
+ "unique_meshes": 63,
+ "totals": {
+  "houses": 283,
+  "units_doors": 1419,
+  "tris_LOD0_total": 286434,
+  "tris_LOD2": 18824
+ },
+ "palette_audit": {
+  "MAT_Facade_Earth_A": {
+   "mean_srgb": "#D8C9AF",
+   "saturation": 0.19,
+   "hue": 37.2,
+   "pass": true
+  },
+  "MAT_Facade_Earth_B": {
+   "mean_srgb": "#D6C4B4",
+   "saturation": 0.162,
+   "hue": 27.6,
+   "pass": true
+  },
+  "MAT_Facade_Earth_C": {
+   "mean_srgb": "#CECAB9",
+   "saturation": 0.105,
+   "hue": 47.0,
+   "pass": true
+  },
+  "MAT_Door_Paint_01": {
+   "mean_srgb": "#847E62",
+   "saturation": 0.26,
+   "hue": 49.4,
+   "pass": true
+  },
+  "MAT_Door_Paint_02": {
+   "mean_srgb": "#827E70",
+   "saturation": 0.139,
+   "hue": 46.4,
+   "pass": true
+  },
+  "MAT_Door_Paint_03": {
+   "mean_srgb": "#8D755E",
+   "saturation": 0.331,
+   "hue": 29.0,
+   "pass": true
+  },
+  "MAT_Door_Paint_04": {
+   "mean_srgb": "#7D6C56",
+   "saturation": 0.311,
+   "hue": 33.4,
+   "pass": true
+  },
+  "MAT_Door_Paint_05": {
+   "mean_srgb": "#917F62",
+   "saturation": 0.32,
+   "hue": 36.5,
+   "pass": true
+  },
+  "MAT_Door_Paint_06": {
+   "mean_srgb": "#887769",
+   "saturation": 0.226,
+   "hue": 27.1,
+   "pass": true
+  },
+  "MAT_Door_NumberPlate": {
+   "mean_srgb": "#D8D3C5",
+   "saturation": 0.089,
+   "hue": 42.3,
+   "pass": true
+  }
+ },
+ "note_terrace_17": "ninguna terraza tiene 17 parcelas (5, 6, 10, 12, 14 o 18): la captura usa Morada NO terraza 6 (18 casas)"
+}

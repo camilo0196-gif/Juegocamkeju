@@ -67,6 +67,12 @@ MAT_Banner_R01..R06      estandarte y bandera de la raza   textura generada 512 
                                                            raza (+0.35 MB de VRAM cada una)
 Memoria de texturas tras la etapa 21: ~160.8 MB (154.7 + 8 estandartes de clase + 2 albedos + 6 estandartes de raza).
 
+Etapa 23 (Moradas; sin texturas nuevas, todos pasan la paleta)
+MAT_Facade_Earth_A/B/C   fachadas de las Moradas           caliza clara x (1.0,0.89,0.72) /     -               1.0 opaco
+                                                           (0.98,0.84,0.76) / (0.90,0.90,0.81)
+MAT_Door_Paint_01..06    pintura de DOOR_Morada            madera clara x factor (s <= 0.31)    -               1.0 opaco
+MAT_Door_NumberPlate     placa de numero (decal encima)    #D9D3C4 plano                        -               1.0 opaco
+
 Ya existentes y con emision: MAT_Shard_Blue (#8FD0FF, 2.5; farolillos de esquirla). MAT_Water: sin emision.
 
 3. Convencion de piezas por edificio
@@ -231,4 +237,30 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
   - Los provisionales (TRN_Bridge_*, TRN_ArchBridge_*, TRN_Escalinata_Morada_*, TRN_StairPass_*, TRN_TerraceStairs_*,
     TRN_LateralStairs_*, con sus -colonly y _Repair; 80 objetos) pasan a LEGACY_PLACEHOLDERS (excluida de la escena y de
     la exportacion). Los concordia_terrain_<distrito>.glb y concordia_markers.glb se han reexportado sin ellos.
+
+
+
+13. Moradas (etapa 23): viviendas de los 4 conjuntos
+----------------------------------------------------
+  - tools/blender/stage23_moradas.py (tipos) y build_stage23.py (plan, instancias, exportacion). Referencias: Cesky
+    Krumlov y Toledo, Mont-Saint-Michel, Mala Strana.
+  - 283 casas en los 283 MARKER_Morada_* (NE 72, NO 72, SO 72, SE 67; parcelas 6 x 10, fachada retranqueada 2 m como en la
+    etapa 06): 142 habitaciones (casa comunal de 3 plantas, 9 puertas por modulo, galerias corridas y escalera
+    exterior en diagonal), 98 casas pequenas (1 planta, patio delantero con muro bajo, a un agua o dos aguas,
+    chimenea) y 43 casas grandes (2 plantas, balcon, jardin trasero con muro, dos aguas o faldon trasero largo,
+    chimenea). 1,419 viviendas (puertas).
+  - Variantes: 4 por tipo (semilla: lado de la escalera, barandilla, cubierta, puerta, chimenea, balcon, jardin) x 3
+    fachadas; en cada fila se alternan para que dos casas vecinas no coincidan ni en variante ni en fachada.
+  - Techos escalonados y CAM_Iso: el lado de cada casa que da a las puertas de la terraza vecina se mantiene por debajo
+    de la linea de vision (sube 0.707 m por metro). Casas comunales de seccion escalonada (trasera a 3.6 m, fachada a
+    9.25 m, sin chimenea), casas pequenas a un agua con el lado bajo hacia esas puertas, casas grandes con faldon
+    trasero hasta 3.8 m. Resultado medido con las mallas reales: 0 puertas tapadas por casas de otra terraza en los 4
+    conjuntos. En NE y SO (la camara mira a lo largo de las filas) 33 y 50 puertas de planta baja quedan detras de la
+    galeria o la escalera de la casa vecina de la MISMA fila.
+  - Puerta exterior = DOOR_Morada (malla compartida; la ranura de pintura enlazada al objeto con uno de
+    MAT_Door_Paint_01..06; props paint_material, house_number, lantern) con hijos PLATE_Morada_* (0.3 x 0.2, UV 0..1),
+    MARKER_Lantern_* y LANTERN_Shard_* (solo en las puertas de planta baja). MARKER_Morada_Door_* delante de cada
+    puerta (+Y fuera, interior aparte) y MARKER_TrophyCase_* 2 m dentro (uno por vivienda).
+  - LOD1 = diezmado 0.5; LOD2 = caja con tejado, galerias / patio / balcon / muro de jardin y chimenea como cajas, un
+    material plano (~11 % del LOD0). Exportacion por conjunto: export/godot/moradas_NE.glb, _NO, _SO, _SE.
 
