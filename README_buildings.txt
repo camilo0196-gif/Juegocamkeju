@@ -1,6 +1,6 @@
 CONCORDIA - Edificios y materiales nuevos (kit, Portal y landmarks)
 ==================================================================
-Actualizado en la etapa 20 (concordia_v20.blend). Auditoria automatica: tools/blender/audit_materials.py ->
+Actualizado en la etapa 25 (concordia_v25.blend). Auditoria automatica: tools/blender/audit_materials.py ->
 docs/reports/stage17_materials.json.
 
 1. Regla de aprobacion de materiales nuevos
@@ -8,6 +8,11 @@ docs/reports/stage17_materials.json.
 Un material nuevo del kit de edificios, del Portal o de un landmark queda aprobado si cumple las tres condiciones:
   a) Paleta: nada saturado fuera del azul palido. Prueba: saturacion HSV <= 0.35, salvo tonos 185-215 grados (azul).
      El unico color magico fuerte es #8FD0FF.
+     UNICA excepcion calida (decision del usuario, etapa 25): MAT_Embers (brasas y metal fundido, #E09A62, s 0.57).
+     Solo en fundicion, hornos e interior visible de chimeneas: Gran Forja, Hornos de Concordia y chimeneas de la
+     Posada y de la Forja. Emision <= 1.5, nunca azul ni mezclado con MAT_Shard_Blue, < 2 % de la superficie visible
+     de cada edificio. La prueba de saturacion ignora SOLO ese material (build_stage24.embers_check comprueba los
+     limites). Ningun otro material usa naranja saturado: toldos, telas y banderas siguen en tierras apagadas.
   b) Export: grafo Image Texture -> Principled BSDF, o valores planos. Las variantes de tono usan Mix (Multiply) con
      un color constante: el exportador glTF lo escribe como baseColorFactor junto a la textura (comprobado en los
      .glb). No hay otros nodos.
@@ -72,6 +77,12 @@ MAT_Facade_Earth_A/B/C   fachadas de las Moradas           caliza clara x (1.0,0
                                                            (0.98,0.84,0.76) / (0.90,0.90,0.81)
 MAT_Door_Paint_01..06    pintura de DOOR_Morada            madera clara x factor (s <= 0.31)    -               1.0 opaco
 MAT_Door_NumberPlate     placa de numero (decal encima)    #D9D3C4 plano                        -               1.0 opaco
+
+Etapa 25
+MAT_Crisol_Molten        cuenco del Crisol (piedra fundida  #39404A plano, roughness 0.6         #8FD0FF  1.2    1.0 opaco
+                         magica; antes MAT_Embers)
+MAT_Embers (etapa 19)    brasas: Gran Forja y Hornos        #A67148 plano                        #E09A62  1.5    1.0 opaco
+                         (excepcion calida, seccion 1a)
 
 Ya existentes y con emision: MAT_Shard_Blue (#8FD0FF, 2.5; farolillos de esquirla). MAT_Water: sin emision.
 
@@ -154,12 +165,12 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
 
 9. Oficios (etapa 19)
 ---------------------
-  - MAT_Embers (nuevo): brasas y metal fundido, naranja calido NATURAL #E09A62, emision 1.5 (Forja, Hornos, cuenco del
-    Crisol). Saturacion 0.56 > 0.35: excepcion pedida en el prompt ("luz naranja calida de las brasas"); confirmar.
+  - MAT_Embers (nuevo): brasas y metal fundido, naranja calido NATURAL #E09A62, emision 1.5. Excepcion APROBADA en la
+    etapa 25 (seccion 1a): Gran Forja y Hornos. El cuenco del Crisol pasa a MAT_Crisol_Molten (#8FD0FF): no es
+    fundicion ni horno.
   - MAT_Herb_Green (nuevo): hierbas, verde apagado #6E7B58 (saturacion 0.28, dentro de la paleta).
   - Vidrio del invernadero y alambiques: MAT_Pipe_Glass (alpha 0.35, ya aprobado). Lupas: MAT_Bronze_Aged.
-  - Gremio de Cazadores: NO hay MARKER_Bld_Gremio_Cazadores. Esta montado en la zona del kit (3200, 1250) con su campo
-    de tiro y exportado aparte (concordia_gremio_cazadores_sin_parcela.glb) hasta que se decida su parcela.
+  - Gremio de Cazadores: colocado en la etapa 25 dentro de la muralla (seccion 15); va en bld_oficios.glb.
   - Gremio de Pescadores: el muelle 8 x 3 ya existia (CAU_Muelle_Pescadores, etapa 07); las 2 barcas van en
     MARKER_Mooring_01 y _03.
   - Joyeria y Tallado: 10 x 10 (prompt) dentro de su parcela de 16 x 12, alineada al frente.
@@ -267,19 +278,19 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
 14. Godot 4: version final (etapa 24)
 -------------------------------------
   Archivos (export/godot, glTF 2.0 binario, +Y arriba, texturas externas ../../textures/concordia/...):
-    bld_portal.glb         Portal (raiz PORTAL), Obelisco, Faro, Santuario, Salon de las Hazanas, Puente 01, escalinatas monumentales  [5.57 MB, 81123 tris con LOD y colisiones]
-    bld_mercado.glb        Mercado (Norte)  [6.67 MB, 102058 tris con LOD y colisiones]
-    bld_oficios.glb        Oficios (Este) y puentes 02-05  [4.74 MB, 70118 tris con LOD y colisiones]
+    bld_portal.glb         Portal (raiz PORTAL), Obelisco, Faro, Santuario, Salon de las Hazanas, Puente 01, escalinatas monumentales  [5.56 MB, 81103 tris con LOD y colisiones]
+    bld_mercado.glb        Mercado (Norte)  [6.66 MB, 102058 tris con LOD y colisiones]
+    bld_oficios.glb        Oficios (Este) y puentes 02-05  [5.05 MB, 74901 tris con LOD y colisiones]
     bld_clases.glb         Clases (Oeste)  [6.69 MB, 97896 tris con LOD y colisiones]
-    bld_razas.glb          Razas (Sur) y arcos 06-09  [9.61 MB, 141896 tris con LOD y colisiones]
+    bld_razas.glb          Razas (Sur) y arcos 06-09  [9.77 MB, 142842 tris con LOD y colisiones]
     bld_moradas_NE.glb     Morada NE (+ sus escaleras)  [3.79 MB, 43754 tris con LOD y colisiones]
-    bld_moradas_NO.glb     Morada NO  [4.26 MB, 50846 tris con LOD y colisiones]
-    bld_moradas_SE.glb     Morada SE  [3.49 MB, 40536 tris con LOD y colisiones]
+    bld_moradas_NO.glb     Morada NO  [4.37 MB, 52299 tris con LOD y colisiones]
+    bld_moradas_SE.glb     Morada SE  [3.65 MB, 42661 tris con LOD y colisiones]
     bld_moradas_SO.glb     Morada SO  [3.8 MB, 43903 tris con LOD y colisiones]
-    bld_kit.glb            kit modular (muros, cubiertas, conexiones)  [1.56 MB, 21313 tris con LOD y colisiones]
+    bld_kit.glb            kit modular (muros, cubiertas, conexiones)  [1.56 MB, 21306 tris con LOD y colisiones]
     bld_props.glb          biblioteca de props (una instancia de cada malla)  [0.35 MB, 3688 tris con LOD y colisiones]
     Siguen: concordia_terrain_<distrito>.glb (con la malla de navegacion recortada), concordia_wall_*.glb,
-    concordia_markers.glb y concordia_gremio_cazadores_sin_parcela.glb. Sustituidos y borrados: concordia_clases.glb, concordia_mercado.glb, concordia_oficios.glb, concordia_razas.glb, concordia_portal.glb, concordia_faro.glb, concordia_santuario.glb, concordia_salon_hazanas.glb, concordia_obelisk.glb, concordia_conexiones.glb, moradas_NE.glb, moradas_NO.glb, moradas_SE.glb, moradas_SO.glb.
+    concordia_markers.glb (concordia_gremio_cazadores_sin_parcela.glb se borra en la etapa 25). Sustituidos y borrados: concordia_clases.glb, concordia_mercado.glb, concordia_oficios.glb, concordia_razas.glb, concordia_portal.glb, concordia_faro.glb, concordia_santuario.glb, concordia_salon_hazanas.glb, concordia_obelisk.glb, concordia_conexiones.glb, moradas_NE.glb, moradas_NO.glb, moradas_SE.glb, moradas_SO.glb.
   Por edificio: <N>_Body, <N>_Roof (oculta al entrar), <N>_Props, <N>-colonly (cajas / prismas convexos),
   <N>_Body_LOD1 / _Roof_LOD1 (0.49-0.57) y LOD2 (caja con tejado en las Moradas; volumetria de color plano en
   los hitos, decision D); con interior: MARKER_<N>_Door (+Y hacia fuera) y <N>_InteriorVolume. Sin cubierta
@@ -314,7 +325,8 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
     MAT_Wood_Light #A4947C
 
   Emision (glTF: emissiveFactor + KHR_materials_emissive_strength si la fuerza pasa de 1):
-    MAT_Embers                   emision #E09A62 fuerza 1.5   natural
+    MAT_Crisol_Molten            emision #8FD0FF fuerza 1.2   magico #8FD0FF (etapa 25)
+    MAT_Embers                   emision #E09A62 fuerza 1.5   natural: UNICA excepcion calida (seccion 1a)
     MAT_Faro_Beam                emision #8FD0FF fuerza 1.5   magico #8FD0FF
     MAT_Glass_R04                emision #8FD0FF fuerza 0.25  magico #8FD0FF
     MAT_Obelisk_Mark_Lit         emision #8FD0FF fuerza 3.0   magico #8FD0FF
@@ -326,8 +338,8 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
     MAT_Shard_Blue_E40           emision #8FD0FF fuerza 4.0   magico #8FD0FF
     MAT_Stained_Glass_Blue       emision #8FD0FF fuerza 0.6   magico #8FD0FF
     MAT_Window_Warm              emision #AD9072 fuerza 1.0   natural
-  Etapa 24: MAT_Stained_Glass_Blue pasa de #7DB5E5 a #8FD0FF (unico color magico de la ciudad). MAT_Embers sigue
-  con saturacion 0.57 (excepcion pendiente de confirmar).
+  Etapa 24: MAT_Stained_Glass_Blue pasa de #7DB5E5 a #8FD0FF (unico color magico de la ciudad). MAT_Embers: excepcion
+  aprobada en la etapa 25 (seccion 1a).
 
   Objetos animables (nodos propios en los glb):
     PORTAL_Veil: velo del Portal: desplazamiento de UV / ondulacion, emision 3.0
@@ -337,6 +349,71 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
     CRISOL_FloatStone_01..07: piedras flotantes del Crisol: flotar y girar
     SalonClase_NN_Banner_Front/_Back, CasaRaza_NN_Banner, CasaRaza_NN_Flag: estandartes y banderas: viento (shader de vertices)
 
-  Presupuesto medido: 366 edificios, LOD0 607,876 tris (cuerpo + cubierta + props y extras), LOD2 46,517.
-  Ciudad completa en LOD0 (edificios + conexiones 44,056 + terreno 452,076 + muralla 107,132): 1,211,140.
+  Presupuesto medido (etapa 25): 370 edificios, LOD0 611,051 tris (cuerpo + cubierta + props y extras), LOD2 46,911.
+  Ciudad completa en LOD0 (edificios + conexiones 44,056 + terreno 452,076 + muralla 107,132): 1,214,315.
+  (Etapa 24: 366 edificios, 607,876 / 46,517; ciudad 1,211,140.)
   Detalle por edificio y distrito: docs/reports/stage24_godot.json.
+
+15. Decisiones de la etapa 25 (E12): concordia_v25.blend
+--------------------------------------------------------
+  Scripts: tools/blender/build_stage25.py (v24 -> v25), stage25_lots.py (suelo libre), stage25_faro.py (visuales al
+  Faro), measure_stage25_faro.py; despues se repite build_stage24.py sobre v25 (CONCORDIA_SRC = CONCORDIA_OUT = v25,
+  informe docs/reports/stage25_godot.json). Informes: stage25_decisiones.json, stage25_faro.json.
+
+  a) Brasas: ver seccion 1 (UNICA excepcion calida). Comprobado en v25: MAT_Embers solo en Taller_GranForja (2.12 m2,
+     0.08 % de su superficie) y Taller_Hornos (1.08 m2, 0.16 %); emision #E09A62 1.5, tono 27 grados, sin textura
+     de esquirla. El cuenco del Crisol (antes MAT_Embers, 0.47 %) pasa a MAT_Crisol_Molten (#8FD0FF 1.2). La Posada
+     y la chimenea de la Forja pueden usarlo en el interior de la chimenea; hoy no lo usan.
+
+  b) Gremio de Cazadores dentro de la muralla (opcion elegida: casa 12 x 8 + campo 14 x 8). No hay hueco de 20 x 14
+     ni de 14 x 10 libre en el sector Este (sin calles, plazas, escalinatas, puentes ni objetos).
+       Casa: MARKER_Bld_Gremio_Cazadores en (117.0, -21.0), giro -10.2 grados, r 118.9; 12 x 8, 2 plantas, gable,
+       timber, desnivel 0.29 m (faldon 0.6 m). Props: 2 cornamentas y 1 secadero de pieles. Interior: si.
+       Campo de tiro: Gremio_Cazadores_Range en (161.0, 51.0), giro 107.6 grados (tangente: paralelo a la muralla),
+       r 168.9 (anillo interior r 165-185); 14 x 8, valla de madera de 1.2 m (postes cada 2 m, 2 travesanos,
+       entrada de 2 m del lado de la ciudad), mostrador de tiro y 4 dianas; MARKER_Cazadores_Range; colision de la
+       valla (Gremio_Cazadores_Range-colonly). Esta a 84 m de la casa (no hay suelo libre de 14 x 8 mas cerca).
+       Exportado en bld_oficios.glb; concordia_gremio_cazadores_sin_parcela.glb borrado.
+       ACCESO AL CAMPO (pendiente de decision, no aplicado): el campo no toca la malla de navegacion por ningun
+       lado (el invernadero de Herbolarios queda a 1.5 m de la entrada y el lado de la muralla esta ocupado). El
+       punto publico mas cercano es (155, 65), a 8 m del extremo norte (+X local) por suelo libre. No hay ningun
+       hueco de 14 x 8 con frente a calle en el sector Este (el unico 12 x 6 con frente, (74, -54), cae a -36 grados,
+       fuera del sector). Propuesta: abrir la entrada en el extremo norte, camino de tierra de 8 x 2 m hasta (155, 65)
+       y anadir campo + camino a la malla de navegacion.
+
+  c) Razas: parcelas nuevas de 8 x 8 (3 plantas si no tapan el Faro). Busqueda en rejilla de 1 m en todo el sector Sur
+     (+-25 grados, r 60-185), incluidos los lados de los anillos r 100 y r 150: parcela + 0.3 m de margen sin
+     calle, plaza, escalinata, puente ni objeto, desnivel <= 1.2 m y frente a calle a <= 3.5 m. Solo hay 4 huecos:
+       (49, -117) -> RAZ_B01_Casa_06; (-59, -157) -> RAZ_B04_Casa_06; (33, -83) -> RAZ_B05_Casa_01 (yurta);
+       (23, -167) -> sin usar (junto a B03, que ya tiene sus 6 casas).
+     Las 3 casas nuevas tapaban alguna visual del Faro a 3 plantas y bajaron por la escalera hasta el paso c
+     (5.27-5.6 m); ninguna es la unica que tapa un punto de calle (0 puntos perdidos por ellas).
+     FALTAN 11 parcelas (no se inventa espacio): B02 1, B05 5, B06 5. Reducir el barrio a 32 x 32 no crea suelo
+     libre: los 4 huecos del sector ya son todos los que hay.
+
+  d) Faro (criterio: 1.7 m cada 10 m; se ve si >= 2 de 6 visuales a la galeria superior: ultimos 6 m + cristal).
+     Escalera aplicada solo donde deja de tapar (simulacion sobre v24):
+       Edificio           Antes   Despues  Paso                       Tapaba
+       Morada_NO_033      9.36    6.06     a (habitacion 2 plantas)    Diagonal NO
+       Morada_NO_002      9.36    6.06     a                           Diagonal NO
+       Morada_SE_023      9.36    6.06     a                           Diagonal SE
+       Morada_SE_036      9.36    6.06     a                           Diagonal SE
+       Morada_SE_004      9.36    6.06     a                           Diagonal SE
+       RAZ_B01_Casa_01    11.02   5.38     c (1 planta + cubierta)     STR_RAZ_Ring150
+       RAZ_B01_Casa_02    11.42   5.50     c                           STR_RAZ_Ring150
+       RAZ_B02_Casa_02    13.12   5.50     c                           STR_RAZ_Ring150
+     Visibilidad (v24 -> v25): avenidas 78.3 -> 78.3 %; anillos 56.6 -> 57.8 %; diagonales 36.7 -> 38.8 %;
+     callejones 47.8 -> 47.8 %. Edificios que tapan: 96 -> 88 (29 de servicio).
+     El 100 % (y el 90 % en callejones) NO se alcanza con la escalera: los hitos y puertas de la muralla, que no se
+     tocan, tapan 18 de los 49 puntos de las diagonales (Obelisco 12, Salon 4, Santuario 2) y 4 de las avenidas
+     (puertas selladas); los demas edificios necesitarian quedarse por debajo de 0.8-6.6 m (la mayoria < 5.5 m, el
+     paso c). Edificios de servicio que siguen tapando: lista en stage25_faro.json (decision pendiente).
+
+  e) Ajustes SIN aplicar (pendientes de decision): galerias de las Moradas NE/SO que tapan 53 puertas;
+     RAZ_B02_Casa_04 que tapa la puerta de CasaRaza_02.
+
+  f) Repositorio y LFS (diagnostico, sin forzar push): rama sincronizada con el remoto (0/0), solo commits de este
+     proyecto; git-lfs 3.4.1 instalado pero sin configurar (0 archivos en LFS). .git ocupa 3.3 GB; historial con 42
+     .blend antes de la v25 (2.19 GiB) y 579 glb/png/jpg (1.56 GiB). El .blend mayor (v25) pesa 77.6 MB: < 100 MB (limite duro de
+     GitHub; aviso a partir de 50 MB). Migrar el historial a LFS supondria ~3.7 GiB en LFS: por encima de la cuota
+     gratuita (1 GiB de almacenamiento y 1 GiB/mes de descarga). No se migra ni se fuerza nada.

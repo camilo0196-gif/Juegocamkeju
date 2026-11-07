@@ -1,6 +1,6 @@
 CONCORDIA - TODO en Godot 4 (lo que el glTF no guarda)
 ======================================================
-Se actualiza en cada etapa. Ultima: etapa 20. [ ] = pendiente en Godot; (E#) = etapa en que aparece.
+Se actualiza en cada etapa. Ultima: etapa 25. [ ] = pendiente en Godot; (E#) = etapa en que aparece.
 
 Importacion general
 [ ] (E11) Los .glb usan texturas EXTERNAS con ruta relativa "../../textures/concordia/...": copiar la carpeta textures/
@@ -17,6 +17,8 @@ Importacion general
     Godot o pedir que se active el culling en Blender antes del export.
 [ ] (E13-17) Emision: activar Glow en el WorldEnvironment (HDR threshold ~1.0) para que #8FD0FF brille. Comprobar que
     el importador lee KHR_materials_emissive_strength (fuerza > 1.0: cristal 4.0, velo 3.0, marcas 3.0...).
+[ ] (E25) MAT_Embers (#E09A62, 1.5) es la UNICA emision calida: no subir su fuerza en Godot por encima de 1.5 ni
+    mezclarla con luces azules; su OmniLight3D (si se pone) naranja tenue y solo en Gran Forja y Hornos.
 [ ] (E13-17) Materiales con alpha (BLEND): MAT_Portal_Veil 0.6, MAT_Faro_Beam 0.3, MAT_Pipe_Glass 0.35 -> revisar
     render_priority / orden de transparencias y desactivar sombras en el velo y el haz.
 
@@ -81,10 +83,14 @@ Oficios (E19)
 [ ] Alquimia: humo de color en MARKER_Alquimia_Smoke_01/02 (bocas de las chimeneas).
 [ ] Crisol de las Piedras: CRISOL_FloatStone_01..07 flotan y giran sobre el cuenco; el haz del oculo
     (MAT_Faro_Beam dentro de CrisolPiedras_Body) en blend_mode ADD como el del Faro; el cuenco (MAT_Embers) con
-    ondulacion.
+    ondulacion. Etapa 25: el cuenco usa MAT_Crisol_Molten (#8FD0FF 1.2), ya no MAT_Embers.
 [ ] Hornos: humo en la chimenea y brasas en la boca del horno.
 [ ] Pescadores: las barcas (Gremio_Pescadores_Prop_Boat_01/02) con balanceo leve en el agua.
-[ ] Gremio de Cazadores: colocar cuando tenga parcela (escena aparte concordia_gremio_cazadores_sin_parcela.glb).
+[ ] (E25) Gremio de Cazadores: ya en bld_oficios.glb (casa en MARKER_Bld_Gremio_Cazadores). El campo de tiro
+    (Gremio_Cazadores_Range, MARKER_Cazadores_Range) esta a 84 m, junto a la muralla: si hace falta, un indicador
+    de camino o una NPC que lleve de la casa al campo. Dianas Gremio_Cazadores_Prop_Target_01..04: Area3D de
+    impacto opcional. Borrar concordia_gremio_cazadores_sin_parcela.glb del proyecto si ya se importo.
+    El campo NO esta en la malla de navegacion ni toca una calle (ver README 15b; decision pendiente en Blender).
 
 Clases (E20)
 [ ] Estandartes (SalonClase_NN_Banner_*): cambiar la textura por clase (material_override con el emblema definitivo,
@@ -132,3 +138,12 @@ Version final (E24)
 [ ] <N>_Roof: ocultar al entrar en <N>_InteriorVolume; LOD con visibility_range (LOD0 / LOD1 / LOD2).
 [ ] Animables: ver README_buildings.txt seccion 14.
 
+Decisiones de la etapa 25 (E12)
+[ ] Reimportar bld_oficios.glb (Cazadores, cuenco del Crisol), bld_razas.glb (casas nuevas RAZ_B01_Casa_06,
+    RAZ_B04_Casa_06, RAZ_B05_Casa_01 y casas rebajadas por el Faro), bld_moradas_NO / _SE.glb (5 habitaciones a 2
+    plantas) y concordia_markers.glb.
+[ ] NAVLINK_RAZ_B05_Casa_01_Door_Start/_End: la puerta de la yurta nueva queda fuera de la malla (2.87 m):
+    NavigationLink3D como las otras 12.
+[ ] Faro: la visibilidad desde las calles sigue por debajo del criterio (avenidas 78.3 %, anillos 57.8 %,
+    diagonales 38.8 %, callejones 47.8 %). Si no se decide bajar edificios de servicio, alternativa en Godot: el
+    cristal y el haz del Faro sin depth test o un icono de brujula/HUD que apunte al Faro (decision pendiente).

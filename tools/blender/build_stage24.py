@@ -36,9 +36,9 @@ import stage11_godot as G  # noqa: E402
 import stage13_portal as P13  # noqa: E402
 
 REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
-SRC = os.path.join(REPO, "blender", f"{C.BLEND_BASENAME}_v23.blend")
-OUT = os.path.join(REPO, "blender", f"{C.BLEND_BASENAME}_v24.blend")
-REPORT = os.path.join(REPO, "docs", "reports", "stage24_godot.json")
+SRC = os.environ.get("CONCORDIA_SRC") or os.path.join(REPO, "blender", f"{C.BLEND_BASENAME}_v23.blend")
+OUT = os.environ.get("CONCORDIA_OUT") or os.path.join(REPO, "blender", f"{C.BLEND_BASENAME}_v24.blend")
+REPORT = os.environ.get("CONCORDIA_REPORT") or os.path.join(REPO, "docs", "reports", "stage24_godot.json")
 EXP = os.path.join(REPO, "export", "godot")
 DISTRICT_COLS = {"BLD_PORTAL": "portal", "BLD_MERCADO": "mercado", "BLD_OFICIOS": "oficios", "BLD_CLASES": "clases",
                  "BLD_RAZAS": "razas", "BLD_MORADAS_NE": "moradas_NE", "BLD_MORADAS_NO": "moradas_NO",
@@ -47,13 +47,50 @@ FILES = ("portal", "mercado", "oficios", "clases", "razas", "moradas_NE", "morad
 SUPERSEDED = ("concordia_clases.glb", "concordia_mercado.glb", "concordia_oficios.glb", "concordia_razas.glb",
               "concordia_portal.glb", "concordia_faro.glb", "concordia_santuario.glb", "concordia_salon_hazanas.glb",
               "concordia_obelisk.glb", "concordia_conexiones.glb", "moradas_NE.glb", "moradas_NO.glb", "moradas_SE.glb",
-              "moradas_SO.glb")
+              "moradas_SO.glb", "concordia_gremio_cazadores_sin_parcela.glb")
 MAGIC = (0x8F / 255, 0xD0 / 255, 0xFF / 255)
 NATURAL_WARM = {"MAT_Window_Warm": "luz calida de ventana (natural, aprobada E3)",
-                "MAT_Embers": "brasas (natural; excepcion de saturacion pendiente de confirmar)"}
+                "MAT_Embers": "brasas: UNICA excepcion calida a la paleta (aprobada en la etapa 25: Gran Forja, Hornos y chimeneas de Posada y Forja; emision <= 1.5; < 2 % de la superficie)"}
 ALLOWED_NODES = {"OUTPUT_MATERIAL", "BSDF_PRINCIPLED", "TEX_IMAGE", "UVMAP", "MAPPING", "SEPARATE_COLOR", "NORMAL_MAP",
                  "MIX", "GROUP"}
 CAM_BACK = None
+EMBERS = "MAT_Embers"                       # UNICA excepcion calida a la paleta (decision del usuario, etapa 25)
+EMBERS_ALLOWED = ("Taller_GranForja", "Taller_Hornos", "Posada")   # fundicion, hornos e interior de chimeneas
+
+
+def embers_check(st):
+    """Condiciones de la excepcion: solo en Forja, Hornos y chimeneas de Posada/Forja; emision <= 1.5; tono calido
+    (nunca azul); < 2 % de la superficie visible de cada edificio; ningun otro material naranja saturado."""
+    m = bpy.data.materials.get(EMBERS)
+    b = next(nd for nd in m.node_tree.nodes if nd.type == "BSDF_PRINCIPLED")
+    es = float(b.inputs["Emission Strength"].default_value)
+    ec = tuple(srgb(c) for c in b.inputs["Emission Color"].default_value[:3])
+    hue = colorsys.rgb_to_hsv(*ec)[0] * 360
+    uses = defaultdict(float)
+    for o in bpy.data.objects:
+        if o.type != "MESH" or o.hide_render or o.name.endswith(("_LOD1", "_LOD2", "-colonly", "_InteriorVolume")):
+            continue
+        names = [mm.name if mm else "" for mm in o.data.materials]
+        if EMBERS not in names:
+            continue
+        r = o
+        while r.parent is not None:
+            r = r.parent
+        i = names.index(EMBERS)
+        uses[r.name] += sum(p.area for p in o.data.polygons if p.material_index == i)
+    rows, ok = {}, True
+    for rn, a in uses.items():
+        r = bpy.data.objects[rn]
+        tot = sum(p.area for ob in [r] + list(r.children_recursive) if ob.type == "MESH" and not ob.hide_render
+                  and not ob.name.endswith(("_LOD1", "_LOD2", "-colonly", "_InteriorVolume")) for p in ob.data.polygons)
+        pct = 100.0 * a / max(tot, 1e-6)
+        allowed = rn in EMBERS_ALLOWED
+        rows[rn] = {"m2": round(a, 2), "pct_surface": round(pct, 2), "allowed_building": allowed, "under_2pct": pct < 2.0}
+        ok = ok and allowed and pct < 2.0
+    shard_mix = any(nd.type == "TEX_IMAGE" and nd.image and "shard" in nd.image.name.lower() for nd in m.node_tree.nodes)
+    ok = ok and es <= 1.5 and 10 <= hue <= 50 and not shard_mix
+    st["embers_exception"] = {"material": EMBERS, "emission": hexc(ec), "strength": es, "hue": round(hue, 1),
+                              "never_blue": 10 <= hue <= 50 and not shard_mix, "uses": rows, "all_conditions_ok": ok}
 
 
 def tris(o):
@@ -358,7 +395,7 @@ def material_audit(objs, st):
             is_magic = abs(ec[0] - MAGIC[0]) < 0.02 and abs(ec[1] - MAGIC[1]) < 0.02 and abs(ec[2] - MAGIC[2]) < 0.02
             if not is_magic and n not in NATURAL_WARM:
                 magic_bad.append((n, row["emission"], round(eh, 1), round(es_, 2)))
-        if s_ > 0.35 and not (185 <= h_ <= 215) and not n.startswith("MAT_LOD2_"):
+        if s_ > 0.35 and not (185 <= h_ <= 215) and not n.startswith("MAT_LOD2_") and n != EMBERS:
             sat_bad.append((n, row["base"], row["sat"], row["hue"]))
         rows[n] = row
     st["materials"] = {"count": len(used), "not_concordia": not_concordia, "non_exportable_nodes": bad_nodes,
@@ -700,6 +737,9 @@ def nav_checks(reg, st):
                 if loc is not None:
                     r = info["root"]
                     for tag, q in (("Start", loc), ("End", p)):
+                        old = bpy.data.objects.get(f"NAVLINK_{dm.name[7:]}_{tag}")
+                        if old is not None:
+                            bpy.data.objects.remove(old)
                         e = bpy.data.objects.new(f"NAVLINK_{dm.name[7:]}_{tag}", None)
                         e.empty_display_type = "SPHERE"
                         e.empty_display_size = 0.3
@@ -849,6 +889,7 @@ def main():
     files["props"] = props_library(st)
     all_exp = [o for v in files.values() for o in v]
     used = material_audit(all_exp, st)
+    embers_check(st)
     emissive_names = list(st["materials"]["emissive"])
     for o in bpy.data.objects:
         if o.name.endswith(("_LOD1", "_LOD2")):

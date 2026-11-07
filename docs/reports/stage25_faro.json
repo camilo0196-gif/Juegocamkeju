@@ -1,0 +1,1236 @@
+{
+ "visibility": {
+  "avenida": {
+   "points": 60,
+   "visible": 47,
+   "pct": 78.3,
+   "blocked_by": [
+    [
+     "CLA_Casa_02",
+     4
+    ],
+    [
+     "Taller_Carpinteria",
+     3
+    ],
+    [
+     "CasaRegistro",
+     2
+    ],
+    [
+     "MARKER_Bridge_02",
+     1
+    ],
+    [
+     "GATE_Slot00_Sealed_Twin",
+     1
+    ],
+    [
+     "GATE_Slot12_Sealed_Twin",
+     1
+    ],
+    [
+     "GATE_Slot24_Sealed_Twin",
+     1
+    ],
+    [
+     "GATE_Slot36_Sealed_Twin",
+     1
+    ]
+   ],
+   "blocked_by_category": {
+    "edificio": 9,
+    "conexion": 1,
+    "muralla": 4
+   }
+  },
+  "anillo": {
+   "points": 83,
+   "visible": 48,
+   "pct": 57.8,
+   "blocked_by": [
+    [
+     "SALON_HAZANAS",
+     4
+    ],
+    [
+     "Gremio_Mineros",
+     3
+    ],
+    [
+     "TesoreriaMuralla",
+     3
+    ],
+    [
+     "SalonClase_07",
+     3
+    ],
+    [
+     "CasaReposicion",
+     3
+    ],
+    [
+     "SalonClase_01",
+     3
+    ],
+    [
+     "CasaRaza_01",
+     3
+    ],
+    [
+     "Taller_GranForja",
+     2
+    ],
+    [
+     "Banco",
+     2
+    ],
+    [
+     "SalonClase_08",
+     2
+    ],
+    [
+     "SalonClase_02",
+     2
+    ],
+    [
+     "CasaRaza_06",
+     2
+    ]
+   ],
+   "blocked_by_category": {
+    "edificio": 35,
+    "conexion": 2,
+    "hito": 4
+   }
+  },
+  "callejon": {
+   "points": 157,
+   "visible": 75,
+   "pct": 47.8,
+   "blocked_by": [
+    [
+     "TesoreriaMuralla",
+     9
+    ],
+    [
+     "GranSubasta",
+     6
+    ],
+    [
+     "SalonClase_02",
+     5
+    ],
+    [
+     "SalonClase_05",
+     4
+    ],
+    [
+     "CasaRaza_02",
+     4
+    ],
+    [
+     "SalonClase_07",
+     4
+    ],
+    [
+     "RAZ_B06_Casa_01",
+     4
+    ],
+    [
+     "CasaRaza_06",
+     4
+    ],
+    [
+     "Gremio_Pescadores",
+     3
+    ],
+    [
+     "CasaReposicion",
+     3
+    ],
+    [
+     "SalonClase_04",
+     3
+    ],
+    [
+     "CLA_Casa_11",
+     3
+    ]
+   ],
+   "blocked_by_category": {
+    "edificio": 80,
+    "conexion": 1,
+    "hito": 2,
+    "terreno": 3
+   }
+  },
+  "diagonal": {
+   "points": 49,
+   "visible": 19,
+   "pct": 38.8,
+   "blocked_by": [
+    [
+     "OBELISK",
+     12
+    ],
+    [
+     "SALON_HAZANAS",
+     4
+    ],
+    [
+     "Morada_SE_022",
+     3
+    ],
+    [
+     "SANTUARIO",
+     2
+    ],
+    [
+     "Morada_NO_034",
+     2
+    ],
+    [
+     "Morada_SE_003",
+     2
+    ],
+    [
+     "Morada_SE_011",
+     2
+    ],
+    [
+     "Morada_SE_035",
+     2
+    ],
+    [
+     "Morada_SE_048",
+     2
+    ],
+    [
+     "Morada_NO_003",
+     1
+    ],
+    [
+     "Morada_NO_047",
+     1
+    ]
+   ],
+   "blocked_by_category": {
+    "hito": 18,
+    "edificio": 12
+   }
+  }
+ },
+ "blockers": [
+  {
+   "name": "TesoreriaMuralla",
+   "kind": "servicio",
+   "points": 12,
+   "streets": {
+    "STR_MER_Ring150": 3,
+    "STR_MER_CallejonRonda_L": 1,
+    "STR_MER_CallejonEscalera_10": 2,
+    "STR_MER_CallejonEscalera_12": 1,
+    "STR_MER_Callejon_02": 2,
+    "STR_MER_Callejon_05": 3
+   },
+   "h_now": 18.1,
+   "h_req": 3.6,
+   "floors": null
+  },
+  {
+   "name": "SalonClase_07",
+   "kind": "servicio",
+   "points": 7,
+   "streets": {
+    "STR_CLA_Ring100": 2,
+    "STR_CLA_Ring150": 1,
+    "STR_CLA_CallejonEscalera_16": 2,
+    "STR_CLA_CallejonEscalera_17": 2
+   },
+   "h_now": 12.55,
+   "h_req": 2.36,
+   "floors": null
+  },
+  {
+   "name": "SalonClase_02",
+   "kind": "servicio",
+   "points": 7,
+   "streets": {
+    "STR_CLA_Ring150": 2,
+    "STR_CLA_Callejon_01": 2,
+    "STR_CLA_Callejon_02": 3
+   },
+   "h_now": 12.99,
+   "h_req": 3.31,
+   "floors": null
+  },
+  {
+   "name": "CasaReposicion",
+   "kind": "servicio",
+   "points": 6,
+   "streets": {
+    "STR_CLA_Ring150": 3,
+    "STR_CLA_CallejonRonda_R": 3
+   },
+   "h_now": 12.25,
+   "h_req": 1.89,
+   "floors": 2
+  },
+  {
+   "name": "CasaRaza_06",
+   "kind": "servicio",
+   "points": 6,
+   "streets": {
+    "STR_RAZ_Ring100": 2,
+    "STR_RAZ_CallejonEscalera_20": 2,
+    "STR_RAZ_CallejonEscalera_21": 2
+   },
+   "h_now": 14.26,
+   "h_req": 3.94,
+   "floors": 3
+  },
+  {
+   "name": "CasaRaza_02",
+   "kind": "servicio",
+   "points": 6,
+   "streets": {
+    "STR_RAZ_Ring150": 2,
+    "STR_RAZ_CallejonRonda_R": 3,
+    "STR_RAZ_Callejon_01": 1
+   },
+   "h_now": 18.81,
+   "h_req": 2.91,
+   "floors": 3
+  },
+  {
+   "name": "GranSubasta",
+   "kind": "servicio",
+   "points": 6,
+   "streets": {
+    "STR_MER_CallejonRonda_R": 6
+   },
+   "h_now": 10.55,
+   "h_req": 5.67,
+   "floors": null
+  },
+  {
+   "name": "CLA_Casa_02",
+   "kind": "decorativo",
+   "points": 5,
+   "streets": {
+    "STR_CLA_Avenue": 4,
+    "STR_CLA_Ring100": 1
+   },
+   "h_now": 10.58,
+   "h_req": 3.69,
+   "floors": 2
+  },
+  {
+   "name": "Gremio_Mineros",
+   "kind": "servicio",
+   "points": 5,
+   "streets": {
+    "STR_OFI_Ring150": 3,
+    "STR_OFI_CallejonRonda_R": 2
+   },
+   "h_now": 19.53,
+   "h_req": 2.47,
+   "floors": 2
+  },
+  {
+   "name": "SalonClase_01",
+   "kind": "servicio",
+   "points": 5,
+   "streets": {
+    "STR_CLA_Ring150": 3,
+    "STR_CLA_CallejonRonda_L": 1,
+    "STR_CLA_CallejonEscalera_19": 1
+   },
+   "h_now": 13.59,
+   "h_req": 0.77,
+   "floors": null
+  },
+  {
+   "name": "RAZ_B06_Casa_01",
+   "kind": "decorativo",
+   "points": 5,
+   "streets": {
+    "STR_RAZ_Ring100": 1,
+    "STR_RAZ_CallejonEscalera_20": 2,
+    "STR_RAZ_CallejonEscalera_21": 2
+   },
+   "h_now": 7.3,
+   "h_req": 2.26,
+   "floors": 2
+  },
+  {
+   "name": "CasaRaza_01",
+   "kind": "servicio",
+   "points": 5,
+   "streets": {
+    "STR_RAZ_Ring150": 3,
+    "STR_RAZ_CallejonRonda_L": 2
+   },
+   "h_now": 20.12,
+   "h_req": 3.63,
+   "floors": 3
+  },
+  {
+   "name": "Posada",
+   "kind": "servicio",
+   "points": 4,
+   "streets": {
+    "STR_MER_Ring100": 1,
+    "STR_MER_CallejonEscalera_09": 2,
+    "STR_MER_Callejon_02": 1
+   },
+   "h_now": 19.61,
+   "h_req": 6.6,
+   "floors": 3
+  },
+  {
+   "name": "SalonClase_08",
+   "kind": "servicio",
+   "points": 4,
+   "streets": {
+    "STR_CLA_Ring100": 2,
+    "STR_CLA_Callejon_05": 2
+   },
+   "h_now": 12.89,
+   "h_req": 1.22,
+   "floors": null
+  },
+  {
+   "name": "RAZ_B02_Casa_01",
+   "kind": "decorativo",
+   "points": 4,
+   "streets": {
+    "STR_RAZ_Ring150": 2,
+    "STR_RAZ_CallejonRonda_R": 1,
+    "STR_RAZ_Callejon_01": 1
+   },
+   "h_now": 13.85,
+   "h_req": 5.95,
+   "floors": 3
+  },
+  {
+   "name": "SalonClase_05",
+   "kind": "servicio",
+   "points": 4,
+   "streets": {
+    "STR_CLA_CallejonRonda_L": 2,
+    "STR_CLA_CallejonEscalera_19": 2
+   },
+   "h_now": 13.09,
+   "h_req": 1.56,
+   "floors": null
+  },
+  {
+   "name": "Taller_Carpinteria",
+   "kind": "servicio",
+   "points": 3,
+   "streets": {
+    "STR_OFI_Avenue": 3
+   },
+   "h_now": 12.25,
+   "h_req": 1.5,
+   "floors": 2
+  },
+  {
+   "name": "CLA_Casa_04",
+   "kind": "decorativo",
+   "points": 3,
+   "streets": {
+    "STR_CLA_Ring150": 1,
+    "STR_CLA_CallejonRonda_L": 1,
+    "STR_CLA_CallejonEscalera_19": 1
+   },
+   "h_now": 14.22,
+   "h_req": 1.87,
+   "floors": 3
+  },
+  {
+   "name": "RAZ_B01_Casa_03",
+   "kind": "decorativo",
+   "points": 3,
+   "streets": {
+    "STR_RAZ_Ring150": 1,
+    "STR_RAZ_CallejonRonda_L": 2
+   },
+   "h_now": 14.22,
+   "h_req": 1.86,
+   "floors": 3
+  },
+  {
+   "name": "RAZ_B01_Casa_04",
+   "kind": "decorativo",
+   "points": 3,
+   "streets": {
+    "STR_RAZ_Ring150": 1,
+    "STR_RAZ_CallejonRonda_L": 2
+   },
+   "h_now": 11.02,
+   "h_req": 1.95,
+   "floors": 2
+  },
+  {
+   "name": "Gremio_Pescadores",
+   "kind": "servicio",
+   "points": 3,
+   "streets": {
+    "STR_OFI_CallejonRonda_R": 3
+   },
+   "h_now": 13.32,
+   "h_req": 5.45,
+   "floors": 2
+  },
+  {
+   "name": "SalonClase_04",
+   "kind": "servicio",
+   "points": 3,
+   "streets": {
+    "STR_CLA_CallejonRonda_R": 2,
+    "STR_CLA_Callejon_02": 1
+   },
+   "h_now": 13.19,
+   "h_req": 4.74,
+   "floors": null
+  },
+  {
+   "name": "CLA_Casa_11",
+   "kind": "decorativo",
+   "points": 3,
+   "streets": {
+    "STR_CLA_CallejonRonda_R": 2,
+    "STR_CLA_CallejonEscalera_15": 1
+   },
+   "h_now": 11.02,
+   "h_req": 1.99,
+   "floors": 2
+  },
+  {
+   "name": "Morada_NO_028",
+   "kind": "decorativo",
+   "points": 3,
+   "streets": {
+    "STR_CLA_CallejonRonda_R": 1,
+    "STR_CLA_CallejonEscalera_15": 2
+   },
+   "h_now": 9.36,
+   "h_req": 5.11,
+   "floors": null
+  },
+  {
+   "name": "Morada_SE_022",
+   "kind": "decorativo",
+   "points": 3,
+   "streets": {
+    "Diagonal SE": 3
+   },
+   "h_now": 9.36,
+   "h_req": 2.82,
+   "floors": null
+  },
+  {
+   "name": "CasaRegistro",
+   "kind": "servicio",
+   "points": 2,
+   "streets": {
+    "STR_MER_Avenue": 2
+   },
+   "h_now": 13.32,
+   "h_req": 3.74,
+   "floors": 2
+  },
+  {
+   "name": "Taller_GranForja",
+   "kind": "servicio",
+   "points": 2,
+   "streets": {
+    "STR_OFI_Ring150": 2
+   },
+   "h_now": 14.0,
+   "h_req": 2.45,
+   "floors": 1
+  },
+  {
+   "name": "MER_Casa_01",
+   "kind": "decorativo",
+   "points": 2,
+   "streets": {
+    "STR_MER_Ring100": 1,
+    "STR_MER_CallejonEscalera_09": 1
+   },
+   "h_now": 14.01,
+   "h_req": 3.54,
+   "floors": 3
+  },
+  {
+   "name": "Banco",
+   "kind": "servicio",
+   "points": 2,
+   "streets": {
+    "STR_MER_Ring150": 2
+   },
+   "h_now": 7.3,
+   "h_req": 4.6,
+   "floors": 2
+  },
+  {
+   "name": "CLA_Casa_03",
+   "kind": "decorativo",
+   "points": 2,
+   "streets": {
+    "STR_CLA_Ring150": 1,
+    "STR_CLA_CallejonRonda_L": 1
+   },
+   "h_now": 10.79,
+   "h_req": 1.87,
+   "floors": 2
+  },
+  {
+   "name": "RAZ_B02_Casa_03",
+   "kind": "decorativo",
+   "points": 2,
+   "streets": {
+    "STR_RAZ_Ring150": 1,
+    "STR_RAZ_CallejonRonda_R": 1
+   },
+   "h_now": 13.46,
+   "h_req": 1.78,
+   "floors": 3
+  },
+  {
+   "name": "RAZ_B01_Casa_05",
+   "kind": "decorativo",
+   "points": 2,
+   "streets": {
+    "STR_RAZ_Ring150": 1,
+    "STR_RAZ_CallejonRonda_L": 1
+   },
+   "h_now": 14.01,
+   "h_req": 3.73,
+   "floors": 3
+  },
+  {
+   "name": "CrisolPiedras",
+   "kind": "servicio",
+   "points": 2,
+   "streets": {
+    "STR_OFI_CallejonRonda_L": 2
+   },
+   "h_now": 20.0,
+   "h_req": 4.37,
+   "floors": null
+  },
+  {
+   "name": "OFI_Casa_02",
+   "kind": "decorativo",
+   "points": 2,
+   "streets": {
+    "STR_OFI_CallejonRonda_L": 2
+   },
+   "h_now": 10.81,
+   "h_req": 1.88,
+   "floors": 2
+  },
+  {
+   "name": "Taller_Curtiduria",
+   "kind": "servicio",
+   "points": 2,
+   "streets": {
+    "STR_OFI_CallejonRonda_R": 2
+   },
+   "h_now": 10.39,
+   "h_req": 1.95,
+   "floors": 2
+  },
+  {
+   "name": "MER_Casa_02",
+   "kind": "decorativo",
+   "points": 2,
+   "streets": {
+    "STR_MER_CallejonRonda_L": 2
+   },
+   "h_now": 10.81,
+   "h_req": 1.86,
+   "floors": 2
+  },
+  {
+   "name": "MER_Casa_03",
+   "kind": "decorativo",
+   "points": 2,
+   "streets": {
+    "STR_MER_CallejonRonda_L": 2
+   },
+   "h_now": 14.01,
+   "h_req": 1.68,
+   "floors": 3
+  },
+  {
+   "name": "MER_Casa_08",
+   "kind": "decorativo",
+   "points": 2,
+   "streets": {
+    "STR_MER_CallejonRonda_L": 1,
+    "STR_MER_CallejonEscalera_12": 1
+   },
+   "h_now": 14.2,
+   "h_req": 1.93,
+   "floors": 3
+  },
+  {
+   "name": "MER_Casa_07",
+   "kind": "decorativo",
+   "points": 2,
+   "streets": {
+    "STR_MER_CallejonRonda_R": 2
+   },
+   "h_now": 15.45,
+   "h_req": 1.76,
+   "floors": 3
+  },
+  {
+   "name": "SalonClase_03",
+   "kind": "servicio",
+   "points": 2,
+   "streets": {
+    "STR_CLA_CallejonRonda_L": 2
+   },
+   "h_now": 13.69,
+   "h_req": 1.95,
+   "floors": null
+  },
+  {
+   "name": "CLA_Casa_12",
+   "kind": "decorativo",
+   "points": 2,
+   "streets": {
+    "STR_CLA_CallejonRonda_L": 1,
+    "STR_CLA_CallejonEscalera_19": 1
+   },
+   "h_now": 10.81,
+   "h_req": 1.75,
+   "floors": 2
+  },
+  {
+   "name": "SalonClase_06",
+   "kind": "servicio",
+   "points": 2,
+   "streets": {
+    "STR_CLA_CallejonRonda_R": 2
+   },
+   "h_now": 12.99,
+   "h_req": 4.9,
+   "floors": null
+  },
+  {
+   "name": "RAZ_B03_Casa_01",
+   "kind": "decorativo",
+   "points": 2,
+   "streets": {
+    "STR_RAZ_CallejonRonda_L": 2
+   },
+   "h_now": 16.73,
+   "h_req": 5.56,
+   "floors": 3
+  },
+  {
+   "name": "CasaRaza_03",
+   "kind": "servicio",
+   "points": 2,
+   "streets": {
+    "STR_RAZ_CallejonRonda_L": 2
+   },
+   "h_now": 23.65,
+   "h_req": 2.95,
+   "floors": 3
+  },
+  {
+   "name": "RAZ_B03_Casa_03",
+   "kind": "decorativo",
+   "points": 2,
+   "streets": {
+    "STR_RAZ_CallejonRonda_L": 2
+   },
+   "h_now": 13.53,
+   "h_req": 5.42,
+   "floors": 2
+  },
+  {
+   "name": "RAZ_B03_Casa_06",
+   "kind": "decorativo",
+   "points": 2,
+   "streets": {
+    "STR_RAZ_CallejonRonda_L": 2
+   },
+   "h_now": 12.57,
+   "h_req": 1.59,
+   "floors": 2
+  },
+  {
+   "name": "RAZ_B04_Casa_05",
+   "kind": "decorativo",
+   "points": 2,
+   "streets": {
+    "STR_RAZ_CallejonRonda_R": 2
+   },
+   "h_now": 16.42,
+   "h_req": 4.84,
+   "floors": 2
+  },
+  {
+   "name": "CasaRaza_04",
+   "kind": "servicio",
+   "points": 2,
+   "streets": {
+    "STR_RAZ_CallejonRonda_R": 2
+   },
+   "h_now": 23.22,
+   "h_req": 2.83,
+   "floors": 3
+  },
+  {
+   "name": "Morada_NO_034",
+   "kind": "decorativo",
+   "points": 2,
+   "streets": {
+    "Diagonal NO": 2
+   },
+   "h_now": 9.36,
+   "h_req": 3.73,
+   "floors": null
+  },
+  {
+   "name": "Morada_SE_003",
+   "kind": "decorativo",
+   "points": 2,
+   "streets": {
+    "Diagonal SE": 2
+   },
+   "h_now": 9.36,
+   "h_req": 2.9,
+   "floors": null
+  },
+  {
+   "name": "Morada_SE_011",
+   "kind": "decorativo",
+   "points": 2,
+   "streets": {
+    "Diagonal SE": 2
+   },
+   "h_now": 9.36,
+   "h_req": 2.95,
+   "floors": null
+  },
+  {
+   "name": "Morada_SE_035",
+   "kind": "decorativo",
+   "points": 2,
+   "streets": {
+    "Diagonal SE": 2
+   },
+   "h_now": 8.36,
+   "h_req": 3.81,
+   "floors": null
+  },
+  {
+   "name": "Morada_SE_048",
+   "kind": "decorativo",
+   "points": 2,
+   "streets": {
+    "Diagonal SE": 2
+   },
+   "h_now": 9.36,
+   "h_req": 2.73,
+   "floors": null
+  },
+  {
+   "name": "Taller_Alquimia",
+   "kind": "servicio",
+   "points": 1,
+   "streets": {
+    "STR_OFI_Ring100": 1
+   },
+   "h_now": 19.0,
+   "h_req": 4.6,
+   "floors": null
+  },
+  {
+   "name": "CLA_Casa_01",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_CLA_Ring100": 1
+   },
+   "h_now": 10.81,
+   "h_req": 5.39,
+   "floors": 2
+  },
+  {
+   "name": "RAZ_B05_Casa_01",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_RAZ_Ring100": 1
+   },
+   "h_now": 5.6,
+   "h_req": 3.02,
+   "floors": 1
+  },
+  {
+   "name": "RAZ_B02_Casa_04",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_RAZ_Ring150": 1
+   },
+   "h_now": 10.49,
+   "h_req": 1.78,
+   "floors": 2
+  },
+  {
+   "name": "RAZ_B02_Casa_05",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_RAZ_Ring150": 1
+   },
+   "h_now": 10.15,
+   "h_req": 3.99,
+   "floors": 2
+  },
+  {
+   "name": "OFI_Casa_01",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_OFI_CallejonRonda_L": 1
+   },
+   "h_now": 10.81,
+   "h_req": 1.94,
+   "floors": 2
+  },
+  {
+   "name": "Taller_Hornos",
+   "kind": "servicio",
+   "points": 1,
+   "streets": {
+    "STR_OFI_CallejonRonda_R": 1
+   },
+   "h_now": 8.0,
+   "h_req": 2.02,
+   "floors": null
+  },
+  {
+   "name": "Taller_Sastreria",
+   "kind": "servicio",
+   "points": 1,
+   "streets": {
+    "STR_OFI_CallejonRonda_R": 1
+   },
+   "h_now": 10.66,
+   "h_req": 6.05,
+   "floors": 1
+  },
+  {
+   "name": "MER_Casa_04",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_MER_CallejonRonda_R": 1
+   },
+   "h_now": 11.65,
+   "h_req": 1.82,
+   "floors": 2
+  },
+  {
+   "name": "MER_Casa_05",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_MER_CallejonRonda_R": 1
+   },
+   "h_now": 14.85,
+   "h_req": 1.78,
+   "floors": 3
+  },
+  {
+   "name": "MER_Casa_06",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_MER_CallejonRonda_R": 1
+   },
+   "h_now": 14.01,
+   "h_req": 1.78,
+   "floors": 3
+  },
+  {
+   "name": "CLA_Casa_05",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_CLA_CallejonRonda_L": 1
+   },
+   "h_now": 14.43,
+   "h_req": 1.68,
+   "floors": 3
+  },
+  {
+   "name": "CLA_Casa_06",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_CLA_CallejonRonda_L": 1
+   },
+   "h_now": 11.23,
+   "h_req": 1.68,
+   "floors": 2
+  },
+  {
+   "name": "CLA_Casa_07",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_CLA_CallejonRonda_L": 1
+   },
+   "h_now": 10.81,
+   "h_req": 1.68,
+   "floors": 2
+  },
+  {
+   "name": "CLA_Casa_08",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_CLA_CallejonRonda_R": 1
+   },
+   "h_now": 14.64,
+   "h_req": 1.68,
+   "floors": 3
+  },
+  {
+   "name": "CLA_Casa_09",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_CLA_CallejonRonda_R": 1
+   },
+   "h_now": 10.81,
+   "h_req": 1.68,
+   "floors": 2
+  },
+  {
+   "name": "CLA_Casa_10",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_CLA_CallejonRonda_R": 1
+   },
+   "h_now": 14.01,
+   "h_req": 1.6,
+   "floors": 3
+  },
+  {
+   "name": "RAZ_B03_Casa_04",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_RAZ_CallejonRonda_L": 1
+   },
+   "h_now": 15.77,
+   "h_req": 1.59,
+   "floors": 3
+  },
+  {
+   "name": "RAZ_B03_Casa_05",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_RAZ_CallejonRonda_L": 1
+   },
+   "h_now": 13.53,
+   "h_req": 1.68,
+   "floors": 2
+  },
+  {
+   "name": "RAZ_B03_Casa_02",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_RAZ_CallejonRonda_L": 1
+   },
+   "h_now": 15.77,
+   "h_req": 5.7,
+   "floors": 3
+  },
+  {
+   "name": "Plazuela_03",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_RAZ_CallejonRonda_L": 1
+   },
+   "h_now": 8.1,
+   "h_req": 2.19,
+   "floors": null
+  },
+  {
+   "name": "Morada_SE_028",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_RAZ_CallejonRonda_L": 1
+   },
+   "h_now": 6.81,
+   "h_req": 3.96,
+   "floors": null
+  },
+  {
+   "name": "RAZ_B04_Casa_03",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_RAZ_CallejonRonda_R": 1
+   },
+   "h_now": 14.0,
+   "h_req": 1.73,
+   "floors": 2
+  },
+  {
+   "name": "RAZ_B04_Casa_02",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_RAZ_CallejonRonda_R": 1
+   },
+   "h_now": 17.6,
+   "h_req": 5.16,
+   "floors": 3
+  },
+  {
+   "name": "Plazuela_04",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_RAZ_CallejonRonda_R": 1
+   },
+   "h_now": 8.1,
+   "h_req": 2.11,
+   "floors": null
+  },
+  {
+   "name": "RAZ_B04_Casa_04",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_RAZ_CallejonRonda_R": 1
+   },
+   "h_now": 14.4,
+   "h_req": 1.68,
+   "floors": 2
+  },
+  {
+   "name": "RAZ_B04_Casa_01",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_RAZ_CallejonRonda_R": 1
+   },
+   "h_now": 20.42,
+   "h_req": 5.21,
+   "floors": 3
+  },
+  {
+   "name": "MER_Casa_09",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_MER_CallejonEscalera_10": 1
+   },
+   "h_now": 10.81,
+   "h_req": 3.48,
+   "floors": 2
+  },
+  {
+   "name": "MER_Casa_10",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_MER_CallejonEscalera_12": 1
+   },
+   "h_now": 10.79,
+   "h_req": 4.09,
+   "floors": 2
+  },
+  {
+   "name": "Morada_NO_016",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_CLA_CallejonEscalera_14": 1
+   },
+   "h_now": 6.81,
+   "h_req": 5.14,
+   "floors": null
+  },
+  {
+   "name": "Morada_SE_016",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_RAZ_CallejonEscalera_23": 1
+   },
+   "h_now": 5.6,
+   "h_req": 1.85,
+   "floors": null
+  },
+  {
+   "name": "PuestoProvisiones_07",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "STR_MER_Callejon_05": 1
+   },
+   "h_now": 2.85,
+   "h_req": 2.27,
+   "floors": null
+  },
+  {
+   "name": "Taller_JoyeriaTallado",
+   "kind": "servicio",
+   "points": 1,
+   "streets": {
+    "STR_OFI_Callejon_05": 1
+   },
+   "h_now": 10.8,
+   "h_req": 4.81,
+   "floors": null
+  },
+  {
+   "name": "Morada_NO_003",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "Diagonal NO": 1
+   },
+   "h_now": 9.36,
+   "h_req": 4.03,
+   "floors": null
+  },
+  {
+   "name": "Morada_NO_047",
+   "kind": "decorativo",
+   "points": 1,
+   "streets": {
+    "Diagonal NO": 1
+   },
+   "h_now": 9.36,
+   "h_req": 3.76,
+   "floors": null
+  }
+ ],
+ "criterion": "1.7 m cada 10 m; >= 2 de 6 visuales a la galeria superior del Faro (ultimos 6 m + cristal)"
+}
