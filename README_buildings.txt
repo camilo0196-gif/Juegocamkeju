@@ -264,3 +264,79 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
   - LOD1 = diezmado 0.5; LOD2 = caja con tejado, galerias / patio / balcon / muro de jardin y chimenea como cajas, un
     material plano (~11 % del LOD0). Exportacion por conjunto: export/godot/moradas_NE.glb, _NO, _SO, _SE.
 
+14. Godot 4: version final (etapa 24)
+-------------------------------------
+  Archivos (export/godot, glTF 2.0 binario, +Y arriba, texturas externas ../../textures/concordia/...):
+    bld_portal.glb         Portal (raiz PORTAL), Obelisco, Faro, Santuario, Salon de las Hazanas, Puente 01, escalinatas monumentales  [5.57 MB, 81123 tris con LOD y colisiones]
+    bld_mercado.glb        Mercado (Norte)  [6.67 MB, 102058 tris con LOD y colisiones]
+    bld_oficios.glb        Oficios (Este) y puentes 02-05  [4.74 MB, 70118 tris con LOD y colisiones]
+    bld_clases.glb         Clases (Oeste)  [6.69 MB, 97896 tris con LOD y colisiones]
+    bld_razas.glb          Razas (Sur) y arcos 06-09  [9.61 MB, 141896 tris con LOD y colisiones]
+    bld_moradas_NE.glb     Morada NE (+ sus escaleras)  [3.79 MB, 43754 tris con LOD y colisiones]
+    bld_moradas_NO.glb     Morada NO  [4.26 MB, 50846 tris con LOD y colisiones]
+    bld_moradas_SE.glb     Morada SE  [3.49 MB, 40536 tris con LOD y colisiones]
+    bld_moradas_SO.glb     Morada SO  [3.8 MB, 43903 tris con LOD y colisiones]
+    bld_kit.glb            kit modular (muros, cubiertas, conexiones)  [1.56 MB, 21313 tris con LOD y colisiones]
+    bld_props.glb          biblioteca de props (una instancia de cada malla)  [0.35 MB, 3688 tris con LOD y colisiones]
+    Siguen: concordia_terrain_<distrito>.glb (con la malla de navegacion recortada), concordia_wall_*.glb,
+    concordia_markers.glb y concordia_gremio_cazadores_sin_parcela.glb. Sustituidos y borrados: concordia_clases.glb, concordia_mercado.glb, concordia_oficios.glb, concordia_razas.glb, concordia_portal.glb, concordia_faro.glb, concordia_santuario.glb, concordia_salon_hazanas.glb, concordia_obelisk.glb, concordia_conexiones.glb, moradas_NE.glb, moradas_NO.glb, moradas_SE.glb, moradas_SO.glb.
+  Por edificio: <N>_Body, <N>_Roof (oculta al entrar), <N>_Props, <N>-colonly (cajas / prismas convexos),
+  <N>_Body_LOD1 / _Roof_LOD1 (0.49-0.57) y LOD2 (caja con tejado en las Moradas; volumetria de color plano en
+  los hitos, decision D); con interior: MARKER_<N>_Door (+Y hacia fuera) y <N>_InteriorVolume. Sin cubierta
+  separada: FARO, OBELISK, PORTAL (monumentos sin interior que ocultar; el Faro entra por la base).
+  Puertas tras porticos o patios (12): NAVLINK_<puerta>_Start/_End = NavigationLink3D de la malla a la puerta.
+
+  Materiales de Concordia usados por los edificios (70 + 114 planos MAT_LOD2_*; todos exportables: Image Texture ->
+  Principled, con Mix Multiply = baseColorFactor; sin otros nodos). Color medio sRGB (y alpha si < 1):
+    MAT_Ash_Gray #727272; MAT_Banner_CLASE_01 #907764; MAT_Banner_CLASE_02 #777E8A
+    MAT_Banner_CLASE_03 #798163; MAT_Banner_CLASE_04 #807987; MAT_Banner_CLASE_05 #89735A
+    MAT_Banner_CLASE_06 #758471; MAT_Banner_CLASE_07 #A39372; MAT_Banner_CLASE_08 #65605C
+    MAT_Banner_R01 #797570; MAT_Banner_R02 #978666; MAT_Banner_R03 #69584B
+    MAT_Banner_R04 #778692; MAT_Banner_R05 #967D6A; MAT_Banner_R06 #A79172
+    MAT_Bronze_Aged #73644C; MAT_Cloth_Patch_A #8A7462; MAT_Cloth_Patch_B #6E6B58
+    MAT_Cloth_Patch_C #A49884; MAT_Cobble_Concordia #AEA79D; MAT_Door_NumberPlate #D8D3C5
+    MAT_Door_Paint_01 #847E62; MAT_Door_Paint_02 #827E70; MAT_Door_Paint_03 #8D755E
+    MAT_Door_Paint_04 #7D6C56; MAT_Door_Paint_05 #917F62; MAT_Door_Paint_06 #887769
+    MAT_Embers #A67148; MAT_Facade_Earth_A #D8C9AF; MAT_Facade_Earth_B #D6C4B4
+    MAT_Facade_Earth_C #CECAB9; MAT_Faro_Beam #8FD0FF a0.3; MAT_Felt_R05 #B8B6B1
+    MAT_Glass_R04 #A9C9DC a0.35; MAT_Ground_Cracked #A49A88; MAT_Herb_Green #6E7B58
+    MAT_Hide_R05 #948475; MAT_Iron_Black #2E2D2B; MAT_Leaf_Old #5F6B4E
+    MAT_Limestone_Light #D8D3CB; MAT_Limestone_Worn #C3B9A8; MAT_Obelisk_Black #2C2C2D
+    MAT_Obelisk_Mark #4A4A4A; MAT_Obelisk_Mark_Lit #8FD0FF; MAT_Pipe_Glass #C9DDE6 a0.35
+    MAT_Pipe_Light_Core #8FD0FF; MAT_Plaza_Slab #B4ADA2; MAT_Portal_Veil #8FD0FF a0.6
+    MAT_Rock_Gray #6F6F6F; MAT_Roof_Shingle_Dark #725D4B; MAT_Roof_Shingle_Dark_B #695646
+    MAT_Roof_Slate #6D6F74; MAT_Roof_Slate_B #64676C; MAT_Roof_Slate_Blue #5F6974
+    MAT_Roof_Tile_Ocher #9E8A76; MAT_Roof_Tile_Ocher_B #8E7863; MAT_Rune_Glow_10 #8FD0FF
+    MAT_Rune_Glow_12 #8FD0FF; MAT_Shard_Blue #88C6F3; MAT_Shard_Blue_E40 #88C6F3
+    MAT_Stained_Glass_Blue #75AEDB; MAT_Stone_R01 #B1A89A; MAT_Stone_Repair #8D8579
+    MAT_Stone_Sand #C3B195; MAT_Straw #A69472; MAT_Wall_Gray #8F8D89
+    MAT_Water #1A201F; MAT_Window_Warm #836E58; MAT_Wood_Dark #4A4037
+    MAT_Wood_Light #A4947C
+
+  Emision (glTF: emissiveFactor + KHR_materials_emissive_strength si la fuerza pasa de 1):
+    MAT_Embers                   emision #E09A62 fuerza 1.5   natural
+    MAT_Faro_Beam                emision #8FD0FF fuerza 1.5   magico #8FD0FF
+    MAT_Glass_R04                emision #8FD0FF fuerza 0.25  magico #8FD0FF
+    MAT_Obelisk_Mark_Lit         emision #8FD0FF fuerza 3.0   magico #8FD0FF
+    MAT_Pipe_Light_Core          emision #8FD0FF fuerza 1.5   magico #8FD0FF
+    MAT_Portal_Veil              emision #8FD0FF fuerza 3.0   magico #8FD0FF
+    MAT_Rune_Glow_10             emision #8FD0FF fuerza 1.0   magico #8FD0FF
+    MAT_Rune_Glow_12             emision #8FD0FF fuerza 1.2   magico #8FD0FF
+    MAT_Shard_Blue               emision #8FD0FF fuerza 2.5   magico #8FD0FF
+    MAT_Shard_Blue_E40           emision #8FD0FF fuerza 4.0   magico #8FD0FF
+    MAT_Stained_Glass_Blue       emision #8FD0FF fuerza 0.6   magico #8FD0FF
+    MAT_Window_Warm              emision #AD9072 fuerza 1.0   natural
+  Etapa 24: MAT_Stained_Glass_Blue pasa de #7DB5E5 a #8FD0FF (unico color magico de la ciudad). MAT_Embers sigue
+  con saturacion 0.57 (excepcion pendiente de confirmar).
+
+  Objetos animables (nodos propios en los glb):
+    PORTAL_Veil: velo del Portal: desplazamiento de UV / ondulacion, emision 3.0
+    FARO_Beam: haz del Faro: giro lento, mezcla aditiva
+    Taller_Carpinteria_WATERWHEEL: rueda hidraulica: giro en su eje Y local (~6 rpm); eje Taller_Carpinteria_Axle
+    OBELISK_Mark_001..032: marcas de piso del Obelisco: material MAT_Obelisk_Mark_Lit al subir de piso
+    CRISOL_FloatStone_01..07: piedras flotantes del Crisol: flotar y girar
+    SalonClase_NN_Banner_Front/_Back, CasaRaza_NN_Banner, CasaRaza_NN_Flag: estandartes y banderas: viento (shader de vertices)
+
+  Presupuesto medido: 366 edificios, LOD0 607,876 tris (cuerpo + cubierta + props y extras), LOD2 46,517.
+  Ciudad completa en LOD0 (edificios + conexiones 44,056 + terreno 452,076 + muralla 107,132): 1,211,140.
+  Detalle por edificio y distrito: docs/reports/stage24_godot.json.

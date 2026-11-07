@@ -84,7 +84,7 @@ def remedy(tipo, plan):
         p.update(roof="lean", low_side="back")
         return p, "a un agua con el lado trasero bajo"
     if tipo == "casa_grande" and p["roof"] == "gable":
-        p.update(roof="catslide", pitch=28.0)
+        p.update(roof="catslide", pitch=24.0)
         return p, "faldon trasero largo (3.8 m)"
     return None, None
 
@@ -118,7 +118,8 @@ def door_targets(h):
     n = (h["mw"].to_3x3() @ Vector((0, 1, 0))).normalized()
     if n.dot(cxy) < -0.05:
         return []
-    return [(h["mw"] @ Vector((x, M.YF + 0.35, f * M.FH + 1.0)), (x, f)) for x, f in M.doors_of(h["tipo"], h["v"], h["plan"])]
+    # mismo punto que la verificacion final (etapa 24): 0.65 m por delante de la fachada, a 1.1 m
+    return [(h["mw"] @ Vector((x, M.YF + 0.65, f * M.FH + 1.1)), (x, f)) for x, f in M.doors_of(h["tipo"], h["v"], h["plan"])]
 
 
 def occlusion(houses, polys_fn):

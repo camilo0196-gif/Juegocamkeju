@@ -208,7 +208,7 @@ def section(tipo, plan):
         return top, top
     low = plan["low_side"]
     if tipo == "habitacion":
-        hi, lo = (top - 0.35 if low == "back" else top + 0.6), (FH + 0.4 if low == "back" else top)
+        hi, lo = (top - 0.55 if low == "back" else top + 0.6), (FH + 0.4 if low == "back" else top)
         # la fachada (front) lleva las puertas de todas las plantas: nunca baja
         return (hi if low == "back" else top), (lo if low == "back" else hi)
     hi, lo = top + 1.1, top - 0.1

@@ -122,3 +122,13 @@ Moradas (E23)
 [ ] Escaleras exteriores y galerias de las casas comunales: la -colonly incluye rampa y pasarelas (las puertas de
     las plantas 2 y 3 son accesibles desde la calle).
 
+Version final (E24)
+[ ] Importar bld_portal / bld_mercado / bld_oficios / bld_clases / bld_razas / bld_moradas_NE,NO,SE,SO / bld_kit /
+    bld_props.glb (sustituyen a concordia_<distrito>.glb, moradas_*.glb y concordia_conexiones.glb, ya borrados).
+[ ] Reimportar concordia_terrain_<distrito>.glb: la malla de navegacion ya no pasa por debajo del Obelisco, el Faro,
+    el Santuario, el Salon de las Hazanas ni el Crisol (1,047 m2 recortados).
+[ ] NAVLINK_<puerta>_Start / _End (12 puertas tras porticos o patios: Salones de clase, Tesoreria, Herbolarios,
+    Curtiduria, Alquimia): crear un NavigationLink3D por pareja.
+[ ] <N>_Roof: ocultar al entrar en <N>_InteriorVolume; LOD con visibility_range (LOD0 / LOD1 / LOD2).
+[ ] Animables: ver README_buildings.txt seccion 14.
+
