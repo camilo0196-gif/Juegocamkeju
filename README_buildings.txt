@@ -203,3 +203,32 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
   - Plazuelas (ya pavimentadas en el terreno): fuente pequena de 3.2 m (barrios 1, 2, 5) o arbol viejo de ~10 m con
     alcorque (3, 4, 6) y 4 bancos a 3.7 m del centro.
 
+12. Conexiones (etapa 22): puentes, arcos, escalinatas, escaleras y pretiles
+---------------------------------------------------------------------------
+  - tools/blender/stage22_conexiones.py (constructores) y build_stage22.py (colocacion). Referencias: canales de Brujas,
+    Mala Strana (Praga), Toledo. Solo materiales ya aprobados (calizas, MAT_Stone_Repair, empedrado, losa, hierro,
+    MAT_Shard_Blue de la linterna).
+  - Convenio de las piezas: cada una es hija de su marcador (MARKER_*), +Y local = sentido de paso (cruzar el puente o
+    el arco, bajar las escalinatas, subir las escaleras de terraza); "<pieza>-colonly" es la superficie de paso plana y
+    continua (rampa sobre los bordes de los peldanos) mas los muros/pretiles; LOD1 (0.5) y LOD2 (0.15, color plano).
+  - BRIDGE_Stone_5m / _6m en MARKER_Bridge_01..05: arco rebajado (flecha 0.35 m; 0.79 en el 05), calzada 0.4 m sobre la
+    calle con rampas de 5.5 m que llegan a la cota real de la calle en cada extremo, pretiles de 0.9 m con albardilla
+    (20 % de tramos remendados), imposta, 11 dovelas con clave (una de otra piedra), sillares en estribos y arranques.
+    820-882 triangulos (limite 1,800). Puente 01: rampa lejana de 2.5 m (9.1 grados) hasta r 95, el rellano superior
+    de la escalinata NE (decision C del usuario). El 03 es oblicuo (luz 7.36 m).
+  - ARCH_Street_4m/5m/6m: arco rebajado que arranca a 5.0 m (altura libre), paso alto a 6.4 m (planta 2 de las casas),
+    pilares con sillares que llegan a las fachadas (0.8-0.91 m), linterna de esquirla en la clave (las dos caras).
+    674-678 triangulos (limite 1,200). En MARKER_Bridge_06..09 (Ronda r150, barrios distintos): ARCH_Street_6m;
+    los marcadores se han subido a la cota del paso alto (deck_z) y llevan street_z.
+  - RAIL_Stone_3m (0.9 m), RAIL_Stone_3m_Patch (remiendo) y RAIL_Stone_3m_Low (0.5 m): 38-40 triangulos, instanciables;
+    en los pasos altos de los arcos (6 por arco, escala Y 0.85-0.86 para ajustarse a la longitud, MARKER_Rail_*).
+  - STAIRS_Monumental (4, r 95-105 de las diagonales): 6 m, 10 x 0.15 / 1.0, descanso de 2 m, pasamanos de piedra de
+    0.9 m con albardilla inclinada y pilares; 530 triangulos, una malla instanciada 4 veces (MARKER_Stairs_Monumental_*).
+  - STAIRS_Terrace: 2.5 m (variantes A/B) y 6 m en el eje, 7 x 0.143 / 0.30 con zancas y albardilla, 242 triangulos,
+    76 instancias en las Moradas (MARKER_Stairs_Terrace_<Morada>_NN); 32 escaleras de los muros laterales (Prompt 2,
+    2.5 m de paso, 7-31 contrahuellas, MARKER_Stairs_Lateral_*). STAIRS_Pass_3m: las 10 escalinatas de paso del Prompt 7
+    (3 m, 10 x 0.15 / 0.35, pretiles de 0.9 m) en MARKER_Escalinata_01..10 (rotacion corregida: antes todas a -90).
+  - Los provisionales (TRN_Bridge_*, TRN_ArchBridge_*, TRN_Escalinata_Morada_*, TRN_StairPass_*, TRN_TerraceStairs_*,
+    TRN_LateralStairs_*, con sus -colonly y _Repair; 80 objetos) pasan a LEGACY_PLACEHOLDERS (excluida de la escena y de
+    la exportacion). Los concordia_terrain_<distrito>.glb y concordia_markers.glb se han reexportado sin ellos.
+

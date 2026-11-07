@@ -1,0 +1,1097 @@
+{
+ "budgets": {
+  "bridge": 1800,
+  "arch": 1200
+ },
+ "saved_before": "blender/concordia_v22.blend",
+ "placeholders_retired": [
+  "TRN_ArchBridge_01",
+  "TRN_ArchBridge_01-colonly",
+  "TRN_ArchBridge_01_Repair",
+  "TRN_ArchBridge_02",
+  "TRN_ArchBridge_02-colonly",
+  "TRN_ArchBridge_02_Repair",
+  "TRN_ArchBridge_03",
+  "TRN_ArchBridge_03-colonly",
+  "TRN_ArchBridge_03_Repair",
+  "TRN_ArchBridge_04",
+  "TRN_ArchBridge_04-colonly",
+  "TRN_ArchBridge_04_Repair",
+  "TRN_Bridge_01",
+  "TRN_Bridge_01-colonly",
+  "TRN_Bridge_01_Repair",
+  "TRN_Bridge_02",
+  "TRN_Bridge_02-colonly",
+  "TRN_Bridge_02_Repair",
+  "TRN_Bridge_03",
+  "TRN_Bridge_03-colonly",
+  "TRN_Bridge_03_Repair",
+  "TRN_Bridge_04",
+  "TRN_Bridge_04-colonly",
+  "TRN_Bridge_04_Repair",
+  "TRN_Bridge_05",
+  "TRN_Bridge_05-colonly",
+  "TRN_Bridge_05_Repair",
+  "TRN_Escalinata_Morada_NE",
+  "TRN_Escalinata_Morada_NE-colonly",
+  "TRN_Escalinata_Morada_NW",
+  "TRN_Escalinata_Morada_NW-colonly",
+  "TRN_Escalinata_Morada_SE",
+  "TRN_Escalinata_Morada_SE-colonly",
+  "TRN_Escalinata_Morada_SW",
+  "TRN_Escalinata_Morada_SW-colonly",
+  "TRN_LateralStairs_Morada_NE",
+  "TRN_LateralStairs_Morada_NE-colonly",
+  "TRN_LateralStairs_Morada_NW",
+  "TRN_LateralStairs_Morada_NW-colonly",
+  "TRN_LateralStairs_Morada_SE",
+  "TRN_LateralStairs_Morada_SE-colonly",
+  "TRN_LateralStairs_Morada_SW",
+  "TRN_LateralStairs_Morada_SW-colonly",
+  "TRN_StairPass_01",
+  "TRN_StairPass_01-colonly",
+  "TRN_StairPass_01_Repair",
+  "TRN_StairPass_02",
+  "TRN_StairPass_02-colonly",
+  "TRN_StairPass_03",
+  "TRN_StairPass_03-colonly",
+  "TRN_StairPass_03_Repair",
+  "TRN_StairPass_04",
+  "TRN_StairPass_04-colonly",
+  "TRN_StairPass_04_Repair",
+  "TRN_StairPass_05",
+  "TRN_StairPass_05-colonly",
+  "TRN_StairPass_05_Repair",
+  "TRN_StairPass_06",
+  "TRN_StairPass_06-colonly",
+  "TRN_StairPass_06_Repair",
+  "TRN_StairPass_07",
+  "TRN_StairPass_07-colonly",
+  "TRN_StairPass_07_Repair",
+  "TRN_StairPass_08",
+  "TRN_StairPass_08-colonly",
+  "TRN_StairPass_08_Repair",
+  "TRN_StairPass_09",
+  "TRN_StairPass_09-colonly",
+  "TRN_StairPass_09_Repair",
+  "TRN_StairPass_10",
+  "TRN_StairPass_10-colonly",
+  "TRN_StairPass_10_Repair",
+  "TRN_TerraceStairs_Morada_NE",
+  "TRN_TerraceStairs_Morada_NE-colonly",
+  "TRN_TerraceStairs_Morada_NW",
+  "TRN_TerraceStairs_Morada_NW-colonly",
+  "TRN_TerraceStairs_Morada_SE",
+  "TRN_TerraceStairs_Morada_SE-colonly",
+  "TRN_TerraceStairs_Morada_SW",
+  "TRN_TerraceStairs_Morada_SW-colonly"
+ ],
+ "bridges": {
+  "BRIDGE_Stone_6m_01": {
+   "marker": "MARKER_Bridge_01",
+   "road": "STR_DIAG_045_Faro_Out",
+   "tris": 820,
+   "budget": 1800,
+   "ok": true,
+   "deck_z": 6.4,
+   "street_z": 6.0,
+   "water_z": 5.5,
+   "skew_sin": 1.0,
+   "note": "rampa lejana acortada a 2.501 m: termina en r 95 (rellano superior de la escalinata NE)",
+   "voussoirs": 22,
+   "segments": 18,
+   "repaired_segments": 4,
+   "quoins": 20,
+   "patches": 3,
+   "length_m": 14.0,
+   "width_m": 6.0,
+   "ramps_m": [
+    5.5,
+    2.5
+   ],
+   "ramp_deg": [
+    0.39,
+    8.42
+   ],
+   "street_at_ends_rel_deck_m": [
+    -0.038,
+    -0.37
+   ],
+   "arch_span_m": 4.0,
+   "arch_rise_m": 0.35,
+   "clear_over_water_m": 0.25,
+   "deck_over_street_m": 0.4,
+   "collision": "BRIDGE_Stone_6m_01-colonly",
+   "lod_tris": [
+    428,
+    428
+   ]
+  },
+  "BRIDGE_Stone_6m_02": {
+   "marker": "MARKER_Bridge_02",
+   "road": "STR_OFI_Avenue",
+   "tris": 842,
+   "budget": 1800,
+   "ok": true,
+   "deck_z": 6.4,
+   "street_z": 6.0,
+   "water_z": 5.5,
+   "skew_sin": 1.0,
+   "note": null,
+   "voussoirs": 22,
+   "segments": 20,
+   "repaired_segments": 3,
+   "quoins": 20,
+   "patches": 4,
+   "length_m": 17.0,
+   "width_m": 6.0,
+   "ramps_m": [
+    5.5,
+    5.5
+   ],
+   "ramp_deg": [
+    -0.84,
+    5.97
+   ],
+   "street_at_ends_rel_deck_m": [
+    0.08,
+    -0.575
+   ],
+   "arch_span_m": 4.0,
+   "arch_rise_m": 0.35,
+   "clear_over_water_m": 0.25,
+   "deck_over_street_m": 0.4,
+   "collision": "BRIDGE_Stone_6m_02-colonly",
+   "lod_tris": [
+    448,
+    448
+   ]
+  },
+  "BRIDGE_Stone_6m_03": {
+   "marker": "MARKER_Bridge_03",
+   "road": "STR_OFI_Ring100",
+   "tris": 882,
+   "budget": 1800,
+   "ok": true,
+   "deck_z": 6.4,
+   "street_z": 6.0,
+   "water_z": 5.5,
+   "skew_sin": 0.544,
+   "note": null,
+   "voussoirs": 22,
+   "segments": 24,
+   "repaired_segments": 3,
+   "quoins": 20,
+   "patches": 4,
+   "length_m": 22.03,
+   "width_m": 6.0,
+   "ramps_m": [
+    5.5,
+    5.5
+   ],
+   "ramp_deg": [
+    5.94,
+    5.78
+   ],
+   "street_at_ends_rel_deck_m": [
+    -0.573,
+    -0.557
+   ],
+   "arch_span_m": 7.36,
+   "arch_rise_m": 0.35,
+   "clear_over_water_m": 0.25,
+   "deck_over_street_m": 0.4,
+   "collision": "BRIDGE_Stone_6m_03-colonly",
+   "lod_tris": [
+    494,
+    494
+   ]
+  },
+  "BRIDGE_Stone_6m_04": {
+   "marker": "MARKER_Bridge_04",
+   "road": "STR_OFI_Ring150",
+   "tris": 842,
+   "budget": 1800,
+   "ok": true,
+   "deck_z": 5.5,
+   "street_z": 5.1,
+   "water_z": 4.6,
+   "skew_sin": 1.0,
+   "note": null,
+   "voussoirs": 22,
+   "segments": 20,
+   "quoins": 20,
+   "patches": 4,
+   "repaired_segments": 3,
+   "length_m": 17.0,
+   "width_m": 6.0,
+   "ramps_m": [
+    5.5,
+    5.5
+   ],
+   "ramp_deg": [
+    7.48,
+    7.42
+   ],
+   "street_at_ends_rel_deck_m": [
+    -0.722,
+    -0.717
+   ],
+   "arch_span_m": 4.0,
+   "arch_rise_m": 0.35,
+   "clear_over_water_m": 0.25,
+   "deck_over_street_m": 0.4,
+   "collision": "BRIDGE_Stone_6m_04-colonly",
+   "lod_tris": [
+    448,
+    448
+   ]
+  },
+  "BRIDGE_Stone_5m_05": {
+   "marker": "MARKER_Bridge_05",
+   "road": "STR_OFI_CallejonRonda_R",
+   "tris": 858,
+   "budget": 1800,
+   "ok": true,
+   "deck_z": 5.638,
+   "street_z": 5.238,
+   "water_z": 4.3,
+   "skew_sin": 1.0,
+   "note": null,
+   "voussoirs": 22,
+   "segments": 20,
+   "repaired_segments": 4,
+   "quoins": 24,
+   "patches": 4,
+   "length_m": 17.0,
+   "width_m": 5.0,
+   "ramps_m": [
+    5.5,
+    5.5
+   ],
+   "ramp_deg": [
+    3.7,
+    3.89
+   ],
+   "street_at_ends_rel_deck_m": [
+    -0.356,
+    -0.374
+   ],
+   "arch_span_m": 4.0,
+   "arch_rise_m": 0.79,
+   "clear_over_water_m": 0.69,
+   "deck_over_street_m": 0.4,
+   "collision": "BRIDGE_Stone_5m_05-colonly",
+   "lod_tris": [
+    450,
+    450
+   ]
+  }
+ },
+ "arches": {
+  "ARCH_Street_6m_06": {
+   "marker": "MARKER_Bridge_06",
+   "kit_piece": "ARCH_Street_6m",
+   "street": "STR_RAZ_Ring150",
+   "between": "['MARKER_Bld_RAZ_B02_Casa_03', 'MARKER_Bld_RAZ_B04_Casa_01']",
+   "tris": 678,
+   "budget": 1200,
+   "ok": true,
+   "street_z": 4.783,
+   "wall_distances_m": [
+    3.61,
+    3.5
+   ],
+   "rails": {
+    "count": 6,
+    "scale_y": 0.857,
+    "tris_each": 38
+   },
+   "quoins": 40,
+   "patches": 2,
+   "clear_span_m": 6.0,
+   "clear_height_m": 5.0,
+   "crown_m": 5.9,
+   "walkway_m": 6.4,
+   "piers_m": [
+    0.91,
+    0.8
+   ],
+   "depth_m": 2.6,
+   "walkway_length_m": 7.71,
+   "lanterns": 2,
+   "collision": "ARCH_Street_6m_06-colonly",
+   "iso_blocks": [],
+   "lod_tris": [
+    339,
+    170
+   ]
+  },
+  "ARCH_Street_6m_07": {
+   "marker": "MARKER_Bridge_07",
+   "kit_piece": "ARCH_Street_6m",
+   "street": "STR_RAZ_Ring150",
+   "between": "['MARKER_Bld_RAZ_B02_Casa_04', 'MARKER_Bld_RAZ_B04_Casa_02']",
+   "tris": 678,
+   "budget": 1200,
+   "ok": true,
+   "street_z": 4.781,
+   "wall_distances_m": [
+    3.61,
+    3.54
+   ],
+   "rails": {
+    "count": 6,
+    "scale_y": 0.86,
+    "tris_each": 38
+   },
+   "quoins": 40,
+   "patches": 2,
+   "clear_span_m": 6.0,
+   "clear_height_m": 5.0,
+   "crown_m": 5.9,
+   "walkway_m": 6.4,
+   "piers_m": [
+    0.91,
+    0.84
+   ],
+   "depth_m": 2.6,
+   "walkway_length_m": 7.74,
+   "lanterns": 2,
+   "collision": "ARCH_Street_6m_07-colonly",
+   "iso_blocks": [],
+   "lod_tris": [
+    339,
+    170
+   ]
+  },
+  "ARCH_Street_6m_08": {
+   "marker": "MARKER_Bridge_08",
+   "kit_piece": "ARCH_Street_6m",
+   "street": "STR_RAZ_Ring150",
+   "between": "['MARKER_Bld_RAZ_B01_Casa_03', 'MARKER_Bld_RAZ_B03_Casa_01']",
+   "tris": 674,
+   "budget": 1200,
+   "ok": true,
+   "street_z": 4.777,
+   "wall_distances_m": [
+    3.55,
+    3.49
+   ],
+   "rails": {
+    "count": 6,
+    "scale_y": 0.85,
+    "tris_each": 38
+   },
+   "quoins": 40,
+   "clear_span_m": 6.0,
+   "clear_height_m": 5.0,
+   "crown_m": 5.9,
+   "walkway_m": 6.4,
+   "piers_m": [
+    0.85,
+    0.8
+   ],
+   "depth_m": 2.6,
+   "walkway_length_m": 7.65,
+   "lanterns": 2,
+   "collision": "ARCH_Street_6m_08-colonly",
+   "iso_blocks": [],
+   "lod_tris": [
+    336,
+    164
+   ]
+  },
+  "ARCH_Street_6m_09": {
+   "marker": "MARKER_Bridge_09",
+   "kit_piece": "ARCH_Street_6m",
+   "street": "STR_RAZ_Ring150",
+   "between": "['MARKER_Bld_RAZ_B01_Casa_04', 'MARKER_Bld_RAZ_B03_Casa_03']",
+   "tris": 678,
+   "budget": 1200,
+   "ok": true,
+   "street_z": 4.753,
+   "wall_distances_m": [
+    3.57,
+    3.46
+   ],
+   "rails": {
+    "count": 6,
+    "scale_y": 0.852,
+    "tris_each": 38
+   },
+   "quoins": 40,
+   "patches": 2,
+   "clear_span_m": 6.0,
+   "clear_height_m": 5.0,
+   "crown_m": 5.9,
+   "walkway_m": 6.4,
+   "piers_m": [
+    0.87,
+    0.8
+   ],
+   "depth_m": 2.6,
+   "walkway_length_m": 7.67,
+   "lanterns": 2,
+   "collision": "ARCH_Street_6m_09-colonly",
+   "iso_blocks": [],
+   "lod_tris": [
+    339,
+    170
+   ]
+  }
+ },
+ "stairs_monumental": {
+  "instances": [
+   "STAIRS_Monumental_Morada_NE",
+   "STAIRS_Monumental_Morada_NW",
+   "STAIRS_Monumental_Morada_SW",
+   "STAIRS_Monumental_Morada_SE"
+  ],
+  "tris": 530,
+  "treads_replaced": 1,
+  "patches": 3,
+  "width_m": 6.0,
+  "risers": 10,
+  "riser_m": 0.15,
+  "tread_m": 1.0,
+  "landing_m": 2.0,
+  "handrail_m": 0.9,
+  "rise_m": 1.5
+ },
+ "stairs_pass": {
+  "instances": [
+   "STAIRS_Pass_3m_01",
+   "STAIRS_Pass_3m_02",
+   "STAIRS_Pass_3m_03",
+   "STAIRS_Pass_3m_04",
+   "STAIRS_Pass_3m_05",
+   "STAIRS_Pass_3m_06",
+   "STAIRS_Pass_3m_07",
+   "STAIRS_Pass_3m_08",
+   "STAIRS_Pass_3m_09",
+   "STAIRS_Pass_3m_10"
+  ],
+  "tris": 296,
+  "top_len_m": 4.025,
+  "bottom_len_m": 3.825,
+  "width_m": 3.0,
+  "risers": 10,
+  "riser_m": 0.15,
+  "tread_m": 0.35,
+  "rise_m": 1.5,
+  "run_m": 3.15,
+  "slope_deg": 23.2
+ },
+ "stairs_terrace": {
+  "per_morada": {
+   "Morada_NE": 19,
+   "Morada_NW": 19,
+   "Morada_SW": 19,
+   "Morada_SE": 19
+  },
+  "meshes": {
+   "STAIRS_Terrace_2.5m_A": {
+    "tris": 242,
+    "width_m": 2.0,
+    "risers": 7,
+    "riser_m": 0.143,
+    "tread_m": 0.3,
+    "rise_m": 1.0,
+    "run_m": 1.8,
+    "slope_deg": 25.5
+   },
+   "STAIRS_Terrace_2.5m_B": {
+    "tris": 242,
+    "width_m": 2.0,
+    "risers": 7,
+    "riser_m": 0.143,
+    "tread_m": 0.3,
+    "rise_m": 1.0,
+    "run_m": 1.8,
+    "slope_deg": 25.5
+   },
+   "STAIRS_Terrace_6m": {
+    "tris": 242,
+    "width_m": 5.5,
+    "risers": 7,
+    "riser_m": 0.143,
+    "tread_m": 0.3,
+    "rise_m": 1.0,
+    "run_m": 1.8,
+    "slope_deg": 25.5
+   }
+  }
+ },
+ "stairs_lateral": {
+  "instances": 32,
+  "meshes": {
+   "STAIRS_Terrace_Lateral_01": {
+    "tris": 190,
+    "width_m": 2.69,
+    "risers": 7,
+    "riser_m": 0.14,
+    "tread_m": 0.33,
+    "rise_m": 0.98,
+    "run_m": 1.98,
+    "slope_deg": 23.0
+   },
+   "STAIRS_Terrace_Lateral_02": {
+    "tris": 244,
+    "width_m": 2.78,
+    "risers": 10,
+    "riser_m": 0.146,
+    "tread_m": 0.33,
+    "rise_m": 1.46,
+    "run_m": 2.97,
+    "slope_deg": 23.8
+   },
+   "STAIRS_Terrace_Lateral_03": {
+    "tris": 532,
+    "width_m": 3.21,
+    "risers": 26,
+    "riser_m": 0.149,
+    "tread_m": 0.33,
+    "rise_m": 3.87,
+    "run_m": 8.25,
+    "slope_deg": 24.3
+   },
+   "STAIRS_Terrace_Lateral_04": {
+    "tris": 622,
+    "width_m": 3.32,
+    "risers": 31,
+    "riser_m": 0.15,
+    "tread_m": 0.33,
+    "rise_m": 4.64,
+    "run_m": 9.9,
+    "slope_deg": 24.4
+   },
+   "STAIRS_Terrace_Lateral_05": {
+    "tris": 190,
+    "width_m": 2.69,
+    "risers": 7,
+    "riser_m": 0.14,
+    "tread_m": 0.33,
+    "rise_m": 0.98,
+    "run_m": 1.98,
+    "slope_deg": 23.0
+   },
+   "STAIRS_Terrace_Lateral_06": {
+    "tris": 244,
+    "width_m": 2.78,
+    "risers": 10,
+    "riser_m": 0.146,
+    "tread_m": 0.33,
+    "rise_m": 1.46,
+    "run_m": 2.97,
+    "slope_deg": 23.8
+   },
+   "STAIRS_Terrace_Lateral_07": {
+    "tris": 532,
+    "width_m": 3.21,
+    "risers": 26,
+    "riser_m": 0.149,
+    "tread_m": 0.33,
+    "rise_m": 3.87,
+    "run_m": 8.25,
+    "slope_deg": 24.3
+   },
+   "STAIRS_Terrace_Lateral_08": {
+    "tris": 622,
+    "width_m": 3.32,
+    "risers": 31,
+    "riser_m": 0.15,
+    "tread_m": 0.33,
+    "rise_m": 4.64,
+    "run_m": 9.9,
+    "slope_deg": 24.4
+   }
+  }
+ },
+ "library": {
+  "BRIDGE_Stone_5m": {
+   "tris": 820,
+   "voussoirs": 22,
+   "segments": 18,
+   "repaired_segments": 4,
+   "quoins": 20,
+   "patches": 3,
+   "length_m": 17.0,
+   "width_m": 5.0,
+   "ramps_m": [
+    5.5,
+    5.5
+   ],
+   "ramp_deg": [
+    4.16,
+    4.16
+   ],
+   "street_at_ends_rel_deck_m": [
+    -0.4,
+    -0.4
+   ],
+   "arch_span_m": 4.0,
+   "arch_rise_m": 0.35,
+   "clear_over_water_m": 0.25,
+   "deck_over_street_m": 0.4
+  },
+  "BRIDGE_Stone_6m": {
+   "tris": 818,
+   "voussoirs": 22,
+   "segments": 18,
+   "quoins": 20,
+   "patches": 2,
+   "repaired_segments": 1,
+   "length_m": 17.0,
+   "width_m": 6.0,
+   "ramps_m": [
+    5.5,
+    5.5
+   ],
+   "ramp_deg": [
+    4.16,
+    4.16
+   ],
+   "street_at_ends_rel_deck_m": [
+    -0.4,
+    -0.4
+   ],
+   "arch_span_m": 4.0,
+   "arch_rise_m": 0.35,
+   "clear_over_water_m": 0.25,
+   "deck_over_street_m": 0.4
+  },
+  "ARCH_Street_4m": {
+   "tris": 678,
+   "quoins": 40,
+   "patches": 2,
+   "clear_span_m": 4.0,
+   "clear_height_m": 5.0,
+   "crown_m": 5.6,
+   "walkway_m": 6.4,
+   "piers_m": [
+    0.8,
+    0.8
+   ],
+   "depth_m": 2.6,
+   "walkway_length_m": 5.6,
+   "lanterns": 2
+  },
+  "ARCH_Street_5m": {
+   "tris": 678,
+   "quoins": 40,
+   "patches": 2,
+   "clear_span_m": 5.0,
+   "clear_height_m": 5.0,
+   "crown_m": 5.75,
+   "walkway_m": 6.4,
+   "piers_m": [
+    0.8,
+    0.8
+   ],
+   "depth_m": 2.6,
+   "walkway_length_m": 6.6,
+   "lanterns": 2
+  },
+  "ARCH_Street_6m": {
+   "tris": 678,
+   "quoins": 40,
+   "patches": 2,
+   "clear_span_m": 6.0,
+   "clear_height_m": 5.0,
+   "crown_m": 5.9,
+   "walkway_m": 6.4,
+   "piers_m": [
+    0.8,
+    0.8
+   ],
+   "depth_m": 2.6,
+   "walkway_length_m": 7.6,
+   "lanterns": 2
+  },
+  "RAIL_Stone_3m": {
+   "tris": 38
+  },
+  "RAIL_Stone_3m_Patch": {
+   "tris": 40
+  },
+  "RAIL_Stone_3m_Low": {
+   "tris": 38
+  }
+ },
+ "faro_visibility": {
+  "Avenida Norte": {
+   "axis_pct": 84.8,
+   "lanes": {
+    "-2.5": {
+     "samples": 33,
+     "pct": 87.9,
+     "blocked_by": {
+      "CasaRegistro_Body": 4
+     }
+    },
+    "+0.0": {
+     "samples": 33,
+     "pct": 84.8,
+     "blocked_by": {
+      "CasaRegistro_Body": 4,
+      "FuenteMercado": 1
+     }
+    },
+    "+2.5": {
+     "samples": 33,
+     "pct": 84.8,
+     "blocked_by": {
+      "CasaRegistro_Body": 5
+     }
+    }
+   },
+   "best_lane_pct": 87.9,
+   "samples_axis": 33
+  },
+  "Avenida Sur": {
+   "axis_pct": 100.0,
+   "lanes": {
+    "-2.5": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+0.0": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+2.5": {
+     "samples": 33,
+     "pct": 100.0,
+     "blocked_by": {}
+    }
+   },
+   "best_lane_pct": 100.0,
+   "samples_axis": 33
+  },
+  "Avenida Este": {
+   "axis_pct": 84.4,
+   "lanes": {
+    "-2.5": {
+     "samples": 32,
+     "pct": 90.6,
+     "blocked_by": {
+      "Taller_Carpinteria_Roof": 3
+     }
+    },
+    "+0.0": {
+     "samples": 32,
+     "pct": 84.4,
+     "blocked_by": {
+      "Taller_Carpinteria_Body": 4,
+      "Taller_Carpinteria_Roof": 1
+     }
+    },
+    "+2.5": {
+     "samples": 32,
+     "pct": 84.4,
+     "blocked_by": {
+      "Taller_Carpinteria_Body": 5
+     }
+    }
+   },
+   "best_lane_pct": 90.6,
+   "samples_axis": 32
+  },
+  "Avenida Oeste": {
+   "axis_pct": 78.8,
+   "lanes": {
+    "-2.5": {
+     "samples": 33,
+     "pct": 75.8,
+     "blocked_by": {
+      "CLA_Casa_02_Body": 5,
+      "CLA_Casa_02_Roof": 3
+     }
+    },
+    "+0.0": {
+     "samples": 33,
+     "pct": 78.8,
+     "blocked_by": {
+      "CLA_Casa_02_Roof": 4,
+      "CLA_Casa_02_Body": 3
+     }
+    },
+    "+2.5": {
+     "samples": 33,
+     "pct": 81.8,
+     "blocked_by": {
+      "CLA_Casa_02_Body": 3,
+      "CLA_Casa_02_Roof": 3
+     }
+    }
+   },
+   "best_lane_pct": 81.8,
+   "samples_axis": 33
+  },
+  "Diagonal NE (Faro)": {
+   "axis_pct": 100.0,
+   "lanes": {
+    "-2.5": {
+     "samples": 25,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+0.0": {
+     "samples": 25,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+2.5": {
+     "samples": 25,
+     "pct": 100.0,
+     "blocked_by": {}
+    }
+   },
+   "best_lane_pct": 100.0,
+   "samples_axis": 25
+  },
+  "Diagonal NO (Santuario)": {
+   "axis_pct": 92.6,
+   "lanes": {
+    "-2.5": {
+     "samples": 27,
+     "pct": 96.3,
+     "blocked_by": {
+      "SANTUARIO_Body": 1
+     }
+    },
+    "+0.0": {
+     "samples": 27,
+     "pct": 92.6,
+     "blocked_by": {
+      "SANTUARIO_Body": 2
+     }
+    },
+    "+2.5": {
+     "samples": 27,
+     "pct": 88.9,
+     "blocked_by": {
+      "SANTUARIO_Body": 3
+     }
+    }
+   },
+   "best_lane_pct": 96.3,
+   "samples_axis": 27
+  },
+  "Diagonal SO (Obelisco)": {
+   "axis_pct": 3.4,
+   "lanes": {
+    "-2.5": {
+     "samples": 29,
+     "pct": 100.0,
+     "blocked_by": {}
+    },
+    "+0.0": {
+     "samples": 29,
+     "pct": 3.4,
+     "blocked_by": {
+      "OBELISK_Body": 23,
+      "OBELISK_Mark_013": 1,
+      "OBELISK_Mark_033": 1,
+      "OBELISK_Mark_053": 1
+     }
+    },
+    "+2.5": {
+     "samples": 29,
+     "pct": 100.0,
+     "blocked_by": {}
+    }
+   },
+   "best_lane_pct": 100.0,
+   "samples_axis": 29
+  },
+  "Diagonal SE (Salon)": {
+   "axis_pct": 80.8,
+   "lanes": {
+    "-2.5": {
+     "samples": 26,
+     "pct": 76.9,
+     "blocked_by": {
+      "SALON_HAZANAS_Body": 5,
+      "SALON_HAZANAS_Roof": 1
+     }
+    },
+    "+0.0": {
+     "samples": 26,
+     "pct": 80.8,
+     "blocked_by": {
+      "SALON_HAZANAS_Body": 5
+     }
+    },
+    "+2.5": {
+     "samples": 26,
+     "pct": 84.6,
+     "blocked_by": {
+      "SALON_HAZANAS_Body": 4
+     }
+    }
+   },
+   "best_lane_pct": 84.6,
+   "samples_axis": 26
+  },
+  "Ronda r100": {
+   "axis_pct": 52.8,
+   "samples_axis": 36,
+   "blocked_by": {
+    "SalonClase_08_Body": 3,
+    "SalonClase_07_Body": 3,
+    "MER_Casa_01_Body": 2,
+    "SALON_HAZANAS_Body": 2
+   }
+  },
+  "Ronda r150": {
+   "axis_pct": 73.2,
+   "samples_axis": 56,
+   "blocked_by": {
+    "Banco_Body": 2,
+    "TesoreriaMuralla_Body": 2,
+    "Taller_GranForja_Body": 1,
+    "CasaReposicion_Prop_LANTERN_Shard_00": 1
+   }
+  }
+ },
+ "faro_visibility_note": "muestras cada 4 m (radiales, r 62-190) y cada 6 grados (rondas), solo sobre calle o plaza transitable (fuera de parcelas y pads); ojo a 1.7 m; objetivo: cima del cristal",
+ "export": {
+  "file": "export/godot/concordia_conexiones.glb",
+  "mb": 2.41,
+  "nodes": 789,
+  "meshes": 120,
+  "tris": 32979,
+  "materials": 38,
+  "images": 22,
+  "images_external": 22,
+  "colliders": 163,
+  "navmesh": 0,
+  "occluders": 0,
+  "empties": 137
+ },
+ "reexported": {
+  "concordia_terrain_plaza.glb": {
+   "mb": 7.38,
+   "nodes": 68,
+   "meshes": 68,
+   "tris": 167451,
+   "materials": 9,
+   "images": 27,
+   "images_external": 27,
+   "colliders": 25,
+   "navmesh": 1,
+   "occluders": 0,
+   "empties": 0
+  },
+  "concordia_terrain_mercado.glb": {
+   "mb": 4.5,
+   "nodes": 40,
+   "meshes": 40,
+   "tris": 103335,
+   "materials": 9,
+   "images": 24,
+   "images_external": 24,
+   "colliders": 10,
+   "navmesh": 1,
+   "occluders": 0,
+   "empties": 0
+  },
+  "concordia_terrain_oficios.glb": {
+   "mb": 7.92,
+   "nodes": 59,
+   "meshes": 59,
+   "tris": 178116,
+   "materials": 11,
+   "images": 30,
+   "images_external": 30,
+   "colliders": 17,
+   "navmesh": 1,
+   "occluders": 0,
+   "empties": 0
+  },
+  "concordia_terrain_clases.glb": {
+   "mb": 4.61,
+   "nodes": 37,
+   "meshes": 37,
+   "tris": 106733,
+   "materials": 7,
+   "images": 21,
+   "images_external": 21,
+   "colliders": 9,
+   "navmesh": 1,
+   "occluders": 0,
+   "empties": 0
+  },
+  "concordia_terrain_razas.glb": {
+   "mb": 4.46,
+   "nodes": 37,
+   "meshes": 37,
+   "tris": 104823,
+   "materials": 7,
+   "images": 21,
+   "images_external": 21,
+   "colliders": 9,
+   "navmesh": 1,
+   "occluders": 0,
+   "empties": 0
+  },
+  "concordia_terrain_moradas.glb": {
+   "mb": 18.03,
+   "nodes": 105,
+   "meshes": 105,
+   "tris": 403069,
+   "materials": 8,
+   "images": 24,
+   "images_external": 24,
+   "colliders": 30,
+   "navmesh": 1,
+   "occluders": 0,
+   "empties": 0
+  },
+  "concordia_markers.glb": {
+   "mb": 0.26,
+   "markers": 767,
+   "nodes": 767,
+   "meshes": 0,
+   "tris": 0,
+   "materials": 0,
+   "images": 0,
+   "images_external": 0,
+   "colliders": 0,
+   "navmesh": 0,
+   "occluders": 0,
+   "empties": 767
+  }
+ },
+ "collision_continuity": {
+  "method": "altura de la superficie -colonly en cada entrada vs terreno (TRN_City) 0.3 m mas alla",
+  "monumental": {
+   "entries": 8,
+   "max_dz_m": 0.035
+  },
+  "pass": {
+   "entries": 20,
+   "max_dz_m": 0.012
+  },
+  "terrace": {
+   "entries": 152,
+   "max_dz_m": 0.005
+  },
+  "lateral": {
+   "entries": 64,
+   "max_dz_m": 0.137,
+   "over_8cm": 14,
+   "note": "pie de algunas escaleras laterales: el terreno queda hasta 14 cm por encima del ultimo peldano (escalon menor que una contrahuella); igual que el provisional de la etapa 02"
+  },
+  "bridges": {
+   "entries": 10,
+   "max_dz_m": 0.181,
+   "note": "solo Puente 01 extremo lejano: entrega en r 95 al rellano de la escalinata, que empieza a bajar ahi"
+  }
+ },
+ "decision_C": "Puente 01: rampa lejana acortada a 2.5 m (9.1 grados) hasta r 95 (usuario, etapa 22)"
+}

@@ -101,3 +101,13 @@ Razas (E21)
 [ ] Yurtas (CasaRaza_05): humo suave en la chimenea de la corona.
 [ ] Plazuelas: agua de las fuentes (MAT_Water) con desplazamiento de UV; arboles viejos con balanceo leve de las copas.
 
+Conexiones (E22)
+[ ] Reimportar concordia_terrain_<distrito>.glb y concordia_markers.glb (ya sin puentes, arcos ni escaleras
+    provisionales) y anadir concordia_conexiones.glb: cada pieza cuelga de su MARKER_* (+Y = sentido de paso).
+[ ] Colisiones: las "-colonly" de puentes y escaleras son rampas continuas (no peldanos): StaticBody3D con la forma
+    concava; el CharacterBody3D sube sin "step offset". Pie de algunas escaleras laterales: hasta 14 cm de escalon.
+[ ] Navmesh: el horneado de la etapa 11 se hizo con los provisionales (mismos perfiles); rehornear con las piezas
+    nuevas cuando se reimporten (los pasos altos de los arcos no tienen acceso: no son transitables).
+[ ] Linternas de esquirla de los arcos (MAT_Shard_Blue, 2.5): OmniLight3D azul palido pequena opcional.
+[ ] RAIL_Stone_3m de los arcos: instancias escaladas en Y (0.85-0.86); se pueden pasar a MultiMeshInstance3D.
+
