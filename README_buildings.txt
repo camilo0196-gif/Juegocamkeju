@@ -1,6 +1,6 @@
 CONCORDIA - Edificios y materiales nuevos (kit, Portal y landmarks)
 ==================================================================
-Actualizado en la etapa 25 (concordia_v25.blend). Auditoria automatica: tools/blender/audit_materials.py ->
+Actualizado en la etapa 26 (concordia_v26.blend). Auditoria automatica: tools/blender/audit_materials.py ->
 docs/reports/stage17_materials.json.
 
 1. Regla de aprobacion de materiales nuevos
@@ -278,16 +278,16 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
 14. Godot 4: version final (etapa 24)
 -------------------------------------
   Archivos (export/godot, glTF 2.0 binario, +Y arriba, texturas externas ../../textures/concordia/...):
-    bld_portal.glb         Portal (raiz PORTAL), Obelisco, Faro, Santuario, Salon de las Hazanas, Puente 01, escalinatas monumentales  [5.56 MB, 81103 tris con LOD y colisiones]
+    bld_portal.glb         Portal (raiz PORTAL), Obelisco, Faro, Santuario, Salon de las Hazanas, Puente 01, escalinatas monumentales y tubos de luz Tesoreria -> Faro (PIPES_Tesoreria_Faro, instancias de 4 mallas)  [5.64 MB, 82001 tris con LOD y colisiones]
     bld_mercado.glb        Mercado (Norte)  [6.66 MB, 102058 tris con LOD y colisiones]
-    bld_oficios.glb        Oficios (Este) y puentes 02-05  [5.05 MB, 74901 tris con LOD y colisiones]
+    bld_oficios.glb        Oficios (Este) y puentes 02-05  [5.06 MB, 74969 tris con LOD y colisiones]
     bld_clases.glb         Clases (Oeste)  [6.69 MB, 97896 tris con LOD y colisiones]
-    bld_razas.glb          Razas (Sur) y arcos 06-09  [9.77 MB, 142842 tris con LOD y colisiones]
-    bld_moradas_NE.glb     Morada NE (+ sus escaleras)  [3.79 MB, 43754 tris con LOD y colisiones]
+    bld_razas.glb          Razas (Sur) y arcos 06-09  [10.25 MB, 148777 tris con LOD y colisiones]
+    bld_moradas_NE.glb     Morada NE (+ sus escaleras)  [4.04 MB, 47478 tris con LOD y colisiones]
     bld_moradas_NO.glb     Morada NO  [4.37 MB, 52299 tris con LOD y colisiones]
     bld_moradas_SE.glb     Morada SE  [3.65 MB, 42661 tris con LOD y colisiones]
-    bld_moradas_SO.glb     Morada SO  [3.8 MB, 43903 tris con LOD y colisiones]
-    bld_kit.glb            kit modular (muros, cubiertas, conexiones)  [1.56 MB, 21306 tris con LOD y colisiones]
+    bld_moradas_SO.glb     Morada SO  [3.97 MB, 46267 tris con LOD y colisiones]
+    bld_kit.glb            kit modular (muros, cubiertas, conexiones)  [1.56 MB, 21303 tris con LOD y colisiones]
     bld_props.glb          biblioteca de props (una instancia de cada malla)  [0.35 MB, 3688 tris con LOD y colisiones]
     Siguen: concordia_terrain_<distrito>.glb (con la malla de navegacion recortada), concordia_wall_*.glb,
     concordia_markers.glb (concordia_gremio_cazadores_sin_parcela.glb se borra en la etapa 25). Sustituidos y borrados: concordia_clases.glb, concordia_mercado.glb, concordia_oficios.glb, concordia_razas.glb, concordia_portal.glb, concordia_faro.glb, concordia_santuario.glb, concordia_salon_hazanas.glb, concordia_obelisk.glb, concordia_conexiones.glb, moradas_NE.glb, moradas_NO.glb, moradas_SE.glb, moradas_SO.glb.
@@ -345,12 +345,16 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
     PORTAL_Veil: velo del Portal: desplazamiento de UV / ondulacion, emision 3.0
     FARO_Beam: haz del Faro: giro lento, mezcla aditiva
     Taller_Carpinteria_WATERWHEEL: rueda hidraulica: giro en su eje Y local (~6 rpm); eje Taller_Carpinteria_Axle
-    OBELISK_Mark_001..032: marcas de piso del Obelisco: material MAT_Obelisk_Mark_Lit al subir de piso
+    OBELISK_Mark_001..100: las 100 marcas de piso del Obelisco: material MAT_Obelisk_Mark_Lit al subir de piso
     CRISOL_FloatStone_01..07: piedras flotantes del Crisol: flotar y girar
     SalonClase_NN_Banner_Front/_Back, CasaRaza_NN_Banner, CasaRaza_NN_Flag: estandartes y banderas: viento (shader de vertices)
 
-  Presupuesto medido (etapa 25): 370 edificios, LOD0 611,051 tris (cuerpo + cubierta + props y extras), LOD2 46,911.
-  Ciudad completa en LOD0 (edificios + conexiones 44,056 + terreno 452,076 + muralla 107,132): 1,214,315.
+  Presupuesto medido (etapa 26): 376 edificios, LOD0 615,074 tris (cuerpo + cubierta + props y extras), LOD2 50,961.
+  Ciudad completa en LOD0 (edificios + conexiones 44,056 + terreno 452,076 + muralla 107,132 + tubos de luz 7,944):
+  1,226,282. En LOD2: edificios 50,961 + conexiones 25,686 + terreno 80,476 + muralla 20,898 = 178,021.
+  OJO: la muralla colocada (WALL_LAYOUT, 105 piezas) NO tiene LOD2 propio; la cifra de LOD2 es la suma del LOD2 del
+  kit (WALL_KIT_LODS) en cada instancia. Los tubos de luz no tienen LOD (se ocultan por visibility_range en Godot).
+  (Etapa 25: 370 edificios, 611,051 / 46,911; ciudad 1,214,315. Etapa 24: 366, 607,876 / 46,517; 1,211,140.)
   (Etapa 24: 366 edificios, 607,876 / 46,517; ciudad 1,211,140.)
   Detalle por edificio y distrito: docs/reports/stage24_godot.json.
 
@@ -417,3 +421,78 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
      .blend antes de la v25 (2.19 GiB) y 579 glb/png/jpg (1.56 GiB). El .blend mayor (v25) pesa 77.6 MB: < 100 MB (limite duro de
      GitHub; aviso a partir de 50 MB). Migrar el historial a LFS supondria ~3.7 GiB en LFS: por encima de la cuota
      gratuita (1 GiB de almacenamiento y 1 GiB/mes de descarga). No se migra ni se fuerza nada.
+
+16. Decisiones de la etapa 26 (E13): concordia_v26.blend
+--------------------------------------------------------
+  Scripts: build_stage26.py (pasos moradas, raza04, cazadores, razas, subasta, salon, pipes), stage26_moradas.py,
+  stage26_cazadores.py, stage26_razas.py, stage26_pipes.py, stage26_faro.py + measure_stage26_faro.py; despues
+  build_stage24.py sobre v26 (docs/reports/stage26_godot.json). Informes: stage26_decisiones.json, stage26_faro.json,
+  stage26_faro_proposal.json, stage26_texture_memory.json.
+
+  Punto 2 - Moradas NE y SO: un balcon por puerta (1.5 x 0.35 m, losa con mensula, tablas de dos tonos, una tabla de
+    remiendo por casa) en lugar de las galerias corridas; escalera de dos tramos en la franja y 4.2-4.98 (0.78 m),
+    sin pasamanos en los tramos (tapaba puertas vecinas); dos rellanos llevan a los balcones de las puertas x=0
+    (planta 2) y del extremo (planta 3). Las demas puertas altas son puertas-balcon (acceso por el interior).
+    Lado de la escalera: el PIE en el extremo alejado de CAM_Iso y el tramo alto hacia la camara. Al reves (tramo
+    alto en el extremo alejado) se tapaban 39-48 puertas; asi, 16-19. 3 casas con el lado cambiado por prueba
+    (NE_013, NE_064, SO_022). Huella, altura total y seccion sin cambios.
+    Puertas tapadas desde CAM_Iso: NE 24 -> 5, SO 29 -> 11, NO 0, SE 0 (total 53 -> 16).
+      Tapadas por el cuerpo o el alero de casas a 6-12 m en la fila curva (ya lo estaban sin galerias): NE_063_1, SO_035_1, SO_035_2, SO_035_3, SO_035_4, SO_035_5, SO_035_6, SO_048_1, SO_064_1.
+      Tapadas por balcones o escaleras de la vecina: NE_013_1, NE_022_1, NE_047_1, NE_070_1, SO_018_3, SO_058_3, SO_059_3.
+    Presupuesto por casa (etapa 10): todos dentro. Por conjunto (LOD0 con puertas, placas y faroles / LOD2):
+      NE 74,074 / 6,488; NO 71,128 / 4,806; SE 64,398 / 4,410; SO 74,298 / 6,516.
+      Maximos: habitacion 1418 (NE), 1460 (NO), 1340 (SE), 1418 (SO) de 1,500;
+      casa pequena 672 de 2,000; casa grande 752 de 3,500.
+  Punto 3 - RAZ_B02_Casa_04 a 1 planta (10.49 -> 7.29 m, cubierta a cuatro aguas del preset): la puerta de
+    CasaRaza_02 queda visible.
+  Punto 4 - Campo de tiro de los Cazadores: valla cerrada por el lado de la ciudad; apertura de 2 m en el extremo
+    norte con portillo de tablas abierto hacia dentro (fuera del paso libre); camino de adoquin de 2 m x 9.1 m
+    (8.5 m hasta la calle + 0.6 m de encuentro) hasta [155.4, 65.5], sin parcelas, objetos, escalinatas ni
+    puentes (comprobado celda a celda); campo y camino dentro de TRN_NavMesh_Oficios (145 caras) y soldados a
+    una arista de la calle: el campo esta en la misma componente que la red de calles (4428 caras).
+  Punto 5 - Razas: B01 6, B02 6, B03 6, B04 6, B05 5, B06 2.
+    B02: casa nueva de 4 x 8 (3 plantas) en (-19, -137). B05: la parcela 8 x 8 dividida en 2 adosadas + 3 parcelas de
+    4 x 8 (una al otro lado del anillo r 100); yurtas pequenas (r 1.85 m) por el preset de pieles. B06: la parcela de
+    8 x 8 dividida en 2 adosadas (3 y 2 plantas). B05 queda en el minimo aceptado (5). B06 NO llega: tiene 2, faltan
+    3 para el minimo de 5 (4 para 6). No hay mas suelo libre de 4 x 8 en su lado del sector; compactar (mover la
+    Casa de Raza o la plazuela) no se ha hecho. Huecos sin usar (cerca de B03 y B04, ya completos): [[-29.0, -173.0], [21.0, -165.0], [21.0, -171.0], [-21.0, -167.0]].
+    Desnivel admitido en estas parcelas: hasta 2.5 m cubiertos por el zocalo (antes 1.2 m).
+  Punto 9 - Gran Subasta: marcador interior = false (no habia InteriorVolume ni puerta que quitar).
+  Punto 7 - Salon de las Hazanas: SALON_HAZANAS_Body y _Roof con occludes_iso = true (salen como metadatos glTF).
+    Sus 8 materiales son Principled + texturas (+ grupo 'glTF Material Output'), alpha 1: en Godot son
+    StandardMaterial3D y admiten distance_fade_mode PIXEL/OBJECT_DITHER (o alpha hash en un shader propio). Geometria
+    sin cambios. SANTUARIO_Well: provisional = true hasta la etapa de interiores.
+  Punto 8 - Tubos de luz Tesoreria -> Faro: el primer punto ya estaba en la salida real (MARKER_PipeOutlet_
+    TesoreriaMuralla_02, azotea +9.6 m) desde la etapa 18; provisional = false. La curva original cruzaba la almenara
+    de delante a 0.08-0.24 m del eje (el tubo de 0.23 m de radio la atravesaba): colision -> la curva sube 3.5 m
+    (tramo vertical en la boca) y va a <= 14.0 m sobre la calle. Piezas: 34 rectos (estirados hasta 4 m), 3 codos de
+    90, 4 codos de 45 (PIPE_Light_Elbow45, mitad del de 90), 14 soportes cada 8 m (ninguno en el agua del Cauce).
+    7,944 triangulos (limite 8,000). Holguras: >= 8.43 m a otros edificios, 1.17 m al Faro, 2 cm de
+    aire en la almenara de la Tesoreria. Longitud 123.1 m. No tapan ningun punto del haz.
+  Punto 1 - Faro, criterio nuevo (11 rayos: 10 al eje del haz entre 60 y 120 m y 1 al cristal; vale 1 libre):
+      avenidas 91.7 % (55/60), cristal directo 78.3 %
+      anillos 69.9 % (58/83), cristal directo 54.2 %
+      diagonales 79.6 % (39/49), cristal directo 34.7 %
+      callejones 76.4 % (120/157), cristal directo 46.5 %
+    Ningun tipo llega al objetivo. Bajar decoracion (minimo 7 m) solo liberaria 1 punto (MER_Casa_01, 14.01 -> 7.89 m,
+    anillo): tabla en stage26_faro.json y stage26_faro_proposal.json; NO aplicado (pendiente de tu confirmacion). El
+    resto lo tapan la muralla (4 puntos de avenida), los hitos (8 de diagonal), edificios de servicio o decoracion
+    que tendria que bajar de 7 m.
+  Punto 10 - Repositorio: ver la seccion 17.
+
+17. Repositorio (etapa 26, punto 10: NO se migra a LFS)
+--------------------------------------------------------
+  En git: scripts (.py), README_*.txt, TODO_GODOT.txt, informes y listas (docs/reports/*.json, stage11_markers.csv),
+  textures/concordia/polyhaven.json, .gitignore/.gitattributes. (ASSETS_LICENSES.md no existe todavia; no hay
+  proyecto de Godot en el repositorio.)
+  Fuera de git (.gitignore): *.blend, *.glb, *.png, *.exr y respaldo/ (salvo respaldo/MANIFEST.txt). En la etapa 26
+  se quitaron del indice 306 archivos (git rm --cached): siguen en disco y en el historial anterior; no se ha
+  reescrito el historial ni forzado ningun push.
+  Respaldo: respaldo/2026-11-08/concordia_master_2026-11-08_v26.blend (= concordia_v26.blend) y respaldo/2026-11-08/
+  glb/ (los 21 .glb de export/godot); respaldo/MANIFEST.txt con tamano y sha256 de cada archivo (22 archivos,
+  191.8 MiB). Comprobacion: ver la cabecera del MANIFEST.
+  Tamanos al cerrar la etapa 26: archivos versionados 259 (183.8 MB, de ellos 180.7 MB son las texturas .jpg y
+  export/godot/materials/*.gltf/.bin, que no estaban en la lista: siguen en git hasta que se decida); .git local
+  3.4 GiB (historial con todas las versiones anteriores); respaldo/ 192 MB.
+  AVISO: el contenedor de esta sesion es temporal. respaldo/ y los .blend/.glb/.png nuevos SOLO existen aqui y en
+  lo que se descargue; concordia_v26.blend no esta en GitHub.

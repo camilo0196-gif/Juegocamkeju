@@ -1,0 +1,69 @@
+{
+ "sim": {
+  "avenida": {
+   "points": 60,
+   "now": 55,
+   "pct_now": 91.7,
+   "fixable_by_decor": 0,
+   "pct_if_decor_lowered": 91.7
+  },
+  "anillo": {
+   "points": 83,
+   "now": 58,
+   "pct_now": 69.9,
+   "fixable_by_decor": 1,
+   "pct_if_decor_lowered": 71.1
+  },
+  "callejon": {
+   "points": 157,
+   "now": 120,
+   "pct_now": 76.4,
+   "fixable_by_decor": 0,
+   "pct_if_decor_lowered": 76.4
+  },
+  "diagonal": {
+   "points": 49,
+   "now": 39,
+   "pct_now": 79.6,
+   "fixable_by_decor": 0,
+   "pct_if_decor_lowered": 79.6
+  }
+ },
+ "cats": {
+  "avenida": {
+   "conexion + servicio": 1,
+   "muralla": 4
+  },
+  "anillo": {
+   "conexion + servicio": 1,
+   "servicio": 11,
+   "decorativo + servicio": 7,
+   "decorativo": 2,
+   "conexion + decorativo": 1,
+   "hito + servicio": 1,
+   "decorativo + hito": 1
+  },
+  "callejon": {
+   "decorativo": 11,
+   "servicio": 4,
+   "decorativo + servicio": 21,
+   "conexion + decorativo + servicio": 1
+  },
+  "diagonal": {
+   "hito": 8,
+   "decorativo": 2
+  }
+ },
+ "rows": [
+  [
+   "MER_Casa_01",
+   1,
+   {
+    "anillo": 1
+   },
+   14.01,
+   7.89,
+   3
+  ]
+ ]
+}

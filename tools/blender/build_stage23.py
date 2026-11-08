@@ -197,7 +197,10 @@ def mb_mesh(name, mb, uv=True):
 
 
 def plan_key(plan):
-    return f"f{plan['floors']}{plan['roof'][0]}{(plan['low_side'] or 'n')[0]}{int(plan.get('pitch', 0))}"
+    k = f"f{plan['floors']}{plan['roof'][0]}{(plan['low_side'] or 'n')[0]}{int(plan.get('pitch', 0))}"
+    if plan.get("balcony"):                              # etapa 26: balcon por puerta y lado de la escalera
+        k += f"_b{'p' if plan.get('stair', 1) > 0 else 'm'}"
+    return k
 
 
 def house_meshes(tipo, v, facade, plan, col):

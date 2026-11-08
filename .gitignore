@@ -2,3 +2,11 @@ __pycache__/
 *.pyc
 *.blend1
 *.blend2
+
+# Binarios fuera de git (decision del usuario, etapa 26). Copias fechadas en respaldo/ con MANIFEST.txt (sha256).
+*.blend
+*.glb
+*.png
+*.exr
+respaldo/*
+!respaldo/MANIFEST.txt

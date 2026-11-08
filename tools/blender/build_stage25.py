@@ -239,6 +239,10 @@ def build_race_house(name, key, marker, step, g, st_list):
         pisos = min(pisos, 2)
     elif step == "c":
         pisos = 1
+    elif step == "p1":                                    # etapa 26: 1 planta con la cubierta del preset
+        pisos = 1
+    elif isinstance(step, int):                           # etapa 26: plantas fijadas (casas adosadas)
+        pisos, step = step, None
     target = STEP_C_H
     rng_state = rng.getstate()
     for _try in range(4):

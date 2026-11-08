@@ -883,6 +883,9 @@ def main():
     print("nav", json.dumps(st["navmesh_carve"], default=str)[:900], json.dumps(st["navigation"])[:600], flush=True)
     # 5-6. materiales y exportacion
     files = file_objects(reg, conex)
+    pc = bpy.data.collections.get("BLD_PIPES")
+    if pc is not None:                                   # etapa 26: tubos de luz Tesoreria -> Faro (en bld_portal)
+        files["portal"] = list(files["portal"]) + [o for o in pc.all_objects if o.type in ("MESH", "EMPTY")]
     kit = [o for o in bpy.data.collections["BLD_KIT"].all_objects
            if not (o.name.startswith("Gremio_Cazadores") or (o.parent and o.parent.name.startswith("Gremio_Cazadores")))]
     files["kit"] = kit

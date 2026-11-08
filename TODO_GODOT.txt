@@ -1,6 +1,6 @@
 CONCORDIA - TODO en Godot 4 (lo que el glTF no guarda)
 ======================================================
-Se actualiza en cada etapa. Ultima: etapa 25. [ ] = pendiente en Godot; (E#) = etapa en que aparece.
+Se actualiza en cada etapa. Ultima: etapa 26. [ ] = pendiente en Godot; (E#) = etapa en que aparece.
 
 Importacion general
 [ ] (E11) Los .glb usan texturas EXTERNAS con ruta relativa "../../textures/concordia/...": copiar la carpeta textures/
@@ -41,9 +41,12 @@ Faro (E15, E17)
     la rampa es solo el arranque por debajo de 3 m (FARO_Ramp-colonly).
 [ ] Canales de luz (torre -> plaza): opcional, un pulso que baje del cristal por los 4 canales y siga por los canales
     de la plaza (TRN_LightCanals) hacia el Portal.
-[ ] CRV_LightPipe_Tesoreria_Faro -> Path3D; colocar las piezas PIPE_Light_Straight/Elbow/Support (BLD_KIT) cuando
-    se pida. El primer punto es provisional (MARKER_PipeOutlet_TesoreriaMuralla) hasta la Tesoreria (E5).
-    Soportes en MARKER_PipeSupport_NN. MAT_Pipe_Light_Core 1.5: pulso opcional.
+[x] (E26) Tubos de luz colocados en Blender: PIPES_Tesoreria_Faro (bld_portal.glb), instancias de 4 mallas
+    (recto estirado, codo 90, codo 45, soporte). Primer punto en la salida real de la Tesoreria.
+[ ] (E26) MAT_Pipe_Light_Core 1.5: pulso opcional que baje de la Tesoreria al Faro (desplazamiento de UV en el
+    nucleo). Los tubos no tienen LOD: visibility_range_end ~250 m en sus MeshInstance3D.
+[ ] (E26) Los 14 soportes (PIPE_TF_Support_NN, 0.6 x 0.4 m) estan sobre calle y plaza: NavigationObstacle3D o
+    recortar la malla de navegacion alrededor de cada pie.
 
 Santuario y Salon de las Hazanas (E16)
 [ ] MARKER_Santuario_Door / MARKER_SalonHazanas_Door + *_InteriorVolume: disparador de puerta -> escena interior.
@@ -90,7 +93,8 @@ Oficios (E19)
     (Gremio_Cazadores_Range, MARKER_Cazadores_Range) esta a 84 m, junto a la muralla: si hace falta, un indicador
     de camino o una NPC que lleve de la casa al campo. Dianas Gremio_Cazadores_Prop_Target_01..04: Area3D de
     impacto opcional. Borrar concordia_gremio_cazadores_sin_parcela.glb del proyecto si ya se importo.
-    El campo NO esta en la malla de navegacion ni toca una calle (ver README 15b; decision pendiente en Blender).
+    (E26) Resuelto: entrada norte con portillo, camino de adoquin de 2 m hasta la calle y campo + camino dentro de
+    TRN_NavMesh_Oficios (concordia_terrain_oficios.glb), conectados a la red de calles.
 
 Clases (E20)
 [ ] Estandartes (SalonClase_NN_Banner_*): cambiar la textura por clase (material_override con el emblema definitivo,
@@ -147,3 +151,19 @@ Decisiones de la etapa 25 (E12)
 [ ] Faro: la visibilidad desde las calles sigue por debajo del criterio (avenidas 78.3 %, anillos 57.8 %,
     diagonales 38.8 %, callejones 47.8 %). Si no se decide bajar edificios de servicio, alternativa en Godot: el
     cristal y el haz del Faro sin depth test o un icono de brujula/HUD que apunte al Faro (decision pendiente).
+
+Decisiones de la etapa 26 (E13)
+[ ] Faro (criterio nuevo): FARO_Crystal y FARO_Beam se dibujan SIN depth test (no_depth_test = true y
+    render_priority alto) o con un pase de silueta por encima de los edificios; indicador en pantalla (brujula) que
+    apunta al Faro cuando queda fuera de la vista. Los hitos (Obelisco, Salon, Santuario) y las puertas de la muralla
+    no se tocan en Blender.
+[ ] Salon de las Hazanas: SALON_HAZANAS_Body y _Roof traen occludes_iso = true (metadatos glTF): cuando el jugador
+    quede detras desde CAM_Iso, fundido por dithering (StandardMaterial3D distance_fade_mode = PIXEL_DITHER u
+    OBJECT_DITHER, o shader con alpha hash). Sus materiales son opacos y compatibles.
+[ ] SANTUARIO_Well: provisional = true hasta la etapa de interiores (no darlo por definitivo).
+[ ] Moradas NE y SO: balcon por puerta. Desde la escalera exterior se llega a 2 balcones por casa comunal (puerta
+    central de la planta 2 y la del extremo de la planta 3); las demas puertas altas son puertas-balcon: su
+    MARKER_Morada_Door es zona de interaccion (Area3D) que se activa desde la calle o el interior.
+[ ] NAVLINK_RAZ_B05_Casa_01/02/03/05_Door_Start/_End (yurtas pequenas): NavigationLink3D como los otros 12.
+[ ] Reimportar: bld_portal (tubos), bld_oficios (campo de tiro), bld_razas (casas nuevas y adosadas, B02_Casa_04 a
+    1 planta), bld_moradas_NE / _SO (balcones), concordia_terrain_oficios (malla de navegacion) y concordia_markers.

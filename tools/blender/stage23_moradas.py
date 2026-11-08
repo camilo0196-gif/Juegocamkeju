@@ -271,6 +271,39 @@ def doors_of(tipo, v, plan):
     return [((0.9 if v // 2 else -0.9), 0)]
 
 
+BAL_D = 0.6                      # vuelo del balcon (etapa 26)
+BAL_W = 1.5
+STAIR_Y0 = 4.2                   # borde interior de la escalera exterior con balcones (franja hasta 4.98)
+LANDINGS = True
+STAIR_RAIL = True                # pasamanos de los tramos en la version con balcones
+
+
+def balcony(body, cm, x, yf, z, v, tone, patch, open_side):
+    """Balcon de una puerta (1.5 x 0.6 m): losa sobre una mensula, frente y costados de tabla de una cara (los
+    materiales salen a dos caras), pasamanos. open_side='landing': el frente queda abierto al rellano de la escalera."""
+    x0, x1 = x - BAL_W / 2, x + BAL_W / 2
+    y1 = yf + BAL_D
+    wood = WOOD if tone else WOOD_L
+    body.box((x0, yf, z - 0.14), (x1, y1, z), WOOD_L, skip=("y-", "x-", "x+"))
+    body.rod((x, yf, z - 0.75), (x, y1 - 0.12, z - 0.14), 0.05, WOOD)
+    cm.box((x0, yf, z - 0.14), (x1, y1, z + 1.0), GRAY)
+    h = 0.95
+    if open_side != "landing":
+        if v // 2 == 0:
+            # tablas verticales (panel) con pasamanos
+            body.face([(x0, y1, z), (x1, y1, z), (x1, y1, z + h), (x0, y1, z + h)], wood, nrm=(0, 1, 0))
+        else:
+            # dos travesanos (barandilla abierta)
+            for zz in (z + 0.35, z + 0.7):
+                body.face([(x0, y1, zz), (x1, y1, zz), (x1, y1, zz + 0.12), (x0, y1, zz + 0.12)], wood, nrm=(0, 1, 0))
+        body.box((x0 - 0.03, y1 - 0.04, z + h), (x1 + 0.03, y1 + 0.04, z + h + 0.07), WOOD, skip=("x-", "x+", "z-"))
+    for xs in (x0, x1):
+        body.face([(xs, yf, z), (xs, y1, z), (xs, y1, z + h), (xs, yf, z + h)], wood, nrm=(1 if xs > x else -1, 0, 0))
+    if patch and open_side != "landing":                        # tabla de remiendo de otro tono
+        body.face([(x0 + 0.3, y1 + 0.02, z + 0.2), (x0 + 0.62, y1 + 0.02, z + 0.2), (x0 + 0.62, y1 + 0.02, z + 0.75),
+                   (x0 + 0.3, y1 + 0.02, z + 0.75)], WOOD_L if tone else WOOD, nrm=(0, 1, 0))
+
+
 def habitacion(body, roof, cm, v, facade, plan, rng):
     yb, yf = building_y("habitacion")
     zf, zb = section("habitacion", plan)
@@ -286,9 +319,23 @@ def habitacion(body, roof, cm, v, facade, plan, rng):
     for f in range(nb):
         for x in (-1.6, 1.6):
             window(body, yb, -1, x, f * FH + 1.2, 0.6, 0.9, shutters=(v % 2 == 0))
-    # galerias corridas de madera (plantas 2 y 3) con mensulas y barandilla
+    balc = bool(plan.get("balcony"))
     gal_d = 1.2
-    for f in range(1, floors):
+    if balc:
+        # etapa 26: UN balcon por puerta (plantas 2 y 3) en lugar de la galeria corrida; tablas de dos tonos y una
+        # tabla de remiendo por casa
+        patch = rng.randrange(3 * (floors - 1)) if floors > 1 else -1
+        k = 0
+        for f in range(1, floors):
+            for x in (-2.0, 0.0, 2.0):
+                open_side = None
+                if plan.get("stair") is not None:
+                    st = plan["stair"]
+                    if (f == 1 and x == 0.0) or (f == 2 and x == -2.0 * st):
+                        open_side = "landing"
+                balcony(body, cm, x, yf, f * FH, v, (k + v) % 2, k == patch, open_side)
+                k += 1
+    for f in range(1, floors if not balc else 1):
         z = f * FH
         body.box((-HW, yf, z - 0.14), (HW, yf + gal_d, z), WOOD_L)
         cm.box((-HW, yf, z - 0.14), (HW, yf + gal_d, z), GRAY)
@@ -306,8 +353,8 @@ def habitacion(body, roof, cm, v, facade, plan, rng):
         cm.box((-HW, yr - 0.05, z), (HW, yr + 0.05, z + 1.05), GRAY)
     # escalera exterior de dos tramos (en la franja y 4.2-5.0), lado segun variante
     if floors > 1:
-        s = 1 if v % 2 == 0 else -1
-        y0, y1 = yf + gal_d, 4.98
+        s = plan.get("stair") or (1 if v % 2 == 0 else -1)
+        y0, y1 = (STAIR_Y0 if balc else yf + gal_d), 4.98
         n, run = 12, 2.75
         x_foot = s * 2.95
         up = -s                                                   # un solo sentido: diagonal a lo largo de la fachada
@@ -323,12 +370,19 @@ def habitacion(body, roof, cm, v, facade, plan, rng):
             if k == 0:
                 prof.append((xa + up * 0.3, z0 - 0.25))
             prism_xz(body, prof, y0, y1, WOOD_L if k else ST)
-            body.rod((xa, y1 - 0.03, z0 + 0.95), (xe, y1 - 0.03, z0 + FH + 0.95), 0.035, WOOD)
+            if not (balc and not STAIR_RAIL):
+                body.rod((xa, y1 - 0.03, z0 + 0.95), (xe, y1 - 0.03, z0 + FH + 0.95), 0.035, WOOD)
             prism_xz(cm, [(xa, z0 - 0.25), (xe, z0 + FH - 0.02), (xe, z0 + FH - 0.3), (xa, z0 - 0.3)], y0, y1, GRAY)
             if k < floors - 2:                                   # rellano junto a la galeria entre tramos
                 xl0, xl1 = sorted((xe, xe + up * 0.25))
                 body.box((xl0, y0, z0 + FH - 0.14), (xl1, y1, z0 + FH), WOOD_L)
                 cm.box((xl0, y0, z0 + FH - 0.14), (xl1, y1, z0 + FH), GRAY)
+            if balc and LANDINGS:                                # rellano de llegada hasta el balcon de la puerta
+                xb = 0.0 if k == 0 else -2.0 * s
+                xl0, xl1 = sorted((xe, xb))
+                xl0, xl1 = max(-HW, min(xl0, xb - 0.45)), min(HW, max(xl1, xb + 0.45))
+                body.box((xl0, yf + BAL_D, z0 + FH - 0.14), (xl1, y0, z0 + FH), WOOD_L, skip=("y-", "y+"))
+                cm.box((xl0, yf + BAL_D, z0 + FH - 0.14), (xl1, y0, z0 + FH), GRAY)
 
     # cubierta: a un agua, la cumbrera en el lado alto (hiladas de un solo tramo: presupuesto del modulo)
     seg0 = K.TILE_SEG
@@ -498,7 +552,11 @@ def lod2(mb, tipo, plan, info):
     mb.box((-0.3, (yb + yf) / 2 - 0.3, zc - 0.5), (0.3, (yb + yf) / 2 + 0.3, zc + 0.8), GRAY)
     if tipo == "habitacion" and plan["floors"] > 1:
         for f in range(1, plan["floors"]):
-            mb.box((-HW, yf, f * FH - 0.15), (HW, yf + 1.2, f * FH + 1.0), GRAY)
+            if plan.get("balcony"):
+                for x in (-2.0, 0.0, 2.0):
+                    mb.box((x - BAL_W / 2, yf, f * FH - 0.15), (x + BAL_W / 2, yf + BAL_D, f * FH + 0.95), GRAY)
+            else:
+                mb.box((-HW, yf, f * FH - 0.15), (HW, yf + 1.2, f * FH + 1.0), GRAY)
         mb.box((-HW, yf + 1.2, 0.0), (HW, 4.98, (plan["floors"] - 1) * FH), GRAY)
     if tipo == "casa_pequena":
         mb.box((-HW, 4.75, 0.0), (HW, 4.98, 1.0), GRAY)

@@ -1,0 +1,29 @@
+CONCORDIA - carpeta de respaldo (fuera de git, decision del usuario en la etapa 26)
+concordia_master_<fecha>_v<NN>.blend = copia del .blend maestro de esa fecha; glb/ = export/godot de esa fecha.
+Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | awk '{print $2"  "$3}' | sha256sum -c
+
+       bytes  sha256                                                            archivo
+    77872912  e4759847416e765b08b470d7c0c23fe79528efd910e638d7ceb1d0818ae6d735  2026-11-08/concordia_master_2026-11-08_v26.blend
+     7011912  538db23e76f71ed190cbac8319046984cbce9263ce49e66fd046ea90df165119  2026-11-08/glb/bld_clases.glb
+     1636816  af2efef8e8f4e6f9170b76911167c568f4700a91699250a12626ac8e3c18a524  2026-11-08/glb/bld_kit.glb
+     6988376  333330c14025e816c9990d99ce9ac93dae0a0d25e7784c10a3f05f18fcc0d851  2026-11-08/glb/bld_mercado.glb
+     4240536  2fc578694bf99924a2174cd4e8d3dfb728caa1a8acefbf81f33b8e1aa177c9a2  2026-11-08/glb/bld_moradas_NE.glb
+     4580368  44b49259cd2a48f9c9bee4bf034bea7934e2ad259262fb9982c2739e8d711ed9  2026-11-08/glb/bld_moradas_NO.glb
+     3824712  490a181c64a3505f6b54bf2343bc85efb4c6de3c15b38e2b477eeebe5e592232  2026-11-08/glb/bld_moradas_SE.glb
+     4158680  989c8508b89a4ac693ed929596de6c952abcd97e4f5d7d17dcec83897e0d9e89  2026-11-08/glb/bld_moradas_SO.glb
+     5304908  a2cd6266216519a151f5f2d2600936d76f88679d5a1a8ce11889e72e20f15e53  2026-11-08/glb/bld_oficios.glb
+     5918276  57577bcc4175384992adf5733f7111c59584bd71e29f8876baa8b114c88827d4  2026-11-08/glb/bld_portal.glb
+      367556  517e7220387dac37d441fb3779dc9a3d890f14654d2f15099c1be98ffca8a950  2026-11-08/glb/bld_props.glb
+    10750344  1ed1b567a81967ae4eb741e16801d26955ef239b34c349718caf74638196d845  2026-11-08/glb/bld_razas.glb
+      250304  ea6498d1cb929114bb39c3f770f9dcc6cfefdf043bd8477b94d0df11ec66ec7c  2026-11-08/glb/concordia_markers.glb
+     4833968  9107c1c52418aa6d6ea40dc34ecc767b6fa688bb83eb0819a999c3846b3af1ef  2026-11-08/glb/concordia_terrain_clases.glb
+    16391716  3f96c6bc501175fac754304534fc5b236cb68982adcc75256556af8dff473606  2026-11-08/glb/concordia_terrain_exterior.glb
+     4716248  397e4143134d6b66bc9932b1904599b946f10d0e2977a4ef55eeb64a23c2d842  2026-11-08/glb/concordia_terrain_mercado.glb
+    18902852  8b7ad94acce65ec3bc1d2f5a7b31a76d359d3ef30993d04266def8985f18eb8d  2026-11-08/glb/concordia_terrain_moradas.glb
+     8306616  e28ce828da176af0e70fb3bcb90d20d3c4c1d0b588d0f48a4244706586e86052  2026-11-08/glb/concordia_terrain_oficios.glb
+     7723296  cbfbc08065edff90ee7596a3837262327be0b18664b4681d54b5e5b87de70142  2026-11-08/glb/concordia_terrain_plaza.glb
+     4681556  acff056c96ddd642cf9a4463e0c2605226c5d5489af610a5818bb5d6bf0e0e3e  2026-11-08/glb/concordia_terrain_razas.glb
+     1690444  d4e0a80342588ad23bae871086253e8daeff5b8b77a55da250408e1e11480228  2026-11-08/glb/concordia_wall_kit.glb
+     1004568  b7542d05044a6fbe18e9717e664e376f3f4415876e014884f0989c12e95e961b  2026-11-08/glb/concordia_wall_layout.glb
+
+Total: 22 archivos, 201,156,964 bytes (191.8 MiB)

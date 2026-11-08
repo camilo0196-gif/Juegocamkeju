@@ -1,0 +1,1461 @@
+{
+ "source_chain": [
+  "blender/concordia_v25.blend",
+  "blender/concordia_v26.blend",
+  "blender/concordia_v26.blend",
+  "blender/concordia_v26.blend",
+  "blender/concordia_v26.blend",
+  "blender/concordia_v26.blend",
+  "blender/concordia_v26.blend"
+ ],
+ "moradas": {
+  "design": {
+   "balcony_m": [
+    1.5,
+    0.35
+   ],
+   "balconies_per_habitacion": 6,
+   "stair_strip_y": [
+    4.2,
+    4.98
+   ],
+   "stair_rule": "pie de la escalera en el extremo alejado de CAM_Iso; sube hacia el extremo cercano",
+   "stair_flipped_houses": [
+    "Morada_NE_013",
+    "Morada_NE_064",
+    "Morada_SO_022"
+   ],
+   "landings": "rellano de llegada a 2 balcones (puertas x=0 planta 2 y x=-2s planta 3)",
+   "stair_handrail": "sin pasamanos en los tramos (tapaba puertas vecinas)",
+   "patch": "tablas de dos tonos y una tabla de remiendo por casa",
+   "y0_tried": {
+    "4.2 (aplicada)": [
+     16,
+     {
+      "greedy_history": [
+       19,
+       18,
+       17,
+       16
+      ]
+     }
+    ],
+    "4.4 (prueba aparte, etapa 26)": [
+     15,
+     "0.58 m de escalera: estrecha"
+    ]
+   }
+  },
+  "rebuilt": [
+   "Morada_NE_006",
+   "Morada_NE_008",
+   "Morada_NE_010",
+   "Morada_NE_012",
+   "Morada_NE_013",
+   "Morada_NE_015",
+   "Morada_NE_016",
+   "Morada_NE_017",
+   "Morada_NE_019",
+   "Morada_NE_021",
+   "Morada_NE_024",
+   "Morada_NE_026",
+   "Morada_NE_028",
+   "Morada_NE_030",
+   "Morada_NE_031",
+   "Morada_NE_035",
+   "Morada_NE_038",
+   "Morada_NE_040",
+   "Morada_NE_041",
+   "Morada_NE_042",
+   "Morada_NE_043",
+   "Morada_NE_044",
+   "Morada_NE_046",
+   "Morada_NE_051",
+   "Morada_NE_053",
+   "Morada_NE_054",
+   "Morada_NE_056",
+   "Morada_NE_058",
+   "Morada_NE_059",
+   "Morada_NE_061",
+   "Morada_NE_064",
+   "Morada_NE_065",
+   "Morada_NE_067",
+   "Morada_NE_069",
+   "Morada_NE_070",
+   "Morada_NE_071",
+   "Morada_SO_002",
+   "Morada_SO_008",
+   "Morada_SO_009",
+   "Morada_SO_013",
+   "Morada_SO_017",
+   "Morada_SO_018",
+   "Morada_SO_019",
+   "Morada_SO_021",
+   "Morada_SO_022",
+   "Morada_SO_023",
+   "Morada_SO_026",
+   "Morada_SO_029",
+   "Morada_SO_030",
+   "Morada_SO_032",
+   "Morada_SO_034",
+   "Morada_SO_035",
+   "Morada_SO_036",
+   "Morada_SO_037",
+   "Morada_SO_038",
+   "Morada_SO_041",
+   "Morada_SO_044",
+   "Morada_SO_047",
+   "Morada_SO_049",
+   "Morada_SO_050",
+   "Morada_SO_052",
+   "Morada_SO_055",
+   "Morada_SO_058",
+   "Morada_SO_059",
+   "Morada_SO_060",
+   "Morada_SO_063",
+   "Morada_SO_066",
+   "Morada_SO_067",
+   "Morada_SO_069",
+   "Morada_SO_070",
+   "Morada_SO_071",
+   "Morada_SO_072"
+  ],
+  "doors_before": {
+   "NE": {
+    "doors": 360,
+    "facing": 200,
+    "blocked": 24
+   },
+   "NO": {
+    "doors": 354,
+    "facing": 354,
+    "blocked": 0
+   },
+   "SE": {
+    "doors": 330,
+    "facing": 330,
+    "blocked": 0
+   },
+   "SO": {
+    "doors": 360,
+    "facing": 216,
+    "blocked": 29
+   }
+  },
+  "doors_after": {
+   "NE": {
+    "doors": 360,
+    "facing": 200,
+    "blocked": 5
+   },
+   "NO": {
+    "doors": 354,
+    "facing": 354,
+    "blocked": 0
+   },
+   "SE": {
+    "doors": 330,
+    "facing": 330,
+    "blocked": 0
+   },
+   "SO": {
+    "doors": 360,
+    "facing": 216,
+    "blocked": 11
+   }
+  },
+  "blocked_after": [
+   {
+    "door": "MARKER_Morada_Door_NE_022_1",
+    "by": "Morada_NE_021",
+    "set": "NE",
+    "rays": [
+     "libre",
+     "balcon/escalera de Morada_NE_021",
+     "balcon/escalera de Morada_NE_021"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_NE_047_1",
+    "by": "Morada_NE_046",
+    "set": "NE",
+    "rays": [
+     "balcon/escalera de Morada_NE_046",
+     "balcon/escalera de Morada_NE_046",
+     "balcon/escalera de Morada_NE_046"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_NE_063_1",
+    "by": "Morada_NE_061",
+    "set": "NE",
+    "rays": [
+     "cuerpo/alero de Morada_NE_062",
+     "cuerpo/alero de Morada_NE_062",
+     "cuerpo/alero de Morada_NE_061"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_NE_070_1",
+    "by": "Morada_NE_069",
+    "set": "NE",
+    "rays": [
+     "balcon/escalera de Morada_NE_069",
+     "balcon/escalera de Morada_NE_069",
+     "libre"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_NE_013_1",
+    "by": "Morada_NE_012",
+    "set": "NE",
+    "rays": [
+     "balcon/escalera de Morada_NE_012",
+     "libre",
+     "balcon/escalera de Morada_NE_012"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_SO_048_1",
+    "by": "Morada_SO_049",
+    "set": "SO",
+    "rays": [
+     "balcon/escalera de Morada_SO_050",
+     "balcon/escalera de Morada_SO_049",
+     "balcon/escalera de Morada_SO_049"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_SO_064_1",
+    "by": "Morada_SO_066",
+    "set": "SO",
+    "rays": [
+     "cuerpo/alero de Morada_SO_065",
+     "cuerpo/alero de Morada_SO_065",
+     "cuerpo/alero de Morada_SO_066"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_SO_018_3",
+    "by": "Morada_SO_019",
+    "set": "SO",
+    "rays": [
+     "balcon/escalera de Morada_SO_019",
+     "balcon/escalera de Morada_SO_019",
+     "libre"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_SO_035_1",
+    "by": "Morada_SO_036",
+    "set": "SO",
+    "rays": [
+     "balcon/escalera de Morada_SO_036",
+     "balcon/escalera de Morada_SO_036",
+     "balcon/escalera de Morada_SO_036"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_SO_035_2",
+    "by": "Morada_SO_036",
+    "set": "SO",
+    "rays": [
+     "balcon/escalera de Morada_SO_036",
+     "balcon/escalera de Morada_SO_036",
+     "balcon/escalera de Morada_SO_036"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_SO_035_3",
+    "by": "Morada_SO_036",
+    "set": "SO",
+    "rays": [
+     "balcon/escalera de Morada_SO_036",
+     "balcon/escalera de Morada_SO_037",
+     "balcon/escalera de Morada_SO_036"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_SO_035_4",
+    "by": "Morada_SO_036",
+    "set": "SO",
+    "rays": [
+     "cuerpo/alero de Morada_SO_036",
+     "cuerpo/alero de Morada_SO_036",
+     "cuerpo/alero de Morada_SO_036"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_SO_035_5",
+    "by": "Morada_SO_036",
+    "set": "SO",
+    "rays": [
+     "balcon/escalera de Morada_SO_036",
+     "cuerpo/alero de Morada_SO_036",
+     "cuerpo/alero de Morada_SO_036"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_SO_035_6",
+    "by": "Morada_SO_036",
+    "set": "SO",
+    "rays": [
+     "balcon/escalera de Morada_SO_036",
+     "balcon/escalera de Morada_SO_036",
+     "cuerpo/alero de Morada_SO_036"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_SO_058_3",
+    "by": "Morada_SO_059",
+    "set": "SO",
+    "rays": [
+     "balcon/escalera de Morada_SO_059",
+     "balcon/escalera de Morada_SO_059",
+     "libre"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_SO_059_3",
+    "by": "Morada_SO_060",
+    "set": "SO",
+    "rays": [
+     "balcon/escalera de Morada_SO_060",
+     "balcon/escalera de Morada_SO_060",
+     "libre"
+    ]
+   }
+  ]
+ },
+ "moradas_sets": {
+  "NE": {
+   "houses": 72,
+   "dwellings": 360,
+   "LOD0": 74074,
+   "LOD2": 6488,
+   "lod2_ratio": 0.088,
+   "max_per_type": {
+    "casa_pequena": [
+     672,
+     "Morada_NE_001"
+    ],
+    "casa_grande": [
+     752,
+     "Morada_NE_003"
+    ],
+    "habitacion": [
+     1418,
+     "Morada_NE_017"
+    ]
+   },
+   "over_budget": [],
+   "budget": {
+    "habitacion": 1500,
+    "casa_pequena": 2000,
+    "casa_grande": 3500
+   },
+   "ok": true
+  },
+  "NO": {
+   "houses": 72,
+   "dwellings": 354,
+   "LOD0": 71128,
+   "LOD2": 4806,
+   "lod2_ratio": 0.068,
+   "max_per_type": {
+    "casa_grande": [
+     752,
+     "Morada_NO_018"
+    ],
+    "habitacion": [
+     1460,
+     "Morada_NO_058"
+    ],
+    "casa_pequena": [
+     672,
+     "Morada_NO_012"
+    ]
+   },
+   "over_budget": [],
+   "budget": {
+    "habitacion": 1500,
+    "casa_pequena": 2000,
+    "casa_grande": 3500
+   },
+   "ok": true
+  },
+  "SE": {
+   "houses": 67,
+   "dwellings": 330,
+   "LOD0": 64398,
+   "LOD2": 4410,
+   "lod2_ratio": 0.068,
+   "max_per_type": {
+    "casa_pequena": [
+     672,
+     "Morada_SE_006"
+    ],
+    "habitacion": [
+     1340,
+     "Morada_SE_011"
+    ],
+    "casa_grande": [
+     722,
+     "Morada_SE_008"
+    ]
+   },
+   "over_budget": [],
+   "budget": {
+    "habitacion": 1500,
+    "casa_pequena": 2000,
+    "casa_grande": 3500
+   },
+   "ok": true
+  },
+  "SO": {
+   "houses": 72,
+   "dwellings": 360,
+   "LOD0": 74298,
+   "LOD2": 6516,
+   "lod2_ratio": 0.088,
+   "max_per_type": {
+    "casa_pequena": [
+     672,
+     "Morada_SO_003"
+    ],
+    "casa_grande": [
+     752,
+     "Morada_SO_039"
+    ],
+    "habitacion": [
+     1418,
+     "Morada_SO_029"
+    ]
+   },
+   "over_budget": [],
+   "budget": {
+    "habitacion": 1500,
+    "casa_pequena": 2000,
+    "casa_grande": 3500
+   },
+   "ok": true
+  }
+ },
+ "steps_done": [
+  "moradas",
+  "raza04",
+  "cazadores",
+  "razas",
+  "subasta",
+  "salon",
+  "pipes",
+  "salon",
+  "pipes",
+  "pipes",
+  "pipes"
+ ],
+ "raza04": {
+  "name": "RAZ_B02_Casa_04",
+  "floors": 1,
+  "h_before": 10.49,
+  "h_after": 7.29,
+  "CasaRaza_02_door_visible": true,
+  "hidden_points": 0,
+  "by": [],
+  "build": [
+   {
+    "name": "RAZ_B02_Casa_04",
+    "floors": 1,
+    "roof": "hip",
+    "tris": 726,
+    "faro_step": "p1"
+   }
+  ]
+ },
+ "cazadores_access": {
+  "ok": true,
+  "opening": "extremo norte del campo (+X local), y 0..2 m, portillo abierto hacia dentro",
+  "path_m": [
+   9.1,
+   2.0
+  ],
+  "path_surface": "MAT_Cobble_Concordia",
+  "street_reached_at": [
+   155.4,
+   65.5
+  ],
+  "path_checks": [
+   [
+    7.5,
+    [
+     "free",
+     "free",
+     "free"
+    ]
+   ],
+   [
+    8.0,
+    [
+     "free",
+     "free",
+     "free"
+    ]
+   ],
+   [
+    8.5,
+    [
+     "free",
+     "free",
+     "free"
+    ]
+   ],
+   [
+    9.0,
+    [
+     "free",
+     "free",
+     "free"
+    ]
+   ],
+   [
+    9.5,
+    [
+     "free",
+     "free",
+     "free"
+    ]
+   ],
+   [
+    10.0,
+    [
+     "free",
+     "free",
+     "free"
+    ]
+   ],
+   [
+    10.5,
+    [
+     "free",
+     "free",
+     "free"
+    ]
+   ],
+   [
+    11.0,
+    [
+     "free",
+     "free",
+     "free"
+    ]
+   ],
+   [
+    11.5,
+    [
+     "free",
+     "free",
+     "free"
+    ]
+   ],
+   [
+    12.0,
+    [
+     "free",
+     "free",
+     "free"
+    ]
+   ],
+   [
+    12.5,
+    [
+     "free",
+     "free",
+     "free"
+    ]
+   ],
+   [
+    13.0,
+    [
+     "free",
+     "free",
+     "free"
+    ]
+   ],
+   [
+    13.5,
+    [
+     "free",
+     "free",
+     "free"
+    ]
+   ],
+   [
+    14.0,
+    [
+     "free",
+     "free",
+     "free"
+    ]
+   ],
+   [
+    14.5,
+    [
+     "free",
+     "free",
+     "free"
+    ]
+   ],
+   [
+    15.0,
+    [
+     "free",
+     "free",
+     "public"
+    ]
+   ],
+   [
+    15.5,
+    [
+     "public",
+     "public",
+     "public"
+    ]
+   ]
+  ],
+  "navmesh": {
+   "faces_added": 145,
+   "street_edge_len_m": 3.75,
+   "weld_dist_m": 0.38,
+   "components_before": 33,
+   "main_component_faces_before": 4283,
+   "range_component_faces": 4428,
+   "range_connected_to_main_street_network": true,
+   "nav_offset_m": 0.051
+  }
+ },
+ "razas": {
+  "before": {
+   "1": 6,
+   "2": 5,
+   "3": 6,
+   "4": 6,
+   "5": 1,
+   "6": 1
+  },
+  "after": {
+   "1": 6,
+   "2": 6,
+   "3": 6,
+   "4": 6,
+   "5": 5,
+   "6": 2
+  },
+  "target": 6,
+  "minimum": 5,
+  "below_target": {
+   "B05": 5,
+   "B06": 2
+  },
+  "below_minimum": {
+   "B06": {
+    "have": 2,
+    "missing_for_5": 3,
+    "missing_for_6": 4
+   }
+  },
+  "houses": [
+   {
+    "name": "RAZ_B05_Casa_01",
+    "barrio": 5,
+    "floors": 1,
+    "center": [
+     34.9,
+     -82.3
+    ],
+    "height_m": 5.28,
+    "adosada": true,
+    "split_from": "RAZ_B05_Casa_01 (8x8)",
+    "pair_side": "izq"
+   },
+   {
+    "name": "RAZ_B05_Casa_02",
+    "barrio": 5,
+    "floors": 1,
+    "center": [
+     31.1,
+     -83.7
+    ],
+    "height_m": 5.44,
+    "adosada": true,
+    "split_from": "RAZ_B05_Casa_01 (8x8)",
+    "pair_side": "der"
+   },
+   {
+    "name": "RAZ_B06_Casa_01",
+    "barrio": 6,
+    "floors": 3,
+    "center": [
+     -31.6,
+     -82.1
+    ],
+    "height_m": 10.5,
+    "adosada": true,
+    "split_from": "RAZ_B06_Casa_01 (8x8)",
+    "pair_side": "izq"
+   },
+   {
+    "name": "RAZ_B06_Casa_02",
+    "barrio": 6,
+    "floors": 2,
+    "center": [
+     -32.8,
+     -85.9
+    ],
+    "height_m": 7.3,
+    "adosada": true,
+    "split_from": "RAZ_B06_Casa_01 (8x8)",
+    "pair_side": "der"
+   },
+   {
+    "name": "RAZ_B05_Casa_03",
+    "barrio": 5,
+    "floors": 1,
+    "center": [
+     23.0,
+     -115.0
+    ],
+    "height_m": 5.44,
+    "adosada": false,
+    "lot_slope_m": 0.11,
+    "across_ring_r100": true
+   },
+   {
+    "name": "RAZ_B02_Casa_06",
+    "barrio": 2,
+    "floors": 3,
+    "center": [
+     -19.0,
+     -137.0
+    ],
+    "height_m": 11.77,
+    "adosada": false,
+    "lot_slope_m": 0.18,
+    "across_ring_r100": false
+   },
+   {
+    "name": "RAZ_B05_Casa_04",
+    "barrio": 5,
+    "floors": 1,
+    "center": [
+     23.0,
+     -63.0
+    ],
+    "height_m": 5.28,
+    "adosada": false,
+    "lot_slope_m": 1.45,
+    "across_ring_r100": false
+   },
+   {
+    "name": "RAZ_B05_Casa_05",
+    "barrio": 5,
+    "floors": 1,
+    "center": [
+     11.0,
+     -67.0
+    ],
+    "height_m": 5.6,
+    "adosada": false,
+    "lot_slope_m": 1.4,
+    "across_ring_r100": false
+   }
+  ],
+  "lots_found_4x8": 8,
+  "pairs_found": 0,
+  "unused_lots": [
+   {
+    "center": [
+     -29.0,
+     -173.0
+    ],
+    "nearest": 4,
+    "dist_m": 17.2
+   },
+   {
+    "center": [
+     21.0,
+     -165.0
+    ],
+    "nearest": 3,
+    "dist_m": 18.7
+   },
+   {
+    "center": [
+     21.0,
+     -171.0
+    ],
+    "nearest": 3,
+    "dist_m": 20.2
+   },
+   {
+    "center": [
+     -21.0,
+     -167.0
+    ],
+    "nearest": 4,
+    "dist_m": 20.8
+   }
+  ],
+  "rules": "sector Sur +-25 grados, r 60-185; 4 x 8 + 0.15 m de margen sin calle, plaza, escalinata, puente ni objeto; frente a calle a <= 3.5 m; desnivel <= 2.5 m (zocalo); asignacion al barrio mas cercano que necesite casas (<= 40 m); (a) compactar no se aplica (ver docstring)"
+ },
+ "subasta": {
+  "marker_interior": false,
+  "removed": []
+ },
+ "salon": {
+  "objects": [
+   "SALON_HAZANAS_Body",
+   "SALON_HAZANAS_Roof"
+  ],
+  "materials": {
+   "MAT_Wall_Gray": {
+    "principled": true,
+    "alpha": 1.0,
+    "godot": "StandardMaterial3D",
+    "blend": "DITHERED",
+    "other_nodes": [],
+    "dither_ok": true
+   },
+   "MAT_Limestone_Worn": {
+    "principled": true,
+    "alpha": 1.0,
+    "godot": "StandardMaterial3D",
+    "blend": "DITHERED",
+    "other_nodes": [],
+    "dither_ok": true
+   },
+   "MAT_Stained_Glass_Blue": {
+    "principled": true,
+    "alpha": 1.0,
+    "godot": "StandardMaterial3D",
+    "blend": "DITHERED",
+    "other_nodes": [],
+    "dither_ok": true
+   },
+   "MAT_Iron_Black": {
+    "principled": true,
+    "alpha": 1.0,
+    "godot": "StandardMaterial3D",
+    "blend": "DITHERED",
+    "other_nodes": [],
+    "dither_ok": true
+   },
+   "MAT_Wood_Dark": {
+    "principled": true,
+    "alpha": 1.0,
+    "godot": "StandardMaterial3D",
+    "blend": "DITHERED",
+    "other_nodes": [],
+    "dither_ok": true
+   },
+   "MAT_Stone_Repair": {
+    "principled": true,
+    "alpha": 1.0,
+    "godot": "StandardMaterial3D",
+    "blend": "DITHERED",
+    "other_nodes": [],
+    "dither_ok": true
+   },
+   "MAT_Roof_Tile_Ocher": {
+    "principled": true,
+    "alpha": 1.0,
+    "godot": "StandardMaterial3D",
+    "blend": "DITHERED",
+    "other_nodes": [],
+    "dither_ok": true
+   },
+   "MAT_Roof_Tile_Ocher_B": {
+    "principled": true,
+    "alpha": 1.0,
+    "godot": "StandardMaterial3D",
+    "blend": "DITHERED",
+    "other_nodes": [],
+    "dither_ok": true
+   }
+  },
+  "santuario_well_provisional": true
+ },
+ "pipes": {
+  "first_point": {
+   "outlet": [
+    -18.0,
+    126.2,
+    14.72
+   ],
+   "curve_first_point_before": [
+    -18.0,
+    126.2,
+    14.72
+   ],
+   "moved_m": 0.0,
+   "roof_below": "TesoreriaMuralla_Roof",
+   "outlet_over_roof_m": 0.0,
+   "note": "el primer punto ya estaba en la salida real desde la etapa 18; provisional = false"
+  },
+  "path_vertices": 9,
+  "length_m": 123.1,
+  "pieces": {
+   "straight": 34,
+   "elbow90": 3,
+   "elbow45": 4,
+   "support": 14
+  },
+  "tris": {
+   "straight": 4896,
+   "elbow90": 1296,
+   "elbow45": 1136,
+   "support": 616,
+   "total": 7944
+  },
+  "budget": 8000,
+  "ok_budget": true,
+  "raise": [
+   {
+    "lift_m": 0.0,
+    "max_over_street_m": 10.48,
+    "min_to_building_m": 8.01,
+    "min_to_faro_m": 1.17,
+    "violations": 6,
+    "examples": [
+     [
+      0.5,
+      [
+       -17.5,
+       126.1,
+       14.7
+      ],
+      "toca la Tesoreria",
+      0.24
+     ],
+     [
+      1.3,
+      [
+       -16.8,
+       126.0,
+       14.6
+      ],
+      "toca la Tesoreria",
+      0.15
+     ],
+     [
+      1.5,
+      [
+       -16.5,
+       126.0,
+       14.6
+      ],
+      "toca la Tesoreria",
+      0.11
+     ],
+     [
+      1.8,
+      [
+       -16.2,
+       126.0,
+       14.6
+      ],
+      "toca la Tesoreria",
+      0.08
+     ]
+    ]
+   },
+   {
+    "lift_m": 0.5,
+    "max_over_street_m": 10.98,
+    "min_to_building_m": 8.38,
+    "min_to_faro_m": 1.17,
+    "violations": 6,
+    "examples": [
+     [
+      0.5,
+      [
+       -17.5,
+       126.1,
+       14.7
+      ],
+      "toca la Tesoreria",
+      0.24
+     ],
+     [
+      1.3,
+      [
+       -16.8,
+       126.0,
+       14.7
+      ],
+      "toca la Tesoreria",
+      0.15
+     ],
+     [
+      1.5,
+      [
+       -16.5,
+       126.0,
+       14.7
+      ],
+      "toca la Tesoreria",
+      0.11
+     ],
+     [
+      1.8,
+      [
+       -16.2,
+       126.0,
+       14.7
+      ],
+      "toca la Tesoreria",
+      0.08
+     ]
+    ]
+   },
+   {
+    "lift_m": 1.0,
+    "max_over_street_m": 11.48,
+    "min_to_building_m": 8.43,
+    "min_to_faro_m": 1.17,
+    "violations": 6,
+    "examples": [
+     [
+      0.5,
+      [
+       -17.5,
+       126.1,
+       14.8
+      ],
+      "toca la Tesoreria",
+      0.24
+     ],
+     [
+      1.3,
+      [
+       -16.8,
+       126.0,
+       14.8
+      ],
+      "toca la Tesoreria",
+      0.15
+     ],
+     [
+      1.5,
+      [
+       -16.5,
+       126.0,
+       14.9
+      ],
+      "toca la Tesoreria",
+      0.11
+     ],
+     [
+      1.8,
+      [
+       -16.2,
+       126.0,
+       14.9
+      ],
+      "toca la Tesoreria",
+      0.08
+     ]
+    ]
+   },
+   {
+    "lift_m": 1.5,
+    "max_over_street_m": 11.98,
+    "min_to_building_m": 8.43,
+    "min_to_faro_m": 1.17,
+    "violations": 5,
+    "examples": [
+     [
+      1.3,
+      [
+       -16.8,
+       126.0,
+       14.9
+      ],
+      "toca la Tesoreria",
+      0.15
+     ],
+     [
+      1.5,
+      [
+       -16.5,
+       126.0,
+       15.0
+      ],
+      "toca la Tesoreria",
+      0.11
+     ],
+     [
+      1.8,
+      [
+       -16.2,
+       126.0,
+       15.0
+      ],
+      "toca la Tesoreria",
+      0.08
+     ],
+     [
+      2.0,
+      [
+       -16.0,
+       125.9,
+       15.1
+      ],
+      "toca la Tesoreria",
+      0.05
+     ]
+    ]
+   },
+   {
+    "lift_m": 2.0,
+    "max_over_street_m": 12.48,
+    "min_to_building_m": 8.43,
+    "min_to_faro_m": 1.17,
+    "violations": 5,
+    "examples": [
+     [
+      1.3,
+      [
+       -16.8,
+       126.0,
+       15.1
+      ],
+      "toca la Tesoreria",
+      0.15
+     ],
+     [
+      1.6,
+      [
+       -16.5,
+       126.0,
+       15.1
+      ],
+      "toca la Tesoreria",
+      0.11
+     ],
+     [
+      1.8,
+      [
+       -16.2,
+       126.0,
+       15.2
+      ],
+      "toca la Tesoreria",
+      0.08
+     ],
+     [
+      2.1,
+      [
+       -16.0,
+       125.9,
+       15.3
+      ],
+      "toca la Tesoreria",
+      0.06
+     ]
+    ]
+   },
+   {
+    "lift_m": 2.5,
+    "max_over_street_m": 12.98,
+    "min_to_building_m": 8.43,
+    "min_to_faro_m": 1.17,
+    "violations": 4,
+    "examples": [
+     [
+      1.3,
+      [
+       -16.8,
+       126.0,
+       15.1
+      ],
+      "toca la Tesoreria",
+      0.18
+     ],
+     [
+      1.5,
+      [
+       -16.6,
+       126.0,
+       15.2
+      ],
+      "toca la Tesoreria",
+      0.12
+     ],
+     [
+      1.8,
+      [
+       -16.3,
+       126.0,
+       15.3
+      ],
+      "toca la Tesoreria",
+      0.14
+     ],
+     [
+      2.0,
+      [
+       -16.1,
+       126.0,
+       15.4
+      ],
+      "toca la Tesoreria",
+      0.2
+     ]
+    ]
+   },
+   {
+    "lift_m": 3.0,
+    "max_over_street_m": 13.48,
+    "min_to_building_m": 8.43,
+    "min_to_faro_m": 1.17,
+    "violations": 3,
+    "examples": [
+     [
+      1.3,
+      [
+       -16.9,
+       126.1,
+       15.2
+      ],
+      "toca la Tesoreria",
+      0.22
+     ],
+     [
+      1.5,
+      [
+       -16.6,
+       126.0,
+       15.3
+      ],
+      "toca la Tesoreria",
+      0.18
+     ],
+     [
+      1.8,
+      [
+       -16.4,
+       126.0,
+       15.4
+      ],
+      "toca la Tesoreria",
+      0.25
+     ]
+    ]
+   },
+   {
+    "lift_m": 3.5,
+    "max_over_street_m": 13.98,
+    "min_to_building_m": 8.43,
+    "min_to_faro_m": 1.17,
+    "violations": 0,
+    "examples": []
+   }
+  ],
+  "lift_applied_m": 3.5,
+  "clearance_ok": true,
+  "bends": [
+   {
+    "at": [
+     -18.0,
+     126.2,
+     18.22
+    ],
+    "angle": 95.2,
+    "piece": "codo 90"
+   },
+   {
+    "at": [
+     -12.5,
+     125.5,
+     17.71
+    ],
+    "angle": 38.2,
+    "piece": "codo 45"
+   },
+   {
+    "at": [
+     36.5,
+     76.5,
+     18.71
+    ],
+    "angle": 45.0,
+    "piece": "codo 45"
+   },
+   {
+    "at": [
+     43.5,
+     76.5,
+     18.68
+    ],
+    "angle": 45.0,
+    "piece": "codo 45"
+   },
+   {
+    "at": [
+     56.5,
+     63.5,
+     19.07
+    ],
+    "angle": 90.6,
+    "piece": "codo 90"
+   },
+   {
+    "at": [
+     52.5,
+     59.5,
+     15.57
+    ],
+    "angle": 37.1,
+    "piece": "codo 45"
+   },
+   {
+    "at": [
+     45.54,
+     56.29,
+     15.57
+    ],
+    "angle": 91.4,
+    "piece": "codo 90"
+   }
+  ],
+  "supports": [
+   {
+    "s_m": 8.0,
+    "xy": [
+     -13.6,
+     125.6
+    ],
+    "height_m": 12.47,
+    "on": "terreno"
+   },
+   {
+    "s_m": 16.0,
+    "xy": [
+     -7.6,
+     120.6
+    ],
+    "height_m": 12.35,
+    "on": "TRN_City_Chunk_8_10_LOD0"
+   },
+   {
+    "s_m": 24.0,
+    "xy": [
+     -1.9,
+     114.9
+    ],
+    "height_m": 12.3,
+    "on": "TRN_City_Chunk_8_10_LOD0"
+   },
+   {
+    "s_m": 32.0,
+    "xy": [
+     3.7,
+     109.3
+    ],
+    "height_m": 12.27,
+    "on": "terreno"
+   },
+   {
+    "s_m": 40.0,
+    "xy": [
+     9.4,
+     103.6
+    ],
+    "height_m": 12.22,
+    "on": "terreno"
+   },
+   {
+    "s_m": 48.0,
+    "xy": [
+     15.0,
+     98.0
+    ],
+    "height_m": 12.21,
+    "on": "terreno"
+   },
+   {
+    "s_m": 56.0,
+    "xy": [
+     20.7,
+     92.3
+    ],
+    "height_m": 12.31,
+    "on": "TRN_City_Chunk_8_10_LOD0"
+   },
+   {
+    "s_m": 64.0,
+    "xy": [
+     24.7,
+     88.3
+    ],
+    "height_m": 12.22,
+    "on": "CAU_Banks"
+   },
+   {
+    "s_m": 72.0,
+    "xy": [
+     32.0,
+     81.0
+    ],
+    "height_m": 12.37,
+    "on": "CAU_Banks"
+   },
+   {
+    "s_m": 80.0,
+    "xy": [
+     38.1,
+     76.5
+    ],
+    "height_m": 12.31,
+    "on": "TRN_City_Chunk_9_10_LOD0"
+   },
+   {
+    "s_m": 88.0,
+    "xy": [
+     45.4,
+     74.6
+    ],
+    "height_m": 12.49,
+    "on": "CAU_Banks"
+   },
+   {
+    "s_m": 96.0,
+    "xy": [
+     51.0,
+     69.0
+    ],
+    "height_m": 12.53,
+    "on": "TRN_City_Chunk_9_9_LOD0"
+   },
+   {
+    "s_m": 104.0,
+    "xy": [
+     56.4,
+     63.4
+    ],
+    "height_m": 12.5,
+    "on": "TRN_City_Chunk_9_9_LOD0"
+   },
+   {
+    "s_m": 112.0,
+    "xy": [
+     51.1,
+     58.8
+    ],
+    "height_m": 8.68,
+    "on": "TRN_City_Chunk_9_9_LOD0"
+   }
+  ],
+  "max_piece_m": 4.0
+ }
+}
