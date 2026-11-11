@@ -1,0 +1,72 @@
+{
+ "p01_escalera_terraza_lateral": [
+  85.8,
+  82.4,
+  18.0
+ ],
+ "p02_pretiles_moradas": [
+  125.6,
+  122.2,
+  22.0
+ ],
+ "p03_fuente_mercado": [
+  0.0,
+  105.0,
+  22.0
+ ],
+ "p04_puestos_provisiones": [
+  -36.0,
+  160.0,
+  25.0
+ ],
+ "p05_plazuela_01": [
+  36.9,
+  -137.8,
+  18.0
+ ],
+ "p06_puente01_monumental_ne": [
+  67.0,
+  63.7,
+  18.0
+ ],
+ "p07_monumental_no": [
+  -71.8,
+  77.2,
+  18.0
+ ],
+ "p08_monumental_se_escalinata10": [
+  60.1,
+  -73.2,
+  18.0
+ ],
+ "p09_callejon25_puente03": [
+  99.3,
+  -33.4,
+  18.0
+ ],
+ "p10_pedestal_portal": [
+  0.0,
+  12.0,
+  25.0
+ ],
+ "p11_escalera_lateral_ne02": [
+  121.8,
+  57.3,
+  22.0
+ ],
+ "p12_arco_puente06": [
+  -48.3,
+  -141.9,
+  22.0
+ ],
+ "p13_escalinata_01": [
+  51.0,
+  85.9,
+  18.0
+ ],
+ "p14_parcela_plaza": [
+  -50.5,
+  20.3,
+  30.0
+ ]
+}

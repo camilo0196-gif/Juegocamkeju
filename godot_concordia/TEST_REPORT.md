@@ -83,3 +83,71 @@ Resultado (34 .glb, 2,346,722 triangulos en total sumando todos los LOD):
 
 Problemas abiertos de G0-G1: F1-F4 (FIXES_BLENDER.md); la ciudad v28 se exporto a una carpeta nueva por decision del
 usuario; G8 sin animaciones.
+
+## G2 · Ensamble de la ciudad
+
+`tools/build_city.gd` genera `scenes/concordia.tscn` (7 terrenos, muralla colocada, 9 bld_*, marcadores) y
+`scenes/main.tscn` (ciudad + sol + entorno + Game). `scripts/city.gd` al arrancar: 883 unidades de LOD
+(`scripts/lod_manager.gd`, por distancia en planta al jugador: LOD0 < 40 m, LOD1 < 100 m, LOD2 resto, margen 5 m;
+la distancia de una camara ortografica no sirve para elegir LOD), 16 NavigationLink3D (parejas NAVLINK_*_Start/_End),
+360 BoxOccluder3D al 80 % dentro de los cuerpos grandes (> 5 x 5 x 4 m). Preparacion: ~40 ms.
+
+Escena en marcha: **16.310 nodos** (8.114 MeshInstance3D, 5.403 Marker3D, 824 Node3D, 788 StaticBody3D,
+360 OccluderInstance3D, 6 NavigationRegion3D, 16 NavigationLink3D).
+
+Medidas de render (Forward+, 1600 x 900, sombras del sol a 140 m; `capture_tour.gd`, `debug/out/tour/g2_medidas.json`):
+
+| punto (zoom) | draw calls | triangulos visibles | objetos | LOD0/1/2 (unidades) |
+|---|---|---|---|---|
+| plaza (60 m) | 1.270 | 446.227 | 1.869 | 11 / 78 / 794 |
+| plaza (120 m, el mas abierto) | 2.793 | 757.641 | 3.374 | 10 / 60 / 813 |
+| mercado (60 m) | 1.630 | 444.686 | 2.522 | 13 / 108 / 762 |
+| moradas NE (60 m) | 2.771 | 537.711 | 5.126 | 40 / 109 / 734 |
+| moradas SO (60 m) | 3.104 | 483.318 | 5.521 | 39 / 118 / 726 |
+| razas / oficios / clases (60 m) | 2.916 / 2.193 / 1.940 | 528.330 / 490.608 / 391.446 | 3.834 / 3.217 / 3.074 | |
+
+- Las Moradas son lo mas caro en draw calls (~3.100): miles de mallas pequenas (puertas, balcones, faroles). Se
+  ataca en G7 (MultiMesh / fusion por casa) — medir antes en el PC del usuario.
+- **VRAM:** 436,6 MB en total; "texturas" 291 MB = **161 MB de texturas de materiales** (69 texturas unicas de la
+  ciudad: 55 BC1 + 17 RGTC normales; limite acordado 220 MB: cumple) + 130 MB del motor (sombras, cielo, buffers;
+  medido con la escena sin ciudad, `debug/probe_vram.gd`).
+- Orientacion iso comprobada: camara (-35,264, 45, 0), mira (-0,577, -0,577, -0,577); Salon de las Hazanas (SE) a
+  75,3 m, Santuario (NO) a 182,3 m.
+- Revisadas las 15 capturas del recorrido. Bien: Faro, velo del Portal, Salon, Mercado, Oficios, Clases, Razas,
+  Moradas, Puerta del Alba, puentes del Cauce. Mal: escalinatas de paso (F6), parcelas de la plaza (F7); pendientes de
+  G4/G5 (no son fallos del modelo): huertos como tierra (shader de mascaras), haz del Crisol/Faro como bloque cian
+  opaco que tapa la fuente del Mercado (material ADD), Obelisco negro (material encendido por pisos).
+
+## G3 · Camara, jugador, HUD y prueba de caminata
+
+- Camara iso ortografica (`scripts/iso_camera.gd`): zoom 15-120 m con la rueda, Q / E giran 90 grados.
+- Jugador de prueba (`scripts/player.gd`): capsula 0,35 x 1,8, WASD relativo a la camara, Shift corre, clic izquierdo
+  anda por la malla de navegacion, pendiente maxima 46 grados, sube escalones de hasta 0,25 m, R vuelve al inicio.
+- HUD F1 (`ui/debug_hud.gd`): FPS, ms, draw calls, triangulos, objetos, VRAM, zona, posicion (Godot y Blender), zoom,
+  hora.
+- **Malla de navegacion asincrona:** Godot 4.7 sincroniza las regiones en hilos aparte; la Plaza (8.131 poligonos)
+  y las Moradas (14.925) tardan ~2,3 s en entrar en el mapa. Antes de eso los caminos salen vacios o cortos.
+  `scripts/nav_ready.gd` espera a que esten todas (lo usan la prueba y lo usaran los NPC).
+- Ejecucion del proyecto: `--quit-after 900` sin ventana y `--quit-after 300` con Vulkan: **0 errores, 0 avisos.**
+
+### Prueba de caminata (`tools/walk_test.gd`, rutas de `tools/walk_routes.py`)
+
+El jugador recorre con fisica real (60 Hz, `--fixed-fps 60`) 314 rutas: 8 avenidas, 8 rondas (r100 y r150),
+8 diagonales, 26 callejones, 26 callejones con escalera, 36 cruces de plazas, 5 puentes, 4 arcos, 10 escalinatas,
+76 escaleras de terraza, 32 escaleras laterales, 4 monumentales, 4 puertas de la muralla y 67 tramos por las calles de
+las Moradas. Resultado: **553 tramos, 475 bien (86 %), 6,7 km andados**, 0 caidas al vacio, 0 respawns.
+
+| problema | cuantos | donde |
+|---|---|---|
+| atasco | 63 | escaleras de las Moradas (laterales de zancas/pretiles, 33), plazas con fuente o puestos (21), monumentales (3), puentes y callejon (3), avenida del Mercado contra la fuente (2), pedestal del Portal (1) |
+| rodeo (la malla no usa la escalera) | 19 | escaleras de terraza y laterales de las Moradas |
+| sin camino (islas) | 15 | 14 escaleras laterales de las Moradas, calle bajo el arco del Puente_06 |
+| sin malla en un extremo | 16 | 4 puertas de la muralla (fuera), 10 escaleras laterales (pie exterior), centro del pedestal (2) |
+| caida > 0,6 m | 2 | borde del pedestal del Portal (0,63 m) |
+
+Sin problemas: avenidas (salvo la fuente), rondas, diagonales, callejones, 10 escalinatas, 4 de 5 puentes.
+
+Detalle y causas -> `FIXES_BLENDER.md` F8 (malla bajo obstaculos), F9 (escaleras sin unir), F10 (escalones de
+0,6-1,2 m), F11 (zonas sin malla). Cobertura: `debug/out/walk/navcover.png` (verde malla, azul malla bajo obstaculo,
+rojo suelo sin malla, gris edificios). Capturas de los puntos: `debug/out/tour/g3_p01..p14_*.png`
+(`tools/g3_problem_points.json`).

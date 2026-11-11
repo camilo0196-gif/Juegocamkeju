@@ -3,6 +3,8 @@ extends SceneTree
 ## xvfb-run godot --path godot_concordia --audio-driver Dummy -s res://tools/capture_tour.gd -- [prefijo] [punto ...]
 ## Sale en debug/out/tour/<prefijo>_<punto>.png y debug/out/tour/<prefijo>_medidas.json.
 ## Los puntos se dan en coordenadas de Blender (x este, y norte) y se convierten a Godot (x, -y).
+## Un argumento @res://ruta.json anade puntos {nombre: [x, y, zoom]} (p. ej. debug/out/walk/puntos_captura.json) y
+## solo se capturan esos (mas los que se nombren).
 
 const POINTS := {
 	"plaza": [0.0, 30.0, 60.0],
@@ -24,6 +26,7 @@ const POINTS := {
 
 var prefix := "g2"
 var only: Array = []
+var points: Dictionary = POINTS.duplicate()
 var out := {}
 
 
@@ -31,7 +34,14 @@ func _initialize() -> void:
 	var a := OS.get_cmdline_user_args()
 	if a.size() > 0:
 		prefix = a[0]
-	only = a.slice(1)
+	for arg in a.slice(1):
+		if String(arg).begins_with("@"):
+			var extra: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(String(arg).substr(1)))
+			for k in extra:
+				points[k] = extra[k]
+				only.append(k)
+		else:
+			only.append(arg)
 	change_scene_to_file("res://scenes/main.tscn")
 	_run.call_deferred()
 
@@ -43,10 +53,10 @@ func _run() -> void:
 	var game = main.get_node("Game")
 	DirAccess.make_dir_recursive_absolute("res://debug/out/tour")
 	out["iso_check"] = _iso_check(main, game)
-	for name in POINTS:
+	for name in points:
 		if not only.is_empty() and not only.has(name):
 			continue
-		var p: Array = POINTS[name]
+		var p: Array = points[name]
 		var g: Vector3 = game.ground_at(p[0], -p[1])
 		game.player.global_position = g + Vector3(0, 0.05, 0)
 		game.player.velocity = Vector3.ZERO

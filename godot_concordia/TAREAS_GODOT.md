@@ -13,19 +13,19 @@ probado (con la fecha y la prueba en `TEST_REPORT.md`).
 - [ ] COLOR_0 = mask_pack del terreno: shader del terreno que lo lea (G4).
 
 ## G2 - Ensamble de la ciudad
-- [ ] Rangos de visibilidad LOD0/LOD1/LOD2 en cada MeshInstance3D (scripts/lod_ranges.gd).
-- [ ] bld_* (portal, mercado, oficios, clases, razas, moradas NE/NO/SE/SO), terrenos por distrito, muralla colocada, marcadores.
-- [ ] NavigationRegion3D por distrito con las -navmesh; NAVLINK_*_Start/_End -> NavigationLink3D (12 + 5 de yurtas).
-- [ ] 13 soportes de tubos (PIPE_TF_Support_*) sobre calle/plaza: NavigationObstacle3D o recorte.
-- [ ] `<N>_Roof` en grupo "roofs"; marcadores como Marker3D con grupos doors / npc_slots / interact / spawns.
+- [x] LOD0/LOD1/LOD2 por distancia en planta al jugador (scripts/lod_manager.gd; los rangos de visibilidad usan la distancia de la camara, que en ortografica no sirve).
+- [x] bld_* (portal, mercado, oficios, clases, razas, moradas NE/NO/SE/SO), terrenos por distrito, muralla colocada, marcadores.
+- [x] NavigationRegion3D por distrito con las -navmesh (6); NAVLINK_*_Start/_End -> NavigationLink3D (16 parejas en la v28). Malla con fallos: FIXES F8-F11.
+- [x] ~~13 soportes de tubos sobre calle/plaza~~: obsoleto, la ruta oeste de la v28 apoya los tubos en tejados.
+- [x] `<N>_Roof` en grupo "roofs"; marcadores como Marker3D con grupos doors / npc_slots / interact / spawns.
 - [ ] FARO_Body fuera de la navegacion (raiz FARO navigation=false); OBELISK_Mark_LitMaterialRef oculto.
 - [ ] Tubos sin LOD: visibility_range_end ~250 m.
 - [ ] Puestos (STALL_A..E), RAIL_Stone_3m, mallas de las Moradas: instancias ligeras / MultiMesh si hace falta (G7).
 
 ## G3 - Camara, jugador, HUD
-- [ ] Camara iso (-35.264, 45, 0), zoom 15-120 m, giro 90 grados, seguimiento.
-- [ ] Jugador capsula WASD + clic (navegacion); escaleras como rampas sin step offset (pies de escalera hasta 14 cm).
-- [ ] HUD F1.
+- [x] Camara iso (-35.264, 45, 0), zoom 15-120 m, giro 90 grados, seguimiento.
+- [x] Jugador capsula WASD + clic (navegacion); escaleras como rampas, subida de escalones hasta 0,25 m. Prueba de caminata: TEST_REPORT G3.
+- [x] HUD F1.
 
 ## G4 - Luz y ambiente
 - [ ] Glow (umbral ~1.0) para los emisivos #8FD0FF; MAT_Embers (unica calida) no pasar de 1.5.
