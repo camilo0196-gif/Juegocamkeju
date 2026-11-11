@@ -1,16 +1,10 @@
 __pycache__/
 *.pyc
+# autoguardados de Blender
 *.blend1
 *.blend2
 
-# Binarios fuera de git (decision del usuario, etapa 26). Copias fechadas en respaldo/ con MANIFEST.txt (sha256).
-*.blend
-*.glb
-*.png
-*.exr
-*.jpg
-*.jpeg
-*.gltf
-*.bin
+# Binarios (.blend, .glb, .png, .jpg, .exr...) SI van en git desde la peticion del usuario (G0, 2026-11-11).
+# respaldo/ son copias duplicadas fechadas (y un zip de 268 MB que GitHub no admite sin LFS): solo el MANIFEST.
 respaldo/*
 !respaldo/MANIFEST.txt
