@@ -143,3 +143,10 @@ PJ4 - animaciones (blender/elfo_v04.blend)
     Revive             1-61  2,00 s  se arrodilla (f28) y apoya la mano izquierda en el objetivo (f42-61)
   Capturas: docs/captures/pj4_animaciones.png (3 fotogramas clave por animacion, camara isometrica de lado-frente,
   baston temporal solo para la captura) y pj4_<animacion>.png. Export: export/godot/pj_elfo_sanador_anim.glb.
+
+PJ5 - LODs, exportacion y cierre (blender/concordia_personajes_master.blend, version 1.0)
+-----------------------------------------------------------------------------------------
+  Scripts: tools/blender/build_pj5_lods_export.py (LOD1, LOD2, export), capture_pj5.py (capturas). Informe:
+  docs/reports/pj5_lods.json. Documento de cierre: README_personaje.txt (huesos, HIDE_*, nombres, presupuesto).
+  LOD0 7250 / LOD1 4848 / LOD2 1757 tris. Export: export/godot/personajes/ (9 .glb, mismo esqueleto).
+  Respaldo: respaldo/2026-11-11/personajes_pj5/ con MANIFEST (sha256). Captura: docs/captures/pj5_lods.png.

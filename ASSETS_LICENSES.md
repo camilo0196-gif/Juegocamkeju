@@ -200,6 +200,19 @@ TODO_GODOT_personaje.txt).
 Animaciones propias del Sanador (Heal_Cast_Single, Heal_Channel-loop, Heal_Cast_Area, Revive): hechas a mano en
 el proyecto (tools/blender/build_pj4_anim.py), sin licencia de terceros.
 
+### Cierre del personaje (PJ5): de donde sale cada parte de los .glb finales (export/godot/personajes/)
+
+| Parte | Fuente | Licencia |
+|---|---|---|
+| Malla base del cuerpo, rig de referencia para la pose T, ojos low-poly, proxy | MakeHuman system assets (via MPFB 2.0.18 como herramienta) | CC0 1.0 (ver tabla de arriba); MPFB no se redistribuye |
+| Proporciones, cara, orejas, division en piezas, grupos HIDE_*, LODs (LOD1 y LOD2) | Concordia (tools/blender/build_pj1_elfo.py ... build_pj5_lods_export.py) | propio |
+| Texturas de piel y del atlas del Sanador (albedo, normal, ORM, emision) | Concordia (generadas por script, pj1_piel.py y pj2_atlas.py) | propio |
+| Ropa del Sanador, cabello y trenza | Concordia (pj2_geo.py) | propio |
+| Esqueleto de 70 huesos (nombres del SkeletonProfileHumanoid de Godot + 14 extra) | Concordia (concordia_rig.py; nombres segun la documentacion de Godot 4.7) | propio |
+| Animaciones propias Heal_Cast_Single, Heal_Channel-loop, Heal_Cast_Area, Revive | Concordia (build_pj4_anim.py) | propio |
+| Animaciones base (Idle, Walk, Run, Sit, Hit, Death, Spell) | Universal Animation Library 1 y 2 Standard, Quaternius (seccion Animaciones) | CC0 1.0 |
+| Herramientas | Blender 4.5 (bpy), Godot 4.7.2 | GPL / MIT (no afectan a los archivos producidos) |
+
 ## Generados en el proyecto (sin licencia de terceros)
 
 | Asset | Origen | Donde se usa |

@@ -102,3 +102,39 @@ Animaciones que se usan (ver docs/reports/pj4_anim.json):
 Faltan en la UAL Standard (Mixamo de reserva, lo descarga el usuario): andar hacia atras y de lado (strafe), girar
 en el sitio, una segunda muerte, correr hacia atras, "lanzar con baston" (lo cubren las propias), levantarse del
 suelo propio del Sanador (se puede usar LayToIdle de la UAL2).
+
+======================================================================
+PJ5 - IMPORTAR EL PERSONAJE FINAL (export/godot/personajes/) EN GODOT 4.7
+======================================================================
+Archivos: personaje_elfo_base.glb (esqueleto + cuerpo + ojos + pelo), elfo_sanador_<prenda>.glb (robe_top, skirt,
+hood, belt, boots, bracers), elfo_sanador_lod2.glb, elfo_sanador_anims.glb. TODOS tienen el mismo esqueleto
+(70 huesos, mismos nombres y orden; comprobado con debug/probe_pj5_glb.gd).
+
+1. Copiar la carpeta a res://characters/elfo/ (o con tools/sync_assets.py cuando se anada la ruta).
+2. Materiales (una sola vez): en personaje_elfo_base.glb, Advanced Import Settings > Materials: "Use External" para
+   MAT_Elfo_Piel, MAT_Elfo_Ojos y MAT_Sanador_Atlas -> res://characters/elfo/materials/*.tres. En cada prenda y en el
+   LOD2, apuntar MAT_Sanador_Atlas (y piel / ojos) a esos mismos .tres: las texturas del atlas se cargan una vez.
+   MAT_Sanador_Atlas: alpha scissor 0,5, cull disabled; emision solo en el colgante (textura de emision).
+3. Esqueleto en CADA .glb (base, prendas, LOD2, anims): Skeleton3D > Retarget:
+   - Bone Map: res://animations/bonemap_elfo.tres (perfil SkeletonProfileHumanoid; identidad: el elfo ya usa los
+     nombres del perfil; los 14 huesos extra quedan sin mapear).
+   - Rest Fixer: Apply Node Transforms on, Normalize Position Tracks on, Overwrite Axis on. Fix Silhouette: on
+     (el elfo esta en pose T; solo endereza las piernas, abiertas 6,4 grados).
+   - Unique Node: Make Unique, nombre "GeneralSkeleton" (el mismo en todos los .glb).
+4. Montar el personaje: instanciar personaje_elfo_base.glb; para cada prenda, instanciar su .glb y mover sus
+   MeshInstance3D bajo el Skeleton3D del base (o poner su skeleton = ruta al GeneralSkeleton del base) y borrar el
+   esqueleto de la prenda. Los nombres de hueso coinciden: el skin se resuelve solo. Al equipar, ocultar las piezas del
+   cuerpo tapadas (Feet con botas; Torso con tunica + falda; ver README_personaje.txt seccion 5).
+5. LODs: en cada pieza, visibility_range_end del LOD0 = 15 m y visibility_range_begin del <pieza>_LOD1 = 15 m,
+   end = 40 m; el LOD2 (elfo_sanador_lod2.glb, una sola malla) desde 40 m (con el Sanador equipado; al desnudar o
+   cambiar de clase se usa el LOD1 hasta tener su LOD2). Con camara isometrica ortografica la distancia es la del
+   jugador (como scripts/lod_manager.gd de la ciudad).
+6. Animaciones propias: elfo_sanador_anims.glb (sin mallas) -> Animation > Save to file / AnimationLibrary "sanador".
+   Heal_Channel-loop entra en bucle por el sufijo -loop (verificado: el lector glTF de Godot 4.7 la marca en bucle).
+7. UAL (seccion PJ4): importar AnimationLibrary_Godot_Standard.glb y UAL2_Standard.glb con bonemap_ual1/2.tres,
+   Normalize Position Tracks ON (cadera 0,917 frente a 1,00 m), Overwrite Axis ON, Fix Silhouette ON (ya estan en pose
+   T), Make Unique "GeneralSkeleton", guardar las animaciones en una AnimationLibrary "ual". Las _Loop entran en
+   bucle; las _RM llevan movimiento de raiz.
+8. AnimationPlayer del personaje con las librerias "ual" y "sanador"; AnimationTree con estados Idle / Walk / Run /
+   Cast / Channel / Revive / Hit / Death. Baston: BoneAttachment3D en Weapon_R. Falda y trenza: SpringBoneSimulator3D
+   (PJ3 punto 4).

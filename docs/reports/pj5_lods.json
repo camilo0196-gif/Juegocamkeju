@@ -1,0 +1,191 @@
+{
+ "version": "1.0 (PJ5, 2026-11-11)",
+ "lod0": {
+  "PJ_Elfo_Head": 1196,
+  "PJ_Elfo_Torso": 516,
+  "PJ_Elfo_Arms": 128,
+  "PJ_Elfo_Hands": 1068,
+  "PJ_Elfo_Legs": 224,
+  "PJ_Elfo_Feet": 196,
+  "PJ_Elfo_Eyes": 172,
+  "Hair_Elf": 472,
+  "Robe_Top": 646,
+  "Robe_Skirt": 832,
+  "Hood": 640,
+  "Belt_Pouches": 676,
+  "Boots": 324,
+  "Bracers": 160
+ },
+ "lod1": {
+  "PJ_Elfo_Head_LOD1": 974,
+  "PJ_Elfo_Torso_LOD1": 246,
+  "PJ_Elfo_Arms_LOD1": 64,
+  "PJ_Elfo_Hands_LOD1": 400,
+  "PJ_Elfo_Legs_LOD1": 104,
+  "PJ_Elfo_Feet_LOD1": 100,
+  "PJ_Elfo_Eyes_LOD1": 152,
+  "Hair_Elf_LOD1": 320,
+  "Robe_Top_LOD1": 528,
+  "Robe_Skirt_LOD1": 706,
+  "Hood_LOD1": 500,
+  "Belt_Pouches_LOD1": 414,
+  "Boots_LOD1": 228,
+  "Bracers_LOD1": 112
+ },
+ "lod2": {
+  "malla": "PJ_Elfo_Sanador_LOD2",
+  "tris": 1757,
+  "tris_antes_de_diezmar": 6250,
+  "ratio": 0.282,
+  "materiales": [
+   "MAT_Elfo_Piel",
+   "MAT_Elfo_Ojos",
+   "MAT_Sanador_Atlas"
+  ],
+  "huesos_con_peso": [
+   "Chest",
+   "Head",
+   "Hips",
+   "LeftFoot",
+   "LeftHand",
+   "LeftLowerArm",
+   "LeftLowerLeg",
+   "LeftShoulder",
+   "LeftToes",
+   "LeftUpperArm",
+   "LeftUpperLeg",
+   "Neck",
+   "RightFoot",
+   "RightHand",
+   "RightLowerArm",
+   "RightLowerLeg",
+   "RightShoulder",
+   "RightToes",
+   "RightUpperArm",
+   "RightUpperLeg",
+   "Skirt_Back_01",
+   "Skirt_Front_01",
+   "Spine",
+   "UpperChest"
+  ],
+  "esqueleto_simplificado": [
+   "Root",
+   "Hips",
+   "Spine",
+   "Chest",
+   "UpperChest",
+   "Neck",
+   "Head",
+   "LeftShoulder",
+   "LeftUpperArm",
+   "LeftLowerArm",
+   "LeftHand",
+   "RightShoulder",
+   "RightUpperArm",
+   "RightLowerArm",
+   "RightHand",
+   "LeftUpperLeg",
+   "LeftLowerLeg",
+   "LeftFoot",
+   "LeftToes",
+   "RightUpperLeg",
+   "RightLowerLeg",
+   "RightFoot",
+   "RightToes",
+   "Skirt_Front_01",
+   "Skirt_Back_01"
+  ]
+ },
+ "lod0_total": 7250,
+ "lod1_total": 4848,
+ "lod1_ratio": 0.681,
+ "materiales": [
+  "MAT_Elfo_Ojos",
+  "MAT_Elfo_Piel",
+  "MAT_Sanador_Atlas"
+ ],
+ "exportados": {
+  "personaje_elfo_base.glb": {
+   "archivo": "export/godot/personajes/personaje_elfo_base.glb",
+   "kb": 3198.1,
+   "mallas": [
+    "PJ_Elfo_Head",
+    "PJ_Elfo_Torso",
+    "PJ_Elfo_Arms",
+    "PJ_Elfo_Hands",
+    "PJ_Elfo_Legs",
+    "PJ_Elfo_Feet",
+    "PJ_Elfo_Eyes",
+    "Hair_Elf",
+    "PJ_Elfo_Head_LOD1",
+    "PJ_Elfo_Torso_LOD1",
+    "PJ_Elfo_Arms_LOD1",
+    "PJ_Elfo_Hands_LOD1",
+    "PJ_Elfo_Legs_LOD1",
+    "PJ_Elfo_Feet_LOD1",
+    "PJ_Elfo_Eyes_LOD1",
+    "Hair_Elf_LOD1"
+   ]
+  },
+  "elfo_sanador_robe_top.glb": {
+   "archivo": "export/godot/personajes/elfo_sanador_robe_top.glb",
+   "kb": 1904.9,
+   "mallas": [
+    "Robe_Top",
+    "Robe_Top_LOD1"
+   ]
+  },
+  "elfo_sanador_skirt.glb": {
+   "archivo": "export/godot/personajes/elfo_sanador_skirt.glb",
+   "kb": 1905.7,
+   "mallas": [
+    "Robe_Skirt",
+    "Robe_Skirt_LOD1"
+   ]
+  },
+  "elfo_sanador_hood.glb": {
+   "archivo": "export/godot/personajes/elfo_sanador_hood.glb",
+   "kb": 1902.3,
+   "mallas": [
+    "Hood",
+    "Hood_LOD1"
+   ]
+  },
+  "elfo_sanador_belt.glb": {
+   "archivo": "export/godot/personajes/elfo_sanador_belt.glb",
+   "kb": 1907.8,
+   "mallas": [
+    "Belt_Pouches",
+    "Belt_Pouches_LOD1"
+   ]
+  },
+  "elfo_sanador_boots.glb": {
+   "archivo": "export/godot/personajes/elfo_sanador_boots.glb",
+   "kb": 1873.7,
+   "mallas": [
+    "Boots",
+    "Boots_LOD1"
+   ]
+  },
+  "elfo_sanador_bracers.glb": {
+   "archivo": "export/godot/personajes/elfo_sanador_bracers.glb",
+   "kb": 1856.5,
+   "mallas": [
+    "Bracers",
+    "Bracers_LOD1"
+   ]
+  },
+  "elfo_sanador_lod2.glb": {
+   "archivo": "export/godot/personajes/elfo_sanador_lod2.glb",
+   "kb": 3024.8,
+   "mallas": [
+    "PJ_Elfo_Sanador_LOD2"
+   ]
+  },
+  "elfo_sanador_anims.glb": {
+   "archivo": "export/godot/personajes/elfo_sanador_anims.glb",
+   "kb": 269.6,
+   "mallas": []
+  }
+ }
+}

@@ -1,7 +1,8 @@
 CONCORDIA - carpeta de respaldo (fuera de git, decision del usuario en la etapa 26)
 concordia_master_<fecha>_v<NN>.blend = copia del .blend maestro de esa fecha; glb/ = export/godot de esa fecha;
 interiors/ = blend de interiores y texturas generadas que no estan en git.
-personajes/ = blend, texturas y capturas de los personajes; fuentes_assets/mpfb = paquetes oficiales de MPFB y MakeHuman.
+personajes/ = blend, texturas y capturas de los personajes; personajes_pj5/ = cierre del personaje (master v1.0,
+              .glb finales, texturas, con su propio MANIFEST); ual_original/ = zips de la UAL 1 y 2 de Quaternius; fuentes_assets/mpfb = paquetes oficiales de MPFB y MakeHuman.
 binarios_git/ = .jpg, .gltf y .bin que estaban en git hasta la etapa 27 (sacados con git rm --cached; la
                historia de git los conserva hasta el commit 6861619), con su ruta original.
 Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | awk '{print $2"  "$3}' | sha256sum -c
@@ -239,6 +240,29 @@ Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | aw
         3317  f599d4ccc7d76bad7937862890474bcebb199e889ffc2bce1573052290d353a8  2026-11-11/personajes/textures_sanador/sanador_atlas_emision_1k.png
       732703  10c83a69bd191ff5c044ff110bc48048080f66e4c4a46b8b765b55b028415181  2026-11-11/personajes/textures_sanador/sanador_atlas_normal_1k.png
       400653  8b41ebcb4b6b3917fef9bfe7c7ed2144504d7707c6adf980d66aa6def64aced8  2026-11-11/personajes/textures_sanador/sanador_atlas_orm_1k.png
+        2961  34207437ece8d525aa203872d138e76a4c1770b7ef32303cb9ba680b8937fb7c  2026-11-11/personajes_pj5/MANIFEST.txt
+       11300  437b7ed9872673ad734fd927083da114d4a7e549f6e9ccabd6479ccaee5c7c58  2026-11-11/personajes_pj5/README_personaje.txt
+       12307  0fb0df40b7b0f5cea4d5d5f41b807350da1b330285b729b77c6dfd6fac567e0f  2026-11-11/personajes_pj5/TODO_GODOT_personaje.txt
+     8212958  d13fb953267f9fecca323522186abd6014881cf7852b502dafd52cbc2734fbc6  2026-11-11/personajes_pj5/concordia_personajes_master_2026-11-11_v1.0.blend
+      276116  e9cb42a2b8a2184940981d764d6cff9e2a0b8c0d8b0b7f5cf3181e3344906ab6  2026-11-11/personajes_pj5/glb/elfo_sanador_anims.glb
+     1953636  8b511f71bae9be9af06a01922438094c5ecfa5434401e97683dd59bab4117f3f  2026-11-11/personajes_pj5/glb/elfo_sanador_belt.glb
+     1918624  d299c33901794970ed91616c1e8b95d318b6cf2642d70ded5d06b10a9fb5a661  2026-11-11/personajes_pj5/glb/elfo_sanador_boots.glb
+     1901020  eade452c017123022a19038d0f9c379176537caafbc967b6b852e498ef19b8b4  2026-11-11/personajes_pj5/glb/elfo_sanador_bracers.glb
+     1947912  e5ecef35a5d42b6a84d1482b720a5f36f11debb4859b1d95c5647fc8f3adb6cb  2026-11-11/personajes_pj5/glb/elfo_sanador_hood.glb
+     3097444  d805c86fa9d963e3b4e013a1b265197b14b2b0e1a18790f220624ff069e262c1  2026-11-11/personajes_pj5/glb/elfo_sanador_lod2.glb
+     1950640  2ddf94dfabac999af562efbe43f1b060f8660bc26f7dcb5834cf06d0a79da963  2026-11-11/personajes_pj5/glb/elfo_sanador_robe_top.glb
+     1951464  3a004e5655e09be01fd19a2eec0aed4aa1cc3529ebc0517244f7acb4f91b98f8  2026-11-11/personajes_pj5/glb/elfo_sanador_skirt.glb
+     3274816  d71ab8025c7c9d14d57a0dc17b4ab1efcc2eb23669e137cf314a19ea207eaa61  2026-11-11/personajes_pj5/glb/personaje_elfo_base.glb
+        3790  c5219de481c7d90e53576adc387b79975d6b8ec37ae9aed8a5c2e2e70955a80f  2026-11-11/personajes_pj5/pj5_lods.json
+      246339  8a8541c43fc9d89a3890fcde34857a06383bfa8d4aba5f62b14759bdbb312c0e  2026-11-11/personajes_pj5/texturas/elfo_m_albedo_abedul_1k.png
+      192224  340691269799321022f4d561f713e7553329c59f36083271b2fbca11a0fa9380  2026-11-11/personajes_pj5/texturas/elfo_m_albedo_corteza_1k.png
+      572828  a874f4d548118aa9f9486541e220f4578d5c08576c9d76fd0a3ca9fbe5d44289  2026-11-11/personajes_pj5/texturas/elfo_m_normal_1k.png
+        9635  12bdc8ba1e79f7b6d556976bd4f66d3ecdf65bac4765ee1cf470a802a3a1026f  2026-11-11/personajes_pj5/texturas/elfo_m_ojos_albedo_256.png
+      271424  1e77fb87f2395dea48ca9d7a80104bcd917584dcd0cfd57ea3c8c1eaffc97392  2026-11-11/personajes_pj5/texturas/elfo_m_orm_1k.png
+      714898  4fda9dc2b34e079059cb89c0f2e4b0f824ff0cbd268305bb978adddb9df64c40  2026-11-11/personajes_pj5/texturas/sanador_atlas_albedo_1k.png
+        3317  f599d4ccc7d76bad7937862890474bcebb199e889ffc2bce1573052290d353a8  2026-11-11/personajes_pj5/texturas/sanador_atlas_emision_1k.png
+      732703  10c83a69bd191ff5c044ff110bc48048080f66e4c4a46b8b765b55b028415181  2026-11-11/personajes_pj5/texturas/sanador_atlas_normal_1k.png
+      400653  8b41ebcb4b6b3917fef9bfe7c7ed2144504d7707c6adf980d66aa6def64aced8  2026-11-11/personajes_pj5/texturas/sanador_atlas_orm_1k.png
       225986  8bfd8ec5347f15ad083bdd9de9d5d79e63439e2f77739a9d0a59e15d2287d4c1  2026-11-11/textures/PROP_AV_Cheese_Wheel_normal_512.png
       208829  5556477cc00b35a7cce65dafcf35d692931d1c10fd078408a176cef3aa1b19db  2026-11-11/textures/PROP_AV_Grain_Sack_normal_512.png
       329735  d9739ffd1cd0e298bd844698a41b595ad696faaf36f96ed499b34cc8c03b8fbf  2026-11-11/textures/PROP_AV_Grapes_normal_512.png
@@ -258,5 +282,7 @@ Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | aw
       435197  a7909ce95b126bf6c39428f8ff8fde82606d6b7b3e2265664c48a162ad549076  2026-11-11/textures/PROP_Q_Scroll_2_normal_512.png
       772159  cd1a5382da65cca5b693dd09972c47b6e2385871cf5c8413e755a8f0310906b4  2026-11-11/textures/PROP_Q_WeaponStand_normal_1k.png
       290103  b43e85d44132548af1e19c707b769b1e6d8e864448444d2f66da7ce84329fe60  2026-11-11/textures/trophy_case_atlas_512.png
+    10257419  ec0e40d6d78fe9aaad59e322f40865a8675c22f0745e291622e54520391a9217  2026-11-11/ual_original/universal_animation_library_2standard.zip
+    14541205  18ff1a7215f4852b320203e8aaf02a1578b5c8eef9027fbaedfcedc7b85a3ac2  2026-11-11/ual_original/universal_animation_librarystandard.zip
 
-Total: 251 archivos, 927,399,359 bytes (884.4 MiB)
+Total: 276 archivos, 981,856,992 bytes (936.4 MiB)
