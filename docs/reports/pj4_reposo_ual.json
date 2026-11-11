@@ -1,0 +1,69 @@
+{
+ "elfo": {
+  "armature": "PJ_Elfo_Rig",
+  "huesos": 70,
+  "altura_esqueleto_m": 1.94,
+  "cadera_z_m": 1.0,
+  "brazo_bajo_horizontal_grados": -0.0,
+  "codo_grados": 0.0,
+  "pierna_desde_vertical_grados": 6.4,
+  "lado_brazo_izquierdo": "+X",
+  "mira_hacia": "-Y",
+  "escala_objeto": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "dedos": 24
+ },
+ "UAL1": {
+  "archivo": "animations/ual/ual1/AnimationLibrary_Godot_Standard.glb",
+  "armature": "Rig",
+  "huesos": 53,
+  "altura_esqueleto_m": 1.651,
+  "cadera_z_m": 0.917,
+  "brazo_bajo_horizontal_grados": -0.0,
+  "codo_grados": 2.0,
+  "pierna_desde_vertical_grados": 0.4,
+  "lado_brazo_izquierdo": "+X",
+  "mira_hacia": "-Y",
+  "escala_objeto": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "dedos": 30,
+  "acciones": 56,
+  "diferencias_con_elfo": {
+   "brazo_grados": 0.0,
+   "altura_relativa": 0.851,
+   "cadera_relativa": 0.917,
+   "misma_orientacion": true
+  }
+ },
+ "UAL2": {
+  "archivo": "animations/ual/ual2/UAL2_Standard.glb",
+  "armature": "Armature",
+  "huesos": 65,
+  "altura_esqueleto_m": 1.651,
+  "cadera_z_m": 0.917,
+  "brazo_bajo_horizontal_grados": -0.0,
+  "codo_grados": 2.0,
+  "pierna_desde_vertical_grados": 0.4,
+  "lado_brazo_izquierdo": "+X",
+  "mira_hacia": "-Y",
+  "escala_objeto": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "dedos": 40,
+  "acciones": 99,
+  "diferencias_con_elfo": {
+   "brazo_grados": 0.0,
+   "altura_relativa": 0.851,
+   "cadera_relativa": 0.917,
+   "misma_orientacion": true
+  }
+ }
+}

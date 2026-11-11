@@ -184,6 +184,22 @@ de referencia con los mismos macros), cara (pomulos, ojos rasgados, nariz y boca
 largo 13,5 cm, 28 grados atras, perfil de hoja, concha y borde), division en 6 piezas, grupos HIDE_* y todas las
 texturas (ver la tabla siguiente). Informe: docs/reports/pj1_elfo_cuerpo.json.
 
+## Animaciones (PJ4)
+
+Descargadas el 2026-11-11 desde el mirror de OpenGameArt (no hizo falta itch.io ni iniciar sesion). Solo se
+extrajeron los archivos de datos (.glb, License.txt, imagenes de muestra); los .fbx y el .blend del maniqui no se
+abrieron. Zips originales en respaldo/ual_original/ (fuera de git); textos de licencia en licenses/.
+No se retargetean en Blender: Godot lo hace al importar (BoneMap + SkeletonProfileHumanoid, ver
+TODO_GODOT_personaje.txt).
+
+| Asset | Autor | URL | Licencia | Fecha | Archivo y sha256 del zip | Donde se usa |
+|---|---|---|---|---|---|---|
+| Universal Animation Library [Standard] (46 animaciones, rig de 53 huesos DEF-* estilo Rigify, version para Godot) | Quaternius | https://opengameart.org/content/universal-animation-library (pagina del autor: https://quaternius.com/packs/universalanimationlibrary.html) | CC0 1.0 (licenses/Quaternius_UAL1_Standard_License.txt) | 2026-11-11 | universal_animation_librarystandard.zip sha256 18ff1a7215f4852b320203e8aaf02a1578b5c8eef9027fbaedfcedc7b85a3ac2 -> animations/ual/ual1/AnimationLibrary_Godot_Standard.glb | animaciones base del elfo en Godot (Idle, Walk, Run, Sit, Hit, Death, Spell_Simple); G8 |
+| Universal Animation Library 2 [Standard] (43 animaciones, rig de 65 huesos estilo Unreal + maniqui femenino sin animaciones) | Quaternius | https://opengameart.org/content/universal-animation-library-2 (pagina del autor: https://quaternius.itch.io/universal-animation-library-2) | CC0 1.0 (licenses/Quaternius_UAL2_Standard_License.txt) | 2026-11-11 | universal_animation_library_2standard.zip sha256 ec0e40d6d78fe9aaad59e322f40865a8675c22f0745e291622e54520391a9217 -> animations/ual/ual2/UAL2_Standard.glb, Mannequin_F.glb | complemento (Hit_Knockback, Consume, LayToIdle, Yes, Idle_No, Chest_Open...); G8 |
+
+Animaciones propias del Sanador (Heal_Cast_Single, Heal_Channel-loop, Heal_Cast_Area, Revive): hechas a mano en
+el proyecto (tools/blender/build_pj4_anim.py), sin licencia de terceros.
+
 ## Generados en el proyecto (sin licencia de terceros)
 
 | Asset | Origen | Donde se usa |

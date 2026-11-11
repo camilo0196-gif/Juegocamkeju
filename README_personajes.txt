@@ -127,3 +127,19 @@ PJ3 - esqueleto (rig) del elfo (blender/elfo_v03.blend)
   Limites conocidos: perdida de volumen en rodillas y codos por encima de ~120 grados (piel lineal en malla
     low-poly; correctivos o mas aristas en otra etapa); la falda de "caido" se abre (en Godot la gravedad del
     SpringBoneSimulator3D la dejara caer); la pierna asoma por la abertura lateral en zancadas largas (diseno).
+
+
+PJ4 - animaciones (blender/elfo_v04.blend)
+------------------------------------------
+  Scripts: tools/blender/pj4_compare_rest.py (reposo UAL frente al elfo), build_pj4_anim.py (animaciones propias,
+  export), capture_pj4.py (capturas). Informe: docs/reports/pj4_anim.json y pj4_reposo_ual.json.
+  Godot: TODO_GODOT_personaje.txt (seccion PJ4) y godot_concordia/tools/make_bonemaps.gd (BoneMap .tres).
+  UAL 1 y UAL 2 Standard de Quaternius (CC0, ASSETS_LICENSES.md): no se retargetean en Blender; las dos ya estan en
+  pose T y miran a -Y como el elfo; Godot las retargetea con BoneMap + SkeletonProfileHumanoid.
+  Propias del Sanador (30 fps, sin movimiento de raiz, Action con fake user y rango manual desde el fotograma 1):
+    Heal_Cast_Single   1-28  0,90 s  baston al frente con el brazo derecho, pulso (f14-19) y vuelta
+    Heal_Channel-loop  1-46  1,50 s  brazos abiertos, palmas arriba, balanceo lateral; f46 = f1 (bucle)
+    Heal_Cast_Area     1-37  1,20 s  brazos y baston arriba (f11-16), onda hacia abajo con rodillas flexionadas (f24)
+    Revive             1-61  2,00 s  se arrodilla (f28) y apoya la mano izquierda en el objetivo (f42-61)
+  Capturas: docs/captures/pj4_animaciones.png (3 fotogramas clave por animacion, camara isometrica de lado-frente,
+  baston temporal solo para la captura) y pj4_<animacion>.png. Export: export/godot/pj_elfo_sanador_anim.glb.

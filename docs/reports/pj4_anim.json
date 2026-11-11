@@ -1,0 +1,210 @@
+{
+ "fps": 30,
+ "animaciones": {
+  "Heal_Cast_Single": {
+   "fotogramas": [
+    1,
+    28
+   ],
+   "duracion_s": 0.9,
+   "bucle": false,
+   "claves": [
+    {
+     "fotograma": 1,
+     "cadera_bajada_m": -0.0
+    },
+    {
+     "fotograma": 8,
+     "cadera_bajada_m": -0.0
+    },
+    {
+     "fotograma": 14,
+     "cadera_bajada_m": -0.0
+    },
+    {
+     "fotograma": 19,
+     "cadera_bajada_m": -0.0
+    },
+    {
+     "fotograma": 28,
+     "cadera_bajada_m": -0.0
+    }
+   ],
+   "capturas": [
+    8,
+    14,
+    19
+   ]
+  },
+  "Heal_Channel-loop": {
+   "fotogramas": [
+    1,
+    46
+   ],
+   "duracion_s": 1.5,
+   "bucle": true,
+   "claves": [
+    {
+     "fotograma": 1,
+     "cadera_bajada_m": -0.0
+    },
+    {
+     "fotograma": 12,
+     "cadera_bajada_m": -0.0
+    },
+    {
+     "fotograma": 23,
+     "cadera_bajada_m": -0.0
+    },
+    {
+     "fotograma": 35,
+     "cadera_bajada_m": -0.0
+    },
+    {
+     "fotograma": 46,
+     "cadera_bajada_m": -0.0
+    }
+   ],
+   "capturas": [
+    1,
+    12,
+    35
+   ]
+  },
+  "Heal_Cast_Area": {
+   "fotogramas": [
+    1,
+    37
+   ],
+   "duracion_s": 1.2,
+   "bucle": false,
+   "claves": [
+    {
+     "fotograma": 1,
+     "cadera_bajada_m": -0.0
+    },
+    {
+     "fotograma": 11,
+     "cadera_bajada_m": -0.0
+    },
+    {
+     "fotograma": 16,
+     "cadera_bajada_m": -0.0
+    },
+    {
+     "fotograma": 24,
+     "cadera_bajada_m": 0.041
+    },
+    {
+     "fotograma": 29,
+     "cadera_bajada_m": 0.023
+    },
+    {
+     "fotograma": 37,
+     "cadera_bajada_m": -0.0
+    }
+   ],
+   "capturas": [
+    11,
+    24,
+    29
+   ]
+  },
+  "Revive": {
+   "fotogramas": [
+    1,
+    61
+   ],
+   "duracion_s": 2.0,
+   "bucle": false,
+   "claves": [
+    {
+     "fotograma": 1,
+     "cadera_bajada_m": -0.0
+    },
+    {
+     "fotograma": 14,
+     "cadera_bajada_m": 0.199
+    },
+    {
+     "fotograma": 28,
+     "cadera_bajada_m": 0.498
+    },
+    {
+     "fotograma": 42,
+     "cadera_bajada_m": 0.498
+    },
+    {
+     "fotograma": 52,
+     "cadera_bajada_m": 0.498
+    },
+    {
+     "fotograma": 61,
+     "cadera_bajada_m": 0.498
+    }
+   ],
+   "capturas": [
+    14,
+    28,
+    42
+   ]
+  }
+ },
+ "glb": {
+  "archivo": "export/godot/pj_elfo_sanador_anim.glb",
+  "kb": 3501.5
+ },
+ "blend": "blender/elfo_v04.blend",
+ "ual": {
+  "ual1": {
+   "archivo": "animations/ual/ual1/AnimationLibrary_Godot_Standard.glb",
+   "licencia": "CC0 1.0",
+   "animaciones": 46
+  },
+  "ual2": {
+   "archivo": "animations/ual/ual2/UAL2_Standard.glb",
+   "licencia": "CC0 1.0",
+   "animaciones": 43
+  }
+ },
+ "pedidas": {
+  "Idle": [
+   "UAL1 Idle_Loop 2.50"
+  ],
+  "Walk": [
+   "UAL1 Walk_Loop 1.33",
+   "UAL1 Walk_Formal_Loop 1.33"
+  ],
+  "Run": [
+   "UAL1 Jog_Fwd_Loop 0.93",
+   "UAL1 Sprint_Loop 0.67"
+  ],
+  "Sit": [
+   "UAL1 Sitting_Enter 1.30",
+   "UAL1 Sitting_Idle_Loop 1.67",
+   "UAL1 Sitting_Exit 1.03",
+   "UAL1 Sitting_Talking_Loop 2.93"
+  ],
+  "Hit": [
+   "UAL1 Hit_Chest 0.33",
+   "UAL1 Hit_Head 0.43",
+   "UAL2 Hit_Knockback 0.83"
+  ],
+  "Death": [
+   "UAL1 Death01 2.40"
+  ],
+  "Hechizo": [
+   "UAL1 Spell_Simple_Enter 0.53",
+   "UAL1 Spell_Simple_Idle_Loop 2.10",
+   "UAL1 Spell_Simple_Shoot 0.50",
+   "UAL1 Spell_Simple_Exit 0.43"
+  ]
+ },
+ "faltan": [
+  "andar hacia atras / de lado",
+  "girar en el sitio",
+  "segunda muerte",
+  "correr hacia atras",
+  "levantarse propio (LayToIdle de UAL2 como apano)"
+ ]
+}

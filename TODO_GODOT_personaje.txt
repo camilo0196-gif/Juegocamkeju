@@ -32,3 +32,73 @@ nodo del esqueleto sin transformacion.
    emision solo en el cristal). ORM: AO en R, roughness en G, metallic en B.
 7. Comprobacion rapida: AnimationPlayer > POSE_05_Sentado y POSE_10_Caido deben verse como en
    docs/captures/pj3_poses_ropa.png.
+
+======================================================================
+PJ4 - ANIMACIONES (Universal Animation Library de Quaternius + 4 propias del Sanador)
+======================================================================
+Archivos:
+  animations/ual/ual1/AnimationLibrary_Godot_Standard.glb  UAL 1 Standard (CC0), 46 animaciones, rig DEF-* (53 huesos)
+  animations/ual/ual2/UAL2_Standard.glb                    UAL 2 Standard (CC0), 43 animaciones, rig estilo Unreal (65)
+  export/godot/pj_elfo_sanador_anim.glb                    elfo + ropa + esqueleto + 4 animaciones propias del Sanador
+  godot_concordia/animations/bonemap_ual1.tres / bonemap_ual2.tres / bonemap_elfo.tres  (tools/make_bonemaps.gd)
+NO se retargetea en Blender: lo hace Godot al importar.
+
+Pose de reposo (tools/blender/pj4_compare_rest.py, docs/reports/pj4_reposo_ual.json, captura
+docs/captures/pj4_reposo_ual_vs_elfo.png):
+  - Las dos UAL estan en POSE T (brazo a 0 grados de la horizontal, codo 2 grados), igual que el elfo: no hay A-pose.
+  - Las dos miran a -Y en Blender (+Z en Godot), igual que el elfo. Escala del armature 1.
+  - Maniqui de la UAL: 1,65 m de esqueleto y cadera a 0,917 m; elfo: 1,94 m (con Head_Top) y cadera a 1,00 m.
+  - Piernas: UAL casi juntas (0,4 grados); elfo algo abiertas (6,4 grados).
+
+Ajustes del importador para CADA .glb de la UAL (Advanced Import Settings, nodo Skeleton3D):
+  1. Retarget > Bone Map: cargar res://animations/bonemap_ual1.tres (o _ual2). Los 53 huesos de cuerpo y manos
+     quedan asignados; LeftEye, RightEye y Jaw no existen en la UAL (normal: no los anima). Perfil:
+     SkeletonProfileHumanoid. UAL1: spine.001/.002/.003 -> Spine/Chest/UpperChest; thumb.01 -> ThumbMetacarpal.
+     UAL2: spine_01/02/03 -> Spine/Chest/UpperChest; los huesos *_leaf y ball_leaf quedan sin mapear.
+  2. Rest Fixer:
+     - Apply Node Transforms: on.
+     - Normalize Position Tracks: ON (imprescindible: la cadera de la UAL esta a 0,917 m y la del elfo a 1,00 m;
+       sin esto el elfo andaria hundido o flotando).
+     - Overwrite Axis: on (los ejes de los huesos de Rigify / Unreal no son los del perfil).
+     - Fix Silhouette: on. Las dos UAL ya estan en pose T, asi que casi no deberia mover nada; sirve para igualar
+       las piernas algo abiertas del elfo (6,4 grados) con las de la UAL (0,4) y los dedos.
+     - Reset All Bone Poses After Import: on.
+  3. Remove Tracks: Except Bone Transform = on (quita pistas de malla o propiedades); Unimportant Positions = on
+     (solo se conserva la posicion de Hips); Unmapped Bones = on (los leaf de la UAL2).
+  4. Skeleton3D > Unique Node: Make Unique on, nombre "GeneralSkeleton" (el mismo que el elfo, PJ3 punto 2): asi las
+     animaciones de la UAL se pueden guardar como AnimationLibrary y usar en el AnimationPlayer del elfo.
+  5. Guardar las animaciones (Actions > Save to File: .res) en res://animations/ual/ y crear una AnimationLibrary
+     "ual" con las que se usan (lista abajo). Las que acaban en _Loop ya entran en bucle (sufijo loop, documentacion
+     4.7 "Animation loop (-loop, -cycle)").
+  6. Movimiento de raiz: las variantes *_RM (Roll_RM, Sword_Attack_RM, Hit_Knockback_RM...) llevan desplazamiento en
+     el hueso root; las demas son en el sitio. Si se usan las _RM: AnimationTree.root_motion_track = "%GeneralSkeleton:Root".
+
+Ajustes del importador para export/godot/pj_elfo_sanador_anim.glb (las 4 propias):
+  - Bone Map: res://animations/bonemap_elfo.tres (identidad: el elfo ya usa los nombres del perfil); Rest Fixer igual
+    que en PJ3 (punto 2); Make Unique "GeneralSkeleton".
+  - Heal_Channel-loop entra en bucle por el sufijo -loop; las otras tres no.
+  - No llevan movimiento de raiz (Root sin desplazamiento; la cadera solo baja en vertical en Heal_Cast_Area y Revive).
+  - Revive acaba de rodillas con la mano en el objetivo: salir con un blend de 0,3-0,4 s a Idle (o LayToIdle de la
+    UAL2 al reves no hace falta).
+  - El baston va en el BoneAttachment3D de Weapon_R (+Y del hueso = eje del asta, agarre a media altura); en las 4
+    animaciones el asta queda: vertical en reposo, al frente y arriba en Heal_Cast_Single, vertical en
+    Heal_Channel-loop, arriba y luego barriendo hacia abajo en Heal_Cast_Area, vertical apoyado en Revive.
+  - Trenza y falda: en Blender son rigidas (la trenza se levanta en Revive al inclinarse); en Godot las mueve
+    SpringBoneSimulator3D (PJ3 punto 4), que tambien las deja colgar en las poses inclinadas.
+  - Efectos visuales y sonido de cada habilidad: aparte (G5 / audio), anclados a Weapon_R (punta del baston),
+    LeftHand / RightHand y Head_Top. Momentos utiles: Heal_Cast_Single pulso en 0,43-0,60 s; Heal_Cast_Area arriba
+    0,33-0,50 s y onda en 0,77 s; Revive mano en el objetivo desde 1,37 s.
+
+Animaciones que se usan (ver docs/reports/pj4_anim.json):
+  Idle            UAL1 Idle_Loop (2,50 s)                      [tambien Idle_Talking_Loop, UAL2 Idle_FoldArms_Loop]
+  Walk            UAL1 Walk_Loop (1,33 s)                      [Walk_Formal_Loop 1,33 s: paso sereno, buena para el Sanador]
+  Run             UAL1 Jog_Fwd_Loop (0,93 s) y Sprint_Loop (0,67 s)
+  Sit             UAL1 Sitting_Enter (1,30 s), Sitting_Idle_Loop (1,67 s), Sitting_Exit (1,03 s), Sitting_Talking_Loop
+  Hit             UAL1 Hit_Chest (0,33 s), Hit_Head (0,43 s); UAL2 Hit_Knockback (0,83 s, en el sitio)
+  Death           UAL1 Death01 (2,40 s)                        [UAL2 LayToIdle 1,53 s sirve para levantarse al revivir]
+  Hechizos UAL    UAL1 Spell_Simple_Enter (0,53 s), Spell_Simple_Idle_Loop (2,10 s), Spell_Simple_Shoot (0,50 s),
+                  Spell_Simple_Exit (0,43 s)
+  Propias         Heal_Cast_Single (0,90 s), Heal_Channel-loop (1,50 s), Heal_Cast_Area (1,20 s), Revive (2,00 s)
+Faltan en la UAL Standard (Mixamo de reserva, lo descarga el usuario): andar hacia atras y de lado (strafe), girar
+en el sitio, una segunda muerte, correr hacia atras, "lanzar con baston" (lo cubren las propias), levantarse del
+suelo propio del Sanador (se puede usar LayToIdle de la UAL2).
