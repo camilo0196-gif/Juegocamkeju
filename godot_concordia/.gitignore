@@ -11,3 +11,4 @@ assets/manifest.json
 # Capturas y salidas de prueba generadas
 debug/out/*
 !debug/out/.gdignore
+benchmark_resultados.txt

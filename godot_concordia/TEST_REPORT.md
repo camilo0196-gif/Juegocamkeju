@@ -151,3 +151,90 @@ Detalle y causas -> `FIXES_BLENDER.md` F8 (malla bajo obstaculos), F9 (escaleras
 0,6-1,2 m), F11 (zonas sin malla). Cobertura: `debug/out/walk/navcover.png` (verde malla, azul malla bajo obstaculo,
 rojo suelo sin malla, gris edificios). Capturas de los puntos: `debug/out/tour/g3_p01..p14_*.png`
 (`tools/g3_problem_points.json`).
+
+## PARADA 1 ampliada (decisiones del usuario aplicadas)
+
+### Navegacion horneada en Godot (F8-F11)
+- `tools/bake_navmesh.gd`: desde las colisiones (792 formas), radio 0,35 (Recast lo redondea a 2 celdas = 0,50 m y
+  avisa al hornear; el juego no), escalon 0,25, pendiente 36 grados, celda 0,25 (altura 0,05 para que el escalon
+  y los 1,8 m del agente sean multiplos exactos). Ciudad entera en ~33 s; 19.996 poligonos brutos -> 12.919 tras
+  quitar azoteas y tejados, adarve de puertas y torres, exterior, islas < 20 m2, 349 suelos encerrados (dentro de
+  edificios, 17.846 m2) y 1 solape. Mobiliario bajo (fuentes, pozos, 14 puestos, barandillas, 7 casas pequenas)
+  como obstruccion proyectada. Regiones guardadas en `navigation/*.res` (no se recalcula al iniciar):
+  Plaza 11.332 m2, Mercado 13.054, Oficios 12.344, Clases 12.451, Razas 11.249, Moradas NE/NO/SE/SO
+  4.151 / 4.402 / 4.076 / 4.475, camino de ronda 1.892; interiores: Banco 344 m2, casa grande 31, casa pequena 12,
+  habitacion 4,5 (se revisaran en G6 con los props y las puertas).
+- Las -navmesh de Blender quedan desactivadas como referencia. Cobertura (1 m2 por celda): las dos 52.443 m2,
+  solo Godot 39.013 (anillo de escalinatas, franja de la muralla, ronda, terreno entre calles), solo Blender 1.302
+  (anillo de baldosas del pedestal del Portal, bordes de terrazas que el radio 0,35 erosiona). Mapa:
+  `debug/out/walk/navcover.png`.
+- Mapa de navegacion listo ~1,3 s despues de cargar la escena (sincronizacion asincrona de Godot 4.7;
+  `scripts/nav_ready.gd` lo espera: regiones, conexion entre todas, iteracion estable). 0 avisos al ejecutar
+  (`merge_rasterizer_cell_scale` 0,01).
+- Prueba de caminata con la malla nueva: **480 de 481 tramos, 8,6 km, 0 atascos, 0 caidas**. Quedan 3 rodeos (arco
+  del Puente_06 y escaleras laterales SE_27 / SE_31: los extremos de la prueba caen a los dos lados de un pretil) y
+  1 destino a 1,9 m de su punto.
+- Zonas de F11 (tamano, pendiente, categoria) y huecos de la muralla: `FIXES_BLENDER.md` F11.
+
+### Pendientes de G4/G5 arreglados en Godot
+- **Terreno** (`shaders/terrain.gdshader`, aplicado por `scripts/materials_fix.gd` a 2.013 superficies): mezcla
+  suave de las capas de Concordia con COLOR_0 (muro, calle, roca, ceniza; en el exterior dunas, roca y ceniza
+  oscura). Huertos: cobble_type 6 de TEXCOORD_2, que Godot importa como CUSTOM0 (RG_FLOAT) con la v invertida:
+  `tipo = floor(1 - CUSTOM0.y)`; se ven como tierra labrada con surcos y verdes apagados (captura cenital
+  `debug/out/tour/top_huertos_no.png`; en isometrica quedan detras de las casas).
+- **Haces del Faro y del Crisol** (`shaders/beam.gdshader`): aditivo, alpha 0,3, sin profundidad, sin sombras,
+  degradado hacia arriba y base fundida; el del Crisol (18,5 m por el oculo) se limita a 12 m. Motivo del bloque
+  opaco: el material exportado era BLEND con alpha 0,3 pero emision 1,5 x #8FD0FF que se suma entera, a dos caras
+  (dos capas) y con el brillo (glow) por encima del umbral: el cilindro de 80 m se veia como una columna cian casi
+  solida que tapaba la fuente del Mercado.
+- **Obelisco**: la textura base llega bien (roca + ORM + normal); salia negro porque el color base exportado era
+  0,16 x la textura. Ahora albedo #8E9AAF sobre la roca (media ~#383E4A, gris muy oscuro azulado), normal 2,0,
+  rugosidad 0,6, rim 0,5; marcas de piso encendidas con MAT_Obelisk_Mark_Lit (prueba: 12 pisos).
+
+### G4 · Luz, cielo, dia y noche, ceniza (`scripts/day_night.gd`)
+Sol que sale por el este, pasa por el sur y se pone por el oeste; luna fria; cielo procedural, luz ambiente,
+niebla baja y glow por horas: amanecer y hora azul de Mont-Saint-Michel (6:12 y 20:36), mediodia templado, hora
+dorada de Siena (17:30), atardecer de Rothenburg (19:30) y noche de Carcassonne (22-5): ventanas calidas,
+vitrales y 16 luces #8FD0FF repartidas entre los 2.034 farolillos mas cercanos al jugador. Colores de luz con
+saturacion <= 0,35. Ceniza: particulas grises alrededor del jugador y niebla baja. T adelanta una hora. Capturas
+por hora: `debug/out/tour/g4b_*_hXX.png`, `g4d_*`. Ajustes tras revisarlas: niebla 5 veces menos densa (con la
+camara a 120 m lavaba la imagen), mediodia con menos sol y ambiente, sin bloom global y tonemap_white 4.
+
+### G5 · Efectos y shaders (`scripts/effects.gd`, `shaders/`)
+Velo del Portal (ondas, Fresnel, #8FD0FF), agua del Cauce y de 5 fuentes, 28 estandartes y banderas al viento,
+pulso de runas y tubos de luz y cristal del Faro (mas fuerte de noche), MAT_Embers <= 1,5, orden de transparencias
+(vidrios con profundidad solo opaca), rueda de la Carpinteria a 6 rpm, 7 piedras del Crisol flotando, humo de la
+Alquimia y vapor de la Gran Forja, transparencia del Salon de las Hazanas y de los 24 tramos SE de la muralla cuando
+tapan al jugador (`GeometryInstance3D.transparency`), brujula del Faro en el borde de la pantalla (`ui/compass.gd`).
+Pendientes de G5 que dependen de G6: dither de las 13 puertas residuales de las Moradas (va con las puertas).
+Ejecucion: 0 errores, 0 avisos.
+
+### Rendimiento (cifras del servidor: draw calls, triangulos y VRAM validos; FPS no)
+`tools/benchmark.gd -- rapido` (zoom de juego 45 m y maximo 120 m, 17:30):
+
+| escena | draw calls | triangulos | objetos | objetivo |
+|---|---|---|---|---|
+| plaza 45 m | 1.010 | 368.215 | 1.375 | <= 1.200 / <= 300.000 |
+| mercado 45 m | 1.543 | 434.234 | 2.705 | idem |
+| oficios 45 m | 1.119 | 424.311 | 1.375 | idem |
+| moradas NE 45 m | 1.845 | 447.255 | 2.855 | idem |
+| moradas SO 45 m | 2.414 | 371.150 | 4.740 | idem |
+| moradas NE 45 m, 23:00 (sin sombras del sol) | 467 | 131.959 | 915 | idem |
+| plaza 120 m | 3.332 | 835.431 | 3.929 | <= 2.000 / <= 800.000 |
+| moradas 120 m | 5.276 | 1.033.922 | 9.860 | idem |
+| razas 120 m | 5.710 | 961.744 | 10.044 | idem |
+
+- Hoy solo la plaza y Oficios a 45 m quedan cerca del objetivo de draw calls; ninguno cumple el de triangulos. De
+  noche (sin sol) bajan a un tercio: **las sombras del sol duplican o triplican el coste** (cada objeto se dibuja
+  tambien en las cascadas de sombra). Plan de G7 (sin cambiar la forma de los modelos, despues de tu prueba):
+  sombra solo de las mallas grandes (las pequenas de las Moradas sin cast_shadow), distancia de sombra 140 -> 80 m
+  y 2 cascadas, rangos LOD mas cortos en las Moradas, fusion de mallas estaticas por terraza y material, MultiMesh
+  para barriles, cajones y repeticiones, y oclusion.
+- **VRAM: 456 MB** (objetivo <= 600): texturas 306 MB = 161 MB de texturas de materiales (tope 220) + ~145 MB del
+  motor (mapa de sombras direccional 4096^2 y atlas de sombras puntuales 4096^2 a 16 bits = ~64 MB, buffers de
+  pantalla a 1600x900 con SSAO, glow y profundidad ~60 MB, cielo con radiancia ~20 MB); mallas y otros buffers
+  97 MB; resto ~53 MB. Se puede bajar: atlas de sombras puntuales a 1024 (no se usan sombras puntuales: ~30 MB),
+  sombra direccional 4096 -> 2048 (~24 MB, peor nitidez a 120 m), texturas 2K de suelo lejano a 1K
+  (`process/size_limit`, ~60 MB). **Margen para personajes: ~144 MB.** 100 elfos comparten malla (3.500 tris) y
+  atlas 1K (~1,3 MB): menos de 10 MB de VRAM; el coste real seran draw calls y skinning (G7).
+- G8 (personaje) se salta hasta tener `personaje_elfo_base.glb` con animaciones (PJ3/PJ4).

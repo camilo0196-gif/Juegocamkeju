@@ -1,6 +1,24 @@
 # FIXES_BLENDER — lo que hay que arreglar en los modelos (no se toca ningun .blend ni .glb de la ciudad)
 
-Formato: objeto · que pasa · gravedad (bloqueante / alta / baja) · captura · como reproducirlo.
+Formato: objeto · que pasa · gravedad (bloqueante / alta / media / baja) · captura · como reproducirlo · **estado**.
+Estados: **ARREGLADO EN GODOT** (ajuste de importacion, material, shader, navegacion: permiso del usuario, PARADA 1),
+**PENDIENTE EN BLENDER** (cambia la forma del modelo: va al paquete de arreglos de Blender), **ACEPTADO**.
+
+## Resumen de estados (PARADA 1 ampliada)
+| | problema | gravedad | estado |
+|---|---|---|---|
+| F1 | imagenes con uri + bufferView | baja | PENDIENTE EN BLENDER (exportador) |
+| F2 | normal map en UV 'UVBake' (49 materiales de props) | alta | PENDIENTE EN BLENDER |
+| F3 | TEST_Casa_12x9 en bld_kit.glb | baja | PENDIENTE EN BLENDER (no exportarla) |
+| F4 | caras sueltas con normal invertida (~0,03 %) | baja | ACEPTADO (no se ven huecos) |
+| F5 | astillas en TRN_NavMesh_Plaza | baja | ARREGLADO EN GODOT (la navegacion ahora se hornea en Godot) |
+| F6 | escalinatas de paso metidas en una rampa | media | PENDIENTE EN BLENDER (no bloquea el paso) |
+| F7 | UV deformado en las parcelas de la plaza | baja | PENDIENTE EN BLENDER |
+| F8 | malla de navegacion bajo obstaculos | alta | ARREGLADO EN GODOT (horneado desde colisiones) |
+| F9 | escaleras sin unir en la malla | alta | ARREGLADO EN GODOT (horneado + 8 NavigationLink3D de la ronda) |
+| F10 | escalones de mas de 0,25 m (5 sitios) | alta (3) / baja (2) | PENDIENTE EN BLENDER; la navegacion los evita |
+| F11 | zonas sin malla | - | ARREGLADO EN GODOT segun la decision del usuario (tabla en F11) |
+
 Origen de los datos: `debug/out/import_report.json` (tools/import_report.gd) y el registro de importacion de Godot 4.7.2.
 
 ## F1 · Imagenes con `uri` y `bufferView` a la vez (29 de 34 .glb, 761 imagenes)
@@ -38,12 +56,14 @@ Origen de los datos: `debug/out/import_report.json` (tools/import_report.gd) y e
 ## F4 · Caras sueltas con la normal opuesta al orden de vertices (~0,03 %)
 - **Que pasa:** p. ej. 30 de 100.079 triangulos en bld_portal y 71 de 218.910 en concordia_terrain_plaza tienen la
   normal guardada contraria a su orden de vertices. Con CULL_BACK pueden verse como pequenos huecos.
+- **Estado:** ACEPTADO.
 - **Gravedad:** baja. En G2/G3 no se ven huecos; si se ven triangulos oscuros sueltos en el terreno junto a las
   escalinatas de paso (ver F6), que pueden ser estas caras o sombras del corte del terreno.
 - **Reproducir:** `debug/probe_normals.gd`.
 
 ## F5 · Astillas en la malla de navegacion de la Plaza (TRN_NavMesh_Plaza)
 - **Que pasa:** vertices a ~1 cm unos de otros; Godot avisaba de 40 "edge errors" (4 con celda de 5 cm).
+- **Estado:** ARREGLADO EN GODOT. Ademas, la -navmesh de Blender ya no se usa (solo referencia, desactivada).
 - **Gravedad:** baja (resuelto en Godot: `post_import.gd::_weld_navmesh` funde a 2 cm: 9 vertices, 13 poligonos de
   astilla quitados; 0 avisos). Solo se tocan los datos de navegacion.
 - **Reproducir:** quitar `_weld_navmesh` y reimportar (`import_settings.py --force`, `--import`).
@@ -55,7 +75,9 @@ Origen de los datos: `debug/out/import_report.json` (tools/import_report.gd) y e
   terreno es una rampa continua (10 grados, `terrain_slope_deg`): peldanos, muretes y pretiles asoman y se hunden a
   trozos y alrededor salen triangulos oscuros. Se ve como una escalera rota tirada en el suelo. Ademas, el terreno que
   las rodea no tiene malla de navegacion (F10).
-- **Gravedad:** alta (visual, en 10 sitios muy visibles junto a la plaza; se cruzan bien andando).
+- **Gravedad:** MEDIA (decision del usuario: no bloquea el paso de jugadores ni NPC: las 10 escalinatas se cruzan
+  bien andando y con la navegacion horneada en Godot).
+- **Estado:** PENDIENTE EN BLENDER (no se toca ahora).
 - **Captura:** `debug/out/tour/g3_p13_escalinata_01.png`, `g2_escalinata_ne.png`, `g2_faro.png` (borde derecho).
 - **Reproducir:** `capture_tour.gd -- g3 @res://tools/g3_problem_points.json` (p13); perfil:
   `debug/probe_stairs.gd`.
@@ -67,6 +89,7 @@ Origen de los datos: `debug/out/import_report.json` (tools/import_report.gd) y e
   KHR_texture_transform 0,5): la textura se repite cada 20 cm en un sentido y cada metro en el otro y, con mipmaps,
   sale un color liso.
 - **Gravedad:** baja (visual).
+- **Estado:** PENDIENTE EN BLENDER.
 - **Captura:** `debug/out/tour/g3_p14_parcela_plaza.png`, `g2_plaza_120.png`.
 - **Reproducir:** mirar cualquier TRN_PlazaParcel desde zoom 30.
 - **Arreglo en Blender:** proyectar el UV de las parcelas a escala del mundo (1 repeticion = 2-4 m, igual en u y v).
@@ -82,6 +105,10 @@ Origen de los datos: `debug/out/import_report.json` (tools/import_report.gd) y e
   - Fuente del Mercado (0,6 m), fuentes / pozos de las 6 plazuelas de Razas (0,5-0,65 m), 12 puestos de la Plaza de
     Provisiones (1,0 m), STAIRS_Pass_3m (pretiles), BRIDGE_Stone (pretiles), OBELISK, bancos del Portal (0,8 m).
 - **Gravedad:** alta (bloqueante para los NPC de G7 y para el clic-para-andar: el jugador se queda atascado).
+- **Estado:** ARREGLADO EN GODOT. `tools/bake_navmesh.gd` hornea la navegacion desde las colisiones (radio 0,35,
+  escalon 0,25, pendiente 36, celda 0,25) y anade la huella del mobiliario bajo (fuentes, pozos, puestos) como
+  obstruccion. Prueba de caminata: 480 de 481 tramos (antes 475 de 553 con muchos atascos); 0 m2 de malla sobre
+  obstaculos (las celdas que marca la sonda en el borde de la fuente y los pozos son el anillo de 0,5 m alrededor).
 - **Captura:** `debug/out/walk/navcover.png` (azul = malla bajo obstaculo), `g3_p01`, `g3_p03`, `g3_p04`, `g3_p05`.
 - **Reproducir:** `walk_test.gd -- plaza morada escalera_terraza`; `debug/probe_navcover.gd`.
 - **Arreglo en Blender:** regenerar las -navmesh restando la huella de pretiles, escaleras (salvo su paso), fuentes,
@@ -103,30 +130,42 @@ Origen de los datos: `debug/out/import_report.json` (tools/import_report.gd) y e
     un camino hacia una isla (solo en la prueba; puede salir en el juego al hacer clic en una isla).
   - Arco del Puente_06 (Razas): la calle bajo el arco no esta unida (sin camino de -64.9, -135.1 a -48.3, -141.9).
 - **Gravedad:** alta (zonas de las Moradas a las que los NPC no llegan y el clic no lleva).
+- **Estado:** ARREGLADO EN GODOT (navegacion horneada: las 76 escaleras de terraza, 32 laterales y 4 monumentales
+  quedan unidas; quedan 2 rodeos de 57 m en las laterales SE_27 / SE_31 por como cruza la prueba, no por la malla).
+  Error `It's not expect to not find the most reachable polygons`: ya no sale (se quitan las islas al hornear).
 - **Captura:** `g3_p11_escalera_lateral_ne02.png`, `g3_p12_arco_puente06.png`.
 - **Reproducir:** `walk_test.gd -- escalera_lateral escalera_terraza arco`.
 - **Arreglo en Blender:** que la malla de cada escalera comparta los vertices de su rellano con la de la terraza y la
   de la calle (o un `NAVLINK_` por escalera).
 
 ## F10 · Escalones de mas de 0,25 m en pasos de la ciudad
-| sitio (Blender x, y) | que | altura |
-|---|---|---|
-| 67.0, 63.7 | fin del BRIDGE_Stone_6m_01 contra el rellano de STAIRS_Monumental_Morada_NE | 0,94 m |
-| -71.8, 77.2 | pie de STAIRS_Monumental_Morada_NW (lateral) | 1,00 m |
-| 60.1, -73.2 | STAIRS_Monumental_Morada_SE contra STAIRS_Pass_3m_10 | 1,06 m |
-| 99.3, -33.4 | STR_OFI_CallejonEscalera_25 contra el pretil de BRIDGE_Stone_6m_03 | 1,16 m |
-| 16.5, 0.2 y -1.2, 16.5 | borde del pedestal del Portal: bajada sin peldano (la malla sigue) | 0,63 m |
-- **Gravedad:** alta (el jugador se atasca; con la malla actual el camino pasa por ahi).
+| sitio (Blender x, y) | que | altura | gravedad |
+|---|---|---|---|
+| 67.0, 63.7 | fin del BRIDGE_Stone_6m_01 (diagonal del Faro) contra el rellano de STAIRS_Monumental_Morada_NE | 0,94 m | ALTA (avenida diagonal / escalera de acceso) |
+| 60.1, -73.2 | STAIRS_Monumental_Morada_SE contra STAIRS_Pass_3m_10 (union de dos escaleras de acceso) | 1,06 m | ALTA (escalera de acceso) |
+| 99.3, -33.4 | STR_OFI_CallejonEscalera_25 contra el pretil de BRIDGE_Stone_6m_03 | 1,16 m | ALTA (escalera de acceso del callejon) |
+| -71.8, 77.2 | pie lateral de STAIRS_Monumental_Morada_NW (el frente si es practicable) | 1,00 m | BAJA (rincon) |
+| 12.8, -10.2 y -1.2, 16.5 | borde del pedestal del Portal sin peldano (se sube y baja por su escalera) | 0,61-0,63 m | BAJA (borde) |
+- **Estado:** PENDIENTE EN BLENDER. Con la navegacion horneada (escalon maximo 0,25) la malla no cruza esos bordes:
+  NPC y clic-para-andar dan la vuelta; el jugador con WASD sigue chocando ahi.
 - **Captura:** `g3_p06_puente01_monumental_ne.png`, `g3_p07_monumental_no.png`, `g3_p08_monumental_se_escalinata10.png`,
   `g3_p09_callejon25_puente03.png`, `g3_p10_pedestal_portal.png`.
-- **Reproducir:** `walk_test.gd -- puente escalera_monumental callejon_escalera plaza`.
-- **Arreglo en Blender:** casar las cotas (rampa o peldanos de 0,15 m) o cortar la malla de navegacion en esos bordes.
+- **Reproducir:** andar con WASD hacia esos puntos; `debug/probe_stair_profile.gd -- <MARKER_...>`.
+- **Arreglo en Blender:** casar las cotas (rampa o peldanos de 0,15 m).
 
-## F11 · Zonas sin malla de navegacion (decision de diseno)
-- **Que pasa:** solo calles, plazas y terrazas tienen malla. No la tienen: el terreno libre entre la plaza y las
-  Moradas donde estan las 10 escalinatas (r 60-100), la franja entre las Moradas y la muralla (r ~185-195) y el
-  exterior de las 4 puertas de la muralla (la malla acaba a ~19 m de fuera de la puerta).
-- **Gravedad:** baja si es a proposito (por ahi no se pasea); alta si las escalinatas y las puertas deben llevar a
-  algun sitio.
-- **Captura:** `debug/out/walk/navcover.png` (rojo = suelo sin malla).
-- **Pregunta al usuario:** ¿deben ser transitables esas zonas (y el exterior)?
+## F11 · Zonas sin malla de navegacion (decision del usuario aplicada)
+Medido con `debug/probe_navcover.gd` (rejilla de 1 m; pendiente = normal de la colision).
+| zona | suelo m2 | pendiente media / p90 | m2 > 36 grados | malla Godot | categoria |
+|---|---|---|---|---|---|
+| terreno de las escalinatas (anillo r 60-100 en los cuadrantes de las Moradas) | 5.680 | 3,7 / 10,0 | 27 | 5.457 m2 (96 %) | RECORRIBLE |
+| franja junto a la muralla (r 185-199) | 14.750 | 2,1 / 4,3 | 53 | 14.149 m2 (96 %) | RECORRIBLE (sale del horneado, ancho >= 1,2 m) |
+| camino de ronda (sobre WALL_Seg y BASTION, 4 tramos entre puertas) | 1.892 | plano | 0 | 1.892 m2 | RECORRIBLE, region aparte, 8 NavigationLink3D en las escaleras STAIR_Gate*_L/_R |
+| adarve de las puertas y torres (GATE_*, TOWER_*) | - | - | - | 0 | NO RECORRIBLE |
+| exterior (r > 206: talud, foso, ceniza) | 13.290 (4.040 sin colision) | 25 / 41,4 | 5.402 | 0 | NO RECORRIBLE (puertas selladas) |
+| azoteas y tejados de los edificios | - | - | - | 0 (36.000 poligonos quitados) | NO RECORRIBLE |
+| muros de contencion y taludes > 36 grados | - | > 36 | - | 0 (los quita el horneado) | NO RECORRIBLE |
+- Huecos en la muralla (`debug/probe_wall_gaps.gd`, 21.567 rayos cada 0,1 grados a 0,3 / 0,9 / 1,6 m): desde el
+  suelo de dentro (r 186) y desde el camino de ronda, **ningun hueco**. Solo quedan abiertos rayos que salen de lo
+  alto de puertas y torres (22,25 y 30 m) y de tejados (19,5 m), adonde no se llega andando. No hace falta barrera
+  invisible.
+- **Estado:** ARREGLADO EN GODOT.
