@@ -25,13 +25,15 @@ import concordia_buildings as B  # noqa: E402
 
 REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
 BLEND = os.path.join(REPO, "blender", "concordia_props_v01.blend")
-EXP = os.path.join(REPO, "export", "godot", "props_int_mercado.glb")
+EXP_DIR = os.path.join(REPO, "export", "godot")
 REPORT = os.path.join(REPO, "docs", "reports", "stage28_props_import.json")
 TEX = os.path.join(REPO, "textures", "props")
-ORIGIN = Vector((6000.0, -14.0, 0.0))
+ORIGINS = {"mercado": Vector((6000.0, -14.0, 0.0)), "oficios": Vector((6000.0, -34.0, 0.0)),
+           "clases": Vector((6000.0, -54.0, 0.0))}
 STEP = 2.6
-DECIMATE_OVER = 1700
-DECIMATE_TO = 1500
+SMALL_MAX_M = 0.6                 # pequeno: lado mayor <= 0.6 m
+BUDGET = {"pequeno": 500, "mediano": 1500}
+NORMAL_RES = {"pequeno": 512, "mediano": 1024}
 Q_URL = "https://quaternius.com/packs/fantasypropsmegakit.html"
 Q_OGA = "https://opengameart.org/content/fantasy-props-megakit"
 
@@ -81,7 +83,53 @@ AVRAMANIA = [  # uid de Sketchfab (licencia comprobada en cada descarga)
     ("PROP_AV_Grapes", "av", "cc950686a4dc4ac89edda92b21afca11", "puestos: uvas", None, {}),
     ("PROP_AV_Grain_Sack", "av", "7db2a14529fd4e1f9391c68337f71eac", "puestos: saco de grano", None, {}),
 ]
-ON_TABLE = ("Mug", "Plate", "Knife", "Fork", "Spoon", "Candle", "Scroll", "Book_Stack", "Coin", "Pouch", "Apple",
+OFICIOS = [
+    ("PROP_Q_Whetstone", "q", "Whetstone", "Forja: piedra de afilar", None, {}),
+    ("PROP_AV_Water_Trough", "av", "2ba720b8921543b69edad075b9d7c5c5", "Forja: pilon de temple", None, {"_furniture": True}),
+    ("PROP_Q_Peg_Rack", "q", "Peg_Rack", "Forja / Reparaciones: colgador de herramientas", None, {}),
+    ("PROP_AV_Hammer", "av", "34e64ec1bab74f3b921d3078cecd06dc", "Forja / Reparaciones: martillo", None, {"_furniture": True}),
+    ("PROP_Q_Workbench", "q", "Workbench", "Carpinteria: banco de carpintero", None, {}),
+    ("PROP_AV_Woodpile", "av", "e06f39a8521d4a728f6de1a399e2097a", "Carpinteria: lena", None, {"_furniture": True}),
+    ("PROP_AV_Village_Ladder", "av", "b5ee3e7fbb0049059bf23a6724eebc1b", "Carpinteria: escalera de mano", None,
+     {"_furniture": True}),
+    ("PROP_AV_Cauldron", "av", "eb4311e2df0549d5a5a26edc313c38c4", "Alquimia: caldero", None, {"_furniture": True}),
+    ("PROP_Q_Potion_1", "q", "Potion_1", "Alquimia: pocion", None, {}),
+    ("PROP_Q_Potion_2", "q", "Potion_2", "Alquimia: pocion", None, {}),
+    ("PROP_Q_Potion_4", "q", "Potion_4", "Alquimia: pocion", None, {}),
+    ("PROP_AV_Roll", "av", "9cd0c6d36336456e86c2a79e968e47b6", "Hornos: panecillo", None, {}),
+    ("PROP_AV_Herb_Bundle", "av", "41ec7f9ddd8c4e999449b5e746790fe4", "Herbolarios: manojo de hierbas", None, {}),
+    ("PROP_AV_Pottedplant", "av", "82f2cac9741c467c844c9c5b62ab6050", "Herbolarios: maceta", None, {}),
+    ("PROP_AV_Pot", "av", "fa90afdde3e541458de26d42e1323d7d", "Herbolarios: tiesto", None, {"_furniture": True}),
+    ("PROP_Q_Pickaxe_Bronze", "q", "Pickaxe_Bronze", "Mineros: pico", None, {}),
+    ("PROP_AV_Shovel", "av", "7decd7f6750644fab34f3f54cd9a6a89", "Mineros: pala", None, {"_furniture": True}),
+    ("PROP_AV_Rocks", "av", "7aa298b830fc4d6eafa1980adfe0f5cf", "Mineros: mineral", None, {}),
+    ("PROP_AV_Lantern", "av", "8a3dc887ea9d48c19ad48469ba11e753", "Mineros: farol", None, {"_furniture": True}),
+    ("PROP_Q_Bucket_Wooden_1", "q", "Bucket_Wooden_1", "Pescadores: cubo", None, {}),
+    ("PROP_Q_Rope_2", "q", "Rope_2", "Pescadores: cuerda", None, {}),
+    ("PROP_AV_Crossbow", "av", "0daff83382444c95b022de235cea1ceb", "Cazadores: ballesta", None, {"_furniture": True}),
+    ("PROP_AV_Arrow", "av", "cc820300ee694dd5aae898a87ccc6c67", "Cazadores: flecha", None, {"_furniture": True}),
+    ("PROP_AV_Axe", "av", "b8142e327147499a83add0dfcb1a32d9", "Reparaciones: hacha", None, {"_furniture": True}),
+    ("PROP_AV_Handaxe", "av", "f12b9a6915a34c59bf4ea3d5634a03f5", "Reparaciones: hachuela", None, {"_furniture": True}),
+    ("PROP_Q_Chain_Coil", "q", "Chain_Coil", "Reparaciones: rollo de cadena", None, {}),
+]
+CLASES = [
+    ("PROP_AV_Pew", "av", "ba2de923a54547beaddc1f49e000b3d3", "Clases: banco con respaldo", None, {"_furniture": True}),
+    ("PROP_AV_Rack", "av", "3ced62581eb84f9a914cb1d120d2d519", "Clases: armero", None, {"_furniture": True}),
+    ("PROP_Q_WeaponStand", "q", "WeaponStand", "Clases: armero grande", None, {}),
+    ("PROP_AV_Chest", "av", "94a5f575c311487b8fbd6091b09abd94", "Clases: arcon", None, {"_furniture": True}),
+    ("PROP_AV_Shield_Round", "av", "b0f1cb5493bd4af8a829c49816a1cf79", "Clases: escudo redondo", None, {"_furniture": True}),
+    ("PROP_Q_Shield_Wooden", "q", "Shield_Wooden", "Clases: escudo de madera", None, {}),
+    ("PROP_AV_Armingsword", "av", "b935b180c92c4fe79c067113d8929cb4", "Clases: espada", None, {"_furniture": True}),
+    ("PROP_AV_Shortsword", "av", "0be8094364f4482f9ddad92236514b96", "Clases: espada corta", None, {"_furniture": True}),
+    ("PROP_AV_Dagger", "av", "78265b91861e406ea62acaa67b78d60b", "Clases: daga", None, {"_furniture": True}),
+    ("PROP_AV_Staff", "av", "3b71fc881aaf4602ad53605474baf0ff", "Clases: baston", None, {"_furniture": True}),
+    ("PROP_AV_Rug", "av", "3899142ec92c46059d35fc0fa1a0bd41", "Clases: esterilla", None, {"_furniture": True}),
+    ("PROP_Q_Shelf_Arch", "q", "Shelf_Arch", "Casa de Reposicion: estante de arco", None, {}),
+    ("PROP_Q_SmallBottles_1", "q", "SmallBottles_1", "Casa de Reposicion: frascos", None, {}),
+]
+BATCH_TITLES = {"mercado": "Mercado (Posada, Casa del Registro, Gran Subasta)", "oficios": "Oficios (talleres y gremios)",
+                "clases": "Clases (8 salones y Casa de Reposicion)"}
+ON_TABLE = ("Potion", "Roll", "Herb_Bundle", "Rocks", "Dagger", "SmallBottles", "Arrow", "Hammer", "Mug", "Plate", "Knife", "Fork", "Spoon", "Candle", "Scroll", "Book_Stack", "Coin", "Pouch", "Apple",
             "Carrot", "Onion", "Loaf", "Cheese", "Grapes", "BookGroup")
 
 
@@ -90,7 +138,7 @@ PALETTE_TARGETS = ["MAT_Wood_Dark", "MAT_Wood_Light", "MAT_Iron_Black", "MAT_Bro
                    "MAT_Cloth_Patch_A", "MAT_Cloth_Patch_B", "MAT_Cloth_Patch_C", "MAT_Roof_Tile_Ocher", "MAT_Ash_Gray"]
 FURNITURE_TARGETS = ["MAT_Wood_Dark", "MAT_Wood_Light", "MAT_Iron_Black", "MAT_Limestone_Worn", "MAT_Limestone_Light",
                      "MAT_Ash_Gray", "MAT_Straw", "MAT_Cloth_Patch_A", "MAT_Cloth_Patch_B", "MAT_Cloth_Patch_C",
-                     "MAT_Hide_R05"]
+                     "MAT_Hide_R05", "MAT_Bronze_Aged"]
 SRC_BLEND = os.path.join(REPO, "blender", "concordia_v26.blend")
 _AVG = {}
 
@@ -132,15 +180,23 @@ def palette_remap(ob, cands=None):
     for s in ob.material_slots:
         if s.material and s.material.use_nodes:
             img = next((n.image for n in s.material.node_tree.nodes if n.type == "TEX_IMAGE" and n.image), img)
-    W, H = img.size
-    px = np.array(img.pixels[:]).reshape(H, W, 4)[:, :, :3]
-    uvl = me.uv_layers.active.data
+    slot_cols = []
+    for sl in ob.material_slots:
+        bsdf = next((n for n in sl.material.node_tree.nodes if n.type == "BSDF_PRINCIPLED"), None) if sl.material else None
+        slot_cols.append(np.array(bsdf.inputs["Base Color"].default_value[:3]) if bsdf else np.array((0.5, 0.5, 0.5)))
+    if img is not None:
+        W, H = img.size
+        px = np.array(img.pixels[:]).reshape(H, W, 4)[:, :, :3]
+    uvl = me.uv_layers.active.data if me.uv_layers else None
     targets, face_t, cols = [], [], {}
     ref = {m: avg_color(m) for m in (cands or PALETTE_TARGETS)}
     for p in me.polygons:
-        u = sum(uvl[li].uv[0] for li in p.loop_indices) / len(p.loop_indices)
-        v = sum(uvl[li].uv[1] for li in p.loop_indices) / len(p.loop_indices)
-        c = px[min(H - 1, max(0, int(v * H))), min(W - 1, max(0, int((u % 1.0) * W)))]
+        if img is None or uvl is None:                  # sin paleta: color base del material de la cara
+            c = slot_cols[p.material_index] if p.material_index < len(slot_cols) else np.array((0.5, 0.5, 0.5))
+        else:
+            u = sum(uvl[li].uv[0] for li in p.loop_indices) / len(p.loop_indices)
+            v = sum(uvl[li].uv[1] for li in p.loop_indices) / len(p.loop_indices)
+            c = px[min(H - 1, max(0, int(v * H))), min(W - 1, max(0, int((u % 1.0) * W)))]
         key = tuple(round(float(x), 2) for x in c)
         if key not in cols:
             cols[key] = min(ref, key=lambda m: float(((ref[m] - c) ** 2).sum()))
@@ -153,7 +209,7 @@ def palette_remap(ob, cands=None):
         me.materials.append(bpy.data.materials[t])
     for p, i in zip(me.polygons, face_t):
         p.material_index = i
-    return ["mdvl_palette"], targets, {str(k): v for k, v in cols.items()}
+    return ["mdvl_palette" if img is not None else "colores de material"], targets, {str(k): v for k, v in cols.items()}
 
 
 def tris(o):
@@ -244,8 +300,8 @@ def remap(ob, overrides):
     return src, targets
 
 
-def bake_normal(high, low, name):
-    """Normal map en espacio tangente del original sobre la version decimada, 1K, UV 'UVBake'."""
+def bake_normal(high, low, name, res=1024):
+    """Normal map en espacio tangente del original sobre la version decimada (1K o 512), UV 'UVBake'."""
     os.makedirs(TEX, exist_ok=True)
     uv = low.data.uv_layers.new(name="UVBake")
     low.data.uv_layers.active = uv
@@ -256,15 +312,23 @@ def bake_normal(high, low, name):
     bpy.ops.mesh.select_all(action="SELECT")
     bpy.ops.uv.smart_project(angle_limit=math.radians(66), island_margin=0.02)
     bpy.ops.object.mode_set(mode="OBJECT")
-    img = bpy.data.images.new(f"{name}_normal_1k", 1024, 1024, alpha=False)
+    tag = "1k" if res >= 1024 else f"{res}"
+    for old in (f"{name}_normal_1k.png", f"{name}_normal_512.png"):
+        if os.path.exists(os.path.join(TEX, old)):
+            os.remove(os.path.join(TEX, old))
+    img = bpy.data.images.new(f"{name}_normal_{tag}", res, res, alpha=False)
     img.colorspace_settings.name = "Non-Color"
-    path = os.path.join(TEX, f"{name}_normal_1k.png")
+    path = os.path.join(TEX, f"{name}_normal_{tag}.png")
     # materiales derivados: Concordia + nodo de imagen activo para el horneado
     new_mats = []
     for i, slot in enumerate(low.material_slots):
         base = slot.material
+        mname = f"{base.name.split('__')[0]}__N_{name[5:]}"
+        old = bpy.data.materials.get(mname)
+        if old is not None:
+            old.name = f"{mname}__old"                    # restos de una pasada anterior (sin usuarios al guardar)
         m = base.copy()
-        m.name = f"{base.name}__N_{name[5:]}"
+        m.name = mname
         nt = m.node_tree
         tex = nt.nodes.new("ShaderNodeTexImage")
         tex.image = img
@@ -318,28 +382,25 @@ def collider(ob, col):
     return o
 
 
-def main():
-    args = sys.argv[sys.argv.index("--") + 1:]
-    qdir = args[0]
-    avdir = args[1] if len(args) > 1 else None
-    avmeta = {}
-    if avdir and os.path.exists(os.path.join(avdir, "licenses.json")):
-        with open(os.path.join(avdir, "licenses.json")) as fh:
-            avmeta = json.load(fh)
-    bpy.ops.wm.open_mainfile(filepath=BLEND)
-    col = bpy.data.collections["BLD_PROPS_INT"]
-    ensure_mats(PALETTE_TARGETS + ["MAT_Hide_R05", "MAT_Felt_R05"])
-    tmp = bpy.data.collections.new("TMP_IMPORT")
-    bpy.context.scene.collection.children.link(tmp)
-    lc = bpy.context.view_layer.layer_collection.children[tmp.name]
-    bpy.context.view_layer.active_layer_collection = lc
-    for o in [o for o in col.objects if o.get("prop_source", "").startswith(("Quaternius", "Avramania"))]:
+def size_class(ob):
+    d = ob.dimensions
+    return "pequeno" if max(d.x, d.y, d.z) <= SMALL_MAX_M else "mediano"
+
+
+def run_batch(batch, items, qdir, avdir, avmeta, col, tmp, st):
+    for o in [o for o in col.objects if o.get("prop_batch") == batch or
+              (batch == "mercado" and o.get("prop_source", "").startswith(("Quaternius", "Avramania"))
+               and not o.get("prop_batch"))]:
+        mes = [c.data for c in o.children if c.type == "MESH"] + [o.data]
         for c in list(o.children):
             bpy.data.objects.remove(c)
         bpy.data.objects.remove(o)
-    rep = {"blend": os.path.relpath(BLEND, REPO), "batch": "Mercado (Posada, Casa del Registro, Gran Subasta)",
-           "props": {}, "skipped": []}
-    items = MERCADO + (AVRAMANIA if avdir else [])
+        for me in mes:                                      # sin esto la malla nueva saldria como PROP_x.001
+            if me is not None and me.users == 0:
+                bpy.data.meshes.remove(me)
+    for me in [m for m in bpy.data.meshes if m.users == 0 and m.name.startswith(("PROP_Q_", "PROP_AV_"))]:
+        bpy.data.meshes.remove(me)
+    rep = {"batch": BATCH_TITLES[batch], "props": {}, "skipped": [], "budget": BUDGET, "small_max_m": SMALL_MAX_M}
     objs = []
     for idx, (name, srcname, key, use, fit, over) in enumerate(items):
         if srcname == "q":
@@ -348,8 +409,8 @@ def main():
                     "pack": "Fantasy Props MegaKit (Standard)", "file": f"Exports/glTF/{key}.gltf"}
         else:
             m = avmeta.get(key)
-            if not m:
-                rep["skipped"].append({"name": name, "reason": "sin descarga de Sketchfab"})
+            if not m or not m.get("file") or not m.get("page_checked"):
+                rep["skipped"].append({"name": name, "reason": "sin descarga o sin licencia CC0 comprobada en la pagina"})
                 continue
             path = os.path.join(avdir, m["file"])
             meta = {"author": "Avramania", "url": m["url"], "license": m["license"], "license_checked": m["checked"],
@@ -365,25 +426,30 @@ def main():
             src, targets = remap(ob, over)
             pal = None
         B.box_uv(ob)
+        cls = size_class(ob)
+        budget = BUDGET[cls]
         info = {"use": use, "source": srcname, "key": key, **meta, "tris_original": t0, "scale": round(scale, 3),
+                "size_class": cls, "budget": budget,
                 "src_materials": sorted(set(s.split(".")[0] for s in src)), "materials": targets}
         if pal:
             info["palette_map"] = pal
-        if t0 > DECIMATE_OVER:
+        if t0 > budget:
             high = ob.copy()
             high.data = ob.data.copy()
             tmp.objects.link(high)
-            mod = ob.modifiers.new("dec", "DECIMATE")
-            mod.ratio = (DECIMATE_TO - 20) / t0
             bpy.context.view_layer.objects.active = ob
-            bpy.ops.object.modifier_apply(modifier=mod.name)
             k = 0
-            while tris(ob) > DECIMATE_TO and k < 5:
+            while tris(ob) > budget and k < 6:
                 mod = ob.modifiers.new("dec", "DECIMATE")
-                mod.ratio = (DECIMATE_TO - 20) / tris(ob)
+                mod.ratio = (budget - 20) / tris(ob)
                 bpy.ops.object.modifier_apply(modifier=mod.name)
                 k += 1
-            info["normal_map"] = bake_normal(high, ob, name)
+            info["normal_map"] = bake_normal(high, ob, name, NORMAL_RES[cls])
+            zmin = min(v.co.z for v in ob.data.vertices)          # el decimado puede despegar la base del suelo
+            if abs(zmin) > 1e-4:
+                ob.data.transform(Matrix.Translation((0, 0, -zmin)))
+                ob.data.update()
+            info["normal_res"] = NORMAL_RES[cls]
             info["decimated_to"] = tris(ob)
             info["materials"] = [s.material.name for s in ob.material_slots]
             bpy.data.objects.remove(high)
@@ -391,30 +457,66 @@ def main():
             c.objects.unlink(ob)
         col.objects.link(ob)
         r, c_ = divmod(idx, 7)
-        ob.location = ORIGIN + Vector((c_ * STEP, -r * STEP, 0.0))
+        ob.location = ORIGINS[batch] + Vector((c_ * STEP, -r * STEP, 0.0))
         ob["prop_source"] = f"{meta['author']} (CC0)"
+        ob["prop_batch"] = batch
         ob["prop_note"] = use
         ob["prop_tris"] = tris(ob)
         ob["prop_url"] = meta["url"]
         info["tris"] = tris(ob)
         dims = ob.dimensions
         info["size_m"] = [round(dims.x, 3), round(dims.y, 3), round(dims.z, 3)]
-        if not any(k_ in key or k_ in name for k_ in ON_TABLE):
+        vz = min(v.co.z for v in ob.data.vertices)
+        info["origin_at_base"] = abs(vz) < 1e-3
+        info["ok"] = info["tris"] <= budget and info["origin_at_base"] and all(
+            mm.split("__")[0] in PALETTE_TARGETS + FURNITURE_TARGETS + ["MAT_Felt_R05", "MAT_Bronze_Aged"]
+            for mm in info["materials"])
+        if not any(k_ in key or k_ in name for k_ in ON_TABLE) and cls == "mediano":
             objs.append(collider(ob, col))
             info["colonly"] = True
         objs.append(ob)
         rep["props"][name] = info
-        print("PROP", name, t0, "->", info["tris"], info["materials"], flush=True)
-    bpy.data.collections.remove(tmp)
+        print("PROP", batch, name, t0, "->", info["tris"], cls, info["ok"], info["materials"], flush=True)
     rep["total_tris"] = sum(v["tris"] for v in rep["props"].values())
+    rep["all_ok"] = all(v["ok"] for v in rep["props"].values())
     import stage11_godot as G
-    size = G.export_glb(objs, EXP)
-    rep["export"] = {"file": os.path.relpath(EXP, REPO), "mb": round(size / 2 ** 20, 3), **G.glb_info(EXP)}
+    exp = os.path.join(EXP_DIR, f"props_int_{batch}.glb")
+    size = G.export_glb(objs, exp)
+    rep["export"] = {"file": os.path.relpath(exp, REPO), "mb": round(size / 2 ** 20, 3), **G.glb_info(exp)}
+    st.setdefault("batches", {})[batch] = rep
+    return rep
+
+
+def main():
+    args = sys.argv[sys.argv.index("--") + 1:]
+    qdir, avdir = args[0], args[1]
+    batches = args[2:] or ["mercado"]
+    with open(os.path.join(avdir, "licenses.json")) as fh:
+        avmeta = json.load(fh)
+    bpy.ops.wm.open_mainfile(filepath=BLEND)
+    col = bpy.data.collections["BLD_PROPS_INT"]
+    ensure_mats(PALETTE_TARGETS + ["MAT_Hide_R05", "MAT_Felt_R05", "MAT_Bronze_Aged"])
+    tmp = bpy.data.collections.new("TMP_IMPORT")
+    bpy.context.scene.collection.children.link(tmp)
+    lc = bpy.context.view_layer.layer_collection.children[tmp.name]
+    bpy.context.view_layer.active_layer_collection = lc
+    st = {}
+    if os.path.exists(REPORT):
+        with open(REPORT) as fh:
+            st = json.load(fh)
+        if "batches" not in st:
+            st = {}
+    st["blend"] = os.path.relpath(BLEND, REPO)
+    lists = {"mercado": MERCADO + AVRAMANIA, "oficios": OFICIOS, "clases": CLASES}
+    for b in batches:
+        rep = run_batch(b, lists[b], qdir, avdir, avmeta, col, tmp, st)
+        print("BATCH", b, rep["total_tris"], "ok", rep["all_ok"], rep["export"]["mb"], "skipped", rep["skipped"], flush=True)
+    bpy.data.collections.remove(tmp)
+    bpy.data.orphans_purge(do_local_ids=True, do_linked_ids=True, do_recursive=True)   # restos de los glTF importados
     bpy.ops.file.make_paths_relative()
     bpy.ops.wm.save_as_mainfile(filepath=BLEND, compress=True)
     with open(REPORT, "w") as fh:
-        json.dump(rep, fh, indent=1, ensure_ascii=False)
-    print("TOTAL", rep["total_tris"], rep["export"], "skipped", rep["skipped"])
+        json.dump(st, fh, indent=1, ensure_ascii=False)
 
 
 if __name__ == "__main__":

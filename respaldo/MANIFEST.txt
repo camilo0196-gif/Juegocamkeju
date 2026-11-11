@@ -157,31 +157,73 @@ Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | aw
       599581  01c9a372cfd7a7bf471b59c2458ed3ccecc93448aebf7ba0cc5b3b5b6ed24349  2026-11-11/binarios_git/textures/concordia/polyhaven_src/weathered_planks/weathered_planks_Diffuse_1k.jpg
       218802  a017728183597417a350d1846a5a46db9702ee6d472a21c5da2f23015d606aa3  2026-11-11/binarios_git/textures/concordia/polyhaven_src/weathered_planks/weathered_planks_Rough_1k.jpg
       681552  381d298f3194ec4961b04b4912b9b6efea4b2ff7b914dac57e24c8b6b0be6a25  2026-11-11/binarios_git/textures/concordia/polyhaven_src/weathered_planks/weathered_planks_nor_gl_1k.jpg
-    77869792  30cd490d70750b42d2dda46e218b475aea5e2fca5d8e5a3f329ade7223930730  2026-11-11/concordia_master_2026-11-11_v28.blend
-      678327  01789def2f626e9a4e522a62292d70f664a5deebe0876509a33d5ba3870ab9c8  2026-11-11/concordia_moradas_int_v01.blend
-     1543054  117fb0477debf70b899eb642c4e6081f8f82dff223afa2ff640c3c148a0cd6e0  2026-11-11/concordia_props_v01.blend
+    77936948  e1caf844e57a837c3d5bebcca72be3e792d29e22cca1c041e42fa0e88eaf4958  2026-11-11/concordia_master_2026-11-11_v28.blend
+      673465  7acd32323950dd444ce20fdf75870dbfd6f414f9adf2d5e00180e844022bd58a  2026-11-11/concordia_moradas_int_v01.blend
+     2764856  af19bcd1e8c9db7b756e8e73d508367dba609efca52b885d171d197ba6b785b9  2026-11-11/concordia_props_v01.blend
+       46060  5e62a5d472c80ca07847c1cbb80c0a2466e992b9d38ab5b5cc9fd8f097d79269  2026-11-11/fuentes_assets/avramania/0be8094364f4482f9ddad92236514b96/model.glb
+       76512  9235d8ff9d967c3172cdbd92b85fc2451daca34ee4e6c5be421e1c6ccb5ddffd  2026-11-11/fuentes_assets/avramania/0daff83382444c95b022de235cea1ceb/model.glb
        49944  8c6ec6fdd3de5a048a256378bbb41c3411da6ed50a3e880329440ae21c9e5fc9  2026-11-11/fuentes_assets/avramania/1b9b17a3cb0f44dd9141e70fba061c71/model.glb
        88564  c69f07a765d99aa27664d592abc1ce4cf23d02ba5755305ab3b11885a1ee092b  2026-11-11/fuentes_assets/avramania/24704040010a42ceaeffb1631ed1ae9b/model.glb
+      111024  9e7de119210da89c2646b71bd8a41e5dcc7b3ec17ac62dbfd9f682c78c9c4080  2026-11-11/fuentes_assets/avramania/2ba720b8921543b69edad075b9d7c5c5/model.glb
+       24488  6c481869ef57133383a3e21f39cc99ecdea80360e6e8f9bc5ffc97fe6ad01bf5  2026-11-11/fuentes_assets/avramania/34e64ec1bab74f3b921d3078cecd06dc/model.glb
+       43232  89e9058f1a6c3deaaaaa10653944ac1394a7844b113ca98297a0df3440057493  2026-11-11/fuentes_assets/avramania/3899142ec92c46059d35fc0fa1a0bd41/model.glb
+       58704  287e58f40655fdd5b532e189f37b8cc0559ddfc4104eb54e12f8724722b2c16b  2026-11-11/fuentes_assets/avramania/3b71fc881aaf4602ad53605474baf0ff/model.glb
+       37600  ff7259bc1ef0ba2b0d5499e31c3ab6514c6fcf4984670b0c0b8c334f5604b85e  2026-11-11/fuentes_assets/avramania/3ced62581eb84f9a914cb1d120d2d519/model.glb
        33320  0d465cb01a0ef97677f20418f2ae02bc4f0a69c683abb46eb24c318921ea38b1  2026-11-11/fuentes_assets/avramania/3f3b24dd3bf24ce49b518bfbd5ec93df/model.glb
+       55764  e9b63ac77edcc89140cde8766229eccb87cb1caf686f3f98a9b06b51b3b451b2  2026-11-11/fuentes_assets/avramania/41ec7f9ddd8c4e999449b5e746790fe4/model.glb
        37672  9344ad50776d0bc203ee9a92a962d4c71b114b44fc5bd38386a068fc185a5e02  2026-11-11/fuentes_assets/avramania/64e25ccc90c84e3b8c2ad02dd39150ba/model.glb
+       40920  7b1c091f285eb020b35475b5605d5e29f026403016e1c6db14532b10e1d3f12e  2026-11-11/fuentes_assets/avramania/78265b91861e406ea62acaa67b78d60b/model.glb
+       18168  96905d3d3f626aec9784577d3c892e7a258591013e962ab1d1c776e2ed9beb48  2026-11-11/fuentes_assets/avramania/7aa298b830fc4d6eafa1980adfe0f5cf/model.glb
        76520  021ef05dbbbc02d92414163872ecda4bc2fae3baf605d93e69fae056cd6aec7c  2026-11-11/fuentes_assets/avramania/7db2a14529fd4e1f9391c68337f71eac/model.glb
+       29088  5b2a19423da072f57e08a098cee57e339908886c71cf953a8335d7ef81b4eae0  2026-11-11/fuentes_assets/avramania/7decd7f6750644fab34f3f54cd9a6a89/model.glb
+       72320  08e4a248f1c967e10699403cfbe0a26daaccb08854dec1b5eb30c737f516e7f3  2026-11-11/fuentes_assets/avramania/82f2cac9741c467c844c9c5b62ab6050/model.glb
+       41272  3dde865315b3513f21c5ea216c061040055c77a820dcc472c2290f1a7385145c  2026-11-11/fuentes_assets/avramania/8a3dc887ea9d48c19ad48469ba11e753/model.glb
+       55996  c4bf7aee605e8257516fc405109f1a285eb6642f748f8d6e97d9041588169854  2026-11-11/fuentes_assets/avramania/94a5f575c311487b8fbd6091b09abd94/model.glb
+       19360  6cf3ccb3ec10e7898fd3601b7f656a5f15736cde20c3a6ddd3751b9227b411bc  2026-11-11/fuentes_assets/avramania/9cd0c6d36336456e86c2a79e968e47b6/model.glb
        35432  4ea2245978da1030bcbec184e8c2b52429eab390cd87c955eb665f1712a1e1b9  2026-11-11/fuentes_assets/avramania/a8a9568469524a548ca730b1058de3ef/model.glb
+       88788  db9a357a03ebecd5c3bc6ed7357a836e79267ec8239a3313e287dcea7a9cacf8  2026-11-11/fuentes_assets/avramania/b0f1cb5493bd4af8a829c49816a1cf79/model.glb
+       24436  4ddb20f511f895dd816aea172e92357ea5dfbb12e07feede8e0f0e16a19e6623  2026-11-11/fuentes_assets/avramania/b5ee3e7fbb0049059bf23a6724eebc1b/model.glb
+       29800  de6c833cfffce40738ab4c3adf93b14893c21eaafa4da602df8ad26704a05972  2026-11-11/fuentes_assets/avramania/b8142e327147499a83add0dfcb1a32d9/model.glb
+       57548  2b50e3f48a32719825c568ea13396b58fceff83f5b4acd197f081c4ad2408113  2026-11-11/fuentes_assets/avramania/b935b180c92c4fe79c067113d8929cb4/model.glb
+       86968  f7c9b0642bfd1850630a0daf861365c91102cada81a49df2f7050d508ed53110  2026-11-11/fuentes_assets/avramania/ba2de923a54547beaddc1f49e000b3d3/model.glb
        42040  f74129287ad6a6313bbdb06da51a1cad95408657a29e3b3a9246f5b52f1d1fed  2026-11-11/fuentes_assets/avramania/bd0ad320c35249b9b1a37e2adc061bb9/model.glb
        78340  31c3386a28be3257d31d244866c2c0fd61de13c026a7f4beb98094780b2fc405  2026-11-11/fuentes_assets/avramania/c66175e51d044dfda9e6edff21d4d38a/model.glb
+       15572  8613d8eecf8c44501749d701fce5506713aa5839bb7ce408c0afb223a5b0f193  2026-11-11/fuentes_assets/avramania/cc820300ee694dd5aae898a87ccc6c67/model.glb
        78016  e51dc10cee8108d8ea06d7d2524e6029cd2f0b1651441f024da486b1f1d26cc4  2026-11-11/fuentes_assets/avramania/cc950686a4dc4ac89edda92b21afca11/model.glb
        75448  af42cf3243f3e801346f0246755d9eca1c1f93315bab0619d03bcee1a2849b0c  2026-11-11/fuentes_assets/avramania/d041cc0462ab4da6be30fff811765685/model.glb
+       62224  a68d0874061a5a7d7c424e7e131799a77dae1c1f79aa373d9e3668d589930b9b  2026-11-11/fuentes_assets/avramania/e06f39a8521d4a728f6de1a399e2097a/model.glb
+      153328  77cd275807f153ae4c3c2057797627bf0a474f9652cb3d2e462c0d2e8f60dee4  2026-11-11/fuentes_assets/avramania/eb4311e2df0549d5a5a26edc313c38c4/model.glb
+       40560  16f5444d9fdc9d84762fd6e317b8d3f4a5758a472f28a40139c3dd64f406e7cc  2026-11-11/fuentes_assets/avramania/f12b9a6915a34c59bf4ea3d5634a03f5/model.glb
+       41424  a30b94ed11e381abe58daf5bce4ab1f25ab84c05c566be92b10b84f8cd99d854  2026-11-11/fuentes_assets/avramania/fa90afdde3e541458de26d42e1323d7d/model.glb
        31524  80b7ba7e06d779c8a679a6fbbba3105563f1fd815414a507e8d6bcbfe028d06e  2026-11-11/fuentes_assets/avramania/fe8f28bcadaf44a7836e12fe30f9a3dd/model.glb
-        6805  2c63d2ccd9b3cb90ec87ce1b849dd90174f08ea426a4b753cda7bfe36f2f866d  2026-11-11/fuentes_assets/avramania/licenses.json
+       22263  275ad13cf3f67421a6ffcafe4cbd356f42e082dd48842af224c9cca1ab4c03bc  2026-11-11/fuentes_assets/avramania/licenses.json
     73727082  0bc1e5843c9f245c44bda82f97f738b09f88fe51bb34d2a69a7847a969f868e3  2026-11-11/fuentes_assets/quaternius_fantasy_props_megakitstandard.zip
-     1006976  2295ee08aaf0b5e3ca24483b514f92b33cb2a67916189bc8ec9ad8fd83811139  2026-11-11/glb/int_morada_casa_grande.glb
-      788912  cc09c38a3ab26a9df7b72ad5f9c2a4fba0a0816a94cc791788a22f183bc557a4  2026-11-11/glb/int_morada_casa_pequena.glb
-      424464  93e543ba5c7777b0540f56c102fc7b41167fea838f21f8711d5d9240aaccf82a  2026-11-11/glb/int_morada_habitacion.glb
+      946072  199cb545ca497f7c7755066bc9933b5d3544412497f560e2da3239f71e42f935  2026-11-11/glb/int_morada_casa_grande.glb
+      728004  3b9c1a87b92a6026fa153457a0eeab911c7c94b1052ff1b74325e90b6c7264d0  2026-11-11/glb/int_morada_casa_pequena.glb
+      424468  ca8b1c1f2c0f7130a6616ddf10b41c4600751d34055fc55e19222cd4c03b6a94  2026-11-11/glb/int_morada_habitacion.glb
+     1204760  bda2062b4738d185dfc46f1adb5ad1418b72d44c98e47a610391465eb715a952  2026-11-11/glb/props_int_clases.glb
       442880  b85f07a83712df13834d7243a57d7e9627df5444bf15ebaae306b0782d1e68ff  2026-11-11/glb/props_int_mano.glb
-     2610504  412446b30a1c93cbf11442e5100b876f4997275bb87038bfef6bbfe3d4d20dc9  2026-11-11/glb/props_int_mercado.glb
+     2441900  36fd587dfbecc8ad06d1200ed1bf98c674383a5652fbb711f1ac590ecbf472c3  2026-11-11/glb/props_int_mercado.glb
+     1951096  93ba9daaf7b6bb030e585b9ceb1f274d9170b27468b10ac76dff02e52f572f4a  2026-11-11/glb/props_int_oficios.glb
        70708  ded9ce2d6f997c4d4c4aeea5bde72047e274816ff14283a732762356429fc243  2026-11-11/glb/props_trophy_cases.glb
+      225986  8bfd8ec5347f15ad083bdd9de9d5d79e63439e2f77739a9d0a59e15d2287d4c1  2026-11-11/textures/PROP_AV_Cheese_Wheel_normal_512.png
+      208829  5556477cc00b35a7cce65dafcf35d692931d1c10fd078408a176cef3aa1b19db  2026-11-11/textures/PROP_AV_Grain_Sack_normal_512.png
+      329735  d9739ffd1cd0e298bd844698a41b595ad696faaf36f96ed499b34cc8c03b8fbf  2026-11-11/textures/PROP_AV_Grapes_normal_512.png
+      198801  f863f21822e77602219a6e33f38283b34d695cb0822e70b8c2b4a1fdd3e69463  2026-11-11/textures/PROP_AV_Handaxe_normal_512.png
+      134607  39e13b802ba8e5d7e2dd13eda733ca9c64031e0fc293109e8a48f8332bb64a7e  2026-11-11/textures/PROP_AV_Herb_Bundle_normal_512.png
       535399  8934f9eb784ed0ec2fc5f0fbb109ce8a9fb92101abe24790d9d3bc23c26de3ad  2026-11-11/textures/PROP_Q_Barrel_Holder_normal_1k.png
+      771881  db991bb570ed949e3059234ee397b64563ef2e39b1ec0e0bfac7ac7d68ce1627  2026-11-11/textures/PROP_Q_BookStand_normal_1k.png
+      270021  6eebf5b2e02d4efc1001d2288fe19f3fa0e0f38207094a62098e32fed8063988  2026-11-11/textures/PROP_Q_Bucket_Wooden_1_normal_512.png
+      124185  fd8ddc548809f5abcf407ec88c3c159b394297aee1ebde81c9e1596821e3f589  2026-11-11/textures/PROP_Q_CandleStick_normal_512.png
+      668103  e0458e602d766724537cce246110421639712d99a97b94c90817b59ce4ef18c6  2026-11-11/textures/PROP_Q_Chain_Coil_normal_1k.png
       645973  3a8179427079963943fd9a491ba65b334cdbdff259cf477dbbf976959655a094  2026-11-11/textures/PROP_Q_Chandelier_normal_1k.png
       399570  39b52fb632c8a9a65242bf4a5ec649f4e9fa2aa9d60013fecff8c28356a00239  2026-11-11/textures/PROP_Q_Chest_Wood_normal_1k.png
+      214385  bb566a7e0225867c8ec3c89e1eeb8a27cb73d3deab4de0770c521a549a2df50d  2026-11-11/textures/PROP_Q_Coin_Pile_normal_512.png
+      363280  4c0c05a97c2220fda0be7b4c4d09e426d4efff1f5d48ef64ef6b45f3777eb123  2026-11-11/textures/PROP_Q_Potion_4_normal_512.png
+      421577  a115fcd19d32ad1d634a5e8c3a829a338a9a1b0fa8ab520d3bb385e15e4eecbb  2026-11-11/textures/PROP_Q_Pouch_Large_normal_512.png
+      425540  3403b94e2856d43fc514c276cf3690c25ca2904b933cefb3dc97fb90452663c9  2026-11-11/textures/PROP_Q_Scroll_1_normal_512.png
+      435197  a7909ce95b126bf6c39428f8ff8fde82606d6b7b3e2265664c48a162ad549076  2026-11-11/textures/PROP_Q_Scroll_2_normal_512.png
+      772159  cd1a5382da65cca5b693dd09972c47b6e2385871cf5c8413e755a8f0310906b4  2026-11-11/textures/PROP_Q_WeaponStand_normal_1k.png
       290103  b43e85d44132548af1e19c707b769b1e6d8e864448444d2f66da7ce84329fe60  2026-11-11/textures/trophy_case_atlas_512.png
 
-Total: 177 archivos, 546,010,837 bytes (520.7 MiB)
+Total: 219 archivos, 557,071,277 bytes (531.3 MiB)

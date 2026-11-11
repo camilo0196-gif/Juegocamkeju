@@ -1,5 +1,5 @@
 {
- "source": "blender/concordia_v26.blend",
+ "source": "blender/concordia_v28.blend",
  "faro_mer_casa_01": {
   "floors_before": 3,
   "floors_after": 2,
@@ -14,6 +14,11 @@
   "faro",
   "moradas",
   "pipes",
+  "medir",
+  "razas",
+  "pipes_west",
+  "pipes_west",
+  "pipes_west",
   "medir"
  ],
  "moradas": {
@@ -462,7 +467,9 @@
    "SE": 330,
    "SO": 354
   },
-  "dwellings_total": 1398
+  "dwellings_total": 1398,
+  "dwellings_note": "1,398 viviendas tras la etapa 28 (1,404 - 6 por Morada_SO_036 y SO_037 a 2 plantas); 13 puertas residuales aceptadas por el usuario (0.93 %)",
+  "residual_list": "docs/reports/stage28_moradas_residual.json"
  },
  "moradas_sets": {
   "NE": {
@@ -579,177 +586,615 @@
   }
  },
  "pipes": {
-  "supports": [
+  "route": "oeste (decision del usuario, etapa 28)",
+  "nodes": 15,
+  "path_vertices": 17,
+  "length_m": 130.3,
+  "segments": [
    {
-    "support": "PIPE_TF_Support_01",
-    "xy": [
-     -13.6,
-     125.6
+    "from": 0,
+    "to": 1,
+    "length_m": 8.22,
+    "limit": [
+     "TesoreriaMuralla_Roof",
+     14.72,
+     1.2
     ],
-    "on_road": true,
-    "action": "desplazado -1.50 m a lo largo del tubo, fuera de la calle",
-    "new_xy": [
-     -15.0,
-     125.8
-    ],
-    "on": "TRN_City_Chunk_8_11_LOD0",
-    "height_m": 12.32
-   },
-   {
-    "support": "PIPE_TF_Support_02",
-    "xy": [
-     -7.6,
-     120.6
-    ],
-    "on_road": true,
-    "action": "SIN RESOLVER: plaza abierta (pendiente de decision)",
-    "building_line_m": [
-     11.9,
-     null
+    "axis_z": [
+     16.47,
+     16.47
     ]
    },
    {
-    "support": "PIPE_TF_Support_03",
-    "xy": [
-     -1.9,
-     114.9
+    "from": 1,
+    "to": 2,
+    "length_m": 6.58,
+    "limit": [
+     "TesoreriaMuralla_Body",
+     15.22,
+     1.2
     ],
-    "on_road": true,
-    "action": "SIN RESOLVER: plaza abierta (pendiente de decision)",
-    "building_line_m": [
-     null,
-     null
+    "axis_z": [
+     16.47,
+     19.31
     ]
    },
    {
-    "support": "PIPE_TF_Support_04",
-    "xy": [
-     3.7,
-     109.3
+    "from": 2,
+    "to": 3,
+    "length_m": 10.13,
+    "limit": [
+     "TesoreriaMuralla_Body",
+     15.22,
+     1.2
     ],
-    "on_road": true,
-    "action": "SIN RESOLVER: plaza abierta (pendiente de decision)",
-    "building_line_m": [
-     5.5,
-     16.8
+    "axis_z": [
+     19.31,
+     15.5
     ]
    },
    {
-    "support": "PIPE_TF_Support_05",
-    "xy": [
-     9.4,
-     103.6
+    "from": 3,
+    "to": 4,
+    "length_m": 14.42,
+    "limit": [
+     "MER_Casa_01_Roof",
+     13.83,
+     1.2
     ],
-    "on_road": true,
-    "action": "SIN RESOLVER: plaza abierta (pendiente de decision)",
-    "building_line_m": [
-     null,
-     13.3
+    "axis_z": [
+     15.5,
+     15.5
     ]
    },
    {
-    "support": "PIPE_TF_Support_06",
-    "xy": [
-     15.0,
-     98.0
+    "from": 4,
+    "to": 5,
+    "length_m": 7.43,
+    "limit": [
+     "Posada_Roof",
+     18.31,
+     1.2
     ],
-    "on_road": true,
-    "action": "SIN RESOLVER: plaza abierta (pendiente de decision)",
-    "building_line_m": [
-     null,
-     null
+    "axis_z": [
+     15.5,
+     19.81
     ]
    },
    {
-    "support": "PIPE_TF_Support_07",
-    "xy": [
-     20.7,
-     92.3
+    "from": 5,
+    "to": 6,
+    "length_m": 7.5,
+    "limit": [
+     "Posada_Roof",
+     23.21,
+     1.2
     ],
-    "on_road": true,
-    "action": "desplazado +1.75 m a lo largo del tubo, fuera de la calle",
-    "new_xy": [
-     21.9,
-     91.1
-    ],
-    "on": "TRN_City_Chunk_8_10_LOD0",
-    "height_m": 12.19
+    "axis_z": [
+     19.81,
+     25.35
+    ]
    },
    {
-    "support": "PIPE_TF_Support_08",
-    "xy": [
-     24.7,
-     88.3
+    "from": 6,
+    "to": 7,
+    "length_m": 5.03,
+    "limit": [
+     "Posada_Roof",
+     23.21,
+     1.2
     ],
-    "on_road": false,
-    "action": "se queda (fuera de la zona de paso)"
+    "axis_z": [
+     25.35,
+     22.15
+    ]
    },
    {
-    "support": "PIPE_TF_Support_09",
-    "xy": [
-     32.0,
-     81.0
+    "from": 7,
+    "to": 8,
+    "length_m": 4.59,
+    "limit": [
+     "Posada_Roof",
+     20.08,
+     1.2
     ],
-    "on_road": false,
-    "action": "se queda (fuera de la zona de paso)"
+    "axis_z": [
+     22.15,
+     21.94
+    ]
    },
    {
-    "support": "PIPE_TF_Support_10",
-    "xy": [
-     38.1,
-     76.5
+    "from": 8,
+    "to": 9,
+    "length_m": 11.6,
+    "limit": [
+     "CasaRegistro_Body",
+     19.83,
+     1.2
     ],
-    "on_road": false,
-    "action": "se queda (fuera de la zona de paso)"
+    "axis_z": [
+     21.94,
+     21.94
+    ]
    },
    {
-    "support": "PIPE_TF_Support_11",
-    "xy": [
-     45.4,
-     74.6
+    "from": 9,
+    "to": 10,
+    "length_m": 7.83,
+    "limit": [
+     "CasaRegistro_Body",
+     19.83,
+     1.2
     ],
-    "on_road": false,
-    "action": "se queda (fuera de la zona de paso)"
+    "axis_z": [
+     21.94,
+     19.26
+    ]
    },
    {
-    "support": "PIPE_TF_Support_12",
-    "xy": [
-     51.0,
-     69.0
+    "from": 10,
+    "to": 11,
+    "length_m": 4.84,
+    "limit": [
+     "CasaRegistro_Roof",
+     17.41,
+     1.2
     ],
-    "on_road": false,
-    "action": "se queda (fuera de la zona de paso)"
+    "axis_z": [
+     19.26,
+     17.9
+    ]
    },
    {
-    "support": "PIPE_TF_Support_13",
-    "xy": [
-     56.4,
-     63.4
+    "from": 11,
+    "to": 12,
+    "length_m": 9.95,
+    "limit": [
+     "CasaRegistro_Body",
+     16.0,
+     1.2
     ],
-    "on_road": false,
-    "action": "se queda (fuera de la zona de paso)"
+    "axis_z": [
+     17.9,
+     10.38
+    ]
    },
    {
-    "support": "PIPE_TF_Support_14",
-    "xy": [
-     51.1,
-     58.8
+    "from": 12,
+    "to": 13,
+    "length_m": 9.66,
+    "limit": [
+     "TRN_City_Chunk_9_9_LOD0",
+     7.21,
+     2.5
     ],
-    "on_road": false,
-    "action": "se queda (fuera de la zona de paso)"
+    "axis_z": [
+     10.38,
+     10.01
+    ]
+   },
+   {
+    "from": 13,
+    "to": 14,
+    "length_m": 11.79,
+    "limit": [
+     "TRN_City_Chunk_9_9_LOD0",
+     7.16,
+     2.5
+    ],
+    "axis_z": [
+     10.01,
+     9.9
+    ]
    }
   ],
-  "unresolved": [
-   "PIPE_TF_Support_02",
-   "PIPE_TF_Support_03",
-   "PIPE_TF_Support_04",
-   "PIPE_TF_Support_05",
-   "PIPE_TF_Support_06"
+  "segment_axis_z": [
+   16.47,
+   16.47,
+   19.31,
+   15.5,
+   15.5,
+   19.81,
+   25.35,
+   22.15,
+   21.94,
+   21.94,
+   19.26,
+   17.9,
+   10.38,
+   10.01,
+   9.9
   ],
-  "tris_total": 7944,
+  "pillars": [
+   {
+    "node": 1,
+    "xy": [
+     -18.5,
+     118.0
+    ],
+    "kind": "techo",
+    "on": [
+     "TesoreriaMuralla_Roof"
+    ],
+    "base_z": 13.92,
+    "height_m": 2.32,
+    "on_street": false,
+    "roof_gap_m": 2.32
+   },
+   {
+    "node": 2,
+    "xy": [
+     -19.5,
+     111.5
+    ],
+    "kind": "techo",
+    "on": [
+     "TesoreriaMuralla_Body",
+     "TesoreriaMuralla_Roof"
+    ],
+    "base_z": 13.92,
+    "height_m": 5.16,
+    "on_street": false,
+    "roof_gap_m": 3.86
+   },
+   {
+    "node": 3,
+    "xy": [
+     -26.2,
+     103.9
+    ],
+    "kind": "suelo",
+    "on": [
+     "TRN_City_Chunk_7_10_LOD0",
+     "terreno"
+    ],
+    "base_z": 5.66,
+    "height_m": 9.61,
+    "on_street": false,
+    "roof_gap_m": 9.59
+   },
+   {
+    "node": 4,
+    "xy": [
+     -25.5,
+     89.5
+    ],
+    "kind": "techo",
+    "on": [
+     "MER_Casa_01_Roof"
+    ],
+    "base_z": 12.73,
+    "height_m": 2.54,
+    "on_street": false,
+    "roof_gap_m": 1.87
+   },
+   {
+    "node": 5,
+    "xy": [
+     -20.0,
+     84.5
+    ],
+    "kind": "techo",
+    "on": [
+     "Posada_Roof"
+    ],
+    "base_z": 17.48,
+    "height_m": 2.1,
+    "on_street": false,
+    "roof_gap_m": 1.6
+   },
+   {
+    "node": 6,
+    "xy": [
+     -14.0,
+     80.0
+    ],
+    "kind": "techo",
+    "on": [
+     "Posada_Roof"
+    ],
+    "base_z": 22.51,
+    "height_m": 2.61,
+    "on_street": false,
+    "roof_gap_m": 1.91
+   },
+   {
+    "node": 7,
+    "xy": [
+     -9.5,
+     77.75
+    ],
+    "kind": "techo",
+    "on": [
+     "Posada_Roof"
+    ],
+    "base_z": 19.42,
+    "height_m": 2.5,
+    "on_street": false,
+    "roof_gap_m": 1.99
+   },
+   {
+    "node": 8,
+    "xy": [
+     -5.5,
+     75.5
+    ],
+    "kind": "techo",
+    "on": [
+     "Posada_Roof"
+    ],
+    "base_z": 16.07,
+    "height_m": 5.64,
+    "on_street": false,
+    "roof_gap_m": 5.13
+   },
+   {
+    "node": 9,
+    "xy": [
+     6.0,
+     74.0
+    ],
+    "kind": "techo",
+    "on": [
+     "CasaRegistro_Body",
+     "CasaRegistro_Roof"
+    ],
+    "base_z": 18.59,
+    "height_m": 3.12,
+    "on_street": false,
+    "roof_gap_m": 1.88
+   },
+   {
+    "node": 10,
+    "xy": [
+     13.0,
+     70.5
+    ],
+    "kind": "techo",
+    "on": [
+     "CasaRegistro_Roof"
+    ],
+    "base_z": 16.49,
+    "height_m": 2.54,
+    "on_street": false,
+    "roof_gap_m": 2.04
+   },
+   {
+    "node": 11,
+    "xy": [
+     16.8,
+     67.5
+    ],
+    "kind": "techo",
+    "on": [
+     "CasaRegistro_Roof"
+    ],
+    "base_z": 13.99,
+    "height_m": 3.68,
+    "on_street": false,
+    "roof_gap_m": 3.17
+   },
+   {
+    "node": 12,
+    "xy": [
+     26.5,
+     65.3
+    ],
+    "kind": "suelo",
+    "on": [
+     "TRN_City_Chunk_9_9_LOD0"
+    ],
+    "base_z": 7.12,
+    "height_m": 3.03,
+    "on_street": false,
+    "roof_gap_m": 2.98
+   },
+   {
+    "node": 13,
+    "xy": [
+     35.5,
+     61.8
+    ],
+    "kind": "suelo",
+    "on": [
+     "TRN_City_Chunk_9_9_LOD0"
+    ],
+    "base_z": 7.07,
+    "height_m": 2.71,
+    "on_street": false,
+    "roof_gap_m": 2.66
+   }
+  ],
+  "arches": [
+   {
+    "span": [
+     2,
+     3
+    ],
+    "length_m": 10.13,
+    "rise_m": 1.22
+   },
+   {
+    "span": [
+     3,
+     4
+    ],
+    "length_m": 14.42,
+    "rise_m": 1.6
+   },
+   {
+    "span": [
+     8,
+     9
+    ],
+    "length_m": 11.6,
+    "rise_m": 1.39
+   },
+   {
+    "span": [
+     13,
+     14
+    ],
+    "length_m": 11.79,
+    "rise_m": 1.41
+   }
+  ],
+  "max_span_m": 14.42,
+  "spans_over_10m": [
+   10.13,
+   14.42,
+   11.6,
+   11.79
+  ],
+  "spans_over_16m": [],
+  "pillars_on_street": [],
+  "min_clear_over_street_m": 9.44,
+  "min_to_building_m": 1.24,
+  "clearance_violations": [],
+  "tris": {
+   "straight": 4032,
+   "elbows": 2716,
+   "pillars_arches": 670,
+   "total": 7418
+  },
   "budget": 8000,
-  "rule": "zona de paso = road_mask de T_StreetMasks (etapa 5)",
-  "min_over_street_m": 12.24
+  "bends": [
+   {
+    "at": [
+     -18.0,
+     126.2,
+     16.47
+    ],
+    "angle": 90.0,
+    "piece": "codo 90"
+   },
+   {
+    "at": [
+     -18.5,
+     118.0,
+     16.47
+    ],
+    "angle": 23.9,
+    "piece": "junta"
+   },
+   {
+    "at": [
+     -19.5,
+     111.5,
+     19.31
+    ],
+    "angle": 54.3,
+    "piece": "codo 45"
+   },
+   {
+    "at": [
+     -26.2,
+     103.9,
+     15.5
+    ],
+    "angle": 47.8,
+    "piece": "codo 45"
+   },
+   {
+    "at": [
+     -25.5,
+     89.5,
+     15.5
+    ],
+    "angle": 52.2,
+    "piece": "codo 45"
+   },
+   {
+    "at": [
+     -20.0,
+     84.5,
+     19.81
+    ],
+    "angle": 7.8,
+    "piece": "junta"
+   },
+   {
+    "at": [
+     -14.0,
+     80.0,
+     25.35
+    ],
+    "angle": 69.6,
+    "piece": "codo 90"
+   },
+   {
+    "at": [
+     -9.5,
+     77.75,
+     22.15
+    ],
+    "angle": 30.0,
+    "piece": "junta"
+   },
+   {
+    "at": [
+     -5.5,
+     75.5,
+     21.94
+    ],
+    "angle": 22.1,
+    "piece": "junta"
+   },
+   {
+    "at": [
+     6.0,
+     74.0,
+     21.94
+    ],
+    "angle": 26.6,
+    "piece": "junta"
+   },
+   {
+    "at": [
+     13.0,
+     70.5,
+     19.26
+    ],
+    "angle": 11.6,
+    "piece": "junta"
+   },
+   {
+    "at": [
+     16.8,
+     67.5,
+     17.9
+    ],
+    "angle": 31.1,
+    "piece": "codo 45"
+   },
+   {
+    "at": [
+     26.5,
+     65.3,
+     10.38
+    ],
+    "angle": 35.8,
+    "piece": "codo 45"
+   },
+   {
+    "at": [
+     35.5,
+     61.8,
+     10.01
+    ],
+    "angle": 8.2,
+    "piece": "junta"
+   },
+   {
+    "at": [
+     45.79,
+     56.04,
+     9.9
+    ],
+    "angle": 90.5,
+    "piece": "codo 90"
+   }
+  ]
  },
  "faro": {
   "visibility": {
@@ -1722,6 +2167,7 @@
       7.0
      ],
      "roots": [
+      "PIPES_Tesoreria_Faro",
       "TesoreriaMuralla"
      ]
     },
@@ -1869,5 +2315,31 @@
    "callejon": 90.0
   },
   "points_lost_to_pipes": []
+ },
+ "razas_steps": {
+  "RAZ_B05_Casa_04": {
+   "door_z": 7.499,
+   "ground_min": 7.306,
+   "ground_max": 7.413,
+   "step_before_m": 0.193,
+   "action": "1 peldano(s) de piedra a lo largo de la fachada (4.2 m), huella 0.35 m",
+   "risers_m": [
+    0.096,
+    0.096
+   ],
+   "steps_tris": 10
+  },
+  "RAZ_B05_Casa_05": {
+   "door_z": 7.445,
+   "ground_min": 7.252,
+   "ground_max": 7.359,
+   "step_before_m": 0.193,
+   "action": "1 peldano(s) de piedra a lo largo de la fachada (4.2 m), huella 0.35 m",
+   "risers_m": [
+    0.096,
+    0.096
+   ],
+   "steps_tris": 10
+  }
  }
 }

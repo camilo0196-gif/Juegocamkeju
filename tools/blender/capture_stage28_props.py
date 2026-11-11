@@ -104,11 +104,14 @@ def main():
             sheet.paste(Image.open(p).resize((w, h)), ((i % 2) * w, (i // 2) * h))
             os.remove(p)
         sheet.save(P("props_ia_cerca"))
-    for key, pre, title in (("props_mercado_q", "PROP_Q_", "Mercado - Quaternius Fantasy Props MegaKit (CC0)"),
-                            ("props_mercado_av", "PROP_AV_", "Mercado - Avramania Low Poly Medieval (CC0)")):
+    sheets = [(f"props_{b}_{src}", b, pre, f"{b.capitalize()} - {lab} (CC0)")
+              for b in ("mercado", "oficios", "clases")
+              for src, pre, lab in (("q", "PROP_Q_", "Quaternius Fantasy Props MegaKit"),
+                                    ("av", "PROP_AV_", "Avramania Low Poly Medieval"))]
+    for key, batch, pre, title in sheets:
         if not want(key):
             continue
-        sel = [o for n, o in sorted(imported.items()) if n.startswith(pre)]
+        sel = [o for n, o in sorted(imported.items()) if n.startswith(pre) and o.get("prop_batch") == batch]
         if not sel:
             continue
         c = sum((o.location for o in sel), Vector()) / len(sel)

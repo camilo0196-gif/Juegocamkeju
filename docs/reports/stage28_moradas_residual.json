@@ -1,0 +1,207 @@
+{
+ "criterion": "rayos desde 0.35 m delante de la puerta a 0.3 / 1.1 / 2.0 m en la direccion de CAM_Iso; distancia minima hasta la casa que tapa",
+ "dwellings_total": 1398,
+ "residual": 13,
+ "pct": 0.93,
+ "rows": [
+  {
+   "door": "MARKER_Morada_Door_NE_022_1",
+   "parcela": "Morada_NE_022",
+   "set": "NE",
+   "terraza": 3,
+   "house_number": "NE-306",
+   "tipo": "casa_pequena",
+   "floor": 0,
+   "cause": "balcon/escalera",
+   "blocked_by": [
+    "Morada_NE_021"
+   ],
+   "ray_distance_to_blocker_m": 7.62,
+   "first_hit": "Morada_NE_021_Body"
+  },
+  {
+   "door": "MARKER_Morada_Door_NE_047_1",
+   "parcela": "Morada_NE_047",
+   "set": "NE",
+   "terraza": 5,
+   "house_number": "NE-507",
+   "tipo": "casa_pequena",
+   "floor": 0,
+   "cause": "balcon/escalera",
+   "blocked_by": [
+    "Morada_NE_046"
+   ],
+   "ray_distance_to_blocker_m": 8.0,
+   "first_hit": "Morada_NE_046_Body"
+  },
+  {
+   "door": "MARKER_Morada_Door_NE_063_1",
+   "parcela": "Morada_NE_063",
+   "set": "NE",
+   "terraza": 6,
+   "house_number": "NE-609",
+   "tipo": "casa_pequena",
+   "floor": 0,
+   "cause": "cuerpo/alero",
+   "blocked_by": [
+    "Morada_NE_061",
+    "Morada_NE_062"
+   ],
+   "ray_distance_to_blocker_m": 8.86,
+   "first_hit": "Morada_NE_062_Roof"
+  },
+  {
+   "door": "MARKER_Morada_Door_NE_070_1",
+   "parcela": "Morada_NE_070",
+   "set": "NE",
+   "terraza": 6,
+   "house_number": "NE-616",
+   "tipo": "habitacion",
+   "floor": 0,
+   "cause": "balcon/escalera",
+   "blocked_by": [
+    "Morada_NE_069"
+   ],
+   "ray_distance_to_blocker_m": 3.97,
+   "first_hit": "Morada_NE_069_Body"
+  },
+  {
+   "door": "MARKER_Morada_Door_NE_013_1",
+   "parcela": "Morada_NE_013",
+   "set": "NE",
+   "terraza": 2,
+   "house_number": "NE-207",
+   "tipo": "habitacion",
+   "floor": 0,
+   "cause": "balcon/escalera",
+   "blocked_by": [
+    "Morada_NE_012"
+   ],
+   "ray_distance_to_blocker_m": 4.78,
+   "first_hit": "Morada_NE_012_Body"
+  },
+  {
+   "door": "MARKER_Morada_Door_SO_048_1",
+   "parcela": "Morada_SO_048",
+   "set": "SO",
+   "terraza": 5,
+   "house_number": "SO-508",
+   "tipo": "casa_grande",
+   "floor": 0,
+   "cause": "balcon/escalera",
+   "blocked_by": [
+    "Morada_SO_049",
+    "Morada_SO_050"
+   ],
+   "ray_distance_to_blocker_m": 7.88,
+   "first_hit": "Morada_SO_049_Body"
+  },
+  {
+   "door": "MARKER_Morada_Door_SO_064_1",
+   "parcela": "Morada_SO_064",
+   "set": "SO",
+   "terraza": 6,
+   "house_number": "SO-610",
+   "tipo": "casa_pequena",
+   "floor": 0,
+   "cause": "cuerpo/alero",
+   "blocked_by": [
+    "Morada_SO_065",
+    "Morada_SO_066"
+   ],
+   "ray_distance_to_blocker_m": 8.86,
+   "first_hit": "Morada_SO_065_Roof"
+  },
+  {
+   "door": "MARKER_Morada_Door_SO_018_3",
+   "parcela": "Morada_SO_018",
+   "set": "SO",
+   "terraza": 3,
+   "house_number": "SO-302",
+   "tipo": "habitacion",
+   "floor": 2,
+   "cause": "balcon/escalera",
+   "blocked_by": [
+    "Morada_SO_019"
+   ],
+   "ray_distance_to_blocker_m": 3.99,
+   "first_hit": "Morada_SO_019_Body"
+  },
+  {
+   "door": "MARKER_Morada_Door_SO_035_1",
+   "parcela": "Morada_SO_035",
+   "set": "SO",
+   "terraza": 4,
+   "house_number": "SO-407",
+   "tipo": "habitacion",
+   "floor": 0,
+   "cause": "cuerpo/alero",
+   "blocked_by": [
+    "Morada_SO_036"
+   ],
+   "ray_distance_to_blocker_m": 8.83,
+   "first_hit": "Morada_SO_036_Roof"
+  },
+  {
+   "door": "MARKER_Morada_Door_SO_035_2",
+   "parcela": "Morada_SO_035",
+   "set": "SO",
+   "terraza": 4,
+   "house_number": "SO-407",
+   "tipo": "habitacion",
+   "floor": 1,
+   "cause": "cuerpo/alero",
+   "blocked_by": [
+    "Morada_SO_036"
+   ],
+   "ray_distance_to_blocker_m": 6.54,
+   "first_hit": "Morada_SO_036_Body"
+  },
+  {
+   "door": "MARKER_Morada_Door_SO_035_3",
+   "parcela": "Morada_SO_035",
+   "set": "SO",
+   "terraza": 4,
+   "house_number": "SO-407",
+   "tipo": "habitacion",
+   "floor": 2,
+   "cause": "cuerpo/alero",
+   "blocked_by": [
+    "Morada_SO_036",
+    "Morada_SO_037"
+   ],
+   "ray_distance_to_blocker_m": 4.78,
+   "first_hit": "Morada_SO_036_Body"
+  },
+  {
+   "door": "MARKER_Morada_Door_SO_058_3",
+   "parcela": "Morada_SO_058",
+   "set": "SO",
+   "terraza": 6,
+   "house_number": "SO-604",
+   "tipo": "habitacion",
+   "floor": 2,
+   "cause": "balcon/escalera",
+   "blocked_by": [
+    "Morada_SO_059"
+   ],
+   "ray_distance_to_blocker_m": 3.95,
+   "first_hit": "Morada_SO_059_Body"
+  },
+  {
+   "door": "MARKER_Morada_Door_SO_059_3",
+   "parcela": "Morada_SO_059",
+   "set": "SO",
+   "terraza": 6,
+   "house_number": "SO-605",
+   "tipo": "habitacion",
+   "floor": 2,
+   "cause": "balcon/escalera",
+   "blocked_by": [
+    "Morada_SO_060"
+   ],
+   "ray_distance_to_blocker_m": 4.65,
+   "first_hit": "Morada_SO_060_Body"
+  }
+ ]
+}

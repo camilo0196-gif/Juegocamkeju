@@ -13,6 +13,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.request
 import zipfile
 
@@ -21,10 +22,19 @@ DATA_EXT = (".glb", ".gltf", ".bin", ".png", ".jpg", ".jpeg")
 
 
 def get(url, raw=False):
-    req = urllib.request.Request(url, headers={"User-Agent": "concordia-asset-fetch"})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        data = r.read()
-    return data if raw else json.loads(data)
+    """GET con espera ante 429 (limite de peticiones de Sketchfab): respeta Retry-After, hasta 6 intentos."""
+    import urllib.error
+    for k in range(6):
+        req = urllib.request.Request(url, headers={"User-Agent": "concordia-asset-fetch"})
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                data = r.read()
+            return data if raw else json.loads(data)
+        except urllib.error.HTTPError as e:
+            if e.code != 429 or k == 5:
+                raise
+            wait = int(e.headers.get("Retry-After") or 0) or 15 * (k + 1)
+            time.sleep(min(wait, 120))
 
 
 def main():
@@ -47,15 +57,24 @@ def main():
             meta[uid] = rec
             print("SKIP", uid, rec["skipped"], flush=True)
             continue
-        try:
-            html = get(page, raw=True).decode("utf-8", "replace")
+        rec["page_license_text"], rec["page_checked"] = None, False
+        for k in range(6):                     # la pagina publica a veces responde vacia (202): reintento con espera
+            try:
+                html = get(page, raw=True).decode("utf-8", "replace")
+            except Exception as e:
+                rec["page_error"] = str(e)[:120]
+                html = ""
             m = re.search(r"(CC0[^<\"]{0,60}|Public Domain[^<\"]{0,40})", html)
-            rec["page_license_text"] = m.group(1).strip() if m else None
-            rec["page_checked"] = bool(m)
-        except Exception as e:  # la pagina puede no estar permitida por la red: se anota
-            rec["page_license_text"] = None
-            rec["page_checked"] = False
-            rec["page_error"] = str(e)[:120]
+            if m:
+                rec["page_license_text"], rec["page_checked"] = m.group(1).strip(), True
+                rec.pop("page_error", None)
+                break
+            time.sleep(4 * (k + 1))
+        if not rec["page_checked"]:
+            rec["skipped"] = "la pagina publica no mostro la licencia CC0"
+            meta[uid] = rec
+            print("SKIP", uid, rec["skipped"], flush=True)
+            continue
         dl = get(API + uid + "/download")
         d = os.path.join(out, uid)
         os.makedirs(d, exist_ok=True)

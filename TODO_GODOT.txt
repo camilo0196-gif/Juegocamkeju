@@ -296,5 +296,19 @@ Interiores de las Moradas (E28)
     con su normal map (UV 'UVBake' = UV2 en Godot): normal_texture en UV2.
 
 Moradas: puertas tapadas residuales (E28, punto 11)
-[ ] Aclarar techos, aleros, balcones y escaleras de la casa vecina con dithering cuando el jugador se acerca a una de
-    las puertas de docs/reports/stage28_ciudad.json -> moradas.residual (13 puertas).
+[ ] ACEPTADAS por el usuario (13 de 1,404 = 0.93 %). Godot debe aclarar (dithering) techos, aleros, balcones y escaleras de
+    la casa que tapa cuando el jugador se acerca a una de estas puertas (Area3D de ~6 m alrededor de MARKER_Morada_Door_*):
+      NE_022_1: aclarar Morada_NE_021 (balcon/escalera, 7.62 m por el rayo)
+      NE_047_1: aclarar Morada_NE_046 (balcon/escalera, 8.0 m por el rayo)
+      NE_063_1: aclarar Morada_NE_061, Morada_NE_062 (cuerpo/alero, 8.86 m por el rayo)
+      NE_070_1: aclarar Morada_NE_069 (balcon/escalera, 3.97 m por el rayo)
+      NE_013_1: aclarar Morada_NE_012 (balcon/escalera, 4.78 m por el rayo)
+      SO_048_1: aclarar Morada_SO_049, Morada_SO_050 (balcon/escalera, 7.88 m por el rayo)
+      SO_064_1: aclarar Morada_SO_065, Morada_SO_066 (cuerpo/alero, 8.86 m por el rayo)
+      SO_018_3: aclarar Morada_SO_019 (balcon/escalera, 3.99 m por el rayo)
+      SO_035_1: aclarar Morada_SO_036 (cuerpo/alero, 8.83 m por el rayo)
+      SO_035_2: aclarar Morada_SO_036 (cuerpo/alero, 6.54 m por el rayo)
+      SO_035_3: aclarar Morada_SO_036, Morada_SO_037 (cuerpo/alero, 4.78 m por el rayo)
+      SO_058_3: aclarar Morada_SO_059 (balcon/escalera, 3.95 m por el rayo)
+      SO_059_3: aclarar Morada_SO_060 (balcon/escalera, 4.65 m por el rayo)
+    Lista con parcela y distancias: docs/reports/stage28_moradas_residual.json. Viviendas totales: 1,398.

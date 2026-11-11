@@ -7,9 +7,9 @@
   "PROP_Q_Stool": 152,
   "PROP_Q_Chest_Wood": 1480,
   "PROP_Q_Candle_1": 212,
-  "PROP_Q_CandleStick": 730,
+  "PROP_Q_CandleStick": 479,
   "PROP_Q_Mug": 268,
-  "PROP_AV_Grain_Sack": 938,
+  "PROP_AV_Grain_Sack": 480,
   "PROP_Herb_Rack": 436
  },
  "kit_tris": {
@@ -278,7 +278,7 @@
     }
    },
    "tris": {
-    "total": 7332,
+    "total": 6623,
     "budget": 15000,
     "ok": true,
     "by_group": {
@@ -286,7 +286,7 @@
      "WALL_Near_A": 264,
      "WALL_Near_B": 230,
      "CEILING": 82,
-     "Furniture": 5548,
+     "Furniture": 4839,
      "Lights": 0,
      "Markers": 0,
      "WALL_Near_Casa": 230
@@ -342,11 +342,11 @@
    "blue_lights": 1,
    "export": {
     "file": "export/godot/int_morada_casa_pequena.glb",
-    "mb": 0.752,
+    "mb": 0.694,
     "nodes": 56,
     "meshes": 19,
-    "tris": 7568,
-    "materials": 25,
+    "tris": 6859,
+    "materials": 27,
     "images": 38,
     "images_external": 38,
     "colliders": 1,
@@ -461,7 +461,7 @@
    },
    "stair_deg": 32.6,
    "tris": {
-    "total": 10857,
+    "total": 10148,
     "budget": 28000,
     "ok": true,
     "by_group": {
@@ -469,7 +469,7 @@
      "WALL_Near_A": 530,
      "WALL_Near_B": 506,
      "CEILING": 106,
-     "Furniture": 6131,
+     "Furniture": 5422,
      "Lights": 0,
      "Markers": 0,
      "LEVEL_1": 840,
@@ -541,11 +541,11 @@
    "blue_lights": 1,
    "export": {
     "file": "export/godot/int_morada_casa_grande.glb",
-    "mb": 0.96,
+    "mb": 0.902,
     "nodes": 76,
     "meshes": 22,
-    "tris": 11287,
-    "materials": 24,
+    "tris": 10578,
+    "materials": 26,
     "images": 38,
     "images_external": 38,
     "colliders": 1,

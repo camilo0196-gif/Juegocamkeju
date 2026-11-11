@@ -260,6 +260,8 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
     exterior en diagonal), 98 casas pequenas (1 planta, patio delantero con muro bajo, a un agua o dos aguas,
     chimenea) y 43 casas grandes (2 plantas, balcon, jardin trasero con muro, dos aguas o faldon trasero largo,
     chimenea). 1,419 viviendas (puertas).
+    RECUENTO ACTUAL (etapa 28): 1,398 viviendas (etapa 26: 1,404 con balcones por puerta; etapa 28: Morada_SO_036
+    y SO_037 a 2 plantas, -6). Por conjunto: NE 360, NO 354, SE 330, SO 354.
   - Variantes: 4 por tipo (semilla: lado de la escalera, barandilla, cubierta, puerta, chimenea, balcon, jardin) x 3
     fachadas; en cada fila se alternan para que dos casas vecinas no coincidan ni en variante ni en fachada.
   - Techos escalonados y CAM_Iso: el lado de cada casa que da a las puertas de la terraza vecina se mantiene por debajo
@@ -601,14 +603,16 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
     14 triviales: Ingots_Coal 288, Cloth_Rolls 246, Bar_Counter 150, Trestle 68, Bench_Vise 120, Auction_Gavel 188, Ink_Seal 220, Baker_Peel 40, Tanning_Frame 208, Herb_Rack 436, Fish_Crates 364, Longbow 276, Spinning_Wheel 364, Jeweler_Case 286.
     Total 5,046 tris; cajas -colonly en los de suelo.
 
-  Importacion CC0, lote Mercado (36 props, 22,933 tris, props_int_mercado.glb 2.49 MB):
-    Quaternius Fantasy Props MegaKit (25; licencia en licenses/) y Avramania Low Poly Medieval (11; licencia CC0
-    comprobada en la API y en la pagina de cada modelo). Materiales reasignados: Quaternius por nombre de material
-    (MI_Trim_Furniture -> madera, MI_Trim_Metal -> hierro/bronce, pergamino -> cuero, *_Vertex por color: libros en
-    cuero, telas y fieltro); Avramania por color de su paleta al material de Concordia mas cercano (muebles solo entre
-    madera, hierro, piedra, tela y paja; comida con la lista amplia). Decimados (> 1,700 -> <= 1,500) con normal map 1K
-    horneado (textures/props/, UV 'UVBake'): Barrel_Holder 2,676 -> 1,480, Chandelier 5,680 -> 1,479, Chest_Wood
-    2,546 -> 1,480 (escalado a 1 m de ancho). ESPERA APROBACION del usuario (hoja stage28_props_mercado_q/_av.png).
+  Importacion CC0 (props_int_<lote>.glb; aprobada por el usuario con criterios): Mercado 36 props
+    (20,205 tris), Oficios 26 (16,589), Clases 13 (10,934).
+    Quaternius Fantasy Props MegaKit (licencia en licenses/) y Avramania Low Poly Medieval (licencia CC0 comprobada el
+    dia de la descarga en la API y en la pagina de cada modelo). Materiales reasignados: Quaternius por nombre de
+    material (MI_Trim_Furniture -> madera, MI_Trim_Metal -> hierro/bronce, pergamino -> cuero, *_Vertex por color);
+    Avramania por color de su paleta (o del material si no tiene paleta) al material de Concordia mas cercano (muebles
+    y armas solo entre madera, hierro, bronce, piedra, tela y paja; comida con la lista amplia). Criterios: <= 500 tris
+    los pequenos (lado mayor <= 0.6 m) y <= 1,500 los medianos, escala en metros, origen en la base; lo que pasa se
+    decima con normal map horneado (512 los pequenos, 1K los medianos; UV 'UVBake'): Q_Barrel_Holder 2,676 -> 1,480; Q_CandleStick 730 -> 479; Q_Chandelier 5,680 -> 1,479; Q_BookStand 1,526 -> 1,479; Q_Scroll_1 512 -> 480; Q_Scroll_2 672 -> 480; Q_Chest_Wood 2,546 -> 1,480; Q_Coin_Pile 960 -> 480; Q_Pouch_Large 730 -> 480; AV_Cheese_Wheel 1,270 -> 480; AV_Grapes 708 -> 480; AV_Grain_Sack 938 -> 480; Q_Potion_4 536 -> 480; AV_Herb_Bundle 666 -> 480; Q_Bucket_Wooden_1 976 -> 480; AV_Handaxe 504 -> 480; Q_Chain_Coil 3,744 -> 1,480; Q_WeaponStand 2,084 -> 1,480.
+    Memoria de texturas total ~173.7 MB de 220 (18 normal maps de props = 12.0 MB).
 
   Ciudad (concordia_v28.blend; informe stage28_ciudad.json):
     Faro: MER_Casa_01 (decoracion) de 3 a 2 plantas (14.0 -> 10.8 m): libera el punto del anillo r 100. Visibilidad:
@@ -617,9 +621,17 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
       extremo alejado" en las 69 casas subio las puertas tapadas de 16 a 48 (stage28_moradas_prueba_far.json). Cuerpo/
       alero: alero 0.3 m y, si no basta, 2 plantas, solo si libera puertas: Morada_SO_036 y SO_037 a 2 plantas
       (-6 viviendas: 1,404 -> 1,398); el resto se deshizo. Puertas tapadas: 16 -> 13 (tolerancia 10).
-    Tubos: soportes 01 y 07 fuera de la calle (desplazados 1.5 / 1.75 m a lo largo del tubo); 02-06 en la plaza del
-      Mercado (sin linea de edificios a menos de 12 m): pendientes de decision. Altura libre minima sobre calles
-      12.24 m (>= 5).
+    Tubos (ruta oeste, decision del usuario: la ruta por el Banco no cabe con tramos <= 16 m): Tesoreria -> 1 pilar en
+      terreno sin calle -> MER_Casa_01 -> Posada -> arco sobre la avenida -> Casa del Registro -> 2 pilares junto al
+      canal -> Faro. 13 pilares de piedra de 0.6 m (10 en techos, 3 en terreno verde; ninguno en calle, plaza ni
+      fuente), 4 arcos de piedra en los tramos de mas de 10 m (maximo 14.42 m), tubo inclinado entre apoyos
+      (sin quiebros verticales salvo la salida y la entrada), >= 1.2 m sobre tejados (minimo medido 1.6 m) y >= 5 m
+      sobre calles (minimo 9.44 m), 0 choques con edificios. 130.3 m, 7,418 tris (<= 8,000; rectos
+      de hasta 6 m). CRV_LightPipe_Tesoreria_Faro y MARKER_PipeSupport_01-13 actualizados. Faro: 0 puntos tapados
+      por los tubos; visibilidad sin cambios.
+    Razas B05: escalon de la puerta medido en +-0.8 m x 0.1-0.6 m: Casa_04 0.193 m y Casa_05 0.193 m (> 0.15): un
+      peldano de piedra a lo largo de toda la fachada (4.2 m, huella 0.35 m), contrahuellas 0.096 m; el terreno no se
+      toca (los barrios de razas siguen siendo plantilla).
 
   Vitrina de trofeos (MARKER_TrophyCase; props_trophy_cases.glb): un solo material MAT_TrophyCase (atlas 512: madera
     oscura de Concordia + vidrio alfa 0.3). Pared 1.0 x 0.4 x 1.9 m, 9 slots: 128 / 82 / 18 tris
@@ -631,11 +643,11 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
   ventanas pequenas), giro fijo de -90 grados (puerta +Y y lado +X = muros cercanos):
     Habitacion 4 x 5 x 2.7: cama, baul (40), vitrina de pared, ventana, mesa y taburete. Tris 3,366 de 8,000.
     Casa pequena 6 x 8 x 2.7 con patio de 2.5 m (tabique con puerta = WALL_Near_Casa): baul (100), mesa de trabajo
-      (MARKER_WorkStation_01), hogar, mesa y sillas, cama, vitrina de nichos. Tris 7,332 de 15,000.
+      (MARKER_WorkStation_01), hogar, mesa y sillas, cama, vitrina de nichos. Tris 6,623 de 15,000.
     Casa grande 8 x 10 x 6.4, dos plantas: entreplanta de 4 m sobre el fondo (LEVEL_1), escalera de 1.2 m a 32.6
       grados con rellano de 1.3 m al pie, sala para recibir, dos mesas de oficio (WorkStation_01/02), baul (200),
       vitrina de pared (slots 01-09) y de mesa (10-15), jardinera de hierbas junto a la fachada (MARKER_Garden),
-      dormitorio arriba. Tris 10,857 de 28,000.
+      dormitorio arriba. Tris 10,148 de 28,000.
     Las tres: navmesh (celda 0.25) conectada a todos los puntos clave, pasos de 1.2 m, rayos desde CAM_Iso a la vitrina,
     el baul y las mesas de oficio 100 %, un solo azul (lamparilla de esquirla), MARKER_Decor_Slot_xx para decorar.
 
@@ -652,6 +664,23 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
     19. Patas de varilla asoman bajo z = 0: recortarlas al suelo; piezas coplanarias (postes y largueros) dan manchas
         negras: separarlas 1 cm.
     20. Remedios que cuestan viviendas (2 plantas = -3 puertas): aplicarlos solo si liberan puertas y deshacerlos si no.
+
+
+  Puertas de Moradas tapadas aceptadas (etapa 28, decision del usuario: 13 de 1,404 = 0.93 % < 1 %):
+    puerta | parcela (n.) | causa | casa que tapa | distancia por el rayo de CAM_Iso hasta lo que tapa
+    NE_022_1 | Morada_NE_022 (NE-306) | balcon/escalera | Morada_NE_021 | 7.62 m
+    NE_047_1 | Morada_NE_047 (NE-507) | balcon/escalera | Morada_NE_046 | 8.0 m
+    NE_063_1 | Morada_NE_063 (NE-609) | cuerpo/alero | Morada_NE_061, Morada_NE_062 | 8.86 m
+    NE_070_1 | Morada_NE_070 (NE-616) | balcon/escalera | Morada_NE_069 | 3.97 m
+    NE_013_1 | Morada_NE_013 (NE-207) | balcon/escalera | Morada_NE_012 | 4.78 m
+    SO_048_1 | Morada_SO_048 (SO-508) | balcon/escalera | Morada_SO_049, Morada_SO_050 | 7.88 m
+    SO_064_1 | Morada_SO_064 (SO-610) | cuerpo/alero | Morada_SO_065, Morada_SO_066 | 8.86 m
+    SO_018_3 | Morada_SO_018 (SO-302) | balcon/escalera | Morada_SO_019 | 3.99 m
+    SO_035_1 | Morada_SO_035 (SO-407) | cuerpo/alero | Morada_SO_036 | 8.83 m
+    SO_035_2 | Morada_SO_035 (SO-407) | cuerpo/alero | Morada_SO_036 | 6.54 m
+    SO_035_3 | Morada_SO_035 (SO-407) | cuerpo/alero | Morada_SO_036, Morada_SO_037 | 4.78 m
+    SO_058_3 | Morada_SO_058 (SO-604) | balcon/escalera | Morada_SO_059 | 3.95 m
+    SO_059_3 | Morada_SO_059 (SO-605) | balcon/escalera | Morada_SO_060 | 4.65 m
 
   Revision de capturas (etapa 28) - pendientes visuales, sin corregir:
     - Las ventanas de las casas usan INT_Window_Int (reja de hierro del Banco); las referencias piden ventanas
