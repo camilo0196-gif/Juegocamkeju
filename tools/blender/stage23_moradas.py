@@ -153,22 +153,24 @@ def roof_lean(mb, x0, x1, y_low, z_low, y_high, z_high, rng, tone, hi_over=0.25,
     L = y_high - y_low
     sl = (z_high - z_low) / L
     d = 1 if y_high > y_low else -1
-    ye, ze = y_low - d * 0.4, z_low - 0.4 * abs(sl)
+    eo = 0.4 if EAVE is None else EAVE                  # vuelo del alero (etapa 28: 0.3 m en las casas que tapan)
+    so = 0.3 if EAVE is None else min(0.3, EAVE)        # vuelo lateral
+    ye, ze = y_low - d * eo, z_low - eo * abs(sl)
     yh, zh = y_high + d * hi_over, z_high + hi_over * abs(sl)
     m0, m1 = K.M_ROOF, K.M_ROOF_B
     K.M_ROOF, K.M_ROOF_B = (m1, m0) if tone else (m0, m1)
     try:
-        K._course_slope(mb, x0 - 0.3, x1 + 0.3, ye, yh, ze, zh, rng, detail=0)
+        K._course_slope(mb, x0 - so, x1 + so, ye, yh, ze, zh, rng, detail=0)
     finally:
         K.M_ROOF, K.M_ROOF_B = m0, m1
-    mb.face([(x0 - 0.3, ye, ze - 0.02), (x1 + 0.3, ye, ze - 0.02), (x1 + 0.3, yh, zh - 0.02), (x0 - 0.3, yh, zh - 0.02)],
+    mb.face([(x0 - so, ye, ze - 0.02), (x1 + so, ye, ze - 0.02), (x1 + so, yh, zh - 0.02), (x0 - so, yh, zh - 0.02)],
             WOOD, nrm=(0, 0, -1))
     ya, yb = sorted((ye, ye + d * 0.05))
-    mb.box((x0 - 0.3, ya, ze - 0.18), (x1 + 0.3, yb, ze), WOOD)
+    mb.box((x0 - so, ya, ze - 0.18), (x1 + so, yb, ze), WOOD)
     if cap:
         ya, yb = sorted((yh - d * 0.3, yh + (0.12 if hi_over == 0 else 0.0)))
-        mb.box((x0 - 0.3, ya, zh - 0.04), (x1 + 0.3, yb, zh + 0.14), K.M_ROOF_B if tone else K.M_ROOF)
-    for x in (x0 - 0.3, x1 + 0.3):
+        mb.box((x0 - so, ya, zh - 0.04), (x1 + so, yb, zh + 0.14), K.M_ROOF_B if tone else K.M_ROOF)
+    for x in (x0 - so, x1 + so):
         mb.rod((x, ye, ze + 0.03), (x, yh, zh + 0.03), 0.05, WOOD)
 
     def z_at(y):
@@ -184,7 +186,7 @@ def roof_gable_x(mb, yb, yf, z_eave, pitch, rng, tone, body=None, facade=None):
     K.M_ROOF, K.M_ROOF_B = (m1, m0) if tone else (m0, m1)
     mb.push(Matrix.Translation((0, ym, z_eave)))
     try:
-        rise = K.roof_gable(mb, W - 0.01, D, pitch=pitch, eave=0.35, rng=rng, detail=0, repairs=rng.randint(1, 2))
+        rise = K.roof_gable(mb, W - 0.01, D, pitch=pitch, eave=0.35 if EAVE is None else EAVE, rng=rng, detail=0, repairs=rng.randint(1, 2))
     finally:
         K.M_ROOF, K.M_ROOF_B = m0, m1
         mb.pop()
@@ -272,6 +274,7 @@ def doors_of(tipo, v, plan):
 
 
 BAL_D = 0.6                      # vuelo del balcon (etapa 26)
+EAVE = None                      # None = alero de serie (0.4 a un agua, 0.35 a dos aguas); plan['eave'] lo fija
 BAL_W = 1.5
 STAIR_Y0 = 4.2                   # borde interior de la escalera exterior con balcones (franja hasta 4.98)
 LANDINGS = True

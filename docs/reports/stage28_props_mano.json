@@ -1,0 +1,322 @@
+{
+ "source": "blender/concordia_v26.blend",
+ "max_tris": 1000,
+ "props": {
+  "PROP_Loom": {
+   "note": "Telar de suelo con tela remendada a medio tejer",
+   "tris": 746,
+   "size_m": [
+    1.62,
+    1.34,
+    1.75
+   ],
+   "materials": [
+    "MAT_Cloth_Patch_A",
+    "MAT_Cloth_Patch_C",
+    "MAT_Straw",
+    "MAT_Wood_Dark",
+    "MAT_Wood_Light"
+   ],
+   "colonly": true,
+   "group": "IA -> a mano"
+  },
+  "PROP_Forge_Bellows": {
+   "note": "Fuelle de forja de cuero y madera, boquilla de hierro",
+   "tris": 386,
+   "size_m": [
+    1.67,
+    0.648,
+    1.56
+   ],
+   "materials": [
+    "MAT_Hide_R05",
+    "MAT_Iron_Black",
+    "MAT_Wood_Dark",
+    "MAT_Wood_Light"
+   ],
+   "colonly": true,
+   "group": "IA -> a mano"
+  },
+  "PROP_Dress_Form": {
+   "note": "Maniqui de costura (torso de madera sin cabeza) con tela remendada",
+   "tris": 350,
+   "size_m": [
+    0.59,
+    0.511,
+    1.64
+   ],
+   "materials": [
+    "MAT_Cloth_Patch_B",
+    "MAT_Cloth_Patch_C",
+    "MAT_Iron_Black",
+    "MAT_Wood_Dark",
+    "MAT_Wood_Light"
+   ],
+   "colonly": true,
+   "group": "IA -> a mano"
+  },
+  "PROP_Miner_Helmet": {
+   "note": "Casco de minero abollado, correa de cuero, lamparilla con esquirla",
+   "tris": 310,
+   "size_m": [
+    0.32,
+    0.442,
+    0.192
+   ],
+   "materials": [
+    "MAT_Bronze_Aged",
+    "MAT_Glass_R04",
+    "MAT_Hide_R05",
+    "MAT_Iron_Black",
+    "MAT_Shard_Blue"
+   ],
+   "colonly": false,
+   "group": "IA -> a mano"
+  },
+  "PROP_Ingots_Coal": {
+   "note": "Lingotes y carbon",
+   "tris": 288,
+   "size_m": [
+    1.4,
+    0.6,
+    0.393
+   ],
+   "materials": [
+    "MAT_Bronze_Aged",
+    "MAT_Iron_Black",
+    "MAT_Wood_Dark"
+   ],
+   "colonly": true,
+   "group": "trivial"
+  },
+  "PROP_Cloth_Rolls": {
+   "note": "Rollos de tela",
+   "tris": 246,
+   "size_m": [
+    1.82,
+    0.6,
+    1.1
+   ],
+   "materials": [
+    "MAT_Cloth_Patch_A",
+    "MAT_Cloth_Patch_B",
+    "MAT_Cloth_Patch_C",
+    "MAT_Wood_Dark"
+   ],
+   "colonly": true,
+   "group": "trivial"
+  },
+  "PROP_Bar_Counter": {
+   "note": "Mostrador de barra (Posada)",
+   "tris": 150,
+   "size_m": [
+    2.08,
+    0.78,
+    1.05
+   ],
+   "materials": [
+    "MAT_Iron_Black",
+    "MAT_Wood_Dark",
+    "MAT_Wood_Light"
+   ],
+   "colonly": true,
+   "group": "trivial"
+  },
+  "PROP_Trestle": {
+   "note": "Caballete",
+   "tris": 68,
+   "size_m": [
+    1.1,
+    0.654,
+    0.8
+   ],
+   "materials": [
+    "MAT_Wood_Dark",
+    "MAT_Wood_Light"
+   ],
+   "colonly": true,
+   "group": "trivial"
+  },
+  "PROP_Bench_Vise": {
+   "note": "Tornillo de banco",
+   "tris": 120,
+   "size_m": [
+    0.47,
+    0.3,
+    0.27
+   ],
+   "materials": [
+    "MAT_Bronze_Aged",
+    "MAT_Iron_Black",
+    "MAT_Wood_Dark"
+   ],
+   "colonly": false,
+   "group": "trivial"
+  },
+  "PROP_Auction_Gavel": {
+   "note": "Martillo de subastador",
+   "tris": 188,
+   "size_m": [
+    0.337,
+    0.15,
+    0.12
+   ],
+   "materials": [
+    "MAT_Bronze_Aged",
+    "MAT_Wood_Dark",
+    "MAT_Wood_Light"
+   ],
+   "colonly": false,
+   "group": "trivial"
+  },
+  "PROP_Ink_Seal": {
+   "note": "Tintero y sello",
+   "tris": 220,
+   "size_m": [
+    0.375,
+    0.103,
+    0.25
+   ],
+   "materials": [
+    "MAT_Ash_Gray",
+    "MAT_Bronze_Aged",
+    "MAT_Hide_R05",
+    "MAT_Wood_Dark"
+   ],
+   "colonly": false,
+   "group": "trivial"
+  },
+  "PROP_Baker_Peel": {
+   "note": "Pala de panadero",
+   "tris": 40,
+   "size_m": [
+    0.34,
+    0.399,
+    1.763
+   ],
+   "materials": [
+    "MAT_Wood_Light"
+   ],
+   "colonly": true,
+   "group": "trivial"
+  },
+  "PROP_Tanning_Frame": {
+   "note": "Bastidor y raspador de curtir",
+   "tris": 208,
+   "size_m": [
+    1.6,
+    0.607,
+    1.6
+   ],
+   "materials": [
+    "MAT_Hide_R05",
+    "MAT_Iron_Black",
+    "MAT_Straw",
+    "MAT_Wood_Dark",
+    "MAT_Wood_Light"
+   ],
+   "colonly": true,
+   "group": "trivial"
+  },
+  "PROP_Herb_Rack": {
+   "note": "Secadero de hierbas",
+   "tris": 436,
+   "size_m": [
+    1.4,
+    0.4,
+    1.6
+   ],
+   "materials": [
+    "MAT_Herb_Green",
+    "MAT_Straw",
+    "MAT_Wood_Dark",
+    "MAT_Wood_Light"
+   ],
+   "colonly": true,
+   "group": "trivial"
+  },
+  "PROP_Fish_Crates": {
+   "note": "Cajas de pescado y canas",
+   "tris": 364,
+   "size_m": [
+    0.926,
+    0.516,
+    2.101
+   ],
+   "materials": [
+    "MAT_Limestone_Light",
+    "MAT_Straw",
+    "MAT_Wood_Light"
+   ],
+   "colonly": true,
+   "group": "trivial"
+  },
+  "PROP_Longbow": {
+   "note": "Arco largo (armero de pared y carcaj)",
+   "tris": 276,
+   "size_m": [
+    1.846,
+    0.34,
+    1.53
+   ],
+   "materials": [
+    "MAT_Cloth_Patch_B",
+    "MAT_Hide_R05",
+    "MAT_Straw",
+    "MAT_Wood_Dark",
+    "MAT_Wood_Light"
+   ],
+   "colonly": true,
+   "group": "trivial"
+  },
+  "PROP_Spinning_Wheel": {
+   "note": "Rueca",
+   "tris": 364,
+   "size_m": [
+    0.902,
+    0.379,
+    1.106
+   ],
+   "materials": [
+    "MAT_Cloth_Patch_A",
+    "MAT_Straw",
+    "MAT_Wood_Dark",
+    "MAT_Wood_Light"
+   ],
+   "colonly": true,
+   "group": "trivial"
+  },
+  "PROP_Jeweler_Case": {
+   "note": "Vitrina de joyero",
+   "tris": 286,
+   "size_m": [
+    1.0,
+    0.5,
+    1.005
+   ],
+   "materials": [
+    "MAT_Bronze_Aged",
+    "MAT_Felt_R05",
+    "MAT_Glass_R04",
+    "MAT_Wood_Dark"
+   ],
+   "colonly": true,
+   "group": "trivial"
+  }
+ },
+ "total_tris": 5046,
+ "export": {
+  "file": "export/godot/props_int_mano.glb",
+  "mb": 0.422,
+  "nodes": 32,
+  "meshes": 32,
+  "tris": 5214,
+  "materials": 15,
+  "images": 19,
+  "images_external": 19,
+  "colliders": 14,
+  "navmesh": 0,
+  "occluders": 0,
+  "empties": 0
+ }
+}

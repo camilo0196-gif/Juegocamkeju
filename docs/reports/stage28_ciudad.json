@@ -1,0 +1,1873 @@
+{
+ "source": "blender/concordia_v26.blend",
+ "faro_mer_casa_01": {
+  "floors_before": 3,
+  "floors_after": 2,
+  "h_before_m": 14.01,
+  "h_after_m": 10.81,
+  "style": "stone",
+  "roof": "hip",
+  "use": "house",
+  "min_decor_h_m": 7.0
+ },
+ "steps_done": [
+  "faro",
+  "moradas",
+  "pipes",
+  "medir"
+ ],
+ "moradas": {
+  "rules": {
+   "balcony_depth_m": 0.35,
+   "max_balcony_m": 1.2,
+   "stair": "extremo alejado de CAM_Iso (tramo alto y rellano superior; stair_for 'far')",
+   "eave_m": 0.3,
+   "tolerance": 10
+  },
+  "log": {
+   "before": 16,
+   "before_by_cause": {
+    "balcon/escalera": 12,
+    "cuerpo/alero": 4
+   },
+   "a_stair": {
+    "kept": "etapa 26",
+    "far_literal_test_blocked": 48,
+    "evidence": "stage28_moradas_prueba_far.json"
+   }
+  },
+  "b_steps": [
+   {
+    "house": "Morada_NE_061",
+    "remedy": "alero 0.3 m",
+    "round": 0,
+    "blocked": [
+     16,
+     16
+    ],
+    "kept": false
+   },
+   {
+    "house": "Morada_NE_061",
+    "remedy": "alero 0.3 m + 2 plantas (pierde 3 viviendas)",
+    "round": 0,
+    "blocked": [
+     16,
+     16
+    ],
+    "kept": false
+   },
+   {
+    "house": "Morada_NE_062",
+    "remedy": "alero 0.3 m",
+    "round": 0,
+    "blocked": [
+     16,
+     16
+    ],
+    "kept": false
+   },
+   {
+    "house": "Morada_SO_036",
+    "remedy": "alero 0.3 m",
+    "round": 0,
+    "blocked": [
+     16,
+     16
+    ],
+    "kept": false
+   },
+   {
+    "house": "Morada_SO_036",
+    "remedy": "alero 0.3 m + 2 plantas (pierde 3 viviendas)",
+    "round": 0,
+    "blocked": [
+     16,
+     14
+    ],
+    "kept": true
+   },
+   {
+    "house": "Morada_SO_065",
+    "remedy": "alero 0.3 m",
+    "round": 0,
+    "blocked": [
+     14,
+     14
+    ],
+    "kept": false
+   },
+   {
+    "house": "Morada_SO_066",
+    "remedy": "alero 0.3 m",
+    "round": 0,
+    "blocked": [
+     14,
+     14
+    ],
+    "kept": false
+   },
+   {
+    "house": "Morada_SO_066",
+    "remedy": "alero 0.3 m + 2 plantas (pierde 3 viviendas)",
+    "round": 0,
+    "blocked": [
+     14,
+     14
+    ],
+    "kept": false
+   },
+   {
+    "house": "Morada_NE_061",
+    "remedy": "alero 0.3 m",
+    "round": 1,
+    "blocked": [
+     14,
+     14
+    ],
+    "kept": false
+   },
+   {
+    "house": "Morada_NE_061",
+    "remedy": "alero 0.3 m + 2 plantas (pierde 3 viviendas)",
+    "round": 1,
+    "blocked": [
+     14,
+     14
+    ],
+    "kept": false
+   },
+   {
+    "house": "Morada_NE_062",
+    "remedy": "alero 0.3 m",
+    "round": 1,
+    "blocked": [
+     14,
+     14
+    ],
+    "kept": false
+   },
+   {
+    "house": "Morada_SO_037",
+    "remedy": "alero 0.3 m",
+    "round": 1,
+    "blocked": [
+     14,
+     14
+    ],
+    "kept": false
+   },
+   {
+    "house": "Morada_SO_037",
+    "remedy": "alero 0.3 m + 2 plantas (pierde 3 viviendas)",
+    "round": 1,
+    "blocked": [
+     14,
+     13
+    ],
+    "kept": true
+   },
+   {
+    "house": "Morada_SO_065",
+    "remedy": "alero 0.3 m",
+    "round": 1,
+    "blocked": [
+     13,
+     13
+    ],
+    "kept": false
+   },
+   {
+    "house": "Morada_SO_066",
+    "remedy": "alero 0.3 m",
+    "round": 1,
+    "blocked": [
+     13,
+     13
+    ],
+    "kept": false
+   },
+   {
+    "house": "Morada_SO_066",
+    "remedy": "alero 0.3 m + 2 plantas (pierde 3 viviendas)",
+    "round": 1,
+    "blocked": [
+     13,
+     13
+    ],
+    "kept": false
+   },
+   {
+    "house": "Morada_NE_061",
+    "remedy": "alero 0.3 m",
+    "round": 2,
+    "blocked": [
+     13,
+     13
+    ],
+    "kept": false
+   },
+   {
+    "house": "Morada_NE_061",
+    "remedy": "alero 0.3 m + 2 plantas (pierde 3 viviendas)",
+    "round": 2,
+    "blocked": [
+     13,
+     13
+    ],
+    "kept": false
+   },
+   {
+    "house": "Morada_NE_062",
+    "remedy": "alero 0.3 m",
+    "round": 2,
+    "blocked": [
+     13,
+     13
+    ],
+    "kept": false
+   },
+   {
+    "house": "Morada_SO_065",
+    "remedy": "alero 0.3 m",
+    "round": 2,
+    "blocked": [
+     13,
+     13
+    ],
+    "kept": false
+   },
+   {
+    "house": "Morada_SO_066",
+    "remedy": "alero 0.3 m",
+    "round": 2,
+    "blocked": [
+     13,
+     13
+    ],
+    "kept": false
+   },
+   {
+    "house": "Morada_SO_066",
+    "remedy": "alero 0.3 m + 2 plantas (pierde 3 viviendas)",
+    "round": 2,
+    "blocked": [
+     13,
+     13
+    ],
+    "kept": false
+   }
+  ],
+  "after": 13,
+  "after_by_set": {
+   "NE": {
+    "doors": 360,
+    "facing": 200,
+    "blocked": 5
+   },
+   "NO": {
+    "doors": 354,
+    "facing": 354,
+    "blocked": 0
+   },
+   "SE": {
+    "doors": 330,
+    "facing": 330,
+    "blocked": 0
+   },
+   "SO": {
+    "doors": 354,
+    "facing": 216,
+    "blocked": 8
+   }
+  },
+  "residual": [
+   {
+    "door": "MARKER_Morada_Door_NE_022_1",
+    "set": "NE",
+    "cause": "balcon/escalera",
+    "blockers": [
+     "Morada_NE_021"
+    ],
+    "rays": [
+     "libre",
+     "balcon/escalera de Morada_NE_021",
+     "balcon/escalera de Morada_NE_021"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_NE_047_1",
+    "set": "NE",
+    "cause": "balcon/escalera",
+    "blockers": [
+     "Morada_NE_046"
+    ],
+    "rays": [
+     "balcon/escalera de Morada_NE_046",
+     "balcon/escalera de Morada_NE_046",
+     "balcon/escalera de Morada_NE_046"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_NE_063_1",
+    "set": "NE",
+    "cause": "cuerpo/alero",
+    "blockers": [
+     "Morada_NE_061",
+     "Morada_NE_062"
+    ],
+    "rays": [
+     "cuerpo/alero de Morada_NE_062",
+     "cuerpo/alero de Morada_NE_062",
+     "cuerpo/alero de Morada_NE_061"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_NE_070_1",
+    "set": "NE",
+    "cause": "balcon/escalera",
+    "blockers": [
+     "Morada_NE_069"
+    ],
+    "rays": [
+     "balcon/escalera de Morada_NE_069",
+     "balcon/escalera de Morada_NE_069",
+     "libre"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_NE_013_1",
+    "set": "NE",
+    "cause": "balcon/escalera",
+    "blockers": [
+     "Morada_NE_012"
+    ],
+    "rays": [
+     "balcon/escalera de Morada_NE_012",
+     "libre",
+     "balcon/escalera de Morada_NE_012"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_SO_048_1",
+    "set": "SO",
+    "cause": "balcon/escalera",
+    "blockers": [
+     "Morada_SO_049",
+     "Morada_SO_050"
+    ],
+    "rays": [
+     "balcon/escalera de Morada_SO_050",
+     "balcon/escalera de Morada_SO_049",
+     "balcon/escalera de Morada_SO_049"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_SO_064_1",
+    "set": "SO",
+    "cause": "cuerpo/alero",
+    "blockers": [
+     "Morada_SO_065",
+     "Morada_SO_066"
+    ],
+    "rays": [
+     "cuerpo/alero de Morada_SO_065",
+     "cuerpo/alero de Morada_SO_065",
+     "cuerpo/alero de Morada_SO_066"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_SO_018_3",
+    "set": "SO",
+    "cause": "balcon/escalera",
+    "blockers": [
+     "Morada_SO_019"
+    ],
+    "rays": [
+     "balcon/escalera de Morada_SO_019",
+     "balcon/escalera de Morada_SO_019",
+     "libre"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_SO_035_1",
+    "set": "SO",
+    "cause": "cuerpo/alero",
+    "blockers": [
+     "Morada_SO_036"
+    ],
+    "rays": [
+     "cuerpo/alero de Morada_SO_036",
+     "cuerpo/alero de Morada_SO_036",
+     "libre"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_SO_035_2",
+    "set": "SO",
+    "cause": "cuerpo/alero",
+    "blockers": [
+     "Morada_SO_036"
+    ],
+    "rays": [
+     "balcon/escalera de Morada_SO_036",
+     "cuerpo/alero de Morada_SO_036",
+     "cuerpo/alero de Morada_SO_036"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_SO_035_3",
+    "set": "SO",
+    "cause": "cuerpo/alero",
+    "blockers": [
+     "Morada_SO_036",
+     "Morada_SO_037"
+    ],
+    "rays": [
+     "balcon/escalera de Morada_SO_036",
+     "cuerpo/alero de Morada_SO_037",
+     "cuerpo/alero de Morada_SO_036"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_SO_058_3",
+    "set": "SO",
+    "cause": "balcon/escalera",
+    "blockers": [
+     "Morada_SO_059"
+    ],
+    "rays": [
+     "balcon/escalera de Morada_SO_059",
+     "balcon/escalera de Morada_SO_059",
+     "libre"
+    ]
+   },
+   {
+    "door": "MARKER_Morada_Door_SO_059_3",
+    "set": "SO",
+    "cause": "balcon/escalera",
+    "blockers": [
+     "Morada_SO_060"
+    ],
+    "rays": [
+     "balcon/escalera de Morada_SO_060",
+     "balcon/escalera de Morada_SO_060",
+     "libre"
+    ]
+   }
+  ],
+  "dwellings": {
+   "NE": 360,
+   "NO": 354,
+   "SE": 330,
+   "SO": 354
+  },
+  "dwellings_total": 1398
+ },
+ "moradas_sets": {
+  "NE": {
+   "houses": 72,
+   "dwellings": 360,
+   "LOD0": 72032,
+   "LOD2": 6174,
+   "lod2_ratio": 0.086,
+   "max_per_type": {
+    "casa_pequena": [
+     672,
+     "Morada_NE_001"
+    ],
+    "casa_grande": [
+     752,
+     "Morada_NE_003"
+    ],
+    "habitacion": [
+     1418,
+     "Morada_NE_031"
+    ]
+   },
+   "over_budget": [],
+   "budget": {
+    "habitacion": 1500,
+    "casa_pequena": 2000,
+    "casa_grande": 3500
+   },
+   "ok": true
+  },
+  "NO": {
+   "houses": 72,
+   "dwellings": 354,
+   "LOD0": 69916,
+   "LOD2": 4658,
+   "lod2_ratio": 0.067,
+   "max_per_type": {
+    "casa_grande": [
+     752,
+     "Morada_NO_018"
+    ],
+    "habitacion": [
+     1460,
+     "Morada_NO_058"
+    ],
+    "casa_pequena": [
+     672,
+     "Morada_NO_012"
+    ]
+   },
+   "over_budget": [],
+   "budget": {
+    "habitacion": 1500,
+    "casa_pequena": 2000,
+    "casa_grande": 3500
+   },
+   "ok": true
+  },
+  "SE": {
+   "houses": 67,
+   "dwellings": 330,
+   "LOD0": 64398,
+   "LOD2": 4410,
+   "lod2_ratio": 0.068,
+   "max_per_type": {
+    "casa_pequena": [
+     672,
+     "Morada_SE_006"
+    ],
+    "habitacion": [
+     1340,
+     "Morada_SE_011"
+    ],
+    "casa_grande": [
+     722,
+     "Morada_SE_008"
+    ]
+   },
+   "over_budget": [],
+   "budget": {
+    "habitacion": 1500,
+    "casa_pequena": 2000,
+    "casa_grande": 3500
+   },
+   "ok": true
+  },
+  "SO": {
+   "houses": 72,
+   "dwellings": 354,
+   "LOD0": 72188,
+   "LOD2": 6250,
+   "lod2_ratio": 0.087,
+   "max_per_type": {
+    "casa_pequena": [
+     672,
+     "Morada_SO_003"
+    ],
+    "casa_grande": [
+     752,
+     "Morada_SO_039"
+    ],
+    "habitacion": [
+     1418,
+     "Morada_SO_029"
+    ]
+   },
+   "over_budget": [],
+   "budget": {
+    "habitacion": 1500,
+    "casa_pequena": 2000,
+    "casa_grande": 3500
+   },
+   "ok": true
+  }
+ },
+ "pipes": {
+  "supports": [
+   {
+    "support": "PIPE_TF_Support_01",
+    "xy": [
+     -13.6,
+     125.6
+    ],
+    "on_road": true,
+    "action": "desplazado -1.50 m a lo largo del tubo, fuera de la calle",
+    "new_xy": [
+     -15.0,
+     125.8
+    ],
+    "on": "TRN_City_Chunk_8_11_LOD0",
+    "height_m": 12.32
+   },
+   {
+    "support": "PIPE_TF_Support_02",
+    "xy": [
+     -7.6,
+     120.6
+    ],
+    "on_road": true,
+    "action": "SIN RESOLVER: plaza abierta (pendiente de decision)",
+    "building_line_m": [
+     11.9,
+     null
+    ]
+   },
+   {
+    "support": "PIPE_TF_Support_03",
+    "xy": [
+     -1.9,
+     114.9
+    ],
+    "on_road": true,
+    "action": "SIN RESOLVER: plaza abierta (pendiente de decision)",
+    "building_line_m": [
+     null,
+     null
+    ]
+   },
+   {
+    "support": "PIPE_TF_Support_04",
+    "xy": [
+     3.7,
+     109.3
+    ],
+    "on_road": true,
+    "action": "SIN RESOLVER: plaza abierta (pendiente de decision)",
+    "building_line_m": [
+     5.5,
+     16.8
+    ]
+   },
+   {
+    "support": "PIPE_TF_Support_05",
+    "xy": [
+     9.4,
+     103.6
+    ],
+    "on_road": true,
+    "action": "SIN RESOLVER: plaza abierta (pendiente de decision)",
+    "building_line_m": [
+     null,
+     13.3
+    ]
+   },
+   {
+    "support": "PIPE_TF_Support_06",
+    "xy": [
+     15.0,
+     98.0
+    ],
+    "on_road": true,
+    "action": "SIN RESOLVER: plaza abierta (pendiente de decision)",
+    "building_line_m": [
+     null,
+     null
+    ]
+   },
+   {
+    "support": "PIPE_TF_Support_07",
+    "xy": [
+     20.7,
+     92.3
+    ],
+    "on_road": true,
+    "action": "desplazado +1.75 m a lo largo del tubo, fuera de la calle",
+    "new_xy": [
+     21.9,
+     91.1
+    ],
+    "on": "TRN_City_Chunk_8_10_LOD0",
+    "height_m": 12.19
+   },
+   {
+    "support": "PIPE_TF_Support_08",
+    "xy": [
+     24.7,
+     88.3
+    ],
+    "on_road": false,
+    "action": "se queda (fuera de la zona de paso)"
+   },
+   {
+    "support": "PIPE_TF_Support_09",
+    "xy": [
+     32.0,
+     81.0
+    ],
+    "on_road": false,
+    "action": "se queda (fuera de la zona de paso)"
+   },
+   {
+    "support": "PIPE_TF_Support_10",
+    "xy": [
+     38.1,
+     76.5
+    ],
+    "on_road": false,
+    "action": "se queda (fuera de la zona de paso)"
+   },
+   {
+    "support": "PIPE_TF_Support_11",
+    "xy": [
+     45.4,
+     74.6
+    ],
+    "on_road": false,
+    "action": "se queda (fuera de la zona de paso)"
+   },
+   {
+    "support": "PIPE_TF_Support_12",
+    "xy": [
+     51.0,
+     69.0
+    ],
+    "on_road": false,
+    "action": "se queda (fuera de la zona de paso)"
+   },
+   {
+    "support": "PIPE_TF_Support_13",
+    "xy": [
+     56.4,
+     63.4
+    ],
+    "on_road": false,
+    "action": "se queda (fuera de la zona de paso)"
+   },
+   {
+    "support": "PIPE_TF_Support_14",
+    "xy": [
+     51.1,
+     58.8
+    ],
+    "on_road": false,
+    "action": "se queda (fuera de la zona de paso)"
+   }
+  ],
+  "unresolved": [
+   "PIPE_TF_Support_02",
+   "PIPE_TF_Support_03",
+   "PIPE_TF_Support_04",
+   "PIPE_TF_Support_05",
+   "PIPE_TF_Support_06"
+  ],
+  "tris_total": 7944,
+  "budget": 8000,
+  "rule": "zona de paso = road_mask de T_StreetMasks (etapa 5)",
+  "min_over_street_m": 12.24
+ },
+ "faro": {
+  "visibility": {
+   "avenida": {
+    "points": 60,
+    "with_faro": 55,
+    "pct": 91.7,
+    "crystal_direct": 47,
+    "crystal_direct_pct": 78.3,
+    "pct_without_pipes": 91.7,
+    "blocked_by": [
+     [
+      "MARKER_Bridge_02",
+      1
+     ],
+     [
+      "Taller_Carpinteria",
+      1
+     ],
+     [
+      "GATE_Slot00_Sealed_Twin",
+      1
+     ],
+     [
+      "GATE_Slot12_Sealed_Twin",
+      1
+     ],
+     [
+      "GATE_Slot24_Sealed_Twin",
+      1
+     ],
+     [
+      "GATE_Slot36_Sealed_Twin",
+      1
+     ]
+    ]
+   },
+   "anillo": {
+    "points": 83,
+    "with_faro": 59,
+    "pct": 71.1,
+    "crystal_direct": 45,
+    "crystal_direct_pct": 54.2,
+    "pct_without_pipes": 71.1,
+    "blocked_by": [
+     [
+      "Gremio_Mineros",
+      3
+     ],
+     [
+      "CasaReposicion",
+      3
+     ],
+     [
+      "CasaRaza_01",
+      3
+     ],
+     [
+      "SalonClase_08",
+      2
+     ],
+     [
+      "SalonClase_07",
+      2
+     ],
+     [
+      "SalonClase_01",
+      2
+     ],
+     [
+      "CasaRaza_06",
+      2
+     ],
+     [
+      "RAZ_B02_Casa_01",
+      2
+     ],
+     [
+      "CasaRaza_02",
+      2
+     ],
+     [
+      "SALON_HAZANAS",
+      2
+     ],
+     [
+      "MARKER_Bridge_04",
+      1
+     ],
+     [
+      "TesoreriaMuralla",
+      1
+     ],
+     [
+      "CLA_Casa_01",
+      1
+     ],
+     [
+      "SalonClase_02",
+      1
+     ],
+     [
+      "CLA_Casa_03",
+      1
+     ]
+    ]
+   },
+   "callejon": {
+    "points": 157,
+    "with_faro": 120,
+    "pct": 76.4,
+    "crystal_direct": 73,
+    "crystal_direct_pct": 46.5,
+    "pct_without_pipes": 76.4,
+    "blocked_by": [
+     [
+      "GranSubasta",
+      5
+     ],
+     [
+      "TesoreriaMuralla",
+      4
+     ],
+     [
+      "CasaReposicion",
+      3
+     ],
+     [
+      "CasaRaza_01",
+      3
+     ],
+     [
+      "CasaRaza_02",
+      3
+     ],
+     [
+      "OFI_Casa_02",
+      2
+     ],
+     [
+      "MER_Casa_02",
+      2
+     ],
+     [
+      "MER_Casa_03",
+      2
+     ],
+     [
+      "MER_Casa_08",
+      2
+     ],
+     [
+      "MER_Casa_07",
+      2
+     ],
+     [
+      "SalonClase_03",
+      2
+     ],
+     [
+      "CLA_Casa_04",
+      2
+     ],
+     [
+      "CLA_Casa_12",
+      2
+     ],
+     [
+      "SalonClase_05",
+      2
+     ],
+     [
+      "SalonClase_04",
+      2
+     ]
+    ]
+   },
+   "diagonal": {
+    "points": 49,
+    "with_faro": 39,
+    "pct": 79.6,
+    "crystal_direct": 17,
+    "crystal_direct_pct": 34.7,
+    "pct_without_pipes": 79.6,
+    "blocked_by": [
+     [
+      "OBELISK",
+      4
+     ],
+     [
+      "SANTUARIO",
+      2
+     ],
+     [
+      "SALON_HAZANAS",
+      2
+     ],
+     [
+      "Morada_NO_034",
+      1
+     ],
+     [
+      "Morada_SE_011",
+      1
+     ]
+    ]
+   }
+  },
+  "blocked_points": {
+   "avenida": [
+    {
+     "street": "STR_OFI_Avenue",
+     "eye": [
+      89.4,
+      0.0,
+      6.4
+     ],
+     "roots": [
+      "MARKER_Bridge_02",
+      "Taller_Carpinteria"
+     ]
+    },
+    {
+     "street": "STR_OFI_GateApproach",
+     "eye": [
+      196.0,
+      0.0,
+      7.7
+     ],
+     "roots": [
+      "GATE_Slot00_Sealed_Twin"
+     ]
+    },
+    {
+     "street": "STR_MER_GateApproach",
+     "eye": [
+      0.0,
+      196.0,
+      7.7
+     ],
+     "roots": [
+      "GATE_Slot12_Sealed_Twin"
+     ]
+    },
+    {
+     "street": "STR_CLA_GateApproach",
+     "eye": [
+      -196.0,
+      0.0,
+      7.7
+     ],
+     "roots": [
+      "GATE_Slot24_Sealed_Twin"
+     ]
+    },
+    {
+     "street": "STR_RAZ_GateApproach",
+     "eye": [
+      -0.0,
+      -196.0,
+      7.7
+     ],
+     "roots": [
+      "GATE_Slot36_Sealed_Twin"
+     ]
+    }
+   ],
+   "anillo": [
+    {
+     "street": "STR_OFI_Ring150",
+     "eye": [
+      145.4,
+      -40.1,
+      5.5
+     ],
+     "roots": [
+      "Gremio_Mineros",
+      "MARKER_Bridge_04"
+     ]
+    },
+    {
+     "street": "STR_OFI_Ring150",
+     "eye": [
+      147.6,
+      -30.3,
+      6.5
+     ],
+     "roots": [
+      "Gremio_Mineros"
+     ]
+    },
+    {
+     "street": "STR_OFI_Ring150",
+     "eye": [
+      149.0,
+      -20.4,
+      6.5
+     ],
+     "roots": [
+      "Gremio_Mineros"
+     ]
+    },
+    {
+     "street": "STR_MER_Ring150",
+     "eye": [
+      -41.3,
+      144.4,
+      6.5
+     ],
+     "roots": [
+      "TesoreriaMuralla"
+     ]
+    },
+    {
+     "street": "STR_CLA_Ring100",
+     "eye": [
+      -97.3,
+      27.6,
+      7.5
+     ],
+     "roots": [
+      "SalonClase_08"
+     ]
+    },
+    {
+     "street": "STR_CLA_Ring100",
+     "eye": [
+      -99.1,
+      17.8,
+      7.5
+     ],
+     "roots": [
+      "SalonClase_08"
+     ]
+    },
+    {
+     "street": "STR_CLA_Ring100",
+     "eye": [
+      -96.8,
+      -22.0,
+      7.6
+     ],
+     "roots": [
+      "CLA_Casa_01",
+      "SalonClase_07"
+     ]
+    },
+    {
+     "street": "STR_CLA_Ring100",
+     "eye": [
+      -93.9,
+      -31.6,
+      7.6
+     ],
+     "roots": [
+      "SalonClase_07"
+     ]
+    },
+    {
+     "street": "STR_CLA_Ring150",
+     "eye": [
+      -141.6,
+      49.3,
+      6.5
+     ],
+     "roots": [
+      "CasaReposicion"
+     ]
+    },
+    {
+     "street": "STR_CLA_Ring150",
+     "eye": [
+      -144.9,
+      39.8,
+      6.5
+     ],
+     "roots": [
+      "CasaReposicion"
+     ]
+    },
+    {
+     "street": "STR_CLA_Ring150",
+     "eye": [
+      -147.7,
+      30.2,
+      6.5
+     ],
+     "roots": [
+      "CasaReposicion",
+      "SalonClase_02"
+     ]
+    },
+    {
+     "street": "STR_CLA_Ring150",
+     "eye": [
+      -144.2,
+      -38.9,
+      6.5
+     ],
+     "roots": [
+      "CLA_Casa_03",
+      "SalonClase_01"
+     ]
+    },
+    {
+     "street": "STR_CLA_Ring150",
+     "eye": [
+      -141.5,
+      -48.5,
+      6.5
+     ],
+     "roots": [
+      "CLA_Casa_04",
+      "SalonClase_01"
+     ]
+    },
+    {
+     "street": "STR_RAZ_Ring100",
+     "eye": [
+      -36.3,
+      -92.1,
+      7.6
+     ],
+     "roots": [
+      "CasaRaza_06",
+      "RAZ_B06_Casa_01",
+      "RAZ_B06_Casa_02"
+     ]
+    },
+    {
+     "street": "STR_RAZ_Ring100",
+     "eye": [
+      -27.0,
+      -95.9,
+      7.6
+     ],
+     "roots": [
+      "CasaRaza_06",
+      "Plazuela_06"
+     ]
+    },
+    {
+     "street": "STR_RAZ_Ring150",
+     "eye": [
+      -58.5,
+      -137.7,
+      6.5
+     ],
+     "roots": [
+      "RAZ_B02_Casa_01",
+      "RAZ_B02_Casa_03"
+     ]
+    },
+    {
+     "street": "STR_RAZ_Ring150",
+     "eye": [
+      -49.1,
+      -141.3,
+      6.5
+     ],
+     "roots": [
+      "CasaRaza_02",
+      "RAZ_B02_Casa_01"
+     ]
+    },
+    {
+     "street": "STR_RAZ_Ring150",
+     "eye": [
+      -39.6,
+      -144.4,
+      6.5
+     ],
+     "roots": [
+      "CasaRaza_02"
+     ]
+    },
+    {
+     "street": "STR_RAZ_Ring150",
+     "eye": [
+      -29.9,
+      -146.7,
+      6.5
+     ],
+     "roots": [
+      "MARKER_Bridge_07",
+      "RAZ_B02_Casa_04",
+      "RAZ_B02_Casa_05"
+     ]
+    },
+    {
+     "street": "STR_RAZ_Ring150",
+     "eye": [
+      -20.0,
+      -148.1,
+      6.5
+     ],
+     "roots": [
+      "RAZ_B02_Casa_06"
+     ]
+    },
+    {
+     "street": "STR_RAZ_Ring150",
+     "eye": [
+      19.9,
+      -148.7,
+      6.5
+     ],
+     "roots": [
+      "CasaRaza_01",
+      "RAZ_B01_Casa_03",
+      "RAZ_B01_Casa_05"
+     ]
+    },
+    {
+     "street": "STR_RAZ_Ring150",
+     "eye": [
+      29.8,
+      -147.6,
+      6.5
+     ],
+     "roots": [
+      "CasaRaza_01",
+      "SALON_HAZANAS"
+     ]
+    },
+    {
+     "street": "STR_RAZ_Ring150",
+     "eye": [
+      39.6,
+      -145.7,
+      6.5
+     ],
+     "roots": [
+      "CasaRaza_01"
+     ]
+    },
+    {
+     "street": "STR_RAZ_Ring150",
+     "eye": [
+      49.2,
+      -142.8,
+      6.5
+     ],
+     "roots": [
+      "RAZ_B01_Casa_04",
+      "SALON_HAZANAS"
+     ]
+    }
+   ],
+   "callejon": [
+    {
+     "street": "STR_OFI_CallejonRonda_L",
+     "eye": [
+      181.1,
+      41.5,
+      7.0
+     ],
+     "roots": [
+      "OFI_Casa_01"
+     ]
+    },
+    {
+     "street": "STR_OFI_CallejonRonda_L",
+     "eye": [
+      178.9,
+      51.2,
+      7.0
+     ],
+     "roots": [
+      "OFI_Casa_02"
+     ]
+    },
+    {
+     "street": "STR_OFI_CallejonRonda_L",
+     "eye": [
+      176.0,
+      60.8,
+      7.0
+     ],
+     "roots": [
+      "OFI_Casa_02"
+     ]
+    },
+    {
+     "street": "STR_OFI_CallejonRonda_R",
+     "eye": [
+      171.9,
+      -70.0,
+      7.0
+     ],
+     "roots": [
+      "Taller_Curtiduria",
+      "Taller_Sastreria"
+     ]
+    },
+    {
+     "street": "STR_MER_CallejonRonda_L",
+     "eye": [
+      -31.7,
+      183.3,
+      7.0
+     ],
+     "roots": [
+      "MER_Casa_02"
+     ]
+    },
+    {
+     "street": "STR_MER_CallejonRonda_L",
+     "eye": [
+      -41.5,
+      181.5,
+      7.0
+     ],
+     "roots": [
+      "MER_Casa_02",
+      "MER_Casa_03"
+     ]
+    },
+    {
+     "street": "STR_MER_CallejonRonda_L",
+     "eye": [
+      -51.2,
+      179.1,
+      7.0
+     ],
+     "roots": [
+      "MER_Casa_03"
+     ]
+    },
+    {
+     "street": "STR_MER_CallejonRonda_L",
+     "eye": [
+      -70.2,
+      172.9,
+      7.1
+     ],
+     "roots": [
+      "MER_Casa_08",
+      "TesoreriaMuralla"
+     ]
+    },
+    {
+     "street": "STR_MER_CallejonRonda_R",
+     "eye": [
+      21.8,
+      184.6,
+      7.1
+     ],
+     "roots": [
+      "GranSubasta",
+      "MER_Casa_04"
+     ]
+    },
+    {
+     "street": "STR_MER_CallejonRonda_R",
+     "eye": [
+      31.6,
+      183.0,
+      7.0
+     ],
+     "roots": [
+      "GranSubasta",
+      "MER_Casa_05"
+     ]
+    },
+    {
+     "street": "STR_MER_CallejonRonda_R",
+     "eye": [
+      41.4,
+      180.7,
+      7.0
+     ],
+     "roots": [
+      "GranSubasta",
+      "MER_Casa_06"
+     ]
+    },
+    {
+     "street": "STR_MER_CallejonRonda_R",
+     "eye": [
+      51.0,
+      178.0,
+      7.0
+     ],
+     "roots": [
+      "GranSubasta",
+      "MER_Casa_07"
+     ]
+    },
+    {
+     "street": "STR_MER_CallejonRonda_R",
+     "eye": [
+      60.6,
+      175.1,
+      7.0
+     ],
+     "roots": [
+      "GranSubasta",
+      "MER_Casa_07"
+     ]
+    },
+    {
+     "street": "STR_CLA_CallejonRonda_L",
+     "eye": [
+      -183.9,
+      -31.7,
+      7.1
+     ],
+     "roots": [
+      "CLA_Casa_05"
+     ]
+    },
+    {
+     "street": "STR_CLA_CallejonRonda_L",
+     "eye": [
+      -181.8,
+      -41.5,
+      7.0
+     ],
+     "roots": [
+      "CLA_Casa_06",
+      "SalonClase_03"
+     ]
+    },
+    {
+     "street": "STR_CLA_CallejonRonda_L",
+     "eye": [
+      -179.1,
+      -51.1,
+      7.0
+     ],
+     "roots": [
+      "CLA_Casa_07",
+      "SalonClase_03"
+     ]
+    },
+    {
+     "street": "STR_CLA_CallejonRonda_L",
+     "eye": [
+      -172.7,
+      -70.1,
+      7.0
+     ],
+     "roots": [
+      "CLA_Casa_04",
+      "CLA_Casa_12",
+      "SalonClase_05"
+     ]
+    },
+    {
+     "street": "STR_CLA_CallejonRonda_R",
+     "eye": [
+      -183.9,
+      31.7,
+      7.1
+     ],
+     "roots": [
+      "CLA_Casa_08",
+      "CasaReposicion",
+      "SalonClase_04"
+     ]
+    },
+    {
+     "street": "STR_CLA_CallejonRonda_R",
+     "eye": [
+      -182.0,
+      41.5,
+      7.1
+     ],
+     "roots": [
+      "CLA_Casa_09",
+      "CasaReposicion",
+      "SalonClase_04"
+     ]
+    },
+    {
+     "street": "STR_CLA_CallejonRonda_R",
+     "eye": [
+      -179.3,
+      51.2,
+      7.0
+     ],
+     "roots": [
+      "CLA_Casa_10",
+      "CasaReposicion",
+      "SalonClase_06"
+     ]
+    },
+    {
+     "street": "STR_RAZ_CallejonRonda_L",
+     "eye": [
+      21.8,
+      -185.3,
+      7.1
+     ],
+     "roots": [
+      "CasaRaza_01",
+      "RAZ_B01_Casa_03",
+      "RAZ_B03_Casa_01",
+      "RAZ_B03_Casa_04"
+     ]
+    },
+    {
+     "street": "STR_RAZ_CallejonRonda_L",
+     "eye": [
+      31.7,
+      -184.0,
+      7.1
+     ],
+     "roots": [
+      "CasaRaza_01",
+      "RAZ_B03_Casa_02",
+      "RAZ_B03_Casa_05"
+     ]
+    },
+    {
+     "street": "STR_RAZ_CallejonRonda_L",
+     "eye": [
+      41.5,
+      -181.9,
+      7.1
+     ],
+     "roots": [
+      "CasaRaza_01",
+      "CasaRaza_03",
+      "Plazuela_03",
+      "RAZ_B01_Casa_04"
+     ]
+    },
+    {
+     "street": "STR_RAZ_CallejonRonda_L",
+     "eye": [
+      51.1,
+      -179.2,
+      7.0
+     ],
+     "roots": [
+      "CasaRaza_03",
+      "RAZ_B01_Casa_04",
+      "RAZ_B03_Casa_03"
+     ]
+    },
+    {
+     "street": "STR_RAZ_CallejonRonda_L",
+     "eye": [
+      60.6,
+      -176.0,
+      7.0
+     ],
+     "roots": [
+      "RAZ_B03_Casa_03",
+      "RAZ_B03_Casa_06"
+     ]
+    },
+    {
+     "street": "STR_RAZ_CallejonRonda_L",
+     "eye": [
+      70.0,
+      -172.5,
+      7.0
+     ],
+     "roots": [
+      "Morada_SE_028",
+      "RAZ_B03_Casa_06"
+     ]
+    },
+    {
+     "street": "STR_RAZ_CallejonRonda_R",
+     "eye": [
+      -21.7,
+      -183.6,
+      7.0
+     ],
+     "roots": [
+      "RAZ_B04_Casa_03"
+     ]
+    },
+    {
+     "street": "STR_RAZ_CallejonRonda_R",
+     "eye": [
+      -41.4,
+      -180.7,
+      7.0
+     ],
+     "roots": [
+      "CasaRaza_04",
+      "MARKER_Bridge_07",
+      "RAZ_B04_Casa_02"
+     ]
+    },
+    {
+     "street": "STR_RAZ_CallejonRonda_R",
+     "eye": [
+      -51.2,
+      -178.7,
+      7.0
+     ],
+     "roots": [
+      "CasaRaza_02",
+      "CasaRaza_04",
+      "Plazuela_04"
+     ]
+    },
+    {
+     "street": "STR_RAZ_CallejonRonda_R",
+     "eye": [
+      -60.8,
+      -175.9,
+      7.0
+     ],
+     "roots": [
+      "CasaRaza_02",
+      "RAZ_B04_Casa_04"
+     ]
+    },
+    {
+     "street": "STR_MER_CallejonEscalera_10",
+     "eye": [
+      -39.7,
+      136.5,
+      6.7
+     ],
+     "roots": [
+      "TesoreriaMuralla"
+     ]
+    },
+    {
+     "street": "STR_MER_CallejonEscalera_12",
+     "eye": [
+      -66.9,
+      170.4,
+      6.9
+     ],
+     "roots": [
+      "MER_Casa_08",
+      "TesoreriaMuralla"
+     ]
+    },
+    {
+     "street": "STR_CLA_CallejonEscalera_15",
+     "eye": [
+      -170.4,
+      66.9,
+      6.9
+     ],
+     "roots": [
+      "CLA_Casa_11",
+      "Morada_NO_028"
+     ]
+    },
+    {
+     "street": "STR_CLA_CallejonEscalera_19",
+     "eye": [
+      -169.0,
+      -65.4,
+      6.7
+     ],
+     "roots": [
+      "CLA_Casa_04",
+      "CLA_Casa_12",
+      "SalonClase_01",
+      "SalonClase_05"
+     ]
+    },
+    {
+     "street": "STR_MER_Callejon_02",
+     "eye": [
+      -39.3,
+      118.9,
+      7.0
+     ],
+     "roots": [
+      "TesoreriaMuralla"
+     ]
+    },
+    {
+     "street": "STR_CLA_Callejon_05",
+     "eye": [
+      -103.1,
+      24.5,
+      7.4
+     ],
+     "roots": [
+      "SalonClase_08"
+     ]
+    },
+    {
+     "street": "STR_RAZ_Callejon_01",
+     "eye": [
+      -45.7,
+      -139.9,
+      6.5
+     ],
+     "roots": [
+      "CasaRaza_02",
+      "RAZ_B02_Casa_01"
+     ]
+    }
+   ],
+   "diagonal": [
+    {
+     "street": "Diagonal NO",
+     "eye": [
+      -50.9,
+      50.9,
+      8.7
+     ],
+     "roots": [
+      "SANTUARIO"
+     ]
+    },
+    {
+     "street": "Diagonal NO",
+     "eye": [
+      -58.0,
+      58.0,
+      8.1
+     ],
+     "roots": [
+      "SANTUARIO"
+     ]
+    },
+    {
+     "street": "Diagonal NO",
+     "eye": [
+      -114.6,
+      114.6,
+      10.2
+     ],
+     "roots": [
+      "Morada_NO_034"
+     ]
+    },
+    {
+     "street": "Diagonal SO",
+     "eye": [
+      -50.9,
+      -50.9,
+      8.7
+     ],
+     "roots": [
+      "OBELISK"
+     ]
+    },
+    {
+     "street": "Diagonal SO",
+     "eye": [
+      -58.0,
+      -58.0,
+      8.1
+     ],
+     "roots": [
+      "OBELISK"
+     ]
+    },
+    {
+     "street": "Diagonal SO",
+     "eye": [
+      -65.1,
+      -65.1,
+      7.7
+     ],
+     "roots": [
+      "OBELISK"
+     ]
+    },
+    {
+     "street": "Diagonal SO",
+     "eye": [
+      -72.1,
+      -72.1,
+      6.4
+     ],
+     "roots": [
+      "OBELISK"
+     ]
+    },
+    {
+     "street": "Diagonal SE",
+     "eye": [
+      50.9,
+      -50.9,
+      8.7
+     ],
+     "roots": [
+      "SALON_HAZANAS"
+     ]
+    },
+    {
+     "street": "Diagonal SE",
+     "eye": [
+      58.0,
+      -58.0,
+      8.0
+     ],
+     "roots": [
+      "SALON_HAZANAS"
+     ]
+    },
+    {
+     "street": "Diagonal SE",
+     "eye": [
+      93.3,
+      -93.3,
+      7.2
+     ],
+     "roots": [
+      "Morada_SE_011"
+     ]
+    }
+   ]
+  },
+  "goal": {
+   "avenida": 100.0,
+   "diagonal": 100.0,
+   "anillo": 100.0,
+   "callejon": 90.0
+  },
+  "points_lost_to_pipes": []
+ }
+}

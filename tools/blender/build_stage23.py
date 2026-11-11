@@ -200,6 +200,8 @@ def plan_key(plan):
     k = f"f{plan['floors']}{plan['roof'][0]}{(plan['low_side'] or 'n')[0]}{int(plan.get('pitch', 0))}"
     if plan.get("balcony"):                              # etapa 26: balcon por puerta y lado de la escalera
         k += f"_b{'p' if plan.get('stair', 1) > 0 else 'm'}"
+    if plan.get("eave") is not None:                     # etapa 28: alero reducido
+        k += f"_e{int(round(plan['eave'] * 100))}"
     return k
 
 
@@ -210,7 +212,11 @@ def house_meshes(tipo, v, facade, plan, col):
     base = f"MOR_{tipo}_v{v}_{facade[-1]}_{plan_key(plan)}"
     body, roof, cm = K.MB(), K.MB(), K.MB()
     rng = random.Random(f"{SEED}-{base}")
-    info = M.BUILDERS[tipo](body, roof, cm, v, facade, plan, rng)
+    M.EAVE = plan.get("eave")
+    try:
+        info = M.BUILDERS[tipo](body, roof, cm, v, facade, plan, rng)
+    finally:
+        M.EAVE = None
     lmb = K.MB()
     M.lod2(lmb, tipo, plan, info)
     meb, mer = mb_mesh(f"{base}_Body", body), mb_mesh(f"{base}_Roof", roof)

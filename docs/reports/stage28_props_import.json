@@ -1,0 +1,1094 @@
+{
+ "blend": "blender/concordia_props_v01.blend",
+ "batch": "Mercado (Posada, Casa del Registro, Gran Subasta)",
+ "props": {
+  "PROP_Q_Table_Large": {
+   "use": "Posada: mesa larga",
+   "source": "q",
+   "key": "Table_Large",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/Table_Large.gltf",
+   "tris_original": 986,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Trim_Furniture",
+    "MI_Trim_Metal"
+   ],
+   "materials": [
+    "MAT_Wood_Dark",
+    "MAT_Iron_Black"
+   ],
+   "tris": 986,
+   "size_m": [
+    2.848,
+    1.097,
+    0.813
+   ],
+   "colonly": true
+  },
+  "PROP_Q_Chair_1": {
+   "use": "Posada / Registro: silla",
+   "source": "q",
+   "key": "Chair_1",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/Chair_1.gltf",
+   "tris_original": 496,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Trim_Furniture",
+    "MI_Trim_Metal"
+   ],
+   "materials": [
+    "MAT_Wood_Dark",
+    "MAT_Iron_Black"
+   ],
+   "tris": 496,
+   "size_m": [
+    0.581,
+    0.549,
+    1.123
+   ],
+   "colonly": true
+  },
+  "PROP_Q_Bench": {
+   "use": "Posada: banco",
+   "source": "q",
+   "key": "Bench",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/Bench.gltf",
+   "tris_original": 404,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Trim_Furniture",
+    "MI_Trim_Metal"
+   ],
+   "materials": [
+    "MAT_Wood_Dark",
+    "MAT_Iron_Black"
+   ],
+   "tris": 404,
+   "size_m": [
+    2.777,
+    0.534,
+    0.533
+   ],
+   "colonly": true
+  },
+  "PROP_Q_Stool": {
+   "use": "Posada: taburete",
+   "source": "q",
+   "key": "Stool",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/Stool.gltf",
+   "tris_original": 152,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Trim_Furniture"
+   ],
+   "materials": [
+    "MAT_Wood_Dark"
+   ],
+   "tris": 152,
+   "size_m": [
+    0.475,
+    0.475,
+    0.589
+   ],
+   "colonly": true
+  },
+  "PROP_Q_Barrel_Holder": {
+   "use": "Posada: barril en soporte",
+   "source": "q",
+   "key": "Barrel_Holder",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/Barrel_Holder.gltf",
+   "tris_original": 2676,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Trim_Furniture",
+    "MI_Trim_Metal"
+   ],
+   "materials": [
+    "MAT_Wood_Dark__N_Q_Barrel_Holder",
+    "MAT_Iron_Black__N_Q_Barrel_Holder"
+   ],
+   "normal_map": "textures/props/PROP_Q_Barrel_Holder_normal_1k.png",
+   "decimated_to": 1480,
+   "tris": 1480,
+   "size_m": [
+    1.355,
+    0.744,
+    1.265
+   ],
+   "colonly": true
+  },
+  "PROP_Q_Mug": {
+   "use": "Posada: jarra",
+   "source": "q",
+   "key": "Mug",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/Mug.gltf",
+   "tris_original": 268,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Trim_Furniture",
+    "MI_Trim_Metal"
+   ],
+   "materials": [
+    "MAT_Iron_Black",
+    "MAT_Wood_Dark"
+   ],
+   "tris": 268,
+   "size_m": [
+    0.192,
+    0.147,
+    0.184
+   ]
+  },
+  "PROP_Q_Table_Plate": {
+   "use": "Posada: plato",
+   "source": "q",
+   "key": "Table_Plate",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/Table_Plate.gltf",
+   "tris_original": 172,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Trim_Metal"
+   ],
+   "materials": [
+    "MAT_Bronze_Aged"
+   ],
+   "tris": 172,
+   "size_m": [
+    0.333,
+    0.337,
+    0.02
+   ]
+  },
+  "PROP_Q_Table_Knife": {
+   "use": "Posada: cuchillo",
+   "source": "q",
+   "key": "Table_Knife",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/Table_Knife.gltf",
+   "tris_original": 54,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Trim_Metal"
+   ],
+   "materials": [
+    "MAT_Iron_Black"
+   ],
+   "tris": 54,
+   "size_m": [
+    0.042,
+    0.287,
+    0.006
+   ]
+  },
+  "PROP_Q_Table_Fork": {
+   "use": "Posada: tenedor",
+   "source": "q",
+   "key": "Table_Fork",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/Table_Fork.gltf",
+   "tris_original": 108,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Trim_Metal"
+   ],
+   "materials": [
+    "MAT_Iron_Black"
+   ],
+   "tris": 108,
+   "size_m": [
+    0.05,
+    0.263,
+    0.006
+   ]
+  },
+  "PROP_Q_Table_Spoon": {
+   "use": "Posada: cuchara",
+   "source": "q",
+   "key": "Table_Spoon",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/Table_Spoon.gltf",
+   "tris_original": 164,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Trim_Metal"
+   ],
+   "materials": [
+    "MAT_Iron_Black"
+   ],
+   "tris": 164,
+   "size_m": [
+    0.046,
+    0.272,
+    0.018
+   ]
+  },
+  "PROP_Q_Candle_1": {
+   "use": "Posada / Registro: vela",
+   "source": "q",
+   "key": "Candle_1",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/Candle_1.gltf",
+   "tris_original": 212,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Trim_Props"
+   ],
+   "materials": [
+    "MAT_Limestone_Light"
+   ],
+   "tris": 212,
+   "size_m": [
+    0.094,
+    0.108,
+    0.132
+   ]
+  },
+  "PROP_Q_CandleStick": {
+   "use": "Posada / Registro: candelero",
+   "source": "q",
+   "key": "CandleStick",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/CandleStick.gltf",
+   "tris_original": 730,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Trim_Metal"
+   ],
+   "materials": [
+    "MAT_Bronze_Aged"
+   ],
+   "tris": 730,
+   "size_m": [
+    0.261,
+    0.179,
+    0.155
+   ]
+  },
+  "PROP_Q_Chandelier": {
+   "use": "Posada: lampara de techo",
+   "source": "q",
+   "key": "Chandelier",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/Chandelier.gltf",
+   "tris_original": 5680,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Trim_Furniture",
+    "MI_Trim_Metal",
+    "MI_Trim_Props_Vertex"
+   ],
+   "materials": [
+    "MAT_Iron_Black__N_Q_Chandelier",
+    "MAT_Wood_Dark__N_Q_Chandelier",
+    "MAT_Hide_R05__N_Q_Chandelier",
+    "MAT_Limestone_Light__N_Q_Chandelier"
+   ],
+   "normal_map": "textures/props/PROP_Q_Chandelier_normal_1k.png",
+   "decimated_to": 1479,
+   "tris": 1479,
+   "size_m": [
+    1.303,
+    1.303,
+    1.464
+   ],
+   "colonly": true
+  },
+  "PROP_Q_Workbench_Drawers": {
+   "use": "Registro: cajonera del escritorio",
+   "source": "q",
+   "key": "Workbench_Drawers",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/Workbench_Drawers.gltf",
+   "tris_original": 364,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Trim_Furniture",
+    "MI_Trim_Metal"
+   ],
+   "materials": [
+    "MAT_Wood_Dark",
+    "MAT_Iron_Black"
+   ],
+   "tris": 364,
+   "size_m": [
+    0.423,
+    0.299,
+    0.242
+   ],
+   "colonly": true
+  },
+  "PROP_Q_Shelf_Simple": {
+   "use": "Registro: estante",
+   "source": "q",
+   "key": "Shelf_Simple",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/Shelf_Simple.gltf",
+   "tris_original": 480,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Trim_Furniture"
+   ],
+   "materials": [
+    "MAT_Wood_Dark"
+   ],
+   "tris": 480,
+   "size_m": [
+    1.184,
+    0.292,
+    0.309
+   ],
+   "colonly": true
+  },
+  "PROP_Q_BookGroup_Medium_1": {
+   "use": "Registro: libros en estante",
+   "source": "q",
+   "key": "BookGroup_Medium_1",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/BookGroup_Medium_1.gltf",
+   "tris_original": 416,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Trim_Props_Vertex"
+   ],
+   "materials": [
+    "MAT_Cloth_Patch_C",
+    "MAT_Cloth_Patch_A",
+    "MAT_Felt_R05",
+    "MAT_Hide_R05"
+   ],
+   "tris": 416,
+   "size_m": [
+    1.063,
+    0.247,
+    0.298
+   ]
+  },
+  "PROP_Q_BookStand": {
+   "use": "Registro: atril",
+   "source": "q",
+   "key": "BookStand",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/BookStand.gltf",
+   "tris_original": 1526,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Trim_Furniture"
+   ],
+   "materials": [
+    "MAT_Wood_Dark"
+   ],
+   "tris": 1526,
+   "size_m": [
+    0.507,
+    0.511,
+    1.447
+   ],
+   "colonly": true
+  },
+  "PROP_Q_Scroll_1": {
+   "use": "Registro: pergamino",
+   "source": "q",
+   "key": "Scroll_1",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/Scroll_1.gltf",
+   "tris_original": 512,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Page_Empty",
+    "MI_Trim_Props_Vertex"
+   ],
+   "materials": [
+    "MAT_Hide_R05"
+   ],
+   "tris": 512,
+   "size_m": [
+    0.244,
+    0.063,
+    0.059
+   ]
+  },
+  "PROP_Q_Scroll_2": {
+   "use": "Registro: pergamino abierto",
+   "source": "q",
+   "key": "Scroll_2",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/Scroll_2.gltf",
+   "tris_original": 672,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Page_Empty",
+    "MI_Trim_Props_Vertex"
+   ],
+   "materials": [
+    "MAT_Hide_R05"
+   ],
+   "tris": 672,
+   "size_m": [
+    0.233,
+    0.064,
+    0.059
+   ]
+  },
+  "PROP_Q_Book_Stack_1": {
+   "use": "Registro: pila de libros",
+   "source": "q",
+   "key": "Book_Stack_1",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/Book_Stack_1.gltf",
+   "tris_original": 208,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Trim_Props_Vertex"
+   ],
+   "materials": [
+    "MAT_Cloth_Patch_C",
+    "MAT_Cloth_Patch_A",
+    "MAT_Hide_R05",
+    "MAT_Felt_R05"
+   ],
+   "tris": 208,
+   "size_m": [
+    0.285,
+    0.226,
+    0.214
+   ]
+  },
+  "PROP_Q_Book_Stack_2": {
+   "use": "Registro: pila de libros con cierre",
+   "source": "q",
+   "key": "Book_Stack_2",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/Book_Stack_2.gltf",
+   "tris_original": 446,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Trim_Metal",
+    "MI_Trim_Props_Vertex"
+   ],
+   "materials": [
+    "MAT_Felt_R05",
+    "MAT_Cloth_Patch_A",
+    "MAT_Cloth_Patch_C",
+    "MAT_Hide_R05",
+    "MAT_Limestone_Light",
+    "MAT_Iron_Black"
+   ],
+   "tris": 446,
+   "size_m": [
+    0.274,
+    0.227,
+    0.198
+   ]
+  },
+  "PROP_Q_Chest_Wood": {
+   "use": "Gran Subasta: arcon de lotes",
+   "source": "q",
+   "key": "Chest_Wood",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/Chest_Wood.gltf",
+   "tris_original": 2546,
+   "scale": 0.784,
+   "src_materials": [
+    "MI_Trim_Furniture",
+    "MI_Trim_Metal"
+   ],
+   "materials": [
+    "MAT_Wood_Dark__N_Q_Chest_Wood",
+    "MAT_Iron_Black__N_Q_Chest_Wood"
+   ],
+   "normal_map": "textures/props/PROP_Q_Chest_Wood_normal_1k.png",
+   "decimated_to": 1480,
+   "tris": 1480,
+   "size_m": [
+    1.0,
+    0.592,
+    0.561
+   ],
+   "colonly": true
+  },
+  "PROP_Q_Coin_Pile": {
+   "use": "Gran Subasta: monedas",
+   "source": "q",
+   "key": "Coin_Pile",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/Coin_Pile.gltf",
+   "tris_original": 960,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Trim_Metal_Vertex"
+   ],
+   "materials": [
+    "MAT_Bronze_Aged"
+   ],
+   "tris": 960,
+   "size_m": [
+    0.197,
+    0.154,
+    0.073
+   ]
+  },
+  "PROP_Q_Pouch_Large": {
+   "use": "Gran Subasta: bolsa de monedas",
+   "source": "q",
+   "key": "Pouch_Large",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/Pouch_Large.gltf",
+   "tris_original": 730,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Trim_Metal",
+    "MI_Trim_Props_Vertex"
+   ],
+   "materials": [
+    "MAT_Hide_R05",
+    "MAT_Bronze_Aged"
+   ],
+   "tris": 730,
+   "size_m": [
+    0.225,
+    0.12,
+    0.159
+   ]
+  },
+  "PROP_Q_Bag": {
+   "use": "Gran Subasta / puestos: saco",
+   "source": "q",
+   "key": "Bag",
+   "author": "Quaternius",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "mirror": "https://opengameart.org/content/fantasy-props-megakit",
+   "license": "CC0 1.0 (License_Standard.txt)",
+   "pack": "Fantasy Props MegaKit (Standard)",
+   "file": "Exports/glTF/Bag.gltf",
+   "tris_original": 858,
+   "scale": 1.0,
+   "src_materials": [
+    "MI_Trim_Cloth",
+    "MI_Trim_Furniture"
+   ],
+   "materials": [
+    "MAT_Cloth_Patch_A",
+    "MAT_Wood_Dark"
+   ],
+   "tris": 858,
+   "size_m": [
+    0.655,
+    0.544,
+    0.799
+   ],
+   "colonly": true
+  },
+  "PROP_AV_Village_Hearth": {
+   "use": "Posada: hogar",
+   "source": "av",
+   "key": "1b9b17a3cb0f44dd9141e70fba061c71",
+   "author": "Avramania",
+   "url": "https://sketchfab.com/3d-models/village-hearth-low-poly-medieval-cc0-1b9b17a3cb0f44dd9141e70fba061c71",
+   "license": "CC0 Public Domain",
+   "license_checked": "2026-11-11",
+   "page_license_text": "CC0 - Download Free 3D model by Avramania [1b9b17a] - Sketchfab",
+   "file": "1b9b17a3cb0f44dd9141e70fba061c71/model.glb",
+   "sketchfab_name": "Village Hearth - Low Poly Medieval, CC0",
+   "tris_original": 588,
+   "scale": 1.0,
+   "src_materials": [
+    "mdvl_palette"
+   ],
+   "materials": [
+    "MAT_Ash_Gray",
+    "MAT_Wood_Light",
+    "MAT_Straw",
+    "MAT_Wood_Dark",
+    "MAT_Limestone_Light",
+    "MAT_Iron_Black"
+   ],
+   "palette_map": {
+    "(0.48, 0.45, 0.41)": "MAT_Ash_Gray",
+    "(0.58, 0.54, 0.49)": "MAT_Wood_Light",
+    "(0.36, 0.33, 0.3)": "MAT_Straw",
+    "(0.29, 0.21, 0.14)": "MAT_Wood_Dark",
+    "(0.85, 0.82, 0.77)": "MAT_Limestone_Light",
+    "(0.42, 0.29, 0.18)": "MAT_Straw",
+    "(0.14, 0.13, 0.12)": "MAT_Iron_Black",
+    "(0.42, 0.4, 0.38)": "MAT_Ash_Gray"
+   },
+   "tris": 588,
+   "size_m": [
+    1.56,
+    0.92,
+    2.4
+   ],
+   "colonly": true
+  },
+  "PROP_AV_Potcrane": {
+   "use": "Posada: pescante del hogar",
+   "source": "av",
+   "key": "d041cc0462ab4da6be30fff811765685",
+   "author": "Avramania",
+   "url": "https://sketchfab.com/3d-models/potcrane-low-poly-medieval-cc0-d041cc0462ab4da6be30fff811765685",
+   "license": "CC0 Public Domain",
+   "license_checked": "2026-11-11",
+   "page_license_text": "CC0 - Download Free 3D model by Avramania [d041cc0] - Sketchfab",
+   "file": "d041cc0462ab4da6be30fff811765685/model.glb",
+   "sketchfab_name": "Potcrane - Low Poly Medieval, CC0",
+   "tris_original": 1028,
+   "scale": 1.0,
+   "src_materials": [
+    "mdvl_palette"
+   ],
+   "materials": [
+    "MAT_Straw",
+    "MAT_Wood_Light",
+    "MAT_Wood_Dark",
+    "MAT_Iron_Black"
+   ],
+   "palette_map": {
+    "(0.49, 0.35, 0.26)": "MAT_Straw",
+    "(0.66, 0.48, 0.31)": "MAT_Wood_Light",
+    "(0.29, 0.32, 0.34)": "MAT_Wood_Dark",
+    "(0.18, 0.2, 0.22)": "MAT_Iron_Black"
+   },
+   "tris": 1028,
+   "size_m": [
+    0.21,
+    0.96,
+    1.43
+   ],
+   "colonly": true
+  },
+  "PROP_AV_Bed": {
+   "use": "Posada: cama",
+   "source": "av",
+   "key": "24704040010a42ceaeffb1631ed1ae9b",
+   "author": "Avramania",
+   "url": "https://sketchfab.com/3d-models/bed-low-poly-medieval-cc0-24704040010a42ceaeffb1631ed1ae9b",
+   "license": "CC0 Public Domain",
+   "license_checked": "2026-11-11",
+   "page_license_text": "CC0 - Download Free 3D model by Avramania [2470404] - Sketchfab",
+   "file": "24704040010a42ceaeffb1631ed1ae9b/model.glb",
+   "sketchfab_name": "Bed - Low Poly Medieval, CC0",
+   "tris_original": 1056,
+   "scale": 1.0,
+   "src_materials": [
+    "mdvl_palette"
+   ],
+   "materials": [
+    "MAT_Straw",
+    "MAT_Wood_Dark",
+    "MAT_Limestone_Worn",
+    "MAT_Iron_Black",
+    "MAT_Ash_Gray",
+    "MAT_Limestone_Light"
+   ],
+   "palette_map": {
+    "(0.42, 0.29, 0.18)": "MAT_Straw",
+    "(0.29, 0.21, 0.14)": "MAT_Wood_Dark",
+    "(0.85, 0.75, 0.54)": "MAT_Limestone_Worn",
+    "(0.13, 0.22, 0.38)": "MAT_Iron_Black",
+    "(0.64, 0.23, 0.2)": "MAT_Straw",
+    "(0.21, 0.33, 0.55)": "MAT_Ash_Gray",
+    "(0.91, 0.87, 0.78)": "MAT_Limestone_Light"
+   },
+   "tris": 1056,
+   "size_m": [
+    1.974,
+    1.274,
+    1.19
+   ],
+   "colonly": true
+  },
+  "PROP_AV_Table": {
+   "use": "Registro: mesa del escritorio",
+   "source": "av",
+   "key": "bd0ad320c35249b9b1a37e2adc061bb9",
+   "author": "Avramania",
+   "url": "https://sketchfab.com/3d-models/table-low-poly-medieval-cc0-bd0ad320c35249b9b1a37e2adc061bb9",
+   "license": "CC0 Public Domain",
+   "license_checked": "2026-11-11",
+   "page_license_text": "CC0 - Download Free 3D model by Avramania [bd0ad32] - Sketchfab",
+   "file": "bd0ad320c35249b9b1a37e2adc061bb9/model.glb",
+   "sketchfab_name": "Table - Low Poly Medieval, CC0",
+   "tris_original": 464,
+   "scale": 1.0,
+   "src_materials": [
+    "mdvl_palette"
+   ],
+   "materials": [
+    "MAT_Wood_Light",
+    "MAT_Straw"
+   ],
+   "palette_map": {
+    "(0.66, 0.48, 0.31)": "MAT_Wood_Light",
+    "(0.55, 0.39, 0.25)": "MAT_Straw"
+   },
+   "tris": 464,
+   "size_m": [
+    0.77,
+    1.39,
+    0.76
+   ],
+   "colonly": true
+  },
+  "PROP_AV_Apple": {
+   "use": "puestos: manzanas",
+   "source": "av",
+   "key": "64e25ccc90c84e3b8c2ad02dd39150ba",
+   "author": "Avramania",
+   "url": "https://sketchfab.com/3d-models/apple-low-poly-medieval-cc0-64e25ccc90c84e3b8c2ad02dd39150ba",
+   "license": "CC0 Public Domain",
+   "license_checked": "2026-11-11",
+   "page_license_text": "CC0 - Download Free 3D model by Avramania [64e25cc] - Sketchfab",
+   "file": "64e25ccc90c84e3b8c2ad02dd39150ba/model.glb",
+   "sketchfab_name": "Apple - Low Poly Medieval, CC0",
+   "tris_original": 418,
+   "scale": 1.0,
+   "src_materials": [
+    "mdvl_palette"
+   ],
+   "materials": [
+    "MAT_Straw",
+    "MAT_Iron_Black",
+    "MAT_Wood_Dark"
+   ],
+   "palette_map": {
+    "(0.43, 0.14, 0.12)": "MAT_Straw",
+    "(0.64, 0.23, 0.2)": "MAT_Straw",
+    "(0.23, 0.17, 0.12)": "MAT_Iron_Black",
+    "(0.24, 0.42, 0.2)": "MAT_Wood_Dark"
+   },
+   "tris": 418,
+   "size_m": [
+    0.085,
+    0.084,
+    0.084
+   ]
+  },
+  "PROP_AV_Carrot": {
+   "use": "puestos: zanahorias",
+   "source": "av",
+   "key": "3f3b24dd3bf24ce49b518bfbd5ec93df",
+   "author": "Avramania",
+   "url": "https://sketchfab.com/3d-models/carrot-low-poly-medieval-cc0-3f3b24dd3bf24ce49b518bfbd5ec93df",
+   "license": "CC0 Public Domain",
+   "license_checked": "2026-11-11",
+   "page_license_text": "CC0 - Download Free 3D model by Avramania [3f3b24d] - Sketchfab",
+   "file": "3f3b24dd3bf24ce49b518bfbd5ec93df/model.glb",
+   "sketchfab_name": "Carrot - Low Poly Medieval, CC0",
+   "tris_original": 370,
+   "scale": 1.0,
+   "src_materials": [
+    "mdvl_palette"
+   ],
+   "materials": [
+    "MAT_Roof_Tile_Ocher",
+    "MAT_Limestone_Worn",
+    "MAT_Ash_Gray"
+   ],
+   "palette_map": {
+    "(0.82, 0.46, 0.16)": "MAT_Roof_Tile_Ocher",
+    "(0.81, 0.86, 0.63)": "MAT_Limestone_Worn",
+    "(0.66, 0.48, 0.31)": "MAT_Roof_Tile_Ocher",
+    "(0.34, 0.54, 0.25)": "MAT_Ash_Gray",
+    "(0.5, 0.66, 0.24)": "MAT_Roof_Tile_Ocher"
+   },
+   "tris": 370,
+   "size_m": [
+    0.232,
+    0.112,
+    0.062
+   ]
+  },
+  "PROP_AV_Onion": {
+   "use": "puestos: cebollas",
+   "source": "av",
+   "key": "a8a9568469524a548ca730b1058de3ef",
+   "author": "Avramania",
+   "url": "https://sketchfab.com/3d-models/onion-low-poly-medieval-cc0-a8a9568469524a548ca730b1058de3ef",
+   "license": "CC0 Public Domain",
+   "license_checked": "2026-11-11",
+   "page_license_text": "CC0 - Download Free 3D model by Avramania [a8a9568] - Sketchfab",
+   "file": "a8a9568469524a548ca730b1058de3ef/model.glb",
+   "sketchfab_name": "Onion - Low Poly Medieval, CC0",
+   "tris_original": 386,
+   "scale": 1.0,
+   "src_materials": [
+    "mdvl_palette"
+   ],
+   "materials": [
+    "MAT_Wood_Light",
+    "MAT_Roof_Tile_Ocher",
+    "MAT_Limestone_Light"
+   ],
+   "palette_map": {
+    "(0.75, 0.6, 0.37)": "MAT_Wood_Light",
+    "(0.6, 0.42, 0.29)": "MAT_Roof_Tile_Ocher",
+    "(0.83, 0.71, 0.37)": "MAT_Wood_Light",
+    "(0.89, 0.84, 0.71)": "MAT_Limestone_Light"
+   },
+   "tris": 386,
+   "size_m": [
+    0.077,
+    0.076,
+    0.101
+   ]
+  },
+  "PROP_AV_Loaf": {
+   "use": "puestos: pan",
+   "source": "av",
+   "key": "fe8f28bcadaf44a7836e12fe30f9a3dd",
+   "author": "Avramania",
+   "url": "https://sketchfab.com/3d-models/loaf-low-poly-medieval-cc0-fe8f28bcadaf44a7836e12fe30f9a3dd",
+   "license": "CC0 Public Domain",
+   "license_checked": "2026-11-11",
+   "page_license_text": "CC0 - Download Free 3D model by Avramania [fe8f28b] - Sketchfab",
+   "file": "fe8f28bcadaf44a7836e12fe30f9a3dd/model.glb",
+   "sketchfab_name": "Loaf - Low Poly Medieval, CC0",
+   "tris_original": 350,
+   "scale": 1.0,
+   "src_materials": [
+    "mdvl_palette"
+   ],
+   "materials": [
+    "MAT_Roof_Tile_Ocher",
+    "MAT_Limestone_Light"
+   ],
+   "palette_map": {
+    "(0.71, 0.47, 0.24)": "MAT_Roof_Tile_Ocher",
+    "(0.92, 0.85, 0.68)": "MAT_Limestone_Light",
+    "(0.94, 0.92, 0.88)": "MAT_Limestone_Light"
+   },
+   "tris": 350,
+   "size_m": [
+    0.22,
+    0.214,
+    0.113
+   ]
+  },
+  "PROP_AV_Cheese_Wheel": {
+   "use": "puestos: queso",
+   "source": "av",
+   "key": "c66175e51d044dfda9e6edff21d4d38a",
+   "author": "Avramania",
+   "url": "https://sketchfab.com/3d-models/cheese-wheel-low-poly-medieval-cc0-c66175e51d044dfda9e6edff21d4d38a",
+   "license": "CC0 Public Domain",
+   "license_checked": "2026-11-11",
+   "page_license_text": "CC0 - Download Free 3D model by Avramania [c66175e] - Sketchfab",
+   "file": "c66175e51d044dfda9e6edff21d4d38a/model.glb",
+   "sketchfab_name": "Cheese Wheel - Low Poly Medieval, CC0",
+   "tris_original": 1270,
+   "scale": 1.0,
+   "src_materials": [
+    "mdvl_palette"
+   ],
+   "materials": [
+    "MAT_Wood_Light",
+    "MAT_Limestone_Worn",
+    "MAT_Roof_Tile_Ocher"
+   ],
+   "palette_map": {
+    "(0.88, 0.6, 0.17)": "MAT_Wood_Light",
+    "(0.85, 0.75, 0.54)": "MAT_Limestone_Worn",
+    "(0.66, 0.48, 0.31)": "MAT_Roof_Tile_Ocher"
+   },
+   "tris": 1270,
+   "size_m": [
+    0.292,
+    0.3,
+    0.112
+   ]
+  },
+  "PROP_AV_Grapes": {
+   "use": "puestos: uvas",
+   "source": "av",
+   "key": "cc950686a4dc4ac89edda92b21afca11",
+   "author": "Avramania",
+   "url": "https://sketchfab.com/3d-models/grapes-low-poly-medieval-cc0-cc950686a4dc4ac89edda92b21afca11",
+   "license": "CC0 Public Domain",
+   "license_checked": "2026-11-11",
+   "page_license_text": "CC0 - Download Free 3D model by Avramania [cc95068] - Sketchfab",
+   "file": "cc950686a4dc4ac89edda92b21afca11/model.glb",
+   "sketchfab_name": "Grapes - Low Poly Medieval, CC0",
+   "tris_original": 708,
+   "scale": 1.0,
+   "src_materials": [
+    "mdvl_palette"
+   ],
+   "materials": [
+    "MAT_Iron_Black",
+    "MAT_Ash_Gray",
+    "MAT_Straw",
+    "MAT_Wood_Dark"
+   ],
+   "palette_map": {
+    "(0.13, 0.22, 0.38)": "MAT_Iron_Black",
+    "(0.36, 0.23, 0.44)": "MAT_Ash_Gray",
+    "(0.42, 0.29, 0.18)": "MAT_Straw",
+    "(0.24, 0.42, 0.2)": "MAT_Wood_Dark"
+   },
+   "tris": 708,
+   "size_m": [
+    0.084,
+    0.091,
+    0.179
+   ]
+  },
+  "PROP_AV_Grain_Sack": {
+   "use": "puestos: saco de grano",
+   "source": "av",
+   "key": "7db2a14529fd4e1f9391c68337f71eac",
+   "author": "Avramania",
+   "url": "https://sketchfab.com/3d-models/grain-sack-low-poly-medieval-cc0-7db2a14529fd4e1f9391c68337f71eac",
+   "license": "CC0 Public Domain",
+   "license_checked": "2026-11-11",
+   "page_license_text": "CC0 - Download Free 3D model by Avramania [7db2a14] - Sketchfab",
+   "file": "7db2a14529fd4e1f9391c68337f71eac/model.glb",
+   "sketchfab_name": "Grain Sack - Low Poly Medieval, CC0",
+   "tris_original": 938,
+   "scale": 1.0,
+   "src_materials": [
+    "mdvl_palette"
+   ],
+   "materials": [
+    "MAT_Straw",
+    "MAT_Roof_Tile_Ocher",
+    "MAT_Wood_Light",
+    "MAT_Limestone_Worn"
+   ],
+   "palette_map": {
+    "(0.42, 0.35, 0.22)": "MAT_Straw",
+    "(0.66, 0.57, 0.37)": "MAT_Roof_Tile_Ocher",
+    "(0.85, 0.64, 0.25)": "MAT_Wood_Light",
+    "(0.83, 0.71, 0.37)": "MAT_Wood_Light",
+    "(0.79, 0.71, 0.58)": "MAT_Limestone_Worn",
+    "(0.55, 0.39, 0.25)": "MAT_Straw",
+    "(0.42, 0.29, 0.18)": "MAT_Straw"
+   },
+   "tris": 938,
+   "size_m": [
+    0.36,
+    0.348,
+    0.517
+   ],
+   "colonly": true
+  }
+ },
+ "skipped": [],
+ "total_tris": 22933,
+ "export": {
+  "file": "export/godot/props_int_mercado.glb",
+  "mb": 2.49,
+  "nodes": 52,
+  "meshes": 52,
+  "tris": 23125,
+  "materials": 21,
+  "images": 25,
+  "images_external": 25,
+  "colliders": 16,
+  "navmesh": 0,
+  "occluders": 0,
+  "empties": 0
+ }
+}

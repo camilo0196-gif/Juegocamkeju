@@ -1,0 +1,572 @@
+{
+ "source": "blender/concordia_v26.blend",
+ "props_blend": "blender/concordia_props_v01.blend",
+ "imported_props_tris": {
+  "PROP_AV_Table": 464,
+  "PROP_Q_Chair_1": 496,
+  "PROP_Q_Stool": 152,
+  "PROP_Q_Chest_Wood": 1480,
+  "PROP_Q_Candle_1": 212,
+  "PROP_Q_CandleStick": 730,
+  "PROP_Q_Mug": 268,
+  "PROP_AV_Grain_Sack": 938,
+  "PROP_Herb_Rack": 436
+ },
+ "kit_tris": {
+  "INT_Floor_Stone": 10,
+  "INT_Floor_Stone_B": 30,
+  "INT_Floor_Planks": 40,
+  "INT_Floor_Planks_B": 40,
+  "INT_Wall_Plaster": 16,
+  "INT_Wall_Plaster_B": 26,
+  "INT_Wall_Stone": 108,
+  "INT_Wall_Stone_B": 108,
+  "INT_Wall_Panel": 66,
+  "INT_Wall_Panel_B": 66,
+  "INT_Beam_Straight": 12,
+  "INT_Beam_Cross": 40,
+  "INT_Arch_3m": 236,
+  "INT_Arch_6m": 236,
+  "INT_Pillar": 30,
+  "INT_Stairs_Int": 136,
+  "INT_Door_Int": 98,
+  "INT_Door_Int_Iron": 130,
+  "INT_Window_Int": 92,
+  "INT_Fireplace": 70,
+  "INT_Counter_Straight": 42,
+  "INT_Counter_Straight_B": 42,
+  "INT_Counter_Corner": 22,
+  "INT_Grille": 142,
+  "INT_Grille_Wicket": 154,
+  "INT_Grille_Teller": 104,
+  "INT_Railing": 78,
+  "INT_Trim": 20
+ },
+ "house_props_tris": {
+  "MOR_Workbench": 88,
+  "MOR_Bed_Simple": 58,
+  "MOR_Planter": 195
+ },
+ "trophy_cases": {
+  "pared": {
+   "LOD0": 128,
+   "slots": 9,
+   "_LOD1": 82,
+   "_LOD2": 18
+  },
+  "mesa": {
+   "LOD0": 132,
+   "slots": 6,
+   "_LOD1": 120,
+   "_LOD2": 20
+  },
+  "nichos": {
+   "LOD0": 230,
+   "slots": 9,
+   "_LOD1": 86,
+   "_LOD2": 18
+  }
+ },
+ "templates": {
+  "habitacion": {
+   "size_m": [
+    4.0,
+    5.0,
+    2.7
+   ],
+   "budget": 8000,
+   "walls": "revoco sobre zocalo de tablas",
+   "window": "-Y (postigo y luz calida)",
+   "near_walls": {
+    "WALL_Near_A": "+X",
+    "WALL_Near_B": "+Y"
+   },
+   "rays_cam_iso": {
+    "MARKER_Interact_Chest": {
+     "points": 9,
+     "pct": 100.0,
+     "blockers": {}
+    },
+    "MARKER_TrophyCase": {
+     "points": 9,
+     "pct": 100.0,
+     "blockers": {}
+    }
+   },
+   "navmesh": {
+    "faces": 108,
+    "reached_faces": 108,
+    "keys": {
+     "spawn": {
+      "reachable": true,
+      "dist_to_nav_m": 0.23
+     },
+     "baul": {
+      "reachable": true,
+      "dist_to_nav_m": 0.29
+     },
+     "vitrina": {
+      "reachable": true,
+      "dist_to_nav_m": 0.23
+     },
+     "mesa": {
+      "reachable": true,
+      "dist_to_nav_m": 0.34
+     }
+    }
+   },
+   "corridors_1.2m": {
+    "planta_baja": {
+     "start_clearance_m": 1.2,
+     "reachable_with_1.2m": {
+      "spawn": true,
+      "baul": true,
+      "vitrina": true,
+      "mesa": true
+     }
+    }
+   },
+   "tris": {
+    "total": 3366,
+    "budget": 8000,
+    "ok": true,
+    "by_group": {
+     "Shell": 450,
+     "WALL_Near_A": 132,
+     "WALL_Near_B": 230,
+     "CEILING": 58,
+     "Furniture": 2496,
+     "Lights": 0,
+     "Markers": 0
+    }
+   },
+   "markers": [
+    "MARKER_Decor_Slot_01",
+    "MARKER_Decor_Slot_02",
+    "MARKER_Decor_Slot_03",
+    "MARKER_Decor_Slot_04",
+    "MARKER_Interact_Chest",
+    "MARKER_Interact_TrophyCase",
+    "MARKER_Interior_Exit",
+    "MARKER_Interior_Spawn",
+    "MARKER_TrophyCase"
+   ],
+   "trophy_slots": [
+    "MARKER_Trophy_Slot_01",
+    "MARKER_Trophy_Slot_02",
+    "MARKER_Trophy_Slot_03",
+    "MARKER_Trophy_Slot_04",
+    "MARKER_Trophy_Slot_05",
+    "MARKER_Trophy_Slot_06",
+    "MARKER_Trophy_Slot_07",
+    "MARKER_Trophy_Slot_08",
+    "MARKER_Trophy_Slot_09"
+   ],
+   "lights": {
+    "LIGHT_Candle": [
+     "#FFA650",
+     0.35
+    ],
+    "LIGHT_Shard": [
+     "#8FD0FF",
+     0.25
+    ],
+    "LIGHT_Window": [
+     "#FFE6C4",
+     0.45
+    ]
+   },
+   "blue_lights": 1,
+   "export": {
+    "file": "export/godot/int_morada_habitacion.glb",
+    "mb": 0.405,
+    "nodes": 43,
+    "meshes": 13,
+    "tris": 3702,
+    "materials": 17,
+    "images": 28,
+    "images_external": 28,
+    "colliders": 1,
+    "navmesh": 1,
+    "occluders": 0,
+    "empties": 30
+   }
+  },
+  "casa_pequena": {
+   "size_m": [
+    6.0,
+    8.0,
+    2.7
+   ],
+   "budget": 15000,
+   "patio_m": [
+    6.0,
+    2.5
+   ],
+   "house_m": [
+    6.0,
+    5.5
+   ],
+   "partition": "WALL_Near_Casa",
+   "near_walls": {
+    "WALL_Near_A": "+X",
+    "WALL_Near_B": "+Y"
+   },
+   "rays_cam_iso": {
+    "MARKER_Interact_Chest": {
+     "points": 9,
+     "pct": 100.0,
+     "blockers": {}
+    },
+    "MARKER_TrophyCase": {
+     "points": 9,
+     "pct": 100.0,
+     "blockers": {}
+    },
+    "MARKER_WorkStation_01": {
+     "points": 9,
+     "pct": 100.0,
+     "blockers": {}
+    }
+   },
+   "navmesh": {
+    "faces": 258,
+    "reached_faces": 258,
+    "keys": {
+     "spawn": {
+      "reachable": true,
+      "dist_to_nav_m": 0.23
+     },
+     "patio": {
+      "reachable": true,
+      "dist_to_nav_m": 0.28
+     },
+     "baul": {
+      "reachable": true,
+      "dist_to_nav_m": 0.39
+     },
+     "mesa_trabajo": {
+      "reachable": true,
+      "dist_to_nav_m": 0.38
+     },
+     "vitrina": {
+      "reachable": true,
+      "dist_to_nav_m": 0.14
+     },
+     "hogar": {
+      "reachable": true,
+      "dist_to_nav_m": 0.34
+     },
+     "cama": {
+      "reachable": true,
+      "dist_to_nav_m": 0.36
+     }
+    }
+   },
+   "corridors_1.2m": {
+    "planta_baja": {
+     "start_clearance_m": 1.0,
+     "reachable_with_1.2m": {
+      "spawn": true,
+      "patio": true,
+      "baul": true,
+      "mesa_trabajo": true,
+      "vitrina": true,
+      "hogar": true,
+      "cama": true
+     }
+    }
+   },
+   "tris": {
+    "total": 7332,
+    "budget": 15000,
+    "ok": true,
+    "by_group": {
+     "Shell": 978,
+     "WALL_Near_A": 264,
+     "WALL_Near_B": 230,
+     "CEILING": 82,
+     "Furniture": 5548,
+     "Lights": 0,
+     "Markers": 0,
+     "WALL_Near_Casa": 230
+    }
+   },
+   "markers": [
+    "MARKER_Decor_Slot_01",
+    "MARKER_Decor_Slot_02",
+    "MARKER_Decor_Slot_03",
+    "MARKER_Decor_Slot_04",
+    "MARKER_Decor_Slot_05",
+    "MARKER_Decor_Slot_06",
+    "MARKER_Interact_Chest",
+    "MARKER_Interact_TrophyCase",
+    "MARKER_Interior_Exit",
+    "MARKER_Interior_Spawn",
+    "MARKER_TrophyCase",
+    "MARKER_WorkStation_01"
+   ],
+   "trophy_slots": [
+    "MARKER_Trophy_Slot_01",
+    "MARKER_Trophy_Slot_02",
+    "MARKER_Trophy_Slot_03",
+    "MARKER_Trophy_Slot_04",
+    "MARKER_Trophy_Slot_05",
+    "MARKER_Trophy_Slot_06",
+    "MARKER_Trophy_Slot_07",
+    "MARKER_Trophy_Slot_08",
+    "MARKER_Trophy_Slot_09"
+   ],
+   "lights": {
+    "LIGHT_Candle": [
+     "#FFA650",
+     0.35
+    ],
+    "LIGHT_Hearth": [
+     "#FF9A48",
+     1.0
+    ],
+    "LIGHT_Patio": [
+     "#FFE6C4",
+     0.6
+    ],
+    "LIGHT_Shard": [
+     "#8FD0FF",
+     0.25
+    ],
+    "LIGHT_Window": [
+     "#FFE6C4",
+     0.45
+    ]
+   },
+   "blue_lights": 1,
+   "export": {
+    "file": "export/godot/int_morada_casa_pequena.glb",
+    "mb": 0.752,
+    "nodes": 56,
+    "meshes": 19,
+    "tris": 7568,
+    "materials": 25,
+    "images": 38,
+    "images_external": 38,
+    "colliders": 1,
+    "navmesh": 1,
+    "occluders": 0,
+    "empties": 36
+   }
+  },
+  "casa_grande": {
+   "size_m": [
+    8.0,
+    10.0,
+    6.4
+   ],
+   "budget": 28000,
+   "storeys": 2,
+   "upper": "entreplanta de 4 m sobre el fondo (y < -1), suelo a 3.2 m",
+   "stair": "1.2 m de ancho junto al muro -X, 32.6 grados, rellano de 1.3 m al pie",
+   "near_walls": {
+    "WALL_Near_A": "+X",
+    "WALL_Near_B": "+Y"
+   },
+   "rays_cam_iso": {
+    "MARKER_Interact_Chest": {
+     "points": 9,
+     "pct": 100.0,
+     "blockers": {}
+    },
+    "MARKER_TrophyCase": {
+     "points": 9,
+     "pct": 100.0,
+     "blockers": {}
+    },
+    "MARKER_TrophyCase_02": {
+     "points": 9,
+     "pct": 100.0,
+     "blockers": {}
+    },
+    "MARKER_WorkStation_01": {
+     "points": 9,
+     "pct": 100.0,
+     "blockers": {}
+    },
+    "MARKER_WorkStation_02": {
+     "points": 9,
+     "pct": 100.0,
+     "blockers": {}
+    }
+   },
+   "navmesh": {
+    "faces": 858,
+    "reached_faces": 858,
+    "keys": {
+     "spawn": {
+      "reachable": true,
+      "dist_to_nav_m": 0.23
+     },
+     "sala": {
+      "reachable": true,
+      "dist_to_nav_m": 0.28
+     },
+     "baul": {
+      "reachable": true,
+      "dist_to_nav_m": 0.14
+     },
+     "taller_1": {
+      "reachable": true,
+      "dist_to_nav_m": 0.25
+     },
+     "taller_2": {
+      "reachable": true,
+      "dist_to_nav_m": 0.29
+     },
+     "vitrina": {
+      "reachable": true,
+      "dist_to_nav_m": 0.28
+     },
+     "hogar": {
+      "reachable": true,
+      "dist_to_nav_m": 0.28
+     },
+     "jardin": {
+      "reachable": true,
+      "dist_to_nav_m": 0.14
+     },
+     "dormitorio": {
+      "reachable": true,
+      "dist_to_nav_m": 0.28
+     }
+    }
+   },
+   "corridors_1.2m": {
+    "planta_baja": {
+     "start_clearance_m": 1.2,
+     "reachable_with_1.2m": {
+      "spawn": true,
+      "sala": true,
+      "baul": true,
+      "taller_1": true,
+      "taller_2": true,
+      "vitrina": true,
+      "hogar": true,
+      "jardin": true
+     }
+    },
+    "planta_alta": {
+     "start_clearance_m": 0.7,
+     "reachable_with_1.2m": {
+      "dormitorio": true
+     }
+    }
+   },
+   "stair_deg": 32.6,
+   "tris": {
+    "total": 10857,
+    "budget": 28000,
+    "ok": true,
+    "by_group": {
+     "Shell": 2068,
+     "WALL_Near_A": 530,
+     "WALL_Near_B": 506,
+     "CEILING": 106,
+     "Furniture": 6131,
+     "Lights": 0,
+     "Markers": 0,
+     "LEVEL_1": 840,
+     "Furniture_L1": 676
+    }
+   },
+   "markers": [
+    "MARKER_Decor_Slot_01",
+    "MARKER_Decor_Slot_02",
+    "MARKER_Decor_Slot_03",
+    "MARKER_Decor_Slot_04",
+    "MARKER_Decor_Slot_05",
+    "MARKER_Decor_Slot_06",
+    "MARKER_Decor_Slot_07",
+    "MARKER_Garden",
+    "MARKER_Interact_Chest",
+    "MARKER_Interact_TrophyCase",
+    "MARKER_Interior_Exit",
+    "MARKER_Interior_Spawn",
+    "MARKER_Reception",
+    "MARKER_TrophyCase",
+    "MARKER_TrophyCase_02",
+    "MARKER_WorkStation_01",
+    "MARKER_WorkStation_02"
+   ],
+   "trophy_slots": [
+    "MARKER_Trophy_Slot_01",
+    "MARKER_Trophy_Slot_02",
+    "MARKER_Trophy_Slot_03",
+    "MARKER_Trophy_Slot_04",
+    "MARKER_Trophy_Slot_05",
+    "MARKER_Trophy_Slot_06",
+    "MARKER_Trophy_Slot_07",
+    "MARKER_Trophy_Slot_08",
+    "MARKER_Trophy_Slot_09",
+    "MARKER_Trophy_Slot_10",
+    "MARKER_Trophy_Slot_11",
+    "MARKER_Trophy_Slot_12",
+    "MARKER_Trophy_Slot_13",
+    "MARKER_Trophy_Slot_14",
+    "MARKER_Trophy_Slot_15"
+   ],
+   "lights": {
+    "LIGHT_Candle": [
+     "#FFA650",
+     0.35
+    ],
+    "LIGHT_Hearth": [
+     "#FF9A48",
+     1.0
+    ],
+    "LIGHT_Lamp_Taller": [
+     "#FFB46B",
+     0.6
+    ],
+    "LIGHT_Shard": [
+     "#8FD0FF",
+     0.25
+    ],
+    "LIGHT_Window_Alta": [
+     "#FFE6C4",
+     0.45
+    ],
+    "LIGHT_Window_Sala": [
+     "#FFE6C4",
+     0.45
+    ]
+   },
+   "blue_lights": 1,
+   "export": {
+    "file": "export/godot/int_morada_casa_grande.glb",
+    "mb": 0.96,
+    "nodes": 76,
+    "meshes": 22,
+    "tris": 11287,
+    "materials": 24,
+    "images": 38,
+    "images_external": 38,
+    "colliders": 1,
+    "navmesh": 1,
+    "occluders": 0,
+    "empties": 49
+   }
+  }
+ },
+ "trophy_export": {
+  "file": "export/godot/props_trophy_cases.glb",
+  "mb": 0.067,
+  "nodes": 33,
+  "meshes": 9,
+  "tris": 834,
+  "materials": 1,
+  "images": 1,
+  "images_external": 1,
+  "colliders": 0,
+  "navmesh": 0,
+  "occluders": 0,
+  "empties": 24
+ }
+}

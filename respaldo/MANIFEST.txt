@@ -157,5 +157,31 @@ Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | aw
       599581  01c9a372cfd7a7bf471b59c2458ed3ccecc93448aebf7ba0cc5b3b5b6ed24349  2026-11-11/binarios_git/textures/concordia/polyhaven_src/weathered_planks/weathered_planks_Diffuse_1k.jpg
       218802  a017728183597417a350d1846a5a46db9702ee6d472a21c5da2f23015d606aa3  2026-11-11/binarios_git/textures/concordia/polyhaven_src/weathered_planks/weathered_planks_Rough_1k.jpg
       681552  381d298f3194ec4961b04b4912b9b6efea4b2ff7b914dac57e24c8b6b0be6a25  2026-11-11/binarios_git/textures/concordia/polyhaven_src/weathered_planks/weathered_planks_nor_gl_1k.jpg
+    77869792  30cd490d70750b42d2dda46e218b475aea5e2fca5d8e5a3f329ade7223930730  2026-11-11/concordia_master_2026-11-11_v28.blend
+      678327  01789def2f626e9a4e522a62292d70f664a5deebe0876509a33d5ba3870ab9c8  2026-11-11/concordia_moradas_int_v01.blend
+     1543054  117fb0477debf70b899eb642c4e6081f8f82dff223afa2ff640c3c148a0cd6e0  2026-11-11/concordia_props_v01.blend
+       49944  8c6ec6fdd3de5a048a256378bbb41c3411da6ed50a3e880329440ae21c9e5fc9  2026-11-11/fuentes_assets/avramania/1b9b17a3cb0f44dd9141e70fba061c71/model.glb
+       88564  c69f07a765d99aa27664d592abc1ce4cf23d02ba5755305ab3b11885a1ee092b  2026-11-11/fuentes_assets/avramania/24704040010a42ceaeffb1631ed1ae9b/model.glb
+       33320  0d465cb01a0ef97677f20418f2ae02bc4f0a69c683abb46eb24c318921ea38b1  2026-11-11/fuentes_assets/avramania/3f3b24dd3bf24ce49b518bfbd5ec93df/model.glb
+       37672  9344ad50776d0bc203ee9a92a962d4c71b114b44fc5bd38386a068fc185a5e02  2026-11-11/fuentes_assets/avramania/64e25ccc90c84e3b8c2ad02dd39150ba/model.glb
+       76520  021ef05dbbbc02d92414163872ecda4bc2fae3baf605d93e69fae056cd6aec7c  2026-11-11/fuentes_assets/avramania/7db2a14529fd4e1f9391c68337f71eac/model.glb
+       35432  4ea2245978da1030bcbec184e8c2b52429eab390cd87c955eb665f1712a1e1b9  2026-11-11/fuentes_assets/avramania/a8a9568469524a548ca730b1058de3ef/model.glb
+       42040  f74129287ad6a6313bbdb06da51a1cad95408657a29e3b3a9246f5b52f1d1fed  2026-11-11/fuentes_assets/avramania/bd0ad320c35249b9b1a37e2adc061bb9/model.glb
+       78340  31c3386a28be3257d31d244866c2c0fd61de13c026a7f4beb98094780b2fc405  2026-11-11/fuentes_assets/avramania/c66175e51d044dfda9e6edff21d4d38a/model.glb
+       78016  e51dc10cee8108d8ea06d7d2524e6029cd2f0b1651441f024da486b1f1d26cc4  2026-11-11/fuentes_assets/avramania/cc950686a4dc4ac89edda92b21afca11/model.glb
+       75448  af42cf3243f3e801346f0246755d9eca1c1f93315bab0619d03bcee1a2849b0c  2026-11-11/fuentes_assets/avramania/d041cc0462ab4da6be30fff811765685/model.glb
+       31524  80b7ba7e06d779c8a679a6fbbba3105563f1fd815414a507e8d6bcbfe028d06e  2026-11-11/fuentes_assets/avramania/fe8f28bcadaf44a7836e12fe30f9a3dd/model.glb
+        6805  2c63d2ccd9b3cb90ec87ce1b849dd90174f08ea426a4b753cda7bfe36f2f866d  2026-11-11/fuentes_assets/avramania/licenses.json
+    73727082  0bc1e5843c9f245c44bda82f97f738b09f88fe51bb34d2a69a7847a969f868e3  2026-11-11/fuentes_assets/quaternius_fantasy_props_megakitstandard.zip
+     1006976  2295ee08aaf0b5e3ca24483b514f92b33cb2a67916189bc8ec9ad8fd83811139  2026-11-11/glb/int_morada_casa_grande.glb
+      788912  cc09c38a3ab26a9df7b72ad5f9c2a4fba0a0816a94cc791788a22f183bc557a4  2026-11-11/glb/int_morada_casa_pequena.glb
+      424464  93e543ba5c7777b0540f56c102fc7b41167fea838f21f8711d5d9240aaccf82a  2026-11-11/glb/int_morada_habitacion.glb
+      442880  b85f07a83712df13834d7243a57d7e9627df5444bf15ebaae306b0782d1e68ff  2026-11-11/glb/props_int_mano.glb
+     2610504  412446b30a1c93cbf11442e5100b876f4997275bb87038bfef6bbfe3d4d20dc9  2026-11-11/glb/props_int_mercado.glb
+       70708  ded9ce2d6f997c4d4c4aeea5bde72047e274816ff14283a732762356429fc243  2026-11-11/glb/props_trophy_cases.glb
+      535399  8934f9eb784ed0ec2fc5f0fbb109ce8a9fb92101abe24790d9d3bc23c26de3ad  2026-11-11/textures/PROP_Q_Barrel_Holder_normal_1k.png
+      645973  3a8179427079963943fd9a491ba65b334cdbdff259cf477dbbf976959655a094  2026-11-11/textures/PROP_Q_Chandelier_normal_1k.png
+      399570  39b52fb632c8a9a65242bf4a5ec649f4e9fa2aa9d60013fecff8c28356a00239  2026-11-11/textures/PROP_Q_Chest_Wood_normal_1k.png
+      290103  b43e85d44132548af1e19c707b769b1e6d8e864448444d2f66da7ce84329fe60  2026-11-11/textures/trophy_case_atlas_512.png
 
-Total: 151 archivos, 384,343,468 bytes (366.5 MiB)
+Total: 177 archivos, 546,010,837 bytes (520.7 MiB)

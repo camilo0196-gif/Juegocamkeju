@@ -584,3 +584,71 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
     12. Convencion de props "+Y = frente": quien mira el prop de frente tiene la +X local a su IZQUIERDA. Texto en
         una cara +Y (numeros de las cajas, rotulos) lleva la u invertida, y las series se numeran recorriendo -X local
         para leerse de izquierda a derecha. Comprobarlo siempre con una captura de cerca.
+
+19. Etapa 28: props a mano, importacion CC0 (Mercado), pendientes de la ciudad e interiores de las Moradas
+-----------------------------------------------------------------------------------------------------------
+  Scripts: tools/blender/props_mano.py + build_stage28_props.py + capture_stage28_props.py (props a mano);
+  build_stage28_import.py (Quaternius / Avramania) y tools/fetch_sketchfab_cc0.py (descarga CC0 con comprobacion de
+  licencia en la API y en la pagina); build_stage28_city.py (concordia_v26 -> concordia_v28); stage28_moradas_int.py +
+  build_stage28_int.py + capture_stage28_int.py (vitrinas e interiores). Informes: docs/reports/stage28_*.json.
+
+  Generadores de IA: en esta sesion no hay herramientas get_addon_status / generate_3d (no hay servidor MCP de
+  Blender conectado): no se ha generado ni comprobado ningun modelo de IA. Los 4 objetos de la lista se hicieron a mano.
+
+  Props a mano (concordia_props_v01.blend, BLD_PROPS_INT; props_int_mano.glb), <= 1,000 tris, origen en la base, +Y al
+  frente, solo materiales de Concordia (cuero = MAT_Hide_R05, vidrio = MAT_Glass_R04):
+    Los 4 de la lista de IA: Loom 746, Forge_Bellows 386, Dress_Form 350, Miner_Helmet 310.
+    14 triviales: Ingots_Coal 288, Cloth_Rolls 246, Bar_Counter 150, Trestle 68, Bench_Vise 120, Auction_Gavel 188, Ink_Seal 220, Baker_Peel 40, Tanning_Frame 208, Herb_Rack 436, Fish_Crates 364, Longbow 276, Spinning_Wheel 364, Jeweler_Case 286.
+    Total 5,046 tris; cajas -colonly en los de suelo.
+
+  Importacion CC0, lote Mercado (36 props, 22,933 tris, props_int_mercado.glb 2.49 MB):
+    Quaternius Fantasy Props MegaKit (25; licencia en licenses/) y Avramania Low Poly Medieval (11; licencia CC0
+    comprobada en la API y en la pagina de cada modelo). Materiales reasignados: Quaternius por nombre de material
+    (MI_Trim_Furniture -> madera, MI_Trim_Metal -> hierro/bronce, pergamino -> cuero, *_Vertex por color: libros en
+    cuero, telas y fieltro); Avramania por color de su paleta al material de Concordia mas cercano (muebles solo entre
+    madera, hierro, piedra, tela y paja; comida con la lista amplia). Decimados (> 1,700 -> <= 1,500) con normal map 1K
+    horneado (textures/props/, UV 'UVBake'): Barrel_Holder 2,676 -> 1,480, Chandelier 5,680 -> 1,479, Chest_Wood
+    2,546 -> 1,480 (escalado a 1 m de ancho). ESPERA APROBACION del usuario (hoja stage28_props_mercado_q/_av.png).
+
+  Ciudad (concordia_v28.blend; informe stage28_ciudad.json):
+    Faro: MER_Casa_01 (decoracion) de 3 a 2 plantas (14.0 -> 10.8 m): libera el punto del anillo r 100. Visibilidad:
+      avenida 91.7 %, anillo 71.1 %, callejon 76.4 %, diagonal 79.6 %. Lista de puntos sin Faro en TODO_GODOT.
+    Moradas: balcones de 0.35 m (<= 1.2). Escalera: se mantiene la de la etapa 26; la prueba literal "tramo alto en el
+      extremo alejado" en las 69 casas subio las puertas tapadas de 16 a 48 (stage28_moradas_prueba_far.json). Cuerpo/
+      alero: alero 0.3 m y, si no basta, 2 plantas, solo si libera puertas: Morada_SO_036 y SO_037 a 2 plantas
+      (-6 viviendas: 1,404 -> 1,398); el resto se deshizo. Puertas tapadas: 16 -> 13 (tolerancia 10).
+    Tubos: soportes 01 y 07 fuera de la calle (desplazados 1.5 / 1.75 m a lo largo del tubo); 02-06 en la plaza del
+      Mercado (sin linea de edificios a menos de 12 m): pendientes de decision. Altura libre minima sobre calles
+      12.24 m (>= 5).
+
+  Vitrina de trofeos (MARKER_TrophyCase; props_trophy_cases.glb): un solo material MAT_TrophyCase (atlas 512: madera
+    oscura de Concordia + vidrio alfa 0.3). Pared 1.0 x 0.4 x 1.9 m, 9 slots: 128 / 82 / 18 tris
+    (LOD0 / LOD1 / LOD2); mesa 1.2 x 0.6 x 1.0 m, 6 slots: 132 / 120 / 20; nichos 1.2 x 0.35 x 1.6 m,
+    9 slots: 230 / 86 / 18. Slots = Empties MARKER_Trophy_Slot_xx (+Y al frente).
+
+  Interiores tipo (concordia_moradas_int_v01.blend; int_morada_<plantilla>.glb), build_interior estilo entramado,
+  referencias Cesky Krumlov / Rothenburg (vigas bajas a 2.7 m, hogar de piedra, revoco sobre zocalo de tablas,
+  ventanas pequenas), giro fijo de -90 grados (puerta +Y y lado +X = muros cercanos):
+    Habitacion 4 x 5 x 2.7: cama, baul (40), vitrina de pared, ventana, mesa y taburete. Tris 3,366 de 8,000.
+    Casa pequena 6 x 8 x 2.7 con patio de 2.5 m (tabique con puerta = WALL_Near_Casa): baul (100), mesa de trabajo
+      (MARKER_WorkStation_01), hogar, mesa y sillas, cama, vitrina de nichos. Tris 7,332 de 15,000.
+    Casa grande 8 x 10 x 6.4, dos plantas: entreplanta de 4 m sobre el fondo (LEVEL_1), escalera de 1.2 m a 32.6
+      grados con rellano de 1.3 m al pie, sala para recibir, dos mesas de oficio (WorkStation_01/02), baul (200),
+      vitrina de pared (slots 01-09) y de mesa (10-15), jardinera de hierbas junto a la fachada (MARKER_Garden),
+      dormitorio arriba. Tris 10,857 de 28,000.
+    Las tres: navmesh (celda 0.25) conectada a todos los puntos clave, pasos de 1.2 m, rayos desde CAM_Iso a la vitrina,
+    el baul y las mesas de oficio 100 %, un solo azul (lamparilla de esquirla), MARKER_Decor_Slot_xx para decorar.
+
+  Lecciones nuevas (etapa 28):
+    13. Plantillas privadas: giro fijo respecto a CAM_Iso (-90) para que la puerta y +X sean los muros cercanos; todo
+        el mobiliario contra -X / -Y. La orientacion de la casa en la ciudad no importa.
+    14. Escalera de 5 m en una casa de 10: la entreplanta debe retirarse (y = -1) para dejar >= 1.2 m al pie; y ningun
+        mueble bajo la llegada (el baul quedo debajo y la prueba de 1.2 m lo detecto).
+    15. Blender exige nombres unicos en todo el archivo: exportar cada plantilla con nombres limpios y renombrarla
+        despues; numerar seguidos los slots de varias vitrinas en la misma escena.
+    16. Un tabique entre zonas (patio / casa) tapa desde CAM_Iso: va en su propio grupo WALL_Near_<Recinto>.
+    17. Bajo una entreplanta, escalar en Z las piezas altas del kit (campana del hogar) y dejar >= 4 cm a las vigas.
+    18. Assets con textura de paleta: el color mas cercano necesita listas por categoria (si no, madera -> teja).
+    19. Patas de varilla asoman bajo z = 0: recortarlas al suelo; piezas coplanarias (postes y largueros) dan manchas
+        negras: separarlas 1 cm.
+    20. Remedios que cuestan viviendas (2 plantas = -3 puertas): aplicarlos solo si liberan puertas y deshacerlos si no.

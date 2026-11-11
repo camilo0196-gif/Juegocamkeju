@@ -1,0 +1,84 @@
+{
+ "a_far_literal_test": {
+  "before": 16,
+  "before_by_cause": {
+   "balcon/escalera": 12,
+   "cuerpo/alero": 4
+  },
+  "a_stair_far": {
+   "flipped": 69,
+   "blocked": 48
+  }
+ },
+ "b_steps_on_far": [
+  {
+   "house": "Morada_NE_061",
+   "remedy": "alero 0.3 m",
+   "round": 0
+  },
+  {
+   "house": "Morada_NE_062",
+   "remedy": "alero 0.3 m",
+   "round": 0
+  },
+  {
+   "house": "Morada_SO_036",
+   "remedy": "alero 0.3 m",
+   "round": 0
+  },
+  {
+   "house": "Morada_SO_065",
+   "remedy": "alero 0.3 m",
+   "round": 0
+  },
+  {
+   "house": "Morada_SO_066",
+   "remedy": "alero 0.3 m",
+   "round": 0
+  },
+  {
+   "house": "Morada_NE_061",
+   "remedy": "2 plantas (pierde 3 viviendas)",
+   "round": 1
+  },
+  {
+   "house": "Morada_SO_036",
+   "remedy": "2 plantas (pierde 3 viviendas)",
+   "round": 1
+  },
+  {
+   "house": "Morada_SO_066",
+   "remedy": "2 plantas (pierde 3 viviendas)",
+   "round": 1
+  },
+  {
+   "house": "Morada_SO_037",
+   "remedy": "alero 0.3 m",
+   "round": 2
+  }
+ ],
+ "after_on_far": 46,
+ "after_by_set_on_far": {
+  "NE": {
+   "doors": 357,
+   "facing": 200,
+   "blocked": 20
+  },
+  "NO": {
+   "doors": 354,
+   "facing": 354,
+   "blocked": 0
+  },
+  "SE": {
+   "doors": 330,
+   "facing": 330,
+   "blocked": 0
+  },
+  "SO": {
+   "doors": 354,
+   "facing": 216,
+   "blocked": 26
+  }
+ },
+ "dwellings_on_far": 1395
+}

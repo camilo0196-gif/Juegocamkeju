@@ -190,3 +190,111 @@ Interiores (E27; piloto int_banco.glb)
 [ ] MARKER_NPC_Slot_01 (npc=Banquero, de pie tras el tablero) y MARKER_Interact_Bank_Counter (abre la interfaz
     del banco, delante de la ventanilla de cajero INT_Grille_Teller de 1.2 m): Area3D.
 [ ] INT_Banco-navmesh -> NavigationRegion3D (rejilla de 0.25 m, ya conectada por la escalera).
+
+Faro (E28, punto 10): puntos de calle SIN vista del Faro (ojo a 1.7 m, criterio de la etapa 26: 11 rayos, >= 1 libre)
+[ ] Aceptado por el usuario: lo resuelve Godot dibujando el cristal y el haz por encima de los edificios (depth test
+    off o pase de silueta) y con la brujula en pantalla. MER_Casa_01 ya bajo de 3 a 2 plantas (14.0 -> 10.8 m).
+    Visibilidad tras la etapa 28: avenida 55/60 (91.7 %), anillo 59/83 (71.1 %), callejon 120/157 (76.4 %), diagonal 39/49 (79.6 %).
+    Lista (calle | x, y, z del ojo | lo que tapa):
+    avenida   STR_OFI_Avenue                  89.4     0.0   6.4  MARKER_Bridge_02, Taller_Carpinteria
+    avenida   STR_OFI_GateApproach           196.0     0.0   7.7  GATE_Slot00_Sealed_Twin
+    avenida   STR_MER_GateApproach             0.0   196.0   7.7  GATE_Slot12_Sealed_Twin
+    avenida   STR_CLA_GateApproach          -196.0     0.0   7.7  GATE_Slot24_Sealed_Twin
+    avenida   STR_RAZ_GateApproach            -0.0  -196.0   7.7  GATE_Slot36_Sealed_Twin
+    anillo    STR_OFI_Ring150                145.4   -40.1   5.5  Gremio_Mineros, MARKER_Bridge_04
+    anillo    STR_OFI_Ring150                147.6   -30.3   6.5  Gremio_Mineros
+    anillo    STR_OFI_Ring150                149.0   -20.4   6.5  Gremio_Mineros
+    anillo    STR_MER_Ring150                -41.3   144.4   6.5  TesoreriaMuralla
+    anillo    STR_CLA_Ring100                -97.3    27.6   7.5  SalonClase_08
+    anillo    STR_CLA_Ring100                -99.1    17.8   7.5  SalonClase_08
+    anillo    STR_CLA_Ring100                -96.8   -22.0   7.6  CLA_Casa_01, SalonClase_07
+    anillo    STR_CLA_Ring100                -93.9   -31.6   7.6  SalonClase_07
+    anillo    STR_CLA_Ring150               -141.6    49.3   6.5  CasaReposicion
+    anillo    STR_CLA_Ring150               -144.9    39.8   6.5  CasaReposicion
+    anillo    STR_CLA_Ring150               -147.7    30.2   6.5  CasaReposicion, SalonClase_02
+    anillo    STR_CLA_Ring150               -144.2   -38.9   6.5  CLA_Casa_03, SalonClase_01
+    anillo    STR_CLA_Ring150               -141.5   -48.5   6.5  CLA_Casa_04, SalonClase_01
+    anillo    STR_RAZ_Ring100                -36.3   -92.1   7.6  CasaRaza_06, RAZ_B06_Casa_01, RAZ_B06_Casa_02
+    anillo    STR_RAZ_Ring100                -27.0   -95.9   7.6  CasaRaza_06, Plazuela_06
+    anillo    STR_RAZ_Ring150                -58.5  -137.7   6.5  RAZ_B02_Casa_01, RAZ_B02_Casa_03
+    anillo    STR_RAZ_Ring150                -49.1  -141.3   6.5  CasaRaza_02, RAZ_B02_Casa_01
+    anillo    STR_RAZ_Ring150                -39.6  -144.4   6.5  CasaRaza_02
+    anillo    STR_RAZ_Ring150                -29.9  -146.7   6.5  MARKER_Bridge_07, RAZ_B02_Casa_04, RAZ_B02_Casa_05
+    anillo    STR_RAZ_Ring150                -20.0  -148.1   6.5  RAZ_B02_Casa_06
+    anillo    STR_RAZ_Ring150                 19.9  -148.7   6.5  CasaRaza_01, RAZ_B01_Casa_03, RAZ_B01_Casa_05
+    anillo    STR_RAZ_Ring150                 29.8  -147.6   6.5  CasaRaza_01, SALON_HAZANAS
+    anillo    STR_RAZ_Ring150                 39.6  -145.7   6.5  CasaRaza_01
+    anillo    STR_RAZ_Ring150                 49.2  -142.8   6.5  RAZ_B01_Casa_04, SALON_HAZANAS
+    callejon  STR_OFI_CallejonRonda_L        181.1    41.5   7.0  OFI_Casa_01
+    callejon  STR_OFI_CallejonRonda_L        178.9    51.2   7.0  OFI_Casa_02
+    callejon  STR_OFI_CallejonRonda_L        176.0    60.8   7.0  OFI_Casa_02
+    callejon  STR_OFI_CallejonRonda_R        171.9   -70.0   7.0  Taller_Curtiduria, Taller_Sastreria
+    callejon  STR_MER_CallejonRonda_L        -31.7   183.3   7.0  MER_Casa_02
+    callejon  STR_MER_CallejonRonda_L        -41.5   181.5   7.0  MER_Casa_02, MER_Casa_03
+    callejon  STR_MER_CallejonRonda_L        -51.2   179.1   7.0  MER_Casa_03
+    callejon  STR_MER_CallejonRonda_L        -70.2   172.9   7.1  MER_Casa_08, TesoreriaMuralla
+    callejon  STR_MER_CallejonRonda_R         21.8   184.6   7.1  GranSubasta, MER_Casa_04
+    callejon  STR_MER_CallejonRonda_R         31.6   183.0   7.0  GranSubasta, MER_Casa_05
+    callejon  STR_MER_CallejonRonda_R         41.4   180.7   7.0  GranSubasta, MER_Casa_06
+    callejon  STR_MER_CallejonRonda_R         51.0   178.0   7.0  GranSubasta, MER_Casa_07
+    callejon  STR_MER_CallejonRonda_R         60.6   175.1   7.0  GranSubasta, MER_Casa_07
+    callejon  STR_CLA_CallejonRonda_L       -183.9   -31.7   7.1  CLA_Casa_05
+    callejon  STR_CLA_CallejonRonda_L       -181.8   -41.5   7.0  CLA_Casa_06, SalonClase_03
+    callejon  STR_CLA_CallejonRonda_L       -179.1   -51.1   7.0  CLA_Casa_07, SalonClase_03
+    callejon  STR_CLA_CallejonRonda_L       -172.7   -70.1   7.0  CLA_Casa_04, CLA_Casa_12, SalonClase_05
+    callejon  STR_CLA_CallejonRonda_R       -183.9    31.7   7.1  CLA_Casa_08, CasaReposicion, SalonClase_04
+    callejon  STR_CLA_CallejonRonda_R       -182.0    41.5   7.1  CLA_Casa_09, CasaReposicion, SalonClase_04
+    callejon  STR_CLA_CallejonRonda_R       -179.3    51.2   7.0  CLA_Casa_10, CasaReposicion, SalonClase_06
+    callejon  STR_RAZ_CallejonRonda_L         21.8  -185.3   7.1  CasaRaza_01, RAZ_B01_Casa_03, RAZ_B03_Casa_01, RAZ_B03_Casa_04
+    callejon  STR_RAZ_CallejonRonda_L         31.7  -184.0   7.1  CasaRaza_01, RAZ_B03_Casa_02, RAZ_B03_Casa_05
+    callejon  STR_RAZ_CallejonRonda_L         41.5  -181.9   7.1  CasaRaza_01, CasaRaza_03, Plazuela_03, RAZ_B01_Casa_04
+    callejon  STR_RAZ_CallejonRonda_L         51.1  -179.2   7.0  CasaRaza_03, RAZ_B01_Casa_04, RAZ_B03_Casa_03
+    callejon  STR_RAZ_CallejonRonda_L         60.6  -176.0   7.0  RAZ_B03_Casa_03, RAZ_B03_Casa_06
+    callejon  STR_RAZ_CallejonRonda_L         70.0  -172.5   7.0  Morada_SE_028, RAZ_B03_Casa_06
+    callejon  STR_RAZ_CallejonRonda_R        -21.7  -183.6   7.0  RAZ_B04_Casa_03
+    callejon  STR_RAZ_CallejonRonda_R        -41.4  -180.7   7.0  CasaRaza_04, MARKER_Bridge_07, RAZ_B04_Casa_02
+    callejon  STR_RAZ_CallejonRonda_R        -51.2  -178.7   7.0  CasaRaza_02, CasaRaza_04, Plazuela_04
+    callejon  STR_RAZ_CallejonRonda_R        -60.8  -175.9   7.0  CasaRaza_02, RAZ_B04_Casa_04
+    callejon  STR_MER_CallejonEscalera_10    -39.7   136.5   6.7  TesoreriaMuralla
+    callejon  STR_MER_CallejonEscalera_12    -66.9   170.4   6.9  MER_Casa_08, TesoreriaMuralla
+    callejon  STR_CLA_CallejonEscalera_15   -170.4    66.9   6.9  CLA_Casa_11, Morada_NO_028
+    callejon  STR_CLA_CallejonEscalera_19   -169.0   -65.4   6.7  CLA_Casa_04, CLA_Casa_12, SalonClase_01, SalonClase_05
+    callejon  STR_MER_Callejon_02            -39.3   118.9   7.0  TesoreriaMuralla
+    callejon  STR_CLA_Callejon_05           -103.1    24.5   7.4  SalonClase_08
+    callejon  STR_RAZ_Callejon_01            -45.7  -139.9   6.5  CasaRaza_02, RAZ_B02_Casa_01
+    diagonal  Diagonal NO                    -50.9    50.9   8.7  SANTUARIO
+    diagonal  Diagonal NO                    -58.0    58.0   8.1  SANTUARIO
+    diagonal  Diagonal NO                   -114.6   114.6  10.2  Morada_NO_034
+    diagonal  Diagonal SO                    -50.9   -50.9   8.7  OBELISK
+    diagonal  Diagonal SO                    -58.0   -58.0   8.1  OBELISK
+    diagonal  Diagonal SO                    -65.1   -65.1   7.7  OBELISK
+    diagonal  Diagonal SO                    -72.1   -72.1   6.4  OBELISK
+    diagonal  Diagonal SE                     50.9   -50.9   8.7  SALON_HAZANAS
+    diagonal  Diagonal SE                     58.0   -58.0   8.0  SALON_HAZANAS
+    diagonal  Diagonal SE                     93.3   -93.3   7.2  Morada_SE_011
+
+Barrios de razas (E28, punto 12)
+[ ] B06 con 2 casas: PROVISIONAL. Los barrios de razas son una plantilla (N_RAZAS = 6) y se rehacen cuando llegue
+    la lista real de razas; no fijar logica de juego al numero de casas por barrio.
+
+Interiores de las Moradas (E28)
+[ ] Tres plantillas: int_morada_habitacion.glb (4 x 5), int_morada_casa_pequena.glb (6 x 8 con patio),
+    int_morada_casa_grande.glb (8 x 10, dos plantas). Cada MARKER_Morada_Door_* carga la plantilla de su tipo como
+    escena PRIVADA del dueno (una instancia por jugador que entra). La plantilla lleva un giro fijo de -90 grados
+    respecto a CAM_Iso (la puerta +Y y el lado +X son los muros cercanos), sea cual sea la orientacion de la casa.
+[ ] Ocultar WALL_Near_A / WALL_Near_B / CEILING siempre; WALL_Near_Casa (tabique del patio) al entrar en la casa
+    pequena; LEVEL_1 + Furniture_L1 con el jugador en la planta baja de la casa grande (regla hide_when).
+[ ] MARKER_Interact_Chest (slots = 40 / 100 / 200), MARKER_WorkStation_01/02, MARKER_Garden (jardinera de 7 matas),
+    MARKER_Reception, MARKER_Interact_TrophyCase: Area3D. MARKER_Decor_Slot_xx (tipo pared / mesa / suelo / patio,
+    level 0/1): Godot instancia ahi el prop que elija el jugador.
+[ ] Vitrina: TROPHY_<Variante>_<plantilla> con hijos MARKER_Trophy_Slot_xx (+Y al frente; en la casa grande 01-09
+    vitrina de pared y 10-15 vitrina de mesa). props_trophy_cases.glb trae TROPHY_Case_<v> con _LOD1 y _LOD2:
+    visibility_range si se usan fuera de la escena privada. MAT_TrophyCase es transparente (alpha 0.3 en el vidrio).
+[ ] Luces: Empties de Lights (como el Banco); hornear LightmapGI por plantilla. Un solo azul: la lamparilla de
+    esquirla junto a la vitrina.
+[ ] Props importados (Quaternius / Avramania): props_int_mercado.glb; los decimados traen material <MAT>__N_<prop>
+    con su normal map (UV 'UVBake' = UV2 en Godot): normal_texture en UV2.
+
+Moradas: puertas tapadas residuales (E28, punto 11)
+[ ] Aclarar techos, aleros, balcones y escaleras de la casa vecina con dithering cuando el jugador se acerca a una de
+    las puertas de docs/reports/stage28_ciudad.json -> moradas.residual (13 puertas).
