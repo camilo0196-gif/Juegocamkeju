@@ -17,6 +17,7 @@ python3 godot_concordia/tools/sync_assets.py [--check]
 import hashlib
 import json
 import os
+import re
 import shutil
 import sys
 
@@ -80,9 +81,10 @@ def main():
     old = {}
     if os.path.exists(MANIFEST):
         for line in open(MANIFEST):
-            parts = line.rstrip("\n").split("  ")
-            if len(parts) == 3 and len(parts[1]) == 64:
-                old[parts[2]] = parts[1]
+            # "   bytes  sha256  destino  <-  origen" (antes se partia por dos espacios y no casaba nunca)
+            m = re.match(r"\s*\d+\s+([0-9a-f]{64})\s+(\S+)", line)
+            if m:
+                old[m.group(2)] = m.group(1)
     rows, copied, same = [], 0, 0
     for dst, src in sorted(plan().items()):
         h = sha(src)

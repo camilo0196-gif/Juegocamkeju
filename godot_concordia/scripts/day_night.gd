@@ -37,6 +37,8 @@ var window_mats: Array[BaseMaterial3D] = []
 var stained_mats: Array[BaseMaterial3D] = []
 var lantern_pos := PackedVector3Array()
 var lanterns: Array[OmniLight3D] = []
+## farolillos encendidos a la vez (scripts/quality.gd: Bajo 6, Medio 10, Alto 16)
+var max_lanterns := LANTERN_POOL
 var focus: Node3D
 var night := 0.0
 var _t_lanterns := 0.0
@@ -68,20 +70,17 @@ func setup(main: Node, city: Node, focus_node: Node3D) -> void:
 	moon.shadow_enabled = false
 	main.add_child(moon)
 	# ventanas y vitrales
-	var seen := {}
-	for mi in city.find_children("*", "MeshInstance3D", true, false):
-		var m: Mesh = (mi as MeshInstance3D).mesh
-		if m == null:
+	var mats: Array = []
+	if city.has_method("materials_in_use"):
+		mats = city.materials_in_use()
+	for m in mats:
+		var mat := m as BaseMaterial3D
+		if mat == null:
 			continue
-		for i in m.get_surface_count():
-			var mat := m.surface_get_material(i) as BaseMaterial3D
-			if mat == null or seen.has(mat):
-				continue
-			seen[mat] = true
-			if mat.resource_name.begins_with("MAT_Window_Warm"):
-				window_mats.append(mat)
-			elif mat.resource_name.begins_with("MAT_Stained_Glass"):
-				stained_mats.append(mat)
+		if mat.resource_name.begins_with("MAT_Window_Warm"):
+			window_mats.append(mat)
+		elif mat.resource_name.begins_with("MAT_Stained_Glass"):
+			stained_mats.append(mat)
 	# farolillos: marcadores MARKER_Lantern_* (Moradas) y mallas LANTERN_Shard del resto de la ciudad
 	for n in city.find_children("MARKER_Lantern_*", "Node3D", true, false):
 		lantern_pos.append((n as Node3D).global_position)
@@ -185,7 +184,7 @@ func _place_lanterns() -> void:
 	best.sort_custom(func(x, y): return x[0] < y[0])
 	for j in lanterns.size():
 		var l := lanterns[j]
-		if j < best.size():
+		if j < best.size() and j < max_lanterns:
 			l.global_position = lantern_pos[best[j][1]] + Vector3(0, -0.2, 0)
 			l.light_energy = 0.9 * night
 			l.visible = true

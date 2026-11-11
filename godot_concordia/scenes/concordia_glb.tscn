@@ -1,0 +1,110 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/city.gd" id="1_7u481"]
+[ext_resource type="PackedScene" path="res://assets/terrain/glb/concordia_terrain_plaza.glb" id="2_rb1sn"]
+[ext_resource type="PackedScene" path="res://assets/terrain/glb/concordia_terrain_mercado.glb" id="3_p8juo"]
+[ext_resource type="PackedScene" path="res://assets/terrain/glb/concordia_terrain_oficios.glb" id="4_2c5i6"]
+[ext_resource type="PackedScene" path="res://assets/terrain/glb/concordia_terrain_clases.glb" id="5_vwvdh"]
+[ext_resource type="PackedScene" path="res://assets/terrain/glb/concordia_terrain_razas.glb" id="6_ivnya"]
+[ext_resource type="PackedScene" path="res://assets/terrain/glb/concordia_terrain_moradas.glb" id="7_kl67x"]
+[ext_resource type="PackedScene" path="res://assets/terrain/glb/concordia_terrain_exterior.glb" id="8_hg7in"]
+[ext_resource type="PackedScene" path="res://assets/wall/glb/concordia_wall_layout.glb" id="9_igb3k"]
+[ext_resource type="PackedScene" path="res://assets/buildings/glb/bld_portal.glb" id="10_pq8k0"]
+[ext_resource type="PackedScene" path="res://assets/buildings/glb/bld_mercado.glb" id="11_2ecjs"]
+[ext_resource type="PackedScene" path="res://assets/buildings/glb/bld_oficios.glb" id="12_qkqbr"]
+[ext_resource type="PackedScene" path="res://assets/buildings/glb/bld_clases.glb" id="13_dx22c"]
+[ext_resource type="PackedScene" path="res://assets/buildings/glb/bld_razas.glb" id="14_kqry6"]
+[ext_resource type="PackedScene" path="res://assets/buildings/glb/bld_moradas_NE.glb" id="15_55gsw"]
+[ext_resource type="PackedScene" path="res://assets/buildings/glb/bld_moradas_NO.glb" id="16_hrnnk"]
+[ext_resource type="PackedScene" path="res://assets/buildings/glb/bld_moradas_SE.glb" id="17_2r4ui"]
+[ext_resource type="PackedScene" path="res://assets/buildings/glb/bld_moradas_SO.glb" id="18_043np"]
+[ext_resource type="PackedScene" path="res://assets/markers/glb/concordia_markers.glb" id="19_qbshk"]
+[ext_resource type="NavigationMesh" path="res://navigation/nav_clases.res" id="20_fjkfq"]
+[ext_resource type="NavigationMesh" path="res://navigation/nav_mercado.res" id="21_ffcwo"]
+[ext_resource type="NavigationMesh" path="res://navigation/nav_moradas_ne.res" id="22_wyfan"]
+[ext_resource type="NavigationMesh" path="res://navigation/nav_moradas_no.res" id="23_364bm"]
+[ext_resource type="NavigationMesh" path="res://navigation/nav_moradas_se.res" id="24_73yan"]
+[ext_resource type="NavigationMesh" path="res://navigation/nav_moradas_so.res" id="25_nifjb"]
+[ext_resource type="NavigationMesh" path="res://navigation/nav_muralla_ronda.res" id="26_2jdxc"]
+[ext_resource type="NavigationMesh" path="res://navigation/nav_oficios.res" id="27_wext1"]
+[ext_resource type="NavigationMesh" path="res://navigation/nav_plaza.res" id="28_uuo4o"]
+[ext_resource type="NavigationMesh" path="res://navigation/nav_razas.res" id="29_bmrqd"]
+
+[node name="Concordia" type="Node3D" unique_id=1370123977]
+script = ExtResource("1_7u481")
+
+[node name="Terrain" type="Node3D" parent="." unique_id=908695596]
+
+[node name="Terrain_plaza" type="Node3D" parent="Terrain" unique_id=1854517698 instance=ExtResource("2_rb1sn")]
+
+[node name="Terrain_mercado" type="Node3D" parent="Terrain" unique_id=2098229865 instance=ExtResource("3_p8juo")]
+
+[node name="Terrain_oficios" type="Node3D" parent="Terrain" unique_id=81903783 instance=ExtResource("4_2c5i6")]
+
+[node name="Terrain_clases" type="Node3D" parent="Terrain" unique_id=1593082270 instance=ExtResource("5_vwvdh")]
+
+[node name="Terrain_razas" type="Node3D" parent="Terrain" unique_id=1127322885 instance=ExtResource("6_ivnya")]
+
+[node name="Terrain_moradas" type="Node3D" parent="Terrain" unique_id=1009731036 instance=ExtResource("7_kl67x")]
+
+[node name="Terrain_exterior" type="Node3D" parent="Terrain" unique_id=748231669 instance=ExtResource("8_hg7in")]
+
+[node name="Wall" type="Node3D" parent="." unique_id=1815838322]
+
+[node name="WallLayout" type="Node3D" parent="Wall" unique_id=1096907878 instance=ExtResource("9_igb3k")]
+
+[node name="Buildings" type="Node3D" parent="." unique_id=2101938526]
+
+[node name="Bld_portal" type="Node3D" parent="Buildings" unique_id=669773367 instance=ExtResource("10_pq8k0")]
+
+[node name="Bld_mercado" type="Node3D" parent="Buildings" unique_id=2050972994 instance=ExtResource("11_2ecjs")]
+
+[node name="Bld_oficios" type="Node3D" parent="Buildings" unique_id=2073367393 instance=ExtResource("12_qkqbr")]
+
+[node name="Bld_clases" type="Node3D" parent="Buildings" unique_id=944013068 instance=ExtResource("13_dx22c")]
+
+[node name="Bld_razas" type="Node3D" parent="Buildings" unique_id=1870091629 instance=ExtResource("14_kqry6")]
+
+[node name="Bld_moradas_NE" type="Node3D" parent="Buildings" unique_id=58698935 instance=ExtResource("15_55gsw")]
+
+[node name="Bld_moradas_NO" type="Node3D" parent="Buildings" unique_id=232786711 instance=ExtResource("16_hrnnk")]
+
+[node name="Bld_moradas_SE" type="Node3D" parent="Buildings" unique_id=1994145087 instance=ExtResource("17_2r4ui")]
+
+[node name="Bld_moradas_SO" type="Node3D" parent="Buildings" unique_id=111120082 instance=ExtResource("18_043np")]
+
+[node name="Markers" type="Node3D" parent="." unique_id=1626393709]
+
+[node name="Markers" type="Node3D" parent="Markers" unique_id=127020135 instance=ExtResource("19_qbshk")]
+
+[node name="Navigation" type="Node3D" parent="." unique_id=774617940]
+
+[node name="Clases" type="NavigationRegion3D" parent="Navigation" unique_id=288592475 groups=["nav_godot"]]
+navigation_mesh = ExtResource("20_fjkfq")
+
+[node name="Mercado" type="NavigationRegion3D" parent="Navigation" unique_id=117419348 groups=["nav_godot"]]
+navigation_mesh = ExtResource("21_ffcwo")
+
+[node name="Moradas_Ne" type="NavigationRegion3D" parent="Navigation" unique_id=1265266162 groups=["nav_godot"]]
+navigation_mesh = ExtResource("22_wyfan")
+
+[node name="Moradas_No" type="NavigationRegion3D" parent="Navigation" unique_id=394648718 groups=["nav_godot"]]
+navigation_mesh = ExtResource("23_364bm")
+
+[node name="Moradas_Se" type="NavigationRegion3D" parent="Navigation" unique_id=783827750 groups=["nav_godot"]]
+navigation_mesh = ExtResource("24_73yan")
+
+[node name="Moradas_So" type="NavigationRegion3D" parent="Navigation" unique_id=1723051905 groups=["nav_godot"]]
+navigation_mesh = ExtResource("25_nifjb")
+
+[node name="Muralla_Ronda" type="NavigationRegion3D" parent="Navigation" unique_id=1227713738 groups=["nav_godot"]]
+navigation_mesh = ExtResource("26_2jdxc")
+
+[node name="Oficios" type="NavigationRegion3D" parent="Navigation" unique_id=301384950 groups=["nav_godot"]]
+navigation_mesh = ExtResource("27_wext1")
+
+[node name="Plaza" type="NavigationRegion3D" parent="Navigation" unique_id=1659497301 groups=["nav_godot"]]
+navigation_mesh = ExtResource("28_uuo4o")
+
+[node name="Razas" type="NavigationRegion3D" parent="Navigation" unique_id=964728736 groups=["nav_godot"]]
+navigation_mesh = ExtResource("29_bmrqd")

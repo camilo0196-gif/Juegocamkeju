@@ -33,6 +33,8 @@ var prefix := "g2"
 var only: Array = []
 var hours: Array = []           # h=6.2,12,17.5 -> una captura por hora (scripts/day_night.gd)
 var points: Dictionary = POINTS.duplicate()
+var scene_path := "res://scenes/main.tscn"   # escena=res://... (p. ej. la ciudad de .glb para comparar)
+var quality := "Alto"           # q=Bajo|Medio|Alto|auto (por defecto Alto: las capturas de referencia)
 var out := {}
 
 
@@ -44,6 +46,10 @@ func _initialize() -> void:
 		if String(arg).begins_with("h="):
 			for h in String(arg).substr(2).split(","):
 				hours.append(float(h))
+		elif String(arg).begins_with("escena="):
+			scene_path = String(arg).substr(7)
+		elif String(arg).begins_with("q="):
+			quality = String(arg).substr(2)
 		elif String(arg).begins_with("@"):
 			var extra: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(String(arg).substr(1)))
 			for k in extra:
@@ -51,7 +57,7 @@ func _initialize() -> void:
 				only.append(k)
 		else:
 			only.append(arg)
-	change_scene_to_file("res://scenes/main.tscn")
+	change_scene_to_file(scene_path)
 	_run.call_deferred()
 
 
@@ -60,6 +66,10 @@ func _run() -> void:
 		await process_frame
 	var main := current_scene
 	var game = main.get_node("Game")
+	while game.quality == null:
+		await process_frame
+	game.quality.set_mode(quality, false)
+	out["calidad"] = {"modo": quality, "nivel": game.quality.level, "gpu": game.quality.gpu}
 	DirAccess.make_dir_recursive_absolute("res://debug/out/tour")
 	out["iso_check"] = _iso_check(main, game)
 	if hours.is_empty():
@@ -81,12 +91,13 @@ func _tour(game, hr: float) -> void:
 		if not only.is_empty() and not only.has(name):
 			continue
 		var p: Array = points[name]
+		await game.prepare_area(p[0], -p[1])
 		var g: Vector3 = game.ground_at(p[0], -p[1])
 		game.player.global_position = g + Vector3(0, 0.05, 0)
 		game.player.velocity = Vector3.ZERO
-		game.cam_rig.zoom = p[2]
+		game.cam_rig.zoom = minf(p[2], game.cam_rig.zoom_max)
 		game.cam_rig._apply(true)
-		game.city.lod.apply_all()
+		game.city.ensure_loaded(game.player.global_position)
 		for i in 12:
 			await process_frame
 		await RenderingServer.frame_post_draw

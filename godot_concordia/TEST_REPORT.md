@@ -238,3 +238,104 @@ Ejecucion: 0 errores, 0 avisos.
   (`process/size_limit`, ~60 MB). **Margen para personajes: ~144 MB.** 100 elfos comparten malla (3.500 tris) y
   atlas 1K (~1,3 MB): menos de 10 MB de VRAM; el coste real seran draw calls y skinning (G7).
 - G8 (personaje) se salta hasta tener `personaje_elfo_base.glb` con animaciones (PJ3/PJ4).
+
+## Arreglo para el PC del usuario (AMD Radeon integrada, Vulkan 1.3, Forward+) — 2026-11-11
+Errores que dio el proyecto en su PC: (1) `Out of bounds get index '0'` en `materials_fix.gd:96` (`_beams`);
+(2) cientos de `Size of vertex data provided (0) does not match expected (N)`; (3) miles de
+`Can't create buffer of size N (VkResult error -10)` = `VK_ERROR_TOO_MANY_OBJECTS`; (4) aviso `unused parameter
+unit_depth` en `lod_manager.gd:25`.
+
+### A · `[0]` y haces
+- `materials_fix.gd`: `_beams` ya no lee los vertices a pelo. `beam_span()` usa, por orden, la metadata
+  `beam_y_<n>` que deja el horneado (sin tocar la GPU), los vertices si existen o la caja de la malla; comprueba
+  `is_instance_valid`, malla nula, indice de superficie y arreglo vacio. Si no hay datos lo anota y sigue.
+- Accesos a `[0]` blindados: `nav_ready.gd` (menos de 2 regiones), `city.gd` (enlaces de `links.json` mal formados),
+  `effects.gd` (mallas no validas), `make_bonemaps.gd` (sin Skeleton3D o escena nula), `bake_navmesh.gd` (caras
+  vacias), `pick.gd` (sin argumento). El resto de `[0]` son sobre constantes o arreglos ya comprobados.
+- `lod_manager.gd`: quitado el parametro `unit_depth` (aviso 4).
+- **Causa de los haces sin malla**: los .glb estan bien (FARO_Beam 80 m desde y = 46,35; haz del Crisol en
+  CrisolPiedras_Body, 18,5 m, tope 12 m; ver abajo B). En su PC las mallas importadas llegaron vacias (error 2) y
+  `surface_get_arrays()` devolvio un arreglo vacio: `[Mesh.ARRAY_VERTEX]` sobre el fallaba.
+
+### B · Por que llegan mallas vacias
+- Los 289 archivos de `assets/` coinciden con `assets/MANIFEST.txt` (tamano y sha256) y las 11.763 primitivas de los
+  35 .glb tienen vertices e indices (lectura directa del JSON y del binario del glb). No son .glb corruptos.
+- Ninguna herramienta reconstruye ArrayMesh desde superficies vacias; `lod_manager.gd` solo cambia visibilidad.
+- Causa mas probable: el paquete de la parada 1 llevaba `.godot/imported` **sin los .md5** (los quite al limpiar
+  importaciones viejas) y sin `.godot/editor`. Su editor reimporto los 34 .glb con Vulkan; con la GPU sin objetos
+  (error 3), los buffers no se crearon y al guardar la escena importada Godot lee las mallas de vuelta de la GPU:
+  se guardaron superficies con N vertices y 0 bytes. Al cargarlas: error 2; al leerlas: error 1.
+- Arreglo: borrar `.godot` y reimportar **sin GPU** (`--headless --import`, rasterizador vacio: los datos se quedan
+  en la CPU) con `tools/preparar_pc.bat`. `tools/verify_assets.gd` lo comprueba en su PC (sha256 contra el MANIFEST y
+  superficies vacias por .glb -> `verificacion_assets.txt`); aqui: 289 iguales, 0 superficies vacias.
+  `tools/build_world.gd` se niega a hornear si encuentra alguna vacia y dice en que .glb.
+- `tools/sync_assets.py --check` leia mal el MANIFEST (siempre decia "todo cambia"): corregido; ahora 289 iguales y 1
+  nuevo (`pj_elfo_sanador_anim.glb`, del PJ4, aun sin copiar a `assets/`).
+- No he cambiado ningun `.import`.
+
+### C · Menos objetos en la GPU (`tools/build_world.gd`, horneado en 5,8 s)
+La ciudad del juego ya no instancia los .glb: `scenes/concordia_glb.tscn` (antes `concordia.tscn`) queda como
+ciudad fuente para hornear el mundo y la navegacion.
+- 214 chunks de 50 m (`world/chunks/*.scn`, 39 MB): una MeshInstance3D por mascara de LOD y sombra con **una
+  superficie por material**; mallas sin malla de sombra aparte (la mitad de buffers).
+- 136 MultiMesh (3.019 instancias) para lo que se repite >= 8 veces en un chunk (tubos, baldosas, farolillos,
+  ventanas, almenas...). Sin GPU Godot no guarda las transformaciones de la MultiMesh: van en metadata y
+  `world_streamer.gd` las pone al cargar (fallo encontrado en las capturas: faltaba el tubo de luz de la plaza).
+- Aparte: 808 tejados (uno por edificio y LOD, grupo `roofs`), y en `world/special.scn` (siempre cargado, 152 nodos)
+  los occludes_iso, haces, FARO_*, Obelisco (100 marcas por piso), rueda de la Carpinteria y piedras del Crisol.
+  `world/logic.scn`: 10.321 nodos sin malla (marcadores, enlaces, volumenes de interior, puntos de farolillos).
+- Biblioteca de 237 materiales (`world/materials`) con los cambios de Godot ya puestos (terreno por mascaras,
+  velo, agua, estandartes, ascuas, vidrios, Obelisco); colisiones (788) y 360 oclusores de caja dentro de cada chunk.
+
+| | antes (.glb enteros) | despues (mundo horneado) |
+|---|---|---|
+| nodos de malla en LOD0, ciudad entera | 8.114 | 854 en chunks + 152 sueltos = 1.006 (objetivo < 3.000) |
+| nodos de malla cargados (plaza, radio 120 m) | 8.114 | 1.078 (38 de 214 chunks) |
+| nodos visibles a la vez (4 puntos) | — | 357-545 (objetivo < 1.000) |
+| superficies cargadas / de sombra | 9.995 / 9.994 | 5.142 / 0 |
+| buffers estimados en la GPU | ~49.973 | ~15.545 (plaza), 11.000-13.100 (Moradas, Razas) |
+
+Comparado con capturas (lavapipe, 1600x900): misma imagen en la plaza, el Faro, las Moradas NE y las Razas.
+
+### D · Carga por distancia (`scripts/world_streamer.gd`)
+- Al arrancar: la plaza y todo lo que este a menos del radio de carga (sin hilos). Despues, cada 0,25 s, los chunks
+  a menos del radio se piden con `ResourceLoader.load_threaded_request` (4 a la vez, el mas cercano primero) y se
+  instancian como mucho 2 por fotograma; mas alla de radio + 25 m se liberan. Las Moradas no se cargan enteras:
+  solo sus chunks cercanos.
+- Radio por calidad: Bajo 120 m, Medio 140, Alto 170 (cubre la pantalla con el zoom maximo de cada nivel).
+- LOD por chunk (mascara horneada, mismas reglas de unidad que antes); distancias Bajo 25/70 m, Medio y Alto 40/100.
+- "Rangos de visibilidad cortos": se hacen por distancia al jugador (LOD y radio de carga), no con
+  `visibility_range`, porque con la camara ortografica a 120 m la distancia a la camara no mide la cercania al
+  jugador (ver la cabecera de `lod_manager.gd`).
+
+### E · Calidad (F2, `scripts/quality.gd`, `ui/quality_menu.gd`)
+Bajo: sin sombras, sin glow ni SSAO, 70 % de resolucion 3D (FSR 1; bilineal en Compatibility), sin MSAA, LOD 25/70,
+carga 120 m, zoom maximo 60 m, 6 farolillos con luz, 300 copos de ceniza. Medio: sombras 70 m (2 cortes, atlas 2048),
+glow, FXAA, 85 %, LOD 40/100, carga 140 m, zoom 90. Alto: lo anterior (sombras 140 m, 4 cortes, SSAO, MSAA 2x).
+Auto: `RenderingServer.get_video_adapter_type()` integrada o CPU -> Bajo, dedicada -> Alto, otra -> Medio; con
+OpenGL (siempre "otro") se mira el nombre (Radeon(TM) Graphics, Vega, 680M/780M, Intel, UHD, Iris...). Se guarda en
+`user://calidad.cfg`.
+
+Cifras en Bajo (lavapipe; draw calls, triangulos y VRAM validos, FPS no): plaza 189 draw calls / 171.000
+triangulos / 355 MB de VRAM; Mercado 294; Oficios 353; Moradas NE 477; Razas 432; zoom maximo (60 m) 315-839.
+Antes, en Alto: 1.010-5.710 draw calls y 456 MB. Con la calidad Alto el mundo horneado da los mismos draw calls que
+antes (~1.500 en la plaza) y mas triangulos (851.000 frente a 469.000): el LOD cambia por chunk de 50 m y no por
+edificio, asi que el LOD0 llega algo mas lejos. Para una tarjeta dedicada no es problema.
+
+### F · Benchmark (`tools/benchmark.gd`)
+Bajo, Medio y Alto (o `niveles=`), 8 escenas por nivel y un paseo de 30 s a 6 m/s por 7 puntos (cuenta los tirones de
+la carga por hilos: fotogramas > 50 ms y > 2,5x la mediana), chunks cargados, GPU, tipo y nivel automatico, y el
+veredicto contra el objetivo (FPS medio >= 30 y 1 % peor >= 25 en Bajo). Probado aqui de principio a fin: 0 errores,
+0 avisos (los FPS de lavapipe no valen).
+
+### Compatibility (OpenGL) frente a Forward+ (Vulkan)
+Probado aqui con `--rendering-method gl_compatibility` (Mesa llvmpipe, OpenGL 4.5): arranca y captura con 0 errores
+(el unico aviso, "Could not set V-Sync mode", es del driver de software del servidor). Mismos draw calls (plaza en Bajo
+318 frente a 322) y la imagen se ve bien, incluido el shader del terreno con 15 texturas. VRAM en Bajo 221 MB frente a
+365 MB de Forward+ (sin buffers de iluminacion por clusters ni de SSAO). Pierde: SSAO, FSR (escala bilineal) y algo de
+calidad en las sombras y el glow.
+Recomendacion para su PC: probar primero **Forward+ en Bajo** con el mundo horneado. El error -10 venia de los ~50.000
+buffers, que ahora son ~15.000, y el driver Vulkan de AMD suele rendir mas que su OpenGL en Windows. Si el benchmark
+no llega a 30 FPS en Bajo o vuelve el error -10, repetirlo con `--rendering-method gl_compatibility`: OpenGL no tiene el
+limite de objetos de Vulkan y gasta menos VRAM. Si gana, se cambia en Proyecto > Configuracion > Renderizado >
+Renderer > Rendering Method (lo cambio yo cuando tenga las dos tablas).

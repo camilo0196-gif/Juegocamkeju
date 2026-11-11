@@ -15,11 +15,12 @@ func _run() -> void:
 	var a := OS.get_cmdline_user_args()
 	var x := float(a[1])
 	var z := -float(a[2])
+	var game = current_scene.get_node("Game")
+	await game.prepare_area(x, z)
+	game.player.global_position = game.ground_at(x, z) + Vector3(0, 0.05, 0)
+	game.city.ensure_loaded(game.player.global_position)
 	for r in get_nodes_in_group("roofs"):
 		(r as Node3D).visible = false
-	var game = current_scene.get_node("Game")
-	game.player.global_position = game.ground_at(x, z) + Vector3(0, 0.05, 0)
-	game.city.lod.apply_all()
 	var cam := Camera3D.new()
 	current_scene.add_child(cam)
 	cam.projection = Camera3D.PROJECTION_ORTHOGONAL

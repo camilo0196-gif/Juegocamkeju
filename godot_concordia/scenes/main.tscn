@@ -20,20 +20,21 @@ ambient_light_source = 3
 tonemap_mode = 2
 glow_enabled = true
 
-[node name="Main" type="Node3D" unique_id=486986162]
+[node name="Main" type="Node3D" unique_id=1518339130]
 
-[node name="Concordia" type="Node3D" parent="." unique_id=367136563 instance=ExtResource("1_sugp2")]
+[node name="Concordia" type="Node3D" parent="." unique_id=2132829831 instance=ExtResource("1_sugp2")]
 script = ExtResource("2_jyhfs")
+metadata/world_index = "res://world/world_index.json"
 
-[node name="Sun" type="DirectionalLight3D" parent="." unique_id=1303481103]
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=1198826119]
 transform = Transform3D(-0.8660254, 0.30783078, -0.39400545, 0, 0.7880108, 0.6156615, 0.50000006, 0.5331785, -0.68243736, 0, 0, 0)
 light_color = Color(1, 0.8862745, 0.72156864, 1)
 light_energy = 1.2
 shadow_enabled = true
 directional_shadow_max_distance = 140.0
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=554841106]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=10343019]
 environment = SubResource("Environment_tipki")
 
-[node name="Game" type="Node" parent="." unique_id=649477236]
+[node name="Game" type="Node" parent="." unique_id=1039403590]
 script = ExtResource("3_tbgi4")

@@ -1,14 +1,15 @@
 extends SceneTree
 ## CONCORDIA - ensamble repetible de la ciudad (G2). Genera:
-##   res://scenes/concordia.tscn  raiz Concordia (scripts/city.gd) con
+##   res://scenes/concordia_glb.tscn  ciudad FUENTE (instancias de los .glb importados), raiz Concordia (scripts/city.gd) con
 ##       Terrain   : concordia_terrain_{plaza,mercado,oficios,clases,razas,moradas,exterior}.glb
 ##       Wall      : concordia_wall_layout.glb (muralla ya colocada en Blender)
 ##       Buildings : bld_{portal,mercado,oficios,clases,razas,moradas_NE,_NO,_SE,_SO}.glb
 ##       Markers   : concordia_markers.glb (Marker3D con metadatos y grupos, ver tools/post_import.gd)
 ##       Navigation: NavigationRegion3D por distrito con res://navigation/nav_*.res (tools/bake_navmesh.gd)
-##   res://scenes/main.tscn  Main: Concordia + luz y entorno basicos (G4 los sustituye) + Game (scripts/game.gd)
+## La usan tools/build_world.gd (que hornea el mundo del juego: res://world/ + scenes/concordia.tscn + scenes/main.tscn)
+## y tools/bake_navmesh.gd. El juego ya no instancia los .glb (ver tools/build_world.gd, arreglo VK -10).
 ## Cada .glb entra como instancia de su escena importada (no se copia nada): tras una nueva exportacion basta con
-## sync_assets.py + import_settings.py + --import y volver a ejecutar este script.
+## sync_assets.py + import_settings.py + --import, volver a ejecutar este script y despues tools/build_world.gd.
 ## godot --headless --path godot_concordia -s res://tools/build_city.gd
 
 const TERRAIN := ["plaza", "mercado", "oficios", "clases", "razas", "moradas", "exterior"]
@@ -51,10 +52,9 @@ func _init() -> void:
 	DirAccess.make_dir_recursive_absolute("res://scenes")
 	var ps := PackedScene.new()
 	ps.pack(root)
-	var err := ResourceSaver.save(ps, "res://scenes/concordia.tscn")
-	print("concordia.tscn ", error_string(err))
+	var err := ResourceSaver.save(ps, "res://scenes/concordia_glb.tscn")
+	print("concordia_glb.tscn ", error_string(err))
 	root.free()
-	_main()
 	quit()
 
 
@@ -67,48 +67,3 @@ func _inst(root: Node, parent: Node, path: String, name: String) -> void:
 	n.name = name
 	parent.add_child(n)
 	n.owner = root
-
-
-func _main() -> void:
-	var main := Node3D.new()
-	main.name = "Main"
-	var city := (load("res://scenes/concordia.tscn") as PackedScene).instantiate()
-	main.add_child(city)
-	city.owner = main
-	var sun := DirectionalLight3D.new()
-	sun.name = "Sun"
-	sun.rotation_degrees = Vector3(-38.0, -150.0, 0.0)          # sol de tarde desde el oeste (provisional, G4)
-	sun.light_color = Color("ffe2b8")
-	sun.light_energy = 1.2
-	sun.shadow_enabled = true
-	sun.directional_shadow_max_distance = 140.0
-	main.add_child(sun)
-	sun.owner = main
-	var we := WorldEnvironment.new()
-	we.name = "WorldEnvironment"
-	var env := Environment.new()
-	var sky := Sky.new()
-	var mat := ProceduralSkyMaterial.new()
-	mat.sky_top_color = Color("6b7f96")
-	mat.sky_horizon_color = Color("c9c3b6")
-	mat.ground_horizon_color = Color("8e8a84")
-	mat.ground_bottom_color = Color("4a4846")
-	sky.sky_material = mat
-	env.background_mode = Environment.BG_SKY
-	env.sky = sky
-	env.ambient_light_source = Environment.AMBIENT_SOURCE_SKY
-	env.tonemap_mode = Environment.TONE_MAPPER_FILMIC
-	env.glow_enabled = true
-	env.glow_hdr_threshold = 1.0
-	we.environment = env
-	main.add_child(we)
-	we.owner = main
-	var game := Node.new()
-	game.name = "Game"
-	game.set_script(load("res://scripts/game.gd"))
-	main.add_child(game)
-	game.owner = main
-	var ps := PackedScene.new()
-	ps.pack(main)
-	print("main.tscn ", error_string(ResourceSaver.save(ps, "res://scenes/main.tscn")))
-	main.free()

@@ -85,21 +85,24 @@ func _terrain_material(shader: Shader, src: Dictionary, layers: Dictionary, exte
 func _beams(city: Node) -> void:
 	var shader := load("res://shaders/beam.gdshader") as Shader
 	var list := []
-	for mi in city.find_children("*", "MeshInstance3D", true, false):
-		var m: Mesh = (mi as MeshInstance3D).mesh
-		if m == null:
+	if shader == null:
+		report["haces_error"] = "falta res://shaders/beam.gdshader"
+		return
+	for node in city.find_children("*", "MeshInstance3D", true, false):
+		var mi := node as MeshInstance3D
+		if mi == null or not is_instance_valid(mi) or mi.mesh == null:
 			continue
+		var m: Mesh = mi.mesh
 		for i in m.get_surface_count():
 			var mat := m.surface_get_material(i)
 			if mat == null or mat.resource_name != "MAT_Faro_Beam":
 				continue
-			var verts: PackedVector3Array = m.surface_get_arrays(i)[Mesh.ARRAY_VERTEX]
-			var lo := INF
-			var hi := -INF
-			for v in verts:
-				var g: Vector3 = (mi as MeshInstance3D).global_transform * v
-				lo = minf(lo, g.y)
-				hi = maxf(hi, g.y)
+			var span := beam_span(mi, i)
+			if span.is_empty():
+				list.append({"malla": String(mi.name), "error": "superficie sin datos (ver TEST_REPORT.md, PC del usuario)"})
+				continue
+			var lo: float = span[0]
+			var hi: float = span[1]
 			var sm := ShaderMaterial.new()
 			sm.resource_name = "MAT_Beam_Godot"
 			sm.shader = shader
@@ -111,18 +114,51 @@ func _beams(city: Node) -> void:
 			if not is_faro:
 				sm.set_shader_parameter("base_fade", 0.3)
 				sm.set_shader_parameter("top_power", 1.2)
-			(mi as MeshInstance3D).set_surface_override_material(i, sm)
+			mi.set_surface_override_material(i, sm)
 			if m.get_surface_count() == 1:
-				(mi as MeshInstance3D).cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+				mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 			list.append({"malla": String(mi.name), "base_y": snappedf(lo, 0.01), "alto_m": snappedf(hi - lo, 0.01),
-				"tope_usado_m": snappedf(top - lo, 0.01)})
+				"tope_usado_m": snappedf(top - lo, 0.01), "fuente": span[2]})
 	report["haces"] = list
+
+
+static func beam_span(mi: MeshInstance3D, surface: int) -> Array:
+	## [y minima, y maxima, fuente] en el mundo de la superficie del haz. Orden de preferencia:
+	##  1. metadata beam_y_<n> que deja tools/build_world.gd al hornear el mundo (sin leer la GPU)
+	##  2. vertices de la superficie (surface_get_arrays; puede volver vacio si el buffer de la GPU no se creo)
+	##  3. caja de la malla entera (aproximada si la malla tiene mas superficies)
+	## [] si no hay ningun dato utilizable.
+	if mi == null or not is_instance_valid(mi) or mi.mesh == null or surface < 0 or surface >= mi.mesh.get_surface_count():
+		return []
+	var key := "beam_y_%d" % surface
+	if mi.has_meta(key):
+		var v = mi.get_meta(key)
+		if v is Vector2:
+			return [v.x, v.y, "metadata"]
+	var arrays := mi.mesh.surface_get_arrays(surface)
+	if arrays.size() > Mesh.ARRAY_VERTEX and arrays[Mesh.ARRAY_VERTEX] is PackedVector3Array:
+		var verts: PackedVector3Array = arrays[Mesh.ARRAY_VERTEX]
+		if verts.size() > 0:
+			var lo := INF
+			var hi := -INF
+			var xf := mi.global_transform
+			for v in verts:
+				var g: Vector3 = xf * v
+				lo = minf(lo, g.y)
+				hi = maxf(hi, g.y)
+			return [lo, hi, "vertices"]
+	var box: AABB = mi.global_transform * mi.get_aabb()
+	if box.size == Vector3.ZERO:
+		return []
+	return [box.position.y, box.end.y, "caja"]
 
 
 # ---------------------------------------------------------------------------------------------------------- obelisco
 
 func _obelisk(city: Node) -> void:
 	for mi in city.find_children("OBELISK_*", "MeshInstance3D", true, false):
+		if not is_instance_valid(mi):
+			continue
 		var m: Mesh = (mi as MeshInstance3D).mesh
 		if m == null:
 			continue
@@ -151,4 +187,6 @@ func _obelisk(city: Node) -> void:
 func set_obelisk_floors(n: int) -> void:
 	## marcas de piso 1..n encendidas (#8FD0FF, emision 3.0, material del .glb); el resto apagadas
 	for mi in marks:
+		if not is_instance_valid(mi):
+			continue
 		mi.material_override = lit_mark if int(mi.get_meta("floor")) <= n and lit_mark else null

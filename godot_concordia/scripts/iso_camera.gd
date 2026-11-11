@@ -14,6 +14,8 @@ const ZOOM_MAX := 120.0
 @export var target_path: NodePath
 var target: Node3D
 var zoom := 40.0
+## zoom maximo del nivel de calidad (scripts/quality.gd: Bajo 60, Medio 90, Alto 120)
+var zoom_max := ZOOM_MAX
 var yaw_steps := 0
 var _yaw := YAW
 var cam: Camera3D
@@ -36,9 +38,9 @@ func _ready() -> void:
 func _unhandled_input(e: InputEvent) -> void:
 	if e is InputEventMouseButton and e.pressed:
 		if e.button_index == MOUSE_BUTTON_WHEEL_UP:
-			zoom = clampf(zoom / 1.12, ZOOM_MIN, ZOOM_MAX)
+			zoom = clampf(zoom / 1.12, ZOOM_MIN, zoom_max)
 		elif e.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-			zoom = clampf(zoom * 1.12, ZOOM_MIN, ZOOM_MAX)
+			zoom = clampf(zoom * 1.12, ZOOM_MIN, zoom_max)
 	elif e.is_action_pressed("cam_rot_left"):
 		yaw_steps -= 1
 	elif e.is_action_pressed("cam_rot_right"):

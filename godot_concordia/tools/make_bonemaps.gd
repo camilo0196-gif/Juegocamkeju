@@ -72,8 +72,16 @@ func skeleton_names(path: String) -> PackedStringArray:
 		push_error("no se pudo leer " + path)
 		return PackedStringArray()
 	var scene := doc.generate_scene(state)
-	var sk := scene.find_children("*", "Skeleton3D", true, false)[0] as Skeleton3D
 	var out := PackedStringArray()
+	if scene == null:
+		push_error("no se pudo generar la escena de " + path)
+		return out
+	var sks := scene.find_children("*", "Skeleton3D", true, false)
+	if sks.is_empty() or not is_instance_valid(sks[0]):
+		push_error("sin Skeleton3D en " + path)
+		scene.free()
+		return out
+	var sk := sks[0] as Skeleton3D
 	for i in sk.get_bone_count():
 		out.append(sk.get_bone_name(i))
 	scene.free()

@@ -13,13 +13,18 @@ func _run() -> void:
 		await process_frame
 	var a := OS.get_cmdline_user_args()
 	var tour = load("res://tools/capture_tour.gd")
+	if a.is_empty() or not tour.POINTS.has(a[0]):
+		print("uso: -- <punto de tools/capture_tour.gd POINTS> ...")
+		quit(1)
+		return
 	var p: Array = tour.POINTS[a[0]]
 	var game = current_scene.get_node("Game")
+	await game.prepare_area(p[0], -p[1])
 	var g: Vector3 = game.ground_at(p[0], -p[1])
 	game.player.global_position = g + Vector3(0, 0.05, 0)
 	game.cam_rig.zoom = p[2]
 	game.cam_rig._apply(true)
-	game.city.lod.apply_all()
+	game.city.ensure_loaded(game.player.global_position)
 	for i in 4:
 		await process_frame
 	var cam: Camera3D = game.cam_rig.cam

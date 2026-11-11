@@ -84,6 +84,8 @@ func _maybe_obstruction(src: NavigationMeshSourceGeometryData3D, b: Node, faces:
 	## no suba encima aunque el suelo de alrededor quede a menos de 0,25 m de su borde
 	if not String(b.get_path()).contains("/Buildings/") or _walkable_structure(_body_name(b)):
 		return
+	if faces.is_empty():
+		return
 	var box := AABB(xf * faces[0], Vector3.ZERO)
 	for p in faces:
 		box = box.expand(xf * p)
@@ -126,7 +128,7 @@ func _run() -> void:
 
 func _bake_city() -> void:
 	var t0 := Time.get_ticks_msec()
-	var city: Node3D = (load("res://scenes/concordia.tscn") as PackedScene).instantiate()
+	var city: Node3D = (load("res://scenes/concordia_glb.tscn") as PackedScene).instantiate()
 	city.set_script(null)                                  # sin LOD ni enlaces: solo la geometria
 	root.add_child(city)
 	for i in 3:

@@ -43,15 +43,44 @@ func setup(city_node: Node, focus_node: Node3D, cam: Node, dn: Node) -> Dictiona
 
 
 func _materials() -> void:
-	var veil_sh := load("res://shaders/veil.gdshader") as Shader
-	var water_sh := load("res://shaders/water.gdshader") as Shader
-	var banner_sh := load("res://shaders/banner.gdshader") as Shader
-	var replaced := {}
-	var counts := {"velo": 0, "agua": 0, "estandartes": 0, "pulso": 0}
+	## mundo horneado (tools/build_world.gd): los cambios de superficie ya vienen en la biblioteca de materiales
+	## (world/materials); aqui solo se registran los materiales que laten y se aplican los ajustes de material
+	if not (city.has_method("is_streamed") and city.is_streamed()):
+		report["materiales_efectos"] = convert_surfaces(city)
+	var n := 0
+	for mat in _materials_in_use():
+		if register_material(mat):
+			n += 1
+	report["materiales_pulso"] = n
+
+
+func _materials_in_use() -> Array:
+	if city.has_method("materials_in_use"):
+		return city.materials_in_use()
+	var out := {}
 	for mi in city.find_children("*", "MeshInstance3D", true, false):
 		var m: Mesh = (mi as MeshInstance3D).mesh
 		if m == null:
 			continue
+		for i in m.get_surface_count():
+			var mat := (mi as MeshInstance3D).get_active_material(i)
+			if mat:
+				out[mat] = true
+	return out.keys()
+
+
+static func convert_surfaces(root: Node) -> Dictionary:
+	## velo, agua y estandartes pasan a sus ShaderMaterial (los usa tambien tools/build_world.gd al hornear el mundo)
+	var veil_sh := load("res://shaders/veil.gdshader") as Shader
+	var water_sh := load("res://shaders/water.gdshader") as Shader
+	var banner_sh := load("res://shaders/banner.gdshader") as Shader
+	var replaced := {}
+	var counts := {"velo": 0, "agua": 0, "estandartes": 0}
+	for node in root.find_children("*", "MeshInstance3D", true, false):
+		var mi := node as MeshInstance3D
+		if mi == null or not is_instance_valid(mi) or mi.mesh == null:
+			continue
+		var m: Mesh = mi.mesh
 		for i in m.get_surface_count():
 			var mat := m.surface_get_material(i) as BaseMaterial3D
 			if mat == null:
@@ -60,6 +89,7 @@ func _materials() -> void:
 			if n == "MAT_Portal_Veil":
 				if not replaced.has(mat):
 					var sm := ShaderMaterial.new()
+					sm.resource_name = "MAT_Portal_Veil_Godot"
 					sm.shader = veil_sh
 					sm.render_priority = 1
 					replaced[mat] = sm
@@ -68,6 +98,7 @@ func _materials() -> void:
 			elif n == "MAT_Water":
 				if not replaced.has(mat):
 					var sm := ShaderMaterial.new()
+					sm.resource_name = "MAT_Water_Godot"
 					sm.shader = water_sh
 					sm.set_shader_parameter("water_nrm", mat.normal_texture)
 					sm.set_shader_parameter("water_alb", mat.albedo_texture)
@@ -77,30 +108,43 @@ func _materials() -> void:
 				m.surface_set_material(i, replaced[mat])
 				counts.agua += 1
 			elif n.begins_with("MAT_Banner_"):
-				var key := [mat, String(mi.name).contains("Flag")]
-				if not replaced.has(str(key)):
+				var flag := String(mi.name).contains("Flag")
+				var key := str(mat.get_instance_id()) + ("_flag" if flag else "")
+				if not replaced.has(key):
 					var sm := ShaderMaterial.new()
+					sm.resource_name = n + ("_Flag" if flag else "") + "_Godot"
 					sm.shader = banner_sh
 					sm.set_shader_parameter("banner_alb", mat.albedo_texture)
 					sm.set_shader_parameter("albedo_color", mat.albedo_color)
 					sm.set_shader_parameter("uv_xform", Vector4(mat.uv1_scale.x, mat.uv1_scale.y, mat.uv1_offset.x, mat.uv1_offset.y))
-					sm.set_shader_parameter("flag_mode", key[1])
-					replaced[str(key)] = sm
-				(mi as MeshInstance3D).set_surface_override_material(i, replaced[str(key)])
+					sm.set_shader_parameter("flag_mode", flag)
+					replaced[key] = sm
+				mi.set_surface_override_material(i, replaced[key])
 				counts.estandartes += 1
-			elif n == "MAT_Embers":
-				mat.emission_energy_multiplier = minf(mat.emission_energy_multiplier, 1.5)
-			elif n == "MAT_Glass_R04":
-				mat.depth_draw_mode = BaseMaterial3D.DEPTH_DRAW_OPAQUE_ONLY
-				mat.render_priority = 0
-			elif n == "MAT_Pipe_Glass":
-				mat.render_priority = 0
-			for k in PULSE:
-				if n.begins_with(k) and not replaced.has("p" + str(mat.get_instance_id())):
-					replaced["p" + str(mat.get_instance_id())] = true
-					pulsing.append([mat, mat.emission_energy_multiplier, PULSE[k][0], PULSE[k][1], n])
-					counts.pulso += 1
-	report["materiales_efectos"] = counts
+	return counts
+
+
+func register_material(mat: Material) -> bool:
+	## ajustes por material (idempotentes) y registro de los que laten; true si late
+	var bm := mat as BaseMaterial3D
+	if bm == null:
+		return false
+	var n := bm.resource_name
+	if n == "MAT_Embers":
+		bm.emission_energy_multiplier = minf(bm.emission_energy_multiplier, 1.5)
+	elif n == "MAT_Glass_R04":
+		bm.depth_draw_mode = BaseMaterial3D.DEPTH_DRAW_OPAQUE_ONLY
+		bm.render_priority = 0
+	elif n == "MAT_Pipe_Glass":
+		bm.render_priority = 0
+	for k in PULSE:
+		if n.begins_with(k):
+			for e in pulsing:
+				if e[0] == bm:
+					return false
+			pulsing.append([bm, bm.emission_energy_multiplier, PULSE[k][0], PULSE[k][1], n])
+			return true
+	return false
 
 
 func _moving_parts() -> void:
@@ -237,6 +281,7 @@ func _occluders() -> void:
 			for c in p.get_children():
 				if c is MeshInstance3D and String(c.name).begins_with(String(n.name) + "_LOD"):
 					meshes.append(c)
+		meshes = meshes.filter(func(x): return is_instance_valid(x) and (x as MeshInstance3D).mesh != null)
 		if meshes.is_empty():
 			continue
 		var box: AABB = (meshes[0] as MeshInstance3D).global_transform * (meshes[0] as MeshInstance3D).get_aabb()

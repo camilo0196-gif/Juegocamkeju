@@ -47,6 +47,8 @@ static func connected(tree: SceneTree, map: RID) -> bool:
 		var reg := r as NavigationRegion3D
 		if reg.enabled and reg.navigation_mesh and reg.navigation_mesh.get_polygon_count() > 0:
 			samples.append(NavigationServer3D.region_get_closest_point(reg.get_rid(), _sample(reg)))
+	if samples.size() < 2:
+		return true                  # una sola region (o ninguna): no hay nada que conectar
 	for i in range(1, samples.size()):
 		var path := NavigationServer3D.map_get_path(map, samples[0], samples[i], true)
 		if path.is_empty() or path[path.size() - 1].distance_to(samples[i]) > 0.5:

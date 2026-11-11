@@ -12,3 +12,6 @@ assets/manifest.json
 debug/out/*
 !debug/out/.gdignore
 benchmark_resultados.txt
+# Mundo horneado por tools/build_world.gd a partir de los .glb importados (se regenera en cada PC)
+world/
+verificacion_assets.txt

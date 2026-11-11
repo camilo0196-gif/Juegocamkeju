@@ -1,0 +1,62 @@
+CONCORDIA - arreglo para tu PC (GPU AMD integrada, Vulkan 1.3) - 2026-11-11
+Descomprime este zip DENTRO de C:\Users\USER\Desktop\Juego_1\Concordia\godot_concordia (las rutas ya empiezan en
+godot_concordia\). Reemplaza los archivos que pregunte. No toca ningun .blend, ningun .glb ni ningun .import.
+
+PASOS EN TU PC (una vez)
+1. Cierra el editor de Godot.
+2. En cmd, dentro de godot_concordia:
+     tools\preparar_pc.bat "C:\ruta\a\Godot_v4.7.2-stable_win64_console.exe"
+   - borra la cache .godot (la reimportacion del editor dejo mallas vacias: errores 1 y 2)
+   - reimporta SIN GPU (--headless --import)
+   - comprueba los .glb contra assets\MANIFEST.txt -> verificacion_assets.txt
+   - hornea el mundo del juego -> world\ (unos 41 MB, chunks de 50 m con las mallas fusionadas) y
+     scenes\concordia.tscn + scenes\main.tscn
+3. Abre el proyecto y pulsa F5. Con GPU integrada arranca en calidad Bajo. F2 = menu de calidad.
+4. Benchmark (cierra el editor):
+     "C:\ruta\a\Godot_v4.7.2-stable_win64_console.exe" --path . -s res://tools/benchmark.gd
+   Mandame benchmark_resultados.txt. Si no llega a 30 FPS en Bajo, renombralo y repite con
+   --rendering-method gl_compatibility delante de -s, y mandame los dos.
+No abras scenes\concordia_glb.tscn en el editor: es la ciudad fuente con todos los .glb (lo que agota la GPU).
+
+ARCHIVOS .import: ninguno cambia.  project.godot: no cambia.
+
+QUE CAMBIA EN CADA ARCHIVO
+scripts/materials_fix.gd   A: _beams blindado; beam_span() saca la altura del haz de la metadata del horneado, de los
+                           vertices si existen o de la caja; comprueba nulos, is_instance_valid y arreglos vacios.
+scripts/lod_manager.gd     quitado el parametro unit_depth (aviso); LOD por chunk (metadata lod_mask), distancias
+                           ajustables por calidad (lod0_end / lod1_end), add_chunk / remove_chunk / force_refresh.
+scripts/world_streamer.gd  NUEVO. Carga los chunks con hilos (ResourceLoader.load_threaded_request) a menos del radio
+                           de carga (Bajo 120 m) y los libera a +25 m; carga inmediata alrededor del jugador al
+                           arrancar y al teletransportar; monta las MultiMesh de cada chunk.
+scripts/city.gd            modo mundo horneado (nodo Chunks): streaming + Special + Logic; materials_in_use(),
+                           ensure_loaded(), apply_quality(); zone_name() estatico; links.json validado. Sin nodo Chunks
+                           funciona como antes con los .glb.
+scripts/quality.gd         NUEVO. Niveles Bajo / Medio / Alto y Auto (GPU integrada -> Bajo), guardado en
+                           user://calidad.cfg.
+ui/quality_menu.gd         NUEVO. Menu F2: Auto/Bajo/Medio/Alto, GPU y renderizador, FPS, draw calls, chunks, VRAM.
+scripts/game.gd            tecla F2, crea Quality y el menu; prepare_area() antes de colocar al jugador; R recarga
+                           la zona de inicio.
+scripts/effects.gd         convert_surfaces() (velo, agua, estandartes; la usa tambien el horneado) y
+                           register_material(); con el mundo horneado solo registra pulsos desde la biblioteca.
+scripts/day_night.gd       ventanas y vitrales desde la lista de materiales; max_lanterns por calidad.
+scripts/iso_camera.gd      zoom_max por calidad (Bajo 60, Medio 90, Alto 120 m).
+scripts/nav_ready.gd       connected(): sin acceso a [0] con menos de 2 regiones.
+scenes/concordia.tscn      AHORA es la ciudad del juego (mundo horneado). La genera tools/build_world.gd.
+scenes/concordia_glb.tscn  NUEVO NOMBRE de la antigua concordia.tscn: ciudad fuente con los .glb (para hornear).
+scenes/main.tscn           regenerada por tools/build_world.gd (misma luz y entorno).
+tools/build_world.gd       NUEVO. Hornea world\: chunks de 50 m, una superficie por material, MultiMesh para lo
+                           repetido, tejados por edificio, colisiones y oclusores por chunk, piezas especiales,
+                           marcadores y biblioteca de materiales. Se para si alguna malla importada esta vacia.
+tools/verify_assets.gd     NUEVO. sha256 y tamano contra assets\MANIFEST.txt + superficies vacias por .glb.
+tools/preparar_pc.bat      NUEVO. Los pasos 1-2 de arriba.
+tools/benchmark.gd         rehecho: Bajo / Medio / Alto, 8 escenas, paseo de 30 s con tirones de carga, veredicto
+                           contra 30 FPS en Bajo, renderizador y GPU en la cabecera.
+tools/build_city.gd        ahora genera scenes/concordia_glb.tscn (la ciudad fuente).
+tools/bake_navmesh.gd      lee scenes/concordia_glb.tscn; caras vacias comprobadas.
+tools/capture_tour.gd      q=<nivel>, escena=<ruta>; carga la zona antes de capturar.
+tools/pick.gd, tools/make_bonemaps.gd   accesos a [0] blindados; pick carga la zona.
+tools/sync_assets.py       --check leia mal el MANIFEST (decia que todo cambiaba).
+debug/probe_gpu_objects.gd cuenta nodos, superficies, buffers estimados, visibles y chunks cargados.
+debug/capture_top.gd, debug/make_main_glb.gd   herramientas de captura y comparacion.
+README_godot.md, TEST_REPORT.md, .gitignore   documentacion y world/ fuera de git.
+*.gd.uid                   identificadores de los scripts nuevos (los crea Godot).

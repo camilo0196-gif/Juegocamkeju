@@ -7,6 +7,9 @@ extends Node
 ## vision). Aqui se usan los umbrales pedidos (LOD0 hasta 40 m, LOD1 hasta 100 m, LOD2 mas alla, margen 5 m de
 ## histeresis) medidos en horizontal desde el foco (jugador), hasta el borde de la caja de cada unidad.
 ##
+## Mundo horneado (tools/build_world.gd): cada chunk cargado es una unidad; sus mallas fusionadas llevan la metadata
+## lod_mask (bit 0 = visible en LOD0, bit 1 = LOD1, bit 2 = LOD2), calculada al hornear con las reglas de abajo.
+##
 ## Reglas por unidad: se muestran las mallas con lod_level = nivel; si la unidad no tiene ese nivel, el mas alto que
 ## tenga. Mallas sin lod_level (props, puertas, tejados sin LOD): visibles en niveles 0 y 1, ocultas en 2 si la
 ## unidad tiene LOD2 (el LOD2 sustituye a cuerpo + cubierta) o si son pequenas (< 3 m).
@@ -16,14 +19,17 @@ const LOD1_END := 100.0
 const MARGIN := 5.0
 const UPDATE_S := 0.2
 
+## distancias de cambio (scripts/quality.gd las ajusta: Bajo 25 / 70 m)
+var lod0_end := LOD0_END
+var lod1_end := LOD1_END
 var focus: Node3D
 var units: Array = []          # [{aabb: AABB (mundo), lods: {0: [], 1: [], 2: []}, free: [], small: [], level: -1}]
 var _t := 0.0
 var stats := {"unidades": 0, "nivel": [0, 0, 0], "cambios": 0}
 
 
-func add_scene_root(root: Node, unit_depth: int = 1) -> void:
-	## unidades = descendientes a profundidad unit_depth bajo root (los hijos directos del .glb importado).
+func add_scene_root(root: Node) -> void:
+	## unidades = hijos directos de root (los hijos directos del .glb importado).
 	## En los terrenos (chunks sueltos con sufijo _LODn) se agrupan por nombre base.
 	var by_base := {}
 	for c in root.get_children():
@@ -75,13 +81,41 @@ func _dist(u: Dictionary, p: Vector3) -> float:
 
 
 func _level_for(d: float, cur: int) -> int:
-	var l0 := LOD0_END + (MARGIN if cur == 0 else -MARGIN if cur > 0 else 0.0)
-	var l1 := LOD1_END + (MARGIN if cur <= 1 and cur >= 0 else -MARGIN if cur == 2 else 0.0)
+	var l0 := lod0_end + (MARGIN if cur == 0 else -MARGIN if cur > 0 else 0.0)
+	var l1 := lod1_end + (MARGIN if cur <= 1 and cur >= 0 else -MARGIN if cur == 2 else 0.0)
 	if d < l0:
 		return 0
 	if d < l1:
 		return 1
 	return 2
+
+
+func add_chunk(root: Node3D, box: AABB) -> void:
+	var u := {"aabb": box, "chunk": root, "masked": [], "level": -1}
+	for c in root.get_children():
+		if c is GeometryInstance3D and c.has_meta("lod_mask"):
+			u.masked.append(c)
+	units.append(u)
+	stats.unidades = units.size()
+	_set_level(u, _level_for(_dist(u, _focus_pos()), -1))
+
+
+func _focus_pos() -> Vector3:
+	## sin foco (antes de que Game cree al jugador) se mide desde el centro de la plaza
+	return focus.global_position if is_instance_valid(focus) else Vector3.ZERO
+
+
+func remove_chunk(root: Node3D) -> void:
+	for i in range(units.size() - 1, -1, -1):
+		if units[i].get("chunk") == root:
+			units.remove_at(i)
+	stats.unidades = units.size()
+
+
+func force_refresh() -> void:
+	for u in units:
+		u.level = -1
+	apply_all()
 
 
 func apply_all() -> void:
@@ -91,26 +125,37 @@ func apply_all() -> void:
 
 func _process(delta: float) -> void:
 	_t += delta
-	if _t < UPDATE_S or focus == null:
+	if _t < UPDATE_S:
 		return
 	_t = 0.0
-	var p := focus.global_position
+	var p := _focus_pos()
 	stats.nivel = [0, 0, 0]
 	for u in units:
 		var lv := _level_for(_dist(u, p), u.level)
 		stats.nivel[lv] += 1
-		if lv == u.level:
-			continue
-		u.level = lv
-		stats.cambios += 1
-		var show := lv
-		while show > 0 and u.lods[show].is_empty():
-			show -= 1
-		for k in [0, 1, 2]:
-			for mi in u.lods[k]:
+		if lv != u.level:
+			_set_level(u, lv)
+
+
+func _set_level(u: Dictionary, lv: int) -> void:
+	u.level = lv
+	stats.cambios += 1
+	if u.has("masked"):
+		for gi in u.masked:
+			if is_instance_valid(gi):
+				gi.visible = (int(gi.get_meta("lod_mask")) >> lv) & 1 == 1
+		return
+	var show := lv
+	while show > 0 and u.lods[show].is_empty():
+		show -= 1
+	for k in [0, 1, 2]:
+		for mi in u.lods[k]:
+			if is_instance_valid(mi):
 				mi.visible = (k == show)
-		var hide_free: bool = lv == 2 and u.has2
-		for mi in u.free:
+	var hide_free: bool = lv == 2 and u.has2
+	for mi in u.free:
+		if is_instance_valid(mi):
 			mi.visible = not hide_free
-		for mi in u.small:
+	for mi in u.small:
+		if is_instance_valid(mi):
 			mi.visible = lv < 2
