@@ -1,7 +1,7 @@
 extends Node
 ## CONCORDIA - pegamento de la escena de prueba: acciones de entrada, jugador, camara, HUD y ciudad.
 ## Teclas: WASD mover, Shift correr, clic izquierdo ir andando, rueda zoom, Q / E girar la camara 90 grados,
-## F1 HUD, T avanzar la hora (G4), R volver al inicio.
+## F1 HUD, T adelantar una hora (G4, scripts/day_night.gd), R volver al inicio.
 
 const ACTIONS := {
 	"move_forward": [KEY_W, KEY_UP], "move_back": [KEY_S, KEY_DOWN], "move_left": [KEY_A, KEY_LEFT],
@@ -14,7 +14,11 @@ const SPAWN_BLENDER := Vector2(0.0, 30.0)        # plaza, al norte del Portal (B
 var player: CharacterBody3D
 var cam_rig: Node3D
 var hud: CanvasLayer
-var hour := 17.5
+var day_night: Node
+var effects: Node
+var hour := 17.5:
+	get:
+		return day_night.hour if day_night else 17.5
 
 
 static func setup_input() -> void:
@@ -49,6 +53,24 @@ func _ready() -> void:
 	cam_rig._apply(true)
 	hud.game = self
 	city.set_focus(player)
+	# G4: dia y noche; G5: efectos y brujula del Faro
+	day_night = Node.new()
+	day_night.name = "DayNight"
+	day_night.set_script(preload("res://scripts/day_night.gd"))
+	get_parent().add_child(day_night)
+	day_night.setup(get_parent(), city, player)
+	effects = Node.new()
+	effects.name = "Effects"
+	effects.set_script(preload("res://scripts/effects.gd"))
+	get_parent().add_child(effects)
+	var fx: Dictionary = effects.setup(city, player, cam_rig, day_night)
+	var compass := Control.new()
+	compass.set_script(preload("res://ui/compass.gd"))
+	compass.cam_rig = cam_rig
+	compass.focus = player
+	compass.target = city.find_child("FARO_Crystal", true, false)
+	hud.add_child(compass)
+	print("FX ", JSON.stringify({"dia_noche": day_night.stats(), "efectos": fx}))
 
 
 func ground_at(x: float, z: float) -> Vector3:
@@ -63,6 +85,8 @@ func time_of_day_text() -> String:
 
 
 func _unhandled_input(e: InputEvent) -> void:
+	if e.is_action_pressed("time_advance") and day_night:
+		day_night.advance(1.0)
 	if e.is_action_pressed("respawn"):
 		player.global_position = player.spawn
 		player.velocity = Vector3.ZERO

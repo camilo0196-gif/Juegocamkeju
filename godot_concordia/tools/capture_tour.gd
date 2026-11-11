@@ -23,6 +23,7 @@ const POINTS := {
 	"puente_oficios": [89.5, 4.0, 35.0],
 	"escalinata_ne": [84.4, 50.0, 18.0],
 	"obelisco": [-40.0, -40.0, 30.0],
+	"salon_detras": [33.0, -27.0, 40.0],
 	"huertos_no": [-124.0, 140.0, 22.0],
 	"huertos_ne": [124.0, 100.0, 22.0],
 	"exterior_sur": [0.0, -185.0, 60.0],
@@ -30,6 +31,7 @@ const POINTS := {
 
 var prefix := "g2"
 var only: Array = []
+var hours: Array = []           # h=6.2,12,17.5 -> una captura por hora (scripts/day_night.gd)
 var points: Dictionary = POINTS.duplicate()
 var out := {}
 
@@ -39,7 +41,10 @@ func _initialize() -> void:
 	if a.size() > 0:
 		prefix = a[0]
 	for arg in a.slice(1):
-		if String(arg).begins_with("@"):
+		if String(arg).begins_with("h="):
+			for h in String(arg).substr(2).split(","):
+				hours.append(float(h))
+		elif String(arg).begins_with("@"):
 			var extra: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(String(arg).substr(1)))
 			for k in extra:
 				points[k] = extra[k]
@@ -57,6 +62,21 @@ func _run() -> void:
 	var game = main.get_node("Game")
 	DirAccess.make_dir_recursive_absolute("res://debug/out/tour")
 	out["iso_check"] = _iso_check(main, game)
+	if hours.is_empty():
+		hours = [-1.0]
+	for hr in hours:
+		await _tour(game, hr)
+	var fh := FileAccess.open("res://debug/out/tour/%s_medidas.json" % prefix, FileAccess.WRITE)
+	fh.store_string(JSON.stringify(out, " "))
+	fh = null
+	quit()
+
+
+func _tour(game, hr: float) -> void:
+	if hr >= 0.0 and game.day_night:
+		game.day_night.hour = hr
+		game.day_night.apply()
+	var suffix := "" if hr < 0.0 else "_h%04.1f" % hr
 	for name in points:
 		if not only.is_empty() and not only.has(name):
 			continue
@@ -71,17 +91,13 @@ func _run() -> void:
 			await process_frame
 		await RenderingServer.frame_post_draw
 		var img := root.get_texture().get_image()
-		img.save_png("res://debug/out/tour/%s_%s.png" % [prefix, name])
+		img.save_png("res://debug/out/tour/%s_%s%s.png" % [prefix, name, suffix])
 		var m: Dictionary = game.hud.snapshot()
 		m["zona"] = game.city.zone_at(game.player.global_position)
 		m["lod_niveles"] = game.city.lod.stats.nivel.duplicate()
 		m["suelo_y"] = snappedf(g.y, 0.01)
-		out[name] = m
-		print("TOUR ", name, " ", JSON.stringify(m))
-	var fh := FileAccess.open("res://debug/out/tour/%s_medidas.json" % prefix, FileAccess.WRITE)
-	fh.store_string(JSON.stringify(out, " "))
-	fh = null
-	quit()
+		out[name + suffix] = m
+		print("TOUR ", name, suffix, " ", JSON.stringify(m))
 
 
 func _iso_check(main: Node, game) -> Dictionary:
