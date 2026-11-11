@@ -1,0 +1,12 @@
+# Godot: cache e importaciones (se regeneran al abrir el proyecto)
+.godot/
+*.import
+# Assets copiados por tools/sync_assets.py desde export/ y textures/ del repositorio (ya estan en git alli)
+assets/**/*.glb
+assets/**/*.png
+assets/**/*.jpg
+assets/**/*.jpeg
+assets/**/*.exr
+assets/manifest.json
+# Capturas y salidas de prueba generadas
+debug/out/

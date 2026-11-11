@@ -1,0 +1,15 @@
+; Engine configuration file.
+; CONCORDIA - proyecto de prueba de la ciudad (Godot 4.7.2, Forward+). Unidades: metros.
+
+config_version=5
+
+[application]
+
+config/name="Concordia"
+config/description="Montaje y prueba de la ciudad de Concordia (exportaciones de Blender)."
+config/features=PackedStringArray("4.7", "Forward Plus")
+
+[rendering]
+
+renderer/rendering_method="forward_plus"
+textures/vram_compression/import_s3tc_bptc=true
