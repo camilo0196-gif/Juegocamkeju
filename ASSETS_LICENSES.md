@@ -166,6 +166,24 @@ y en la pagina publica del modelo (texto de la licencia citado).
 | Staff - Low Poly Medieval, CC0 (PROP_AV_Staff) | Avramania | https://sketchfab.com/3d-models/staff-low-poly-medieval-cc0-3b71fc881aaf4602ad53605474baf0ff | CC0 Public Domain (http://creativecommons.org/publicdomain/zero/1.0/; "Credit is not mandatory. Commercial use is allowed."; pagina: "CC0 - Download Free 3D model by Avramania [3b71fc8] - Sketchfab") | 2026-11-11 | Clases: baston (props_int_clases.glb) |
 | Rug - Low Poly Medieval, CC0 (PROP_AV_Rug) | Avramania | https://sketchfab.com/3d-models/rug-low-poly-medieval-cc0-3899142ec92c46059d35fc0fa1a0bd41 | CC0 Public Domain (http://creativecommons.org/publicdomain/zero/1.0/; "Credit is not mandatory. Commercial use is allowed."; pagina: "CC0 - Download Free 3D model by Avramania [3899142] - Sketchfab") | 2026-11-11 | Clases: esterilla (props_int_clases.glb) |
 
+## Personajes (PJ1 en adelante)
+
+Herramienta y base usadas para el cuerpo del elfo (blender/elfo_v01.blend, export/godot/pj_elfo_cuerpo.glb). Se
+instalaron solo desde las dos fuentes oficiales; no se ejecuto ningun .exe, instalador ni script suelto; el paquete
+de assets se descomprimio solo en la carpeta de datos del addon. Copias de los dos paquetes en
+respaldo/2026-11-11/fuentes_assets/.
+
+| Asset | Autor | URL | Licencia | Fecha | Version y sha256 | Donde se usa |
+|---|---|---|---|---|---|---|
+| MPFB (extension de Blender) | MakeHuman Community | https://extensions.blender.org/add-ons/mpfb/ (FAQ de uso en proyectos cerrados: https://static.makehumancommunity.org/mpfb/faq/use_in_closed_source.html; licencia: https://static.makehumancommunity.org/about/license.html) | GPL-3.0-or-later para el codigo del addon; segun la FAQ oficial, los modelos generados y exportados no quedan sujetos a la GPL. No se redistribuye el addon | 2026-11-11 | 2.0.18; add-on-mpfb-v2.0.18.zip sha256 c075b3e9b94b8e5556a5f03f4653602d02ea306de08126e8f55ed6dee28a2dad | solo herramienta de construccion (tools/blender/pj_mpfb.py, build_pj1_elfo.py) |
+| MakeHuman system assets (malla base, targets, rig 'default' para la pose T, proxy male1591, ojos low-poly) | MakeHuman Community | https://files.makehumancommunity.org/asset_packs/makehuman_system_assets/makehuman_system_assets_cc0.zip | CC0 1.0 | 2026-11-11 | makehuman_system_assets_cc0.zip sha256 b542127a8e25547c7c29c19f2d1d2adb9a664c80396ecd694095dbc8028a0107 | base del cuerpo del elfo (PJ_Elfo_Head/Torso/Arms/Hands/Legs/Feet, PJ_Elfo_Eyes); ver lo propio de Concordia abajo |
+| Blender | Blender Foundation | https://www.blender.org/ | GPL (herramienta; los ficheros producidos no quedan sujetos a ella) | - | bpy 4.5 | herramienta |
+
+Propio de Concordia sobre esa base: proporciones (hombros -8 %, pierna/torso +6 %, cuello +17 % frente a un humano
+de referencia con los mismos macros), cara (pomulos, ojos rasgados, nariz y boca), orejas rehechas (subdivision,
+largo 13,5 cm, 28 grados atras, perfil de hoja, concha y borde), division en 6 piezas, grupos HIDE_* y todas las
+texturas (ver la tabla siguiente). Informe: docs/reports/pj1_elfo_cuerpo.json.
+
 ## Generados en el proyecto (sin licencia de terceros)
 
 | Asset | Origen | Donde se usa |
@@ -175,3 +193,4 @@ y en la pagina publica del modelo (texto de la licencia citado).
 | Texturas de MAT_Shard_Blue, MAT_Wall_Runes y MAT_Water (T_*.jpg) | horneadas de nodos procedurales (tools/blender/stage09_materials.py) | esquirlas, runas, cauce |
 | Props a mano de la etapa 28 (telar, fuelle, maniqui, casco de minero y 14 triviales) | tools/blender/props_mano.py | props_int_mano.glb |
 | Kit de interiores BLD_INT_KIT y todo el interior del Banco | modelado por script (etapa 27) | int_banco.glb |
+| Piel del elfo (albedo 1K tonos abedul y corteza, normal 1K, ORM 1K) y ojos (albedo 256) | horneadas por tools/blender/pj1_piel.py (color por vertice + ruido; normal y AO de la malla base de MakeHuman, CC0) | textures/personajes/elfo/, pj_elfo_cuerpo.glb |

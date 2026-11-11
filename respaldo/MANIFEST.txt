@@ -1,6 +1,7 @@
 CONCORDIA - carpeta de respaldo (fuera de git, decision del usuario en la etapa 26)
 concordia_master_<fecha>_v<NN>.blend = copia del .blend maestro de esa fecha; glb/ = export/godot de esa fecha;
 interiors/ = blend de interiores y texturas generadas que no estan en git.
+personajes/ = blend, texturas y capturas de los personajes; fuentes_assets/mpfb = paquetes oficiales de MPFB y MakeHuman.
 binarios_git/ = .jpg, .gltf y .bin que estaban en git hasta la etapa 27 (sacados con git rm --cached; la
                historia de git los conserva hasta el commit 6861619), con su ruta original.
 Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | awk '{print $2"  "$3}' | sha256sum -c
@@ -197,15 +198,29 @@ Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | aw
        41424  a30b94ed11e381abe58daf5bce4ab1f25ab84c05c566be92b10b84f8cd99d854  2026-11-11/fuentes_assets/avramania/fa90afdde3e541458de26d42e1323d7d/model.glb
        31524  80b7ba7e06d779c8a679a6fbbba3105563f1fd815414a507e8d6bcbfe028d06e  2026-11-11/fuentes_assets/avramania/fe8f28bcadaf44a7836e12fe30f9a3dd/model.glb
        22263  275ad13cf3f67421a6ffcafe4cbd356f42e082dd48842af224c9cca1ab4c03bc  2026-11-11/fuentes_assets/avramania/licenses.json
+    45956992  c075b3e9b94b8e5556a5f03f4653602d02ea306de08126e8f55ed6dee28a2dad  2026-11-11/fuentes_assets/mpfb/add-on-mpfb-v2.0.18.zip
+   280737770  b542127a8e25547c7c29c19f2d1d2adb9a664c80396ecd694095dbc8028a0107  2026-11-11/fuentes_assets/mpfb/makehuman_system_assets_cc0.zip
     73727082  0bc1e5843c9f245c44bda82f97f738b09f88fe51bb34d2a69a7847a969f868e3  2026-11-11/fuentes_assets/quaternius_fantasy_props_megakitstandard.zip
       946072  199cb545ca497f7c7755066bc9933b5d3544412497f560e2da3239f71e42f935  2026-11-11/glb/int_morada_casa_grande.glb
       728004  3b9c1a87b92a6026fa153457a0eeab911c7c94b1052ff1b74325e90b6c7264d0  2026-11-11/glb/int_morada_casa_pequena.glb
       424468  ca8b1c1f2c0f7130a6616ddf10b41c4600751d34055fc55e19222cd4c03b6a94  2026-11-11/glb/int_morada_habitacion.glb
+     1205616  fbb3477afa6128e6304f61e2a1e9627f12643f216d3f01ffe331ac6120e3c03d  2026-11-11/glb/pj_elfo_cuerpo.glb
      1204760  bda2062b4738d185dfc46f1adb5ad1418b72d44c98e47a610391465eb715a952  2026-11-11/glb/props_int_clases.glb
       442880  b85f07a83712df13834d7243a57d7e9627df5444bf15ebaae306b0782d1e68ff  2026-11-11/glb/props_int_mano.glb
      2441900  36fd587dfbecc8ad06d1200ed1bf98c674383a5652fbb711f1ac590ecbf472c3  2026-11-11/glb/props_int_mercado.glb
      2006716  45674efc69e58624f8b490561dc1364d889266b040c59a77aeada5cac681888a  2026-11-11/glb/props_int_oficios.glb
        70708  ded9ce2d6f997c4d4c4aeea5bde72047e274816ff14283a732762356429fc243  2026-11-11/glb/props_trophy_cases.glb
+     1472936  9f62e00250091b97743a90d1ba999fff96564d74a028e0cf00e18343ed338b03  2026-11-11/personajes/capturas/pj1_cara.png
+      825967  5716901d8c866f9aa822fd295facdf6f456a5eec04bc06f4712eb36d9bd2d9ba  2026-11-11/personajes/capturas/pj1_iso.png
+      848379  c5eac7b6a714a1240644bc92fa356c44b91acad7ceb5c83916ca2443851d78c5  2026-11-11/personajes/capturas/pj1_piezas.png
+      467902  43a881d15f2d4c501f600efaffbd14c7090b59e523a01e4923a45b3530aace0e  2026-11-11/personajes/capturas/pj1_texturas.png
+     1067969  b0f81d8ab063b3bcdb70143333764bde9fd39d1b0a7dadde5a54e05b9de8d484  2026-11-11/personajes/capturas/pj1_tpose.png
+     3422225  90987ee9f4585fcfdf42750841ee1e7667ed5d07299f845ead7ed75c84bac991  2026-11-11/personajes/elfo_v01.blend
+      246339  8a8541c43fc9d89a3890fcde34857a06383bfa8d4aba5f62b14759bdbb312c0e  2026-11-11/personajes/textures/elfo_m_albedo_abedul_1k.png
+      192224  340691269799321022f4d561f713e7553329c59f36083271b2fbca11a0fa9380  2026-11-11/personajes/textures/elfo_m_albedo_corteza_1k.png
+      572828  a874f4d548118aa9f9486541e220f4578d5c08576c9d76fd0a3ca9fbe5d44289  2026-11-11/personajes/textures/elfo_m_normal_1k.png
+        9635  12bdc8ba1e79f7b6d556976bd4f66d3ecdf65bac4765ee1cf470a802a3a1026f  2026-11-11/personajes/textures/elfo_m_ojos_albedo_256.png
+      271424  1e77fb87f2395dea48ca9d7a80104bcd917584dcd0cfd57ea3c8c1eaffc97392  2026-11-11/personajes/textures/elfo_m_orm_1k.png
       225986  8bfd8ec5347f15ad083bdd9de9d5d79e63439e2f77739a9d0a59e15d2287d4c1  2026-11-11/textures/PROP_AV_Cheese_Wheel_normal_512.png
       208829  5556477cc00b35a7cce65dafcf35d692931d1c10fd078408a176cef3aa1b19db  2026-11-11/textures/PROP_AV_Grain_Sack_normal_512.png
       329735  d9739ffd1cd0e298bd844698a41b595ad696faaf36f96ed499b34cc8c03b8fbf  2026-11-11/textures/PROP_AV_Grapes_normal_512.png
@@ -226,4 +241,4 @@ Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | aw
       772159  cd1a5382da65cca5b693dd09972c47b6e2385871cf5c8413e755a8f0310906b4  2026-11-11/textures/PROP_Q_WeaponStand_normal_1k.png
       290103  b43e85d44132548af1e19c707b769b1e6d8e864448444d2f66da7ce84329fe60  2026-11-11/textures/trophy_case_atlas_512.png
 
-Total: 219 archivos, 557,118,804 bytes (531.3 MiB)
+Total: 233 archivos, 894,417,010 bytes (853.0 MiB)

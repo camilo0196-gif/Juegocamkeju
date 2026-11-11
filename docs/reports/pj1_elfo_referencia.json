@@ -1,0 +1,37 @@
+{
+ "REF": {
+  "altura_m": 1.85,
+  "cabeza_m": 0.2307,
+  "cabezas": 8.02,
+  "barbilla_z": 1.6193,
+  "hombros_biacromial_m": 0.4354,
+  "cadera_z": 1.0178,
+  "base_cuello_z": 1.5975,
+  "pierna_m": 1.0178,
+  "torso_m": 0.5798,
+  "pierna_torso": 1.7554,
+  "cuello_m": 0.1003,
+  "tris_lo": 3140,
+  "escala": 0.9249
+ },
+ "ELF": {
+  "altura_m": 1.85,
+  "cabeza_m": 0.2252,
+  "cabezas": 8.21,
+  "barbilla_z": 1.6248,
+  "hombros_biacromial_m": 0.399,
+  "cadera_z": 1.0299,
+  "base_cuello_z": 1.5831,
+  "pierna_m": 1.0299,
+  "torso_m": 0.5533,
+  "pierna_torso": 1.8615,
+  "cuello_m": 0.1171,
+  "tris_lo": 3140,
+  "escala": 0.8826
+ },
+ "comparacion_elfo_vs_referencia": {
+  "hombros_biacromial": -0.0836,
+  "pierna_torso": 0.0604,
+  "cuello": 0.1675
+ }
+}

@@ -312,3 +312,14 @@ Moradas: puertas tapadas residuales (E28, punto 11)
       SO_058_3: aclarar Morada_SO_059 (balcon/escalera, 3.95 m por el rayo)
       SO_059_3: aclarar Morada_SO_060 (balcon/escalera, 4.65 m por el rayo)
     Lista con parcela y distancias: docs/reports/stage28_moradas_residual.json. Viviendas totales: 1,398.
+
+Personajes: cuerpo del elfo (PJ1)
+---------------------------------
+  - export/godot/pj_elfo_cuerpo.glb: 6 piezas + ojos en pose T, sin rig todavia (llega con concordia_rig.py).
+    De cara a +Z en Godot, origen en el suelo entre los pies.
+  - MAT_Elfo_Piel: ORM con R = AO; en Godot usar ao_texture_channel = R, roughness_texture_channel = G,
+    metallic 0. Normal en convencion OpenGL (la de Godot).
+  - Tono B ('corteza'): mismo material con albedo textures/personajes/elfo/elfo_m_albedo_corteza_1k.png (no va en
+    el glb); conviene un StandardMaterial3D duplicado o cambiar la textura en tiempo de ejecucion.
+  - Los grupos HIDE_* no viajan en el glb sin skin; cuando haya rig se exportaran como piezas separadas y la ropa
+    ocultara la pieza entera (visible = false) o por mascara. Decidir al montar la ropa (PJ2).

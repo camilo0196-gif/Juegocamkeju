@@ -1,0 +1,270 @@
+{
+ "archivo": "blender/elfo_v01.blend",
+ "glb": "export/godot/pj_elfo_cuerpo.glb",
+ "glb_kb": 1177.4,
+ "base": "MakeHuman (MPFB 2.0.18, assets de sistema CC0): malla base + proxy male1591 + ojos low-poly",
+ "macros": {
+  "gender": 1.0,
+  "age": 0.5,
+  "muscle": 0.62,
+  "weight": 0.3,
+  "proportions": 1.0,
+  "height": 0.7,
+  "cupsize": 0.5,
+  "firmness": 0.5
+ },
+ "targets": {
+  "measure-shoulder-dist-decr": 0.7,
+  "measure-upperleg-height-incr": 0.36,
+  "measure-lowerleg-height-incr": 0.36,
+  "measure-neck-height-incr": 0.45,
+  "neck-scale-vert-incr": 0.2,
+  "neck-scale-horiz-decr": 0.25,
+  "head-scale-horiz-decr": 0.1,
+  "head-oval": 0.5,
+  "l-cheek-bones-incr": 0.8,
+  "r-cheek-bones-incr": 0.8,
+  "l-cheek-volume-decr": 0.5,
+  "r-cheek-volume-decr": 0.5,
+  "l-cheek-inner-decr": 0.3,
+  "r-cheek-inner-decr": 0.3,
+  "l-eye-corner1-up": 0.6,
+  "r-eye-corner1-up": 0.6,
+  "l-eye-eyefold-angle-up": 0.5,
+  "r-eye-eyefold-angle-up": 0.5,
+  "l-eye-height2-decr": 0.3,
+  "r-eye-height2-decr": 0.3,
+  "nose-scale-horiz-decr": 0.4,
+  "nose-volume-decr": 0.4,
+  "nose-point-width-decr": 0.5,
+  "nose-scale-depth-decr": 0.2,
+  "chin-width-decr": 0.35,
+  "chin-prominent-incr": 0.25,
+  "chin-triangle": 0.3,
+  "mouth-scale-horiz-decr": 0.2,
+  "mouth-upperlip-volume-decr": 0.4,
+  "mouth-lowerlip-volume-decr": 0.45,
+  "chin-bones-incr": 0.3,
+  "l-ear-shape-pointed": 1.0,
+  "r-ear-shape-pointed": 1.0,
+  "l-ear-scale-vert-incr": 0.6,
+  "r-ear-scale-vert-incr": 0.6,
+  "l-ear-rot-backward": 0.6,
+  "r-ear-rot-backward": 0.6,
+  "l-ear-flap-decr": 0.5,
+  "r-ear-flap-decr": 0.5,
+  "l-ear-lobe-decr": 0.6,
+  "r-ear-lobe-decr": 0.6,
+  "l-hand-fingers-length-incr": 1.0,
+  "r-hand-fingers-length-incr": 1.0,
+  "l-hand-fingers-diameter-decr": 0.5,
+  "r-hand-fingers-diameter-decr": 0.5,
+  "l-lowerleg-scale-horiz-decr": 0.2,
+  "r-lowerleg-scale-horiz-decr": 0.2,
+  "l-upperleg-scale-horiz-decr": 0.15,
+  "r-upperleg-scale-horiz-decr": 0.15,
+  "l-lowerleg-fat-decr": 0.4,
+  "r-lowerleg-fat-decr": 0.4,
+  "l-upperleg-fat-decr": 0.4,
+  "r-upperleg-fat-decr": 0.4
+ },
+ "medidas": {
+  "altura_m": 1.85,
+  "cabeza_m": 0.2252,
+  "cabezas": 8.21,
+  "barbilla_z": 1.6248,
+  "hombros_biacromial_m": 0.399,
+  "cadera_z": 1.0299,
+  "base_cuello_z": 1.5831,
+  "pierna_m": 1.0299,
+  "torso_m": 0.5533,
+  "pierna_torso": 1.8615,
+  "cuello_m": 0.1171,
+  "tris_lo": 3328
+ },
+ "referencia_humana_y_comparacion": {
+  "REF": {
+   "altura_m": 1.85,
+   "cabeza_m": 0.2307,
+   "cabezas": 8.02,
+   "barbilla_z": 1.6193,
+   "hombros_biacromial_m": 0.4354,
+   "cadera_z": 1.0178,
+   "base_cuello_z": 1.5975,
+   "pierna_m": 1.0178,
+   "torso_m": 0.5798,
+   "pierna_torso": 1.7554,
+   "cuello_m": 0.1003,
+   "tris_lo": 3140,
+   "escala": 0.9249
+  },
+  "ELF": {
+   "altura_m": 1.85,
+   "cabeza_m": 0.2252,
+   "cabezas": 8.21,
+   "barbilla_z": 1.6248,
+   "hombros_biacromial_m": 0.399,
+   "cadera_z": 1.0299,
+   "base_cuello_z": 1.5831,
+   "pierna_m": 1.0299,
+   "torso_m": 0.5533,
+   "pierna_torso": 1.8615,
+   "cuello_m": 0.1171,
+   "tris_lo": 3140,
+   "escala": 0.8826
+  },
+  "comparacion_elfo_vs_referencia": {
+   "hombros_biacromial": -0.0836,
+   "pierna_torso": 0.0604,
+   "cuello": 0.1675
+  }
+ },
+ "orejas": {
+  "L": {
+   "largo_m": 0.1353,
+   "inclinacion_atras_grados": 28.0,
+   "apertura_fuera_grados": 14.5,
+   "punta_z": 1.8087,
+   "grosor_m": null
+  },
+  "R": {
+   "largo_m": 0.1353,
+   "inclinacion_atras_grados": 28.0,
+   "apertura_fuera_grados": 14.5,
+   "punta_z": 1.8087,
+   "grosor_m": null
+  }
+ },
+ "orejas_subdivision": {
+  "caras_antes": 1570,
+  "caras_despues": 1672,
+  "lados": {
+   "4": 1656,
+   "3": 16
+  }
+ },
+ "orejas_concha": {
+  "vertices_hundidos": 121,
+  "vertices_borde": 15
+ },
+ "tris_por_objeto": {
+  "Feet": 196,
+  "Head": 1196,
+  "Torso": 516,
+  "Arms": 128,
+  "Legs": 224,
+  "Hands": 1068,
+  "Eyes": 172
+ },
+ "tris_cuerpo_con_cabeza": 3328,
+ "tris_total_con_ojos": 3500,
+ "presupuesto_cuerpo": 4500,
+ "caras_por_lados_cuerpo": {
+  "4": 1656,
+  "3": 16
+ },
+ "costuras": {
+  "vertices_de_borde": 206,
+  "sin_pareja": 42,
+  "dif_normal_max_grados": 0.0,
+  "bordes_propios_del_proxy": 42
+ },
+ "cortes": {
+  "muneca_x": 0.7197,
+  "hombro_x": 0.2095,
+  "tobillo_z": 0.088,
+  "entrepierna_z": 0.9449,
+  "costuras_bucle": {
+   "muneca_L": {
+    "aristas": 8,
+    "posicion": 0.7423,
+    "desviacion": 0.0036
+   },
+   "hombro_L": {
+    "aristas": 8,
+    "posicion": 0.2222,
+    "desviacion": 0.0095
+   },
+   "tobillo_L": {
+    "aristas": 8,
+    "posicion": 0.0952,
+    "desviacion": 0.003
+   },
+   "muslo_L": {
+    "aristas": 8,
+    "posicion": 0.9304,
+    "desviacion": 0.0196
+   },
+   "muneca_R": {
+    "aristas": 8,
+    "posicion": 0.7423,
+    "desviacion": 0.0036
+   },
+   "hombro_R": {
+    "aristas": 8,
+    "posicion": 0.2222,
+    "desviacion": 0.0095
+   },
+   "tobillo_R": {
+    "aristas": 8,
+    "posicion": 0.0952,
+    "desviacion": 0.003
+   },
+   "muslo_R": {
+    "aristas": 8,
+    "posicion": 0.9304,
+    "desviacion": 0.0196
+   },
+   "cuello": {
+    "aristas": 18,
+    "posicion": 1.5959,
+    "desviacion": 0.0103
+   }
+  }
+ },
+ "materiales": [
+  "MAT_Elfo_Piel (tono A, asignado)",
+  "MAT_Elfo_Piel_B (tono B, sin asignar)",
+  "MAT_Elfo_Ojos"
+ ],
+ "texturas": {
+  "albedo_A": "textures/personajes/elfo/elfo_m_albedo_abedul_1k.png",
+  "albedo_B": "textures/personajes/elfo/elfo_m_albedo_corteza_1k.png",
+  "normal": "textures/personajes/elfo/elfo_m_normal_1k.png",
+  "orm": "textures/personajes/elfo/elfo_m_orm_1k.png",
+  "ojos": "textures/personajes/elfo/elfo_m_ojos_albedo_256.png"
+ },
+ "texturas_informe": {
+  "albedo_A_texeles_rellenados": 0,
+  "texeles_saturacion_recortada_A": 0,
+  "saturacion_albedo_A": [
+   0.222,
+   0.255,
+   0
+  ],
+  "albedo_B_texeles_rellenados": 0,
+  "texeles_saturacion_recortada_B": 41,
+  "saturacion_albedo_B": [
+   0.34,
+   0.348,
+   0
+  ],
+  "rugosidad_texeles_rellenados": 0,
+  "normal_texeles_rellenados": 1559,
+  "orejas_dedos_pie_normal_plano_texeles": 60496,
+  "ao_vertices_min_media": [
+   0.0,
+   0.819
+  ],
+  "ao_texeles_rellenados": 4057,
+  "ao_media": 0.945
+ },
+ "orientacion": "de cara a -Y en Blender (+Z en Godot), metros, origen en el suelo entre los pies, pose T",
+ "grupos_HIDE": {
+  "Torso": "HIDE_Torso",
+  "Arms": "HIDE_Arms",
+  "Hands": "HIDE_Hands",
+  "Legs": "HIDE_Legs",
+  "Feet": "HIDE_Feet"
+ }
+}
