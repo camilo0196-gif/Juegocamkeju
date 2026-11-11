@@ -201,10 +201,11 @@
   ]
  },
  "faltan": [
-  "andar hacia atras / de lado",
-  "girar en el sitio",
-  "segunda muerte",
-  "correr hacia atras",
-  "levantarse propio (LayToIdle de UAL2 como apano)"
- ]
+  "(resuelto en Godot) andar hacia atras: Walk_Loop a -0,6",
+  "(resuelto en Godot) de lado: BlendSpace2D + giro",
+  "(resuelto en Godot) girar en el sitio: codigo",
+  "segunda muerte: Death_B (espejo)",
+  "levantarse: GetUp / GetUp_B (LayToIdle + transicion)"
+ ],
+ "seleccion_ual": "docs/reports/pj4b_ual_seleccion.json"
 }

@@ -200,6 +200,23 @@ TODO_GODOT_personaje.txt).
 Animaciones propias del Sanador (Heal_Cast_Single, Heal_Channel-loop, Heal_Cast_Area, Revive): hechas a mano en
 el proyecto (tools/blender/build_pj4_anim.py), sin licencia de terceros.
 
+Version descargada: SOLO la Standard gratuita de las dos librerias (zips universal_animation_librarystandard.zip y
+universal_animation_library_2standard.zip de OpenGameArt, 2026-11-11; nada de Pro ni Source, no se ha comprado nada).
+Animaciones que usa el elfo Sanador (seleccion en animations/ual/sanador_ual1_seleccion.glb y
+sanador_ual2_seleccion.glb, sobre los esqueletos originales; tools/blender/build_pj4b_ual_seleccion.py):
+
+| Animacion en Concordia | Fuente | Clip original | URL | Licencia | Fecha |
+|---|---|---|---|---|---|
+| Idle_Loop, Walk_Loop, Walk_Formal_Loop, Jog_Fwd_Loop, Sprint_Loop | UAL 1 Standard | mismos nombres | https://opengameart.org/content/universal-animation-library | CC0 1.0 | 2026-11-11 |
+| Sitting_Enter, Sitting_Idle_Loop, Sitting_Exit, Sitting_Talking_Loop | UAL 1 Standard | mismos nombres | idem | CC0 1.0 | 2026-11-11 |
+| Hit_Chest, Hit_Head | UAL 1 Standard | mismos nombres | idem | CC0 1.0 | 2026-11-11 |
+| Spell_Simple_Enter, Spell_Simple_Idle_Loop, Spell_Simple_Shoot, Spell_Simple_Exit | UAL 1 Standard | mismos nombres | idem | CC0 1.0 | 2026-11-11 |
+| Death_A | UAL 1 Standard | Death01 | idem | CC0 1.0 | 2026-11-11 |
+| Death_B | derivada de UAL 1 Standard (espejo + ajustes de cabeza y brazos, en Concordia) | Death01 | idem | CC0 1.0 (la obra derivada es propia) | 2026-11-11 |
+| GetUp, GetUp_B | UAL 2 Standard (+ 7 fotogramas de transicion hechos en Concordia) | LayToIdle | https://opengameart.org/content/universal-animation-library-2 | CC0 1.0 | 2026-11-11 |
+| Consume, Yes, Chest_Open, Hit_Knockback | UAL 2 Standard | mismos nombres | idem | CC0 1.0 | 2026-11-11 |
+| Idle_No-loop, Idle_FoldArms-loop | UAL 2 Standard | Idle_No_Loop, Idle_FoldArms_Loop | idem | CC0 1.0 | 2026-11-11 |
+
 ### Cierre del personaje (PJ5): de donde sale cada parte de los .glb finales (export/godot/personajes/)
 
 | Parte | Fuente | Licencia |

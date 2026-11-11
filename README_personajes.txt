@@ -150,3 +150,12 @@ PJ5 - LODs, exportacion y cierre (blender/concordia_personajes_master.blend, ver
   docs/reports/pj5_lods.json. Documento de cierre: README_personaje.txt (huesos, HIDE_*, nombres, presupuesto).
   LOD0 7250 / LOD1 4848 / LOD2 1757 tris. Export: export/godot/personajes/ (9 .glb, mismo esqueleto).
   Respaldo: respaldo/2026-11-11/personajes_pj5/ con MANIFEST (sha256). Captura: docs/captures/pj5_lods.png.
+
+PJ4b - decisiones de animacion (tras PJ4)
+-----------------------------------------
+  tools/blender/build_pj4b_ual_seleccion.py -> animations/ual/sanador_ual1_seleccion.glb y sanador_ual2_seleccion.glb
+  (seleccion con nombres finales sobre los esqueletos originales de la UAL), docs/reports/pj4b_ual_seleccion.json,
+  docs/captures/pj4b_muertes_getup.png. Death_B = espejo de Death01 (matriz del hueso simetrico reflejada en X y
+  corregida por el reposo) con otro giro de cabeza y otros brazos a partir del 30 %; GetUp / GetUp_B = LayToIdle con
+  7 fotogramas de transicion desde el final de Death_A / Death_B (sin ella: cadera 0,31 m atras, media 46 cm).
+  Andar atras, de lado y girar en el sitio: en Godot (TODO_GODOT_personaje.txt PJ4b). Lista final: README_personaje.txt.

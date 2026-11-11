@@ -240,9 +240,9 @@ Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | aw
         3317  f599d4ccc7d76bad7937862890474bcebb199e889ffc2bce1573052290d353a8  2026-11-11/personajes/textures_sanador/sanador_atlas_emision_1k.png
       732703  10c83a69bd191ff5c044ff110bc48048080f66e4c4a46b8b765b55b028415181  2026-11-11/personajes/textures_sanador/sanador_atlas_normal_1k.png
       400653  8b41ebcb4b6b3917fef9bfe7c7ed2144504d7707c6adf980d66aa6def64aced8  2026-11-11/personajes/textures_sanador/sanador_atlas_orm_1k.png
-        2961  34207437ece8d525aa203872d138e76a4c1770b7ef32303cb9ba680b8937fb7c  2026-11-11/personajes_pj5/MANIFEST.txt
-       11300  437b7ed9872673ad734fd927083da114d4a7e549f6e9ccabd6479ccaee5c7c58  2026-11-11/personajes_pj5/README_personaje.txt
-       12307  0fb0df40b7b0f5cea4d5d5f41b807350da1b330285b729b77c6dfd6fac567e0f  2026-11-11/personajes_pj5/TODO_GODOT_personaje.txt
+        3229  320e5247d2cfe136d96ac80dae24f217c60fba7b498d36c8f2749a63976961e0  2026-11-11/personajes_pj5/MANIFEST.txt
+       14256  b0d6bd4554d17831ad43f04c9222193df3fef4f0eebc84635ab07e077de6dc4f  2026-11-11/personajes_pj5/README_personaje.txt
+       15866  8d0babc2e7ff37607bac18d6a7516a1ffba6e88729b1bb3955d6d875c9d438aa  2026-11-11/personajes_pj5/TODO_GODOT_personaje.txt
      8212958  d13fb953267f9fecca323522186abd6014881cf7852b502dafd52cbc2734fbc6  2026-11-11/personajes_pj5/concordia_personajes_master_2026-11-11_v1.0.blend
       276116  e9cb42a2b8a2184940981d764d6cff9e2a0b8c0d8b0b7f5cf3181e3344906ab6  2026-11-11/personajes_pj5/glb/elfo_sanador_anims.glb
      1953636  8b511f71bae9be9af06a01922438094c5ecfa5434401e97683dd59bab4117f3f  2026-11-11/personajes_pj5/glb/elfo_sanador_belt.glb
@@ -263,6 +263,8 @@ Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | aw
         3317  f599d4ccc7d76bad7937862890474bcebb199e889ffc2bce1573052290d353a8  2026-11-11/personajes_pj5/texturas/sanador_atlas_emision_1k.png
       732703  10c83a69bd191ff5c044ff110bc48048080f66e4c4a46b8b765b55b028415181  2026-11-11/personajes_pj5/texturas/sanador_atlas_normal_1k.png
       400653  8b41ebcb4b6b3917fef9bfe7c7ed2144504d7707c6adf980d66aa6def64aced8  2026-11-11/personajes_pj5/texturas/sanador_atlas_orm_1k.png
+     1625276  d893d848c59d28f7352014eda985958911b0fa56844c8eddc80e39c1c6e87a3a  2026-11-11/personajes_pj5/ual/sanador_ual1_seleccion.glb
+     1169564  740a0f5f6f129172631938c1630bb725d940f096ba331ee56fb82cefa829728a  2026-11-11/personajes_pj5/ual/sanador_ual2_seleccion.glb
       225986  8bfd8ec5347f15ad083bdd9de9d5d79e63439e2f77739a9d0a59e15d2287d4c1  2026-11-11/textures/PROP_AV_Cheese_Wheel_normal_512.png
       208829  5556477cc00b35a7cce65dafcf35d692931d1c10fd078408a176cef3aa1b19db  2026-11-11/textures/PROP_AV_Grain_Sack_normal_512.png
       329735  d9739ffd1cd0e298bd844698a41b595ad696faaf36f96ed499b34cc8c03b8fbf  2026-11-11/textures/PROP_AV_Grapes_normal_512.png
@@ -285,4 +287,4 @@ Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | aw
     10257419  ec0e40d6d78fe9aaad59e322f40865a8675c22f0745e291622e54520391a9217  2026-11-11/ual_original/universal_animation_library_2standard.zip
     14541205  18ff1a7215f4852b320203e8aaf02a1578b5c8eef9027fbaedfcedc7b85a3ac2  2026-11-11/ual_original/universal_animation_librarystandard.zip
 
-Total: 276 archivos, 981,856,992 bytes (936.4 MiB)
+Total: 278 archivos, 984,658,615 bytes (939.0 MiB)

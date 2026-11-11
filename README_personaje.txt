@@ -146,10 +146,38 @@ Fuentes y licencias: ASSETS_LICENSES.md (MakeHuman CC0 + MPFB como herramienta, 
   Godot se oculta la pieza entera cuando queda tapada del todo (Feet con botas; Torso con tunica + falda) o se usa
   la mascara en el shader de piel (TODO_GODOT_personaje.txt PJ3 punto 5).
 
-6. ANIMACIONES (elfo_sanador_anims.glb, 30 fps, sin movimiento de raiz)
+6. ANIMACIONES DEL ELFO SANADOR (lista final; duraciones leidas con el lector glTF de Godot 4.7)
 --------------------------------------------------------------------------------------------------------
-  Heal_Cast_Single     fotogramas 1-28  0.90 s
-  Heal_Channel-loop    fotogramas 1-46  1.50 s  (bucle)
-  Heal_Cast_Area       fotogramas 1-37  1.20 s
-  Revive               fotogramas 1-61  2.00 s
-  Base (Idle, Walk, Run, Sit, Hit, Death, Spell): UAL 1 / UAL 2 de Quaternius, retargeteadas en Godot.
+  nombre                    duracion  ciclica  origen                                  archivo
+  Idle_Loop                  2,50 s    si      UAL 1                                   animations/ual/sanador_ual1_seleccion.glb
+  Idle_FoldArms-loop         2,50 s    si      UAL 2 (Idle_FoldArms_Loop)              animations/ual/sanador_ual2_seleccion.glb
+  Walk_Loop                  1,33 s    si      UAL 1  (al reves a -0,6 = andar atras)  ual1
+  Walk_Formal_Loop           1,33 s    si      UAL 1                                   ual1
+  Jog_Fwd_Loop               0,93 s    si      UAL 1                                   ual1
+  Sprint_Loop                0,67 s    si      UAL 1                                   ual1
+  Sitting_Enter              1,30 s    no      UAL 1                                   ual1
+  Sitting_Idle_Loop          1,67 s    si      UAL 1                                   ual1
+  Sitting_Talking_Loop       2,93 s    si      UAL 1                                   ual1
+  Sitting_Exit               1,03 s    no      UAL 1                                   ual1
+  Hit_Chest                  0,33 s    no      UAL 1                                   ual1
+  Hit_Head                   0,43 s    no      UAL 1                                   ual1
+  Hit_Knockback              0,83 s    no      UAL 2                                   ual2
+  Death_A                    2,40 s    no      UAL 1 (Death01)                         ual1
+  Death_B                    2,40 s    no      UAL 1 Death01 en espejo + ajustes (Concordia)  ual1
+  GetUp                      1,77 s    no      UAL 2 LayToIdle + 7 fotogramas desde Death_A   ual2
+  GetUp_B                    1,77 s    no      UAL 2 LayToIdle + 7 fotogramas desde Death_B   ual2
+  Spell_Simple_Enter         0,53 s    no      UAL 1                                   ual1
+  Spell_Simple_Idle_Loop     2,07 s    si      UAL 1                                   ual1
+  Spell_Simple_Shoot         0,50 s    no      UAL 1                                   ual1
+  Spell_Simple_Exit          0,43 s    no      UAL 1                                   ual1
+  Consume                    1,33 s    no      UAL 2 (raciones y pociones)             ual2
+  Chest_Open                 1,37 s    no      UAL 2 (cofres, cajas de la boveda)      ual2
+  Yes                        2,50 s    no      UAL 2 (emote)                           ual2
+  Idle_No-loop               2,50 s    si      UAL 2 (Idle_No_Loop, emote)             ual2
+  Heal_Cast_Single           0,90 s    no      hecha a mano (PJ4)                      export/godot/personajes/elfo_sanador_anims.glb
+  Heal_Channel-loop          1,50 s    si      hecha a mano (PJ4)                      elfo_sanador_anims.glb
+  Heal_Cast_Area             1,20 s    no      hecha a mano (PJ4)                      elfo_sanador_anims.glb
+  Revive                     2,00 s    no      hecha a mano (PJ4)                      elfo_sanador_anims.glb
+  Sin clip (en Godot): andar hacia atras (Walk_Loop a -0,6), de lado (BlendSpace2D + giro hacia el movimiento),
+  girar en el sitio (giro por codigo sobre Idle_Loop). TODO_GODOT_personaje.txt, seccion PJ4b.
+  UAL 1 y UAL 2: version Standard gratuita (CC0), ASSETS_LICENSES.md.

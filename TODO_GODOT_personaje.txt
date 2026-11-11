@@ -138,3 +138,42 @@ hood, belt, boots, bracers), elfo_sanador_lod2.glb, elfo_sanador_anims.glb. TODO
 8. AnimationPlayer del personaje con las librerias "ual" y "sanador"; AnimationTree con estados Idle / Walk / Run /
    Cast / Channel / Revive / Hit / Death. Baston: BoneAttachment3D en Weapon_R. Falda y trenza: SpringBoneSimulator3D
    (PJ3 punto 4).
+
+======================================================================
+PJ4b - DECISIONES DE ANIMACION (usuario, tras PJ4) y AnimationTree
+======================================================================
+Archivos nuevos (sobre los esqueletos ORIGINALES de la UAL; se retargetean al importar igual que la UAL completa):
+  animations/ual/sanador_ual1_seleccion.glb  (bonemap_ual1.tres) Death_A, Death_B, Idle_Loop, Walk_Loop,
+      Walk_Formal_Loop, Jog_Fwd_Loop, Sprint_Loop, Sitting_Enter/Idle_Loop/Exit/Talking_Loop, Hit_Chest, Hit_Head,
+      Spell_Simple_Enter/Idle_Loop/Shoot/Exit
+  animations/ual/sanador_ual2_seleccion.glb  (bonemap_ual2.tres) GetUp, GetUp_B, Consume, Yes, Idle_No-loop,
+      Idle_FoldArms-loop, Chest_Open, Hit_Knockback
+  (tools/blender/build_pj4b_ual_seleccion.py; informe docs/reports/pj4b_ual_seleccion.json; captura
+   docs/captures/pj4b_muertes_getup.png). Comprobado con el lector glTF de Godot 4.7 (debug/probe_ual_sel.gd):
+   las _Loop y -loop entran en bucle.
+
+1. Andar hacia atras: SIN clip nuevo. En el AnimationTree, la misma Walk_Loop a traves de un AnimationNodeTimeScale
+   con scale = -0.6 (documentacion 4.7: "scale the speed of the animation (or reverse it)"). Alternativa equivalente:
+   AnimationNodeAnimation de Walk_Loop con play_mode = PLAY_MODE_BACKWARD y un TimeScale de 0.6.
+2. Andar de lado: SIN clips laterales. El personaje gira hacia la direccion de movimiento (como en los MMO
+   isometricos) y la locomocion es un AnimationNodeBlendSpace2D con blend_position = velocidad en ejes locales
+   (x lateral, y adelante, en m/s normalizados): (0,0) Idle_Loop, (0,1) Walk_Formal_Loop o Walk_Loop, (0,2)
+   Jog_Fwd_Loop, (0,3) Sprint_Loop, (0,-1) el nodo de andar hacia atras del punto 1; (+-1,0) y (+-2,0) con Walk/Jog
+   (en la practica casi no se usan, porque el cuerpo ya gira). blend_mode = BLEND_MODE_INTERPOLATED, sync on.
+   La UAL Standard (gratis) NO trae locomocion en 8 direcciones: segun su pagina de OpenGameArt, "all the
+   locomotion movements in different directions" estan en la version completa de 120+ animaciones (Source, de
+   pago); la Standard trae 45. No se compra nada.
+3. Girar en el sitio: SIN clip. Por codigo, mientras suena Idle_Loop: rotation.y = lerp_angle(rotation.y, objetivo,
+   1.0 - exp(-giro * delta)) con giro ~ 10 1/s (unos 0,3 s para media vuelta); al moverse, el mismo giro hacia la
+   velocidad (la direccion de movimiento).
+4. Muertes: Death_A (= Death01 de la UAL1, cae de espaldas) y Death_B (espejo izquierda-derecha de Death01 con otro
+   giro de cabeza y otros brazos: se nota distinta y sigue siendo creible). Al morir se elige una al azar.
+5. Levantarse: GetUp (LayToIdle de la UAL2, aprobado como apano) con 7 fotogramas de transicion al principio
+   desde la pose final de Death_A: sin ellos, el LayToIdle original empezaba con el cuerpo en el mismo eje (boca arriba)
+   pero con la cadera 0,31 m mas atras y los brazos en otro sitio (media 46 cm, maximo 1,36 m en una mano).
+   Con la transicion, el primer fotograma coincide con el ultimo de Death_A (0 cm). GetUp_B: lo mismo desde Death_B.
+   Tras Death_A -> GetUp; tras Death_B -> GetUp_B (sin fundido, o con 0,1 s). Revive (el Sanador) dispara GetUp
+   (o GetUp_B) en el objetivo.
+6. Extras de la UAL2 (aprobados): Consume para raciones y pociones; Chest_Open para cofres y las cajas de la boveda del
+   Banco (G6); Idle_FoldArms-loop como variacion de espera (cada 8-15 s en Idle); Yes e Idle_No-loop como emotes.
+7. Mixamo: de reserva, no se usa (lo descarga el usuario si un dia hace falta).
