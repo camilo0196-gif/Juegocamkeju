@@ -1,6 +1,6 @@
 CONCORDIA - Edificios y materiales nuevos (kit, Portal y landmarks)
 ==================================================================
-Actualizado en la etapa 26 (concordia_v26.blend). Auditoria automatica: tools/blender/audit_materials.py ->
+Actualizado en la etapa 27 (concordia_v26.blend; interiores en concordia_interiors_v01.blend). Auditoria automatica: tools/blender/audit_materials.py ->
 docs/reports/stage17_materials.json.
 
 1. Regla de aprobacion de materiales nuevos
@@ -496,3 +496,74 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
   3.4 GiB (historial con todas las versiones anteriores); respaldo/ 192 MB.
   AVISO: el contenedor de esta sesion es temporal. respaldo/ y los .blend/.glb/.png nuevos SOLO existen aqui y en
   lo que se descargue; concordia_v26.blend no esta en GitHub.
+
+18. Interiores (etapa 27): kit BLD_INT_KIT, build_interior y piloto del Banco
+---------------------------------------------------------------------------
+  Archivo: blender/concordia_interiors_v01.blend (materiales copiados de concordia_v26). Scripts:
+  tools/blender/interior_kit.py (kit y escena de interior), stage27_banco.py, build_stage27.py, capture_stage27.py;
+  concordia_buildings.build_interior(nombre, volumen, estilo, seed, ...) llama a interior_kit.build_interior.
+  Informe: docs/reports/stage27_interiors.json.
+
+  Kit (coleccion BLD_INT_KIT, grilla de 1 m, <= 300 triangulos por modulo; variantes _B remendadas):
+    INT_Floor_Stone 10, INT_Floor_Stone_B 30, INT_Floor_Planks 40, INT_Floor_Planks_B 40, INT_Wall_Plaster 16, INT_Wall_Plaster_B 26, INT_Wall_Stone 108, INT_Wall_Stone_B 108, INT_Wall_Panel 66, INT_Wall_Panel_B 66, INT_Beam_Straight 12, INT_Beam_Cross 40, INT_Arch_3m 236, INT_Arch_6m 236, INT_Pillar 30, INT_Stairs_Int 136, INT_Door_Int 98, INT_Door_Int_Iron 130, INT_Window_Int 92, INT_Fireplace 70, INT_Counter_Straight 42, INT_Counter_Straight_B 42, INT_Counter_Corner 22, INT_Grille 142, INT_Grille_Wicket 154, INT_Railing 78, INT_Trim 20.
+  Convencion: muros x en [0, ancho], cara visible en y = 0 hacia +Y, grosor hacia -Y; suelos 2 x 2 con la cara
+  en z = 0; la escalera sube hacia +Y (16 peldanos, 5.0 x 3.2 m, 32.6 grados).
+
+  Escena de interior (int_<nombre>.glb): raiz INT_<nombre> (origen en la puerta, piso en z = 0, giro del edificio
+  en el mundo) > INT_<nombre>_Frame > grupos Shell, WALL_Near_A, WALL_Near_B, CEILING, Furniture, Lights, Markers,
+  -colonly y -navmesh. Los muros cercanos salen de CAM_Iso: la normal hacia fuera del muro apunta a la camara.
+  Al exportar, cada grupo de estructura se une en una malla (INT_<nombre>_<grupo>, UV metrica continua); el
+  mobiliario queda instanciado. Luces = Empties con light_color, light_energy (Godot), light_range (m).
+
+  Piloto: int_banco.glb (export/godot, 1.61 MB). Volumen = Banco_InteriorVolume 23.1 x 19.1 x 6.4 m
+  (diferencia 0.0 m; los "24 x 20 m" del pedido son la huella exterior). Giro 90 grados: muros cercanos -X y -Y.
+    Planta baja: vestibulo de doble altura; mostrador de piedra y madera de 10 m (5 INT_Counter_Straight) con reja
+      (5 INT_Grille, 2 con ventanilla); el Banquero (MARKER_NPC_Slot_01) detras, de cara al publico y a la camara;
+      sala de espera (3 bancos); archivo (6 estanterias de doble cara con libros contables, escritorio); hogar en
+      la fachada; cuarto del personal tras la boveda (puerta de 1.235 m en la arcada).
+    Boveda: tabique de 0.4 m con puerta de hierro de 2.2 x 3.0 m hecha a mano (bandas, remaches, pernios, rueda,
+      candado; VAULT_Door aparte para animarla), arco de descarga y farol de esquirla encima (el unico azul);
+      boveda de canon con 3 arcos fajones; 200 cajas (BOXES_TOTAL) en 4 paredes
+      (+X: 86, -Yv: 30, -Xv: 55, -Y: 29), 4 filas de 0.36 x 0.32 m. Cada caja: Empty
+      BANK_Box_NNN (box_number, state) con _Body (malla compartida BANK_Box_Open 18 tris o BANK_Box_Locked 36 tris)
+      y _Plate (malla propia con UV a su celda del atlas MAT_Bank_BoxNumbers 1K: mitad clara = abierta, mitad oscura
+      = cerrada). Por defecto 1-40 abiertas.
+    Planta alta (LEVEL_1, a lo largo de la fachada): galeria con balaustrada sobre una arcada de 5 vanos
+      (INT_Arch_3m), despacho con escritorio, estanteria y cofre; escalera de piedra de 2 m de ancho (32.6 grados).
+    Marcadores: MARKER_Interior_Exit, _Spawn, MARKER_NPC_Slot_01 (npc=Banquero), MARKER_Interact_Bank_Counter
+      (tipo=bank_counter), MARKER_Interact_Vault (tipo=vault).
+    Luz: 5 lamparas de aceite (pilares de la arcada, boveda, despacho), 4 velas, hogar, 6 ventanas con reja (luz
+      calida de dia) y 1 luz azul (farol de la boveda). Emision de llamas MAT_Window_Warm 1.0.
+  Verificacion:
+    Triangulos: 25,986 de 40,000 (todas las cajas cerradas: 26,706). Por grupo: Shell 8,034, WALL_Near_A 1,444, WALL_Near_B 2,910, CEILING 142, Furniture 7,660, WALL_Near_Vault 2,984, CEILING_Vault 348, LEVEL_1 1,844, Furniture_L1 620.
+    Rayos desde CAM_Iso (muros cercanos y techos ocultos): Banquero 58.3 % de 12 puntos (solo barrotes de la reja),
+      mostrador 50.0 % (cara del publico 100 %; los puntos bajo la reja dan en los barrotes), puerta de la
+      boveda 88.9 % (1 punto tras el farol). Ninguna columna ni arco los tapa.
+    Navegacion: 6,258 caras (rejilla de 0.25 m, margen 0.3 m); desde el spawn se llega al mostrador,
+      la zona del banquero, la boveda, el archivo, la espera, el cuarto del personal, la galeria y el despacho; con
+      holgura de 0.6 m (pasos de 1.2 m) tambien. Escalera 2 m, 32.6 grados.
+
+  Lecciones para los demas interiores:
+    1. Leer el giro del edificio de rotation_euler (al anexar objetos, matrix_world llega sin evaluar): con el giro
+       mal salen los muros cercanos equivocados. Comprobar 'cam_local' en el informe.
+    2. Cada recinto interior (boveda, despacho cerrado...) necesita sus propios muros cercanos ocultables
+       (WALL_Near_<recinto>, propiedad hide_when) y su techo (CEILING_<recinto>); lo que cuelga de esos muros va en
+       el mismo grupo (si no, se ve de espaldas).
+    3. Entreplantas en los muros del fondo; bajo un forjado de 5 m solo se ve 1.4 m desde el borde: la planta alta
+       va en LEVEL_1 (ocultable) y nada importante debajo.
+    4. Un volumen alto (la boveda) tapa lo que queda detras de el respecto a la camara (+x/+y en el marco del Banco):
+       ponerlo en la esquina del fondo o dejar detras solo lo secundario.
+    5. Los props miran a la camara (contra muros del fondo o de doble cara); contra muros cercanos se ven de espaldas.
+    6. Columnas y arcos solo detras de los objetivos o a mas de altura/0.7 m de ellos; comprobar con rayos antes de
+       unir los modulos (los nombres dicen que tapa).
+    7. Las rejas tapan ~40 % de lo que hay detras: ventanilla delante del NPC y cabeza por encima del borde de la
+       reja en la visual de la camara.
+    8. Navmesh: con celdas de 0.5 m una puerta de 1.2 m no pasa (margen 0.3); usar 0.25 m. La escalera necesita
+       tiras planas en ambos extremos para unir las rejillas; los pasos de 1.2 m se comprueban con holgura en
+       rejilla de 0.1 m.
+    9. Nada coplanario: el entarimado alto empieza en el borde de la arcada; separaciones >= 1 cm.
+    10. Losas remendadas con MAT_Stone_Repair parecen agujeros desde arriba: usar caliza gastada.
+    11. La luz se hornea en Godot (LightmapGI); los Empties llevan color, energia y radio; un solo azul por sala.
+    12. Convencion de props "+Y = frente": quien mira el prop de frente tiene la +X local a su IZQUIERDA. Texto en
+        una cara +Y (numeros de las cajas, rotulos) lleva la u invertida, y las series se numeran recorriendo -X local
+        para leerse de izquierda a derecha. Comprobarlo siempre con una captura de cerca.

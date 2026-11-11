@@ -615,3 +615,15 @@ def build_building(nombre, footprint=None, pisos=2, tipo_techo="gable", estilo="
     size = "pequena" if t0 <= 1500 else "media" if t0 <= 5000 else "grande" if t0 <= 12000 else "FUERA DE PRESUPUESTO"
     report["budget_class"] = size
     return root, objs, report
+
+
+# --------------------------------------------------------------------------- interiores (etapa 27)
+def build_interior(nombre, volumen, estilo="piedra", seed=0, **kw):
+    """Escena de interior de <nombre> con el kit BLD_INT_KIT (ver interior_kit.py): volumen = (ancho, fondo, alto)
+    en m (el del <nombre>_InteriorVolume), estilo en interior_kit.STYLES ('piedra', 'entramado', 'revoco').
+    Opciones: world_rot_deg (giro del edificio), door=(x, y) en el marco centrado, openings=[(lado, s, tipo,
+    planta)], storeys, ceiling, col. Devuelve el Interior (raiz INT_<nombre>, grupos Shell / WALL_Near_A /
+    WALL_Near_B / CEILING / Furniture / Lights / Markers) para anadir mobiliario, luces y marcadores; despues
+    realize() de cada grupo, collider() y navmesh(). El kit tiene que existir (interior_kit.build_kit)."""
+    import interior_kit as IK
+    return IK.build_interior(nombre, volumen, estilo, seed, **kw)

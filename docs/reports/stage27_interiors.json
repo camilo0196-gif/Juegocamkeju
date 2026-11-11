@@ -1,0 +1,592 @@
+{
+ "source": "blender/concordia_v26.blend",
+ "banco_source": {
+  "iv_size": [
+   23.1,
+   19.1,
+   6.4
+  ],
+  "rot_deg": 90.0,
+  "door_local": [
+   2.0,
+   10.0,
+   0.0
+  ]
+ },
+ "kit_tris": {
+  "INT_Floor_Stone": 10,
+  "INT_Floor_Stone_B": 30,
+  "INT_Floor_Planks": 40,
+  "INT_Floor_Planks_B": 40,
+  "INT_Wall_Plaster": 16,
+  "INT_Wall_Plaster_B": 26,
+  "INT_Wall_Stone": 108,
+  "INT_Wall_Stone_B": 108,
+  "INT_Wall_Panel": 66,
+  "INT_Wall_Panel_B": 66,
+  "INT_Beam_Straight": 12,
+  "INT_Beam_Cross": 40,
+  "INT_Arch_3m": 236,
+  "INT_Arch_6m": 236,
+  "INT_Pillar": 30,
+  "INT_Stairs_Int": 136,
+  "INT_Door_Int": 98,
+  "INT_Door_Int_Iron": 130,
+  "INT_Window_Int": 92,
+  "INT_Fireplace": 70,
+  "INT_Counter_Straight": 42,
+  "INT_Counter_Straight_B": 42,
+  "INT_Counter_Corner": 22,
+  "INT_Grille": 142,
+  "INT_Grille_Wicket": 154,
+  "INT_Railing": 78,
+  "INT_Trim": 20
+ },
+ "kit_labels": [
+  [
+   "INT_Floor_Stone",
+   [
+    4001.0,
+    0.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Floor_Stone_B",
+   [
+    4009.0,
+    0.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Floor_Planks",
+   [
+    4017.0,
+    0.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Floor_Planks_B",
+   [
+    4025.0,
+    0.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Wall_Plaster",
+   [
+    4033.0,
+    0.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Wall_Plaster_B",
+   [
+    4041.0,
+    0.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Wall_Stone",
+   [
+    4049.0,
+    0.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Wall_Stone_B",
+   [
+    4001.0,
+    -8.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Wall_Panel",
+   [
+    4009.0,
+    -8.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Wall_Panel_B",
+   [
+    4017.0,
+    -8.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Beam_Straight",
+   [
+    4025.0,
+    -8.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Beam_Cross",
+   [
+    4033.0,
+    -8.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Arch_3m",
+   [
+    4041.0,
+    -8.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Arch_6m",
+   [
+    4049.0,
+    -8.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Pillar",
+   [
+    4001.0,
+    -16.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Stairs_Int",
+   [
+    4009.0,
+    -16.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Door_Int",
+   [
+    4017.0,
+    -16.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Door_Int_Iron",
+   [
+    4025.0,
+    -16.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Window_Int",
+   [
+    4033.0,
+    -16.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Fireplace",
+   [
+    4041.0,
+    -16.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Counter_Straight",
+   [
+    4049.0,
+    -16.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Counter_Straight_B",
+   [
+    4001.0,
+    -24.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Counter_Corner",
+   [
+    4009.0,
+    -24.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Grille",
+   [
+    4017.0,
+    -24.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Grille_Wicket",
+   [
+    4025.0,
+    -24.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Railing",
+   [
+    4033.0,
+    -24.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Trim",
+   [
+    4041.0,
+    -24.0,
+    3.6
+   ]
+  ]
+ ],
+ "props_tris": {
+  "BANK_Bench": 60,
+  "BANK_Desk": 88,
+  "BANK_Chair": 88,
+  "BANK_Stool": 56,
+  "BANK_Ledger_Open": 42,
+  "BANK_Scale": 100,
+  "BANK_Candle": 42,
+  "BANK_Sconce": 48,
+  "BANK_Strongbox": 50,
+  "BANK_Coins": 60,
+  "BANK_Rug": 2,
+  "BANK_Shelf_Ledgers": 460,
+  "BANK_Shelf_Wall": 260,
+  "BANK_Box_Open": 18,
+  "BANK_Box_Locked": 36
+ },
+ "banco": {
+  "vault_door": "VAULT_Door",
+  "boxes": {
+   "+X": {
+    "boxes": 86,
+    "cols": 23,
+    "rows": 4
+   },
+   "-Yv": {
+    "boxes": 30,
+    "cols": 8,
+    "rows": 4
+   },
+   "-Xv": {
+    "boxes": 55,
+    "cols": 15,
+    "rows": 4
+   },
+   "-Y": {
+    "boxes": 29,
+    "cols": 8,
+    "rows": 4
+   }
+  },
+  "arcade": {
+   "bays": 5,
+   "bay_w": 4.11,
+   "staff_gate_m": 1.235
+  },
+  "stair": {
+   "width_m": 2.0,
+   "run_m": 5.0,
+   "rise_m": 3.2,
+   "slope_deg": 32.6
+  },
+  "counter": {
+   "length_m": 10.0,
+   "grille_modules": 5,
+   "wickets": 2
+  },
+  "furniture": [
+   "BANK_Bench",
+   "BANK_Bench",
+   "BANK_Bench",
+   "BANK_Shelf_Ledgers",
+   "BANK_Shelf_Ledgers",
+   "BANK_Shelf_Ledgers",
+   "BANK_Shelf_Ledgers",
+   "BANK_Shelf_Ledgers",
+   "BANK_Shelf_Ledgers",
+   "BANK_Desk",
+   "BANK_Chair",
+   "BANK_Ledger_Open",
+   "BANK_Candle",
+   "BANK_Stool",
+   "BANK_Ledger_Open",
+   "BANK_Scale",
+   "BANK_Coins",
+   "BANK_Candle",
+   "BANK_Candle",
+   "BANK_Strongbox",
+   "BANK_Strongbox",
+   "INT_Fireplace",
+   "BANK_Sconce",
+   "BANK_Sconce",
+   "BANK_Sconce",
+   "BANK_Sconce",
+   "BANK_Sconce",
+   "BANK_Rug",
+   "BANK_Desk",
+   "BANK_Chair",
+   "BANK_Ledger_Open",
+   "BANK_Candle",
+   "BANK_Shelf_Wall",
+   "BANK_Strongbox",
+   "BANK_Sconce"
+  ],
+  "atlas": "textures/concordia/MAT_Bank_BoxNumbers/bank_box_numbers_1k.png",
+  "near_walls": {
+   "WALL_Near_A": "-X",
+   "WALL_Near_B": "-Y"
+  },
+  "cam_local": [
+   -0.577,
+   -0.577,
+   0.577
+  ],
+  "rays_before_merge": {
+   "Banquero": {
+    "points": 12,
+    "visible": 7,
+    "pct": 58.3,
+    "blockers": {
+     "KITI_INT_Grille_Wicket": 3,
+     "KITI_INT_Grille.001": 2
+    },
+    "blocked_by_column_or_arch": 0,
+    "blocker_class": {
+     "KITI_INT_Grille_Wicket": "reja",
+     "KITI_INT_Grille.001": "reja"
+    }
+   },
+   "Mostrador": {
+    "points": 10,
+    "visible": 5,
+    "pct": 50.0,
+    "blockers": {
+     "KITI_INT_Grille.002": 1,
+     "KITI_INT_Grille_Wicket.001": 1,
+     "KITI_INT_Grille.001": 1,
+     "KITI_INT_Grille_Wicket": 1,
+     "KITI_INT_Grille": 1
+    },
+    "blocked_by_column_or_arch": 0,
+    "blocker_class": {
+     "KITI_INT_Grille.002": "reja",
+     "KITI_INT_Grille_Wicket.001": "reja",
+     "KITI_INT_Grille.001": "reja",
+     "KITI_INT_Grille_Wicket": "reja",
+     "KITI_INT_Grille": "reja"
+    }
+   },
+   "Puerta_Boveda": {
+    "points": 9,
+    "visible": 8,
+    "pct": 88.9,
+    "blockers": {
+     "VAULT_ShardLantern": 1
+    },
+    "blocked_by_column_or_arch": 0,
+    "blocker_class": {
+     "VAULT_ShardLantern": "otro"
+    }
+   }
+  },
+  "rays_after_merge": {
+   "Banquero": {
+    "points": 12,
+    "visible": 7,
+    "pct": 58.3,
+    "blockers": {
+     "INT_Banco_Shell": 5
+    },
+    "blocked_by_column_or_arch": 0,
+    "blocker_class": {
+     "INT_Banco_Shell": "otro"
+    }
+   },
+   "Mostrador": {
+    "points": 10,
+    "visible": 5,
+    "pct": 50.0,
+    "blockers": {
+     "INT_Banco_Shell": 5
+    },
+    "blocked_by_column_or_arch": 0,
+    "blocker_class": {
+     "INT_Banco_Shell": "otro"
+    }
+   },
+   "Puerta_Boveda": {
+    "points": 9,
+    "visible": 8,
+    "pct": 88.9,
+    "blockers": {
+     "INT_Banco_WALL_Near_Vault": 1
+    },
+    "blocked_by_column_or_arch": 0,
+    "blocker_class": {
+     "INT_Banco_WALL_Near_Vault": "otro"
+    }
+   }
+  },
+  "navmesh": {
+   "faces": 6258,
+   "reached_faces": 6228,
+   "keys": {
+    "spawn": {
+     "reachable": true,
+     "dist_to_nav_m": 0.25
+    },
+    "mostrador_publico": {
+     "reachable": true,
+     "dist_to_nav_m": 0.18
+    },
+    "zona_banquero": {
+     "reachable": true,
+     "dist_to_nav_m": 0.29
+    },
+    "boveda": {
+     "reachable": true,
+     "dist_to_nav_m": 0.25
+    },
+    "archivo": {
+     "reachable": true,
+     "dist_to_nav_m": 0.18
+    },
+    "espera": {
+     "reachable": true,
+     "dist_to_nav_m": 0.23
+    },
+    "cuarto_personal": {
+     "reachable": true,
+     "dist_to_nav_m": 0.21
+    },
+    "galeria": {
+     "reachable": true,
+     "dist_to_nav_m": 0.21
+    },
+    "despacho": {
+     "reachable": true,
+     "dist_to_nav_m": 0.25
+    }
+   }
+  },
+  "corridors_1.2m": {
+   "planta_baja": {
+    "start_clearance_m": 1.6,
+    "reachable_with_1.2m": {
+     "spawn": true,
+     "mostrador_publico": true,
+     "zona_banquero": true,
+     "boveda": true,
+     "archivo": true,
+     "espera": true,
+     "cuarto_personal": true
+    }
+   },
+   "planta_alta": {
+    "start_clearance_m": 1.0,
+    "reachable_with_1.2m": {
+     "galeria": true,
+     "despacho": true
+    }
+   }
+  },
+  "tris": {
+   "total": 25986,
+   "budget": 40000,
+   "ok": true,
+   "by_group": {
+    "Shell": 8034,
+    "WALL_Near_A": 1444,
+    "WALL_Near_B": 2910,
+    "CEILING": 142,
+    "Furniture": 7660,
+    "Lights": 0,
+    "Markers": 0,
+    "WALL_Near_Vault": 2984,
+    "CEILING_Vault": 348,
+    "LEVEL_1": 1844,
+    "Furniture_L1": 620
+   }
+  },
+  "iv_size": [
+   23.1,
+   19.1,
+   6.4
+  ],
+  "size_check": {
+   "interior_m": [
+    23.1,
+    19.1,
+    6.4
+   ],
+   "interior_volume_m": [
+    23.1,
+    19.1,
+    6.4
+   ],
+   "diff_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ok": true
+  },
+  "groups": {
+   "Shell": 1,
+   "WALL_Near_A": 1,
+   "WALL_Near_B": 88,
+   "CEILING": 1,
+   "Furniture": 377,
+   "Lights": 18,
+   "Markers": 5,
+   "WALL_Near_Vault": 167,
+   "CEILING_Vault": 1,
+   "LEVEL_1": 10,
+   "Furniture_L1": 8
+  },
+  "export": {
+   "file": "export/godot/int_banco.glb",
+   "mb": 1.61,
+   "nodes": 683,
+   "meshes": 228,
+   "tris": 29464,
+   "materials": 17,
+   "images": 30,
+   "images_external": 30,
+   "colliders": 1,
+   "navmesh": 1,
+   "occluders": 0,
+   "empties": 236
+  }
+ },
+ "test_room": {
+  "near_walls": {
+   "WALL_Near_A": "+X",
+   "WALL_Near_B": "-Y"
+  },
+  "tris": 2004
+ }
+}
