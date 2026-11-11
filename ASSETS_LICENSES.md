@@ -194,3 +194,4 @@ texturas (ver la tabla siguiente). Informe: docs/reports/pj1_elfo_cuerpo.json.
 | Props a mano de la etapa 28 (telar, fuelle, maniqui, casco de minero y 14 triviales) | tools/blender/props_mano.py | props_int_mano.glb |
 | Kit de interiores BLD_INT_KIT y todo el interior del Banco | modelado por script (etapa 27) | int_banco.glb |
 | Piel del elfo (albedo 1K tonos abedul y corteza, normal 1K, ORM 1K) y ojos (albedo 256) | horneadas por tools/blender/pj1_piel.py (color por vertice + ruido; normal y AO de la malla base de MakeHuman, CC0) | textures/personajes/elfo/, pj_elfo_cuerpo.glb |
+| Conjunto del Sanador (Robe_Top, Robe_Skirt, Hood, Belt_Pouches, Boots, Bracers) y Hair_Elf, con su atlas 1K (textures/personajes/sanador/) | modelado y pintado por script (tools/blender/pj2_geo.py, pj2_atlas.py); sin assets descargados | pj_sanador_ropa.glb, elfo_v02.blend |

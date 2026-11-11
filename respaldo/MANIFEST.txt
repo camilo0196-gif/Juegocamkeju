@@ -205,6 +205,8 @@ Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | aw
       728004  3b9c1a87b92a6026fa153457a0eeab911c7c94b1052ff1b74325e90b6c7264d0  2026-11-11/glb/int_morada_casa_pequena.glb
       424468  ca8b1c1f2c0f7130a6616ddf10b41c4600751d34055fc55e19222cd4c03b6a94  2026-11-11/glb/int_morada_habitacion.glb
      1205616  fbb3477afa6128e6304f61e2a1e9627f12643f216d3f01ffe331ac6120e3c03d  2026-11-11/glb/pj_elfo_cuerpo.glb
+     3169772  8294234e006d52383d35856cc62652805d492234aa7505f68dae97fea4d3202d  2026-11-11/glb/pj_elfo_sanador_equipado.glb
+     2001628  fac899ebd67059cc2e149b50432088700e597f565b027c9dea4d410a06ccf830  2026-11-11/glb/pj_sanador_ropa.glb
      1204760  bda2062b4738d185dfc46f1adb5ad1418b72d44c98e47a610391465eb715a952  2026-11-11/glb/props_int_clases.glb
       442880  b85f07a83712df13834d7243a57d7e9627df5444bf15ebaae306b0782d1e68ff  2026-11-11/glb/props_int_mano.glb
      2441900  36fd587dfbecc8ad06d1200ed1bf98c674383a5652fbb711f1ac590ecbf472c3  2026-11-11/glb/props_int_mercado.glb
@@ -215,12 +217,22 @@ Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | aw
       848379  c5eac7b6a714a1240644bc92fa356c44b91acad7ceb5c83916ca2443851d78c5  2026-11-11/personajes/capturas/pj1_piezas.png
       467902  43a881d15f2d4c501f600efaffbd14c7090b59e523a01e4923a45b3530aace0e  2026-11-11/personajes/capturas/pj1_texturas.png
      1067969  b0f81d8ab063b3bcdb70143333764bde9fd39d1b0a7dadde5a54e05b9de8d484  2026-11-11/personajes/capturas/pj1_tpose.png
+      770203  0cef817c373f682b5bb1e563d05fbbf947b64ca49b57fa82c9aa5bd6d0c56e68  2026-11-11/personajes/capturas/pj2_atlas.png
+     2151875  6f40219bbcce5b339f690dfd254a55a6694faa37913b5bb5f7c478dc005f58b4  2026-11-11/personajes/capturas/pj2_detalle.png
+      893213  b0be40a60315f18d9e8602af85a9c60bdea03ff1f1e09c93ef092e71c73657d7  2026-11-11/personajes/capturas/pj2_iso.png
+     1359054  398aa866fe7c4dabf6ae748b9fdd7840a53f6a1ee133959378eca8c4d0592b4d  2026-11-11/personajes/capturas/pj2_ocultar.png
+     1451550  89056ed16094a136f774cbf107137e42c6ac91d0f4e481a348da1214bef2d2f8  2026-11-11/personajes/capturas/pj2_tpose.png
      3422225  90987ee9f4585fcfdf42750841ee1e7667ed5d07299f845ead7ed75c84bac991  2026-11-11/personajes/elfo_v01.blend
+     3895747  a23ce648c7f6586b6b463b141ffa787b0c51b8eda4e31092ba659753c01ea580  2026-11-11/personajes/elfo_v02.blend
       246339  8a8541c43fc9d89a3890fcde34857a06383bfa8d4aba5f62b14759bdbb312c0e  2026-11-11/personajes/textures/elfo_m_albedo_abedul_1k.png
       192224  340691269799321022f4d561f713e7553329c59f36083271b2fbca11a0fa9380  2026-11-11/personajes/textures/elfo_m_albedo_corteza_1k.png
       572828  a874f4d548118aa9f9486541e220f4578d5c08576c9d76fd0a3ca9fbe5d44289  2026-11-11/personajes/textures/elfo_m_normal_1k.png
         9635  12bdc8ba1e79f7b6d556976bd4f66d3ecdf65bac4765ee1cf470a802a3a1026f  2026-11-11/personajes/textures/elfo_m_ojos_albedo_256.png
       271424  1e77fb87f2395dea48ca9d7a80104bcd917584dcd0cfd57ea3c8c1eaffc97392  2026-11-11/personajes/textures/elfo_m_orm_1k.png
+      714898  4fda9dc2b34e079059cb89c0f2e4b0f824ff0cbd268305bb978adddb9df64c40  2026-11-11/personajes/textures_sanador/sanador_atlas_albedo_1k.png
+        3317  f599d4ccc7d76bad7937862890474bcebb199e889ffc2bce1573052290d353a8  2026-11-11/personajes/textures_sanador/sanador_atlas_emision_1k.png
+      732703  10c83a69bd191ff5c044ff110bc48048080f66e4c4a46b8b765b55b028415181  2026-11-11/personajes/textures_sanador/sanador_atlas_normal_1k.png
+      400653  8b41ebcb4b6b3917fef9bfe7c7ed2144504d7707c6adf980d66aa6def64aced8  2026-11-11/personajes/textures_sanador/sanador_atlas_orm_1k.png
       225986  8bfd8ec5347f15ad083bdd9de9d5d79e63439e2f77739a9d0a59e15d2287d4c1  2026-11-11/textures/PROP_AV_Cheese_Wheel_normal_512.png
       208829  5556477cc00b35a7cce65dafcf35d692931d1c10fd078408a176cef3aa1b19db  2026-11-11/textures/PROP_AV_Grain_Sack_normal_512.png
       329735  d9739ffd1cd0e298bd844698a41b595ad696faaf36f96ed499b34cc8c03b8fbf  2026-11-11/textures/PROP_AV_Grapes_normal_512.png
@@ -241,4 +253,4 @@ Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | aw
       772159  cd1a5382da65cca5b693dd09972c47b6e2385871cf5c8413e755a8f0310906b4  2026-11-11/textures/PROP_Q_WeaponStand_normal_1k.png
       290103  b43e85d44132548af1e19c707b769b1e6d8e864448444d2f66da7ce84329fe60  2026-11-11/textures/trophy_case_atlas_512.png
 
-Total: 233 archivos, 894,417,010 bytes (853.0 MiB)
+Total: 245 archivos, 911,961,623 bytes (869.7 MiB)

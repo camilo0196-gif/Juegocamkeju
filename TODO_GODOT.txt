@@ -323,3 +323,12 @@ Personajes: cuerpo del elfo (PJ1)
     el glb); conviene un StandardMaterial3D duplicado o cambiar la textura en tiempo de ejecucion.
   - Los grupos HIDE_* no viajan en el glb sin skin; cuando haya rig se exportaran como piezas separadas y la ropa
     ocultara la pieza entera (visible = false) o por mascara. Decidir al montar la ropa (PJ2).
+
+Personajes: conjunto del Sanador (PJ2)
+--------------------------------------
+  - export/godot/pj_sanador_ropa.glb: Robe_Top, Robe_Skirt, Hood, Belt_Pouches, Boots, Bracers, Hair_Elf con un
+    material (MAT_Sanador_Atlas): alpha scissor 0,5 (MASK), cull_disabled (doble cara), emision 1,0 con textura
+    (solo el cristal, #8FD0FF). ORM: ao R, roughness G, metallic B.
+  - pj_elfo_sanador_equipado.glb lleva el cuerpo ya recortado (vista previa). Para el juego: decidir en el rig
+    (concordia_rig.py) como se ocultan los grupos HIDE_* (propiedad 'oculta' de cada prenda): borrar caras al
+    equipar o mascara en el shader de piel (COLOR_0 con un bit por grupo).

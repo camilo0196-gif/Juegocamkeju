@@ -50,3 +50,41 @@ PJ1 - cuerpo base del elfo masculino (blender/elfo_v01.blend)
     - Rig (concordia_rig.py) y LOD1/LOD2: siguiente etapa.
     - Boca: el proxy trae la abertura de los labios (linea oscura); no hay dientes ni lengua (pedido).
     - Cejas solo pintadas; pelo en su etapa.
+
+PJ2 - cabello y ropa inicial del Sanador (CLASE_SANADOR, provisional) (blender/elfo_v02.blend)
+--------------------------------------------------------------------------------------------
+  Scripts: tools/blender/pj2_geo.py (geometria), pj2_atlas.py (UV, atlas y material), build_pj2_sanador.py
+  (orquesta; parte de elfo_v01.blend sin modificarlo), capture_pj2.py. Informe: docs/reports/pj2_sanador.json.
+  Export: export/godot/pj_sanador_ropa.glb (ropa + pelo) y pj_elfo_sanador_equipado.glb (cuerpo con mascaras).
+  Calidad normal: sin brillo ni piezas legendarias; todo modelado y pintado por script (ningun asset descargado).
+
+  Piezas (coleccion CLASE_SANADOR; el pelo en PJ_CABELLO, comun al elfo) y triangulos:
+    Robe_Top 646 (tunica: cuerpo desplazado 1,6 cm, cortado en la cintura y a media manga por bucles reales;
+      mangas acampanadas con dobladillo vuelto; cordon y colgante de cristal #8FD0FF con emision 1,0)
+    Robe_Skirt 832 (anillos sobre la seccion del cuerpo + holgura + vuelo; paneles delantero y trasero separados por
+      aberturas laterales desde el dobladillo hasta z 0,66; dobladillo vuelto de 3,5 cm)
+    Hood 640 (esclavina de lana que marcha sobre la tunica desde el cuello + capucha bajada como cuello vuelto que en
+      la espalda se hace bolsa)
+    Belt_Pouches 676 (cinturon de seccion rectangular, hebilla de hierro y punta; 3 bolsitas con solapa; 2 frascos
+      de vidrio con tintura y tapon)
+    Boots 324 (pie y pierna baja desplazados y suavizados, suela en z = 0, vuelta en la cana a z 0,40)
+    Bracers 160 (vendas del antebrazo de 0,525 a 0,728)
+    Ropa: 3.278 (<= 4.000). Hair_Elf 472 (<= 1.000): casquete sobre el cuero cabelludo sin tocar las orejas,
+      20 mechones (cards) peinados hacia atras y trenza de 0,51 m con atadura y punta.
+  Atlas 1K (textures/personajes/sanador/, fuera de git): albedo RGBA (alfa recortada, solo en el pelo), normal
+    (OpenGL), ORM (R AO por vertice, G rugosidad, B metal) y emision (solo los 82 texeles del cristal). Un material:
+    MAT_Sanador_Atlas (doble cara, alphaMode MASK en el glb). Densidad 360 texeles/m (pelo 648); ocupacion 47 %.
+    Patrones por atributos de la malla (pu, pv: metros desde la orilla), no por el UV: 12 remiendos cosidos, bordado
+    de hojas en el dobladillo, las mangas y el borde de la esclavina. Saturacion maxima 0,30 (sin el cristal).
+  Ocultar el cuerpo: grupos finos en las piezas del cuerpo (HIDE_Torso_Sup / _Inf, HIDE_Arms_Sup / _Inf,
+    HIDE_Legs_Sup / _Inf, HIDE_Feet). Cada prenda lleva la propiedad 'oculta' con los grupos que tapa; en el cuerpo
+    hay un modificador Mask (invertido) por grupo con driver '1 - oculta' de la prenda: al ocultar la prenda vuelve
+    la piel. Los limites van entre anillos del proxy (el Mask quita toda cara que toque un vertice oculto).
+    Hood, Belt_Pouches y Hair_Elf no ocultan nada (van sobre otras prendas; el casquete flota sobre el cuero
+    cabelludo).
+  Pendiente / limites conocidos
+    - Pelo de cerca: el casquete tiene ruido de textura y el flequillo recortado se ve dentado; a la distancia de la
+      camara iso se lee bien. Se puede mejorar con mas mechones (quedan ~500 tris de presupuesto).
+    - El bordado de la esclavina se ve pixelado de cerca (360 texeles/m).
+    - La capucha bajada se lee como cuello vuelto alto en la espalda, no como bolsa grande.
+    - En Godot hace falta un mecanismo para los HIDE_* (ver TODO_GODOT.txt).

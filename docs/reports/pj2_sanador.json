@@ -1,0 +1,241 @@
+{
+ "clase": "CLASE_SANADOR (provisional)",
+ "parametros": {
+  "robe_top_bottom": 1.06,
+  "sleeve_cut_x": 0.5,
+  "robe_off": 0.016,
+  "pendant_z": 1.335,
+  "skirt_top": 1.12,
+  "hem_z": 0.25,
+  "slit_z": 0.66,
+  "skirt_margin": 0.028,
+  "skirt_flare": 0.1,
+  "body_cy": -0.02,
+  "collar_z": 1.6,
+  "cape_len_side": 0.19,
+  "cape_len_front": 0.21,
+  "cape_off": 0.012,
+  "hood_w": 0.12,
+  "hood_z0": 1.36,
+  "hood_z1": 1.555,
+  "hood_bulge": 0.06,
+  "belt_z": 1.085,
+  "belt_h": 0.045,
+  "boot_top": 0.4,
+  "boot_off": 0.008,
+  "bracer_x0": 0.525,
+  "bracer_x1": 0.728,
+  "bracer_off": 0.006,
+  "eye_z": 1.739,
+  "cap_off": 0.007,
+  "gather_z": 1.7,
+  "n_cards": 20,
+  "braid_z": [
+   1.64,
+   1.58,
+   1.52,
+   1.46,
+   1.4,
+   1.34,
+   1.28,
+   1.22
+  ]
+ },
+ "falda": {
+  "anillos": 14,
+  "lados": 32,
+  "radios_cintura": [
+   0.157,
+   0.128,
+   0.157,
+   0.133
+  ],
+  "radios_dobladillo": [
+   0.328,
+   0.196,
+   0.328,
+   0.196
+  ]
+ },
+ "esclavina": {
+  "filas": 7,
+  "lados": 32
+ },
+ "cinturon": {
+  "bolsitas": [
+   [
+    0.1,
+    -0.163,
+    1.008
+   ],
+   [
+    0.204,
+    -0.038,
+    1.013
+   ],
+   [
+    -0.133,
+    -0.139,
+    1.016
+   ]
+  ],
+  "frascos": [
+   [
+    -0.183,
+    -0.059,
+    0.967
+   ],
+   [
+    -0.199,
+    -0.006,
+    0.967
+   ]
+  ]
+ },
+ "cabello": {
+  "mechones": 20,
+  "punto_recogida": [
+   0.0,
+   0.05,
+   1.7
+  ],
+  "largo_trenza_m": 0.506
+ },
+ "normales_invertidas": {
+  "Robe_Top": 1,
+  "Robe_Skirt": 0,
+  "Hood": 0,
+  "Belt_Pouches": 3,
+  "Boots": 2,
+  "Bracers": 0,
+  "Hair_Elf": 1
+ },
+ "tris_por_pieza": {
+  "Robe_Top": 646,
+  "Robe_Skirt": 832,
+  "Hood": 640,
+  "Belt_Pouches": 676,
+  "Boots": 324,
+  "Bracers": 160,
+  "Hair_Elf": 472
+ },
+ "tris_ropa": 3278,
+ "tris_cabello": 472,
+ "presupuesto": {
+  "ropa": 4000,
+  "cabello": 1000
+ },
+ "uv": {
+  "Robe_Top": {
+   "texeles_por_metro": 359.7,
+   "area_m2": 0.809,
+   "ocupacion_atlas": 0.0998
+  },
+  "Robe_Skirt": {
+   "texeles_por_metro": 359.7,
+   "area_m2": 1.208,
+   "ocupacion_atlas": 0.149
+  },
+  "Hood": {
+   "texeles_por_metro": 359.7,
+   "area_m2": 0.391,
+   "ocupacion_atlas": 0.0482
+  },
+  "Belt_Pouches": {
+   "texeles_por_metro": 359.7,
+   "area_m2": 0.19,
+   "ocupacion_atlas": 0.0234
+  },
+  "Boots": {
+   "texeles_por_metro": 359.7,
+   "area_m2": 0.342,
+   "ocupacion_atlas": 0.0422
+  },
+  "Bracers": {
+   "texeles_por_metro": 359.7,
+   "area_m2": 0.09,
+   "ocupacion_atlas": 0.0111
+  },
+  "Hair_Elf": {
+   "texeles_por_metro": 647.5,
+   "area_m2": 0.231,
+   "ocupacion_atlas": 0.0923
+  }
+ },
+ "atlas": {
+  "remiendos": 12,
+  "texeles_bordado": 12500,
+  "texeles_saturacion_recortada": 0,
+  "alfa_cero_dentro_de_islas_no_pelo": 0,
+  "saturacion_max_sin_cristal": 0.299,
+  "texeles_ocupados": 488543,
+  "texeles_cristal": 82,
+  "alfa_recortado_texeles": 14806
+ },
+ "atlas_memoria_mb_sin_comprimir_con_mipmaps": 21.3,
+ "texturas": {
+  "albedo_1k": "textures/personajes/sanador/sanador_atlas_albedo_1k.png",
+  "normal_1k": "textures/personajes/sanador/sanador_atlas_normal_1k.png",
+  "orm_1k": "textures/personajes/sanador/sanador_atlas_orm_1k.png",
+  "emision_1k": "textures/personajes/sanador/sanador_atlas_emision_1k.png"
+ },
+ "grupos_cuerpo": {
+  "HIDE_Torso_Sup": 222,
+  "HIDE_Torso_Inf": 58,
+  "HIDE_Arms_Sup": 48,
+  "HIDE_Arms_Inf": 16,
+  "HIDE_Legs_Sup": 48,
+  "HIDE_Legs_Inf": 32,
+  "HIDE_Feet": 108
+ },
+ "mascaras": 7,
+ "oculta_por_prenda": {
+  "Robe_Top": [
+   "Torso:HIDE_Torso_Sup",
+   "Arms:HIDE_Arms_Sup"
+  ],
+  "Robe_Skirt": [
+   "Torso:HIDE_Torso_Inf",
+   "Legs:HIDE_Legs_Sup"
+  ],
+  "Boots": [
+   "Legs:HIDE_Legs_Inf",
+   "Feet:HIDE_Feet"
+  ],
+  "Bracers": [
+   "Arms:HIDE_Arms_Inf"
+  ],
+  "Hood": [],
+  "Belt_Pouches": [],
+  "Hair_Elf": []
+ },
+ "oculta_sin_grupos_motivo": {
+  "Hood": "va encima de la tunica (no toca la piel)",
+  "Belt_Pouches": "va encima de la tunica y la falda",
+  "Hair_Elf": "el casquete flota 7-13 mm sobre el cuero cabelludo; ocultar la piel dejaria la cabeza hueca al quitar el pelo"
+ },
+ "glb_ropa": {
+  "archivo": "export/godot/pj_sanador_ropa.glb",
+  "kb": 1954.7,
+  "materiales": [
+   {
+    "nombre": "MAT_Sanador_Atlas",
+    "alphaMode": "MASK",
+    "alphaCutoff": null,
+    "doubleSided": true,
+    "emissiveFactor": [
+     1,
+     1,
+     1
+    ],
+    "emissiveTexture": true,
+    "normal": true,
+    "occlusion": true
+   }
+  ]
+ },
+ "glb_equipado": {
+  "archivo": "export/godot/pj_elfo_sanador_equipado.glb",
+  "kb": 3095.5
+ }
+}
