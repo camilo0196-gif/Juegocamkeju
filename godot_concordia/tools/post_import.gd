@@ -11,6 +11,12 @@ extends EditorScenePostImport
 ##  - sombra de malla activada (cast_shadow = ON) en todas las mallas visibles.
 ##  - materiales: el glb los trae todos con doubleSided = true; los opacos pasan a una cara (CULL_BACK) salvo telas,
 ##    hojas, velos, vidrios y pelo (lista OPEN), que siguen a dos caras.
+##  - vertex_color_use_as_albedo = false en todos los materiales (COLOR_0 del terreno = mascaras).
+##  - marcadores: los Empties MARKER_* (Node3D sin malla) pasan a Marker3D con su metadata; grupos persistentes:
+##    "markers", "doors" (*_Door*), "npc_slots" (*NPC_Slot*), "interact" (*Interact* o interactive=true, tablon,
+##    fuente), "spawns" (*Spawn*), "navlinks" (NAVLINK_*).
+##  - grupos de piezas: "roofs" (*_Roof*), "interior_volumes" (*_InteriorVolume, ocultos), "occludes_iso"
+##    (metadata occludes_iso = true). OBELISK_Mark_LitMaterialRef se oculta (solo guarda el material encendido).
 ##  - resumen por archivo en debug/out/import/<archivo>.json (lo lee tools/import_report.gd).
 
 const OPEN := ["Veil", "Beam", "Glass", "Banner", "Flag", "Cloth", "Awning", "Leaf", "Leaves", "Hair", "Stained",
@@ -39,22 +45,101 @@ func _post_import(scene: Node) -> Object:
 
 func _walk(n: Node) -> void:
 	_stats.nodos += 1
+	var nm := String(n.name)
+	if nm.begins_with("MARKER_") and n.get_class() == "Node3D":
+		n = _to_marker(n)
+	elif nm.begins_with("NAVLINK_"):
+		n.add_to_group("navlinks", true)
+	if nm.contains("_Roof"):
+		n.add_to_group("roofs", true)
+	if nm.ends_with("_InteriorVolume") and n is Node3D:
+		(n as Node3D).visible = false
+		n.add_to_group("interior_volumes", true)
+	if nm == "OBELISK_Mark_LitMaterialRef" and n is Node3D:
+		(n as Node3D).visible = false
 	if n.has_meta("extras"):
 		var ex = n.get_meta("extras")
 		if ex is Dictionary:
 			for k in ex.keys():
 				n.set_meta(StringName(str(k)), ex[k])
 				_stats.metas += 1
+	if n.has_meta("extras") and (n.get_meta("extras") as Dictionary).get("occludes_iso", false):
+		n.add_to_group("occludes_iso", true)
 	if n is StaticBody3D:
 		_stats.colisiones += 1
 	elif n is NavigationRegion3D:
 		_stats.navmesh += 1
+		# rejilla de 5 cm (debe coincidir con navigation/3d/default_cell_size / _height del mapa, project.godot):
+		# con 25 cm las aristas proximas de la malla de Blender caen en la misma celda y Godot avisa de errores
+		var navm: NavigationMesh = (n as NavigationRegion3D).navigation_mesh
+		if navm:
+			navm.cell_size = 0.05
+			navm.cell_height = 0.05
+			_weld_navmesh(navm)
 	elif n is OccluderInstance3D:
 		_stats.oclusores += 1
 	if n is MeshInstance3D:
 		_mesh(n as MeshInstance3D)
 	for c in n.get_children():
 		_walk(c)
+
+
+func _weld_navmesh(nm: NavigationMesh, tol: float = 0.02) -> void:
+	## Funde vertices a menos de 2 cm (FIXES_BLENDER.md F5: astillas de 1 cm en TRN_NavMesh_Plaza que dan
+	## "edge errors" al sincronizar la region). Solo toca los datos de navegacion, no la geometria visible.
+	var v := nm.get_vertices()
+	var keymap := {}
+	var newv := PackedVector3Array()
+	var remap := PackedInt32Array()
+	remap.resize(v.size())
+	for i in v.size():
+		var k := v[i].snapped(Vector3.ONE * tol)
+		if not keymap.has(k):
+			keymap[k] = newv.size()
+			newv.append(v[i])
+		remap[i] = keymap[k]
+	var polys := []
+	var removed := 0
+	for i in nm.get_polygon_count():
+		var p := nm.get_polygon(i)
+		var q := PackedInt32Array()
+		for idx in p:
+			var r := remap[idx]
+			if q.is_empty() or (q[q.size() - 1] != r and q[0] != r):
+				q.append(r)
+		if q.size() >= 3:
+			polys.append(q)
+		else:
+			removed += 1
+	nm.clear_polygons()
+	nm.vertices = newv
+	for q in polys:
+		nm.add_polygon(q)
+	_stats["navmesh_vertices_fundidos"] = _stats.get("navmesh_vertices_fundidos", 0) + v.size() - newv.size()
+	_stats["navmesh_poligonos_quitados"] = _stats.get("navmesh_poligonos_quitados", 0) + removed
+
+
+func _to_marker(n: Node) -> Node:
+	var m := Marker3D.new()
+	m.name = n.name
+	for k in n.get_meta_list():
+		m.set_meta(k, n.get_meta(k))
+	n.replace_by(m, true)
+	m.transform = (n as Node3D).transform
+	n.free()
+	var nm := String(m.name)
+	var ex: Dictionary = m.get_meta("extras", {})
+	m.add_to_group("markers", true)
+	if nm.contains("_Door"):
+		m.add_to_group("doors", true)
+	if nm.contains("NPC_Slot"):
+		m.add_to_group("npc_slots", true)
+	if nm.contains("Interact") or ex.get("interactive", false) or nm.contains("TablonGrupos") or nm.contains("FuenteMercado"):
+		m.add_to_group("interact", true)
+	if nm.contains("Spawn"):
+		m.add_to_group("spawns", true)
+	_stats["marcadores"] = _stats.get("marcadores", 0) + 1
+	return m
 
 
 func _lod_of(name: String) -> int:
@@ -83,6 +168,9 @@ func _mesh(mi: MeshInstance3D) -> void:
 		if not (m is BaseMaterial3D):
 			continue
 		var bm := m as BaseMaterial3D
+		# COLOR_0 del terreno es mask_pack (mascaras, README_masks.txt), nunca color: el importador glTF lo pone como
+		# albedo y el suelo sale verde / marron plano. El shader del terreno que lea las mascaras va en G4.
+		bm.vertex_color_use_as_albedo = false
 		var open := false
 		for k in OPEN:
 			if bm.resource_name.contains(k):

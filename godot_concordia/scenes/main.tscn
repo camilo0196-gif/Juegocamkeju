@@ -1,0 +1,39 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/concordia.tscn" id="1_sugp2"]
+[ext_resource type="Script" path="res://scripts/city.gd" id="2_jyhfs"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="3_tbgi4"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tefeu"]
+sky_top_color = Color(0.41960785, 0.49803922, 0.5882353, 1)
+sky_horizon_color = Color(0.7882353, 0.7647059, 0.7137255, 1)
+ground_bottom_color = Color(0.2901961, 0.28235295, 0.27450982, 1)
+ground_horizon_color = Color(0.5568628, 0.5411765, 0.5176471, 1)
+
+[sub_resource type="Sky" id="Sky_o6xl0"]
+sky_material = SubResource("ProceduralSkyMaterial_tefeu")
+
+[sub_resource type="Environment" id="Environment_tipki"]
+background_mode = 2
+sky = SubResource("Sky_o6xl0")
+ambient_light_source = 3
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Main" type="Node3D" unique_id=1444412482]
+
+[node name="Concordia" type="Node3D" parent="." unique_id=1456580116 instance=ExtResource("1_sugp2")]
+script = ExtResource("2_jyhfs")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=1039248754]
+transform = Transform3D(-0.8660254, 0.30783078, -0.39400545, 0, 0.7880108, 0.6156615, 0.50000006, 0.5331785, -0.68243736, 0, 0, 0)
+light_color = Color(1, 0.8862745, 0.72156864, 1)
+light_energy = 1.2
+shadow_enabled = true
+directional_shadow_max_distance = 140.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=245249851]
+environment = SubResource("Environment_tipki")
+
+[node name="Game" type="Node" parent="." unique_id=474825478]
+script = ExtResource("3_tbgi4")

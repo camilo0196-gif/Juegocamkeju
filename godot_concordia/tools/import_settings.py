@@ -16,7 +16,9 @@ Texturas (importer "texture"):
   compress/normal_map = 1 (Enable, RGTC) en las que algun material usa como normalTexture; 0 (Detect) en el resto
   process/normal_map_invert_y = false (las normales salen de Blender en convencion OpenGL, la de Godot)
 
-python3 godot_concordia/tools/import_settings.py [--lightmaps]
+python3 godot_concordia/tools/import_settings.py [--lightmaps] [--force]
+  --force  borra la marca .md5 y el .scn de las escenas importadas: el siguiente --import vuelve a pasar post_import.gd
+           (Godot no reimporta si solo cambia el script de post-importacion)
 Despues: godot --headless --path godot_concordia --import  (reimporta lo que cambio)
 """
 
@@ -114,6 +116,14 @@ def main():
             else:
                 continue
             stats["cambiados"] += set_params(p, vals)
+    if "--force" in sys.argv:
+        imp = os.path.join(PROJECT, ".godot", "imported")
+        n = 0
+        for f in os.listdir(imp) if os.path.isdir(imp) else []:
+            if ".glb-" in f and (f.endswith(".md5") or f.endswith(".scn")):
+                os.remove(os.path.join(imp, f))
+                n += 1
+        stats["forzadas"] = n
     print(json.dumps(stats))
 
 
