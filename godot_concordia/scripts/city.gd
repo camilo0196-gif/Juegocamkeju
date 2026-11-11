@@ -6,20 +6,27 @@ extends Node3D
 ##    (res://navigation/links.json, del horneado); las -navmesh de Blender se desactivan (solo referencia): manda la
 ##    navegacion horneada en Godot (nodo Navigation, grupo nav_godot)
 ##  - oclusores (BoxOccluder3D) dentro de los cuerpos de edificio grandes, ademas de los -occonly importados
+##  - ajustes de material de Godot (scripts/materials_fix.gd): terreno por mascaras, haces, Obelisco
 ##  - zona actual (plaza, Mercado, Oficios, Clases, Razas, Moradas, muralla, ceniza) para el HUD
 
 signal ready_city
 
 @export var focus_path: NodePath
+## pisos del Obelisco encendidos (valor de prueba hasta que G6/G7 lo lean de la partida)
+@export var obelisk_floors := 12
 
 var lod: Node
 var stats := {}
+var materials: RefCounted
 
 const DISTRICT_ANG := {"Mercado": 90.0, "Oficios": 0.0, "Razas": -90.0, "Clases": 180.0}
 
 
 func _ready() -> void:
 	var t0 := Time.get_ticks_msec()
+	materials = preload("res://scripts/materials_fix.gd").new()
+	stats["materiales"] = materials.apply(self)
+	materials.set_obelisk_floors(obelisk_floors)
 	lod = preload("res://scripts/lod_manager.gd").new()
 	lod.name = "LodManager"
 	add_child(lod)

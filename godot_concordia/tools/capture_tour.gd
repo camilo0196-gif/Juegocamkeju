@@ -22,6 +22,10 @@ const POINTS := {
 	"escalinata_mercado": [50.0, 82.0, 35.0],
 	"puente_oficios": [89.5, 4.0, 35.0],
 	"escalinata_ne": [84.4, 50.0, 18.0],
+	"obelisco": [-40.0, -40.0, 30.0],
+	"huertos_no": [-124.0, 140.0, 22.0],
+	"huertos_ne": [124.0, 100.0, 22.0],
+	"exterior_sur": [0.0, -185.0, 60.0],
 }
 
 var prefix := "g2"

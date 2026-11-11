@@ -2,7 +2,8 @@ extends SceneTree
 ## CONCORDIA - canales del terreno importado: formato de superficie (CUSTOM0 = TEXCOORD_2?) y valores de cobble_type
 func _init() -> void:
 	var s: Node = (load("res://assets/terrain/glb/concordia_terrain_moradas.glb") as PackedScene).instantiate()
-	var mi := s.find_child("TRN_City_Chunk_10_10", true, false) as MeshInstance3D
+	var mi := s.find_children("TRN_City_Chunk_10_10*", "MeshInstance3D", true, false)[0] as MeshInstance3D
+	print("malla ", mi.name)
 	var m := mi.mesh
 	for i in m.get_surface_count():
 		var f: int = m.surface_get_format(i)
