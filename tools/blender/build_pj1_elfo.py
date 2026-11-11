@@ -63,11 +63,11 @@ def collection(name):
     return c
 
 
-def make_human(targets, tag, col, eyes=False):
+def make_human(targets, tag, col, eyes=False, all_joints=False):
     """Humano MPFB en T -> (malla base evaluada 'HI_', proxy 1591 evaluado, ojos, articulaciones). Se borran los
     objetos de MPFB; quedan mallas simples sin modificadores."""
     bm, loaded = MP.create_base(MACRO, target_names(targets))
-    joints = MP.tpose_base(bm)
+    joints = MP.tpose_base(bm, joints_wanted=None if all_joints else MP.JOINTS)
     px = MP.add_proxy(bm)
     ey = MP.add_eyes(bm) if eyes else None
     bpy.context.view_layer.update()
@@ -691,6 +691,18 @@ def step_exportar(work):
     print("EXPORT", rep["glb_kb"], "KB", json.dumps(rep["caras_por_lados_cuerpo"]), flush=True)
 
 
+def step_articulaciones():
+    """Todas las articulaciones del rig 'default' de MPFB ajustado al elfo (pose T), normalizadas igual que el
+    cuerpo (pies en z = 0, 1,85 m): base para colocar el esqueleto de Godot (concordia_rig.py)."""
+    col = collection("PJ_ART")
+    hi, lo, _e, J, _l = make_human(ELF, "Art", col, all_joints=True)
+    J, s = normalize([hi, lo], J, lo)
+    path = os.path.join(os.path.dirname(REPORT), "pj1_elfo_articulaciones.json")
+    with open(path, "w") as fh:
+        json.dump({"escala": s, "huesos": len(J), "articulaciones": J}, fh, indent=0)
+    print("ARTICULACIONES", len(J), path, flush=True)
+
+
 def arg_after(steps, k):
     i = steps.index(k) + 1
     return steps[i] if i < len(steps) and steps[i].endswith(".blend") else BLEND
@@ -707,6 +719,8 @@ def main():
         step_cuerpo(arg_after(steps, "cuerpo"))
     if "piel" in steps:
         step_piel(arg_after(steps, "piel"))
+    if "articulaciones" in steps:
+        step_articulaciones()
     if "exportar" in steps:
         step_exportar(arg_after(steps, "exportar"))
 

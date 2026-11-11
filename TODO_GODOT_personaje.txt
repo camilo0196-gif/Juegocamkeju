@@ -1,0 +1,34 @@
+TODO_GODOT_personaje - importar el elfo con esqueleto (PJ3) en Godot 4.7
+======================================================================
+Archivo: export/godot/pj_elfo_rig.glb (cuerpo completo + ojos + ropa del Sanador + pelo + esqueleto PJ_Elfo_Rig
+de 70 huesos + 10 poses de prueba como animaciones POSE_01_T ... POSE_10_Caido). De cara a +Z, metros, pose T,
+nodo del esqueleto sin transformacion.
+
+1. Importar el .glb y abrir "Advanced Import Settings" (doble clic en el archivo).
+2. Seleccionar el nodo Skeleton3D (PJ_Elfo_Rig):
+   - Retarget > Bone Map: New BoneMap; Profile: New SkeletonProfileHumanoid.
+     Los 56 huesos del perfil tienen exactamente los nombres de Godot, asi que el mapeo automatico los asigna todos
+     (comprobar que no queda ningun hueso del perfil en rojo).
+   - Los 14 huesos extra (Weapon_R, Weapon_L, Back_Slot, Head_Top, Hair_01..04, Skirt_Front_01..03,
+     Skirt_Back_01..03) quedan SIN mapear a proposito: el retargeting los ignora.
+   - Retarget > Rest Fixer: Apply Node Transforms = on; Normalize Position Tracks = on; Overwrite Axis = on;
+     Fix Silhouette = on (el esqueleto ya esta en pose T; deberia no mover nada).
+   - Retarget > Remove Tracks: Unmapped Bones = off si se quiere animar la trenza o la falda a mano; si solo las
+     mueve SpringBoneSimulator3D, puede ir en on.
+   - Skeleton3D > Unique Node: Make Unique on, Skeleton Name "GeneralSkeleton" (permite compartir animaciones entre
+     razas: todas usan este mismo perfil).
+3. Ranuras (sin deformacion): BoneAttachment3D en Weapon_R (baston en la mano derecha; el +Y del hueso es el eje
+   del asa), Weapon_L, Back_Slot (arma o mochila a la espalda), Head_Top (efectos sobre la cabeza).
+4. Trenza y falda: SpringBoneSimulator3D sobre el Skeleton3D, dos o tres juegos de cadenas:
+   - Hair_01 -> Hair_04 (raiz Hair_01; Head queda fijo): stiffness ~0,6, drag ~0,4, gravity 1,0 (-Y).
+   - Skirt_Front_01 -> Skirt_Front_03 y Skirt_Back_01 -> Skirt_Back_03: stiffness ~0,8, drag ~0,5, radio ~0,06.
+   - Colisionadores: SpringBoneCollisionCapsule3D en LeftUpperLeg, RightUpperLeg, LeftLowerLeg, RightLowerLeg
+     (radio 0,07-0,08) y una esfera en Hips. En las capturas de Blender las cadenas de la falda se colocaron por
+     script delante/detras de rodillas y tobillos para imitar ese resultado.
+5. Ocultar el cuerpo bajo la ropa: los grupos HIDE_* (ver README_personajes.txt y la propiedad 'oculta' de cada
+   prenda en los extras del glb) no viajan como mascaras. Opciones al equipar: (a) ocultar la pieza del cuerpo
+   entera cuando la tapa del todo (Torso, Arms, Feet con el conjunto completo); (b) mascara en el shader de piel.
+6. Materiales: MAT_Elfo_Piel / MAT_Elfo_Ojos (opacos) y MAT_Sanador_Atlas (alpha scissor 0,5, cull disabled,
+   emision solo en el cristal). ORM: AO en R, roughness en G, metallic en B.
+7. Comprobacion rapida: AnimationPlayer > POSE_05_Sentado y POSE_10_Caido deben verse como en
+   docs/captures/pj3_poses_ropa.png.

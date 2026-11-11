@@ -88,3 +88,42 @@ PJ2 - cabello y ropa inicial del Sanador (CLASE_SANADOR, provisional) (blender/e
     - El bordado de la esclavina se ve pixelado de cerca (360 texeles/m).
     - La capucha bajada se lee como cuello vuelto alto en la espalda, no como bolsa grande.
     - En Godot hace falta un mecanismo para los HIDE_* (ver TODO_GODOT.txt).
+
+PJ3 - esqueleto (rig) del elfo (blender/elfo_v03.blend)
+-----------------------------------------------------
+  Scripts: tools/blender/concordia_rig.py (esqueleto comun de todas las razas y pesos), build_pj3_rig.py (elfo,
+  poses de prueba, export), capture_pj3.py. Informe: docs/reports/pj3_rig.json (lista de huesos con padre y si
+  deforma). Articulaciones: docs/reports/pj1_elfo_articulaciones.json (rig 'default' de MPFB ajustado al elfo).
+  Godot: TODO_GODOT_personaje.txt. Export: export/godot/pj_elfo_rig.glb.
+  Huesos: 70 (56 del SkeletonProfileHumanoid de Godot 4.7, verificado en la documentacion oficial y
+    en scene/resources/skeleton_profile.cpp; 14 extra sin mapear). Deformacion: 65 (<= 65): no
+    deforman Root, Weapon_R, Weapon_L, Back_Slot y Head_Top. Jaw deforma pero no tiene pesos (boca sin rig).
+    Extra: Head_Top, Hair_01, Hair_02, Hair_03, Hair_04, Weapon_L, Weapon_R, Back_Slot, Skirt_Front_01, Skirt_Front_02, Skirt_Front_03, Skirt_Back_01, Skirt_Back_02, Skirt_Back_03.
+  Convencion: cola de cada hueso = cabeza del hijo (+Y hacia el hijo; desviacion max 0.7806 grados en
+    47 pares), pose T, de cara a -Y, objeto del armature sin transformacion; roll con Z hacia delante.
+  Pesos: cuerpo con pesos automaticos de Blender (calor de huesos) sobre el cuerpo unido (las costuras reciben
+    los mismos pesos en las dos piezas), limpieza por script: transicion suave a lo largo del eje en codos,
+    munecas, rodillas y tobillos; suavizado por vecinos en hombros (r 15 cm) y cadera (r 17 cm); max. 4
+    influencias, normalizado. 4130 vertices, 0 sin peso, max 4 influencias.
+    Ropa: transferencia desde el cuerpo (tunica, esclavina, botas, vendas); cinturon a Hips (+ muslo en las
+    bolsitas); falda solo a muslos (tercio superior) y cadenas Skirt_*; pelo a Head y trenza a Hair_01..04; ojos
+    rigidos a LeftEye / RightEye.
+  Poses de prueba (acciones POSE_*): T, A, caminar (contacto), correr, sentado, hechizo (brazos arriba, con
+    clavicula), de rodillas, agachado, golpe recibido, caido. Falda dentro de piernas o botas (medido):
+      01_T: 0 vertices, max 0.0 cm
+      02_A: 0 vertices, max 0.0 cm
+      03_Caminar: 2 vertices, max 2.5 cm
+      04_Correr: 15 vertices, max 2.7 cm
+      05_Sentado: 12 vertices, max 2.8 cm
+      06_Hechizo: 0 vertices, max 0.0 cm
+      07_Rodillas: 13 vertices, max 2.9 cm
+      08_Agachado: 7 vertices, max 2.5 cm
+      09_Golpe: 2 vertices, max 2.6 cm
+      10_Caido: 1 vertices, max 1.9 cm
+  Correcciones hechas tras revisar las capturas: falda que se hinchaba en reposo (las cadenas ya no se tocan si
+    las piernas no salen del vuelo), rodillas que atravesaban la falda al sentarse / arrodillarse / agacharse
+    (cadena tendida por delante de rodilla y tobillo), pliegue duro en el hombro al levantar los brazos (clavicula
+    en la pose + suavizado mas amplio), cadera (suavizado mas amplio).
+  Limites conocidos: perdida de volumen en rodillas y codos por encima de ~120 grados (piel lineal en malla
+    low-poly; correctivos o mas aristas en otra etapa); la falda de "caido" se abre (en Godot la gravedad del
+    SpringBoneSimulator3D la dejara caer); la pierna asoma por la abertura lateral en zancadas largas (diseno).

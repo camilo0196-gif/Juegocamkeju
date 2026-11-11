@@ -205,6 +205,7 @@ Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | aw
       728004  3b9c1a87b92a6026fa153457a0eeab911c7c94b1052ff1b74325e90b6c7264d0  2026-11-11/glb/int_morada_casa_pequena.glb
       424468  ca8b1c1f2c0f7130a6616ddf10b41c4600751d34055fc55e19222cd4c03b6a94  2026-11-11/glb/int_morada_habitacion.glb
      1205616  fbb3477afa6128e6304f61e2a1e9627f12643f216d3f01ffe331ac6120e3c03d  2026-11-11/glb/pj_elfo_cuerpo.glb
+     3734100  431e466ebc24a5dc46afb214ca5fd1bb7c638aeac21f8cf0203d7f3afef2b54a  2026-11-11/glb/pj_elfo_rig.glb
      3169772  8294234e006d52383d35856cc62652805d492234aa7505f68dae97fea4d3202d  2026-11-11/glb/pj_elfo_sanador_equipado.glb
      2001628  fac899ebd67059cc2e149b50432088700e597f565b027c9dea4d410a06ccf830  2026-11-11/glb/pj_sanador_ropa.glb
      1204760  bda2062b4738d185dfc46f1adb5ad1418b72d44c98e47a610391465eb715a952  2026-11-11/glb/props_int_clases.glb
@@ -222,8 +223,13 @@ Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | aw
       893213  b0be40a60315f18d9e8602af85a9c60bdea03ff1f1e09c93ef092e71c73657d7  2026-11-11/personajes/capturas/pj2_iso.png
      1359054  398aa866fe7c4dabf6ae748b9fdd7840a53f6a1ee133959378eca8c4d0592b4d  2026-11-11/personajes/capturas/pj2_ocultar.png
      1451550  89056ed16094a136f774cbf107137e42c6ac91d0f4e481a348da1214bef2d2f8  2026-11-11/personajes/capturas/pj2_tpose.png
+     1430751  170ee5a9a491802e9cb7e7c9c79f5a7b8701fc9f59833cd9df52503761555182  2026-11-11/personajes/capturas/pj3_articulaciones.png
+      816136  25f5d23627a1f40fdb1923e14ddf4bb6c3a53142e8ce1ce81e043b5350fb93ee  2026-11-11/personajes/capturas/pj3_esqueleto.png
+     1624383  e47f2f9fd6eb5d5e15c747d22795ebec722d4957acf69d87f7d17abc28ac863f  2026-11-11/personajes/capturas/pj3_poses_cuerpo.png
+     2107296  255e803619f56842d696fcb5d3721c1a842d80bce67748baf4a7cee32a18a69b  2026-11-11/personajes/capturas/pj3_poses_ropa.png
      3422225  90987ee9f4585fcfdf42750841ee1e7667ed5d07299f845ead7ed75c84bac991  2026-11-11/personajes/elfo_v01.blend
      3895747  a23ce648c7f6586b6b463b141ffa787b0c51b8eda4e31092ba659753c01ea580  2026-11-11/personajes/elfo_v02.blend
+     5725070  68b6bdba48718d7139e95feb66812c6a8c0e44bbcfe4c810097887d5442943a2  2026-11-11/personajes/elfo_v03.blend
       246339  8a8541c43fc9d89a3890fcde34857a06383bfa8d4aba5f62b14759bdbb312c0e  2026-11-11/personajes/textures/elfo_m_albedo_abedul_1k.png
       192224  340691269799321022f4d561f713e7553329c59f36083271b2fbca11a0fa9380  2026-11-11/personajes/textures/elfo_m_albedo_corteza_1k.png
       572828  a874f4d548118aa9f9486541e220f4578d5c08576c9d76fd0a3ca9fbe5d44289  2026-11-11/personajes/textures/elfo_m_normal_1k.png
@@ -253,4 +259,4 @@ Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | aw
       772159  cd1a5382da65cca5b693dd09972c47b6e2385871cf5c8413e755a8f0310906b4  2026-11-11/textures/PROP_Q_WeaponStand_normal_1k.png
       290103  b43e85d44132548af1e19c707b769b1e6d8e864448444d2f66da7ce84329fe60  2026-11-11/textures/trophy_case_atlas_512.png
 
-Total: 245 archivos, 911,961,623 bytes (869.7 MiB)
+Total: 251 archivos, 927,399,359 bytes (884.4 MiB)

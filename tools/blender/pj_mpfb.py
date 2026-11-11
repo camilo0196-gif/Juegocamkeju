@@ -71,7 +71,7 @@ JOINTS = ("root", "spine05", "spine01", "neck01", "neck03", "head", "clavicle.L"
           "upperleg01.L", "upperleg01.R", "lowerleg01.L", "lowerleg01.R", "foot.L", "foot.R")
 
 
-def tpose_base(bm, rig="default"):
+def tpose_base(bm, rig="default", joints_wanted=JOINTS):
     """Rig 'default' de MPFB con sus pesos completos; brazos rectos y horizontales (hombro -> codo -> muneca sobre
     +-X); la pose se aplica a la malla base (antes se funden los targets) y el rig se borra. Devuelve las articulaciones
     (cabeza y cola de cada hueso de JOINTS en espacio mundo, ya en T). El proxy que se anada despues se ajusta en T."""
@@ -93,7 +93,7 @@ def tpose_base(bm, rig="default"):
         _align(arm, f"lowerarm01.{side}", f"lowerarm01.{side}", f"wrist.{side}", t)
         _align(arm, f"wrist.{side}", f"wrist.{side}", f"finger3-1.{side}", t)
     joints = {}
-    for n in JOINTS:
+    for n in (joints_wanted if joints_wanted is not None else [b.name for b in arm.pose.bones]):
         pb = arm.pose.bones.get(n)
         if pb is not None:
             joints[n] = (tuple(arm.matrix_world @ pb.head), tuple(arm.matrix_world @ pb.tail))

@@ -1,0 +1,606 @@
+{
+ "convencion": {
+  "huesos": 70,
+  "deformacion": 65,
+  "angulo_max_y_hacia_hijo_grados": 0.7806,
+  "pares_comprobados": 47,
+  "objeto_identidad": true
+ },
+ "huesos": [
+  {
+   "nombre": "Root",
+   "padre": null,
+   "deforma": false,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "Hips",
+   "padre": "Root",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "Spine",
+   "padre": "Hips",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "Chest",
+   "padre": "Spine",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "UpperChest",
+   "padre": "Chest",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "Neck",
+   "padre": "UpperChest",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "Head",
+   "padre": "Neck",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "LeftEye",
+   "padre": "Head",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "RightEye",
+   "padre": "Head",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "Jaw",
+   "padre": "Head",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "Head_Top",
+   "padre": "Head",
+   "deforma": false,
+   "perfil_godot": false
+  },
+  {
+   "nombre": "Hair_01",
+   "padre": "Head",
+   "deforma": true,
+   "perfil_godot": false
+  },
+  {
+   "nombre": "Hair_02",
+   "padre": "Hair_01",
+   "deforma": true,
+   "perfil_godot": false
+  },
+  {
+   "nombre": "Hair_03",
+   "padre": "Hair_02",
+   "deforma": true,
+   "perfil_godot": false
+  },
+  {
+   "nombre": "Hair_04",
+   "padre": "Hair_03",
+   "deforma": true,
+   "perfil_godot": false
+  },
+  {
+   "nombre": "LeftShoulder",
+   "padre": "UpperChest",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "LeftUpperArm",
+   "padre": "LeftShoulder",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "LeftLowerArm",
+   "padre": "LeftUpperArm",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "LeftHand",
+   "padre": "LeftLowerArm",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "LeftThumbMetacarpal",
+   "padre": "LeftHand",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "LeftThumbProximal",
+   "padre": "LeftThumbMetacarpal",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "LeftThumbDistal",
+   "padre": "LeftThumbProximal",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "LeftIndexProximal",
+   "padre": "LeftHand",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "LeftIndexIntermediate",
+   "padre": "LeftIndexProximal",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "LeftIndexDistal",
+   "padre": "LeftIndexIntermediate",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "LeftMiddleProximal",
+   "padre": "LeftHand",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "LeftMiddleIntermediate",
+   "padre": "LeftMiddleProximal",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "LeftMiddleDistal",
+   "padre": "LeftMiddleIntermediate",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "LeftRingProximal",
+   "padre": "LeftHand",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "LeftRingIntermediate",
+   "padre": "LeftRingProximal",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "LeftRingDistal",
+   "padre": "LeftRingIntermediate",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "LeftLittleProximal",
+   "padre": "LeftHand",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "LeftLittleIntermediate",
+   "padre": "LeftLittleProximal",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "LeftLittleDistal",
+   "padre": "LeftLittleIntermediate",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "Weapon_L",
+   "padre": "LeftHand",
+   "deforma": false,
+   "perfil_godot": false
+  },
+  {
+   "nombre": "RightShoulder",
+   "padre": "UpperChest",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "RightUpperArm",
+   "padre": "RightShoulder",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "RightLowerArm",
+   "padre": "RightUpperArm",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "RightHand",
+   "padre": "RightLowerArm",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "RightThumbMetacarpal",
+   "padre": "RightHand",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "RightThumbProximal",
+   "padre": "RightThumbMetacarpal",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "RightThumbDistal",
+   "padre": "RightThumbProximal",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "RightIndexProximal",
+   "padre": "RightHand",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "RightIndexIntermediate",
+   "padre": "RightIndexProximal",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "RightIndexDistal",
+   "padre": "RightIndexIntermediate",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "RightMiddleProximal",
+   "padre": "RightHand",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "RightMiddleIntermediate",
+   "padre": "RightMiddleProximal",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "RightMiddleDistal",
+   "padre": "RightMiddleIntermediate",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "RightRingProximal",
+   "padre": "RightHand",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "RightRingIntermediate",
+   "padre": "RightRingProximal",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "RightRingDistal",
+   "padre": "RightRingIntermediate",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "RightLittleProximal",
+   "padre": "RightHand",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "RightLittleIntermediate",
+   "padre": "RightLittleProximal",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "RightLittleDistal",
+   "padre": "RightLittleIntermediate",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "Weapon_R",
+   "padre": "RightHand",
+   "deforma": false,
+   "perfil_godot": false
+  },
+  {
+   "nombre": "Back_Slot",
+   "padre": "UpperChest",
+   "deforma": false,
+   "perfil_godot": false
+  },
+  {
+   "nombre": "LeftUpperLeg",
+   "padre": "Hips",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "LeftLowerLeg",
+   "padre": "LeftUpperLeg",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "LeftFoot",
+   "padre": "LeftLowerLeg",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "LeftToes",
+   "padre": "LeftFoot",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "RightUpperLeg",
+   "padre": "Hips",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "RightLowerLeg",
+   "padre": "RightUpperLeg",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "RightFoot",
+   "padre": "RightLowerLeg",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "RightToes",
+   "padre": "RightFoot",
+   "deforma": true,
+   "perfil_godot": true
+  },
+  {
+   "nombre": "Skirt_Front_01",
+   "padre": "Hips",
+   "deforma": true,
+   "perfil_godot": false
+  },
+  {
+   "nombre": "Skirt_Front_02",
+   "padre": "Skirt_Front_01",
+   "deforma": true,
+   "perfil_godot": false
+  },
+  {
+   "nombre": "Skirt_Front_03",
+   "padre": "Skirt_Front_02",
+   "deforma": true,
+   "perfil_godot": false
+  },
+  {
+   "nombre": "Skirt_Back_01",
+   "padre": "Hips",
+   "deforma": true,
+   "perfil_godot": false
+  },
+  {
+   "nombre": "Skirt_Back_02",
+   "padre": "Skirt_Back_01",
+   "deforma": true,
+   "perfil_godot": false
+  },
+  {
+   "nombre": "Skirt_Back_03",
+   "padre": "Skirt_Back_02",
+   "deforma": true,
+   "perfil_godot": false
+  }
+ ],
+ "pesos_auto_grupos": 52,
+ "limpieza": {
+  "codo_Left": 8,
+  "muneca_Left": 16,
+  "rodilla_Left": 11,
+  "tobillo_Left": 17,
+  "hombro_Left": 38,
+  "cadera_Left": 48,
+  "codo_Right": 8,
+  "muneca_Right": 16,
+  "rodilla_Right": 11,
+  "tobillo_Right": 17,
+  "hombro_Right": 38,
+  "cadera_Right": 47
+ },
+ "costuras_dist_max": 0.0,
+ "pesos": {
+  "max_influencias": 4,
+  "vertices_sin_peso": 0,
+  "vertices": 4130
+ },
+ "poses": {
+  "01_T": {
+   "falda_vertices_dentro_de_piernas": 0,
+   "falda_penetracion_max_m": 0.0,
+   "Front": {
+    "rodilla_m": 0.033,
+    "tobillo_m": 0.014
+   },
+   "Back": {
+    "rodilla_m": -0.033,
+    "tobillo_m": -0.014
+   }
+  },
+  "02_A": {
+   "falda_vertices_dentro_de_piernas": 0,
+   "falda_penetracion_max_m": 0.0,
+   "Front": {
+    "rodilla_m": 0.033,
+    "tobillo_m": 0.014
+   },
+   "Back": {
+    "rodilla_m": -0.033,
+    "tobillo_m": -0.014
+   }
+  },
+  "03_Caminar": {
+   "falda_vertices_dentro_de_piernas": 2,
+   "falda_penetracion_max_m": 0.0248,
+   "Front": {
+    "rodilla_m": 0.247,
+    "tobillo_m": 0.387,
+    "tendida": true
+   },
+   "Back": {
+    "rodilla_m": 0.106,
+    "tobillo_m": 0.416,
+    "tendida": true
+   }
+  },
+  "04_Correr": {
+   "falda_vertices_dentro_de_piernas": 15,
+   "falda_penetracion_max_m": 0.0274,
+   "Front": {
+    "rodilla_m": 0.426,
+    "tobillo_m": 0.288,
+    "tendida": true
+   },
+   "Back": {
+    "rodilla_m": 0.18,
+    "tobillo_m": 0.569,
+    "tendida": true
+   }
+  },
+  "05_Sentado": {
+   "falda_vertices_dentro_de_piernas": 12,
+   "falda_penetracion_max_m": 0.0278,
+   "Front": {
+    "rodilla_m": 0.498,
+    "tobillo_m": 0.479,
+    "tendida": true
+   },
+   "Back": {
+    "rodilla_m": -0.498,
+    "tobillo_m": -0.479
+   }
+  },
+  "06_Hechizo": {
+   "falda_vertices_dentro_de_piernas": 0,
+   "falda_penetracion_max_m": 0.0,
+   "Front": {
+    "rodilla_m": 0.033,
+    "tobillo_m": 0.014
+   },
+   "Back": {
+    "rodilla_m": -0.033,
+    "tobillo_m": -0.014
+   }
+  },
+  "07_Rodillas": {
+   "falda_vertices_dentro_de_piernas": 13,
+   "falda_penetracion_max_m": 0.0291,
+   "Front": {
+    "rodilla_m": 0.498,
+    "tobillo_m": 0.495,
+    "tendida": true
+   },
+   "Back": {
+    "rodilla_m": -0.015,
+    "tobillo_m": 0.442,
+    "tendida": true
+   }
+  },
+  "08_Agachado": {
+   "falda_vertices_dentro_de_piernas": 7,
+   "falda_penetracion_max_m": 0.0251,
+   "Front": {
+    "rodilla_m": 0.484,
+    "tobillo_m": 0.218,
+    "tendida": true
+   },
+   "Back": {
+    "rodilla_m": -0.484,
+    "tobillo_m": -0.218
+   }
+  },
+  "09_Golpe": {
+   "falda_vertices_dentro_de_piernas": 2,
+   "falda_penetracion_max_m": 0.0261,
+   "Front": {
+    "rodilla_m": 0.101,
+    "tobillo_m": 0.034,
+    "tendida": true
+   },
+   "Back": {
+    "rodilla_m": 0.156,
+    "tobillo_m": 0.466,
+    "tendida": true
+   }
+  },
+  "10_Caido": {
+   "falda_vertices_dentro_de_piernas": 1,
+   "falda_penetracion_max_m": 0.0193,
+   "Front": {
+    "rodilla_m": 0.024,
+    "tobillo_m": -0.004
+   },
+   "Back": {
+    "rodilla_m": 0.185,
+    "tobillo_m": 0.089,
+    "tendida": true
+   }
+  }
+ },
+ "tris": {
+  "PJ_Elfo_Head": 1196,
+  "PJ_Elfo_Torso": 516,
+  "PJ_Elfo_Arms": 128,
+  "PJ_Elfo_Hands": 1068,
+  "PJ_Elfo_Legs": 224,
+  "PJ_Elfo_Feet": 196,
+  "PJ_Elfo_Eyes": 172,
+  "Robe_Top": 646,
+  "Robe_Skirt": 832,
+  "Hood": 640,
+  "Belt_Pouches": 676,
+  "Boots": 324,
+  "Bracers": 160,
+  "Hair_Elf": 472
+ },
+ "tris_total": 7250,
+ "glb": {
+  "archivo": "export/godot/pj_elfo_rig.glb",
+  "kb": 3646.6
+ }
+}
