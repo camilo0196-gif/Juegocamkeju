@@ -9,4 +9,5 @@ assets/**/*.jpeg
 assets/**/*.exr
 assets/manifest.json
 # Capturas y salidas de prueba generadas
-debug/out/
+debug/out/*
+!debug/out/.gdignore

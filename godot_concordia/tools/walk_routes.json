@@ -1,0 +1,5417 @@
+{
+ "fuente": [
+  "docs/reports/stage05_layout.json",
+  "debug/out/markers_meta.json"
+ ],
+ "paso_m": 12.0,
+ "rutas": [
+  {
+   "nombre": "STR_OFI_Avenue",
+   "tipo": "avenida",
+   "puntos": [
+    [
+     59.5,
+     -0.0
+    ],
+    [
+     71.5,
+     -0.0
+    ],
+    [
+     83.5,
+     -0.0
+    ],
+    [
+     95.5,
+     -0.0
+    ],
+    [
+     107.5,
+     -0.0
+    ],
+    [
+     119.5,
+     -0.0
+    ],
+    [
+     131.5,
+     -0.0
+    ],
+    [
+     143.5,
+     -0.0
+    ],
+    [
+     155.5,
+     -0.0
+    ],
+    [
+     166.0,
+     -0.0
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_OFI_GateApproach",
+   "tipo": "avenida",
+   "puntos": [
+    [
+     166.0,
+     -0.0
+    ],
+    [
+     178.0,
+     -0.0
+    ],
+    [
+     190.0,
+     -0.0
+    ],
+    [
+     196.0,
+     -0.0
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_MER_Avenue",
+   "tipo": "avenida",
+   "puntos": [
+    [
+     0.0,
+     -59.5
+    ],
+    [
+     0.0,
+     -71.5
+    ],
+    [
+     0.0,
+     -83.5
+    ],
+    [
+     0.0,
+     -95.5
+    ],
+    [
+     0.0,
+     -107.5
+    ],
+    [
+     0.0,
+     -119.5
+    ],
+    [
+     0.0,
+     -131.5
+    ],
+    [
+     0.0,
+     -143.5
+    ],
+    [
+     0.0,
+     -155.5
+    ],
+    [
+     0.0,
+     -166.0
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_MER_GateApproach",
+   "tipo": "avenida",
+   "puntos": [
+    [
+     0.0,
+     -166.0
+    ],
+    [
+     0.0,
+     -178.0
+    ],
+    [
+     0.0,
+     -190.0
+    ],
+    [
+     0.0,
+     -196.0
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_CLA_Avenue",
+   "tipo": "avenida",
+   "puntos": [
+    [
+     -59.5,
+     -0.0
+    ],
+    [
+     -71.5,
+     -0.0
+    ],
+    [
+     -83.5,
+     -0.0
+    ],
+    [
+     -95.5,
+     -0.0
+    ],
+    [
+     -107.5,
+     -0.0
+    ],
+    [
+     -119.5,
+     -0.0
+    ],
+    [
+     -131.5,
+     -0.0
+    ],
+    [
+     -143.5,
+     -0.0
+    ],
+    [
+     -155.5,
+     -0.0
+    ],
+    [
+     -166.0,
+     -0.0
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_CLA_GateApproach",
+   "tipo": "avenida",
+   "puntos": [
+    [
+     -166.0,
+     -0.0
+    ],
+    [
+     -178.0,
+     -0.0
+    ],
+    [
+     -190.0,
+     -0.0
+    ],
+    [
+     -196.0,
+     -0.0
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_RAZ_Avenue",
+   "tipo": "avenida",
+   "puntos": [
+    [
+     -0.0,
+     59.5
+    ],
+    [
+     -0.0,
+     71.5
+    ],
+    [
+     -0.0,
+     83.5
+    ],
+    [
+     -0.0,
+     95.5
+    ],
+    [
+     -0.0,
+     107.5
+    ],
+    [
+     -0.0,
+     119.5
+    ],
+    [
+     -0.0,
+     131.5
+    ],
+    [
+     -0.0,
+     143.5
+    ],
+    [
+     -0.0,
+     155.5
+    ],
+    [
+     -0.0,
+     166.0
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_RAZ_GateApproach",
+   "tipo": "avenida",
+   "puntos": [
+    [
+     -0.0,
+     166.0
+    ],
+    [
+     -0.0,
+     178.0
+    ],
+    [
+     -0.0,
+     190.0
+    ],
+    [
+     -0.0,
+     196.0
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_OFI_Ring100",
+   "tipo": "ronda",
+   "puntos": [
+    [
+     94.62,
+     37.27
+    ],
+    [
+     97.07,
+     25.54
+    ],
+    [
+     98.89,
+     13.68
+    ],
+    [
+     99.71,
+     1.73
+    ],
+    [
+     97.94,
+     -10.12
+    ],
+    [
+     96.32,
+     -22.01
+    ],
+    [
+     94.39,
+     -33.83
+    ],
+    [
+     93.41,
+     -36.8
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_OFI_Ring150",
+   "tipo": "ronda",
+   "puntos": [
+    [
+     138.36,
+     58.73
+    ],
+    [
+     143.05,
+     47.69
+    ],
+    [
+     146.4,
+     36.18
+    ],
+    [
+     148.52,
+     24.37
+    ],
+    [
+     149.76,
+     12.43
+    ],
+    [
+     150.28,
+     0.45
+    ],
+    [
+     149.91,
+     -11.54
+    ],
+    [
+     148.34,
+     -23.43
+    ],
+    [
+     145.5,
+     -35.09
+    ],
+    [
+     141.66,
+     -46.45
+    ],
+    [
+     137.27,
+     -57.62
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_MER_Ring100",
+   "tipo": "ronda",
+   "puntos": [
+    [
+     35.31,
+     -91.99
+    ],
+    [
+     24.03,
+     -96.06
+    ],
+    [
+     12.66,
+     -99.85
+    ],
+    [
+     0.72,
+     -100.67
+    ],
+    [
+     -11.27,
+     -100.2
+    ],
+    [
+     -23.17,
+     -98.8
+    ],
+    [
+     -34.19,
+     -94.16
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_MER_Ring150",
+   "tipo": "ronda",
+   "puntos": [
+    [
+     56.85,
+     -138.97
+    ],
+    [
+     45.36,
+     -142.39
+    ],
+    [
+     33.66,
+     -145.09
+    ],
+    [
+     21.88,
+     -147.37
+    ],
+    [
+     10.02,
+     -149.14
+    ],
+    [
+     -1.95,
+     -149.98
+    ],
+    [
+     -13.94,
+     -149.57
+    ],
+    [
+     -25.82,
+     -147.94
+    ],
+    [
+     -37.55,
+     -145.41
+    ],
+    [
+     -49.11,
+     -142.19
+    ],
+    [
+     -57.06,
+     -139.48
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_CLA_Ring100",
+   "tipo": "ronda",
+   "puntos": [
+    [
+     -93.68,
+     -36.9
+    ],
+    [
+     -97.87,
+     -25.67
+    ],
+    [
+     -99.18,
+     -13.78
+    ],
+    [
+     -98.64,
+     -1.8
+    ],
+    [
+     -98.61,
+     10.2
+    ],
+    [
+     -96.76,
+     22.03
+    ],
+    [
+     -93.34,
+     33.53
+    ],
+    [
+     -92.57,
+     36.46
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_CLA_Ring150",
+   "tipo": "ronda",
+   "puntos": [
+    [
+     -137.91,
+     -58.54
+    ],
+    [
+     -142.32,
+     -47.38
+    ],
+    [
+     -146.11,
+     -36.0
+    ],
+    [
+     -148.99,
+     -24.35
+    ],
+    [
+     -150.55,
+     -12.46
+    ],
+    [
+     -150.63,
+     -0.47
+    ],
+    [
+     -149.47,
+     11.47
+    ],
+    [
+     -147.55,
+     23.32
+    ],
+    [
+     -145.12,
+     35.07
+    ],
+    [
+     -142.05,
+     46.66
+    ],
+    [
+     -138.0,
+     57.95
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_RAZ_Ring100",
+   "tipo": "ronda",
+   "puntos": [
+    [
+     -36.29,
+     92.13
+    ],
+    [
+     -25.1,
+     96.37
+    ],
+    [
+     -13.31,
+     98.62
+    ],
+    [
+     -1.54,
+     100.94
+    ],
+    [
+     10.41,
+     101.09
+    ],
+    [
+     22.01,
+     98.07
+    ],
+    [
+     33.48,
+     94.55
+    ],
+    [
+     36.78,
+     93.37
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_RAZ_Ring150",
+   "tipo": "ronda",
+   "puntos": [
+    [
+     -58.46,
+     137.72
+    ],
+    [
+     -47.25,
+     142.0
+    ],
+    [
+     -35.75,
+     145.4
+    ],
+    [
+     -23.96,
+     147.65
+    ],
+    [
+     -12.02,
+     148.81
+    ],
+    [
+     -0.03,
+     149.19
+    ],
+    [
+     11.97,
+     149.08
+    ],
+    [
+     23.94,
+     148.35
+    ],
+    [
+     35.81,
+     146.58
+    ],
+    [
+     47.37,
+     143.41
+    ],
+    [
+     58.48,
+     138.89
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_DIAG_045_Faro_In",
+   "tipo": "diagonal",
+   "puntos": [
+    [
+     42.07,
+     -42.07
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_DIAG_045_Faro_Out",
+   "tipo": "diagonal",
+   "puntos": [
+    [
+     56.3,
+     -56.3
+    ],
+    [
+     64.78,
+     -64.78
+    ],
+    [
+     66.96,
+     -66.96
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_DIAG_135_Santuario_In",
+   "tipo": "diagonal",
+   "puntos": [
+    [
+     -42.07,
+     -42.07
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_DIAG_135_Santuario_Out",
+   "tipo": "diagonal",
+   "puntos": [
+    [
+     -54.05,
+     -54.05
+    ],
+    [
+     -62.53,
+     -62.53
+    ],
+    [
+     -66.96,
+     -66.96
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_DIAG_225_Obelisco_In",
+   "tipo": "diagonal",
+   "puntos": [
+    [
+     -42.07,
+     42.07
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_DIAG_225_Obelisco_Out",
+   "tipo": "diagonal",
+   "puntos": [
+    [
+     -48.8,
+     48.8
+    ],
+    [
+     -57.28,
+     57.28
+    ],
+    [
+     -65.77,
+     65.77
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_DIAG_315_SalonHazanas_In",
+   "tipo": "diagonal",
+   "puntos": [
+    [
+     42.07,
+     42.07
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_DIAG_315_SalonHazanas_Out",
+   "tipo": "diagonal",
+   "puntos": [
+    [
+     57.05,
+     57.05
+    ],
+    [
+     65.53,
+     65.53
+    ],
+    [
+     66.96,
+     66.96
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_OFI_CallejonRonda_L",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     184.68,
+     -11.94
+    ],
+    [
+     183.67,
+     -23.9
+    ],
+    [
+     182.09,
+     -35.79
+    ],
+    [
+     179.78,
+     -47.56
+    ],
+    [
+     176.59,
+     -59.13
+    ],
+    [
+     172.52,
+     -70.41
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_OFI_CallejonRonda_R",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     186.27,
+     12.04
+    ],
+    [
+     184.71,
+     23.94
+    ],
+    [
+     182.24,
+     35.68
+    ],
+    [
+     179.22,
+     47.29
+    ],
+    [
+     175.78,
+     58.79
+    ],
+    [
+     171.79,
+     70.1
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_MER_CallejonRonda_L",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     -11.99,
+     -185.43
+    ],
+    [
+     -23.94,
+     -184.42
+    ],
+    [
+     -35.8,
+     -182.6
+    ],
+    [
+     -47.52,
+     -180.04
+    ],
+    [
+     -59.07,
+     -176.78
+    ],
+    [
+     -70.4,
+     -172.82
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_MER_CallejonRonda_R",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     11.99,
+     -185.52
+    ],
+    [
+     23.93,
+     -184.32
+    ],
+    [
+     35.71,
+     -182.08
+    ],
+    [
+     47.33,
+     -179.08
+    ],
+    [
+     58.84,
+     -175.68
+    ],
+    [
+     70.23,
+     -171.91
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_CLA_CallejonRonda_L",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     -186.23,
+     12.04
+    ],
+    [
+     -185.19,
+     23.99
+    ],
+    [
+     -183.11,
+     35.81
+    ],
+    [
+     -180.2,
+     47.45
+    ],
+    [
+     -176.69,
+     58.92
+    ],
+    [
+     -172.64,
+     70.21
+    ],
+    [
+     -165.45,
+     70.85
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_CLA_CallejonRonda_R",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     -185.98,
+     -12.02
+    ],
+    [
+     -185.02,
+     -23.98
+    ],
+    [
+     -183.21,
+     -35.84
+    ],
+    [
+     -180.41,
+     -47.51
+    ],
+    [
+     -176.61,
+     -58.89
+    ],
+    [
+     -171.94,
+     -69.94
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_RAZ_CallejonRonda_L",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     12.01,
+     185.8
+    ],
+    [
+     23.99,
+     185.08
+    ],
+    [
+     35.84,
+     183.24
+    ],
+    [
+     47.48,
+     180.32
+    ],
+    [
+     58.89,
+     176.63
+    ],
+    [
+     70.14,
+     172.45
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_RAZ_CallejonRonda_R",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     -11.95,
+     184.79
+    ],
+    [
+     -23.86,
+     183.34
+    ],
+    [
+     -35.74,
+     181.66
+    ],
+    [
+     -47.54,
+     179.5
+    ],
+    [
+     -59.15,
+     176.46
+    ],
+    [
+     -70.42,
+     172.37
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_OFI_CallejonEscalera_01",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     106.68,
+     -46.88
+    ],
+    [
+     98.79,
+     -37.88
+    ],
+    [
+     96.87,
+     -35.58
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_OFI_CallejonEscalera_02",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     123.34,
+     -54.65
+    ],
+    [
+     115.15,
+     -46.07
+    ],
+    [
+     107.27,
+     -37.07
+    ],
+    [
+     99.3,
+     -36.37
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_OFI_CallejonEscalera_03",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     141.21,
+     -62.98
+    ],
+    [
+     137.35,
+     -60.07
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_OFI_CallejonEscalera_04",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     162.38,
+     -72.85
+    ],
+    [
+     172.03,
+     -65.77
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_MER_CallejonEscalera_05",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     46.88,
+     -106.68
+    ],
+    [
+     39.66,
+     -97.25
+    ],
+    [
+     37.94,
+     -94.79
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_MER_CallejonEscalera_06",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     54.65,
+     -123.34
+    ],
+    [
+     47.76,
+     -133.17
+    ],
+    [
+     44.32,
+     -138.09
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_MER_CallejonEscalera_07",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     62.98,
+     -141.21
+    ],
+    [
+     58.07,
+     -137.77
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_MER_CallejonEscalera_08",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     72.85,
+     -162.38
+    ],
+    [
+     65.77,
+     -172.03
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_MER_CallejonEscalera_09",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     -46.88,
+     -106.68
+    ],
+    [
+     -38.65,
+     -98.09
+    ],
+    [
+     -37.12,
+     -96.8
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_MER_CallejonEscalera_10",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     -54.65,
+     -123.34
+    ],
+    [
+     -45.84,
+     -131.41
+    ],
+    [
+     -36.65,
+     -139.12
+    ],
+    [
+     -34.93,
+     -141.58
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_MER_CallejonEscalera_11",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     -62.98,
+     -141.21
+    ],
+    [
+     -58.07,
+     -144.66
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_MER_CallejonEscalera_12",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     -72.85,
+     -162.38
+    ],
+    [
+     -65.77,
+     -172.03
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_CLA_CallejonEscalera_13",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     -106.68,
+     -46.88
+    ],
+    [
+     -99.8,
+     -37.05
+    ],
+    [
+     -98.08,
+     -34.59
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_CLA_CallejonEscalera_14",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     -141.21,
+     -62.98
+    ],
+    [
+     -137.77,
+     -58.07
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_CLA_CallejonEscalera_15",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     -162.38,
+     -72.85
+    ],
+    [
+     -172.03,
+     -65.77
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_CLA_CallejonEscalera_16",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     -106.68,
+     46.88
+    ],
+    [
+     -99.8,
+     37.05
+    ],
+    [
+     -96.36,
+     32.13
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_CLA_CallejonEscalera_17",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     -123.34,
+     54.65
+    ],
+    [
+     -115.62,
+     45.76
+    ],
+    [
+     -105.39,
+     42.86
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_CLA_CallejonEscalera_18",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     -141.21,
+     62.98
+    ],
+    [
+     -137.77,
+     58.07
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_CLA_CallejonEscalera_19",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     -162.38,
+     72.85
+    ],
+    [
+     -170.27,
+     63.85
+    ],
+    [
+     -175.41,
+     57.72
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_RAZ_CallejonEscalera_20",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     -46.88,
+     106.68
+    ],
+    [
+     -39.15,
+     97.9
+    ],
+    [
+     -37.78,
+     94.14
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_RAZ_CallejonEscalera_21",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     -54.65,
+     123.34
+    ],
+    [
+     -46.42,
+     114.75
+    ],
+    [
+     -45.21,
+     106.89
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_RAZ_CallejonEscalera_22",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     -62.98,
+     141.21
+    ],
+    [
+     -58.07,
+     137.77
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_RAZ_CallejonEscalera_23",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     62.98,
+     141.21
+    ],
+    [
+     58.98,
+     141.21
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_OFI_CallejonEscalera_24",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     106.68,
+     46.88
+    ],
+    [
+     98.94,
+     38.01
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_OFI_CallejonEscalera_25",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     123.34,
+     54.65
+    ],
+    [
+     115.15,
+     46.07
+    ],
+    [
+     107.44,
+     36.88
+    ],
+    [
+     98.71,
+     33.2
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_OFI_CallejonEscalera_26",
+   "tipo": "callejon_escalera",
+   "puntos": [
+    [
+     141.21,
+     62.98
+    ],
+    [
+     137.77,
+     58.07
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_MER_Callejon_01",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     31.52,
+     -97.98
+    ],
+    [
+     35.53,
+     -109.29
+    ],
+    [
+     41.72,
+     -119.42
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_MER_Callejon_02",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     -32.33,
+     -100.21
+    ],
+    [
+     -37.04,
+     -111.21
+    ],
+    [
+     -40.69,
+     -122.63
+    ],
+    [
+     -43.93,
+     -131.02
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_MER_Callejon_03",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     42.6,
+     -138.44
+    ],
+    [
+     39.7,
+     -126.8
+    ],
+    [
+     38.83,
+     -116.15
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_MER_Callejon_04",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     -16.92,
+     -153.79
+    ],
+    [
+     -18.26,
+     -165.72
+    ],
+    [
+     -22.4,
+     -176.86
+    ],
+    [
+     -22.09,
+     -183.53
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_MER_Callejon_05",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     -49.24,
+     -146.86
+    ],
+    [
+     -52.74,
+     -158.34
+    ],
+    [
+     -54.57,
+     -170.17
+    ],
+    [
+     -54.96,
+     -177.16
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_MER_Callejon_06",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     -14.5,
+     -143.28
+    ],
+    [
+     -20.96,
+     -143.28
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_MER_Callejon_07",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     14.5,
+     -106.47
+    ],
+    [
+     26.48,
+     -106.22
+    ],
+    [
+     33.43,
+     -105.35
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_OFI_Callejon_01",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     138.17,
+     53.23
+    ],
+    [
+     127.18,
+     48.41
+    ],
+    [
+     121.2,
+     44.72
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_OFI_Callejon_02",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     146.91,
+     -16.42
+    ],
+    [
+     135.07,
+     -14.63
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_OFI_Callejon_03",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     151.87,
+     -17.03
+    ],
+    [
+     162.29,
+     -14.53
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_OFI_Callejon_04",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     137.96,
+     -49.17
+    ],
+    [
+     126.64,
+     -45.35
+    ],
+    [
+     114.76,
+     -43.71
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_OFI_Callejon_05",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     118.21,
+     -14.5
+    ],
+    [
+     117.34,
+     -26.37
+    ],
+    [
+     115.28,
+     -38.13
+    ],
+    [
+     115.51,
+     -43.06
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_CLA_Callejon_01",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     -145.62,
+     -28.17
+    ],
+    [
+     -135.44,
+     -25.79
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_CLA_Callejon_02",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     -152.16,
+     -20.72
+    ],
+    [
+     -164.03,
+     -22.49
+    ],
+    [
+     -176.01,
+     -22.8
+    ],
+    [
+     -184.89,
+     -21.53
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_CLA_Callejon_03",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     -151.43,
+     15.42
+    ],
+    [
+     -163.29,
+     17.25
+    ],
+    [
+     -174.52,
+     21.34
+    ],
+    [
+     -184.18,
+     23.92
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_CLA_Callejon_04",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     -144.01,
+     28.43
+    ],
+    [
+     -132.25,
+     26.02
+    ],
+    [
+     -127.47,
+     24.56
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_CLA_Callejon_05",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     -103.14,
+     -14.5
+    ],
+    [
+     -102.62,
+     -26.43
+    ],
+    [
+     -102.75,
+     -38.26
+    ]
+   ]
+  },
+  {
+   "nombre": "STR_RAZ_Callejon_01",
+   "tipo": "callejon",
+   "puntos": [
+    [
+     -45.68,
+     139.89
+    ],
+    [
+     -44.16,
+     135.39
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_Portal_OE",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     -51.0,
+     -0.0
+    ],
+    [
+     -39.0,
+     -0.0
+    ],
+    [
+     -27.0,
+     -0.0
+    ],
+    [
+     -15.0,
+     -0.0
+    ],
+    [
+     -3.0,
+     -0.0
+    ],
+    [
+     9.0,
+     -0.0
+    ],
+    [
+     21.0,
+     -0.0
+    ],
+    [
+     33.0,
+     -0.0
+    ],
+    [
+     45.0,
+     -0.0
+    ],
+    [
+     51.0,
+     -0.0
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_Portal_SN",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     -0.21,
+     51.0
+    ],
+    [
+     -0.16,
+     39.0
+    ],
+    [
+     -0.11,
+     27.0
+    ],
+    [
+     -0.06,
+     15.0
+    ],
+    [
+     -0.01,
+     3.0
+    ],
+    [
+     0.04,
+     -9.0
+    ],
+    [
+     0.09,
+     -21.0
+    ],
+    [
+     0.14,
+     -33.0
+    ],
+    [
+     0.19,
+     -45.0
+    ],
+    [
+     0.21,
+     -51.0
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_OFI_AxisFrontage_OE",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     95.9,
+     12.75
+    ],
+    [
+     107.31,
+     9.03
+    ],
+    [
+     118.72,
+     5.31
+    ],
+    [
+     130.13,
+     1.59
+    ],
+    [
+     141.54,
+     2.13
+    ],
+    [
+     152.94,
+     5.85
+    ],
+    [
+     164.35,
+     9.57
+    ],
+    [
+     174.1,
+     12.75
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_OFI_AxisFrontage_SN",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     95.9,
+     12.75
+    ],
+    [
+     107.31,
+     9.03
+    ],
+    [
+     118.72,
+     5.31
+    ],
+    [
+     130.13,
+     1.59
+    ],
+    [
+     141.54,
+     -2.13
+    ],
+    [
+     152.94,
+     -5.85
+    ],
+    [
+     164.35,
+     -9.57
+    ],
+    [
+     174.1,
+     -12.75
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_OFI_Plazoleta_OE",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     168.25,
+     -0.21
+    ],
+    [
+     180.25,
+     -0.01
+    ],
+    [
+     192.25,
+     0.0
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_OFI_Plazoleta_SN",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     181.11,
+     12.75
+    ],
+    [
+     181.01,
+     0.75
+    ],
+    [
+     181.09,
+     -11.25
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_MER_AxisFrontage_OE",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     -12.75,
+     -95.9
+    ],
+    [
+     -9.03,
+     -107.31
+    ],
+    [
+     -5.31,
+     -118.72
+    ],
+    [
+     -1.59,
+     -130.13
+    ],
+    [
+     2.13,
+     -141.54
+    ],
+    [
+     5.85,
+     -152.94
+    ],
+    [
+     9.57,
+     -164.35
+    ],
+    [
+     12.75,
+     -174.1
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_MER_AxisFrontage_SN",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     12.75,
+     -95.9
+    ],
+    [
+     9.03,
+     -107.31
+    ],
+    [
+     5.31,
+     -118.72
+    ],
+    [
+     1.59,
+     -130.13
+    ],
+    [
+     2.13,
+     -141.54
+    ],
+    [
+     5.85,
+     -152.94
+    ],
+    [
+     9.57,
+     -164.35
+    ],
+    [
+     12.75,
+     -174.1
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_MER_Plazoleta_OE",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     -12.75,
+     -181.21
+    ],
+    [
+     -0.75,
+     -181.01
+    ],
+    [
+     11.25,
+     -181.0
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_MER_Plazoleta_SN",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     0.11,
+     -168.25
+    ],
+    [
+     0.01,
+     -180.25
+    ],
+    [
+     0.09,
+     -192.25
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_CLA_AxisFrontage_OE",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     -174.1,
+     -12.75
+    ],
+    [
+     -162.69,
+     -9.03
+    ],
+    [
+     -151.28,
+     -5.31
+    ],
+    [
+     -139.87,
+     -1.59
+    ],
+    [
+     -128.46,
+     -2.13
+    ],
+    [
+     -117.06,
+     -5.85
+    ],
+    [
+     -105.65,
+     -9.57
+    ],
+    [
+     -95.9,
+     -12.75
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_CLA_AxisFrontage_SN",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     -95.9,
+     12.75
+    ],
+    [
+     -107.31,
+     9.03
+    ],
+    [
+     -118.72,
+     5.31
+    ],
+    [
+     -130.13,
+     1.59
+    ],
+    [
+     -141.54,
+     -2.13
+    ],
+    [
+     -152.94,
+     -5.85
+    ],
+    [
+     -164.35,
+     -9.57
+    ],
+    [
+     -174.1,
+     -12.75
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_CLA_Plazoleta_OE",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     -193.75,
+     -0.21
+    ],
+    [
+     -181.75,
+     -0.01
+    ],
+    [
+     -169.75,
+     -0.0
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_CLA_Plazoleta_SN",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     -180.89,
+     12.75
+    ],
+    [
+     -180.99,
+     0.75
+    ],
+    [
+     -180.91,
+     -11.25
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_RAZ_AxisFrontage_OE",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     -12.75,
+     174.1
+    ],
+    [
+     -9.03,
+     162.69
+    ],
+    [
+     -5.31,
+     151.28
+    ],
+    [
+     -1.59,
+     139.87
+    ],
+    [
+     2.13,
+     128.46
+    ],
+    [
+     5.85,
+     117.06
+    ],
+    [
+     9.57,
+     105.65
+    ],
+    [
+     12.75,
+     95.9
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_RAZ_AxisFrontage_SN",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     -12.75,
+     174.1
+    ],
+    [
+     -9.03,
+     162.69
+    ],
+    [
+     -5.31,
+     151.28
+    ],
+    [
+     -1.59,
+     139.87
+    ],
+    [
+     -2.13,
+     128.46
+    ],
+    [
+     -5.85,
+     117.06
+    ],
+    [
+     -9.57,
+     105.65
+    ],
+    [
+     -12.75,
+     95.9
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_RAZ_Plazoleta_OE",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     -12.75,
+     180.79
+    ],
+    [
+     -0.75,
+     180.99
+    ],
+    [
+     11.25,
+     181.0
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_RAZ_Plazoleta_SN",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     0.11,
+     193.75
+    ],
+    [
+     0.01,
+     181.75
+    ],
+    [
+     0.09,
+     169.75
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_MER_FuenteMercado_OE",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     -9.35,
+     -105.21
+    ],
+    [
+     2.65,
+     -105.0
+    ],
+    [
+     9.35,
+     -105.0
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_MER_FuenteMercado_SN",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     -0.11,
+     -95.65
+    ],
+    [
+     -0.03,
+     -107.65
+    ],
+    [
+     -0.11,
+     -114.35
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_MER_PlazaProvisiones_OE",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     -51.02,
+     -164.7
+    ],
+    [
+     -39.62,
+     -160.95
+    ],
+    [
+     -28.22,
+     -157.21
+    ],
+    [
+     -22.77,
+     -155.41
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_MER_PlazaProvisiones_SN",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     -47.64,
+     -149.78
+    ],
+    [
+     -38.97,
+     -158.08
+    ],
+    [
+     -30.29,
+     -166.37
+    ],
+    [
+     -26.15,
+     -170.34
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_CLA_PlazaArmas_OE",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     -140.5,
+     -21.25
+    ],
+    [
+     -133.0,
+     -11.88
+    ],
+    [
+     -125.51,
+     -2.51
+    ],
+    [
+     -118.01,
+     -6.86
+    ],
+    [
+     -110.51,
+     -16.23
+    ],
+    [
+     -106.5,
+     -21.25
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_CLA_PlazaArmas_SN",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     -140.5,
+     21.25
+    ],
+    [
+     -133.0,
+     11.88
+    ],
+    [
+     -125.51,
+     2.51
+    ],
+    [
+     -118.01,
+     -6.86
+    ],
+    [
+     -110.51,
+     -16.23
+    ],
+    [
+     -106.5,
+     -21.25
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_RAZ_Plazuela_01_OE",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     33.76,
+     136.63
+    ],
+    [
+     42.25,
+     136.84
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_RAZ_Plazuela_01_SN",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     37.89,
+     141.09
+    ],
+    [
+     37.89,
+     132.59
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_RAZ_Plazuela_02_OE",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     -43.11,
+     135.13
+    ],
+    [
+     -34.61,
+     135.34
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_RAZ_Plazuela_02_SN",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     -38.97,
+     139.59
+    ],
+    [
+     -38.97,
+     131.09
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_RAZ_Plazuela_03_OE",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     39.76,
+     153.51
+    ],
+    [
+     48.25,
+     153.72
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_RAZ_Plazuela_03_SN",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     43.89,
+     157.97
+    ],
+    [
+     43.89,
+     149.47
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_RAZ_Plazuela_04_OE",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     -43.71,
+     153.51
+    ],
+    [
+     -35.22,
+     153.72
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_RAZ_Plazuela_04_SN",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     -39.57,
+     157.97
+    ],
+    [
+     -39.57,
+     149.47
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_RAZ_Plazuela_05_OE",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     17.76,
+     87.71
+    ],
+    [
+     26.25,
+     87.92
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_RAZ_Plazuela_05_SN",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     21.89,
+     92.17
+    ],
+    [
+     21.89,
+     83.67
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_RAZ_Plazuela_06_OE",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     -27.15,
+     86.21
+    ],
+    [
+     -18.66,
+     86.42
+    ]
+   ]
+  },
+  {
+   "nombre": "PLZ_RAZ_Plazuela_06_SN",
+   "tipo": "plaza",
+   "puntos": [
+    [
+     -23.01,
+     90.67
+    ],
+    [
+     -23.01,
+     82.17
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Bridge_01",
+   "tipo": "puente",
+   "puntos": [
+    [
+     56.22,
+     -56.22
+    ],
+    [
+     70.36,
+     -70.36
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Bridge_02",
+   "tipo": "puente",
+   "puntos": [
+    [
+     78.0,
+     0.0
+    ],
+    [
+     101.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Bridge_03",
+   "tipo": "puente",
+   "puntos": [
+    [
+     95.36,
+     37.61
+    ],
+    [
+     99.28,
+     9.87
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Bridge_04",
+   "tipo": "puente",
+   "puntos": [
+    [
+     142.86,
+     50.18
+    ],
+    [
+     148.54,
+     27.9
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Bridge_05",
+   "tipo": "puente",
+   "puntos": [
+    [
+     182.16,
+     36.91
+    ],
+    [
+     175.9,
+     59.03
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Bridge_06",
+   "tipo": "arco",
+   "puntos": [
+    [
+     -64.95,
+     135.1
+    ],
+    [
+     -48.27,
+     141.85
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Bridge_07",
+   "tipo": "arco",
+   "puntos": [
+    [
+     -38.72,
+     144.99
+    ],
+    [
+     -21.04,
+     148.37
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Bridge_08",
+   "tipo": "arco",
+   "puntos": [
+    [
+     8.98,
+     149.34
+    ],
+    [
+     26.94,
+     148.28
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Bridge_09",
+   "tipo": "arco",
+   "puntos": [
+    [
+     38.86,
+     146.33
+    ],
+    [
+     55.88,
+     140.49
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Escalinata_01",
+   "tipo": "escalinata",
+   "puntos": [
+    [
+     47.15,
+     -79.49
+    ],
+    [
+     53.27,
+     -89.81
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Escalinata_02",
+   "tipo": "escalinata",
+   "puntos": [
+    [
+     79.49,
+     -47.15
+    ],
+    [
+     89.81,
+     -53.27
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Escalinata_03",
+   "tipo": "escalinata",
+   "puntos": [
+    [
+     -79.49,
+     -47.15
+    ],
+    [
+     -89.81,
+     -53.27
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Escalinata_04",
+   "tipo": "escalinata",
+   "puntos": [
+    [
+     -47.15,
+     -79.49
+    ],
+    [
+     -53.27,
+     -89.81
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Escalinata_05",
+   "tipo": "escalinata",
+   "puntos": [
+    [
+     -72.71,
+     -57.06
+    ],
+    [
+     -82.15,
+     -64.46
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Escalinata_06",
+   "tipo": "escalinata",
+   "puntos": [
+    [
+     -47.15,
+     79.49
+    ],
+    [
+     -53.27,
+     89.81
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Escalinata_07",
+   "tipo": "escalinata",
+   "puntos": [
+    [
+     -79.49,
+     47.15
+    ],
+    [
+     -89.81,
+     53.27
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Escalinata_08",
+   "tipo": "escalinata",
+   "puntos": [
+    [
+     79.49,
+     47.15
+    ],
+    [
+     89.81,
+     53.27
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Escalinata_09",
+   "tipo": "escalinata",
+   "puntos": [
+    [
+     47.15,
+     79.49
+    ],
+    [
+     53.27,
+     89.81
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Escalinata_10",
+   "tipo": "escalinata",
+   "puntos": [
+    [
+     57.06,
+     72.71
+    ],
+    [
+     64.46,
+     82.15
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Gate_E",
+   "tipo": "puerta_muralla",
+   "puntos": [
+    [
+     184.0,
+     0.0
+    ],
+    [
+     216.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Gate_N",
+   "tipo": "puerta_muralla",
+   "puntos": [
+    [
+     0.0,
+     -184.0
+    ],
+    [
+     0.0,
+     -216.0
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Gate_S",
+   "tipo": "puerta_muralla",
+   "puntos": [
+    [
+     0.0,
+     184.0
+    ],
+    [
+     0.0,
+     216.0
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Gate_W",
+   "tipo": "puerta_muralla",
+   "puntos": [
+    [
+     -184.0,
+     0.0
+    ],
+    [
+     -216.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_NE_01",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     108.62,
+     -50.66
+    ],
+    [
+     100.28,
+     -46.76
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_NE_02",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     132.09,
+     -61.6
+    ],
+    [
+     122.13,
+     -56.94
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_NE_03",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     159.1,
+     -74.2
+    ],
+    [
+     140.44,
+     -65.48
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_NE_04",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     183.12,
+     -85.39
+    ],
+    [
+     161.74,
+     -75.41
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_NE_05",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     50.66,
+     -108.62
+    ],
+    [
+     46.76,
+     -100.28
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_NE_06",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     61.6,
+     -132.09
+    ],
+    [
+     56.94,
+     -122.13
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_NE_07",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     74.2,
+     -159.1
+    ],
+    [
+     65.48,
+     -140.44
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_NE_08",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     85.39,
+     -183.12
+    ],
+    [
+     75.41,
+     -161.74
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_NW_09",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     -50.66,
+     -108.62
+    ],
+    [
+     -46.76,
+     -100.28
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_NW_10",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     -61.6,
+     -132.09
+    ],
+    [
+     -56.94,
+     -122.13
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_NW_11",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     -74.2,
+     -159.1
+    ],
+    [
+     -65.48,
+     -140.44
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_NW_12",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     -85.39,
+     -183.12
+    ],
+    [
+     -75.41,
+     -161.74
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_NW_13",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     -108.62,
+     -50.66
+    ],
+    [
+     -100.28,
+     -46.76
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_NW_14",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     -132.09,
+     -61.6
+    ],
+    [
+     -122.13,
+     -56.94
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_NW_15",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     -159.1,
+     -74.2
+    ],
+    [
+     -140.44,
+     -65.48
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_NW_16",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     -183.12,
+     -85.39
+    ],
+    [
+     -161.74,
+     -75.41
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_SE_25",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     50.66,
+     108.62
+    ],
+    [
+     46.76,
+     100.28
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_SE_26",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     61.6,
+     132.09
+    ],
+    [
+     56.94,
+     122.13
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_SE_27",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     74.2,
+     159.1
+    ],
+    [
+     65.48,
+     140.44
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_SE_28",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     85.39,
+     183.12
+    ],
+    [
+     75.41,
+     161.74
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_SE_29",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     108.62,
+     50.66
+    ],
+    [
+     100.28,
+     46.76
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_SE_30",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     132.09,
+     61.6
+    ],
+    [
+     122.13,
+     56.94
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_SE_31",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     159.1,
+     74.2
+    ],
+    [
+     140.44,
+     65.48
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_SE_32",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     183.12,
+     85.39
+    ],
+    [
+     161.74,
+     75.41
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_SW_17",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     -108.62,
+     50.66
+    ],
+    [
+     -100.28,
+     46.76
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_SW_18",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     -132.09,
+     61.6
+    ],
+    [
+     -122.13,
+     56.94
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_SW_19",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     -159.1,
+     74.2
+    ],
+    [
+     -140.44,
+     65.48
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_SW_20",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     -183.12,
+     85.39
+    ],
+    [
+     -161.74,
+     75.41
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_SW_21",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     -50.66,
+     108.62
+    ],
+    [
+     -46.76,
+     100.28
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_SW_22",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     -61.6,
+     132.09
+    ],
+    [
+     -56.94,
+     122.13
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_SW_23",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     -74.2,
+     159.1
+    ],
+    [
+     -65.48,
+     140.44
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Lateral_Morada_SW_24",
+   "tipo": "escalera_lateral",
+   "puntos": [
+    [
+     -85.39,
+     183.12
+    ],
+    [
+     -75.41,
+     161.74
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Monumental_Morada_NE",
+   "tipo": "escalera_monumental",
+   "puntos": [
+    [
+     57.99,
+     -57.99
+    ],
+    [
+     76.37,
+     -76.37
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Monumental_Morada_NW",
+   "tipo": "escalera_monumental",
+   "puntos": [
+    [
+     -57.99,
+     -57.99
+    ],
+    [
+     -76.37,
+     -76.37
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Monumental_Morada_SE",
+   "tipo": "escalera_monumental",
+   "puntos": [
+    [
+     57.99,
+     57.99
+    ],
+    [
+     76.37,
+     76.37
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Monumental_Morada_SW",
+   "tipo": "escalera_monumental",
+   "puntos": [
+    [
+     -57.99,
+     57.99
+    ],
+    [
+     -76.37,
+     76.37
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NE_01",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     103.55,
+     -67.15
+    ],
+    [
+     95.99,
+     -62.25
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NE_02",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     67.15,
+     -103.55
+    ],
+    [
+     62.25,
+     -95.99
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NE_03",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     87.26,
+     -87.26
+    ],
+    [
+     80.9,
+     -80.9
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NE_04",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     113.61,
+     -77.3
+    ],
+    [
+     106.17,
+     -72.24
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NE_05",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     77.3,
+     -113.61
+    ],
+    [
+     72.24,
+     -106.17
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NE_06",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     97.16,
+     -97.16
+    ],
+    [
+     90.8,
+     -90.8
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NE_07",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     123.65,
+     -87.4
+    ],
+    [
+     116.29,
+     -82.2
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NE_08",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     87.4,
+     -123.65
+    ],
+    [
+     82.2,
+     -116.29
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NE_09",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     107.06,
+     -107.06
+    ],
+    [
+     100.7,
+     -100.7
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NE_10",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     147.11,
+     -75.63
+    ],
+    [
+     139.11,
+     -71.51
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NE_11",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     133.65,
+     -97.47
+    ],
+    [
+     126.37,
+     -92.17
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NE_12",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     97.47,
+     -133.65
+    ],
+    [
+     92.17,
+     -126.37
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NE_13",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     75.63,
+     -147.11
+    ],
+    [
+     71.51,
+     -139.11
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NE_14",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     116.96,
+     -116.96
+    ],
+    [
+     110.6,
+     -110.6
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NE_15",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     157.48,
+     -85.97
+    ],
+    [
+     149.58,
+     -81.65
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NE_16",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     143.63,
+     -107.51
+    ],
+    [
+     136.43,
+     -102.11
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NE_17",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     107.51,
+     -143.63
+    ],
+    [
+     102.11,
+     -136.43
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NE_18",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     85.97,
+     -157.48
+    ],
+    [
+     81.65,
+     -149.58
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NE_19",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     126.86,
+     -126.86
+    ],
+    [
+     120.5,
+     -120.5
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NW_01",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -67.15,
+     -103.55
+    ],
+    [
+     -62.25,
+     -95.99
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NW_02",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -103.55,
+     -67.15
+    ],
+    [
+     -95.99,
+     -62.25
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NW_03",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -87.26,
+     -87.26
+    ],
+    [
+     -80.9,
+     -80.9
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NW_04",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -77.3,
+     -113.61
+    ],
+    [
+     -72.24,
+     -106.17
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NW_05",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -113.61,
+     -77.3
+    ],
+    [
+     -106.17,
+     -72.24
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NW_06",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -97.16,
+     -97.16
+    ],
+    [
+     -90.8,
+     -90.8
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NW_07",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -87.4,
+     -123.65
+    ],
+    [
+     -82.2,
+     -116.29
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NW_08",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -123.65,
+     -87.4
+    ],
+    [
+     -116.29,
+     -82.2
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NW_09",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -107.06,
+     -107.06
+    ],
+    [
+     -100.7,
+     -100.7
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NW_10",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -75.63,
+     -147.11
+    ],
+    [
+     -71.51,
+     -139.11
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NW_11",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -97.47,
+     -133.65
+    ],
+    [
+     -92.17,
+     -126.37
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NW_12",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -133.65,
+     -97.47
+    ],
+    [
+     -126.37,
+     -92.17
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NW_13",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -147.11,
+     -75.63
+    ],
+    [
+     -139.11,
+     -71.51
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NW_14",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -116.96,
+     -116.96
+    ],
+    [
+     -110.6,
+     -110.6
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NW_15",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -85.97,
+     -157.48
+    ],
+    [
+     -81.65,
+     -149.58
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NW_16",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -107.51,
+     -143.63
+    ],
+    [
+     -102.11,
+     -136.43
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NW_17",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -143.63,
+     -107.51
+    ],
+    [
+     -136.43,
+     -102.11
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NW_18",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -157.48,
+     -85.97
+    ],
+    [
+     -149.58,
+     -81.65
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_NW_19",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -126.86,
+     -126.86
+    ],
+    [
+     -120.5,
+     -120.5
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SE_01",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     67.15,
+     103.55
+    ],
+    [
+     62.25,
+     95.99
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SE_02",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     103.55,
+     67.15
+    ],
+    [
+     95.99,
+     62.25
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SE_03",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     87.26,
+     87.26
+    ],
+    [
+     80.9,
+     80.9
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SE_04",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     77.3,
+     113.61
+    ],
+    [
+     72.24,
+     106.17
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SE_05",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     113.61,
+     77.3
+    ],
+    [
+     106.17,
+     72.24
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SE_06",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     97.16,
+     97.16
+    ],
+    [
+     90.8,
+     90.8
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SE_07",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     87.4,
+     123.65
+    ],
+    [
+     82.2,
+     116.29
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SE_08",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     123.65,
+     87.4
+    ],
+    [
+     116.29,
+     82.2
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SE_09",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     107.06,
+     107.06
+    ],
+    [
+     100.7,
+     100.7
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SE_10",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     75.63,
+     147.11
+    ],
+    [
+     71.51,
+     139.11
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SE_11",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     97.47,
+     133.65
+    ],
+    [
+     92.17,
+     126.37
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SE_12",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     133.65,
+     97.47
+    ],
+    [
+     126.37,
+     92.17
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SE_13",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     147.11,
+     75.63
+    ],
+    [
+     139.11,
+     71.51
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SE_14",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     116.96,
+     116.96
+    ],
+    [
+     110.6,
+     110.6
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SE_15",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     85.97,
+     157.48
+    ],
+    [
+     81.65,
+     149.58
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SE_16",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     107.51,
+     143.63
+    ],
+    [
+     102.11,
+     136.43
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SE_17",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     143.63,
+     107.51
+    ],
+    [
+     136.43,
+     102.11
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SE_18",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     157.48,
+     85.97
+    ],
+    [
+     149.58,
+     81.65
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SE_19",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     126.86,
+     126.86
+    ],
+    [
+     120.5,
+     120.5
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SW_01",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -103.55,
+     67.15
+    ],
+    [
+     -95.99,
+     62.25
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SW_02",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -67.15,
+     103.55
+    ],
+    [
+     -62.25,
+     95.99
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SW_03",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -87.26,
+     87.26
+    ],
+    [
+     -80.9,
+     80.9
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SW_04",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -113.61,
+     77.3
+    ],
+    [
+     -106.17,
+     72.24
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SW_05",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -77.3,
+     113.61
+    ],
+    [
+     -72.24,
+     106.17
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SW_06",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -97.16,
+     97.16
+    ],
+    [
+     -90.8,
+     90.8
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SW_07",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -123.65,
+     87.4
+    ],
+    [
+     -116.29,
+     82.2
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SW_08",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -87.4,
+     123.65
+    ],
+    [
+     -82.2,
+     116.29
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SW_09",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -107.06,
+     107.06
+    ],
+    [
+     -100.7,
+     100.7
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SW_10",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -147.11,
+     75.63
+    ],
+    [
+     -139.11,
+     71.51
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SW_11",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -133.65,
+     97.47
+    ],
+    [
+     -126.37,
+     92.17
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SW_12",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -97.47,
+     133.65
+    ],
+    [
+     -92.17,
+     126.37
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SW_13",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -75.63,
+     147.11
+    ],
+    [
+     -71.51,
+     139.11
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SW_14",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -116.96,
+     116.96
+    ],
+    [
+     -110.6,
+     110.6
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SW_15",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -157.48,
+     85.97
+    ],
+    [
+     -149.58,
+     81.65
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SW_16",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -143.63,
+     107.51
+    ],
+    [
+     -136.43,
+     102.11
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SW_17",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -107.51,
+     143.63
+    ],
+    [
+     -102.11,
+     136.43
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SW_18",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -85.97,
+     157.48
+    ],
+    [
+     -81.65,
+     149.58
+    ]
+   ]
+  },
+  {
+   "nombre": "MARKER_Stairs_Terrace_Morada_SW_19",
+   "tipo": "escalera_terraza",
+   "puntos": [
+    [
+     -126.86,
+     126.86
+    ],
+    [
+     -120.5,
+     120.5
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NE_001_005",
+   "tipo": "morada",
+   "puntos": [
+    [
+     92.06,
+     -54.36
+    ],
+    [
+     66.57,
+     -83.66
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NE_005_009",
+   "tipo": "morada",
+   "puntos": [
+    [
+     66.57,
+     -83.66
+    ],
+    [
+     97.27,
+     -71.83
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NE_009_013",
+   "tipo": "morada",
+   "puntos": [
+    [
+     97.27,
+     -71.83
+    ],
+    [
+     76.5,
+     -93.63
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NE_013_017",
+   "tipo": "morada",
+   "puntos": [
+    [
+     76.5,
+     -93.63
+    ],
+    [
+     118.78,
+     -63.98
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NE_017_021",
+   "tipo": "morada",
+   "puntos": [
+    [
+     118.78,
+     -63.98
+    ],
+    [
+     103.59,
+     -86.42
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NE_021_025",
+   "tipo": "morada",
+   "puntos": [
+    [
+     103.59,
+     -86.42
+    ],
+    [
+     81.8,
+     -107.3
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NE_025_029",
+   "tipo": "morada",
+   "puntos": [
+    [
+     81.8,
+     -107.3
+    ],
+    [
+     129.21,
+     -74.0
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NE_029_033",
+   "tipo": "morada",
+   "puntos": [
+    [
+     129.21,
+     -74.0
+    ],
+    [
+     113.55,
+     -96.35
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NE_033_037",
+   "tipo": "morada",
+   "puntos": [
+    [
+     113.55,
+     -96.35
+    ],
+    [
+     91.75,
+     -117.29
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NE_037_041",
+   "tipo": "morada",
+   "puntos": [
+    [
+     91.75,
+     -117.29
+    ],
+    [
+     145.09,
+     -74.08
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NE_041_045",
+   "tipo": "morada",
+   "puntos": [
+    [
+     145.09,
+     -74.08
+    ],
+    [
+     127.27,
+     -101.69
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NE_045_049",
+   "tipo": "morada",
+   "puntos": [
+    [
+     127.27,
+     -101.69
+    ],
+    [
+     106.28,
+     -123.48
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NE_049_053",
+   "tipo": "morada",
+   "puntos": [
+    [
+     106.28,
+     -123.48
+    ],
+    [
+     84.02,
+     -139.57
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NE_053_057",
+   "tipo": "morada",
+   "puntos": [
+    [
+     84.02,
+     -139.57
+    ],
+    [
+     150.99,
+     -92.2
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NE_057_061",
+   "tipo": "morada",
+   "puntos": [
+    [
+     150.99,
+     -92.2
+    ],
+    [
+     137.25,
+     -111.63
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NE_061_065",
+   "tipo": "morada",
+   "puntos": [
+    [
+     137.25,
+     -111.63
+    ],
+    [
+     116.18,
+     -133.41
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NE_065_069",
+   "tipo": "morada",
+   "puntos": [
+    [
+     116.18,
+     -133.41
+    ],
+    [
+     97.23,
+     -147.81
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NO_001_005",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -54.36,
+     -92.06
+    ],
+    [
+     -83.66,
+     -66.57
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NO_005_009",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -83.66,
+     -66.57
+    ],
+    [
+     -71.83,
+     -97.27
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NO_009_013",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -71.83,
+     -97.27
+    ],
+    [
+     -93.63,
+     -76.5
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NO_013_017",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -93.63,
+     -76.5
+    ],
+    [
+     -63.98,
+     -118.78
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NO_017_021",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -63.98,
+     -118.78
+    ],
+    [
+     -86.42,
+     -103.59
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NO_021_025",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -86.42,
+     -103.59
+    ],
+    [
+     -107.3,
+     -81.8
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NO_025_029",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -107.3,
+     -81.8
+    ],
+    [
+     -74.0,
+     -129.21
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NO_029_033",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -74.0,
+     -129.21
+    ],
+    [
+     -96.35,
+     -113.55
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NO_033_037",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -96.35,
+     -113.55
+    ],
+    [
+     -117.29,
+     -91.75
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NO_037_041",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -117.29,
+     -91.75
+    ],
+    [
+     -74.08,
+     -145.09
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NO_041_045",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -74.08,
+     -145.09
+    ],
+    [
+     -101.69,
+     -127.27
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NO_045_049",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -101.69,
+     -127.27
+    ],
+    [
+     -123.48,
+     -106.28
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NO_049_053",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -123.48,
+     -106.28
+    ],
+    [
+     -139.57,
+     -84.02
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NO_053_057",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -139.57,
+     -84.02
+    ],
+    [
+     -92.2,
+     -150.99
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NO_057_061",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -92.2,
+     -150.99
+    ],
+    [
+     -111.63,
+     -137.25
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NO_061_065",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -111.63,
+     -137.25
+    ],
+    [
+     -133.41,
+     -116.18
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_NO_065_069",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -133.41,
+     -116.18
+    ],
+    [
+     -147.81,
+     -97.23
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SE_001_005",
+   "tipo": "morada",
+   "puntos": [
+    [
+     67.27,
+     95.74
+    ],
+    [
+     95.85,
+     67.08
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SE_005_009",
+   "tipo": "morada",
+   "puntos": [
+    [
+     95.85,
+     67.08
+    ],
+    [
+     83.0,
+     102.14
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SE_009_013",
+   "tipo": "morada",
+   "puntos": [
+    [
+     83.0,
+     102.14
+    ],
+    [
+     106.19,
+     77.75
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SE_013_017",
+   "tipo": "morada",
+   "puntos": [
+    [
+     106.19,
+     77.75
+    ],
+    [
+     72.12,
+     126.49
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SE_017_021",
+   "tipo": "morada",
+   "puntos": [
+    [
+     72.12,
+     126.49
+    ],
+    [
+     97.98,
+     107.71
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SE_021_025",
+   "tipo": "morada",
+   "puntos": [
+    [
+     97.98,
+     107.71
+    ],
+    [
+     123.11,
+     77.75
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SE_025_029",
+   "tipo": "morada",
+   "puntos": [
+    [
+     123.11,
+     77.75
+    ],
+    [
+     76.92,
+     139.85
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SE_029_033",
+   "tipo": "morada",
+   "puntos": [
+    [
+     76.92,
+     139.85
+    ],
+    [
+     103.05,
+     121.89
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SE_033_037",
+   "tipo": "morada",
+   "puntos": [
+    [
+     103.05,
+     121.89
+    ],
+    [
+     125.98,
+     98.0
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SE_037_041",
+   "tipo": "morada",
+   "puntos": [
+    [
+     125.98,
+     98.0
+    ],
+    [
+     142.87,
+     71.15
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SE_041_045",
+   "tipo": "morada",
+   "puntos": [
+    [
+     142.87,
+     71.15
+    ],
+    [
+     108.05,
+     135.88
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SE_045_049",
+   "tipo": "morada",
+   "puntos": [
+    [
+     108.05,
+     135.88
+    ],
+    [
+     131.76,
+     113.05
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SE_049_053",
+   "tipo": "morada",
+   "puntos": [
+    [
+     131.76,
+     113.05
+    ],
+    [
+     150.02,
+     87.37
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SE_053_057",
+   "tipo": "morada",
+   "puntos": [
+    [
+     150.02,
+     87.37
+    ],
+    [
+     108.49,
+     153.06
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SE_057_061",
+   "tipo": "morada",
+   "puntos": [
+    [
+     108.49,
+     153.06
+    ],
+    [
+     137.33,
+     127.81
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SE_061_065",
+   "tipo": "morada",
+   "puntos": [
+    [
+     137.33,
+     127.81
+    ],
+    [
+     156.69,
+     103.17
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SO_001_005",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -92.06,
+     54.36
+    ],
+    [
+     -66.57,
+     83.66
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SO_005_009",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -66.57,
+     83.66
+    ],
+    [
+     -97.27,
+     71.83
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SO_009_013",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -97.27,
+     71.83
+    ],
+    [
+     -76.5,
+     93.63
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SO_013_017",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -76.5,
+     93.63
+    ],
+    [
+     -118.78,
+     63.98
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SO_017_021",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -118.78,
+     63.98
+    ],
+    [
+     -103.59,
+     86.42
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SO_021_025",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -103.59,
+     86.42
+    ],
+    [
+     -81.8,
+     107.3
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SO_025_029",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -81.8,
+     107.3
+    ],
+    [
+     -129.21,
+     74.0
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SO_029_033",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -129.21,
+     74.0
+    ],
+    [
+     -113.55,
+     96.35
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SO_033_037",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -113.55,
+     96.35
+    ],
+    [
+     -91.75,
+     117.29
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SO_037_041",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -91.75,
+     117.29
+    ],
+    [
+     -145.09,
+     74.08
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SO_041_045",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -145.09,
+     74.08
+    ],
+    [
+     -127.27,
+     101.69
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SO_045_049",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -127.27,
+     101.69
+    ],
+    [
+     -106.28,
+     123.48
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SO_049_053",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -106.28,
+     123.48
+    ],
+    [
+     -84.02,
+     139.57
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SO_053_057",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -84.02,
+     139.57
+    ],
+    [
+     -150.99,
+     92.2
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SO_057_061",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -150.99,
+     92.2
+    ],
+    [
+     -137.25,
+     111.63
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SO_061_065",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -137.25,
+     111.63
+    ],
+    [
+     -116.18,
+     133.41
+    ]
+   ]
+  },
+  {
+   "nombre": "Moradas_SO_065_069",
+   "tipo": "morada",
+   "puntos": [
+    [
+     -116.18,
+     133.41
+    ],
+    [
+     -97.23,
+     147.81
+    ]
+   ]
+  }
+ ]
+}
