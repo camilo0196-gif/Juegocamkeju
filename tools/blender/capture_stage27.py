@@ -110,7 +110,7 @@ def main():
         labels = [(n, (4000.0 + (i % 7) * 8.0 + 1.0, -(i // 7) * 8.0, 3.6)) for i, n in enumerate(IK.KIT)]
         cam = iso_cam((4024.0, -12.0, 1.0), 62.0)
         K.render(scene, cam, P("kit"))
-        K.annotate(scene, cam, P("kit"), "BLD_INT_KIT: 27 modulos (grilla 1 m, <= 300 triangulos cada uno)", labels)
+        K.annotate(scene, cam, P("kit"), f"BLD_INT_KIT: {len(IK.KIT)} modulos (grilla 1 m, <= 300 triangulos cada uno)", labels)
         bpy.data.objects.remove(cam)
     interior_world(scene)
     if want("sala_iso") or want("sala_calle"):
@@ -137,7 +137,7 @@ def main():
         tmp = lights_from_empties(bank)
         hid = ("WALL_Near_A", "WALL_Near_B", "CEILING", "CEILING_Vault")
         set_hidden(bank, hid)
-        labels = [("Banquero", bf @ Vector((5.5, 1.25, 1.9))), ("Mostrador y reja", bf @ Vector((4.3, -2.5, 2.7))),
+        labels = [("Banquero", bf @ Vector((5.0, 1.65, 1.9))), ("Mostrador y reja", bf @ Vector((4.3, -2.5, 2.7))),
                   ("Puerta de la boveda", bf @ Vector((7.45, -4.4, 3.1))), ("Galeria", bf @ Vector((-2.0, 6.0, 4.4))),
                   ("Escalera", bf @ Vector((-10.4, 2.0, 2.2))), ("Archivo", bf @ Vector((-7.2, -6.0, 2.4))),
                   ("Espera", bf @ Vector((-2.5, 2.2, 1.0))), ("Despacho", bf @ Vector((8.5, 7.2, 4.3)))]

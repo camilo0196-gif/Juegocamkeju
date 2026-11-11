@@ -8,5 +8,9 @@ __pycache__/
 *.glb
 *.png
 *.exr
+*.jpg
+*.jpeg
+*.gltf
+*.bin
 respaldo/*
 !respaldo/MANIFEST.txt

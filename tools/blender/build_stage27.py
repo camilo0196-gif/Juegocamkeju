@@ -94,8 +94,11 @@ def ray_check(it):
     fm = it.frame.matrix_world
     targets = {
         "Banquero": ([(SB.BANKER[0], SB.BANKER[1] + dy, z) for z in (0.6, 1.0, 1.4, 1.75) for dy in (-0.2, 0.0, 0.2)], ()),
+        # tablero: mitad publica (x - 0.25); la medicion antigua ponia esos puntos dentro de la barra baja de la reja
         "Mostrador": ([(SB.COUNTER_X - 0.47, y, 0.6) for y in (-5.25, -3.25, -1.25, 0.75, 2.75)] +
-                      [(SB.COUNTER_X, y, 1.13) for y in (-5.25, -3.25, -1.25, 0.75, 2.75)], ("Counter",)),
+                      [(SB.COUNTER_X - 0.25, y, 1.13) for y in (-5.25, -3.25, -1.25, 0.75, 2.75)], ("Counter",)),
+        "Mostrador_metodo_E27": ([(SB.COUNTER_X - 0.47, y, 0.6) for y in (-5.25, -3.25, -1.25, 0.75, 2.75)] +
+                                 [(SB.COUNTER_X, y, 1.13) for y in (-5.25, -3.25, -1.25, 0.75, 2.75)], ("Counter",)),
         "Puerta_Boveda": ([(SB.VAULT_X0 - 0.06, y, z) for y in (-5.0, -4.4, -3.8) for z in (0.5, 1.5, 2.5)], ("VAULT_Door",)),
     }
     out = {}

@@ -173,6 +173,8 @@ Interiores (E27; piloto int_banco.glb)
     MARKER_Interior_Spawn (+Y hacia dentro); MARKER_Interior_Exit (+Y hacia la calle) devuelve a la ciudad.
     La raiz INT_<nombre> ya trae el giro del edificio: CAM_Iso es la misma que fuera.
 [ ] Ocultar siempre WALL_Near_A, WALL_Near_B y CEILING con el jugador dentro (o fundido por dithering).
+    Convencion general (README seccion 18): LEVEL_n, WALL_Near_<Recinto>, CEILING_<Recinto>; cada grupo trae
+    la propiedad hide_when con la regla.
     WALL_Near_Vault y CEILING_Vault: ocultarlos con un Area3D en el suelo de la boveda. LEVEL_1 (planta alta):
     ocultarla con el jugador en la planta baja si tapa (corte isometrico); mostrarla al subir.
 [ ] Luces: OmniLight3D por cada Empty de Lights (light_color, light_energy, light_range); hornear LightmapGI
@@ -181,7 +183,10 @@ Interiores (E27; piloto int_banco.glb)
 [ ] Cajas de deposito: BANK_Box_NNN (box_number, state). Cambiar la malla de _Body entre BANK_Box_Open y
     BANK_Box_Locked; la placa (_Plate) usa MAT_Bank_BoxNumbers: sustituir por un ShaderMaterial con
     'instance uniform float locked' que suma 0.5 a v (mitad oscura del atlas). Opcional: MultiMeshInstance3D.
+    El .glb trae 1-40 abiertas solo como ESTADO DE MUESTRA: Godot decide por jugador (datos del servidor) que cajas
+    pasan de BANK_Box_Locked a BANK_Box_Open y viceversa; no hay que respetar el reparto exportado.
 [ ] VAULT_Door: AnimatableBody3D con giro sobre el pernio (hinge_local) y su propia colision (la -colonly deja
     el hueco libre); se abre con MARKER_Interact_Vault.
-[ ] MARKER_NPC_Slot_01 (npc=Banquero) y MARKER_Interact_Bank_Counter (abre la interfaz del banco): Area3D.
+[ ] MARKER_NPC_Slot_01 (npc=Banquero, de pie tras el tablero) y MARKER_Interact_Bank_Counter (abre la interfaz
+    del banco, delante de la ventanilla de cajero INT_Grille_Teller de 1.2 m): Area3D.
 [ ] INT_Banco-navmesh -> NavigationRegion3D (rejilla de 0.25 m, ya conectada por la escalera).

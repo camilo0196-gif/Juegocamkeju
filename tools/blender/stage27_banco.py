@@ -35,7 +35,8 @@ VAULT_DOOR = (-5.5, -3.3)         # tramo y de la puerta de la boveda (2.2 m)
 VAULT_TOP = 4.9
 COUNTER_X = 4.3
 COUNTER_Y = (-5.75, 4.25)
-BANKER = (5.5, 1.25)
+TELLER_Y = 1.25  # centro de la ventanilla de cajero (INT_Grille_Teller, 1.2 m de luz)
+BANKER = (5.0, 1.65)  # de pie tras el tablero, 0.35 m a +Y del centro de la ventanilla de cajero (y 1.25)
 ARCADE_Y = 4.5
 ARCADE_X = (-9.0, 11.55)
 STAIR_X = (-11.4, -9.4)
@@ -503,7 +504,8 @@ def counter(it):
     for k in range(n):
         y = yb - k * 2.0
         it.inst("INT_Counter_Straight_B" if k == 3 else "INT_Counter_Straight", M(COUNTER_X, y, 0, -90), "Shell")
-        it.inst("INT_Grille_Wicket" if k in (1, 3) else "INT_Grille", M(COUNTER_X, y, 1.1, -90), "Shell")
+        g = "INT_Grille_Teller" if k == 1 else "INT_Grille_Wicket" if k == 3 else "INT_Grille"
+        it.inst(g, M(COUNTER_X, y, 1.1, -90), "Shell")
     # remate sur: murete hasta el tabique de la boveda
     mb = K.MB()
     mb.box((COUNTER_X - 0.4, ya - 0.4, 0), (VAULT_X0, ya, 1.1), IK.STONE, skip=("z-",))
@@ -511,7 +513,7 @@ def counter(it):
     it.unique(mb, "INT_Banco_CounterReturn", "Shell")
     it.colboxes += [((COUNTER_X - 0.45, ya, 0), (COUNTER_X + 0.45, yb, 2.6)), ((COUNTER_X - 0.45, ya - 0.45, 0), (VAULT_X0, ya, 1.1))]
     it.obstacles += [(0, COUNTER_X - 0.46, ya, COUNTER_X + 0.46, yb), (0, COUNTER_X - 0.45, ya - 0.45, VAULT_X0, ya)]
-    return {"length_m": yb - ya, "grille_modules": n, "wickets": 2}
+    return {"length_m": yb - ya, "grille_modules": n, "wickets": 1, "teller_window": {"clear_m": 1.2, "y": [yb - 2.0 - 1.6, yb - 2.0 - 0.4]}}
 
 
 def furniture(it, rng):
@@ -596,7 +598,7 @@ def markers(it):
     it.entry_markers(inward_yaw_deg=180.0, exit_yaw_deg=0.0, spawn_dist=1.6)
     it.marker("MARKER_NPC_Slot_01", (BANKER[0], BANKER[1], 0.0), 90.0, npc="Banquero",
               note="detras del mostrador, mirando al publico (-X) y a la camara")
-    it.marker("MARKER_Interact_Bank_Counter", (COUNTER_X - 1.0, BANKER[1], 0.0), -90.0, tipo="bank_counter",
+    it.marker("MARKER_Interact_Bank_Counter", (COUNTER_X - 1.0, TELLER_Y, 0.0), -90.0, tipo="bank_counter",
               accion="abre el banco")
     it.marker("MARKER_Interact_Vault", (VAULT_X0 - 0.8, sum(VAULT_DOOR) / 2, 0.0), -90.0, tipo="vault",
               accion="abre la boveda (cajas de deposito)")

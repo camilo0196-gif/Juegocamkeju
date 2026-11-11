@@ -1,5 +1,8 @@
 CONCORDIA - carpeta de respaldo (fuera de git, decision del usuario en la etapa 26)
-concordia_master_<fecha>_v<NN>.blend = copia del .blend maestro de esa fecha; glb/ = export/godot de esa fecha.
+concordia_master_<fecha>_v<NN>.blend = copia del .blend maestro de esa fecha; glb/ = export/godot de esa fecha;
+interiors/ = blend de interiores y texturas generadas que no estan en git.
+binarios_git/ = .jpg, .gltf y .bin que estaban en git hasta la etapa 27 (sacados con git rm --cached; la
+               historia de git los conserva hasta el commit 6861619), con su ruta original.
 Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | awk '{print $2"  "$3}' | sha256sum -c
 
        bytes  sha256                                                            archivo
@@ -25,5 +28,134 @@ Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | aw
      4681556  acff056c96ddd642cf9a4463e0c2605226c5d5489af610a5818bb5d6bf0e0e3e  2026-11-08/glb/concordia_terrain_razas.glb
      1690444  d4e0a80342588ad23bae871086253e8daeff5b8b77a55da250408e1e11480228  2026-11-08/glb/concordia_wall_kit.glb
      1004568  b7542d05044a6fbe18e9717e664e376f3f4415876e014884f0989c12e95e961b  2026-11-08/glb/concordia_wall_layout.glb
+      102761  1651aeee3450dcbc7f529ed589d60b3ed689c51cf5465a0dbd241471d2cb67d7  2026-11-08/interiors/bank_box_numbers_1k.png
+      709346  5eb21e12a2d54f257be00cef1f3f3801dea70ee932b208bb1d401a0590f9b93d  2026-11-08/interiors/concordia_interiors_v01.blend
+     1689852  6153a48869c87789ec2c91117f18463368c1729234415e4db17c371a7ee50d32  2026-11-08/interiors/int_banco.glb
+     1021452  c8e787e4c0b97e515d97b38317d8b54cc022c6be76f47558e4ff67d42db0e220  2026-11-11/binarios_git/export/godot/materials/concordia_materials.bin
+       84250  fde16298c6b1d1ab688b85f497a5f10a44ef4d7765a19fb11d7bb229dacb6801  2026-11-11/binarios_git/export/godot/materials/concordia_materials.gltf
+     2341084  781ff604ccb3986092c29e7cfa0dab7bd59378a2d789cd530dd4d31e1513bd89  2026-11-11/binarios_git/textures/concordia/MAT_Ash_Gray/T_Ash_Gray_Albedo.jpg
+     3272397  9719a346368fb16d3a8cf261d78a84333d2e1eba6409f84e3ce2bcdab7785565  2026-11-11/binarios_git/textures/concordia/MAT_Ash_Gray/T_Ash_Gray_Normal.jpg
+      774903  54529f81a6dfde3f59ace18d42dfd83789bd12eac9f1087124a54e8b82ccc37a  2026-11-11/binarios_git/textures/concordia/MAT_Ash_Gray/T_Ash_Gray_Roughness.jpg
+      828620  8c13e4db9b6f1b273922182b61d3e862f4530c661ca26d822a5f0dfb4fab8f88  2026-11-11/binarios_git/textures/concordia/MAT_Cloth_Patch_A/T_Cloth_Patch_A_Albedo.jpg
+     2285051  c993a42205bca3bc7e5df33bc57b692a39401ece453375c83b0f257edc315e2f  2026-11-11/binarios_git/textures/concordia/MAT_Cloth_Patch_A/T_Cloth_Patch_A_Normal.jpg
+      197292  2ee92062a8b9ed40af1a15b37e211c3c1cfdccabbb754d61dc0feeef91aa318f  2026-11-11/binarios_git/textures/concordia/MAT_Cloth_Patch_A/T_Cloth_Patch_A_Roughness.jpg
+      909145  5ff7b31065605a1cc9220d79b2504421743b9eaa35540fb92956344134af0eff  2026-11-11/binarios_git/textures/concordia/MAT_Cloth_Patch_B/T_Cloth_Patch_B_Albedo.jpg
+     2285024  357b148703f187c2b70a688b8ab3a2e425b649f23d532ae90bda4b81622a31cf  2026-11-11/binarios_git/textures/concordia/MAT_Cloth_Patch_B/T_Cloth_Patch_B_Normal.jpg
+      191826  d2cf9471ca7b4a37c713143b584b828a147cc0c6b92432d9dfc8a3a894a369df  2026-11-11/binarios_git/textures/concordia/MAT_Cloth_Patch_B/T_Cloth_Patch_B_Roughness.jpg
+      906921  0326bcdc817f44b64b91ab9b87452613023c587de09b039c60b77deae139d55e  2026-11-11/binarios_git/textures/concordia/MAT_Cloth_Patch_C/T_Cloth_Patch_C_Albedo.jpg
+     2285288  b99f3c2d7f35c13588126107ee0f371a69ca9c3f93f4a0893a1fe18fd6b8dc97  2026-11-11/binarios_git/textures/concordia/MAT_Cloth_Patch_C/T_Cloth_Patch_C_Normal.jpg
+      194780  8b3ac6bd5397427a4cc4cdb8abd2de996a44d58b28c2ce5aeb66eda3dfc5f070  2026-11-11/binarios_git/textures/concordia/MAT_Cloth_Patch_C/T_Cloth_Patch_C_Roughness.jpg
+     1954783  2ca2447fccffa37d6e37c0c3146c9bdbf935980d763241303fb7878c4179eba6  2026-11-11/binarios_git/textures/concordia/MAT_Cobble_Concordia/T_Cobble_Concordia_Albedo.jpg
+     2303270  3c4a0499c5d5d65640e05ab0f8b79d2ecb0631ec157a136593cc6f5cca9edae2  2026-11-11/binarios_git/textures/concordia/MAT_Cobble_Concordia/T_Cobble_Concordia_Normal.jpg
+      918187  db378b392df3e60de36dba95687a90fb842dc4ce2c04eb3a97305125dc4485ba  2026-11-11/binarios_git/textures/concordia/MAT_Cobble_Concordia/T_Cobble_Concordia_Roughness.jpg
+     2044506  eafd5dde7ba6ef9ac36075cd17bf7437ade0ce2c899e87a7382b5812810d80cf  2026-11-11/binarios_git/textures/concordia/MAT_Ground_Cracked/T_Ground_Cracked_Albedo.jpg
+     2860067  9811549da08621691b09e5bd33f0607cf8200ff1f1670a5a9691f4d628c6ad76  2026-11-11/binarios_git/textures/concordia/MAT_Ground_Cracked/T_Ground_Cracked_Normal.jpg
+     1361968  8c37eaa0617df79b908a8a295e0d0581f485e158890f0757781081d080745fda  2026-11-11/binarios_git/textures/concordia/MAT_Ground_Cracked/T_Ground_Cracked_Roughness.jpg
+      213437  5597773d5ecc0e3faf43a2d0725b1c67e8d0f8e0f04b7f7ef02d5ff8490749ea  2026-11-11/binarios_git/textures/concordia/MAT_Iron_Black/T_Iron_Black_Albedo.jpg
+      378561  445ae1e39aaaed41f711bfb47988082af436dc9c2605f9013244e3097a4f0afa  2026-11-11/binarios_git/textures/concordia/MAT_Iron_Black/T_Iron_Black_Normal.jpg
+      206091  0c91fc917919e161843421f306a75e2c088e854d8ea0204e65f8018857e516b1  2026-11-11/binarios_git/textures/concordia/MAT_Iron_Black/T_Iron_Black_Roughness.jpg
+     1829927  096ec29fa39f8a1148d51fd5b7263a6f44ea31fc424d24a9a976b0f848b8eea0  2026-11-11/binarios_git/textures/concordia/MAT_Limestone_Worn/T_Limestone_Worn_Albedo.jpg
+     1891945  d9171fc1bef5b1e0c116ecff491fb70286971bde2e36e747bff3c0af4fca4d9a  2026-11-11/binarios_git/textures/concordia/MAT_Limestone_Worn/T_Limestone_Worn_Normal.jpg
+     1446708  469b0d89d1de432c18f581ef46f5ccfc310db4a11308585f9efc6cd2b0fd40ee  2026-11-11/binarios_git/textures/concordia/MAT_Limestone_Worn/T_Limestone_Worn_Roughness.jpg
+      213172  d6a2abb3d1352ae44f0cf2940e11049316d58511062d869f395dcf9dc09501bd  2026-11-11/binarios_git/textures/concordia/MAT_Plaza_Slab/T_Plaza_Slab_Albedo.jpg
+      195350  fa3bc71cbf6d5a2562f7bb4cc530c041b88c77bc2b84bf4eea9113d891dc6471  2026-11-11/binarios_git/textures/concordia/MAT_Plaza_Slab/T_Plaza_Slab_Normal.jpg
+      177611  c9c84116248f617aad74bfcc1ece0a922056a5de47428e1b770894b681ace1e1  2026-11-11/binarios_git/textures/concordia/MAT_Plaza_Slab/T_Plaza_Slab_Roughness.jpg
+      262599  4d46a15339627690ce40a99a35e88cfa32fc4190a83abac2cee5fd541cc6923d  2026-11-11/binarios_git/textures/concordia/MAT_Plaza_Slab_Travertino/T_Plaza_Slab_Travertino_Albedo.jpg
+      223212  68f6d499ce870cf915efe6d4ca3be9e2de35453e6fb688a80baef4099bee0f97  2026-11-11/binarios_git/textures/concordia/MAT_Plaza_Slab_Travertino/T_Plaza_Slab_Travertino_Normal.jpg
+      180281  a76f43226a6f8800e4f1c19fa9c1fbb318d1de57b2bb79e81e21338bf9a310da  2026-11-11/binarios_git/textures/concordia/MAT_Plaza_Slab_Travertino/T_Plaza_Slab_Travertino_Roughness.jpg
+     1402587  d520adafcd28db14dc1ebdd88f85c6daf568ca3523bd4df8ac04cd55758f368e  2026-11-11/binarios_git/textures/concordia/MAT_Rock_Gray/T_Rock_Gray_Albedo.jpg
+     2293668  7c93a2facdd3717b9216e35fc50c398ff43145c70b00fe7e69f05e18db7a1aed  2026-11-11/binarios_git/textures/concordia/MAT_Rock_Gray/T_Rock_Gray_Normal.jpg
+     1163555  94852af484a7add5bc616e9a15c96e090601565d61d582dbf2d10070eee837b8  2026-11-11/binarios_git/textures/concordia/MAT_Rock_Gray/T_Rock_Gray_Roughness.jpg
+      249550  00714a429b96fa97e5f7a169fdcefdb2015d9531e9bf6f014c7b0c3c485a092d  2026-11-11/binarios_git/textures/concordia/MAT_Roof_Tile_Ocher/T_Roof_Tile_Ocher_Albedo.jpg
+      220520  f5e0730a0c43f6c89f19887cf9f93aa909d19488b6600e66c73ae20e2acb21b1  2026-11-11/binarios_git/textures/concordia/MAT_Roof_Tile_Ocher/T_Roof_Tile_Ocher_Normal.jpg
+      179207  f184723a80ffe86e007c4ad783bb4abe282eda734b5432d3f3cc5b2b4bbc669d  2026-11-11/binarios_git/textures/concordia/MAT_Roof_Tile_Ocher/T_Roof_Tile_Ocher_Roughness.jpg
+       93356  3a50e9ec0b412bb3529b2d584e69a6b89bb2fe4a37ef6b81d41ebb4afd147665  2026-11-11/binarios_git/textures/concordia/MAT_Shard_Blue/T_Shard_Blue_Albedo.jpg
+      143418  d2f434b814126f540314b26675f15ceef22b1fd8d53bd7726d5dea2be9828497  2026-11-11/binarios_git/textures/concordia/MAT_Shard_Blue/T_Shard_Blue_Normal.jpg
+       68718  0aeb95527d95df77dbb9625e7a68f14f5ba52c2f9d5320456151c4d3dd1f760d  2026-11-11/binarios_git/textures/concordia/MAT_Shard_Blue/T_Shard_Blue_Roughness.jpg
+      261028  9c9670f3ae16a1aabf4fbb2b17a0fcbfb8cfa7d4df62be360a878bb6bfe342b6  2026-11-11/binarios_git/textures/concordia/MAT_Stone_Repair/T_Stone_Repair_Albedo.jpg
+      289772  9e38a79536c1c1b3c9328a017fafba5ed98c8e881ff767ba3c1dfa50f87235b7  2026-11-11/binarios_git/textures/concordia/MAT_Stone_Repair/T_Stone_Repair_Normal.jpg
+      156978  8db80cda932da23e0cb7de411b7e117c915ef3cff73bcac42c94582e4dc80f55  2026-11-11/binarios_git/textures/concordia/MAT_Stone_Repair/T_Stone_Repair_Roughness.jpg
+     2124186  7d3254fd5ed73b104ee0b80e03743d295861de9300a4f98bedfe54c3cb370d53  2026-11-11/binarios_git/textures/concordia/MAT_Wall_Gray/T_Wall_Gray_Albedo.jpg
+      411830  bfa479e63dd50bbdc9f89c3981063cacb01e6e737b3f7894e881a054835a2291  2026-11-11/binarios_git/textures/concordia/MAT_Wall_Gray/T_Wall_Gray_Normal.jpg
+      157416  fe87889c4431d0f8e3a44749359ed745a8f66ee3277622d45398b68bcb9d56f9  2026-11-11/binarios_git/textures/concordia/MAT_Wall_Gray/T_Wall_Gray_Roughness.jpg
+      271684  411619ae3ec10b9251a6b2df69b912b3a63cc6578028f66a02cd78ed9b0665c3  2026-11-11/binarios_git/textures/concordia/MAT_Wall_Runes/T_Wall_Runes_Albedo.jpg
+      420411  0ba61fd59df6dcd67f218e305fb7f03b4535c9aec2b1ddb9c2731486bc8b10ce  2026-11-11/binarios_git/textures/concordia/MAT_Wall_Runes/T_Wall_Runes_Emission.jpg
+      522259  517c4de614ad45c4492d057d3614d1995718015e34fac254e3395a2238b0bf9c  2026-11-11/binarios_git/textures/concordia/MAT_Wall_Runes/T_Wall_Runes_Normal.jpg
+      190016  143c6e25d494a314a97c389263b420fd8d294aaba3c718882dd334656ccb56c2  2026-11-11/binarios_git/textures/concordia/MAT_Wall_Runes/T_Wall_Runes_Roughness.jpg
+       66164  fb73740406e7d7f80bd220b522d06ed75f7b332fdf71d6cc32af44e6c9a62375  2026-11-11/binarios_git/textures/concordia/MAT_Water/T_Water_Albedo.jpg
+      212795  4d801bdcbe5792c2bc1f6c9137229e87d7646a2c55817512056e7320bd101bb4  2026-11-11/binarios_git/textures/concordia/MAT_Water/T_Water_Normal.jpg
+       49484  ccbf1ab467bf8219217a0217c568e41c0e6b199627e671aa5281763c8ccc5888  2026-11-11/binarios_git/textures/concordia/MAT_Water/T_Water_Roughness.jpg
+      781282  4b814f538f167a7a355dcd3eeead94294cf195dba6f98773c043e019bed64229  2026-11-11/binarios_git/textures/concordia/MAT_Wood_Dark/T_Wood_Dark_Albedo.jpg
+      909112  af31081f3975a282480a753b76585681df02fab69af092046c68455483485bd9  2026-11-11/binarios_git/textures/concordia/MAT_Wood_Dark/T_Wood_Dark_Normal.jpg
+      469521  666bb10f2a05bb9dec54721fbdf813ad8c9d7c2611b2b315cab49abc22127df9  2026-11-11/binarios_git/textures/concordia/MAT_Wood_Dark/T_Wood_Dark_Roughness.jpg
+     1483267  56e50f8868646a6dbb453391bfa9a4606fe91658293ce78cc616b075f45393aa  2026-11-11/binarios_git/textures/concordia/polyhaven_src/broken_wall/broken_wall_AO_2k.jpg
+     2382913  35615ed619b14ab8991205e887a24cadcf8edffdf15b36b153421604b9ba29ce  2026-11-11/binarios_git/textures/concordia/polyhaven_src/broken_wall/broken_wall_Diffuse_2k.jpg
+     1215009  3a729439f9ad59bbf702ddcef2dafd47d8ce51dbf05dd960f0a916755a8ebb35  2026-11-11/binarios_git/textures/concordia/polyhaven_src/broken_wall/broken_wall_Rough_2k.jpg
+     3578159  ce7935ef7b418a7e20ade08311443deb0b30a0f77559879780bba2e2e07f5a44  2026-11-11/binarios_git/textures/concordia/polyhaven_src/broken_wall/broken_wall_nor_gl_2k.jpg
+     1653941  dee95cf4b7f88c7a214e3a55163553c7552d804cdb3d11ec3ebc1079a71c6106  2026-11-11/binarios_git/textures/concordia/polyhaven_src/castle_wall_slates/castle_wall_slates_AO_2k.jpg
+     2381426  89e1dce61cf53decf586bd123b9280365e447019ebedaf3b8e48663ab37eab30  2026-11-11/binarios_git/textures/concordia/polyhaven_src/castle_wall_slates/castle_wall_slates_Diffuse_2k.jpg
+     2005253  84fe81f77d25e4dc37be41174b0a1fa85e8aece244eabe54ed48c542cb5bed08  2026-11-11/binarios_git/textures/concordia/polyhaven_src/castle_wall_slates/castle_wall_slates_Rough_2k.jpg
+     4054865  ea6042cdb95576d9c2d67c7fa26e3648cca09d8d2fcaf4dfe7d6052a970d7b28  2026-11-11/binarios_git/textures/concordia/polyhaven_src/castle_wall_slates/castle_wall_slates_nor_gl_2k.jpg
+     1600880  2923714c9866f29792379ef0ebe4f4dec3c399030141462baa695d7a92937a9b  2026-11-11/binarios_git/textures/concordia/polyhaven_src/castle_wall_varriation/castle_wall_varriation_AO_2k.jpg
+     2386019  47d50ed57e111e3abfbd367872b5d23e3ab128c45b7172886752ce985f5b9f2b  2026-11-11/binarios_git/textures/concordia/polyhaven_src/castle_wall_varriation/castle_wall_varriation_Diffuse_2k.jpg
+     1643779  1f407860d6e9ce2ab074fddf6a0cbbfd3cd751e842bd115ab0ce6b6500e9eb24  2026-11-11/binarios_git/textures/concordia/polyhaven_src/castle_wall_varriation/castle_wall_varriation_Rough_2k.jpg
+     3537669  b78d76a84e3b37a936f8bd3fb870f8740f3e0c5dd56179cef4b35bd1341a4ee5  2026-11-11/binarios_git/textures/concordia/polyhaven_src/castle_wall_varriation/castle_wall_varriation_nor_gl_2k.jpg
+     2394580  cb290db525b86cb9ce398fc42b5547ee79943b68fa2e35c9cf2c4ad3abd3f3bc  2026-11-11/binarios_git/textures/concordia/polyhaven_src/cobblestone_floor_001/cobblestone_floor_001_Diffuse_2k.jpg
+     1581274  8fb9fe5f128f9878dd0858c18ae83864acad2492562175b9d62ba6df9f93693d  2026-11-11/binarios_git/textures/concordia/polyhaven_src/cobblestone_floor_001/cobblestone_floor_001_Rough_2k.jpg
+     3683849  f4a33714608a5ebf0895084a3821d64619f3e565f8840716177cd5be9655f50b  2026-11-11/binarios_git/textures/concordia/polyhaven_src/cobblestone_floor_001/cobblestone_floor_001_nor_gl_2k.jpg
+     2014209  26a099a07e81a1d806fc3b49db5984d27cfc9f7b6abffd483c765ee687d1fa02  2026-11-11/binarios_git/textures/concordia/polyhaven_src/dry_ground_01/dry_ground_01_AO_2k.jpg
+     2541635  b6b601e75ba68d91ea1b09af87e95f186d15d8210e4f14692f9b20d2e21d437b  2026-11-11/binarios_git/textures/concordia/polyhaven_src/dry_ground_01/dry_ground_01_Diffuse_2k.jpg
+     1456821  a63000ba9e78a8ad5ddd1ea128ed20d91e68dba841c486af7292b8e7724c685a  2026-11-11/binarios_git/textures/concordia/polyhaven_src/dry_ground_01/dry_ground_01_Rough_2k.jpg
+     1080854  ffb7d63a0d93ff7fa352a2b9340ce5d3e29156435634dfe75e7647a99fee9fa8  2026-11-11/binarios_git/textures/concordia/polyhaven_src/dry_ground_01/dry_ground_01_nor_gl_2k.jpg
+     1748232  b5579dd40e6182a8d077db04e9d008d1f240c5a4fa8e4a11c54cb409c444328b  2026-11-11/binarios_git/textures/concordia/polyhaven_src/floor_tiles_02/floor_tiles_02_AO_2k.jpg
+     1381118  9a4e5acbb6c71e03979cc75fe1121ae0dc66583153cab9f32116c79e33707634  2026-11-11/binarios_git/textures/concordia/polyhaven_src/floor_tiles_02/floor_tiles_02_Diffuse_2k.jpg
+     1214592  95007052c6cc7a92284a5cea92ebdaecbfae6fcdd6dfd6ac443e2af43ddcd9a6  2026-11-11/binarios_git/textures/concordia/polyhaven_src/floor_tiles_02/floor_tiles_02_Rough_2k.jpg
+      540151  0c0d11a6ee43f523131db810720e4232ff35f05c126a7959d499a715294a1ad6  2026-11-11/binarios_git/textures/concordia/polyhaven_src/floor_tiles_02/floor_tiles_02_nor_gl_2k.jpg
+      537495  3e665f5cbe8f0c0760e54b49c15ee6a6236c59d103c2ea5834548c1748ed0dc9  2026-11-11/binarios_git/textures/concordia/polyhaven_src/hessian_380/hessian_380_AO_1k.jpg
+      944914  5727302df3a9c845e6320ff186ac13fc7d0f1ffcd6fda71667e808e09379fe6f  2026-11-11/binarios_git/textures/concordia/polyhaven_src/hessian_380/hessian_380_Diffuse_1k.jpg
+      849875  9aee9570e37bbe7effd229774c53099c06f67cc2b690587bb491210448488527  2026-11-11/binarios_git/textures/concordia/polyhaven_src/hessian_380/hessian_380_Metal_1k.jpg
+      956823  a828755c5ddc9af0697eeed46427c5145df1dea5f1e2839f643156a285282fed  2026-11-11/binarios_git/textures/concordia/polyhaven_src/hessian_380/hessian_380_Rough_1k.jpg
+     1076074  3994fd74148cb413892edd08155976497b3e7e15a403a182f07325a6b1e7be1a  2026-11-11/binarios_git/textures/concordia/polyhaven_src/hessian_380/hessian_380_nor_gl_1k.jpg
+      999921  e0d535b591430f1ebfd8ffa38086949bb074ae470f6fec7f3dcd55f594f52d4e  2026-11-11/binarios_git/textures/concordia/polyhaven_src/marble_01/marble_01_AO_2k.jpg
+     1269188  d403786171716f86718bdd67eba923d4fb6125c0636bacef0e6a21dd5d623a48  2026-11-11/binarios_git/textures/concordia/polyhaven_src/marble_01/marble_01_Diffuse_2k.jpg
+      281388  1b970e033856c93ee7390d947da5340e101b489fc8c1463354ea9e6655ce039a  2026-11-11/binarios_git/textures/concordia/polyhaven_src/marble_01/marble_01_Rough_2k.jpg
+      409581  d5e17ccb2913adbf28fcb781fddf0aa711259ddea6c1c918442f9a3589aa4660  2026-11-11/binarios_git/textures/concordia/polyhaven_src/marble_01/marble_01_nor_gl_2k.jpg
+      208277  031142984b8deb259203d1998e737de37ee571833ae80e5c05e0add3c5b2b86e  2026-11-11/binarios_git/textures/concordia/polyhaven_src/metal_plate_02/metal_plate_02_AO_1k.jpg
+      625917  6e80877d0e9d5973d96298c6091df7ace906b0a6760afc4f3592e4855f3f1d4c  2026-11-11/binarios_git/textures/concordia/polyhaven_src/metal_plate_02/metal_plate_02_Diffuse_1k.jpg
+      551170  fb1b120a2be5887dfeebed7a198a8151b292e963713d914b74ed7669434afb41  2026-11-11/binarios_git/textures/concordia/polyhaven_src/metal_plate_02/metal_plate_02_Metal_1k.jpg
+      911772  73a6bd6393f6de7be42058584c2d382f2a3e9148ceabc2d02e748e2c860e74d1  2026-11-11/binarios_git/textures/concordia/polyhaven_src/metal_plate_02/metal_plate_02_Rough_1k.jpg
+      183264  58736fbb8aa4fc6690cf8152b174db65caf22a766375b625fb0087e1bc955bc7  2026-11-11/binarios_git/textures/concordia/polyhaven_src/metal_plate_02/metal_plate_02_nor_gl_1k.jpg
+     1929334  b54912b313b8798d14b31bbbe5aa95f69458eee2e529333faf44aef18f979754  2026-11-11/binarios_git/textures/concordia/polyhaven_src/rock_boulder_cracked/rock_boulder_cracked_AO_2k.jpg
+     3962095  d7010ebf5157dc707f4bb555c74f589e1b794a308c186f6de2271f3ad0ff0da4  2026-11-11/binarios_git/textures/concordia/polyhaven_src/rock_boulder_cracked/rock_boulder_cracked_Diffuse_2k.jpg
+     1680734  511e9df71b8285149303278e1eed2bc70fdc6d7171ed7b3cbf4eefc171673b12  2026-11-11/binarios_git/textures/concordia/polyhaven_src/rock_boulder_cracked/rock_boulder_cracked_Rough_2k.jpg
+     4144084  03a9815ebb58cc9ab5a59ab333f1bc50fa2539571aa6868bfb30d76b21601b30  2026-11-11/binarios_git/textures/concordia/polyhaven_src/rock_boulder_cracked/rock_boulder_cracked_nor_gl_2k.jpg
+     2182922  cc27725b9bd4b3482823ced876ea5a4ff4cef8485a8193f6f071b56a3a2bb14d  2026-11-11/binarios_git/textures/concordia/polyhaven_src/rock_boulder_dry/rock_boulder_dry_AO_2k.jpg
+     3437626  c66de7f7b48ef1ba542c17af780787ca6d43da2160a46ff3544dd9fcdf65ca30  2026-11-11/binarios_git/textures/concordia/polyhaven_src/rock_boulder_dry/rock_boulder_dry_Diffuse_2k.jpg
+     2706723  63bb4105e6f60b5968da785afc292b94026a5afa6f18388e98b00232e9e2c433  2026-11-11/binarios_git/textures/concordia/polyhaven_src/rock_boulder_dry/rock_boulder_dry_Rough_2k.jpg
+     3307320  72a3c96d563fc17ac36c568802e106222e6480512d98e07318e1f431cea33dd6  2026-11-11/binarios_git/textures/concordia/polyhaven_src/rock_boulder_dry/rock_boulder_dry_nor_gl_2k.jpg
+     2168833  1c371f4fd1a2538fd8a686384fcbc669736c6f556fb60858aa80be0344abf79c  2026-11-11/binarios_git/textures/concordia/polyhaven_src/rocks_ground_02/rocks_ground_02_AO_2k.jpg
+     3224700  a2a4fc4e10a307ca6e345e0df50d6115ba1058174de915bfcfdd5ff3f49dc2fa  2026-11-11/binarios_git/textures/concordia/polyhaven_src/rocks_ground_02/rocks_ground_02_Diffuse_2k.jpg
+     1810785  c5b54993717852963382876bd0558c831af389b00a2dbd40317c51ff8b9c0817  2026-11-11/binarios_git/textures/concordia/polyhaven_src/rocks_ground_02/rocks_ground_02_Rough_2k.jpg
+     5387529  bde35636a0c548e57006917287e067d11abf3bfac2d70373162deb171ca9a4ef  2026-11-11/binarios_git/textures/concordia/polyhaven_src/rocks_ground_02/rocks_ground_02_nor_gl_2k.jpg
+      137405  081bab7e0a772cecc9dba0ab71ebf98a9e0f72465e150ccc7ce885980a61bc38  2026-11-11/binarios_git/textures/concordia/polyhaven_src/roof_09/roof_09_AO_1k.jpg
+      553309  6baaf5dca30d14566791ad6603e3b3dbd69b76990fd8d1314efc35dd2655e818  2026-11-11/binarios_git/textures/concordia/polyhaven_src/roof_09/roof_09_Diffuse_1k.jpg
+      503295  82ebb728f9e128202b9f03f2be4589331c02517a86b6921002af203b20fef124  2026-11-11/binarios_git/textures/concordia/polyhaven_src/roof_09/roof_09_Rough_1k.jpg
+      325412  60fc61343316bbe73399cdddfb3da8b47d41c2d147e2b3384f244f8be9ed1668  2026-11-11/binarios_git/textures/concordia/polyhaven_src/roof_09/roof_09_nor_gl_1k.jpg
+     2254805  e02ec83fd03719903a7660d5d30d01794997390d01c95c4da685ecf6607b5770  2026-11-11/binarios_git/textures/concordia/polyhaven_src/rustic_stone_wall/rustic_stone_wall_AO_2k.jpg
+     3525377  7f562fdf6b685e15a736f18b34b8f435f04a1065d2734a85ea1b9d9847f860dc  2026-11-11/binarios_git/textures/concordia/polyhaven_src/rustic_stone_wall/rustic_stone_wall_Diffuse_2k.jpg
+     2649266  517a3d1bc589313b849e8ddf46c0256f17edde11f81d553bbd46f8bbd345b3c7  2026-11-11/binarios_git/textures/concordia/polyhaven_src/rustic_stone_wall/rustic_stone_wall_Rough_2k.jpg
+     4739942  9367541088efd9e60752f9de400a719fa811bb7bb6334e6be2df3e9af7534847  2026-11-11/binarios_git/textures/concordia/polyhaven_src/rustic_stone_wall/rustic_stone_wall_nor_gl_2k.jpg
+     2043727  a58ec86af4beb8c0e6ae1572a02fda97e3f23b768c8da47b0ae6a368de22ddd9  2026-11-11/binarios_git/textures/concordia/polyhaven_src/sandstone_cracks/sandstone_cracks_AO_2k.jpg
+     2870078  6d3f99604c85a818277150db784ac66e67a4d91ddc255dabf61b3e956564090d  2026-11-11/binarios_git/textures/concordia/polyhaven_src/sandstone_cracks/sandstone_cracks_Diffuse_2k.jpg
+     1569280  45347870225f1f1b223968e8fc0ac2125374c0b1e0907cda7ad93b1c5dda39f4  2026-11-11/binarios_git/textures/concordia/polyhaven_src/sandstone_cracks/sandstone_cracks_Rough_2k.jpg
+     4545235  904e852268e1fb1bd5c0d035382f6a0e64c98dceea784fe957b1983d98b0231a  2026-11-11/binarios_git/textures/concordia/polyhaven_src/sandstone_cracks/sandstone_cracks_nor_gl_2k.jpg
+     2730634  f1d516dbb9e55ebe33f5a1bac3a202dd7ac500e92e14cde8151a2cc79d8179de  2026-11-11/binarios_git/textures/concordia/polyhaven_src/stone_wall_02/stone_wall_02_AO_2k.jpg
+     2554296  0b84bf19acc263bbb52071317de12a7fafcc0ffa95dd585fb4dfa33dcbed0e1d  2026-11-11/binarios_git/textures/concordia/polyhaven_src/stone_wall_02/stone_wall_02_Diffuse_2k.jpg
+     1215515  83e849a0a2fb11c77b682014b228a18d0392801fba951e58db8dddaedd1ff31b  2026-11-11/binarios_git/textures/concordia/polyhaven_src/stone_wall_02/stone_wall_02_Rough_2k.jpg
+     3715793  f7b684c229f2e80100b700dcf41df312c345b13e4345f1db24a8dcfe5bb81f72  2026-11-11/binarios_git/textures/concordia/polyhaven_src/stone_wall_02/stone_wall_02_nor_gl_2k.jpg
+      594177  a4ff0df66640229e315f75637a135622504094cf4d6d57c6cca4dacf619b1a5b  2026-11-11/binarios_git/textures/concordia/polyhaven_src/weathered_planks/weathered_planks_AO_1k.jpg
+      599581  01c9a372cfd7a7bf471b59c2458ed3ccecc93448aebf7ba0cc5b3b5b6ed24349  2026-11-11/binarios_git/textures/concordia/polyhaven_src/weathered_planks/weathered_planks_Diffuse_1k.jpg
+      218802  a017728183597417a350d1846a5a46db9702ee6d472a21c5da2f23015d606aa3  2026-11-11/binarios_git/textures/concordia/polyhaven_src/weathered_planks/weathered_planks_Rough_1k.jpg
+      681552  381d298f3194ec4961b04b4912b9b6efea4b2ff7b914dac57e24c8b6b0be6a25  2026-11-11/binarios_git/textures/concordia/polyhaven_src/weathered_planks/weathered_planks_nor_gl_1k.jpg
 
-Total: 22 archivos, 201,156,964 bytes (191.8 MiB)
+Total: 151 archivos, 384,343,468 bytes (366.5 MiB)

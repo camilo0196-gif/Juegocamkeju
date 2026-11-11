@@ -270,17 +270,30 @@ def m_counter_corner(mb, v, rng):
     mb.box((-0.46, -0.46, 1.0), (0.46, 0.46, 1.1), WOOD)
 
 
-def m_grille(mb, v, rng, wicket=False):
+def m_grille(mb, v, rng, wicket=False, teller=False):
     """Reja de mostrador de 2 m x 1.5 m (va sobre el tablero, z 0 = 1.1 m): marco y barrotes cada 0.14 m;
-    variante ventanilla: hueco central de 0.6 x 0.4 m abajo con dintel."""
-    mb.box((0, -0.04, 1.42), (2, 0.04, 1.5), IRON)
-    mb.box((0, -0.04, 0), (2, 0.04, 0.05), IRON, skip=("z-",))
+    variante ventanilla: hueco central de 0.6 x 0.4 m abajo con dintel;
+    variante cajero (teller): ventanilla de 1.2 m de luz (x 0.4-1.6) a toda la altura de la reja, con jambas y dintel
+    de piedra de 12 cm de fondo que asoman 15 cm por encima; el tablero queda libre (sin barra baja en el hueco)."""
+    a, b = (0.4, 1.6) if teller else (None, None)
+    if teller:
+        for x0, x1 in ((0.0, a), (b, 2.0)):
+            mb.box((x0, -0.04, 1.42), (x1, 0.04, 1.5), IRON)
+            mb.box((x0, -0.04, 0), (x1, 0.04, 0.05), IRON, skip=("z-",))
+        for x0, x1 in ((a - 0.15, a), (b, b + 0.15)):  # jambas
+            mb.box((x0, -0.06, 0.0), (x1, 0.06, 1.5), STONE, skip=("z-", "z+"))
+        mb.box((a - 0.2, -0.07, 1.5), (b + 0.2, 0.07, 1.65), STONE)  # dintel
+    else:
+        mb.box((0, -0.04, 1.42), (2, 0.04, 1.5), IRON)
+        mb.box((0, -0.04, 0), (2, 0.04, 0.05), IRON, skip=("z-",))
     for x in (0.0, 1.96):
         mb.box((x, -0.04, 0.05), (x + 0.04, 0.04, 1.42), IRON, skip=("z-", "z+"))
     n = 13
     for i in range(1, n + 1):
         x = 2.0 * i / (n + 1)
         z0 = 0.05
+        if teller and a - 0.17 <= x <= b + 0.17:
+            continue
         if wicket and 0.7 <= x <= 1.3:
             z0 = 0.45
         mb.rod((x, 0, z0), (x, 0, 1.42), 0.011, IRON)
@@ -308,6 +321,7 @@ KIT = {
     "INT_Window_Int": (m_window, 0), "INT_Fireplace": (m_fireplace, 0),
     "INT_Counter_Straight": (m_counter, 0), "INT_Counter_Straight_B": (m_counter, 1),
     "INT_Counter_Corner": (m_counter_corner, 0), "INT_Grille": (m_grille, 0), "INT_Grille_Wicket": (m_grille, 1),
+    "INT_Grille_Teller": (m_grille, 2),
     "INT_Railing": (m_railing, 0), "INT_Trim": (m_trim, 0),
 }
 
@@ -324,7 +338,7 @@ def build_kit(col, seed=2701):
         if fn is m_door:
             fn(mb, v, rng, kind="iron" if v else "wood")
         elif fn is m_grille:
-            fn(mb, 0, rng, wicket=bool(v))
+            fn(mb, 0, rng, wicket=(v == 1), teller=(v == 2))
         else:
             fn(mb, v, rng)
         o = to_obj(mb, name, col)

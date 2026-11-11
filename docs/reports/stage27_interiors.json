@@ -39,6 +39,7 @@
   "INT_Counter_Corner": 22,
   "INT_Grille": 142,
   "INT_Grille_Wicket": 154,
+  "INT_Grille_Teller": 104,
   "INT_Railing": 78,
   "INT_Trim": 20
  },
@@ -244,7 +245,7 @@
    ]
   ],
   [
-   "INT_Railing",
+   "INT_Grille_Teller",
    [
     4033.0,
     -24.0,
@@ -252,9 +253,17 @@
    ]
   ],
   [
-   "INT_Trim",
+   "INT_Railing",
    [
     4041.0,
+    -24.0,
+    3.6
+   ]
+  ],
+  [
+   "INT_Trim",
+   [
+    4049.0,
     -24.0,
     3.6
    ]
@@ -315,7 +324,14 @@
   "counter": {
    "length_m": 10.0,
    "grille_modules": 5,
-   "wickets": 2
+   "wickets": 1,
+   "teller_window": {
+    "clear_m": 1.2,
+    "y": [
+     0.6499999999999999,
+     1.85
+    ]
+   }
   },
   "furniture": [
    "BANK_Bench",
@@ -367,35 +383,39 @@
   "rays_before_merge": {
    "Banquero": {
     "points": 12,
-    "visible": 7,
-    "pct": 58.3,
+    "visible": 9,
+    "pct": 75.0,
     "blockers": {
-     "KITI_INT_Grille_Wicket": 3,
-     "KITI_INT_Grille.001": 2
+     "KITI_INT_Counter_Straight.001": 3
     },
     "blocked_by_column_or_arch": 0,
     "blocker_class": {
-     "KITI_INT_Grille_Wicket": "reja",
-     "KITI_INT_Grille.001": "reja"
+     "KITI_INT_Counter_Straight.001": "otro"
     }
    },
    "Mostrador": {
     "points": 10,
-    "visible": 5,
-    "pct": 50.0,
+    "visible": 10,
+    "pct": 100.0,
+    "blockers": {},
+    "blocked_by_column_or_arch": 0,
+    "blocker_class": {}
+   },
+   "Mostrador_metodo_E27": {
+    "points": 10,
+    "visible": 6,
+    "pct": 60.0,
     "blockers": {
      "KITI_INT_Grille.002": 1,
-     "KITI_INT_Grille_Wicket.001": 1,
-     "KITI_INT_Grille.001": 1,
      "KITI_INT_Grille_Wicket": 1,
+     "KITI_INT_Grille.001": 1,
      "KITI_INT_Grille": 1
     },
     "blocked_by_column_or_arch": 0,
     "blocker_class": {
      "KITI_INT_Grille.002": "reja",
-     "KITI_INT_Grille_Wicket.001": "reja",
-     "KITI_INT_Grille.001": "reja",
      "KITI_INT_Grille_Wicket": "reja",
+     "KITI_INT_Grille.001": "reja",
      "KITI_INT_Grille": "reja"
     }
    },
@@ -415,10 +435,10 @@
   "rays_after_merge": {
    "Banquero": {
     "points": 12,
-    "visible": 7,
-    "pct": 58.3,
+    "visible": 9,
+    "pct": 75.0,
     "blockers": {
-     "INT_Banco_Shell": 5
+     "INT_Banco_Shell": 3
     },
     "blocked_by_column_or_arch": 0,
     "blocker_class": {
@@ -427,10 +447,18 @@
    },
    "Mostrador": {
     "points": 10,
-    "visible": 5,
-    "pct": 50.0,
+    "visible": 10,
+    "pct": 100.0,
+    "blockers": {},
+    "blocked_by_column_or_arch": 0,
+    "blocker_class": {}
+   },
+   "Mostrador_metodo_E27": {
+    "points": 10,
+    "visible": 6,
+    "pct": 60.0,
     "blockers": {
-     "INT_Banco_Shell": 5
+     "INT_Banco_Shell": 4
     },
     "blocked_by_column_or_arch": 0,
     "blocker_class": {
@@ -451,8 +479,8 @@
    }
   },
   "navmesh": {
-   "faces": 6258,
-   "reached_faces": 6228,
+   "faces": 6268,
+   "reached_faces": 6238,
    "keys": {
     "spawn": {
      "reachable": true,
@@ -464,7 +492,7 @@
     },
     "zona_banquero": {
      "reachable": true,
-     "dist_to_nav_m": 0.29
+     "dist_to_nav_m": 0.21
     },
     "boveda": {
      "reachable": true,
@@ -514,11 +542,11 @@
    }
   },
   "tris": {
-   "total": 25986,
+   "total": 25936,
    "budget": 40000,
    "ok": true,
    "by_group": {
-    "Shell": 8034,
+    "Shell": 7984,
     "WALL_Near_A": 1444,
     "WALL_Near_B": 2910,
     "CEILING": 142,
@@ -572,7 +600,7 @@
    "mb": 1.61,
    "nodes": 683,
    "meshes": 228,
-   "tris": 29464,
+   "tris": 29434,
    "materials": 17,
    "images": 30,
    "images_external": 30,

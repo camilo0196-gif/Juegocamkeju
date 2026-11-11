@@ -28,6 +28,15 @@ stage10_polyhaven.py; datos completos en textures/concordia/polyhaven.json. Se u
 | Stone Wall 02 | Dario Barresi, Charlotte Baglioni | https://polyhaven.com/a/stone_wall_02 | CC0 (https://polyhaven.com/license) | 2026-11-05 | MAT_Limestone_Worn (edificios, terreno e interiores) |
 | Weathered Planks | Dario Barresi, Dimitrios Savva | https://polyhaven.com/a/weathered_planks | CC0 (https://polyhaven.com/license) | 2026-11-05 | MAT_Wood_Dark (edificios, terreno e interiores) |
 
+Descargadas como candidatas en las etapas 09-10 y NO usadas en ningun material (se conservan en
+textures/concordia/polyhaven_src/ y en respaldo/2026-11-11/binarios_git/):
+
+| Asset | Autor(es) | URL | Licencia | Fecha | Donde se usa |
+|---|---|---|---|---|---|
+| Broken Wall | Rob Tuytel | https://polyhaven.com/a/broken_wall | CC0 (https://polyhaven.com/license) | 2026-11-05 | no se usa (candidata) |
+| Castle Wall Slates | Rob Tuytel | https://polyhaven.com/a/castle_wall_slates | CC0 (https://polyhaven.com/license) | 2026-11-05 | no se usa (candidata) |
+| Rock Boulder Cracked | Dario Barresi, Dimitrios Savva | https://polyhaven.com/a/rock_boulder_cracked | CC0 (https://polyhaven.com/license) | 2026-11-05 | no se usa (candidata de MAT_Rock_Gray, se eligio Rock Boulder Dry) |
+
 ## Modelos 3D (props)
 
 Ninguno importado todavia. Candidatos propuestos en la etapa 26 (pendientes de aprobacion): Quaternius Fantasy Props
@@ -39,4 +48,5 @@ MegaKit (CC0), serie "Low Poly Medieval" de Avramania en Sketchfab (CC0), modelo
 |---|---|---|
 | Estandartes de clase y de raza (MAT_Banner_*) | generados por script (etapas 20-21) | Clases, Razas |
 | Atlas de numeros de las cajas (MAT_Bank_BoxNumbers, 1K) | tools/blender/stage27_banco.py (fuente DejaVu Serif, licencia libre de Bitstream Vera/DejaVu) | interior del Banco |
+| Texturas de MAT_Shard_Blue, MAT_Wall_Runes y MAT_Water (T_*.jpg) | horneadas de nodos procedurales (tools/blender/stage09_materials.py) | esquirlas, runas, cauce |
 | Kit de interiores BLD_INT_KIT y todo el interior del Banco | modelado por script (etapa 27) | int_banco.glb |

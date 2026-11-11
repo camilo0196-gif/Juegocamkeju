@@ -505,7 +505,7 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
   Informe: docs/reports/stage27_interiors.json.
 
   Kit (coleccion BLD_INT_KIT, grilla de 1 m, <= 300 triangulos por modulo; variantes _B remendadas):
-    INT_Floor_Stone 10, INT_Floor_Stone_B 30, INT_Floor_Planks 40, INT_Floor_Planks_B 40, INT_Wall_Plaster 16, INT_Wall_Plaster_B 26, INT_Wall_Stone 108, INT_Wall_Stone_B 108, INT_Wall_Panel 66, INT_Wall_Panel_B 66, INT_Beam_Straight 12, INT_Beam_Cross 40, INT_Arch_3m 236, INT_Arch_6m 236, INT_Pillar 30, INT_Stairs_Int 136, INT_Door_Int 98, INT_Door_Int_Iron 130, INT_Window_Int 92, INT_Fireplace 70, INT_Counter_Straight 42, INT_Counter_Straight_B 42, INT_Counter_Corner 22, INT_Grille 142, INT_Grille_Wicket 154, INT_Railing 78, INT_Trim 20.
+    INT_Floor_Stone 10, INT_Floor_Stone_B 30, INT_Floor_Planks 40, INT_Floor_Planks_B 40, INT_Wall_Plaster 16, INT_Wall_Plaster_B 26, INT_Wall_Stone 108, INT_Wall_Stone_B 108, INT_Wall_Panel 66, INT_Wall_Panel_B 66, INT_Beam_Straight 12, INT_Beam_Cross 40, INT_Arch_3m 236, INT_Arch_6m 236, INT_Pillar 30, INT_Stairs_Int 136, INT_Door_Int 98, INT_Door_Int_Iron 130, INT_Window_Int 92, INT_Fireplace 70, INT_Counter_Straight 42, INT_Counter_Straight_B 42, INT_Counter_Corner 22, INT_Grille 142, INT_Grille_Wicket 154, INT_Grille_Teller 104, INT_Railing 78, INT_Trim 20.
   Convencion: muros x en [0, ancho], cara visible en y = 0 hacia +Y, grosor hacia -Y; suelos 2 x 2 con la cara
   en z = 0; la escalera sube hacia +Y (16 peldanos, 5.0 x 3.2 m, 32.6 grados).
 
@@ -515,10 +515,12 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
   Al exportar, cada grupo de estructura se une en una malla (INT_<nombre>_<grupo>, UV metrica continua); el
   mobiliario queda instanciado. Luces = Empties con light_color, light_energy (Godot), light_range (m).
 
-  Piloto: int_banco.glb (export/godot, 1.61 MB). Volumen = Banco_InteriorVolume 23.1 x 19.1 x 6.4 m
+  Piloto: int_banco.glb (export/godot, 1.61 MB, 29,434 tris con colision y navmesh). Volumen = Banco_InteriorVolume 23.1 x 19.1 x 6.4 m
   (diferencia 0.0 m; los "24 x 20 m" del pedido son la huella exterior). Giro 90 grados: muros cercanos -X y -Y.
     Planta baja: vestibulo de doble altura; mostrador de piedra y madera de 10 m (5 INT_Counter_Straight) con reja
-      (5 INT_Grille, 2 con ventanilla); el Banquero (MARKER_NPC_Slot_01) detras, de cara al publico y a la camara;
+      (5 modulos: 3 INT_Grille, 1 INT_Grille_Wicket y 1 INT_Grille_Teller = ventanilla de cajero de 1.2 m de luz con
+      jambas y dintel de piedra, tablero libre, centro y = 1.25); el Banquero (MARKER_NPC_Slot_01, de pie en
+      x 5.0, y 1.65) detras, de cara al publico y a la camara;
       sala de espera (3 bancos); archivo (6 estanterias de doble cara con libros contables, escritorio); hogar en
       la fachada; cuarto del personal tras la boveda (puerta de 1.235 m en la arcada).
     Boveda: tabique de 0.4 m con puerta de hierro de 2.2 x 3.0 m hecha a mano (bandas, remaches, pernios, rueda,
@@ -535,13 +537,27 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
     Luz: 5 lamparas de aceite (pilares de la arcada, boveda, despacho), 4 velas, hogar, 6 ventanas con reja (luz
       calida de dia) y 1 luz azul (farol de la boveda). Emision de llamas MAT_Window_Warm 1.0.
   Verificacion:
-    Triangulos: 25,986 de 40,000 (todas las cajas cerradas: 26,706). Por grupo: Shell 8,034, WALL_Near_A 1,444, WALL_Near_B 2,910, CEILING 142, Furniture 7,660, WALL_Near_Vault 2,984, CEILING_Vault 348, LEVEL_1 1,844, Furniture_L1 620.
-    Rayos desde CAM_Iso (muros cercanos y techos ocultos): Banquero 58.3 % de 12 puntos (solo barrotes de la reja),
-      mostrador 50.0 % (cara del publico 100 %; los puntos bajo la reja dan en los barrotes), puerta de la
-      boveda 88.9 % (1 punto tras el farol). Ninguna columna ni arco los tapa.
+    Triangulos: 25,936 de 40,000 (todas las cajas cerradas: 26,656). Por grupo: Shell 7,984, WALL_Near_A 1,444, WALL_Near_B 2,910, CEILING 142, Furniture 7,660, WALL_Near_Vault 2,984, CEILING_Vault 348, LEVEL_1 1,844, Furniture_L1 620.
+    Rayos desde CAM_Iso (muros cercanos y techos ocultos), con la ventanilla de cajero: Banquero 75.0 % de 12
+      puntos (antes 58.3 %; los 3 tapados son los de 0.6 m, rodillas tras el tablero de 1.1 m; ningun barrote),
+      mostrador 100 % (5 puntos en la cara del publico y 5 en la mitad publica del tablero; con la medicion de la
+      etapa 27, que ponia los puntos del tablero dentro de la barra baja de la reja, 60 %), puerta de la boveda
+      88.9 % (1 punto tras el farol). Ninguna columna ni arco los tapa.
+      La ventanilla no esta enfrente fisico exacto del Banquero sino 0.35 m a -Y: en CAM_Iso lo que esta 0.7 m
+      detras de la reja se ve desplazado en diagonal, y la ventanilla debe cruzar esa linea de vista.
     Navegacion: 6,258 caras (rejilla de 0.25 m, margen 0.3 m); desde el spawn se llega al mostrador,
       la zona del banquero, la boveda, el archivo, la espera, el cuarto del personal, la galeria y el despacho; con
       holgura de 0.6 m (pasos de 1.2 m) tambien. Escalera 2 m, 32.6 grados.
+
+  Grupos ocultables (convencion para TODOS los interiores; cada grupo lleva la propiedad hide_when):
+    WALL_Near_A / WALL_Near_B   muros del recinto principal cuya normal mira a CAM_Iso: siempre ocultos dentro.
+    CEILING                     techo del recinto principal: siempre oculto dentro.
+    WALL_Near_<Recinto>         muros cercanos de un recinto cerrado (Vault, Despacho, Taller...): se ocultan
+                                cuando el jugador entra en ese recinto (Area3D en su suelo).
+    CEILING_<Recinto>           techo propio del recinto: igual que WALL_Near_<Recinto>.
+    LEVEL_n                     planta n (1 = primera alta) con su suelo, muros y Furniture_Ln: se oculta cuando
+                                el jugador esta por debajo de n y tapa lo que hay debajo (corte isometrico).
+    Shell, Furniture, Lights, Markers no se ocultan nunca.
 
   Lecciones para los demas interiores:
     1. Leer el giro del edificio de rotation_euler (al anexar objetos, matrix_world llega sin evaluar): con el giro
@@ -556,8 +572,9 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
     5. Los props miran a la camara (contra muros del fondo o de doble cara); contra muros cercanos se ven de espaldas.
     6. Columnas y arcos solo detras de los objetivos o a mas de altura/0.7 m de ellos; comprobar con rayos antes de
        unir los modulos (los nombres dicen que tapa).
-    7. Las rejas tapan ~40 % de lo que hay detras: ventanilla delante del NPC y cabeza por encima del borde de la
-       reja en la visual de la camara.
+    7. Las rejas tapan ~40 % de lo que hay detras. Ventanilla de 1.2 m sin barrotes en la LINEA DE VISTA de
+       CAM_Iso: lo que esta a d metros detras de la reja se ve desplazado d en diagonal, asi que el NPC va pegado
+       al tablero (d = 0.7 m) y la ventanilla se corre d/2 hacia la camara; el NPC queda dentro de su luz.
     8. Navmesh: con celdas de 0.5 m una puerta de 1.2 m no pasa (margen 0.3); usar 0.25 m. La escalera necesita
        tiras planas en ambos extremos para unir las rejillas; los pasos de 1.2 m se comprueban con holgura en
        rejilla de 0.1 m.
