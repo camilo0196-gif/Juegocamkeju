@@ -604,7 +604,7 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
     Total 5,046 tris; cajas -colonly en los de suelo.
 
   Importacion CC0 (props_int_<lote>.glb; aprobada por el usuario con criterios): Mercado 36 props
-    (20,205 tris), Oficios 26 (16,589), Clases 13 (10,934).
+    (20,205 tris), Oficios 26 (17,097), Clases 13 (10,934).
     Quaternius Fantasy Props MegaKit (licencia en licenses/) y Avramania Low Poly Medieval (licencia CC0 comprobada el
     dia de la descarga en la API y en la pagina de cada modelo). Materiales reasignados: Quaternius por nombre de
     material (MI_Trim_Furniture -> madera, MI_Trim_Metal -> hierro/bronce, pergamino -> cuero, *_Vertex por color);

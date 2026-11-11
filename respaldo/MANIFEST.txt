@@ -159,7 +159,7 @@ Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | aw
       681552  381d298f3194ec4961b04b4912b9b6efea4b2ff7b914dac57e24c8b6b0be6a25  2026-11-11/binarios_git/textures/concordia/polyhaven_src/weathered_planks/weathered_planks_nor_gl_1k.jpg
     77936948  e1caf844e57a837c3d5bebcca72be3e792d29e22cca1c041e42fa0e88eaf4958  2026-11-11/concordia_master_2026-11-11_v28.blend
       673465  7acd32323950dd444ce20fdf75870dbfd6f414f9adf2d5e00180e844022bd58a  2026-11-11/concordia_moradas_int_v01.blend
-     2764856  af19bcd1e8c9db7b756e8e73d508367dba609efca52b885d171d197ba6b785b9  2026-11-11/concordia_props_v01.blend
+     2756763  3bc2eebda91cc56576b3e66d031b1681a0abfce274efa61632d4f77e305a0a83  2026-11-11/concordia_props_v01.blend
        46060  5e62a5d472c80ca07847c1cbb80c0a2466e992b9d38ab5b5cc9fd8f097d79269  2026-11-11/fuentes_assets/avramania/0be8094364f4482f9ddad92236514b96/model.glb
        76512  9235d8ff9d967c3172cdbd92b85fc2451daca34ee4e6c5be421e1c6ccb5ddffd  2026-11-11/fuentes_assets/avramania/0daff83382444c95b022de235cea1ceb/model.glb
        49944  8c6ec6fdd3de5a048a256378bbb41c3411da6ed50a3e880329440ae21c9e5fc9  2026-11-11/fuentes_assets/avramania/1b9b17a3cb0f44dd9141e70fba061c71/model.glb
@@ -204,7 +204,7 @@ Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | aw
      1204760  bda2062b4738d185dfc46f1adb5ad1418b72d44c98e47a610391465eb715a952  2026-11-11/glb/props_int_clases.glb
       442880  b85f07a83712df13834d7243a57d7e9627df5444bf15ebaae306b0782d1e68ff  2026-11-11/glb/props_int_mano.glb
      2441900  36fd587dfbecc8ad06d1200ed1bf98c674383a5652fbb711f1ac590ecbf472c3  2026-11-11/glb/props_int_mercado.glb
-     1951096  93ba9daaf7b6bb030e585b9ceb1f274d9170b27468b10ac76dff02e52f572f4a  2026-11-11/glb/props_int_oficios.glb
+     2006716  45674efc69e58624f8b490561dc1364d889266b040c59a77aeada5cac681888a  2026-11-11/glb/props_int_oficios.glb
        70708  ded9ce2d6f997c4d4c4aeea5bde72047e274816ff14283a732762356429fc243  2026-11-11/glb/props_trophy_cases.glb
       225986  8bfd8ec5347f15ad083bdd9de9d5d79e63439e2f77739a9d0a59e15d2287d4c1  2026-11-11/textures/PROP_AV_Cheese_Wheel_normal_512.png
       208829  5556477cc00b35a7cce65dafcf35d692931d1c10fd078408a176cef3aa1b19db  2026-11-11/textures/PROP_AV_Grain_Sack_normal_512.png
@@ -226,4 +226,4 @@ Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | aw
       772159  cd1a5382da65cca5b693dd09972c47b6e2385871cf5c8413e755a8f0310906b4  2026-11-11/textures/PROP_Q_WeaponStand_normal_1k.png
       290103  b43e85d44132548af1e19c707b769b1e6d8e864448444d2f66da7ce84329fe60  2026-11-11/textures/trophy_case_atlas_512.png
 
-Total: 219 archivos, 557,071,277 bytes (531.3 MiB)
+Total: 219 archivos, 557,118,804 bytes (531.3 MiB)

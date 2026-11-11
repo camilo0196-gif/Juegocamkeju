@@ -2040,24 +2040,35 @@
      "page_license_text": "CC0 - Download Free 3D model by Avramania [0daff83] - Sketchfab",
      "file": "0daff83382444c95b022de235cea1ceb/model.glb",
      "sketchfab_name": "Crossbow - Low Poly Medieval, CC0",
-     "tris_original": 80,
+     "tris_original": 588,
      "scale": 1.0,
      "size_class": "mediano",
      "budget": 1500,
      "src_materials": [
-      "colores de material"
+      "mdvl_palette"
      ],
      "materials": [
-      "MAT_Ash_Gray"
+      "MAT_Straw",
+      "MAT_Bronze_Aged",
+      "MAT_Wood_Light",
+      "MAT_Limestone_Light",
+      "MAT_Limestone_Worn",
+      "MAT_Wood_Dark"
      ],
      "palette_map": {
-      "(0.5, 0.5, 0.5)": "MAT_Ash_Gray"
+      "(0.42, 0.29, 0.18)": "MAT_Straw",
+      "(0.14, 0.13, 0.12)": "MAT_Bronze_Aged",
+      "(0.66, 0.48, 0.31)": "MAT_Wood_Light",
+      "(0.89, 0.86, 0.77)": "MAT_Limestone_Light",
+      "(0.73, 0.6, 0.39)": "MAT_Wood_Light",
+      "(0.79, 0.71, 0.58)": "MAT_Limestone_Worn",
+      "(0.29, 0.32, 0.34)": "MAT_Wood_Dark"
      },
-     "tris": 80,
+     "tris": 588,
      "size_m": [
-      1.902,
-      2.0,
-      2.0
+      0.64,
+      0.099,
+      0.828
      ],
      "origin_at_base": true,
      "ok": true,
@@ -2230,14 +2241,14 @@
     "mediano": 1500
    },
    "small_max_m": 0.6,
-   "total_tris": 16589,
+   "total_tris": 17097,
    "all_ok": true,
    "export": {
     "file": "export/godot/props_int_oficios.glb",
-    "mb": 1.861,
+    "mb": 1.914,
     "nodes": 40,
     "meshes": 40,
-    "tris": 16757,
+    "tris": 17265,
     "materials": 30,
     "images": 27,
     "images_external": 27,

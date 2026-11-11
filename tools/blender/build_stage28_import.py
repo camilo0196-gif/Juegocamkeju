@@ -224,6 +224,13 @@ def import_one(path):
         raise RuntimeError(f"formato no admitido: {path}")
     new = [o for o in bpy.data.objects if o not in before]
     meshes = [o for o in new if o.type == "MESH"]
+    # restos en algunos glb de Sketchfab: mallas sin material (p. ej. un Icosphere suelto) si hay otras con material
+    if any(o.material_slots and any(s.material for s in o.material_slots) for o in meshes):
+        junk = [o for o in meshes if not any(s.material for s in o.material_slots)]
+        meshes = [o for o in meshes if o not in junk]
+    for o in meshes:                                        # mallas con esqueleto: se quedan en la pose de reposo
+        for m in [m for m in o.modifiers if m.type == "ARMATURE"]:
+            o.modifiers.remove(m)
     for o in meshes:
         o.data = o.data.copy()
         mw = o.matrix_world.copy()
