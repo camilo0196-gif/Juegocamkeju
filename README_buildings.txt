@@ -652,3 +652,11 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
     19. Patas de varilla asoman bajo z = 0: recortarlas al suelo; piezas coplanarias (postes y largueros) dan manchas
         negras: separarlas 1 cm.
     20. Remedios que cuestan viviendas (2 plantas = -3 puertas): aplicarlos solo si liberan puertas y deshacerlos si no.
+
+  Revision de capturas (etapa 28) - pendientes visuales, sin corregir:
+    - Las ventanas de las casas usan INT_Window_Int (reja de hierro del Banco); las referencias piden ventanas
+      pequenas con postigos: falta una variante del kit (INT_Window_Shutter).
+    - La llama del hogar del kit (MAT_Window_Warm) se lee como un cono blanco a 1.7 m: falta un material de llama
+      calido o particulas en Godot (ya anotado en TODO_GODOT para el Banco).
+    - Vitrinas: con alfa 0.3 el vidrio casi no se ve y las baldas interiores salen oscuras en iluminacion neutra; en
+      la escena (luz calida + lamparilla) se leen como armario acristalado.
