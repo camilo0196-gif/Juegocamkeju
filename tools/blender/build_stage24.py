@@ -39,7 +39,7 @@ REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
 SRC = os.environ.get("CONCORDIA_SRC") or os.path.join(REPO, "blender", f"{C.BLEND_BASENAME}_v23.blend")
 OUT = os.environ.get("CONCORDIA_OUT") or os.path.join(REPO, "blender", f"{C.BLEND_BASENAME}_v24.blend")
 REPORT = os.environ.get("CONCORDIA_REPORT") or os.path.join(REPO, "docs", "reports", "stage24_godot.json")
-EXP = os.path.join(REPO, "export", "godot")
+EXP = os.environ.get("CONCORDIA_EXP") or os.path.join(REPO, "export", "godot")
 DISTRICT_COLS = {"BLD_PORTAL": "portal", "BLD_MERCADO": "mercado", "BLD_OFICIOS": "oficios", "BLD_CLASES": "clases",
                  "BLD_RAZAS": "razas", "BLD_MORADAS_NE": "moradas_NE", "BLD_MORADAS_NO": "moradas_NO",
                  "BLD_MORADAS_SE": "moradas_SE", "BLD_MORADAS_SO": "moradas_SO"}
