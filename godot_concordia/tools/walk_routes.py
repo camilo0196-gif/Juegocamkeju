@@ -48,6 +48,11 @@ def cross(pos, fwd, half):
             [round(pos[0] + fwd[0] * half, 2), round(pos[2] + fwd[2] * half, 2)]]
 
 
+def clamp_r(q, rmax):
+    r = math.hypot(q[0], q[1])
+    return q if r <= rmax else [round(q[0] * rmax / r, 2), round(q[1] * rmax / r, 2)]
+
+
 def main():
     lay = json.load(open(os.path.join(REPO, "docs", "reports", "stage05_layout.json")))
     mk = json.load(open(os.path.join(PROJECT, "debug", "out", "markers_meta.json")))["marcadores"]
@@ -73,7 +78,7 @@ def main():
             for sgn in (-1, 1):
                 best = max(poly, key=lambda q: sgn * ((q[0] - cx) * d[0] + (q[1] - cy) * d[1]))
                 ends.append([cx + (best[0] - cx) * 0.85, cy + (best[1] - cy) * 0.85])
-            pts = resample([ends[0], [cx, cy], ends[1]], STEP)
+            pts = [ends[0], ends[1]]          # de borde a borde: el camino rodea fuentes, pozos y puestos
             routes.append({"nombre": "%s_%s" % (p["name"], "OE" if ang == 0 else "SN"), "tipo": "plaza",
                            "puntos": [g(q) for q in pts]})
     # estructuras (marcadores en coordenadas de Godot: pos [x, y, z], frente = sentido de paso)
@@ -93,11 +98,15 @@ def main():
             routes.append({"nombre": name, "tipo": "escalera_monumental", "puntos": cross(pos, fwd, 13.0)})
         elif name.startswith("MARKER_Stairs_Lateral"):
             n = float(meta.get("risers", 7))
-            routes.append({"nombre": name, "tipo": "escalera_lateral", "puntos": cross(pos, fwd, n * 0.30 + 2.5)})
+            # la cara interior de la muralla esta a r 196,6: el extremo de fuera se recorta a r 194
+            routes.append({"nombre": name, "tipo": "escalera_lateral", "puntos": [clamp_r(q, 194.0) for q in cross(pos, fwd, n * 0.30 + 2.5)]})
         elif name.startswith("MARKER_Stairs_Terrace"):
             routes.append({"nombre": name, "tipo": "escalera_terraza", "puntos": cross(pos, fwd, 4.5)})
         elif name.startswith("MARKER_Gate_"):
-            routes.append({"nombre": name, "tipo": "puerta_muralla", "puntos": cross(pos, fwd, 16.0)})
+            # puertas selladas (decision del usuario): solo la aproximacion por dentro, de r 180 a r 192
+            inner = [[round(pos[0] - fwd[0] * 20.0, 2), round(pos[2] - fwd[2] * 20.0, 2)],
+                     [round(pos[0] - fwd[0] * 8.0, 2), round(pos[2] - fwd[2] * 8.0, 2)]]
+            routes.append({"nombre": name, "tipo": "puerta_muralla", "puntos": inner})
     # moradas: delante de cada casa (parcela 10 m de fondo -> calle a ~7 m del centro), tramos de 4 en 4 casas
     for conj in ("NE", "NO", "SE", "SO"):
         houses = sorted(k for k in mk if k.startswith("MARKER_Morada_%s_" % conj))

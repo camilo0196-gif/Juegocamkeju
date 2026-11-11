@@ -5,6 +5,7 @@ extends SceneTree
 ##       Wall      : concordia_wall_layout.glb (muralla ya colocada en Blender)
 ##       Buildings : bld_{portal,mercado,oficios,clases,razas,moradas_NE,_NO,_SE,_SO}.glb
 ##       Markers   : concordia_markers.glb (Marker3D con metadatos y grupos, ver tools/post_import.gd)
+##       Navigation: NavigationRegion3D por distrito con res://navigation/nav_*.res (tools/bake_navmesh.gd)
 ##   res://scenes/main.tscn  Main: Concordia + luz y entorno basicos (G4 los sustituye) + Game (scripts/game.gd)
 ## Cada .glb entra como instancia de su escena importada (no se copia nada): tras una nueva exportacion basta con
 ## sync_assets.py + import_settings.py + --import y volver a ejecutar este script.
@@ -32,6 +33,20 @@ func _init() -> void:
 	for b in BUILDINGS:
 		_inst(root, groups.Buildings, "res://assets/buildings/glb/bld_%s.glb" % b, "Bld_" + b)
 	_inst(root, groups.Markers, "res://assets/markers/glb/concordia_markers.glb", "Markers")
+	# navegacion horneada en Godot (tools/bake_navmesh.gd): una region por distrito + camino de ronda
+	var nav := Node3D.new()
+	nav.name = "Navigation"
+	root.add_child(nav)
+	nav.owner = root
+	for f in DirAccess.get_files_at("res://navigation"):
+		if not f.ends_with(".res") or f.begins_with("nav_int_"):
+			continue
+		var r := NavigationRegion3D.new()
+		r.name = f.get_basename().trim_prefix("nav_").capitalize().replace(" ", "_")
+		r.navigation_mesh = load("res://navigation/" + f)
+		r.add_to_group("nav_godot", true)
+		nav.add_child(r)
+		r.owner = root
 	root.set("focus_path", NodePath(""))
 	DirAccess.make_dir_recursive_absolute("res://scenes")
 	var ps := PackedScene.new()

@@ -2,7 +2,9 @@ extends Node3D
 ## CONCORDIA - raiz de scenes/concordia.tscn (la escena la genera tools/build_city.gd; este script prepara en
 ## tiempo de ejecucion lo que depende de la escena montada):
 ##  - LOD propios por unidad (scripts/lod_manager.gd) con foco en el jugador
-##  - NavigationLink3D por cada pareja NAVLINK_<puerta>_Start / _End
+##  - NavigationLink3D por cada pareja NAVLINK_<puerta>_Start / _End y por cada escalera de puerta de la muralla
+##    (res://navigation/links.json, del horneado); las -navmesh de Blender se desactivan (solo referencia): manda la
+##    navegacion horneada en Godot (nodo Navigation, grupo nav_godot)
 ##  - oclusores (BoxOccluder3D) dentro de los cuerpos de edificio grandes, ademas de los -occonly importados
 ##  - zona actual (plaza, Mercado, Oficios, Clases, Razas, Moradas, muralla, ceniza) para el HUD
 
@@ -28,6 +30,7 @@ func _ready() -> void:
 		for inst in g.get_children():
 			lod.add_scene_root(inst)
 	stats["navlinks"] = _navlinks()
+	stats["nav_regiones"] = _navigation()
 	stats["oclusores_caja"] = _box_occluders()
 	if not focus_path.is_empty():
 		lod.focus = get_node(focus_path)
@@ -63,6 +66,25 @@ func _navlinks() -> int:
 		link.start_position = Vector3.ZERO
 		link.end_position = link.to_local((n as Node3D).global_position)
 		k += 1
+	return k
+
+
+func _navigation() -> int:
+	var k := 0
+	for r in find_children("*", "NavigationRegion3D", true, false):
+		if r.is_in_group("nav_godot"):
+			k += 1
+		else:
+			(r as NavigationRegion3D).enabled = false
+	if FileAccess.file_exists("res://navigation/links.json"):
+		for l in JSON.parse_string(FileAccess.get_file_as_string("res://navigation/links.json")):
+			var link := NavigationLink3D.new()
+			link.name = "NavLink_" + String(l.nombre)
+			link.bidirectional = true
+			add_child(link)
+			link.global_position = Vector3(l.inicio[0], l.inicio[1], l.inicio[2])
+			link.end_position = link.to_local(Vector3(l.fin[0], l.fin[1], l.fin[2]))
+			stats["enlaces_muralla"] = stats.get("enlaces_muralla", 0) + 1
 	return k
 
 
