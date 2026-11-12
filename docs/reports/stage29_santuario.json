@@ -1,0 +1,327 @@
+{
+ "source": {
+  "iv_size": [
+   13.8,
+   9.6,
+   9.0
+  ],
+  "iv_center_local": [
+   0.0,
+   0.0
+  ],
+  "rot_deg": -135.0,
+  "door_local": [
+   0.0,
+   6.0,
+   0.0
+  ],
+  "door_in_frame": [
+   0.0,
+   4.8
+  ],
+  "well_source": {
+   "note": "provisional hasta la etapa de interiores (decision del usuario, etapa 26)",
+   "provisional": "True"
+  }
+ },
+ "props_tris": {
+  "SAN_Table": 56,
+  "SAN_Ration": 61,
+  "SAN_Torch": 36,
+  "SAN_Candelabrum": 150
+ },
+ "vault": {
+  "cubierta_muestras": 29885,
+  "cubierta_sin_impacto": 0,
+  "boveda_14m_arranque_vertical": {
+   "holgura_min_m": -1.84,
+   "choca": true
+  },
+  "clave_m": 12.7,
+  "holgura_min_m": 0.128,
+  "perfil": "dos arcos apuntados de flecha 0.06 x cuerda (la cubierta es a dos aguas de 45 grados)",
+  "oculo_radio_m": 1.05,
+  "comprobacion_final": {
+   "vertices_boveda": 2744,
+   "holgura_min_m": 0.127,
+   "ok": true,
+   "timpanos_vertices_en_el_grueso_del_hastial": 218,
+   "timpanos_bajo_el_hastial_exterior": 218
+  }
+ },
+ "vault_texture": "textures/concordia/MAT_Vault_Stars/vault_stars_1k.png",
+ "windows": {
+  "-Y": 5,
+  "+Y": 5
+ },
+ "well": {
+  "well_top_m": 2.25,
+  "well_mats": [
+   "MAT_Limestone_Light",
+   "MAT_Water",
+   "MAT_Iron_Black",
+   "MAT_Wood_Dark"
+  ],
+  "tris": 290
+ },
+ "furniture": [
+  "BANK_Bench",
+  "BANK_Bench",
+  "BANK_Bench",
+  "BANK_Bench",
+  "BANK_Bench",
+  "BANK_Bench",
+  "BANK_Bench",
+  "BANK_Bench",
+  "SAN_Table",
+  "SAN_Ration",
+  "SAN_Ration",
+  "SAN_Ration",
+  "SAN_Torch",
+  "SAN_Torch",
+  "SAN_Torch",
+  "SAN_Candelabrum",
+  "SAN_Candelabrum"
+ ],
+ "size_check": {
+  "interior_m": [
+   13.8,
+   9.6,
+   9.0
+  ],
+  "interior_volume_m": [
+   13.8,
+   9.6,
+   9.0
+  ],
+  "diff_m": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "ok_planta": true
+ },
+ "near_walls": {
+  "WALL_Near_A": "+Y"
+ },
+ "caras_coplanarias_suelo_quitadas": 9,
+ "cam_local": [
+  -0.0,
+  0.816,
+  0.577
+ ],
+ "rays_cam_iso": {
+  "CAM_Iso (WALL_Near_A y CEILING ocultos)": {
+   "Reaparicion (MARKER_Respawn)": {
+    "points": 9,
+    "pct": 100.0,
+    "blockers": {}
+   },
+   "Cuidador": {
+    "points": 8,
+    "pct": 100.0,
+    "blockers": {}
+   },
+   "Mesa del kit": {
+    "points": 6,
+    "pct": 100.0,
+    "blockers": {}
+   },
+   "Pozo (agua y brocal)": {
+    "points": 4,
+    "pct": 100.0,
+    "blockers": {}
+   },
+   "Farol de esquirla": {
+    "points": 1,
+    "pct": 100.0,
+    "blockers": {}
+   },
+   "Ventanales del fondo": {
+    "points": 15,
+    "pct": 100.0,
+    "blockers": {}
+   }
+  }
+ },
+ "navmesh": {
+  "faces": 889,
+  "reached_faces": 889,
+  "keys": {
+   "spawn": {
+    "reachable": true,
+    "dist_to_nav_m": 0.18
+   },
+   "reaparicion": {
+    "reachable": true,
+    "dist_to_nav_m": 0.14
+   },
+   "cuidador_frente": {
+    "reachable": true,
+    "dist_to_nav_m": 0.28
+   },
+   "mesa_kit": {
+    "reachable": true,
+    "dist_to_nav_m": 0.21
+   },
+   "pozo_oeste": {
+    "reachable": true,
+    "dist_to_nav_m": 0.21
+   },
+   "pozo_sur": {
+    "reachable": true,
+    "dist_to_nav_m": 0.18
+   },
+   "fondo_oeste": {
+    "reachable": true,
+    "dist_to_nav_m": 0.23
+   },
+   "fondo_este": {
+    "reachable": true,
+    "dist_to_nav_m": 0.25
+   },
+   "bancos_oeste": {
+    "reachable": true,
+    "dist_to_nav_m": 0.18
+   },
+   "bancos_este": {
+    "reachable": true,
+    "dist_to_nav_m": 0.21
+   }
+  }
+ },
+ "corridors_1.2m": {
+  "nivel_0": {
+   "start_clearance_m": 1.1,
+   "reachable_with_1.2m": {
+    "spawn": true,
+    "reaparicion": true,
+    "cuidador_frente": true,
+    "mesa_kit": true,
+    "pozo_oeste": true,
+    "pozo_sur": true,
+    "fondo_oeste": true,
+    "fondo_este": true,
+    "bancos_oeste": true,
+    "bancos_este": true
+   }
+  }
+ },
+ "tris": {
+  "total": 10537,
+  "budget": 40000,
+  "ok": true,
+  "by_group": {
+   "Shell": 3749,
+   "WALL_Near_A": 1963,
+   "WALL_Near_B": 0,
+   "CEILING": 3304,
+   "Furniture": 1521,
+   "Lights": 0,
+   "Markers": 0
+  }
+ },
+ "markers": {
+  "MARKER_Interact_Santuario_Kit": {
+   "tipo": "santuario_kit",
+   "accion": "kit minimo gratis (3 raciones, 3 antorchas): propuesta, el pedido no nombra la interaccion"
+  },
+  "MARKER_Interior_Exit": {
+   "to": "calle",
+   "note": "+Y hacia la calle"
+  },
+  "MARKER_Interior_Spawn": {
+   "note": "+Y hacia el interior"
+  },
+  "MARKER_NPC_Slot_01": {
+   "npc": "Cuidador",
+   "note": "junto al pozo, de cara a la reaparicion y a la camara"
+  },
+  "MARKER_Respawn": {
+   "tipo": "respawn",
+   "note": "reaparicion tras morir: delante del pozo, mirando a la salida (+Y) y a la camara"
+  }
+ },
+ "lights": {
+  "LIGHT_Candelabrum_01": [
+   "#FFA650",
+   0.45,
+   4.0
+  ],
+  "LIGHT_Candelabrum_02": [
+   "#FFA650",
+   0.45,
+   4.0
+  ],
+  "LIGHT_Shard_Well": [
+   "#8FD0FF",
+   0.5,
+   5.0
+  ],
+  "LIGHT_Window_N_01": [
+   "#DCE4EC",
+   0.35,
+   6.0
+  ],
+  "LIGHT_Window_N_02": [
+   "#DCE4EC",
+   0.35,
+   6.0
+  ],
+  "LIGHT_Window_S_01": [
+   "#DCE4EC",
+   0.4,
+   6.5
+  ],
+  "LIGHT_Window_S_02": [
+   "#DCE4EC",
+   0.4,
+   6.5
+  ],
+  "LIGHT_Window_S_03": [
+   "#DCE4EC",
+   0.4,
+   6.5
+  ],
+  "LIGHT_Window_S_04": [
+   "#DCE4EC",
+   0.4,
+   6.5
+  ],
+  "LIGHT_Window_S_05": [
+   "#DCE4EC",
+   0.4,
+   6.5
+  ]
+ },
+ "blue_lights": 1,
+ "hideable_groups": {
+  "WALL_Near_A": "",
+  "WALL_Near_B": "",
+  "CEILING": "siempre dentro (todo lo que esta por encima de la imposta de 9.0 m)"
+ },
+ "export": {
+  "file": "export/godot/int_santuario.glb",
+  "mb": 0.733,
+  "nodes": 49,
+  "meshes": 13,
+  "tris": 11923,
+  "materials": 16,
+  "images": 29,
+  "images_external": 29,
+  "colliders": 1,
+  "navmesh": 1,
+  "occluders": 0,
+  "empties": 24,
+  "nombres_con_sufijo_blender": [
+   "PROP_BANK_Bench.001",
+   "PROP_BANK_Bench.002",
+   "PROP_BANK_Bench.003",
+   "PROP_BANK_Bench.004",
+   "PROP_BANK_Bench.005",
+   "PROP_BANK_Bench.006",
+   "PROP_BANK_Bench.007",
+   "PROP_SAN_Candelabrum.001"
+  ]
+ }
+}

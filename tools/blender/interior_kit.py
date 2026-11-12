@@ -106,9 +106,11 @@ def m_floor_stone(mb, v, rng):
     """Losa de 2 x 2 m; la variante B lleva dos losas repuestas de caliza gastada (2 cm por encima)."""
     mb.box((0, 0, -0.12), (2, 2, 0), SLAB, skip=("z-",))
     if v:
-        for _ in range(2):
-            x, y = rng.uniform(0.1, 1.2), rng.uniform(0.1, 1.2)
-            mb.box((x, y, 0), (x + rng.uniform(0.4, 0.7), y + rng.uniform(0.35, 0.6), 0.02), STONE, skip=("z-",))
+        # cada losa repuesta en su mitad del modulo: dos losas solapadas a la misma altura son caras coplanarias
+        # (salen negras en Cycles y parpadean en Godot; etapa 29)
+        for x0 in (0.1, 1.1):
+            x, y = rng.uniform(x0, x0 + 0.2), rng.uniform(0.1, 1.2)
+            mb.box((x, y, 0), (x + rng.uniform(0.4, 0.65), y + rng.uniform(0.35, 0.6), 0.02), STONE, skip=("z-",))
 
 
 def m_floor_planks(mb, v, rng):
@@ -207,9 +209,9 @@ def m_stairs(mb, v, rng, run=5.0, rise=FH, n=16):
     prism(mb, prof, 0.0, 1.0, STONE, axis="x")
 
 
-def m_door(mb, v, rng, kind="wood"):
-    """Muro de 2 m con puerta de 1.3 x 2.5: jambas y dintel de piedra, hoja de madera con herrajes o de hierro."""
-    ow, oh = 1.3, 2.5
+def m_door(mb, v, rng, kind="wood", ow=1.3, oh=2.5):
+    """Muro de 2 m con puerta de ow x oh (por defecto 1.3 x 2.5): jambas y dintel de piedra, hoja de madera con
+    herrajes o de hierro. ow / oh en el espacio del modulo (alto de piso FH; el muro se escala a la planta)."""
     x0, x1 = 1.0 - ow / 2, 1.0 + ow / 2
     mb.slab_holes([(0, 0), (2, 0), (2, FH), (0, FH)], [[(x0, 0), (x0, oh), (x1, oh), (x1, 0)]], -T, 0, BLOCK,
                   reveal_mat=STONE)
@@ -218,7 +220,7 @@ def m_door(mb, v, rng, kind="wood"):
     mb.box((x0 - 0.22, 0, oh), (x1 + 0.22, 0.07, oh + 0.3), STONE, skip=("y-",))
     leaf = IRON if kind == "iron" else WOOD
     mb.box((x0 + 0.02, -T + 0.12, 0.0), (x1 - 0.02, -T + 0.18, oh - 0.02), leaf, skip=("z-",))
-    for z in (0.35, 1.25, 2.15):
+    for z in (0.35, oh / 2, oh - 0.35):
         mb.box((x0 + 0.05, -T + 0.18, z), (x1 - 0.05, -T + 0.2, z + 0.1), IRON, skip=("y-",))
     if kind == "iron":
         mb.box((x1 - 0.32, -T + 0.2, 1.0), (x1 - 0.18, -T + 0.26, 1.18), IRON)           # cerradero
@@ -226,17 +228,20 @@ def m_door(mb, v, rng, kind="wood"):
         mb.box((x1 - 0.31, -T + 0.21, 0.93), (x1 - 0.19, -T + 0.28, 1.04), BRONZE)
 
 
-def m_window(mb, v, rng):
-    """Muro de 2 m con ventana de 1.0 x 1.4 (antepecho 1.2 m), reja de hierro y vidrio de luz calida."""
-    x0, x1, z0, z1 = 0.5, 1.5, 1.2, 2.6
+def m_window(mb, v, rng, w=1.0, z0=1.2, z1=2.6):
+    """Muro de 2 m con ventana de w x (z1 - z0) (por defecto 1.0 x 1.4, antepecho 1.2 m), reja de hierro y vidrio de
+    luz calida. Medidas en el espacio del modulo (alto de piso FH; el muro se escala a la planta)."""
+    x0, x1 = 1.0 - w / 2, 1.0 + w / 2
     mb.slab_holes([(0, 0), (2, 0), (2, FH), (0, FH)], [[(x0, z0), (x0, z1), (x1, z1), (x1, z0)]], -T, 0, BLOCK,
                   reveal_mat=STONE)
     mb.face([(x0, -T + 0.1, z0), (x1, -T + 0.1, z0), (x1, -T + 0.1, z1), (x0, -T + 0.1, z1)], WARM, nrm=(0, 1, 0))
     mb.box((x0 - 0.06, 0, z0 - 0.1), (x1 + 0.06, 0.08, z0), STONE, skip=("y-",))
-    for i in range(1, 5):
-        x = x0 + (x1 - x0) * i / 5
+    nb = max(2, round(w / 0.2))
+    for i in range(1, nb):
+        x = x0 + (x1 - x0) * i / nb
         mb.rod((x, -0.08, z0), (x, -0.08, z1), 0.014, IRON)
-    for z in (z0 + 0.45, z0 + 0.95):
+    hz = (z0 + 0.45, z0 + 0.95) if abs(z1 - z0 - 1.4) < 1e-6 else (z0 + (z1 - z0) / 3, z0 + 2 * (z1 - z0) / 3)
+    for z in hz:
         mb.rod((x0, -0.08, z), (x1, -0.08, z), 0.014, IRON)
 
 
@@ -324,6 +329,26 @@ KIT = {
     "INT_Grille_Teller": (m_grille, 2),
     "INT_Railing": (m_railing, 0), "INT_Trim": (m_trim, 0),
 }
+
+
+def custom_module(name, col, kind, **kw):
+    """Variante a medida de un modulo de hueco (kind 'window', 'door' o 'door_iron') con las medidas del exterior
+    (kw en el espacio del modulo); se usa como tipo de hueco en Interior.shell (openings) con su nombre."""
+    if bpy.data.meshes.get(name) is not None:
+        return name
+    mb = K.MB()
+    rng = random.Random(name)
+    if kind == "window":
+        m_window(mb, 0, rng, **kw)
+    else:
+        m_door(mb, 0, rng, kind="iron" if kind == "door_iron" else "wood", **kw)
+    o = to_obj(mb, name, col)
+    o.data.name = name
+    o["kit_piece"] = True
+    o["custom_of"] = kind
+    o.location.z -= 60.0
+    o.hide_render = True
+    return name
 
 
 def build_kit(col, seed=2701):
@@ -523,7 +548,7 @@ class Interior:
                             mesh = walls[1] if rng.random() < 0.22 else walls[0]
                             self.inst(mesh, frame_mat(start, n, a + i * w, k * sh, w / 2, sh / FH), group)
                     else:
-                        mesh = {"door": "INT_Door_Int", "door_iron": "INT_Door_Int_Iron", "window": "INT_Window_Int"}[kind]
+                        mesh = {"door": "INT_Door_Int", "door_iron": "INT_Door_Int_Iron", "window": "INT_Window_Int"}.get(kind, kind)
                         self.inst(mesh, frame_mat(start, n, a, k * sh, (b - a) / 2, sh / FH), group)
                 if k > 0:
                     m = max(1, round(L / 2))
@@ -657,6 +682,9 @@ class Interior:
         bm_all = bmesh.new()
         mats = []
         tmpme = bpy.data.meshes.new("TMP_realize")
+        # niveles de suelo de la sala: las caras horizontales de piezas que no son suelo a esa altura (umbral de los
+        # huecos de arcos y puertas que llegan al suelo, bases) son coplanarias con el suelo: se quitan (etapa 29)
+        floors = {0.0} | {round(r[1], 3) for r in self.nav_regions}
         for o in objs:
             m = o.matrix_basis
             bm = bmesh.new()
@@ -664,6 +692,13 @@ class Interior:
             bm.transform(m)
             if m.determinant() < 0:
                 bmesh.ops.reverse_faces(bm, faces=bm.faces[:])
+            if not o.data.name.startswith("INT_Floor"):
+                bm.normal_update()
+                dead = [f for f in bm.faces if abs(f.normal.z) > 0.99 and
+                        any(all(abs(v.co.z - L) < 1e-3 for v in f.verts) for L in floors)]
+                if dead:
+                    bmesh.ops.delete(bm, geom=dead, context="FACES_ONLY")
+                    self.log["caras_coplanarias_suelo"] = self.log.get("caras_coplanarias_suelo", 0) + len(dead)
             remap = []
             for s in o.data.materials:
                 if s.name not in mats:

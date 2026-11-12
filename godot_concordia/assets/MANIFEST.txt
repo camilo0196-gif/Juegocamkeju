@@ -13,12 +13,15 @@ bytes  sha256  destino (en assets/)  <-  origen (en el repositorio)
     10755728  360a8e1e8da010accd8356f6be4ebf3d4c1c7c00852dbf95391be8f6421650ce  buildings/glb/bld_razas.glb  <-  export/godot_v28/bld_razas.glb
      1205616  fbb3477afa6128e6304f61e2a1e9627f12643f216d3f01ffe331ac6120e3c03d  characters/glb/pj_elfo_cuerpo.glb  <-  export/godot/pj_elfo_cuerpo.glb
      3734100  431e466ebc24a5dc46afb214ca5fd1bb7c638aeac21f8cf0203d7f3afef2b54a  characters/glb/pj_elfo_rig.glb  <-  export/godot/pj_elfo_rig.glb
+     3585536  e11dbe098193712d05679fc2561953eb37e36eebe6c0651517797a2ec7825a7a  characters/glb/pj_elfo_sanador_anim.glb  <-  export/godot/pj_elfo_sanador_anim.glb
      3169772  8294234e006d52383d35856cc62652805d492234aa7505f68dae97fea4d3202d  characters/glb/pj_elfo_sanador_equipado.glb  <-  export/godot/pj_elfo_sanador_equipado.glb
      2001628  fac899ebd67059cc2e149b50432088700e597f565b027c9dea4d410a06ccf830  characters/glb/pj_sanador_ropa.glb  <-  export/godot/pj_sanador_ropa.glb
      1689852  6153a48869c87789ec2c91117f18463368c1729234415e4db17c371a7ee50d32  interiors/glb/int_banco.glb  <-  export/godot/int_banco.glb
       946072  199cb545ca497f7c7755066bc9933b5d3544412497f560e2da3239f71e42f935  interiors/glb/int_morada_casa_grande.glb  <-  export/godot/int_morada_casa_grande.glb
       728004  3b9c1a87b92a6026fa153457a0eeab911c7c94b1052ff1b74325e90b6c7264d0  interiors/glb/int_morada_casa_pequena.glb  <-  export/godot/int_morada_casa_pequena.glb
       424468  ca8b1c1f2c0f7130a6616ddf10b41c4600751d34055fc55e19222cd4c03b6a94  interiors/glb/int_morada_habitacion.glb  <-  export/godot/int_morada_habitacion.glb
+      768224  28173c9c1c49b49d7c53f120d45c7c9c8c5058761da7760e5377fd757ca0b981  interiors/glb/int_santuario.glb  <-  export/godot/int_santuario.glb
+     1455876  6f554ecdf886404b7f94e7b35f5a44fdc7f96df33840385202efc70bebe2b964  interiors/glb/int_tesoreria.glb  <-  export/godot/int_tesoreria.glb
       250048  320e87328fe53b991332ca6243a16ed8a4c834bf3c0a445c050067d39f53a6a4  markers/glb/concordia_markers.glb  <-  export/godot_v28/concordia_markers.glb
       367556  517e7220387dac37d441fb3779dc9a3d890f14654d2f15099c1be98ffca8a950  props/glb/bld_props.glb  <-  export/godot_v28/bld_props.glb
      1204760  bda2062b4738d185dfc46f1adb5ad1418b72d44c98e47a610391465eb715a952  props/glb/props_int_clases.glb  <-  export/godot/props_int_clases.glb
@@ -121,6 +124,7 @@ bytes  sha256  destino (en assets/)  <-  origen (en el repositorio)
      7712827  5db1d4cfae61a28fa8a1dca92013bd828a8d48c5c649baba093a1e00cf46105f  textures/concordia/MAT_Stone_Repair/concordia_stone_repair_albedo.png  <-  textures/concordia/MAT_Stone_Repair/concordia_stone_repair_albedo.png
      5593999  6a4246ce8a0f31c4c0fd1b2f0507cdd3d6df57be8cd73877d4eea77ccf81fe71  textures/concordia/MAT_Stone_Repair/concordia_stone_repair_orm.png  <-  textures/concordia/MAT_Stone_Repair/concordia_stone_repair_orm.png
       290103  b43e85d44132548af1e19c707b769b1e6d8e864448444d2f66da7ce84329fe60  textures/concordia/MAT_TrophyCase/trophy_case_atlas_512.png  <-  textures/concordia/MAT_TrophyCase/trophy_case_atlas_512.png
+       56190  2450488d2748d58563f651dde229b9634c27a982407052a8981cac84e924a8a3  textures/concordia/MAT_Vault_Stars/vault_stars_1k.png  <-  textures/concordia/MAT_Vault_Stars/vault_stars_1k.png
      2124186  7d3254fd5ed73b104ee0b80e03743d295861de9300a4f98bedfe54c3cb370d53  textures/concordia/MAT_Wall_Gray/T_Wall_Gray_Albedo.jpg  <-  textures/concordia/MAT_Wall_Gray/T_Wall_Gray_Albedo.jpg
       411830  bfa479e63dd50bbdc9f89c3981063cacb01e6e737b3f7894e881a054835a2291  textures/concordia/MAT_Wall_Gray/T_Wall_Gray_Normal.jpg  <-  textures/concordia/MAT_Wall_Gray/T_Wall_Gray_Normal.jpg
       157416  fe87889c4431d0f8e3a44749359ed745a8f66ee3277622d45398b68bcb9d56f9  textures/concordia/MAT_Wall_Gray/T_Wall_Gray_Roughness.jpg  <-  textures/concordia/MAT_Wall_Gray/T_Wall_Gray_Roughness.jpg
@@ -291,4 +295,4 @@ bytes  sha256  destino (en assets/)  <-  origen (en el repositorio)
      1690444  d4e0a80342588ad23bae871086253e8daeff5b8b77a55da250408e1e11480228  wall/glb/concordia_wall_kit.glb  <-  export/godot/concordia_wall_kit.glb
      1004568  b7542d05044a6fbe18e9717e664e376f3f4415876e014884f0989c12e95e961b  wall/glb/concordia_wall_layout.glb  <-  export/godot/concordia_wall_layout.glb
 
-Total: 289 archivos, 491,399,427 bytes
+Total: 293 archivos, 497,265,253 bytes

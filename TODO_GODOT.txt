@@ -50,7 +50,8 @@ Faro (E15, E17)
 
 Santuario y Salon de las Hazanas (E16)
 [ ] MARKER_Santuario_Door / MARKER_SalonHazanas_Door + *_InteriorVolume: disparador de puerta -> escena interior.
-[ ] SANTUARIO_Well: modelo para el interior; esta colocado provisionalmente en el centro de la nave.
+[x] SANTUARIO_Well: colocado en el interior (int_santuario.glb, etapa 29, sin provisional). La copia del exterior
+    (concordia_v28) sigue dentro del edificio cerrado: quitarla en la proxima version del master.
 [ ] Salon: desde CAM_Iso tapa ~241 m2 de plaza delante de su fachada (hasta 20.9 m): fundido/dither o corte del
     tejado cuando el jugador quede detras (decision pendiente).
 [ ] Farolillos de esquirla (LANTERN_Shard): OmniLight3D pequena azul palido opcional.
@@ -160,7 +161,7 @@ Decisiones de la etapa 26 (E13)
 [ ] Salon de las Hazanas: SALON_HAZANAS_Body y _Roof traen occludes_iso = true (metadatos glTF): cuando el jugador
     quede detras desde CAM_Iso, fundido por dithering (StandardMaterial3D distance_fade_mode = PIXEL_DITHER u
     OBJECT_DITHER, o shader con alpha hash). Sus materiales son opacos y compatibles.
-[ ] SANTUARIO_Well: provisional = true hasta la etapa de interiores (no darlo por definitivo).
+[x] SANTUARIO_Well: definitivo en el interior (etapa 29); ver arriba la copia del exterior.
 [ ] Moradas NE y SO: balcon por puerta. Desde la escalera exterior se llega a 2 balcones por casa comunal (puerta
     central de la planta 2 y la del extremo de la planta 3); las demas puertas altas son puertas-balcon: su
     MARKER_Morada_Door es zona de interaccion (Area3D) que se activa desde la calle o el interior.
@@ -332,3 +333,16 @@ Personajes: conjunto del Sanador (PJ2)
   - pj_elfo_sanador_equipado.glb lleva el cuerpo ya recortado (vista previa). Para el juego: decidir en el rig
     (concordia_rig.py) como se ocultan los grupos HIDE_* (propiedad 'oculta' de cada prenda): borrar caras al
     equipar o mascara en el shader de piel (COLOR_0 con un bit por grupo).
+
+
+Interiores unicos (etapa 29: int_tesoreria.glb, int_santuario.glb)
+[ ] Al cargar un interior: effects.gd convert_surfaces() sobre su raiz (MAT_Water del pozo del Santuario -> shader de
+    agua) y register_material() de sus materiales (MAT_Pipe_Light_Core de los 4 tubos de la Tesoreria laten).
+[ ] Grupos ocultables por la propiedad hide_when (WALL_Near_A/B, CEILING siempre; LEVEL_1 con el jugador en la planta
+    baja; WALL_Near_Despacho con el jugador dentro del despacho; Area3D en su suelo).
+[ ] Luces: Empties de Lights (light_color, light_energy, light_range, light_kind) -> LightmapGI; un solo azul por sala
+    (LIGHT_Pipes_Glow en la Tesoreria, LIGHT_Shard_Well en el Santuario).
+[ ] Santuario: MARKER_Respawn (tipo = respawn) es el punto de reaparicion; MARKER_Interact_Santuario_Kit (propuesta).
+[ ] Tesoreria: MARKER_NPC_Slot_02 (npc = Cambista) es una propuesta (el pedido solo nombraba al Tesorero).
+[ ] Vitrinas: MAT_Pipe_Glass (alfa 0.35) con render_priority 0 como en la ciudad; esquirlas MAT_Shard_* (solo la Madura
+    emite, 1.0).

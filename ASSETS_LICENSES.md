@@ -236,6 +236,7 @@ sanador_ual2_seleccion.glb, sobre los esqueletos originales; tools/blender/build
 |---|---|---|
 | Estandartes de clase y de raza (MAT_Banner_*) | generados por script (etapas 20-21) | Clases, Razas |
 | Atlas de numeros de las cajas (MAT_Bank_BoxNumbers, 1K) | tools/blender/stage27_banco.py (fuente DejaVu Serif, licencia libre de Bitstream Vera/DejaVu) | interior del Banco |
+| Plementeria con estrellas (MAT_Vault_Stars, 1K) | tools/blender/stage29_santuario.py (generada con PIL, propia) | boveda del Santuario (etapa 29) |
 | Texturas de MAT_Shard_Blue, MAT_Wall_Runes y MAT_Water (T_*.jpg) | horneadas de nodos procedurales (tools/blender/stage09_materials.py) | esquirlas, runas, cauce |
 | Props a mano de la etapa 28 (telar, fuelle, maniqui, casco de minero y 14 triviales) | tools/blender/props_mano.py | props_int_mano.glb |
 | Kit de interiores BLD_INT_KIT y todo el interior del Banco | modelado por script (etapa 27) | int_banco.glb |

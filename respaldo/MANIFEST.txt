@@ -1,6 +1,7 @@
 CONCORDIA - carpeta de respaldo (fuera de git, decision del usuario en la etapa 26)
 concordia_master_<fecha>_v<NN>.blend = copia del .blend maestro de esa fecha; glb/ = export/godot de esa fecha;
 interiors/ = blend de interiores y texturas generadas que no estan en git.
+2026-11-12/interiores_e29/ = interiores unicos de la etapa 29 (Tesoreria, Santuario): blend, .glb, textura de la boveda e informes.
 personajes/ = blend, texturas y capturas de los personajes; personajes_pj5/ = cierre del personaje (master v1.0,
               .glb finales, texturas, con su propio MANIFEST); ual_original/ = zips de la UAL 1 y 2 de Quaternius; fuentes_assets/mpfb = paquetes oficiales de MPFB y MakeHuman.
 binarios_git/ = .jpg, .gltf y .bin que estaban en git hasta la etapa 27 (sacados con git rm --cached; la
@@ -288,3 +289,9 @@ Comprobar (desde respaldo/): grep -E '^ +[0-9]+  [0-9a-f]{64}' MANIFEST.txt | aw
     14541205  18ff1a7215f4852b320203e8aaf02a1578b5c8eef9027fbaedfcedc7b85a3ac2  2026-11-11/ual_original/universal_animation_librarystandard.zip
 
 Total: 278 archivos, 984,658,615 bytes (939.0 MiB)
+      986756  8d75305ec88bb270082279c6c983ff111b1392c577fd2ff873fd5b91c4757cb7  2026-11-12/interiores_e29/concordia_interiors_unicos_v01.blend
+      768224  28173c9c1c49b49d7c53f120d45c7c9c8c5058761da7760e5377fd757ca0b981  2026-11-12/interiores_e29/int_santuario.glb
+     1455876  6f554ecdf886404b7f94e7b35f5a44fdc7f96df33840385202efc70bebe2b964  2026-11-12/interiores_e29/int_tesoreria.glb
+        5731  33f25017506536ba7330f4fab1c94611e8e311e57f6193e7806ee92b866e4420  2026-11-12/interiores_e29/stage29_santuario.json
+       11128  8f06cbf4d885e09813215580afd82b80cfbe0ec759c7afe341aa4af6a2d2e8e4  2026-11-12/interiores_e29/stage29_tesoreria.json
+       56190  2450488d2748d58563f651dde229b9634c27a982407052a8981cac84e924a8a3  2026-11-12/interiores_e29/vault_stars_1k.png

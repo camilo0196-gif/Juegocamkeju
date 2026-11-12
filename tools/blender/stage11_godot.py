@@ -905,6 +905,8 @@ def export_glb(objs, path):
                               export_all_vertex_colors=False, export_active_vertex_color_when_no_material=False,
                               export_extras=True, export_materials="EXPORT", export_image_format="AUTO",
                               export_keep_originals=True)
+    import glb_tools
+    glb_tools.strip_embedded_images(path)      # solo la uri a la textura original (sin copia incrustada; etapa 29)
     return os.path.getsize(path)
 
 

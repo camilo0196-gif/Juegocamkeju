@@ -689,3 +689,93 @@ vuelan cornisas (0.2), balcones (1.5) y sus mensulas, y aleros.
       calido o particulas en Godot (ya anotado en TODO_GODOT para el Banco).
     - Vitrinas: con alfa 0.3 el vidrio casi no se ve y las baldas interiores salen oscuras en iluminacion neutra; en
       la escena (luz calida + lamparilla) se leen como armario acristalado.
+
+
+20. Etapa 29: interiores unicos (1/n): Tesoreria de la Muralla y Santuario del Retorno
+-------------------------------------------------------------------------------------
+  Archivo: blender/concordia_interiors_unicos_v01.blend (kit y props de las etapas 27-28, materiales de concordia_v28).
+  Scripts: tools/blender/stage29_tesoreria.py, stage29_santuario.py, build_stage29_int.py (construye, comprueba y
+  exporta; `-- tesoreria santuario`), capture_stage29_int.py. Informes: docs/reports/stage29_<interior>.json.
+  Datos de cada edificio (volumen, giro, puerta, ventanas) leidos del master de la ciudad (concordia_v28): el master
+  no se modifica. Todo hecho a mano (regla del usuario: ni assets descargados ni IA en la Tesoreria y el Santuario).
+  Cambios en el kit (interior_kit.py): custom_module() para ventanas y puertas a la medida del exterior (los tipos de
+  hueco de Interior.shell aceptan su nombre); m_window / m_door con medidas; las dos losas remendadas de
+  INT_Floor_Stone_B ya no se solapan (ver leccion 24).
+
+  Tesoreria (int_tesoreria.glb, 1.39 MB): volumen 26.4 x 13.6 x 8.8 m (diferencia 0.0), dos plantas de 4.4 m.
+    Giro -90: CAM_Iso mira desde +X +Y; muros cercanos +X (WALL_Near_A) y +Y fachada (WALL_Near_B). Todo lo importante
+    contra -X y -Y, de cara a la camara. Ventanas en las posiciones y medidas del exterior (planta baja 1.0 x 1.4 m,
+    planta alta 1.4 x 2.2 m, fachada 1.2 x 1.6 m; puerta 1.6 x 3.0 m).
+    Planta baja: 2 mostradores contra -X (modulo de ventanilla de cajero de 1.2 m + reja de 1.6 m): 1 = Vender
+      (Tesorero, MARKER_NPC_Slot_01) y 2 = Cambio (MARKER_NPC_Slot_02, npc = Cambista: propuesta), balanza grande de
+      bronce en cada uno (TES_Scale_Large 169 tris); arcada de 6 vanos (INT_Arch_3m) bajo el borde de la galeria;
+      4 tubos de luz PIPE_Light_01-04 (0.4 m, MAT_Pipe_Glass + nucleo MAT_Pipe_Light_Core emision 1.5, basa de piedra,
+      abrazaderas) por los pilares de la arcada hasta atravesar el techo (en el desvan siguen hasta las salidas
+      MARKER_PipeOutlet_TesoreriaMuralla_*); 4 vitrinas delante de la arcada, 3 variantes a mano (A armario 148,
+      B mesa 122, C pedestal 120 tris; vidrio MAT_Pipe_Glass sin emision): Brillante (A, 20 esquirlas), Opaca (B, 12),
+      Madura (C, 7, la unica emisiva) y Latente (B, 12); esquirla = prisma hexagonal con puntas (24 tris), un material
+      por tipo (MAT_Shard_Opaca #7C8288, _Brillante #B6CFDF, _Latente #5B8DB8, _Madura #8FD0FF emision 1.0);
+      contaduria bajo la galeria (estantes, mesa, cofres, sacos de monedas), bancos de espera, 2 coronas de velas.
+      Escalera de piedra de 1.98 m contra +X: 22 peldanos, 6.6 m de recorrido, 33.7 grados; sube por un hueco del
+      forjado y deja libre la ventana de la planta baja que tiene detras.
+    Planta alta (LEVEL_1): galeria con balaustrada, archivo, despacho del tesorero (WALL_Near_Despacho, dentro de
+      LEVEL_1: tabique con puerta de 1.4 m y frente con ventana interior) con la caja fuerte (TES_Safe, 504 tris:
+      hierro con cantos, rueda de 6 radios, bandas remachadas, bocallave y placa con escudo).
+    Interaccion: MARKER_Interact_Tesoreria_Vender (mostrador 1), MARKER_Interact_Tesoreria_Cambio (mostrador 2).
+    Luz: 24 empties (coronas, lamparas, velas, 10 ventanas) y un solo azul (LIGHT_Pipes_Glow).
+    Verificacion: 21,310 tris (Shell 8,078, LEVEL_1 2,428, mobiliario 7,482); rayos desde CAM_Iso: Tesorero y
+    Cambista 75 % (los 3 puntos tapados son las rodillas tras el tablero), mostradores, tubos y las 4 vitrinas 100 %;
+    con LEVEL_1 visible igual; caja fuerte y mesa del despacho 100 %. Navegacion 5,258 caras, todas conectadas;
+    los 14 puntos clave (mostradores, NPC, vitrinas, contaduria, escalera, galeria, despacho, caja fuerte) se
+    alcanzan con pasos de 1.2 m.
+
+  Santuario (int_santuario.glb, 0.73 MB): volumen 13.8 x 9.6 x 9.0 m (diferencia 0.0). Giro -135: CAM_Iso mira a lo
+    largo de -Y; solo la fachada (+Y) es muro cercano (WALL_Near_A); el muro -Y con sus 5 ventanales queda de frente.
+    Muros a mano (los ventanales de 6 m no caben en el shell por plantas) con los huecos del exterior: 5 ventanales
+    de 1.4 x 6.0 m en -Y, 4 y una ventana alta sobre la puerta en +Y, 2 ventanas de 1.0 x 4.6 m en cada hastial;
+    cabeza apuntada, parteluz, dos luces, circulo, plomos; vitral MAT_Stained_Glass_Blue (emision 0.6).
+    Zocalo-banco de piedra, imposta, 6 contrafuertes interiores por muro largo (pilar + 3 columnillas + capitel).
+    Boveda (CEILING, todo lo que pasa de 9.0 m): la pedida (clave 14 m, apuntada con arranque vertical) CHOCA con la
+      cubierta exterior (a dos aguas de 45 grados desde 9.0 m): se saldria hasta 1.84 m por los faldones. Se baja a
+      clave 12.7 m con un perfil de dos arcos apuntados de flecha 0.06 x cuerda que sigue la pendiente; holgura minima
+      medida vertice a vertice contra SANTUARIO_Roof (rejilla de 0.1 m, incluidos los cabios de madera): 0.127 m.
+      Nervios fajones en los contrafuertes, diagonales por tramo, espinazo y claves de bronce; plementeria
+      MAT_Vault_Stars (1K a mano: azul #2E4057 con estrellas #C9B98A, sin emision); timpanos con oculo de 2.1 m (el
+      exterior es de 3 m: el interior de 3 m no cabe bajo la boveda baja). Los 218 vertices del grueso de los
+      timpanos quedan dentro del hastial exterior.
+    Pozo: SANTUARIO_Well del master (290 tris, MAT_Water), sin 'provisional'; un solo farol de esquirla colgado
+      encima (unica luz azul). Cuidador (MARKER_NPC_Slot_01) junto al pozo, mesa con 3 raciones y 3 antorchas
+      (SAN_Table, SAN_Ration, SAN_Torch a mano), MARKER_Interact_Santuario_Kit (propuesta), 8 bancos (BANK_Bench),
+      2 candeleros. MARKER_Respawn (tipo = respawn) delante del pozo, mirando a la salida.
+    Verificacion: 10,537 tris; rayos desde CAM_Iso: reaparicion, Cuidador, mesa, pozo, farol y ventanales del fondo
+      100 %; navegacion 889 caras conectadas, 10 puntos clave con pasos de 1.2 m.
+    El SANTUARIO_Well del master (concordia_v28) conserva provisional = true: no se ha guardado otra version del
+    master por una propiedad (78 MB). En la proxima version del master conviene quitar esa copia del exterior
+    (queda escondida dentro del edificio cerrado).
+
+  Lecciones nuevas (etapa 29):
+    21. Ventanas del interior = las del exterior: custom_module() en el espacio del modulo (z real / escala de la
+        planta). El modulo del kit escalado a 4.4 m ponia la ventana 0.25-0.8 m mas alta que la de la fachada en un
+        muro de 0.36 m.
+    22. Ventanilla de cajero: con el NPC a 0.7 m de la reja, la ventanilla se corre 0.40 m hacia la camara (no
+        0.35): con 0.35 los rayos del lado de la camara rozan la jamba de 6 cm (50 % en vez de 75 %).
+    23. Regiones de navegacion de una misma planta: deben solaparse (>= 2 x margen); dos rectangulos que solo se
+        tocan quedan separados por el margen del agente (la galeria y el rellano de la escalera no se unian).
+    24. Las dos losas remendadas de INT_Floor_Stone_B podian solaparse a la misma altura: caras coplanarias (salen
+        negras en Cycles, parpadean en Godot). Corregido en el kit; el Banco (int_banco.glb) lo tiene hasta que se
+        rehaga.
+    25. Boveda bajo una cubierta de 45 grados: una boveda apuntada con arranque vertical atraviesa enseguida el
+        faldon; perfil de poca flecha que siga la pendiente, holgura medida contra la malla real de la cubierta con
+        rejilla de 0.1 m (los cabios quedan entre muestras de 0.4 m) y nervios de seccion girada bajados 1.45 r.
+    26. Tubos que atraviesan el techo: repartir las vigas del techo para que ninguna cruce un tubo (>= 0.5 m).
+    27. Varios interiores en un .blend: renombrar tras exportar (leccion 15) o el segundo sale con ".001" en sus
+        marcadores y grupos (Godot no los encontraria).
+    28. Muros con huecos mas altos que una planta (Santuario): sin shell por plantas (cortaria los ventanales con
+        impostas); muros a mano con slab_holes y los huecos del exterior.
+    29. Huecos que llegan al suelo (arcos de la arcada, puertas, tabiques): slab_holes deja la cara del umbral a la
+        altura del suelo, coplanaria con el (franjas negras en la base de los vanos, tambien en el Banco).
+        Interior.realize() quita las caras horizontales de las piezas que no son suelo a la altura de cada nivel de
+        suelo (Tesoreria 127, Santuario 9).
+    30. Exportacion: con export_keep_originals el .glb llevaba cada imagen dos veces (uri y copia incrustada) y Godot
+        avisaba 52 veces al importar; stage11_godot.export_glb deja solo la uri (tools/blender/glb_tools.py). Los
+        .glb anteriores (Banco, Moradas) tienen el aviso hasta que se vuelvan a exportar.

@@ -1,0 +1,657 @@
+{
+ "source": {
+  "iv_size": [
+   26.4,
+   13.6,
+   8.8
+  ],
+  "iv_center_local": [
+   0.0,
+   -1.4
+  ],
+  "rot_deg": -90.0,
+  "door_local": [
+   0.0,
+   5.4,
+   0.0
+  ],
+  "door_in_frame": [
+   0.0,
+   6.8
+  ]
+ },
+ "props_tris": {
+  "TES_Scale_Large": 169,
+  "TES_Safe": 504,
+  "TES_Coin_Sack": 108,
+  "TES_Vitrina_A": 148,
+  "TES_Vitrina_B": 122,
+  "TES_Vitrina_C": 120,
+  "TES_Shard_Opaca": 24,
+  "TES_Shard_Brillante": 24,
+  "TES_Shard_Latente": 24,
+  "TES_Shard_Madura": 24,
+  "TES_Chandelier": 440
+ },
+ "shard_materials": {
+  "MAT_Shard_Opaca": "7C8288",
+  "MAT_Shard_Brillante": "B6CFDF",
+  "MAT_Shard_Latente": "5B8DB8",
+  "MAT_Shard_Madura": "8FD0FF"
+ },
+ "storey_m": 4.4,
+ "ceiling": {
+  "beams": 15,
+  "spacing_m": 1.89,
+  "min_gap_to_pipe_m": 0.52
+ },
+ "arcade": {
+  "bays": 6,
+  "bay_w": 4.033,
+  "piers_x": [
+   -9.17,
+   -5.13,
+   -1.1,
+   2.93,
+   6.97
+  ]
+ },
+ "pipes": [
+  {
+   "name": "PIPE_Light_01",
+   "x": -5.13,
+   "y": -1.3,
+   "tris": 276
+  },
+  {
+   "name": "PIPE_Light_02",
+   "x": -1.1,
+   "y": -1.3,
+   "tris": 276
+  },
+  {
+   "name": "PIPE_Light_03",
+   "x": 2.93,
+   "y": -1.3,
+   "tris": 276
+  },
+  {
+   "name": "PIPE_Light_04",
+   "x": 6.97,
+   "y": -1.3,
+   "tris": 276
+  }
+ ],
+ "stair": {
+  "width_m": 1.98,
+  "run_m": 6.6,
+  "rise_m": 4.4,
+  "steps": 22,
+  "slope_deg": 33.7
+ },
+ "counters": {
+  "1": {
+   "y": [
+    3.1,
+    6.7
+   ],
+   "ventanilla_y": [
+    3.5,
+    4.7
+   ],
+   "npc": [
+    -11.9,
+    3.7
+   ]
+  },
+  "2": {
+   "y": [
+    -1.7,
+    1.9000000000000001
+   ],
+   "ventanilla_y": [
+    -1.3,
+    -0.1
+   ],
+   "npc": [
+    -11.9,
+    -1.1
+   ]
+  }
+ },
+ "vitrinas": [
+  {
+   "vitrina": "TES_Vitrina_01_Brillante",
+   "variante": "A",
+   "tipo": "Brillante",
+   "esquirlas": 20,
+   "x": -7.15
+  },
+  {
+   "vitrina": "TES_Vitrina_02_Opaca",
+   "variante": "B",
+   "tipo": "Opaca",
+   "esquirlas": 12,
+   "x": -3.12
+  },
+  {
+   "vitrina": "TES_Vitrina_03_Madura",
+   "variante": "C",
+   "tipo": "Madura",
+   "esquirlas": 7,
+   "x": 0.92
+  },
+  {
+   "vitrina": "TES_Vitrina_04_Latente",
+   "variante": "B",
+   "tipo": "Latente",
+   "esquirlas": 12,
+   "x": 4.95
+  }
+ ],
+ "furniture": [
+  "TES_Scale_Large",
+  "BANK_Ledger_Open",
+  "BANK_Coins",
+  "BANK_Candle",
+  "TES_Scale_Large",
+  "BANK_Ledger_Open",
+  "BANK_Coins",
+  "BANK_Candle",
+  "BANK_Shelf_Wall",
+  "BANK_Shelf_Wall",
+  "BANK_Shelf_Wall",
+  "BANK_Desk",
+  "BANK_Stool",
+  "BANK_Ledger_Open",
+  "BANK_Candle",
+  "BANK_Strongbox",
+  "BANK_Strongbox",
+  "BANK_Strongbox",
+  "TES_Coin_Sack",
+  "TES_Coin_Sack",
+  "TES_Coin_Sack",
+  "TES_Coin_Sack",
+  "TES_Coin_Sack",
+  "BANK_Strongbox",
+  "BANK_Bench",
+  "BANK_Bench",
+  "BANK_Rug",
+  "BANK_Sconce",
+  "BANK_Sconce",
+  "BANK_Sconce",
+  "BANK_Sconce",
+  "TES_Chandelier",
+  "TES_Chandelier",
+  "BANK_Rug",
+  "TES_Safe",
+  "BANK_Desk",
+  "BANK_Chair",
+  "BANK_Ledger_Open",
+  "BANK_Candle",
+  "TES_Coin_Sack",
+  "BANK_Shelf_Wall",
+  "BANK_Sconce",
+  "BANK_Shelf_Wall",
+  "BANK_Shelf_Wall",
+  "BANK_Shelf_Wall",
+  "BANK_Bench",
+  "BANK_Bench",
+  "BANK_Sconce",
+  "BANK_Sconce"
+ ],
+ "size_check": {
+  "interior_m": [
+   26.4,
+   13.6,
+   8.8
+  ],
+  "interior_volume_m": [
+   26.4,
+   13.6,
+   8.8
+  ],
+  "diff_m": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "ok_planta": true
+ },
+ "near_walls": {
+  "WALL_Near_A": "+X",
+  "WALL_Near_B": "+Y"
+ },
+ "caras_coplanarias_suelo_quitadas": 127,
+ "cam_local": [
+  0.577,
+  0.577,
+  0.577
+ ],
+ "rays_cam_iso": {
+  "planta_baja (LEVEL_1 oculto)": {
+   "Tesorero": {
+    "points": 12,
+    "pct": 75.0,
+    "blockers": {
+     "KITI_INT_Counter_Straight": 3
+    }
+   },
+   "Cambista": {
+    "points": 12,
+    "pct": 75.0,
+    "blockers": {
+     "KITI_INT_Counter_Straight.001": 3
+    }
+   },
+   "Mostrador_1_Vender": {
+    "points": 8,
+    "pct": 100.0,
+    "blockers": {}
+   },
+   "Mostrador_2_Cambio": {
+    "points": 8,
+    "pct": 100.0,
+    "blockers": {}
+   },
+   "Tubos_de_luz": {
+    "points": 16,
+    "pct": 100.0,
+    "blockers": {}
+   },
+   "Vitrina_Brillante": {
+    "points": 20,
+    "pct": 100.0,
+    "blockers": {}
+   },
+   "Vitrina_Opaca": {
+    "points": 12,
+    "pct": 100.0,
+    "blockers": {}
+   },
+   "Vitrina_Madura": {
+    "points": 7,
+    "pct": 100.0,
+    "blockers": {}
+   },
+   "Vitrina_Latente": {
+    "points": 12,
+    "pct": 100.0,
+    "blockers": {}
+   }
+  },
+  "planta_baja con LEVEL_1 visible (estricto)": {
+   "Tesorero": {
+    "points": 12,
+    "pct": 75.0,
+    "blockers": {
+     "KITI_INT_Counter_Straight": 3
+    }
+   },
+   "Cambista": {
+    "points": 12,
+    "pct": 75.0,
+    "blockers": {
+     "KITI_INT_Counter_Straight.001": 3
+    }
+   },
+   "Mostrador_1_Vender": {
+    "points": 8,
+    "pct": 100.0,
+    "blockers": {}
+   },
+   "Mostrador_2_Cambio": {
+    "points": 8,
+    "pct": 100.0,
+    "blockers": {}
+   },
+   "Tubos_de_luz": {
+    "points": 16,
+    "pct": 100.0,
+    "blockers": {}
+   },
+   "Vitrina_Brillante": {
+    "points": 20,
+    "pct": 100.0,
+    "blockers": {}
+   },
+   "Vitrina_Opaca": {
+    "points": 12,
+    "pct": 100.0,
+    "blockers": {}
+   },
+   "Vitrina_Madura": {
+    "points": 7,
+    "pct": 100.0,
+    "blockers": {}
+   },
+   "Vitrina_Latente": {
+    "points": 12,
+    "pct": 100.0,
+    "blockers": {}
+   }
+  },
+  "planta_alta (despacho, WALL_Near_Despacho oculto)": {
+   "Caja_fuerte": {
+    "points": 9,
+    "pct": 100.0,
+    "blockers": {}
+   },
+   "Despacho_mesa": {
+    "points": 6,
+    "pct": 100.0,
+    "blockers": {}
+   }
+  }
+ },
+ "navmesh": {
+  "faces": 5258,
+  "reached_faces": 5258,
+  "keys": {
+   "spawn": {
+    "reachable": true,
+    "dist_to_nav_m": 0.25
+   },
+   "mostrador_1_publico": {
+    "reachable": true,
+    "dist_to_nav_m": 0.23
+   },
+   "mostrador_2_publico": {
+    "reachable": true,
+    "dist_to_nav_m": 0.23
+   },
+   "tesorero": {
+    "reachable": true,
+    "dist_to_nav_m": 0.54
+   },
+   "cambista": {
+    "reachable": true,
+    "dist_to_nav_m": 0.56
+   },
+   "vitrina_brillante": {
+    "reachable": true,
+    "dist_to_nav_m": 0.25
+   },
+   "vitrina_opaca": {
+    "reachable": true,
+    "dist_to_nav_m": 0.23
+   },
+   "vitrina_madura": {
+    "reachable": true,
+    "dist_to_nav_m": 0.23
+   },
+   "vitrina_latente": {
+    "reachable": true,
+    "dist_to_nav_m": 0.23
+   },
+   "contaduria": {
+    "reachable": true,
+    "dist_to_nav_m": 0.21
+   },
+   "pie_escalera": {
+    "reachable": true,
+    "dist_to_nav_m": 0.23
+   },
+   "galeria": {
+    "reachable": true,
+    "dist_to_nav_m": 0.21
+   },
+   "despacho": {
+    "reachable": true,
+    "dist_to_nav_m": 0.21
+   },
+   "caja_fuerte": {
+    "reachable": true,
+    "dist_to_nav_m": 0.21
+   }
+  }
+ },
+ "corridors_1.2m": {
+  "nivel_0": {
+   "start_clearance_m": 1.6,
+   "reachable_with_1.2m": {
+    "spawn": true,
+    "mostrador_1_publico": true,
+    "mostrador_2_publico": true,
+    "tesorero": true,
+    "cambista": true,
+    "vitrina_brillante": true,
+    "vitrina_opaca": true,
+    "vitrina_madura": true,
+    "vitrina_latente": true,
+    "contaduria": true,
+    "pie_escalera": true
+   }
+  },
+  "nivel_1": {
+   "start_clearance_m": 1.0,
+   "reachable_with_1.2m": {
+    "galeria": true,
+    "despacho": true,
+    "caja_fuerte": true
+   }
+  }
+ },
+ "tris": {
+  "total": 21310,
+  "budget": 40000,
+  "ok": true,
+  "by_group": {
+   "Shell": 8078,
+   "WALL_Near_A": 1214,
+   "WALL_Near_B": 1804,
+   "CEILING": 190,
+   "Furniture": 5304,
+   "Lights": 0,
+   "Markers": 0,
+   "LEVEL_1": 2428,
+   "WALL_Near_Despacho": 114,
+   "Furniture_L1": 2178
+  }
+ },
+ "markers": {
+  "MARKER_Interact_Tesoreria_Cambio": {
+   "tipo": "tesoreria_cambio",
+   "accion": "cambiar plata por oro (1 de oro = 100 de plata)"
+  },
+  "MARKER_Interact_Tesoreria_Vender": {
+   "tipo": "tesoreria_vender",
+   "accion": "vender esquirlas a precio fijo"
+  },
+  "MARKER_Interior_Exit": {
+   "to": "calle",
+   "note": "+Y hacia la calle"
+  },
+  "MARKER_Interior_Spawn": {
+   "note": "+Y hacia el interior"
+  },
+  "MARKER_NPC_Slot_01": {
+   "npc": "Tesorero",
+   "note": "detras del mostrador 1 (Vender), mirando al publico (+X) y a la camara"
+  },
+  "MARKER_NPC_Slot_02": {
+   "npc": "Cambista",
+   "note": "detras del mostrador 2 (Cambio): propuesta, el pedido solo nombra al Tesorero"
+  }
+ },
+ "lights": {
+  "LIGHT_Candle_01": [
+   "#FFA650",
+   0.35,
+   2.8
+  ],
+  "LIGHT_Candle_02": [
+   "#FFA650",
+   0.35,
+   2.8
+  ],
+  "LIGHT_Candle_Contaduria": [
+   "#FFA650",
+   0.35,
+   2.8
+  ],
+  "LIGHT_Candle_Despacho": [
+   "#FFA650",
+   0.35,
+   2.8
+  ],
+  "LIGHT_Chandelier_01": [
+   "#FFA650",
+   1.0,
+   9.0
+  ],
+  "LIGHT_Chandelier_02": [
+   "#FFA650",
+   1.0,
+   9.0
+  ],
+  "LIGHT_Lamp_Back_01": [
+   "#FFA650",
+   0.6,
+   5.5
+  ],
+  "LIGHT_Lamp_Back_02": [
+   "#FFA650",
+   0.6,
+   5.5
+  ],
+  "LIGHT_Lamp_Despacho": [
+   "#FFA650",
+   0.5,
+   4.5
+  ],
+  "LIGHT_Lamp_Gallery_01": [
+   "#FFA650",
+   0.5,
+   5.0
+  ],
+  "LIGHT_Lamp_Gallery_02": [
+   "#FFA650",
+   0.5,
+   5.0
+  ],
+  "LIGHT_Lamp_Pier": [
+   "#FFA650",
+   0.7,
+   6.0
+  ],
+  "LIGHT_Lamp_Staff": [
+   "#FFA650",
+   0.6,
+   5.0
+  ],
+  "LIGHT_Pipes_Glow": [
+   "#8FD0FF",
+   0.45,
+   8.0
+  ],
+  "LIGHT_Window_01": [
+   "#FFE6C4",
+   0.45,
+   5.5
+  ],
+  "LIGHT_Window_02": [
+   "#FFE6C4",
+   0.45,
+   5.5
+  ],
+  "LIGHT_Window_03": [
+   "#FFE6C4",
+   0.45,
+   5.5
+  ],
+  "LIGHT_Window_04": [
+   "#FFE6C4",
+   0.45,
+   5.5
+  ],
+  "LIGHT_Window_05": [
+   "#FFE6C4",
+   0.45,
+   5.5
+  ],
+  "LIGHT_Window_06": [
+   "#FFE6C4",
+   0.45,
+   5.5
+  ],
+  "LIGHT_Window_07": [
+   "#FFE6C4",
+   0.45,
+   5.5
+  ],
+  "LIGHT_Window_08": [
+   "#FFE6C4",
+   0.45,
+   5.5
+  ],
+  "LIGHT_Window_09": [
+   "#FFE6C4",
+   0.45,
+   5.5
+  ],
+  "LIGHT_Window_10": [
+   "#FFE6C4",
+   0.45,
+   5.5
+  ]
+ },
+ "blue_lights": 1,
+ "hideable_groups": {
+  "WALL_Near_A": "",
+  "WALL_Near_B": "",
+  "CEILING": "siempre dentro (los tubos lo atraviesan: su tramo de arriba sigue en Shell)",
+  "LEVEL_1": "jugador en la planta baja (corte isometrico: la galeria tapa la contaduria)",
+  "WALL_Near_Despacho": "jugador dentro del despacho (o con LEVEL_1)"
+ },
+ "export": {
+  "file": "export/godot/int_tesoreria.glb",
+  "mb": 1.388,
+  "nodes": 158,
+  "meshes": 34,
+  "tris": 27509,
+  "materials": 21,
+  "images": 23,
+  "images_external": 23,
+  "colliders": 1,
+  "navmesh": 1,
+  "occluders": 0,
+  "empties": 42,
+  "nombres_con_sufijo_blender": [
+   "PROP_BANK_Bench.001",
+   "PROP_BANK_Candle.001",
+   "PROP_BANK_Candle.002",
+   "PROP_BANK_Coins.001",
+   "PROP_BANK_Ledger_Open.001",
+   "PROP_BANK_Ledger_Open.002",
+   "PROP_BANK_Sconce.001",
+   "PROP_BANK_Sconce.002",
+   "PROP_BANK_Sconce.003",
+   "PROP_BANK_Shelf_Wall.001",
+   "PROP_BANK_Shelf_Wall.002",
+   "PROP_BANK_Strongbox.001",
+   "PROP_BANK_Strongbox.002",
+   "PROP_BANK_Strongbox.003",
+   "PROP_TES_Chandelier.001",
+   "PROP_TES_Coin_Sack.001",
+   "PROP_TES_Coin_Sack.002",
+   "PROP_TES_Coin_Sack.003",
+   "PROP_TES_Coin_Sack.004",
+   "PROP_TES_Scale_Large.001",
+   "PROP_BANK_Bench.002",
+   "PROP_BANK_Bench.003",
+   "PROP_BANK_Candle.003",
+   "PROP_BANK_Desk.001",
+   "PROP_BANK_Ledger_Open.003",
+   "PROP_BANK_Rug.001",
+   "PROP_BANK_Sconce.004",
+   "PROP_BANK_Sconce.005",
+   "PROP_BANK_Sconce.006",
+   "PROP_BANK_Shelf_Wall.003",
+   "PROP_BANK_Shelf_Wall.004",
+   "PROP_BANK_Shelf_Wall.005",
+   "PROP_BANK_Shelf_Wall.006",
+   "PROP_TES_Coin_Sack.005"
+  ]
+ }
+}
